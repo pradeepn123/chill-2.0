@@ -1033,8 +1033,8 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo": "{{ shop.brand.logo }}",
-          "logo_img_width_int": 125,
+          "logo": "shopify:\/\/shop_images\/Screen_Shot_2022-08-17_at_3.04.20_PM.png",
+          "logo_img_width_int": 190,
           "mobile_logo_img_width_int": 100,
           "logo_h1": true,
           "enable_sticky": true,
