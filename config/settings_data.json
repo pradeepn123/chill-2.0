@@ -1098,7 +1098,7 @@
           "1478526647261"
         ],
         "settings": {
-          "visibility": "all"
+          "visibility": ""
         }
       },
       "footer": {
@@ -1109,6 +1109,7 @@
             "settings": {
               "title": "Talk about your store",
               "text": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.<\/p>",
+              "image": "shopify:\/\/shop_images\/logo.png",
               "image_width": 55,
               "show_social_icons": true,
               "soc_icons_large": true
@@ -1121,21 +1122,26 @@
               "menu": "footer"
             }
           },
-          "1601372771635": {
-            "type": "newsletter",
+          "da48b0a2-76c5-48ad-8408-466f85f5c9b6": {
+            "type": "menu",
             "settings": {
-              "title": "Newsletter",
-              "text": "<p>Sign up for exclusive offers, original stories, events and more.<\/p>",
-              "button_style": "primary",
-              "show_social_icons": true,
-              "soc_icons_large": false
+              "title": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "2d0ee29b-4c80-463c-89d8-952071761c9c": {
+            "type": "menu",
+            "settings": {
+              "title": "Quick links",
+              "menu": "footer"
             }
           }
         },
         "block_order": [
           "1601372812538",
           "1601372709037",
-          "1601372771635"
+          "da48b0a2-76c5-48ad-8408-466f85f5c9b6",
+          "2d0ee29b-4c80-463c-89d8-952071761c9c"
         ],
         "settings": {
           "lower_menu": "",
