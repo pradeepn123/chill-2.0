@@ -208,6 +208,14 @@
         "image_opacity": 75,
         "use_alt_bg": true
       }
+    },
+    "16607637867e64e5b3": {
+      "type": "newsletter",
+      "settings": {
+        "title": "Subscribe to our newsletter",
+        "subheading": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
+        "color_bg": "#ffffff"
+      }
     }
   },
   "order": [
@@ -220,6 +228,7 @@
     "1660761909160f340c",
     "1660761859754b018d",
     "1660761962f1d04537",
-    "16607619805b81a490"
+    "16607619805b81a490",
+    "16607637867e64e5b3"
   ]
 }
