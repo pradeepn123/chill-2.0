@@ -55,7 +55,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "OUR TRENDING PRODUCTS",
-        "collection": "",
+        "collection": "chill-flavoured-drops",
         "show_vendor": false,
         "enable_carousel": false,
         "grid": 4,
