@@ -35,7 +35,7 @@
         "1635927863703110df-2": {
           "type": "text",
           "settings": {
-            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
+            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p><p><a href=\"\/pages\/about-us\" title=\"About\">Learn More<\/a><\/p>",
             "enlarge_text": true
           }
         }
