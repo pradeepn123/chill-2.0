@@ -1013,7 +1013,7 @@
     "prod_thumb_crop": true,
     "prod_thumb_text_align": "left",
     "prod_thumb_hover_image": true,
-    "quickbuy_style": "button",
+    "quickbuy_style": "off",
     "prod_block_label_loc": "top left",
     "prod_reduction_type": "percent",
     "prod_stock_warn_show": true,
