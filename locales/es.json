@@ -20,7 +20,7 @@
   "general": {
     "404": {
       "title": "404 Página no encontrada",
-      "subtext_html": "La página que ha solicitado no existe. Haga clic <a href=\"{{ root_url }}\">aquí</a> para continuar la compra."
+      "subtext_html": "La página que ha solicitado no existe. Haga clic <a href=\"{{ root_url }}\">aquí<\/a> para continuar la compra."
     },
     "accessibility_labels": {
       "close": "Cerrar",
@@ -89,14 +89,14 @@
     "errors": {
       "address_error": "No se puede encontrar esa dirección",
       "address_no_results": "No results for that address",
-      "address_query_limit_html": "Se ha excedido el límite de uso de la API de Google . Considere la posibilidad de actualizar a un <a href=\"https://developers.google.com/maps/premium/usage-limits\">Plan Premium</a>.",
+      "address_query_limit_html": "Se ha excedido el límite de uso de la API de Google . Considere la posibilidad de actualizar a un <a href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\">Plan Premium<\/a>.",
       "auth_error": "Hubo un problema de autenticación con su cuenta de Google Maps."
     }
   },
   "cart": {
     "terms": {
       "confirmation": "Debe aceptar los términos y condiciones antes de continuar.",
-      "agreement_html": "Estoy de acuerdo con los <a href=\"{{ terms_url }}\" target=\"_blank\">términos y la política de reembolso</a>"
+      "agreement_html": "Estoy de acuerdo con los <a href=\"{{ terms_url }}\" target=\"_blank\">términos y la política de reembolso<\/a>"
     },
     "general": {
       "title": "Carrito de compra",
@@ -104,9 +104,9 @@
       "quantity": "Cantidad",
       "remove": "Quitar",
       "subtotal": "Subtotal",
-      "taxes_included_and_shipping_policy_html": "Impuesto incluido. Los <a href=\"{{ link }}\">gastos de envío</a> se calculan en la pantalla de pagos.",
+      "taxes_included_and_shipping_policy_html": "Impuesto incluido. Los <a href=\"{{ link }}\">gastos de envío<\/a> se calculan en la pantalla de pagos.",
       "taxes_included_but_shipping_at_checkout": "En la pantalla de pagos se incluye el impuesto y se calculan los gastos de envío",
-      "taxes_and_shipping_policy_at_checkout_html": "Los impuestos y <a href=\"{{ link }}\">gastos de envío</a> se calculan en la pantalla de pagos",
+      "taxes_and_shipping_policy_at_checkout_html": "Los impuestos y <a href=\"{{ link }}\">gastos de envío<\/a> se calculan en la pantalla de pagos",
       "taxes_and_shipping_at_checkout": "Los impuestos y gastos de envío se calculan en la pantalla de pagos",
       "update": "Actualizar carrito",
       "or": "O",
@@ -151,7 +151,7 @@
       "selector_label": "Opciones",
       "no_selection": "Elige una opcion",
       "include_taxes": "Impuesto incluido.",
-      "shipping_policy_html": "Los <a href=\"{{ link }}\">gastos de envío</a> se calculan en la pantalla de pagos.",
+      "shipping_policy_html": "Los <a href=\"{{ link }}\">gastos de envío<\/a> se calculan en la pantalla de pagos.",
       "reviews_link": {
         "one": "Testimonio",
         "other": "Testimonios"
@@ -164,7 +164,7 @@
       "backorder": "está en espera y se enviará tan pronto como vuelva a estar en stock",
       "prev_product": "Anterior",
       "next_product": "Siguiente",
-      "unit_price_separator": " / ",
+      "unit_price_separator": " \/ ",
       "size_chart": "Guía de tallas"
     },
     "variant": {
@@ -442,7 +442,7 @@
       "link": "Ingresar utilizando contraseña",
       "label": "Ingresar a la tienda utilizando contraseña:",
       "button": "Ingresar",
-      "admin_link_html": "¿ Eres propietario de esta tienda? <a href=\"/admin\">Ingresa aquí</a>"
+      "admin_link_html": "¿ Eres propietario de esta tienda? <a href=\"\/admin\">Ingresa aquí<\/a>"
     },
     "signup": {
       "success": "¡Gracias por tu interés! Nos aseguraremos de mantenerte informado."
@@ -453,10 +453,10 @@
   },
   "store_availability": {
     "general": {
-      "pick_up_available_at_html": "Retiro disponible en <strong>{{ location_name }}</strong>",
+      "pick_up_available_at_html": "Retiro disponible en <strong>{{ location_name }}<\/strong>",
       "view_store_info": "Ver información de la tienda",
       "check_other_stores": "Verificar disponibilidad en otras tiendas",
-      "pick_up_unavailable_at_html": "Retiro no disponible actualmente en <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Retiro no disponible actualmente en <strong>{{ location_name }}<\/strong>",
       "miles": "mi",
       "kilometers": "km",
       "pick_up_available": "Retiro disponible",

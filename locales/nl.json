@@ -20,7 +20,7 @@
   "general": {
     "404": {
       "title": "404 pagina niet gevonden",
-      "subtext_html": "De pagina die u heeft opgevraagd bestaat niet. <a href=\"{{ root_url }}\">Terugkeren naar winkel</a>"
+      "subtext_html": "De pagina die u heeft opgevraagd bestaat niet. <a href=\"{{ root_url }}\">Terugkeren naar winkel<\/a>"
     },
     "accessibility_labels": {
       "close": "Dichtbij",
@@ -89,14 +89,14 @@
     "errors": {
       "address_error": "Fout bij het opzoeken van dat adres",
       "address_no_results": "Geen resultaten voor dat adres",
-      "address_query_limit_html": "U heeft de gebruikslimiet van de Google API overschreden. Overweeg een upgrade naar een <a href=\"https://developers.google.com/maps/premium/usage-limits\">Premium Plan</a>.",
+      "address_query_limit_html": "U heeft de gebruikslimiet van de Google API overschreden. Overweeg een upgrade naar een <a href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\">Premium Plan<\/a>.",
       "auth_error": "Er is een probleem opgetreden bij het verifiëren van uw Google Maps API Key."
     }
   },
   "cart": {
     "terms": {
       "confirmation": "U moet akkoord gaan met de algemene voorwaarden voordat u verdergaat.",
-      "agreement_html": "Ik ga akkoord met de <a href=\"{{ terms_url }}\" target=\"_blank\">voorwaarden en het terugbetalingsbeleid</a>"
+      "agreement_html": "Ik ga akkoord met de <a href=\"{{ terms_url }}\" target=\"_blank\">voorwaarden en het terugbetalingsbeleid<\/a>"
     },
     "general": {
       "title": "Winkelmandje",
@@ -104,9 +104,9 @@
       "quantity": "Aantal",
       "remove": "Verwijder",
       "subtotal": "Subtotaal",
-      "taxes_included_and_shipping_policy_html": "Inclusief belasting. <a href=\"{{ link }}\">Verzendkosten</a> worden berekend bij het afrekenen.",
+      "taxes_included_and_shipping_policy_html": "Inclusief belasting. <a href=\"{{ link }}\">Verzendkosten<\/a> worden berekend bij het afrekenen.",
       "taxes_included_but_shipping_at_checkout": "Belasting inbegrepen en verzendkosten worden berekend bij het afrekenen",
-      "taxes_and_shipping_policy_at_checkout_html": "Belastingen en <a href=\"{{ link }}\">verzendkosten</a> worden berekend bij het afrekenen",
+      "taxes_and_shipping_policy_at_checkout_html": "Belastingen en <a href=\"{{ link }}\">verzendkosten<\/a> worden berekend bij het afrekenen",
       "taxes_and_shipping_at_checkout": "Belastingen en verzendkosten worden berekend bij het afrekenen",
       "update": "Update winkelmandje",
       "or": "or",
@@ -151,7 +151,7 @@
       "selector_label": "Opties",
       "no_selection": "Kies een optie",
       "include_taxes": "Inclusief belasting",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Verzendkosten</a> worden berekend bij het afrekenen.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Verzendkosten<\/a> worden berekend bij het afrekenen.",
       "reviews_link": {
         "one": "Beoordelingen",
         "other": "Beoordelingen"
@@ -164,7 +164,7 @@
       "backorder": "is in bestelling en wordt verzonden zodra het weer op voorraad is",
       "prev_product": "Verleden",
       "next_product": "Volgend",
-      "unit_price_separator": " / ",
+      "unit_price_separator": " \/ ",
       "size_chart": "Scherm maattabel"
     },
     "variant": {
@@ -442,7 +442,7 @@
       "link": "Login met wachtwoord",
       "label": "Login met wachtwoord:",
       "button": "Bevestig",
-      "admin_link_html": "Ben u de eigenaar van deze shop? <a href=\"/admin\">hier inloggen</a>"
+      "admin_link_html": "Ben u de eigenaar van deze shop? <a href=\"\/admin\">hier inloggen<\/a>"
     },
     "signup": {
       "success": "We zullen u een e-mail sturen net voor we open gaan!"
@@ -453,10 +453,10 @@
   },
   "store_availability": {
     "general": {
-      "pick_up_available_at_html": "Afhaling is beschikbaar bij <strong>{{ location_name }}</strong>",
+      "pick_up_available_at_html": "Afhaling is beschikbaar bij <strong>{{ location_name }}<\/strong>",
       "view_store_info": "Winkelgegevens bekijken",
       "check_other_stores": "Controleer de beschikbaarheid van andere winkels",
-      "pick_up_unavailable_at_html": "Afhaling is momenteel niet beschikbaar bij <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Afhaling is momenteel niet beschikbaar bij <strong>{{ location_name }}<\/strong>",
       "miles": "mi",
       "kilometers": "km",
       "pick_up_available": "Afhaling is beschikbaar",

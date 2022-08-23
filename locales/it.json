@@ -20,7 +20,7 @@
   "general": {
     "404": {
       "title": "404 Pagina non trovata",
-      "subtext_html": "È possibile tornare alla <a href=\"{{ root_url }}\">home page</a> o <a href=\"{{ search_url }}\">provare a eseguire una ricerca</a>."
+      "subtext_html": "È possibile tornare alla <a href=\"{{ root_url }}\">home page<\/a> o <a href=\"{{ search_url }}\">provare a eseguire una ricerca<\/a>."
     },
     "accessibility_labels": {
       "close": "Chiudi",
@@ -42,12 +42,12 @@
       "down": "Giù",
       "close": "Chiudi",
       "plus": "Più",
-      "toggle_menu": "Attiva/disattiva menu",
+      "toggle_menu": "Attiva\/disattiva menu",
       "minus": "Meno",
       "play": "Riproduci"
     },
     "navigation": {
-      "menu_toggle_aria_label": "Attiva/disattiva menu",
+      "menu_toggle_aria_label": "Attiva\/disattiva menu",
       "main_navigation_aria_label": "Navigazione principale"
     },
     "quick_search": {
@@ -89,14 +89,14 @@
     "errors": {
       "address_error": "Errore durante la ricerca di dell'indirizzo",
       "address_no_results": "Nessun risultato per questo indirizzo",
-      "address_query_limit_html": "Hai superato il limite di utilizzo dell'API di Google. Prendi in considerazione l'upgrade a un <a href=\"https://developers.google.com/maps/premium/usage-limits\"> Piano Premium </a>.",
+      "address_query_limit_html": "Hai superato il limite di utilizzo dell'API di Google. Prendi in considerazione l'upgrade a un <a href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\"> Piano Premium <\/a>.",
       "auth_error": "Si è verificato un problema durante l'autenticazione della chiave API di Google Maps."
     }
   },
   "cart": {
     "terms": {
       "confirmation": "Prima di proseguire devi accettare i termini e le condizioni.",
-      "agreement_html": "Accetto i <a href=\"{{ terms_url }}\" target=\"_blank\">termini e la politica di reso</a>"
+      "agreement_html": "Accetto i <a href=\"{{ terms_url }}\" target=\"_blank\">termini e la politica di reso<\/a>"
     },
     "general": {
       "title": "Carrello",
@@ -104,9 +104,9 @@
       "quantity": "Quantità",
       "remove": "Rimuovi",
       "subtotal": "Totale parziale",
-      "taxes_included_and_shipping_policy_html": "Imposte incluse. <a href=\"{{ link }}\">Spese di spedizione</a> calcolate al momento del pagamento.",
+      "taxes_included_and_shipping_policy_html": "Imposte incluse. <a href=\"{{ link }}\">Spese di spedizione<\/a> calcolate al momento del pagamento.",
       "taxes_included_but_shipping_at_checkout": "Imposte incluse e spedizione calcolata al momento del pagamento",
-      "taxes_and_shipping_policy_at_checkout_html": "Imposte e <a href=\"{{ link }}\">spese di spedizione</a> calcolate al momento del pagamento",
+      "taxes_and_shipping_policy_at_checkout_html": "Imposte e <a href=\"{{ link }}\">spese di spedizione<\/a> calcolate al momento del pagamento",
       "taxes_and_shipping_at_checkout": "Imposte e spese di spedizione calcolate al momento del pagamento",
       "update": "Aggiorna il carrello",
       "or": "oppure",
@@ -151,7 +151,7 @@
       "selector_label": "Opzioni",
       "no_selection": "Scegli un'opzione",
       "include_taxes": "Imposte incluse.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Spese di spedizione</a> calcolate al momento del pagamento.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Spese di spedizione<\/a> calcolate al momento del pagamento.",
       "reviews_link": {
         "one": "Recensione",
         "other": "Recensioni"
@@ -164,7 +164,7 @@
       "backorder": "è stato ordinato e verrà spedito non appena sarà di nuovo disponibile.",
       "prev_product": "Precedente",
       "next_product": "Successivo",
-      "unit_price_separator": " / ",
+      "unit_price_separator": " \/ ",
       "size_chart": "Guida alle taglie"
     },
     "variant": {
@@ -405,7 +405,7 @@
       "cancel": "Annulla",
       "default": "Predefinito",
       "edit": "Modifica",
-      "delete_confirm": "Sicuro/a di voler eliminare questo indirizzo?",
+      "delete_confirm": "Sicuro\/a di voler eliminare questo indirizzo?",
       "delete": "Elimina",
       "edit_address": "Modifica indirizzo",
       "update": "Aggiorna indirizzo"
@@ -442,7 +442,7 @@
       "link": "Accedi usando la password",
       "label": "Accedi al negozio utilizzando la password:",
       "button": "Accedi",
-      "admin_link_html": "Sei il proprietario del negozio? <a href=\"/admin\">Accedi qui</a>"
+      "admin_link_html": "Sei il proprietario del negozio? <a href=\"\/admin\">Accedi qui<\/a>"
     },
     "signup": {
       "success": "Grazie per l'interesse! Ci assicureremo di tenerti aggiornato."
@@ -453,10 +453,10 @@
   },
   "store_availability": {
     "general": {
-      "pick_up_available_at_html": "Ritiro disponibile presso <strong>{{ location_name }}</strong>",
+      "pick_up_available_at_html": "Ritiro disponibile presso <strong>{{ location_name }}<\/strong>",
       "view_store_info": "Visualizza informazioni sul negozio",
       "check_other_stores": "Verifica la disponibilità presso altri negozi",
-      "pick_up_unavailable_at_html": "Ritiro attualmente non disponibile presso <strong>{{ location_name }}</strong>",
+      "pick_up_unavailable_at_html": "Ritiro attualmente non disponibile presso <strong>{{ location_name }}<\/strong>",
       "miles": "mi",
       "kilometers": "km",
       "pick_up_available": "Ritiro disponibile",
