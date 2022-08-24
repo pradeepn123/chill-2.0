@@ -1,0 +1,53 @@
+
+/* header css here */
+.pageheader{
+    .logo-area{
+        .logo-area__left{
+            .navigation{
+                ul{
+                    li{
+                        a{
+                            font-weight: 600;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .logo-area__right{
+            .logo-area__right__inner{
+                a{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                .header-account-link, .show-search-link{
+                    margin-inline-end: 32px;
+                }
+                .header-account-link{
+                    .header-account-link__text{
+                        margin-inline-start: 10px;
+                    }
+                    display: none;
+                    @media(min-width:1200px){
+                        display: block;
+                    }
+                }
+                .cart-link{
+                    .cart-link__label{
+                        margin-inline-start: 10px;
+                    }
+                    .cart-link__icon.custom_bag{
+                        .cart-link__count{
+                            background:transparent;
+                            font-size: 12px;
+                            top: 4px;
+                            right: 4px;
+                            font-weight: 600;
+                            color: #9792E4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
