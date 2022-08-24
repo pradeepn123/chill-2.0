@@ -134,44 +134,46 @@
 
       <div class="logo-area__right">
         <div class="logo-area__right__inner">
-          {% if shop.customer_accounts_enabled %}
+          {% if shop.customer_accounts_enabled %}            
             {% if customer %}
-              <a class="header-account-link" href="{{ routes.account_url }}" aria-label="{{ 'layout.customer.account' | t | escape }}">
+              <a class="header-account-link" href="{{ routes.account_url }}" aria-label="{{ 'layout.customer.account' | t | escape }}">                
+                <span class="header-account-link__icon{% if section.settings.icon_strategy == 'icons_cart_search' %} mobile-only{% endif %}">{% render 'svg-custom-user' %}</span>
                 <span class="header-account-link__text desktop-only{% if section.settings.icon_strategy == 'icons_only' %} visually-hidden{% endif %}">{{ 'layout.customer.account' | t | escape }}</span>
-                <span class="header-account-link__icon{% if section.settings.icon_strategy == 'icons_cart_search' %} mobile-only{% endif %}">{% render 'svg-user' %}</span>
               </a>
             {% else %}
               <a class="header-account-link" href="{{ routes.account_login_url }}" aria-label="{{ 'layout.customer.account' | t | escape }}">
+                <span class="header-account-link__icon{% if section.settings.icon_strategy == 'icons_cart_search' %} mobile-only{% endif %}">{% render 'svg-custom-user' %}</span>
                 <span class="header-account-link__text desktop-only{% if section.settings.icon_strategy == 'icons_only' %} visually-hidden{% endif %}">{{ 'layout.customer.account' | t | escape }}</span>
-                <span class="header-account-link__icon{% if section.settings.icon_strategy == 'icons_cart_search' %} mobile-only{% endif %}">{% render 'svg-user' %}</span>
               </a>
             {% endif %}
           {% endif %}
           {% if section.settings.enable_search %}
             <a class="show-search-link" href="{{ routes.search_url }}">
-              <span class="show-search-link__text{% if section.settings.icon_strategy == 'icons_only' %} visually-hidden{% endif %}">
-                {{- 'layout.search.open' | t -}}
-              </span>
               <span class="show-search-link__icon">
                 {%- render 'svg-search' -%}
               </span>
+              <span class="show-search-link__text{% if section.settings.icon_strategy == 'icons_only' %} visually-hidden{% endif %}">
+                {{- 'layout.search.open' | t -}}
+              </span>              
             </a>
           {% endif %}
-          <a href="{{ routes.cart_url }}" class="cart-link">
-            <span class="cart-link__label{% if section.settings.icon_strategy == 'icons_only' %} visually-hidden{% endif %}">
-              {{- 'layout.header.cart' | t | escape -}}
-            </span>
-            <span class="cart-link__icon">
+          <a href="{{ routes.cart_url }}" class="cart-link">            
+            <span class="cart-link__icon {%if section.settings.cart_icon == 'custom' %}custom_bag{% endif %}">
               {%- if section.settings.cart_icon == 'basket' -%}
                 {%- render 'svg-basket' -%}
               {%- elsif section.settings.cart_icon == 'bag' -%}
                 {%- render 'svg-bag' -%}
+              {%- elsif section.settings.cart_icon == 'custom' -%}
+                {%- render 'svg-custom-bag' -%}
               {%- else -%}
                 {%- render 'svg-cart' -%}
               {%- endif -%}
               {%- if cart.item_count > 0 -%}
                 <span class="cart-link__count">{{ cart.item_count }}</span>
               {%- endif -%}
+            </span>
+            <span class="cart-link__label{% if section.settings.icon_strategy == 'icons_only' %} visually-hidden{% endif %}">
+              {{- 'layout.header.cart' | t | escape -}}
             </span>
           </a>
         </div>
@@ -627,6 +629,10 @@
           {
             "value": "basket",
             "label": "Basket"
+          },
+          {
+            "value": "custom",
+            "label": "Custom Cart"
           },
           {
             "value": "cart",

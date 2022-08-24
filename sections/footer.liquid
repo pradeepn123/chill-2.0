@@ -33,6 +33,17 @@
 
           {% when 'text' %}
             <div class="section-footer__row__col section-footer__text-block {% if block.settings.text != blank %}section-footer__text-block--with-text{% endif %}" {{ block.shopify_attributes }}>
+              {% if block.settings.image != blank %}
+                <span class="section-footer__text-block__image">
+                  {%- capture double_image_width -%}{{ block.settings.image_width | times: 2 }}x{%- endcapture -%}
+                  <div class="rimage-outer-wrapper" style="width: {{ block.settings.image_width }}px">
+                    <div class="rimage-wrapper lazyload--placeholder" style="padding-top:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%">
+                      <img class="rimage__image lazyload fade-in" data-src="{{ block.settings.image | img_url: double_image_width }}" alt="{{ shop.name | escape }}" />
+                    </div>
+                  </div>
+                </span>
+              {% endif %}
+
               {% if block.settings.title != blank %}
                 {%- assign title_word_count = block.settings.title | split: ' ' | size -%}
                 <h6 class="section-footer__title{% if title_word_count < 4 %} no-wrap{% endif %}">
@@ -44,18 +55,7 @@
                 <div class="section-footer__text">
                   {{- block.settings.text -}}
                 </div>
-              {% endif %}
-
-              {% if block.settings.image != blank %}
-                <span class="section-footer__text-block__image">
-                  {%- capture double_image_width -%}{{ block.settings.image_width | times: 2 }}x{%- endcapture -%}
-                  <div class="rimage-outer-wrapper" style="width: {{ block.settings.image_width }}px">
-                    <div class="rimage-wrapper lazyload--placeholder" style="padding-top:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%">
-                      <img class="rimage__image lazyload fade-in" data-src="{{ block.settings.image | img_url: double_image_width }}" alt="{{ shop.name | escape }}" />
-                    </div>
-                  </div>
-                </span>
-              {% endif %}
+              {% endif %}              
 
               {% if block.settings.show_social_icons != blank %}
                 <div class="section-footer__text-block__social">
@@ -124,13 +124,20 @@
           {% endcase %}
         {% endfor %}
       </div>
+      {% if section.settings.text_bottom != blank %}
+        <div class="footer_wrapper_middle text-center">
+          <div class="section-footer__text">
+            {{- section.settings.text_bottom -}}
+          </div>
+        </div>
+      {% endif %}
     </div>
   {% endif %}
 
   {%- assign showing_localization = false -%}
   {%- if section.settings.show_language_selector and localization.available_languages.size > 1 -%}{%- assign showing_localization = true -%}{%- endif -%}
   {%- if section.settings.show_country_selector and localization.available_countries.size > 1 -%}{%- assign showing_localization = true -%}{%- endif -%}
-  <div class="container container--no-max section-footer__row-container {% if showing_localization %}section-footer__row-container--with-localization{% endif %}">
+  <div class="container container--no-max section-footer__row-container footer-bottom {% if showing_localization %}section-footer__row-container--with-localization{% endif %}">
     <div class="section-footer__row section-footer__row-lower">
       <div class="section-footer__row__col">
         {% if section.settings.show_payment_icons %}
@@ -184,6 +191,11 @@
         "type": "link_list",
         "id": "lower_menu",
         "label": "Lower footer menu"
+      },
+      {
+        "type": "richtext",
+        "id": "text_bottom",
+        "label": "footer lower or bottom text"        
       },
       {
         "type": "header",
