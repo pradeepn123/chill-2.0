@@ -798,7 +798,7 @@
         "type": "checkbox",
         "id": "prod_thumb_show_subtitle",
         "label": "Show subtitle",
-        "info": "Uses product subtitle [metafield](https://help.shopify.com/en/manual/metafields)",
+        "info": "Uses product subtitle [metafield](https:\/\/help.shopify.com\/en\/manual\/metafields)",
         "default": true
       },
       {

@@ -89,14 +89,14 @@
     "errors": {
       "address_error": "Der opstod en fejl ved at slå op på adressen",
       "address_no_results": "Ingen resultater for denne adresse",
-      "address_query_limit_html": "Du har overskredet brugsgrænse for Google API. Overvej at opgradere til en  <a href=\"https://developers.google.com/maps/premium/usage-limits\">Premium Plan</a>.",
+      "address_query_limit_html": "Du har overskredet brugsgrænse for Google API. Overvej at opgradere til en  <a href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\">Premium Plan<\/a>.",
       "auth_error": "Der opstod et problem med at godkende din Google Maps API-nøgle."
     }
   },
   "cart": {
     "terms": {
       "confirmation": "Du skal acceptere vilkårene og betingelserne, før du fortsætter.",
-      "agreement_html": "Jeg accepterer <a href=\"{{ terms_url }}\" target=\"_blank\">vilkårene og refusionspolitikken</a>"
+      "agreement_html": "Jeg accepterer <a href=\"{{ terms_url }}\" target=\"_blank\">vilkårene og refusionspolitikken<\/a>"
     },
     "general": {
       "title": "Indkøbskurv",
@@ -104,9 +104,9 @@
       "quantity": "Antal",
       "remove": "Fjern",
       "subtotal": "Sub total",
-      "taxes_included_and_shipping_policy_html": "Inklusive skat. <a href=\"{{ link }}\">Levering</a> beregnes ved betaling.",
+      "taxes_included_and_shipping_policy_html": "Inklusive skat. <a href=\"{{ link }}\">Levering<\/a> beregnes ved betaling.",
       "taxes_included_but_shipping_at_checkout": "Inklusive skat. Levering beregnes ved betaling",
-      "taxes_and_shipping_policy_at_checkout_html": "Skatter og <a href=\"{{ link }}\">levering</a> beregnes ved betaling",
+      "taxes_and_shipping_policy_at_checkout_html": "Skatter og <a href=\"{{ link }}\">levering<\/a> beregnes ved betaling",
       "taxes_and_shipping_at_checkout": "Skatter og levering beregnes ved betaling",
       "update": "Opdater Kurv",
       "or": "eller",
@@ -151,7 +151,7 @@
       "selector_label": "Muligheder",
       "no_selection": "Vælg en mulighed",
       "include_taxes": "Inklusive moms.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Levering</a> beregnes ved betaling.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Levering<\/a> beregnes ved betaling.",
       "reviews_link": {
         "one": "Link til anmeldelser",
         "other": "Link til anmeldelser"
@@ -164,7 +164,7 @@
       "backorder": "er på bestilling og sendes så snart den er tilbage på lager",
       "prev_product": "forudgående",
       "next_product": "Næste",
-      "unit_price_separator": " / ",
+      "unit_price_separator": " \/ ",
       "size_chart": "Skostørrelse diagram"
     },
     "variant": {
@@ -442,7 +442,7 @@
       "link": "Åben ved brug af adgangskode",
       "label": "Åben ved brug af adgangskode:",
       "button": "Send",
-      "admin_link_html": "Ejer du denne butik? <a href=\"/admin\">Log ind her</a>"
+      "admin_link_html": "Ejer du denne butik? <a href=\"\/admin\">Log ind her<\/a>"
     },
     "signup": {
       "success": "Vi sender dig en email lige inden vi åbner!"
@@ -453,10 +453,10 @@
   },
   "store_availability": {
     "general": {
-      "pick_up_available_at_html": "Afhentning er tilgængelig for <strong>{{ location_name }}</strong>",
+      "pick_up_available_at_html": "Afhentning er tilgængelig for <strong>{{ location_name }}<\/strong>",
       "view_store_info": "Se butiksoplysninger",
       "check_other_stores": "Kontrollér tilgængelighed i andre butikker",
-      "pick_up_unavailable_at_html": "Afhentning er ikke tilgængelig for <strong>{{ location_name }}</strong> i øjeblikket",
+      "pick_up_unavailable_at_html": "Afhentning er ikke tilgængelig for <strong>{{ location_name }}<\/strong> i øjeblikket",
       "miles": "mi",
       "kilometers": "km",
       "pick_up_available": "Afhentning er tilgængeligt",

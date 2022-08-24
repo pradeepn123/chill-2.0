@@ -89,14 +89,14 @@
     "errors": {
       "address_error": "Kann die Adresse nicht finden",
       "address_no_results": "Keine Ergebnisse für diese Adresse",
-      "address_query_limit_html": "Sie haben die Google- API-Nutzungsgrenze überschritten. Betrachten wir zu einem <a href=\"https://developers.google.com/maps/premium/usage-limits\">Premium-Paket</a> zu aktualisieren.",
+      "address_query_limit_html": "Sie haben die Google- API-Nutzungsgrenze überschritten. Betrachten wir zu einem <a href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\">Premium-Paket<\/a> zu aktualisieren.",
       "auth_error": "Es gab ein Problem bei Google Maps Konto zu authentifizieren."
     }
   },
   "cart": {
     "terms": {
       "confirmation": "Sie müssen den Nutzungsbedingungen zustimmen, bevor Sie fortfahren.",
-      "agreement_html": "Ich stimme den <a href=\"{{ terms_url }}\" target=\"_blank\">Bedingungen und Rückerstattungsrichtlinien zu</a>"
+      "agreement_html": "Ich stimme den <a href=\"{{ terms_url }}\" target=\"_blank\">Bedingungen und Rückerstattungsrichtlinien zu<\/a>"
     },
     "general": {
       "title": "Einkaufswagen",
@@ -104,9 +104,9 @@
       "quantity": "Menge",
       "remove": "Entfernen",
       "subtotal": "Zwischensumme",
-      "taxes_included_and_shipping_policy_html": "inkl. MwSt. zzgl. <a href=\"{{ link }}\">Versandkosten</a>",
+      "taxes_included_and_shipping_policy_html": "inkl. MwSt. zzgl. <a href=\"{{ link }}\">Versandkosten<\/a>",
       "taxes_included_but_shipping_at_checkout": "inkl. MwSt.",
-      "taxes_and_shipping_policy_at_checkout_html": "zzgl. MwSt. und <a href=\"{{ link }}\">Versandkosten</a>",
+      "taxes_and_shipping_policy_at_checkout_html": "zzgl. MwSt. und <a href=\"{{ link }}\">Versandkosten<\/a>",
       "taxes_and_shipping_at_checkout": "Steuern und Versandkosten werden beim Checkout berechnet",
       "update": "Einkaufswagen aktualisieren",
       "or": "oder",
@@ -151,7 +151,7 @@
       "selector_label": "Optionen",
       "no_selection": "Wähle eine Option",
       "include_taxes": "inkl. MwSt.",
-      "shipping_policy_html": "zzgl. <a href=\"{{ link }}\">Versandkosten</a>",
+      "shipping_policy_html": "zzgl. <a href=\"{{ link }}\">Versandkosten<\/a>",
       "reviews_link": {
         "one": "Bewertungen",
         "other": "Bewertungen"
@@ -164,7 +164,7 @@
       "backorder": "ist auf Lager und wird versandt, sobald es wieder verfügbar ist",
       "prev_product": "Vorausgehend",
       "next_product": "Neben",
-      "unit_price_separator": " / ",
+      "unit_price_separator": " \/ ",
       "size_chart": "Größentabelle"
     },
     "variant": {
@@ -442,7 +442,7 @@
       "link": "Mit Passwort einloggen",
       "label": "Mit Passwort einloggen",
       "button": "Abschicken",
-      "admin_link_html": "Sind Sie der Store Owner? <a href=\"/admin\">Hier anmelden</a>"
+      "admin_link_html": "Sind Sie der Store Owner? <a href=\"\/admin\">Hier anmelden<\/a>"
     },
     "signup": {
       "success": "Danke für Ihr Interesse! Wir werden Sie auf dem neuesten Stand halten!"
@@ -453,10 +453,10 @@
   },
   "store_availability": {
     "general": {
-      "pick_up_available_at_html": "Abholung bei <strong>{{ location_name }}</strong> verfügbar",
+      "pick_up_available_at_html": "Abholung bei <strong>{{ location_name }}<\/strong> verfügbar",
       "view_store_info": "Shop-Informationen anzeigen",
       "check_other_stores": "Verfügbarkeit in anderen Shops überprüfen",
-      "pick_up_unavailable_at_html": "Abholung bei <strong>{{ location_name }}</strong> derzeit nicht verfügbar",
+      "pick_up_unavailable_at_html": "Abholung bei <strong>{{ location_name }}<\/strong> derzeit nicht verfügbar",
       "miles": "mi",
       "kilometers": "km",
       "pick_up_available": "Abholung verfügbar",

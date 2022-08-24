@@ -1,3 +1,8 @@
+{% style %}
+  .section-newsletter #section-id-{{ section.id }} {
+    background: url("{{section.settings.bg_image | img_url: '1920x' }}")
+  }
+{% endstyle %}
 <div id="section-id-{{ section.id }}" class="section-signup">
   {%- assign brightness = section.settings.color_bg | color_brightness -%}
   {%- assign alpha = section.settings.color_bg | color_extract: 'alpha' -%}
@@ -13,6 +18,11 @@
     }
     {% endif %}
   </style>
+  
+  <div class="newletter_logo_sec">
+    <div class="logo_wrap_icon">{{ section.settings.newsletter_logo }}</div>
+  </div>
+
   <div class="container strongly-padded-row align-center" data-cc-animate data-cc-animate-delay="0.3s">
 
     <h2 class="hometitle h4-style in-content">{{ section.settings.title | escape }}</h2>
@@ -58,6 +68,11 @@
     "class": "section-newsletter",
     "settings": [
       {
+        "type": "html",
+        "id": "newsletter_logo",
+        "label": "Newsletter Logo Icon"        
+      },
+      {
         "type": "text",
         "id": "title",
         "label": "Heading",
@@ -68,6 +83,11 @@
         "id": "subheading",
         "label": "Subheading",
         "default": "<p>Promotions, new products and sales. Directly to your inbox.</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background Image"        
       },
       {
         "type": "color",

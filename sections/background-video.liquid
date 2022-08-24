@@ -29,6 +29,10 @@
         {%- endif %}
       }
     }
+    .video-container .overlay-text .overlay-text__inner .overlay-text__text .overlay-text__button-row .overlay-text__button.button{
+      background-color: {{ section.settings.botton_bg }};
+      color: {{ section.settings.botton_text_color }};
+    }
   {% endstyle %}
 
   {% if section.settings.video != blank %}
@@ -123,7 +127,7 @@
         "default": "Tell your story"
       },
       {
-        "type": "textarea",
+        "type": "html",
         "id": "title",
         "label": "Heading",
         "default": "Background video"
@@ -176,7 +180,7 @@
         "type": "url",
         "id": "button_url_1",
         "label": "Button 1 link"
-      },
+      },      
       {
         "type": "text",
         "id": "button_label_2",
@@ -186,6 +190,16 @@
         "type": "url",
         "id": "button_url_2",
         "label": "Button 2 link"
+      },
+      {
+        "type": "color",
+        "id": "botton_bg",
+        "label": "Button background color"
+      },
+      {
+          "type": "color",
+          "id": "botton_text_color",
+          "label": "Button Text color"
       },
       {
         "type": "select",
