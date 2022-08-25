@@ -100,6 +100,7 @@
     },
     "16607618323679ed6c": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "subheading": "Tell your story",
@@ -229,6 +230,30 @@
         "bg_image": "shopify:\/\/shop_images\/footer_background_op.jpg",
         "color_bg": "#ffffff"
       }
+    },
+    "16614229224048d634": {
+      "type": "background-video",
+      "settings": {
+        "video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0536\/9115\/4590\/files\/Chill_Credo_V3.mp4",
+        "subheading": "",
+        "title": "",
+        "title_size": 84,
+        "title_size_mobile": 32,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": true,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "botton_bg": "",
+        "botton_text_color": "",
+        "text_alignment": "center center",
+        "height_desktop": 600,
+        "height_mobile": 500,
+        "full_width": true,
+        "overlay_style": "shadow"
+      }
     }
   },
   "order": [
@@ -242,6 +267,7 @@
     "1660761859754b018d",
     "1660761962f1d04537",
     "16607619805b81a490",
-    "16607637867e64e5b3"
+    "16607637867e64e5b3",
+    "16614229224048d634"
   ]
 }
