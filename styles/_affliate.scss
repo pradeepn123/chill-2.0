@@ -106,7 +106,7 @@
             grid-template-columns: auto;
         }
         @media (min-width: 641px) and (max-width: 1023px){
-            grid-column-gap: 3.125;
+            grid-column-gap: 3.125rem;
         }
         @media (min-width: 1024px) and (max-width: 1280px){
             grid-column-gap: 6.25rem;

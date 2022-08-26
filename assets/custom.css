@@ -400,7 +400,7 @@ body {
 }
 @media (min-width: 641px) and (max-width: 1023px) {
   .features_wrapper .block_wrapper {
-    grid-column-gap: 3.125;
+    grid-column-gap: 3.125rem;
   }
 }
 @media (min-width: 1024px) and (max-width: 1280px) {
