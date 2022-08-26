@@ -1216,9 +1216,8 @@
         "type": "affiliate-banner",
         "settings": {
           "banner-image": "shopify:\/\/shop_images\/Desktop_banner.jpg",
-          "title": "<p>Join the <strong>Chill <\/strong>Affiliate program on Shareasale!<\/p>",
           "title_color": "#ffffff",
-          "title_font_size_tab": 52,
+          "title": "<p>Join the <strong>Chill <\/strong>Affiliate program on Shareasale!<\/p>",
           "title_font_size": 70,
           "banner_btn_color": "#ffac9a",
           "banner_btn_font_size": 42,
@@ -1301,9 +1300,12 @@
         ],
         "settings": {
           "title": "<p>Affiliate <strong>Program Features<\/strong><\/p>",
+          "heading_font_size": 50,
           "join_text": "<p>Join the <strong>chill<\/strong> Affiliate Program On <strong>ShareASale<\/strong> today!<\/p>",
           "join_btn_color": "#6ec59f",
-          "join_btn_font": 20
+          "join_btn_font": 20,
+          "mobile_title": "<p>#Teamchill Affiliate <strong>Program Features<\/strong><\/p>",
+          "heading_font_size_mobile": 36
         }
       },
       "affiliate-slider": {
