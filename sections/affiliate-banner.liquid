@@ -1,0 +1,123 @@
+
+<div class="banner_wrapper" data-section-type="affiliate-banner" style="background: url('{{ section.settings.banner-image | img_url: 'master' }}'); background-size: cover; background-repeat: no-repeat; background-position: center right">
+    <div class="banner_text">
+        <h1 class="desktop" style="font-size: {{ section.settings.title_font_size }}px; color: {{ section.settings.title_color }} !important; ">{{ section.settings.title }}</h1>
+        <h1 class="mobile" style="font-size: {{ section.settings.title_font_size_mobile }}px; color: {{ section.settings.title_color_mobile }} !important;">{{ section.settings.mobile_title }}</h1>
+      
+        <button class="banner_btn">Join Now</button>
+        {% style %}
+        @media (max-width: 1023px){
+          .banner_btn{
+            background: {{ section.settings.banner_btn_color_mobile }};
+            font-size: {{ section.settings.banner_btn_font_size_mobile }}px;
+          }
+        }
+        @media (min-width: 1024px){
+          .banner_btn{
+            background: {{ section.settings.banner_btn_color}};
+            font-size: {{ section.settings.banner_btn_font_size }}px;
+          }
+        }
+        {% endstyle %}
+    </div>
+</div> 
+
+
+{% schema %}
+  {
+    "name": "Affiliate Banner",
+    "class": "section-affiliate-banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "banner-image",
+        "label": "Custom Background Image"
+      },
+      {
+        "type": "color",
+        "id": "title_color",
+        "label": "Title Color",
+        "default": "#fff"
+      },
+      {
+        "type": "richtext",
+        "id": "title",
+        "label": "Title",
+        "default": "<p>Join the Chill Affiliate program on Shareasale!</p>"
+      },
+      {
+        "type": "range",
+        "id": "title_font_size",
+        "label": "Title font size",
+        "min": 0,
+        "max": 72,
+        "step": 2,
+        "unit": "px",
+        "default": 16
+      },
+      
+      {
+        "type": "color",
+        "id": "banner_btn_color",
+        "label": "Banner button color",
+        "default": "#FFAC9A"
+      },
+      {
+        "type": "range",
+        "id": "banner_btn_font_size",
+        "label": "Banner button font size",
+        "min": 0,
+        "max": 72,
+        "step": 2,
+        "unit": "px",
+        "default": 16
+      },
+      {
+        "type": "richtext",
+        "id": "mobile_title",
+        "label": "Mobile Title",
+        "default": "<p>Join the Chill Affiliate program on Shareasale!</p>"
+      },
+      {
+        "type": "color",
+        "id": "title_color_mobile",
+        "label": "Title Color in Mobile",
+        "default": "#000"
+      },
+      {
+        "type": "range",
+        "id": "title_font_size_mobile",
+        "label": "Title font size in Mobile",
+        "min": 0,
+        "max": 72,
+        "step": 2,
+        "unit": "px",
+        "default": 16
+      },
+
+      {
+        "type": "color",
+        "id": "banner_btn_color_mobile",
+        "label": "Banner button color in Mobile",
+        "default": "#FFAC9A"
+      },
+      {
+        "type": "range",
+        "id": "banner_btn_font_size_mobile",
+        "label": "Banner button font size",
+        "min": 0,
+        "max": 72,
+        "step": 2,
+        "unit": "px",
+        "default": 16
+      }
+    ],
+    "presets": [
+      {
+        "name": "Affiliate Banner",
+        "settings": {
+        }
+      }
+    ]
+  }
+  {% endschema %}
