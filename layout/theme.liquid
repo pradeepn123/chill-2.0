@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   {{ 'styles.css' | asset_url | stylesheet_tag }}
 
   <script>
@@ -129,5 +129,6 @@
 
   {{ 'vendor.min.js'  | asset_url | script_tag }}
   {{ 'theme.js'  | asset_url | script_tag }}
+  {{ 'custom.js'  | asset_url | script_tag }}
 </body>
 </html>

@@ -1,0 +1,83 @@
+<div class="home-ingredients-section fully-spaced-row--medium">
+    <div class="container">
+        <div class="ingredients-section-wrapper">
+            <div class="heading_text align-{{ section.settings.text_alignment }}">
+                <h3>
+                    {{ section.settings.heading_text }}
+                </h3>
+                {{ section.settings.subheading_text}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Home Ingredients",
+    "class": "section-home-ingredients",
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "heading_text",
+            "label": "Richtext Content",
+            "default": "<p>Heading</p>"
+        },
+        {
+            "type": "richtext",
+            "id": "subheading_text",
+            "label": "Text",
+            "default": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.</p>"
+        },
+        {
+            "type": "select",
+            "id": "text_alignment",
+            "label": "Text alignment",
+            "default": "center",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "center",
+                "label": "Center"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+        }
+    ],
+    "blocks": [
+        {
+            "type": "collection-image",
+            "name": "Image with Text media",
+            "settings": [
+                {
+                    "id": "image",
+                    "type": "image_picker",
+                    "label": "Choose image"
+                },
+                {
+                    "type": "collection",
+                    "id": "collection",
+                    "label": "Collection"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Heading",
+                    "default": "Icon title"
+                }              
+            ]
+        }            
+    ],
+    "presets": [
+        {
+            "name": "Home Ingredients",
+            "settings": {}
+        }
+    ]
+}
+{% endschema %}
