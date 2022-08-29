@@ -1,0 +1,52 @@
+
+<table class="section-table">
+    <thead>
+        <tr>
+            <td>{{ section.settings.column_title }}</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            {% for block in section.blocks %}
+                <td>{{ block.settings.column_data }}</td>
+            {% endfor %}
+        </tr>
+    </tbody>
+</table>
+
+
+{% schema %}
+{
+    "name": "Add column",
+    "class": "section-table",
+    "settings": [
+        {
+            "type": "text",
+            "id": "column_title",
+            "label": "Column title",
+            "default": "Column Title"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "select",
+            "name": "Add data",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "column_data",
+                    "label": "Column data",
+                    "default": "data"
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Add column",
+        "settings": {
+        }
+      }
+    ]
+}
+{% endschema %}

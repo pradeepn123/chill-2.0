@@ -1,0 +1,114 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "166149528801bd4d3b": {
+      "type": "affiliate-banner",
+      "settings": {
+        "banner-image": "shopify:\/\/shop_images\/Rewards_op.jpg",
+        "banner-image_mobile": "shopify:\/\/shop_images\/Rewards_mobile_op.jpg",
+        "title_color": "#ffffff",
+        "title": "<p>Buy <strong>Chill <\/strong>products. <\/p><p>Earn <strong>Rewards<\/strong>.<\/p>",
+        "title_font_size": 70,
+        "sub_title": "<p>Earn Chillcoin and redeem for savings and discounts! <\/p>",
+        "subtitle_color": "#ffffff",
+        "sub_title_font_size": 20,
+        "join_now_btn": false,
+        "banner_btn_color": "#ffac9a",
+        "banner_btn_font_size": 16,
+        "mobile_title": "<p>Buy <strong>Chill <\/strong>products. <\/p><p>Earn <strong>Rewards<\/strong>.<\/p>",
+        "title_color_mobile": "#000000",
+        "title_font_size_mobile": 16,
+        "sub_title_mobile": "<p>Earn Chillcoin and redeem for savings and discounts! <\/p>",
+        "subtitle_color_mobile": "#000000",
+        "sub_title_font_size_mobile": 16,
+        "banner_btn_color_mobile": "#ffac9a",
+        "banner_btn_font_size_mobile": 16
+      }
+    },
+    "16615093664ba23608": {
+      "type": "rewards-table",
+      "settings": {
+        "rewards_heading": "<p><strong>Rewards you can Earn<\/strong><\/p>",
+        "rewards_title_font_size": 50,
+        "rewards_description": "As you collect Chillcoin, you'll become eligible to redeem them for rewards. Here are some of the rewards you can earn",
+        "rewards_heading_mobile": "<p>Rewards you can Earn<\/p>",
+        "rewards_title_font_size_mobile": 50
+      }
+    },
+    "166175387014c21468": {
+      "type": "add-column",
+      "blocks": {
+        "ca53c2d1-3117-42f8-922d-167ac7ce90ac": {
+          "type": "select",
+          "settings": {
+            "column_data": "$5 Off Coupon"
+          }
+        },
+        "16898077-8981-462a-ba1d-e3442024e33f": {
+          "type": "select",
+          "settings": {
+            "column_data": "$10 Off Coupon"
+          }
+        },
+        "82d787e2-4159-4f4b-9a25-3fc5eafd2ef7": {
+          "type": "select",
+          "settings": {
+            "column_data": "$20 Off Coupon"
+          }
+        }
+      },
+      "block_order": [
+        "ca53c2d1-3117-42f8-922d-167ac7ce90ac",
+        "16898077-8981-462a-ba1d-e3442024e33f",
+        "82d787e2-4159-4f4b-9a25-3fc5eafd2ef7"
+      ],
+      "settings": {
+        "column_title": "REWARD"
+      }
+    },
+    "1661753968151189a4": {
+      "type": "add-column",
+      "blocks": {
+        "d84321b6-5826-4120-a42f-8c5681f9a8c0": {
+          "type": "select",
+          "settings": {
+            "column_data": "500 Chillcoin"
+          }
+        },
+        "8d23c72d-17fa-49c8-ae83-9844d2c235ec": {
+          "type": "select",
+          "settings": {
+            "column_data": "1,000 Chillcoin"
+          }
+        },
+        "49c26326-8576-4a15-b8c2-8800d01ade8f": {
+          "type": "select",
+          "settings": {
+            "column_data": "3,000 Chillcoin"
+          }
+        }
+      },
+      "block_order": [
+        "d84321b6-5826-4120-a42f-8c5681f9a8c0",
+        "8d23c72d-17fa-49c8-ae83-9844d2c235ec",
+        "49c26326-8576-4a15-b8c2-8800d01ade8f"
+      ],
+      "settings": {
+        "column_title": "CHILLCOIN"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "166149528801bd4d3b",
+    "16615093664ba23608",
+    "166175387014c21468",
+    "1661753968151189a4"
+  ]
+}

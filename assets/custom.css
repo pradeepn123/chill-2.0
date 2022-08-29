@@ -532,3 +532,16 @@ body {
     max-width: 31.25rem;
   }
 }
+
+.rewards_wrapper {
+  margin: 110px 203px;
+}
+.rewards_wrapper .rewards_description {
+  font-size: 20px;
+  color: black;
+}
+
+.section-table {
+  display: flex;
+  flex-direction: column;
+}

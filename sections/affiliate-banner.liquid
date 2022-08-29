@@ -1,10 +1,29 @@
 
 <div class="banner_wrapper" data-section-type="affiliate-banner" style="background: url('{{ section.settings.banner-image | img_url: 'master' }}'); background-size: cover; background-repeat: no-repeat; background-position: center right">
+    {% if section.settings.banner-image_mobile != blank %}
+      {% style %}
+        @media (max-width: 640px){
+          .banner_wrapper{
+            background: url('{{ section.settings.banner-image_mobile | img_url: 'master' }}'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center right;
+          }
+        }
+      {% endstyle %}
+    {% endif %}
+    
     <div class="banner_text">
         <h1 class="desktop" style="font-size: {{ section.settings.title_font_size }}px; color: {{ section.settings.title_color }} !important; ">{{ section.settings.title }}</h1>
         <h1 class="mobile" style="font-size: {{ section.settings.title_font_size_mobile }}px; color: {{ section.settings.title_color_mobile }} !important;">{{ section.settings.mobile_title }}</h1>
-      
-        <button class="banner_btn">Join Now</button>
+        {% if section.settings.sub_title != blank %}
+          <h3 class="desktop" style="font-size: {{ section.settings.sub_title_font_size }}px; color: {{ section.settings.subtitle_color }};">{{ section.settings.sub_title }}</h3>
+          <h3 class="mobile" style="font-size: {{ section.settings.sub_title_font_size_mobile }}px; color: {{ section.settings.subtitle_color_mobile }};">{{ section.settings.sub_title_mobile }}</h3>
+        {% endif %}
+        {% if section.settings.join_now_btn %}
+          <button class="banner_btn">Join Now</button>
+        {% endif %}
+        
         {% style %}
         @media (max-width: 1023px){
           .banner_btn{
@@ -34,6 +53,11 @@
         "label": "Custom Background Image"
       },
       {
+        "type": "image_picker",
+        "id": "banner-image_mobile",
+        "label": "Custom Background Image for mobile"
+      },
+      {
         "type": "color",
         "id": "title_color",
         "label": "Title Color",
@@ -55,7 +79,34 @@
         "unit": "px",
         "default": 16
       },
-      
+      {
+        "type": "richtext",
+        "id": "sub_title",
+        "label": "Subtitle",
+        "default": "<p>Buy Chill products. Earn Rewards.</p>"
+      },
+      {
+        "type": "color",
+        "id": "subtitle_color",
+        "label": "Subtitle Color",
+        "default": "#fff"
+      },
+      {
+        "type": "range",
+        "id": "sub_title_font_size",
+        "label": "Subtitle font size",
+        "min": 0,
+        "max": 72,
+        "step": 2,
+        "unit": "px",
+        "default": 16
+      },
+      {
+        "type": "checkbox",
+        "id": "join_now_btn",
+        "label": "Show banner button",
+        "default": true
+      },
       {
         "type": "color",
         "id": "banner_btn_color",
@@ -94,7 +145,28 @@
         "unit": "px",
         "default": 16
       },
-
+      {
+        "type": "richtext",
+        "id": "sub_title_mobile",
+        "label": "Subtitle in Mobile",
+        "default": "<p>Buy Chill products. Earn Rewards.</p>"
+      },
+      {
+        "type": "color",
+        "id": "subtitle_color_mobile",
+        "label": "Subtitle Color in Mobile",
+        "default": "#000"
+      },
+      {
+        "type": "range",
+        "id": "sub_title_font_size_mobile",
+        "label": "Subtitle font size in Mobile",
+        "min": 0,
+        "max": 72,
+        "step": 2,
+        "unit": "px",
+        "default": 16
+      },
       {
         "type": "color",
         "id": "banner_btn_color_mobile",

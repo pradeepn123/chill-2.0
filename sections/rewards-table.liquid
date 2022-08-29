@@ -1,0 +1,60 @@
+<div class="rewards_wrapper">
+    <h1 class="desktop" style="font-size: {{ section.settings.rewards_title_font_size }}px;">{{ section.settings.rewards_heading }}</h1>
+    <h1 class="mobile" style="font-size: {{ section.settings.rewards_title_font_size_mobile }}px;">{{ section.settings.rewards_heading_mobile }}</h1>
+    <p class="rewards_description">{{ section.settings.rewards_description }}</p>
+</div>
+
+
+{% schema %}
+{
+    "name": "Rewards section",
+    "class": "section-rewards-table",
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "rewards_heading",
+            "label": "Rewards title",
+            "default": "<p>Rewards you can Earn</p>"
+        },
+        {
+            "type": "range",
+            "id": "rewards_title_font_size",
+            "label": "Rewards title font size",
+            "min": 0,
+            "max": 72,
+            "step": 2,
+            "unit": "px",
+            "default": 50
+        },
+        {
+            "type": "text",
+            "id": "rewards_description",
+            "label": "Description"
+        },
+        {
+            "type": "richtext",
+            "id": "rewards_heading_mobile",
+            "label": "Rewards title in Mobile",
+            "default": "<p>Rewards you can Earn</p>"
+        },
+        {
+            "type": "range",
+            "id": "rewards_title_font_size_mobile",
+            "label": "Rewards title font size in Mobile",
+            "min": 0,
+            "max": 72,
+            "step": 2,
+            "unit": "px",
+            "default": 16
+        }
+    ],
+    
+    "presets": [
+      {
+        "name": "Rewards Table",
+        "settings": {
+        }
+      }
+    ]
+}
+{% endschema %}

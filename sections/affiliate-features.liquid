@@ -8,7 +8,7 @@
             {% case block.type %}
                 {% when 'select'%}
                 <div class="feature_blocks">
-                    {% if cblock.settings.feature_image != blank %}
+                    {% if block.settings.feature_image != blank %}
                         <img src="{{ block.settings.feature_image | img_url: 'master' }}" alt="feature_image" class="feature_images">
                     {% else %}
                         <div class="feature_icon">{{ block.settings.svg_code }}</div>
