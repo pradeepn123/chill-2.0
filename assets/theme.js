@@ -6487,6 +6487,7 @@
         autoplaySpeed: this.$testimonialContainer.data('autoplay-speed'),
         dots: false,
         arrows: true,
+        infinite: false,
         appendArrows: this.$testimonialContainer.find('.testimonial-list__controls'),
         prevArrow: '<button type="button" class="slick-prev" aria-label="' + theme.strings.previous + '">' + theme.icons.chevronLeft + '</button>',
         nextArrow: '<button type="button" class="slick-next" aria-label="' + theme.strings.next + '">' + theme.icons.chevronRight + '</button>',

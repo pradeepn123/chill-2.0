@@ -102,11 +102,12 @@
         <div class="inner">
           <div class="innerer">
             <a class="product-link{% if settings.quickbuy_style == 'whole' %} quickbuy-toggle{% endif %}" href="{{ product_url }}">
+              
+              <div class="product-block__title">{{ product.title }}</div>
+
               {%- if section.settings.show_vendor -%}
                 <div class="vendor">{{ product.vendor }}</div>
               {%- endif -%}
-
-              <div class="product-block__title">{{ product.title }}</div>
 
               {%- if settings.prod_thumb_show_subtitle and product.metafields.descriptors.subtitle != blank -%}
                 <div class="product-block__subtitle">{{ product.metafields.descriptors.subtitle }}</div>
@@ -138,7 +139,7 @@
 
               {% render 'unit-price', variant: cheapest_variant %}
             </a>
-
+            
             {%- if settings.prod_thumb_show_options -%}
               {%- liquid
                  assign option_limit = 3
