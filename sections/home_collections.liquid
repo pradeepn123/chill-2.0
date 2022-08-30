@@ -7,7 +7,7 @@
                 {%- endif -%}
                 {%- if section.settings.show_view_all -%}
                     <div class="view-all align-center" data-cc-animate data-cc-animate-delay="0.3s">
-                        <a class="small-feature-link" href="{{ collection.url }}">{{ 'collections.general.view_all' | t }}</a>
+                        <a class="small-feature-link collection_shop_all" href="{{ collection.url }}">{{ 'collections.general.view_all' | t }}{% render 'svg-up-icon' %}</a>
                     </div>
                 {%- endif -%}
             </div>
@@ -27,7 +27,7 @@
                                 alt="{{ collection_image.alt | escape }}">
                             <div class="image_title">
                                 <h4>{{ collection_block.title }}</h4>
-                                <a class="small-feature-link shop_all" href="{{ collection_block.url }}">{{ 'collections.general.view_all' | t }}</a>
+                                <a class="small-feature-link shop_all" href="{{ collection_block.url }}">{{ 'collections.general.view_all' | t }}{% render 'svg-up-icon' %}</a>
                             </div>
                         </div>                        
                     {% endif %}

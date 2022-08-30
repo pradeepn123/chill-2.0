@@ -30,8 +30,15 @@
                                     {% assign mod = forloop.index | modulo: 2 %}                                    
                                     <div class="column--half pos-rel {% if mod == 0 %}even{%else%}odd{%endif %}">
                                         <div class="image_wrapper">
-                                            <img src="{{ block.settings.icon_image | img_url: '1920x'}}" alt="" />
-                                            <div class="svg_animation">                                                
+                                            <div class="normal_img">
+                                                {% if block.settings.icon_image != blank%}
+                                                    <img src="{{ block.settings.icon_image | img_url: '1920x'}}" alt="" />
+                                                {% endif%}
+                                            </div>
+                                            <div class="svg_animation">
+                                                {% if block.settings.animate_image != blank%}
+                                                    <img src="{{ block.settings.animate_image | img_url: '1920x'}}" alt="" />
+                                                {% endif%}                                               
                                             </div>
                                         </div>
                                         <div class="text_wrapper">
@@ -102,6 +109,11 @@
                         "id": "icon_image",
                         "type": "image_picker",
                         "label": "Choose image"
+                    },
+                    {
+                        "id": "animate_image",
+                        "type": "image_picker",
+                        "label": "Choose animation image"
                     },
                     {
                         "type": "richtext",

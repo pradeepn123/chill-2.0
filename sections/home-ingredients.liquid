@@ -7,6 +7,52 @@
                 </h3>
                 {{ section.settings.subheading_text}}
             </div>
+            
+            <div class="tab-content">
+                <div class="tab-heading">
+                    <ul class='tabs'>
+                        {%- for block in section.blocks -%}
+                            {% case block.type %}
+                                {% when 'tabs-heading' %}
+                                <li class='{% if forloop.first %}active{% endif %}' data-tab-id='tab{{ forloop.index }}'>{{ block.settings.title}}</li>                                
+                            {% endcase %}
+                        {% endfor%}
+                    </ul>
+                </div>              
+                <div class='content-section'>
+                    {%- for block in section.blocks -%}
+                        {% case block.type %}
+                            {% when 'tabs-content' %}
+                            {% assign tab_id = tab_id | plus:1 %}
+                            <div id='tab{{tab_id}}' class='content {% if tab_id == 1 %}active{% endif %}'>
+                                <div class="tab-content-list">
+                                    <div class="tab-content-item">
+                                        {% if block.settings.image_one != blank %}
+                                            <img src="{{ block.settings.image_one | img_url: '1920x'}}" alt="" />
+                                        {% endif %}
+                                        <h3>{{ block.settings.heading_one }}</h3>
+                                        {{ block.settings.text_one}}
+                                    </div>
+                                    <div class="tab-content-item">
+                                        {% if block.settings.image_two != blank %}
+                                            <img src="{{ block.settings.image_two | img_url: '1920x'}}" alt="" />
+                                        {% endif %}
+                                        <h3>{{ block.settings.heading_two }}</h3>
+                                        {{ block.settings.text_two}}
+                                    </div>
+                                    <div class="tab-content-item">
+                                        {% if block.settings.image_three != blank %}
+                                            <img src="{{ block.settings.image_three | img_url: '1920x'}}" alt="" />
+                                        {% endif %}
+                                        <h3>{{ block.settings.heading_three }}</h3>
+                                        {{ block.settings.text_three}}
+                                    </div>
+                                </div>
+                            </div>                            
+                        {% endcase %}
+                    {% endfor%}           
+                </div>
+            </div>                        
         </div>
     </div>
 </div>
@@ -51,27 +97,80 @@
     ],
     "blocks": [
         {
-            "type": "collection-image",
-            "name": "Image with Text media",
+            "type": "tabs-heading",
+            "name": "Tab Heading",
             "settings": [
-                {
-                    "id": "image",
-                    "type": "image_picker",
-                    "label": "Choose image"
-                },
-                {
-                    "type": "collection",
-                    "id": "collection",
-                    "label": "Collection"
-                },
                 {
                     "type": "text",
                     "id": "title",
-                    "label": "Heading",
-                    "default": "Icon title"
-                }              
+                    "label": "Title",
+                    "default": "Tab title"
+                }
             ]
-        }            
+        },
+        {
+            "type": "tabs-content",
+            "name": "Tab Content Info Here",
+            "settings": [
+                {
+                    "type": "paragraph",
+                    "content": "Tab Content Info One"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_one",
+                    "label": "Choose image"
+                },
+                {
+                    "type": "text",
+                    "id": "heading_one",
+                    "label": "Heading"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text_one",
+                    "label": "Rich Text Content"
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Tab Content Info Two"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_two",
+                    "label": "Choose image"
+                },
+                {
+                    "type": "text",
+                    "id": "heading_two",
+                    "label": "Heading"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text_two",
+                    "label": "Rich Text Content"
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Tab Content Info Three"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_three",
+                    "label": "Choose image"
+                },
+                {
+                    "type": "text",
+                    "id": "heading_three",
+                    "label": "Heading"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text_three",
+                    "label": "Rich Text Content"
+                }
+            ]
+        }
     ],
     "presets": [
         {

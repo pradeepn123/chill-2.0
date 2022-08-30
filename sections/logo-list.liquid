@@ -1,4 +1,10 @@
-<div id="section-id-{{ section.id }}" class="{% if section.settings.use_alt_bg %}use-alt-bg fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}" data-section-type="logo-list">
+{% style %}
+  #section-id-{{ section.id }}.brand_logo_list{
+    background: {{ section.settings.bg_color }};
+  }
+{% endstyle %}
+
+<div id="section-id-{{ section.id }}" class="brand_logo_list {% if section.settings.use_alt_bg %}use-alt-bg fully-padded-row--medium{% else %}fully-spaced-row__medium{% endif %}" data-section-type="logo-list">
   {%- style -%}
     #section-id-{{ section.id }} .logo-list__logo-image {
       opacity: {{ section.settings.image_opacity }}%;
@@ -86,6 +92,11 @@
   "name": "Logo list",
   "class": "section-logo-list",
   "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Section Background Color"      
+    },
     {
       "type": "text",
       "id": "title",
