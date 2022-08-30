@@ -62,13 +62,18 @@
         "use_alt_bg": false
       }
     },
-    "16607617656ff0aca8": {
-      "type": "logo-list",
-      "disabled": true,
+    "16359278676808bea5": {
+      "type": "featured-collection",
       "settings": {
-        "title": "",
-        "image_opacity": 75,
-        "use_alt_bg": false
+        "title": "Our <strong> Trending Products <\/strong>",
+        "collection": "cbd-pouches",
+        "show_vendor": true,
+        "enable_carousel": false,
+        "grid": 4,
+        "rows": 1,
+        "use_alt_bg": true,
+        "show_view_all": true,
+        "full_width": false
       }
     },
     "166149763181cc2acb": {
@@ -177,21 +182,6 @@
         "text": "<p><strong>Self Check-In:<\/strong> <\/p><p>How Does <strong>Stress Effect You?<\/strong><\/p>",
         "text_color": "#ffffff",
         "text_alignment": "center"
-      }
-    },
-    "16359278676808bea5": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Our Trending Products",
-        "collection": "chill-flavoured-drops",
-        "show_vendor": false,
-        "enable_carousel": false,
-        "grid": 4,
-        "rows": 1,
-        "use_alt_bg": false,
-        "show_view_all": true,
-        "full_width": true
       }
     },
     "1661759224933bf819": {
@@ -376,8 +366,46 @@
         "full_width": true
       }
     },
+    "16618284517e50f27f": {
+      "type": "home_testimonials",
+      "blocks": {
+        "1661828451bf6865ce-0": {
+          "type": "testimonial",
+          "settings": {
+            "product": "chill-cbd-gummies-10mg",
+            "testimonial": "“ Day 3 of them for me and I’m feeling a bit more…woosaba! I do wish there wasn’t so much sugar on the outside but it definitely won’t stop me from purchasing in the future! ”",
+            "author": "Raymond B.",
+            "author_designation": "Verified customer",
+            "image": "shopify:\/\/shop_images\/Customer_story_1.jpg",
+            "link": ""
+          }
+        },
+        "1661828451bf6865ce-1": {
+          "type": "testimonial",
+          "settings": {
+            "product": "chill-hemp-smokes-carton-original",
+            "testimonial": "“ Day 3 of them for me and I’m feeling a bit more…woosaba! I do wish there wasn’t so much sugar on the outside but it definitely won’t stop me from purchasing in the future! ”",
+            "author": "Raymond A.",
+            "author_designation": "Verified customer",
+            "image": "shopify:\/\/shop_images\/Customer_story_2.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1661828451bf6865ce-0",
+        "1661828451bf6865ce-1"
+      ],
+      "settings": {
+        "title": "<p>Our <strong>Customer Stories<\/strong><\/p>",
+        "quote_text_size": 24,
+        "quote_text_size_mobile": 20,
+        "use_alt_bg": true
+      }
+    },
     "1660761962f1d04537": {
       "type": "testimonials",
+      "disabled": true,
       "blocks": {
         "1660761962385b2a54-0": {
           "type": "testimonial",
@@ -511,9 +539,10 @@
         "97b2dc03-0af6-4b4a-8d86-1b97f4fca109"
       ],
       "settings": {
+        "bg_color": "#ffac9a",
         "title": "",
-        "image_opacity": 90,
-        "use_alt_bg": true
+        "image_opacity": 100,
+        "use_alt_bg": false
       }
     },
     "16607637867e64e5b3": {
@@ -530,15 +559,15 @@
   "order": [
     "1660761564dddf193c",
     "1635927863703110df",
-    "16607617656ff0aca8",
+    "16359278676808bea5",
     "166149763181cc2acb",
     "1661495934a2300196",
     "1661508210e5eab38e",
-    "16359278676808bea5",
     "1661759224933bf819",
     "16616836322167cf31",
     "1660761909160f340c",
     "1660761859754b018d",
+    "16618284517e50f27f",
     "1660761962f1d04537",
     "16607619805b81a490",
     "16607637867e64e5b3"
