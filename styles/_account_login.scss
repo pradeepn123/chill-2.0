@@ -16,6 +16,9 @@
         text-align: left !important;
         text-transform: none;
     }
-    // .account_login_sub-title{
-    // }
+    #login_email{
+        input[type="email"]{
+            border-radius: 30px;
+        }
+    }
 }

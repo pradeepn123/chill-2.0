@@ -1519,3 +1519,6 @@ body {
   text-align: left !important;
   text-transform: none;
 }
+.account_login #login_email input[type=email] {
+  border-radius: 30px;
+}
