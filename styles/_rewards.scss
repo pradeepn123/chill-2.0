@@ -1,7 +1,7 @@
 .rewards_wrapper, .get_started_wrapper{
-    margin: 110px 203px 50px 203px;
+    margin: 6.875rem 12.688rem 50px 12.688rem;
     @media (max-width: 640px){
-        margin: 220px 20px 50px 20px;
+        margin: 13.75rem 20px 50px 20px;
     }
     @media (min-width: 641px) and (max-width: 1023px){
         margin: 64px 90px 50px 90px;
@@ -15,7 +15,7 @@
     .rewards_description{
         font-size: 20px;
         color: black;
-        max-width: 745px;
+        max-width: 46.563rem;
         @media (max-width: 640px){
             font-size: 16px;
         }
@@ -24,7 +24,7 @@
         border: none;
         border-radius: 31px;
         font-weight: 800;
-        width: 240px;
+        width: 15rem;
     }
 }
 .get_started_wrapper{

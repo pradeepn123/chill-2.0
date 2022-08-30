@@ -1,5 +1,5 @@
-.responsive-table_trial{
-    margin-left: 203px;
+.responsive-table_rewards{
+    margin-left: 12.688rem;
     width: 70%;
     color: #000;
     overflow: auto;
@@ -21,7 +21,7 @@
         }
     }
     td p{
-        font-weight: 800;
+        // font-weight: 800;
         margin: 0;
         @media (max-width: 640px){
             padding: 0;

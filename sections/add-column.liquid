@@ -1,4 +1,4 @@
-<table class="responsive-table_trial">
+<table class="responsive-table_rewards">
     <tbody>
         <tr>
             {%- for block in section.blocks -%}
@@ -12,7 +12,7 @@
             {%- for block in section.blocks -%}
                 {% case block.type %}
                     {% when 'text1' %}
-                    <td data-th="Supplier Code" style="font-size: {{ block.settings.row1_font_size }}px">
+                    <td style="font-size: {{ block.settings.row1_font_size }}px">
                         {{ block.settings.row_1}}
                     </td>                                
                 {% endcase %}
@@ -22,7 +22,7 @@
             {%- for block in section.blocks -%}
                 {% case block.type %}
                     {% when 'text2' %}
-                    <td data-th="Supplier Code" style="font-size: {{ block.settings.row2_font_size }}px">
+                    <td style="font-size: {{ block.settings.row2_font_size }}px">
                         {{ block.settings.row_2}}
                     </td>
                 {% endcase %}
@@ -32,7 +32,7 @@
             {%- for block in section.blocks -%}
                 {% case block.type %}
                     {% when 'text3' %}
-                    <td data-th="Supplier Code" style="font-size: {{ block.settings.row3_font_size }}px">
+                    <td style="font-size: {{ block.settings.row3_font_size }}px">
                         {{ block.settings.row_3}}
                     </td>
                 {% endcase %}
@@ -42,7 +42,7 @@
             {%- for block in section.blocks -%}
                 {% case block.type %}
                     {% when 'text4' %}
-                    <td data-th="Supplier Code" style="font-size: {{ block.settings.row4_font_size }}px">
+                    <td style="font-size: {{ block.settings.row4_font_size }}px">
                         {{ block.settings.row_4}}
                     </td>
                 {% endcase %}
@@ -52,7 +52,7 @@
             {%- for block in section.blocks -%}
                 {% case block.type %}
                     {% when 'text5' %}
-                    <td data-th="Supplier Code" style="font-size: {{ block.settings.row5_font_size }}px">
+                    <td style="font-size: {{ block.settings.row5_font_size }}px">
                         {{ block.settings.row_5}}
                     </td>
                 {% endcase %}
@@ -62,7 +62,7 @@
             {%- for block in section.blocks -%}
                 {% case block.type %}
                     {% when 'text6' %}
-                    <td data-th="Supplier Code" style="font-size: {{ block.settings.row6_font_size }}px">
+                    <td style="font-size: {{ block.settings.row6_font_size }}px">
                         {{ block.settings.row_6}}
                     </td>
                 {% endcase %}
@@ -193,8 +193,8 @@
                 },
                 {
                     "type": "range",
-                    "id": "row4_font_size",
-                    "label": "Row-4 font size",
+                    "id": "row5_font_size",
+                    "label": "Row-5 font size",
                     "min": 0,
                     "max": 72,
                     "step": 2,
