@@ -1,7 +1,34 @@
-.rewards_wrapper{
-    margin: 110px 203px;
+.rewards_wrapper, .get_started_wrapper{
+    margin: 110px 203px 50px 203px;
+    @media (max-width: 640px){
+        margin: 220px 20px 50px 20px;
+    }
+    @media (min-width: 641px) and (max-width: 1023px){
+        margin: 64px 90px 50px 90px;
+    }
+    h1{
+        text-transform: none !important;
+        p{
+            margin-bottom: 20px;
+        }
+    }
     .rewards_description{
         font-size: 20px;
         color: black;
+        max-width: 745px;
+        @media (max-width: 640px){
+            font-size: 16px;
+        }
+    }
+    .rewards_button{
+        border: none;
+        border-radius: 31px;
+        font-weight: 800;
+        width: 240px;
+    }
+}
+.get_started_wrapper{
+    @media (max-width: 640px){
+        margin: 80px 20px 50px 20px;
     }
 }

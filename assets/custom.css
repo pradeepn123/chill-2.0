@@ -345,9 +345,12 @@ body {
     margin: auto 50px;
     top: 33%;
   }
-  .banner_wrapper .banner_text p {
+  .banner_wrapper .banner_text h1 p {
     color: #fff !important;
     font-size: 32px !important;
+  }
+  .banner_wrapper .banner_text p {
+    color: #fff !important;
   }
 }
 .banner_wrapper .banner_btn {
@@ -533,15 +536,84 @@ body {
   }
 }
 
-.rewards_wrapper {
-  margin: 110px 203px;
+.rewards_wrapper, .get_started_wrapper {
+  margin: 110px 203px 50px 203px;
 }
-.rewards_wrapper .rewards_description {
+@media (max-width: 640px) {
+  .rewards_wrapper, .get_started_wrapper {
+    margin: 220px 20px 50px 20px;
+  }
+}
+@media (min-width: 641px) and (max-width: 1023px) {
+  .rewards_wrapper, .get_started_wrapper {
+    margin: 64px 90px 50px 90px;
+  }
+}
+.rewards_wrapper h1, .get_started_wrapper h1 {
+  text-transform: none !important;
+}
+.rewards_wrapper h1 p, .get_started_wrapper h1 p {
+  margin-bottom: 20px;
+}
+.rewards_wrapper .rewards_description, .get_started_wrapper .rewards_description {
   font-size: 20px;
   color: black;
+  max-width: 745px;
+}
+@media (max-width: 640px) {
+  .rewards_wrapper .rewards_description, .get_started_wrapper .rewards_description {
+    font-size: 16px;
+  }
+}
+.rewards_wrapper .rewards_button, .get_started_wrapper .rewards_button {
+  border: none;
+  border-radius: 31px;
+  font-weight: 800;
+  width: 240px;
 }
 
-.section-table {
-  display: flex;
-  flex-direction: column;
+@media (max-width: 640px) {
+  .get_started_wrapper {
+    margin: 80px 20px 50px 20px;
+  }
+}
+
+.responsive-table_trial {
+  margin-left: 203px;
+  width: 70%;
+  color: #000;
+  overflow: auto;
+}
+@media (max-width: 640px) {
+  .responsive-table_trial {
+    width: 100%;
+    margin: 0;
+  }
+  .responsive-table_trial td p {
+    font-weight: 800;
+    font-size: 18px;
+  }
+}
+@media (min-width: 641px) and (max-width: 1023px) {
+  .responsive-table_trial {
+    margin: 0 90px;
+  }
+}
+.responsive-table_trial .table_title {
+  font-weight: 400;
+}
+@media (max-width: 640px) {
+  .responsive-table_trial .table_title {
+    padding-left: 20px;
+  }
+}
+.responsive-table_trial td p {
+  font-weight: 800;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  .responsive-table_trial td p {
+    padding: 0;
+    font-size: 15px !important;
+  }
 }
