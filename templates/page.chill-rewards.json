@@ -1,0 +1,232 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "166149528801bd4d3b": {
+      "type": "affiliate-banner",
+      "settings": {
+        "banner-image": "shopify:\/\/shop_images\/Rewards_op.jpg",
+        "banner-image_mobile": "shopify:\/\/shop_images\/Rewards_mobile_op.jpg",
+        "title_color": "#ffffff",
+        "title": "<p>Buy <strong>Chill <\/strong>products. <\/p><p>Earn <strong>Rewards<\/strong>.<\/p>",
+        "title_font_size": 70,
+        "sub_title": "<p>Earn Chillcoin and redeem for savings and discounts! <\/p>",
+        "subtitle_color": "#ffffff",
+        "sub_title_font_size": 20,
+        "join_now_btn": false,
+        "banner_btn_color": "#ffac9a",
+        "banner_btn_font_size": 16,
+        "mobile_title": "<p>Buy Chill<strong> <\/strong>products. <\/p><p><strong>Earn Rewards<\/strong>.<\/p>",
+        "title_color_mobile": "#000000",
+        "title_font_size_mobile": 36,
+        "sub_title_mobile": "<p>Earn Chillcoin and redeem for savings and discounts! <\/p>",
+        "subtitle_color_mobile": "#000000",
+        "sub_title_font_size_mobile": 16,
+        "banner_btn_color_mobile": "#ffac9a",
+        "banner_btn_font_size_mobile": 16
+      }
+    },
+    "16615093664ba23608": {
+      "type": "rewards-table",
+      "settings": {
+        "rewards_heading": "<p><strong>Rewards you can Earn<\/strong><\/p>",
+        "rewards_title_font_size": 50,
+        "rewards_description": "As you collect Chillcoin, you'll become eligible to redeem them for rewards. Here are some of the rewards you can earn",
+        "margin_top": false,
+        "rewards_heading_mobile": "<p>Rewards <strong>you can Earn<\/strong><\/p>",
+        "rewards_title_font_size_mobile": 36,
+        "add_button": false,
+        "button_text": "Shop Now",
+        "button_font_size": 16,
+        "button_color": ""
+      }
+    },
+    "166175387014c21468": {
+      "type": "add-column",
+      "blocks": {
+        "bd43e541-96fa-404c-b8bf-c975ecfffb88": {
+          "type": "reward-table-heading",
+          "settings": {
+            "title": "Rewards",
+            "title_font_size": 18
+          }
+        },
+        "5086a90e-7e50-4eff-a962-f55622998d1e": {
+          "type": "reward-table-heading",
+          "settings": {
+            "title": "CHILLCOIN",
+            "title_font_size": 18
+          }
+        },
+        "075e9203-e601-4228-9f5a-dd84464ce105": {
+          "type": "reward-table-heading",
+          "disabled": true,
+          "settings": {
+            "title": "Icon title",
+            "title_font_size": 18
+          }
+        },
+        "558026cf-25b9-44a4-b8a7-f65986e2825e": {
+          "type": "reward-table-heading",
+          "disabled": true,
+          "settings": {
+            "title": "Icon title",
+            "title_font_size": 18
+          }
+        },
+        "efc5b845-0c55-4d2e-ab69-fadc441b0244": {
+          "type": "text1",
+          "settings": {
+            "row_1": "<p><strong>$5 Off Coupon<\/strong><\/p>",
+            "row1_font_size": 30
+          }
+        },
+        "d85b69fd-f211-49ab-b29e-6afbee450336": {
+          "type": "text1",
+          "settings": {
+            "row_1": "<p><strong>500 Chillcoin<\/strong><\/p>",
+            "row1_font_size": 30
+          }
+        },
+        "74a6e67c-cac1-4f53-92ca-66ff9c536481": {
+          "type": "text1",
+          "disabled": true,
+          "settings": {
+            "row_1": "<p>qwert<\/p>",
+            "row1_font_size": 30
+          }
+        },
+        "8575557b-dc77-4dc0-9ca6-31a718cac72b": {
+          "type": "text1",
+          "disabled": true,
+          "settings": {
+            "row_1": "",
+            "row1_font_size": 30
+          }
+        },
+        "537a15c6-43e6-42a0-82f2-ca75d6735969": {
+          "type": "text2",
+          "settings": {
+            "row_2": "<p><strong>$10 Off Coupon<\/strong><\/p>",
+            "row2_font_size": 30
+          }
+        },
+        "c6aecabd-eb03-4e0a-840e-468502e6c8ca": {
+          "type": "text2",
+          "settings": {
+            "row_2": "<p><strong>1,000 Chillcoin<\/strong><\/p>",
+            "row2_font_size": 30
+          }
+        },
+        "6876754f-2d4c-4542-b4f5-b800bcf0c93f": {
+          "type": "text2",
+          "disabled": true,
+          "settings": {
+            "row_2": "",
+            "row2_font_size": 30
+          }
+        },
+        "2b78d8c5-7f24-44ce-8d86-dc97d72d7e1b": {
+          "type": "text3",
+          "settings": {
+            "row_3": "<p><strong>$20 Off Coupon<\/strong><\/p>",
+            "row3_font_size": 30
+          }
+        },
+        "d10bbb73-ce2a-4c34-bcb9-d008798bf475": {
+          "type": "text3",
+          "settings": {
+            "row_3": "<p><strong>3,000 Chillcoin<\/strong><\/p>",
+            "row3_font_size": 30
+          }
+        },
+        "a26bfbcc-123c-4704-9ce3-890e5428cb08": {
+          "type": "text3",
+          "disabled": true,
+          "settings": {
+            "row_3": "",
+            "row3_font_size": 30
+          }
+        },
+        "3f821950-d596-4a22-bc29-202e235bd775": {
+          "type": "text4",
+          "disabled": true,
+          "settings": {
+            "row_4": "",
+            "row4_font_size": 30
+          }
+        }
+      },
+      "block_order": [
+        "bd43e541-96fa-404c-b8bf-c975ecfffb88",
+        "5086a90e-7e50-4eff-a962-f55622998d1e",
+        "075e9203-e601-4228-9f5a-dd84464ce105",
+        "558026cf-25b9-44a4-b8a7-f65986e2825e",
+        "efc5b845-0c55-4d2e-ab69-fadc441b0244",
+        "d85b69fd-f211-49ab-b29e-6afbee450336",
+        "74a6e67c-cac1-4f53-92ca-66ff9c536481",
+        "8575557b-dc77-4dc0-9ca6-31a718cac72b",
+        "537a15c6-43e6-42a0-82f2-ca75d6735969",
+        "c6aecabd-eb03-4e0a-840e-468502e6c8ca",
+        "6876754f-2d4c-4542-b4f5-b800bcf0c93f",
+        "2b78d8c5-7f24-44ce-8d86-dc97d72d7e1b",
+        "d10bbb73-ce2a-4c34-bcb9-d008798bf475",
+        "a26bfbcc-123c-4704-9ce3-890e5428cb08",
+        "3f821950-d596-4a22-bc29-202e235bd775"
+      ],
+      "settings": {
+      }
+    },
+    "1661753968151189a4": {
+      "type": "add-column",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "166178239742301955": {
+      "type": "rewards-table",
+      "disabled": true,
+      "settings": {
+        "rewards_heading": "<p><strong>How to Get Started<\/strong><\/p>",
+        "rewards_title_font_size": 50,
+        "rewards_description": "To get started, place an order! You can check your balance at any time by clicking the icon in the corner of the screen.",
+        "margin_top": false,
+        "rewards_heading_mobile": "<p><strong>How to Get Started<\/strong><\/p>",
+        "rewards_title_font_size_mobile": 42,
+        "add_button": true,
+        "button_text": "Shop Now",
+        "button_font_size": 20,
+        "button_color": "#9792e4"
+      }
+    },
+    "1661842558a4ae4266": {
+      "type": "get_started",
+      "settings": {
+        "rewards_heading": "<p><strong>How to Get Started<\/strong><\/p>",
+        "rewards_title_font_size": 50,
+        "rewards_description": "To get started, place an order! You can check your balance at any time by clicking the icon in the corner of the screen.",
+        "margin_top": true,
+        "rewards_heading_mobile": "<p><strong>How to Get Started<\/strong><\/p>",
+        "rewards_title_font_size_mobile": 42,
+        "add_button": true,
+        "button_text": "Shop Now",
+        "button_font_size": 16,
+        "button_color": "#9792e4"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "166149528801bd4d3b",
+    "16615093664ba23608",
+    "166175387014c21468",
+    "1661753968151189a4",
+    "166178239742301955",
+    "1661842558a4ae4266"
+  ]
+}
