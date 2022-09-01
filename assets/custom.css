@@ -1500,25 +1500,79 @@ body {
   }
 }
 
-.account_login {
+.account_login, .account_register {
   display: flex;
   flex-direction: row;
 }
-.account_login .account_img {
+.account_login .small-form, .account_register .small-form {
+  margin: auto;
+}
+.account_login .small-form p, .account_register .small-form p {
+  color: #000;
+}
+@media (max-width: 1023px) {
+  .account_login .small-form, .account_register .small-form {
+    margin: auto 20px;
+  }
+}
+@media (max-width: 641px) {
+  .account_login .small-form, .account_register .small-form {
+    margin: 150px 20px;
+  }
+}
+.account_login .account_img, .account_register .account_img {
   flex-basis: 50%;
 }
-.account_login .account_img img {
+.account_login .account_img img, .account_register .account_img img {
   height: 100vh;
   width: 100%;
   object-fit: cover;
 }
-.account_login .account_login_title {
+@media (max-width: 641px) {
+  .account_login .account_img, .account_register .account_img {
+    display: none;
+  }
+}
+.account_login .account_login_title, .account_login .account_recoverPassword_title, .account_login .register_title, .account_register .account_login_title, .account_register .account_recoverPassword_title, .account_register .register_title {
   color: #000;
   font-size: 42px;
   font-weight: 800;
   text-align: left !important;
   text-transform: none;
 }
-.account_login #login_email input[type=email] {
+@media (max-width: 641px) {
+  .account_login .account_login_title, .account_login .account_recoverPassword_title, .account_login .register_title, .account_register .account_login_title, .account_register .account_recoverPassword_title, .account_register .register_title {
+    font-size: 36px;
+  }
+}
+.account_login #login_email input, .account_login #login_password input, .account_login #recover_email input, .account_login #register_email input, .account_login #register_password input, .account_register #login_email input, .account_register #login_password input, .account_register #recover_email input, .account_register #register_email input, .account_register #register_password input {
   border-radius: 30px;
+  background-color: #fff !important;
+}
+.account_login .opposing-items, .account_login .action_bottom, .account_register .opposing-items, .account_register .action_bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 16px;
+  gap: 16px;
+}
+.account_login .opposing-items p, .account_login .opposing-items span, .account_login .action_bottom p, .account_login .action_bottom span, .account_register .opposing-items p, .account_register .opposing-items span, .account_register .action_bottom p, .account_register .action_bottom span {
+  color: #000;
+  margin: 0 !important;
+}
+@media (min-width: 319px) {
+  .account_login .opposing-items p, .account_login .opposing-items span, .account_login .action_bottom p, .account_login .action_bottom span, .account_register .opposing-items p, .account_register .opposing-items span, .account_register .action_bottom p, .account_register .action_bottom span {
+    font-size: 14px;
+  }
+}
+.account_login .opposing-items a, .account_login .action_bottom a, .account_register .opposing-items a, .account_register .action_bottom a {
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 800;
+}
+.account_login .opposing-items .login_btn, .account_login .opposing-items .recover_password_btn, .account_login .opposing-items .register_btn, .account_login .action_bottom .login_btn, .account_login .action_bottom .recover_password_btn, .account_login .action_bottom .register_btn, .account_register .opposing-items .login_btn, .account_register .opposing-items .recover_password_btn, .account_register .opposing-items .register_btn, .account_register .action_bottom .login_btn, .account_register .action_bottom .recover_password_btn, .account_register .action_bottom .register_btn {
+  border: 1px solid #6EC59F;
+  border-radius: 30px;
+  width: 13.063rem;
+  font-weight: 800;
 }

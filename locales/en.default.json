@@ -335,30 +335,30 @@
   "customer": {
     "login": {
       "title": "Login",
-      "email": "Email",
+      "email": "Email Id",
       "password": "Password",
-      "forgot_password": "Forgot your password?",
+      "forgot_password": "Forgot password?",
       "sign_in": "Sign In",
-      "register": "Create account",
+      "register": "Sign Up Here",
       "guest_title": "Continue as a guest",
       "guest_continue": "Continue"
     },
     "recover_password": {
-      "title": "Reset your password",
-      "subtext": "We will send you an email to reset your password.",
+      "title": "Recover password",
+      "subtext": "An email with a link to reset your password will \n be sent to you.",
       "success": "We've sent you an email with a link to update your password.",
       "email": "Email",
       "submit": "Submit",
-      "cancel": "Cancel"
+      "cancel": "Back to login"
     },
     "register": {
-      "title": "Create Account",
+      "title": "Sign Up",
       "first_name": "First Name",
       "last_name": "Last Name",
-      "email": "Email",
+      "email": "Email Id",
       "password": "Password",
-      "submit": "Create",
-      "log_in": "Log in with an existing account",
+      "submit": "Join now",
+      "log_in": "Login here",
       "cancel": "Return to Store"
     },
     "general": {
