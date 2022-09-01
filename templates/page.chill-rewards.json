@@ -37,7 +37,6 @@
         "rewards_heading": "<p><strong>Rewards you can Earn<\/strong><\/p>",
         "rewards_title_font_size": 50,
         "rewards_description": "As you collect Chillcoin, you'll become eligible to redeem them for rewards. Here are some of the rewards you can earn",
-        "margin_top": false,
         "rewards_heading_mobile": "<p>Rewards <strong>you can Earn<\/strong><\/p>",
         "rewards_title_font_size_mobile": 36,
         "add_button": false,
@@ -160,6 +159,13 @@
             "row_4": "",
             "row4_font_size": 30
           }
+        },
+        "7932faef-6baa-44f3-8b1d-9a0ffd793a6d": {
+          "type": "text5",
+          "disabled": true,
+          "settings": {
+            "row_5": "<p><strong>124eeghyuj<\/strong><\/p>"
+          }
         }
       },
       "block_order": [
@@ -177,7 +183,8 @@
         "2b78d8c5-7f24-44ce-8d86-dc97d72d7e1b",
         "d10bbb73-ce2a-4c34-bcb9-d008798bf475",
         "a26bfbcc-123c-4704-9ce3-890e5428cb08",
-        "3f821950-d596-4a22-bc29-202e235bd775"
+        "3f821950-d596-4a22-bc29-202e235bd775",
+        "7932faef-6baa-44f3-8b1d-9a0ffd793a6d"
       ],
       "settings": {
       }
@@ -195,7 +202,6 @@
         "rewards_heading": "<p><strong>How to Get Started<\/strong><\/p>",
         "rewards_title_font_size": 50,
         "rewards_description": "To get started, place an order! You can check your balance at any time by clicking the icon in the corner of the screen.",
-        "margin_top": false,
         "rewards_heading_mobile": "<p><strong>How to Get Started<\/strong><\/p>",
         "rewards_title_font_size_mobile": 42,
         "add_button": true,
@@ -210,7 +216,6 @@
         "rewards_heading": "<p><strong>How to Get Started<\/strong><\/p>",
         "rewards_title_font_size": 50,
         "rewards_description": "To get started, place an order! You can check your balance at any time by clicking the icon in the corner of the screen.",
-        "margin_top": true,
         "rewards_heading_mobile": "<p><strong>How to Get Started<\/strong><\/p>",
         "rewards_title_font_size_mobile": 42,
         "add_button": true,
