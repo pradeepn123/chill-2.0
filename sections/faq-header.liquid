@@ -16,14 +16,14 @@
       <div class="faq-header__content">
         {% if section.settings.title != blank %}
           {% if section.settings.use_h1 %}
-            <h1 id="{{ section.id }}">{{ section.settings.title | escape }}</h1>
+            <h1 id="{{ section.id }}" style="font-weight: {{ section.settings.title_weight }}">{{ section.settings.title | escape }}</h1>
           {% else %}
-            <h2 id="{{ section.id }}" class="h1-style">{{ section.settings.title | escape }}</h2>
+            <h2 id="{{ section.id }}" class="h1-style" style="font-weight: {{ section.settings.title_weight }}" >{{ section.settings.title | escape }}</h2>
           {% endif %}
         {% endif %}
 
         {% if section.settings.text != blank %}
-          <div class="rte">{{ section.settings.text }}</div>
+          <div class="rte" style="color: #000;">{{ section.settings.text }}</div>
         {% endif %}
 
         {% if section.settings.show_search %}
@@ -52,6 +52,15 @@
         "id": "title",
         "label": "Title",
         "default": "FAQ"
+      },
+      {
+        "type": "range",
+        "id": "title_weight",
+        "min": 100,
+        "max": 900,
+        "step": 100,
+        "label": "Text weight",
+        "default": 800
       },
       {
         "type": "checkbox",

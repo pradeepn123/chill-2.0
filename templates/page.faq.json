@@ -1,1 +1,218 @@
-{"sections":{"heading":{"type":"image-with-text-overlay","settings":{"height":"fixed","height_desktop":400,"height_mobile":300,"subheading":"","title":"Customer Help","title_size":52,"text":"<p>If talking to a real-life human is more your thing, you can reach our Customer Happiness Team via email (below).<\/p>","button_label_1":"","button_label_2":""}},"main":{"type":"faq-header","settings":{}},"faq-content-1":{"type":"collapsible-tabs","blocks":{"question-1":{"type":"question","settings":{"title":"What size should I buy?","answer":"<p>If you’re not quite sure which size is right for you, refer to our size guides. They’re located underneath the available sizes for each of our products.<\/p>"}},"question-2":{"type":"question","settings":{"title":"Can I cancel my order?","answer":"<p>We completely get it, we change our minds too! While we wish could, once an order is placed, we are unable to alter or cancel it at this time. We hope to have a cancellation window one day in the future.<\/p><p>Should the item(s) not work out, make sure to exchange for a preferred style or return for a refund. As a reminder, domestic return shipping is free.<\/p>"}}},"block_order":["question-1","question-2"],"settings":{"title":"Ordering"}},"faq-content-2":{"type":"collapsible-tabs","blocks":{"para-1":{"type":"content","settings":{"content":"<p>We use all major carriers, and local courier partners. You’ll be asked to select a delivery method during checkout.<\/p>"}},"question-1":{"type":"question","settings":{"title":"What is the shipping policy?","answer":"<p>Once your order is placed, you will receive a confirmation email letting you know that our fulfillment team has received your order. Once your order is fulfilled, you will receive an email notification with your tracking information. Shipping fees are non-refundable in the case of returns.<\/p>"}},"question-2":{"type":"question","settings":{"title":"Do you ship overseas?","answer":"<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout.<\/p>"}}},"block_order":["para-1","question-1","question-2"],"settings":{"title":"Shipping, Returns & Exchanges"}},"contact":{"type":"rich-text","blocks":{"icon":{"type":"icon","settings":{"icon":"chat_bubble"}},"heading":{"type":"heading","settings":{"title":"Get in touch"}},"text":{"type":"text","settings":{"text":"<p>Have questions about your order, or a general enquiry?<\/p>"}},"button":{"type":"button","settings":{"button_label":"Contact us"}}},"block_order":["icon","heading","text","button"],"settings":{"use_alt_bg":true}}},"order":["heading","main","faq-content-1","faq-content-2","contact"]}
+{
+  "sections": {
+    "heading": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/footer_background_op.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/footer_background_op.jpg",
+        "image_position": "center center",
+        "mobile_image_position": "center center",
+        "height": "fixed",
+        "height_desktop": 400,
+        "height_mobile": 300,
+        "image_link": "",
+        "subheading": "",
+        "title": "Frequently asked questions",
+        "title_size": 52,
+        "title_size_mobile": 46,
+        "use_h1": false,
+        "text": "<p>If talking to a real-life human is more your thing, you can reach our Customer Happiness Team via email (below).<\/p>",
+        "enlarge_text": true,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "main": {
+      "type": "faq-header",
+      "settings": {
+        "title": "FAQ",
+        "use_h1": false,
+        "text": "<p>We might have already read your mind. Use the search to find what you are looking for.<\/p>",
+        "show_search": true,
+        "show_index": true,
+        "index_heading": "How can we help?"
+      }
+    },
+    "faq-content-1": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "1f1f5ef6-b5d0-47c7-8a39-5a7460b5e5b9": {
+          "type": "question",
+          "settings": {
+            "title": "What is CBD?",
+            "answer": "<p>CBD (cannabidiol) is the most abundant cannabinoid present in the hemp plant. The plants contain over 100 other cannabinoids but all in far lower amounts.<\/p>"
+          }
+        },
+        "question-1": {
+          "type": "question",
+          "settings": {
+            "title": "What size should I buy?",
+            "answer": "<p>If you’re not quite sure which size is right for you, refer to our size guides. They’re located underneath the available sizes for each of our products.<\/p>"
+          }
+        },
+        "question-2": {
+          "type": "question",
+          "settings": {
+            "title": "Can I cancel my order?",
+            "answer": "<p>We completely get it, we change our minds too! While we wish could, once an order is placed, we are unable to alter or cancel it at this time. We hope to have a cancellation window one day in the future.<\/p><p>Should the item(s) not work out, make sure to exchange for a preferred style or return for a refund. As a reminder, domestic return shipping is free.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1f1f5ef6-b5d0-47c7-8a39-5a7460b5e5b9",
+        "question-1",
+        "question-2"
+      ],
+      "settings": {
+        "title": "Ordering"
+      }
+    },
+    "faq-content-2": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "para-1": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "content": "<p>We use all major carriers, and local courier partners. You’ll be asked to select a delivery method during checkout.<\/p>"
+          }
+        },
+        "question-1": {
+          "type": "question",
+          "settings": {
+            "title": "What is the shipping policy?",
+            "answer": "<p>Once your order is placed, you will receive a confirmation email letting you know that our fulfillment team has received your order. Once your order is fulfilled, you will receive an email notification with your tracking information. Shipping fees are non-refundable in the case of returns.<\/p>"
+          }
+        },
+        "question-2": {
+          "type": "question",
+          "settings": {
+            "title": "Do you ship overseas?",
+            "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "para-1",
+        "question-1",
+        "question-2"
+      ],
+      "settings": {
+        "title": "Shipping"
+      }
+    },
+    "1662096120276ec1bc": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "166209612085b38089-0": {
+          "type": "question",
+          "settings": {
+            "title": "What is CBD?",
+            "answer": "<p>CBD (cannabidiol) is the most abundant cannabinoid present in the hemp plant. The plants contain over 100 other cannabinoids but all in far lower amounts.<\/p>"
+          }
+        },
+        "166209612085b38089-1": {
+          "type": "question",
+          "settings": {
+            "title": "What are the benefits of using CBD?",
+            "answer": "<p>Answer<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "166209612085b38089-0",
+        "166209612085b38089-1"
+      ],
+      "settings": {
+        "title": "Returns & Exchanges"
+      }
+    },
+    "16620961675c8ec9db": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "1662096167a94d7d7b-0": {
+          "type": "question",
+          "settings": {
+            "title": "What is CBD?",
+            "answer": "<p>CBD (cannabidiol) is the most abundant cannabinoid present in the hemp plant. The plants contain over 100 other cannabinoids but all in far lower amounts.<\/p>"
+          }
+        },
+        "1662096167a94d7d7b-1": {
+          "type": "question",
+          "settings": {
+            "title": "What are the benefits of using CBD?",
+            "answer": "<p>Answer<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1662096167a94d7d7b-0",
+        "1662096167a94d7d7b-1"
+      ],
+      "settings": {
+        "title": "Sustainability"
+      }
+    },
+    "contact": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "icon": {
+          "type": "icon",
+          "settings": {
+            "icon": "chat_bubble"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "<p>Get in touch<\/p>",
+            "use_h1": false
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Have questions about your order, or a general enquiry?<\/p>",
+            "enlarge_text": true
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "icon",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "use_alt_bg": true
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "faq-content-1",
+    "faq-content-2",
+    "1662096120276ec1bc",
+    "16620961675c8ec9db",
+    "contact"
+  ]
+}
