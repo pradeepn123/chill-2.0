@@ -8,6 +8,7 @@
 
     #section-id-{{ section.id }} .overlay-text__title {
       font-size: {{ section.settings.title_size_mobile }}px;
+      font-weight: {{ section.settings.title_weight_mobile }};
       {%- if section.settings.title_size_mobile >= 90 -%}
       line-height: 1em;
       {%- endif %}
@@ -23,6 +24,7 @@
       #section-id-{{ section.id }} .overlay-text__title {
         {%- assign title_size_medium = section.settings.title_size | times: 0.7 | at_least: section.settings.title_size_mobile -%}
         font-size: {{ title_size_medium }}px;
+        font-weight: {{ section.settings.title_weight }};
         {%- if title_size_medium >= 90 -%}
         line-height: 1em;
         {%- endif %}
@@ -31,6 +33,7 @@
     @media (min-width: 1100px) {
       #section-id-{{ section.id }} .overlay-text__title {
         font-size: {{ section.settings.title_size }}px;
+        font-weight: {{ section.settings.title_weight }};
         {%- if section.settings.title_size >= 90 -%}
         line-height: 1em;
         {%- endif %}
@@ -109,9 +112,9 @@
             {%- endif -%}
             {%- if section.settings.title != blank -%}
               {% if section.settings.use_h1 %}
-                <h1 class="overlay-text__title">{{ section.settings.title | newline_to_br }}</h1>
+                <h1 class="overlay-text__title">{{ section.settings.title | newline_to_br | capitalize }}</h1>
               {% else %}
-                <h2 class="overlay-text__title h1-style">{{ section.settings.title | newline_to_br }}</h2>
+                <h2 class="overlay-text__title h1-style">{{ section.settings.title | newline_to_br | capitalize }}</h2>
               {% endif %}
             {%- endif -%}
             {%- if section.settings.text != blank -%}
@@ -326,6 +329,15 @@
       },
       {
         "type": "range",
+        "id": "title_weight",
+        "min": 100,
+        "max": 900,
+        "step": 100,
+        "label": "Desktop heading text weight",
+        "default": 800
+      },
+      {
+        "type": "range",
         "id": "title_size_mobile",
         "min": 20,
         "max": 150,
@@ -333,6 +345,15 @@
         "unit": "px",
         "label": "Mobile heading text size",
         "default": 46
+      },
+      {
+        "type": "range",
+        "id": "title_weight_mobile",
+        "min": 100,
+        "max": 900,
+        "step": 100,
+        "label": "Desktop heading text weight in Mobile",
+        "default": 800
       },
       {
         "type": "checkbox",
