@@ -35,6 +35,12 @@
             "show_in_quickbuy": false
           }
         },
+        "6d55c7e9-8bec-4e73-a8ae-e43cc7bda96c": {
+          "type": "subscription_portal",
+          "settings": {
+            "show_subscription": true
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -63,6 +69,7 @@
         "vendor",
         "description",
         "divider",
+        "6d55c7e9-8bec-4e73-a8ae-e43cc7bda96c",
         "variant_picker",
         "buy_buttons"
       ],

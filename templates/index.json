@@ -64,6 +64,33 @@
     },
     "16359278676808bea5": {
       "type": "featured-collection",
+      "blocks": {
+        "a24e9148-a36d-42c7-a5bf-45e098117926": {
+          "type": "variant_picker",
+          "settings": {
+            "show_single": false,
+            "select_first_variant": true,
+            "variant_style": "dropdown",
+            "disable_unavailable_variants": true,
+            "show_size_chart": false,
+            "size_chart_variant": "Size",
+            "size_chart_page": ""
+          }
+        },
+        "193c108e-cea2-404f-8280-68774b01d930": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "enable_payment_button": true,
+            "show_backorder_text": true,
+            "show_pickup_availability": true
+          }
+        }
+      },
+      "block_order": [
+        "a24e9148-a36d-42c7-a5bf-45e098117926",
+        "193c108e-cea2-404f-8280-68774b01d930"
+      ],
       "settings": {
         "title": "Our <strong> Trending Products <\/strong>",
         "collection": "cbd-pouches",

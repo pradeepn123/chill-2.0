@@ -1,0 +1,141 @@
+.product-list{
+    .product-block{
+        .block-inner{
+            background-color: #FFFFFF;
+            .block-inner-inner{
+                .product-info{
+                    padding: 0 20px 20px 20px;
+                    .inner{
+                        .innerer{
+                            .product-link{
+                                .vendor{
+                                    font-size: 14px;
+                                    font-family: 'Open Sans', sans-serif;
+                                    font-weight: 500;
+                                    line-height: 1.2;
+                                    color: #000000;
+                                }
+                                .product-block__title{
+                                    font-size: 20px;
+                                    font-family: 'Open Sans', sans-serif;
+                                    font-weight: 500;
+                                    line-height: 1.2;
+                                    color: #000000;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                }
+                                .product-price{
+
+                                }                                        
+                            }
+                            .custom_subscription_info{
+                                .custom_subscription_wrapper{
+                                    .custom_button_info{
+                                        .custom_sub_button{
+                                            display: flex;
+                                            justify-content: space-between;
+                                            width: 100%;
+                                            border-radius: 30px;
+                                            margin-top: 16px;
+                                            span{
+                                                font-family: 'Open Sans', sans-serif;
+                                                font-weight: 500;
+                                                font-size: 18px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .block-inner-card-info {                     
+                background: #fff;
+                width: 100%;
+                transition: 0.5s;
+                position: absolute;
+                bottom: 0;
+                transform: translateY(80px);
+                opacity: 0;
+                z-index: -1;      
+                visibility: hidden;                  
+                .block-inner-card-info-wrapper{                            
+                    position: absolute;
+                    bottom: 0;
+                    background: #fff; 
+                    width: 100%;
+                    padding: 50px 20px 20px 20px;    
+                    box-shadow: rgb(50, 50, 93, 25%) 0px 6px 12px -2px, rgb(0, 0, 0, 30%) 0px 3px 7px -3px;
+                }
+                .close_card_info{
+                    position: absolute;
+                    top:10px;
+                    right: 10px;
+                    cursor: pointer;
+                }
+                &.add_info_sub{
+                    opacity: 1;
+                    transform: translateY(0px);
+                    transition-delay: 0s;
+                    z-index: 1;
+                    visibility: visible;
+                    .product_options_info{
+                        margin-bottom: 16px;
+                        .options {
+                            width: 100%;
+                            display: block;
+                            text-align: left;
+                            .option_label{
+                                text-transform: uppercase;
+                                font-family: 'Open Sans', sans-serif;
+                                font-size: 14px;
+                                font-weight: 500;
+                                margin-bottom: 6px;
+                                color: #000000;
+                            }
+                            .product-variants{
+                                width: 100%;
+                                border-radius: 30px;
+                                padding: 0.8em 40px 0.8em 20px;
+                                font-family: 'Open Sans', sans-serif;
+                                font-size: 14px;
+                                font-weight: 700;               
+                                height: 49px;                 
+                                color: #000000;
+                                text-transform: uppercase;
+                                line-height: 1;
+                                border: 2px solid #808080;
+                                -webkit-appearance: none!important;
+                                -moz-appearance: none!important;
+                                background-color: transparent;                                
+                                background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik03LjQxIDcuODRMMTIgMTIuNDJsNC41OS00LjU4TDE4IDkuMjVsLTYgNi02LTZ6Ij48L3BhdGg+CiAgICA8cGF0aCBkPSJNMC0uNzVoMjR2MjRIMHoiIGZpbGw9Im5vbmUiPjwvcGF0aD4KPC9zdmc+');
+                                background-position: 96% 55%;
+                                background-repeat: no-repeat;
+                            }
+                        }                        
+                    }
+                    .product-form{
+                        .quantity-submit-row__submit{
+                            margin: 0;
+                            button.button--large{
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                border-radius: 30px;
+                                span{
+                                    font-family: 'Open Sans', sans-serif;
+                                    font-weight: 700;
+                                    font-size: 16px;
+                                    text-transform: uppercase;   
+                                    line-height: 1;                                         
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

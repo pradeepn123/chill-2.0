@@ -950,7 +950,7 @@
     "font_col_heads": "#171717",
     "font_col_shoptitle": "#171717",
     "font_col_sale": "#df5641",
-    "btn_col": "#4c4c4b",
+    "btn_col": "#9792e4",
     "btn_col_alt": "#171717",
     "btn_col_txt": "#ffffff",
     "btn_alt_bg": "#ffffff",
@@ -1011,6 +1011,7 @@
     "coll_grid_image_shape": "shortest",
     "prod_thumb_shape": "square",
     "prod_thumb_crop": true,
+    "prod_thumb_mob_per_row": "1",
     "prod_thumb_text_align": "left",
     "prod_thumb_hover_image": true,
     "quickbuy_style": "off",
@@ -1023,6 +1024,7 @@
     "prod_sale_show": true,
     "prod_sold_out_show": true,
     "enable_product_reviews_collection": false,
+    "prod_thumb_show_options": false,
     "social_twitter_url": "#",
     "social_facebook_url": "#",
     "social_vimeo_url": "#",
@@ -1034,6 +1036,7 @@
     "live_search_show_price": false,
     "live_search_search_meta": false,
     "cart_type": "drawer",
+    "product_currency_code_enabled": false,
     "sections": {
       "header": {
         "type": "header",
