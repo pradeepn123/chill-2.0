@@ -288,6 +288,8 @@
         </div>
       </div>
     </div>
+
+    
     {% if product.variants.size > 1 %}
     <div class="block-inner-card-info">
       <div class="block-inner-card-info-wrapper">        
@@ -304,7 +306,7 @@
                 </select>
             </div>
           {% endfor %}
-        </div>
+        </div>        
 
         <div class="product-form" data-ajax-add-to-cart="true" data-product-id="{{ current_variant.id }}" data-enable-history-state="false">        
           <div class="quantity-submit-row__submit input-row">
