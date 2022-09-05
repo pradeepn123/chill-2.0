@@ -1593,3 +1593,46 @@ body {
 .collapsible-tabs__heading {
   font-weight: 800 !important;
 }
+
+.contact-us_wrapper {
+  display: flex;
+  gap: 100px;
+  max-width: 80% !important;
+  color: #000 !important;
+}
+@media (max-width: 768px) {
+  .contact-us_wrapper {
+    flex-direction: column-reverse;
+    gap: 40px;
+    max-width: 100% !important;
+  }
+}
+@media (max-width: 1023px) and (min-width: 769px) {
+  .contact-us_wrapper {
+    max-width: 95% !important;
+  }
+}
+.contact-us_wrapper .support_content .support_heading {
+  font-weight: 800;
+}
+.contact-us_wrapper .support_content span {
+  text-decoration: underline;
+}
+.contact-us_wrapper .contact_heading {
+  font-weight: 800;
+}
+.contact-us_wrapper .flexible-layout input {
+  border-radius: 30px;
+  color: #000;
+}
+.contact-us_wrapper .flexible-layout textarea {
+  border-radius: 20px;
+  color: #000;
+}
+.contact-us_wrapper .send_button {
+  width: 15rem;
+  border-radius: 30px;
+  border: 0;
+  font-weight: 800;
+  padding: 17px 25px;
+}

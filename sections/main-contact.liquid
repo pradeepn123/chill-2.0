@@ -12,7 +12,13 @@
       </div>
     {% endif %}
 
-    <div id="template" class="{% if page.content != blank and section.settings.use_columns %}column righty-form{% else %}reading-width{% endif %}">
+    <div id="template" class="{% if page.content != blank and section.settings.use_columns %}column righty-form{% else %}reading-width{% endif %} contact-us_wrapper">
+      <div class="support_content">
+        <h1 class="support_heading" style="{{ section.settings.support_text_font_size }}px">Support</h1>
+        <p>Mon-Fri 9:00am – 5:00pm PST *Excludes Holidays</p>
+        <p>Looking for more info on products, shipping, CBD, and more? <br><span><a href="/pages/new-faq">View FAQs</a></span></p>
+        <p>You can try this Shopify theme for free <br><span><a href="#">by clicking here.</a></span></p>
+      </div>
       {% form 'contact' %}
         {% if form.posted_successfully? %}
           <p><strong>{{ 'contact.form.post_success' | t }}</strong></p>
@@ -21,7 +27,7 @@
           {% if section.settings.contact_title != blank or section.settings.contact_text != blank %}
             <div class="lightish-spaced-row">
               {% if section.settings.contact_title != blank %}
-                <h2>{{ section.settings.contact_title | escape }}</h2>
+                <h2 class="contact_heading" style="font-size: {{ section.settings.contact_us_text_font_size}}px">{{ section.settings.contact_title | escape }}</h2>
               {% endif %}
 
               {% if section.settings.contact_text != blank %}
@@ -128,7 +134,7 @@
           </div>
 
           <div class="lightly-spaced-row">
-            <button type="submit">{{ 'contact.form.send' | t }}</button>
+            <button type="submit" class="send_button" style="font-size: {{ section.settings.button_text_font_size }}px; background:{{ section.settings.button_color }};">{{ 'contact.form.send' | t | upcase }}</button>
           </div>
 
         {% endif %}
@@ -162,9 +168,45 @@
         "default": "Contact us"
       },
       {
+        "type": "range",
+        "id": "contact_us_text_font_size",
+        "label": "Heading font size",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "default": 42
+      },
+      {
+        "type": "range",
+        "id": "support_text_font_size",
+        "label": "Support font size",
+        "min": 0,
+        "max": 25,
+        "step": 1,
+        "unit": "px",
+        "default": 24
+      },
+      {
         "type": "richtext",
         "id": "contact_text",
         "label": "Contact form introduction"
+      },
+      {
+        "type": "range",
+        "id": "button_text_font_size",
+        "label": "Button font size",
+        "min": 0,
+        "max": 25,
+        "step": 1,
+        "unit": "px",
+        "default": 20
+      },
+      {
+        "type": "color",
+        "id": "button_color",
+        "label": "Button Color",
+        "default": "#6EC59F"
       }
     ],
     "blocks": [
