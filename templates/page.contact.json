@@ -1,1 +1,94 @@
-{"sections":{"main":{"type":"main-contact","blocks":{"name":{"type":"name_input","settings":{"half_width":true}},"email":{"type":"email_input","settings":{"half_width":true}},"message":{"type":"message_input","settings":{}}},"block_order":["name","email","message"],"settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "166211110514342889": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Contact.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/Contact.jpg",
+        "image_position": "center center",
+        "mobile_image_position": "center center",
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "subheading": "",
+        "title": "Get in touch",
+        "title_size": 52,
+        "title_weight": 800,
+        "title_size_mobile": 46,
+        "title_weight_mobile": 800,
+        "use_h1": false,
+        "text": "<p>Questions? Comments? Let your customers get in touch with you by filling out the email form below. Reassure them that someone will get back to them within a certain timeframe.<\/p>",
+        "enlarge_text": true,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "main": {
+      "type": "main-contact",
+      "blocks": {
+        "name": {
+          "type": "name_input",
+          "settings": {
+            "half_width": true
+          }
+        },
+        "email": {
+          "type": "email_input",
+          "settings": {
+            "half_width": true
+          }
+        },
+        "17049a63-5dad-4ec4-8468-ac574e8ec137": {
+          "type": "phone_input",
+          "settings": {
+            "required": false,
+            "half_width": true
+          }
+        },
+        "5295e187-5c40-4fd1-8de8-60e2583c43df": {
+          "type": "custom_input",
+          "settings": {
+            "title": "Order number (Optional)",
+            "type": "text",
+            "required": false,
+            "half_width": true
+          }
+        },
+        "message": {
+          "type": "message_input",
+          "settings": {
+            "half_width": false
+          }
+        }
+      },
+      "block_order": [
+        "name",
+        "email",
+        "17049a63-5dad-4ec4-8468-ac574e8ec137",
+        "5295e187-5c40-4fd1-8de8-60e2583c43df",
+        "message"
+      ],
+      "settings": {
+        "show_page_title": false,
+        "use_columns": true,
+        "contact_title": "Contact us",
+        "contact_us_text_font_size": 42,
+        "support_text_font_size": 24,
+        "contact_text": "",
+        "button_text_font_size": 20,
+        "button_color": "#6EC59F"
+      }
+    }
+  },
+  "order": [
+    "166211110514342889",
+    "main"
+  ]
+}
