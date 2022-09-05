@@ -1,0 +1,258 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "1662191494b63e7fec": {
+      "type": "our-chill-story",
+      "blocks": {
+        "091bf8b6-b030-402d-932e-c999f5d48dda": {
+          "type": "image",
+          "settings": {
+            "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel1.jpg"
+          }
+        },
+        "223cc8e6-4742-4921-898e-9aff97ae4e1e": {
+          "type": "image",
+          "settings": {
+            "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel2.jpg"
+          }
+        },
+        "02b3cc80-701c-47ad-ae9b-832ea72c7120": {
+          "type": "image",
+          "settings": {
+            "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel3.jpg"
+          }
+        },
+        "ec17db10-6f2c-4e67-bd36-7653c3ecb379": {
+          "type": "image",
+          "settings": {
+            "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel4.jpg"
+          }
+        },
+        "65274730-dc6b-4c1e-bdf8-3c4ff656d7a1": {
+          "type": "image",
+          "settings": {
+            "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel6.jpg"
+          }
+        },
+        "a04d4980-5c7a-4800-9933-96cefc9f7b9d": {
+          "type": "image",
+          "settings": {
+            "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel5.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "091bf8b6-b030-402d-932e-c999f5d48dda",
+        "223cc8e6-4742-4921-898e-9aff97ae4e1e",
+        "02b3cc80-701c-47ad-ae9b-832ea72c7120",
+        "ec17db10-6f2c-4e67-bd36-7653c3ecb379",
+        "65274730-dc6b-4c1e-bdf8-3c4ff656d7a1",
+        "a04d4980-5c7a-4800-9933-96cefc9f7b9d"
+      ],
+      "settings": {
+        "bg_color": "#9792e4",
+        "text_color": "#ffffff",
+        "title": "<p>The <strong>Chill Story<\/strong><\/p>",
+        "text": "<p>Chill was established in the Rocky Mountains where the company founders first realized the imporance of experiencing a Chill State of Mind <\/p><p>The mountains inspired a core beleif that Chill products can support and healthy mind and body. For too long, we’ve ignored the negative impact that fast and connected lifestyles have on our mind and body. Chill was created to address those issues by bringing people together and giving them the tools they need to unwind, sleep better, and enjoy the moment. <\/p><p>Chill creates recreational supplements using natural functional ingredients. These are taken to market through authentic, relaxing community led events and media that help people to unwind, let go, and enjoy the moment. Through these efforts, we help people to learn to relax and give themselves permission to do so.<\/p>",
+        "text_font_size": 112,
+        "use_alt_bg": true
+      }
+    },
+    "1662206502e0ceb0c7": {
+      "type": "our-chill-value",
+      "blocks": {
+        "ff939e5f-1db8-421d-879a-25e42fd00657": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_7553.png",
+            "title": "<p><strong>Freedom<\/strong><\/p>",
+            "text": "<p>Chill believes we can freely turn away from stress, anxiety and conflict. Only when we choose freedom can we experience a full and balanced life.<\/p>"
+          }
+        },
+        "2ab9437c-34a0-499f-8541-828ec3b8eaf8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_7554.png",
+            "title": "<p><strong>Choice<\/strong><\/p>",
+            "text": "<p>Choice is best made when we are free and can engage in the moment. In a Chill State of Mind we concentrate, think clearly and process the world in a way that creates relationship with one another.<\/p>"
+          }
+        },
+        "bb7ddb24-1486-4583-85ec-12d1702a811c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_7555.png",
+            "title": "<p><strong>Chill<\/strong><\/p>",
+            "text": "<p>Choice is best made when we are free and can engage in the moment. In a Chill State of Mind we concentrate, think clearly and process the world in a way that creates relationship with one another.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ff939e5f-1db8-421d-879a-25e42fd00657",
+        "2ab9437c-34a0-499f-8541-828ec3b8eaf8",
+        "bb7ddb24-1486-4583-85ec-12d1702a811c"
+      ],
+      "settings": {
+        "bg_color": "",
+        "text_color": "",
+        "title": "<p>Our <strong>values<\/strong><\/p>",
+        "text": "<p>Chill was established in the Rocky Mountains where the company founders first realized the imporance of experiencing a Chill State of Mind<\/p>",
+        "text_font_size": 80,
+        "link_heading": "EXPLORE OUR PRODUCTS",
+        "link_url": "#",
+        "svg_icon": "<svg id=\"Group_7540\" data-name=\"Group 7540\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"217.912\" height=\"78.074\" viewbox=\"0 0 217.912 78.074\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n  <defs>\n    <clippath id=\"clip-path\">\n      <rect id=\"Rectangle_3040\" data-name=\"Rectangle 3040\" width=\"217.912\" height=\"78.074\" fill=\"#9792e4\"><\/rect>\n    <\/clippath>\n  <\/defs>\n  <g id=\"Group_7439\" data-name=\"Group 7439\" clip-path=\"url(#clip-path)\">\n    <path id=\"Path_10262\" data-name=\"Path 10262\" d=\"M172.681.444a40.109,40.109,0,0,1,11.263-.1,39.043,39.043,0,0,1,33.736,42.9c-1.724,15.637-12.446,27.691-27.781,32.342-14.7,4.457-27.771.533-38.875-9.931-3.19-3.006-5.239-6.869-7.654-10.465-3.565-5.307-5.65-5.445-9.889-.632a233.671,233.671,0,0,1-20.219,20.589c-3.634,3.223-6,3.3-9.447-.1-4.706-4.634-9.307-9.373-14.268-13.746-2.853-2.515-5.546-5.22-8.491-7.62-2.259-1.841-3.811-1.524-5.445.862-1.312,1.914-2.242,4.1-3.626,5.95C63.659,71.647,52.87,78.158,38.531,78.074,25.124,77.995,14.869,72,7.014,61.574A34.989,34.989,0,0,1,0,42.91V35.918a61.644,61.644,0,0,1,1.033-6.631A37.368,37.368,0,0,1,18.891,5.879C28.621.157,38.949-.66,49.674,2.383c5.77,1.637,10.764,4.761,15.464,8.4,2.728,2.112,4.63,1.975,7.223-.365,1.267-1.144,2.515-2.316,3.861-3.362A28.176,28.176,0,0,1,97.6,1.022c3.635.429,6.913,2.324,10.7,2.133C112,2.968,115.328,1.311,119.012,1a25.8,25.8,0,0,1,14.672,2.57,37.817,37.817,0,0,1,9.282,7.31c2.511,2.568,4.306,2.614,7.156.5,1.931-1.433,3.768-3,5.75-4.353A41.037,41.037,0,0,1,172.681.444M139.324,27.787c.455-6.651-4.988-13.2-11.572-14.416-5.276-.977-10.362-.566-15.12,2.093-3.385,1.893-6.567,1.87-9.792-.49a15.071,15.071,0,0,0-6.264-2.387,15.506,15.506,0,0,0-16.3,7.5c-3.131,5.225-2.7,13.01,1.526,17.4,7.5,7.786,15.111,15.471,23.165,22.7,2.567,2.3,4.881,2.2,7.461-.186,3.025-2.794,6.006-5.635,8.983-8.481,4.438-4.242,8.967-8.4,13.243-12.8,2.856-2.939,4.849-6.445,4.67-10.935M68.167,38.965a29.076,29.076,0,0,0-58.143-.618c-.3,16.936,13.689,29.45,28.766,29.6,15.677.152,29.435-12.65,29.378-28.978M178.513,66.046a33.649,33.649,0,0,0,3.749-.216c.408-.045,1.16-.148,1.342-.18,12.421-2.182,20.076-10.174,22.821-22.749.408-1.869.006-2.639-1.94-2.623a54.163,54.163,0,0,1-9.076-.432c-6.082-.976-11.913-2.455-16.194-7.307-.917-1.039-1.467-.707-2.239.084a19.7,19.7,0,0,1-3.86,3.347c-5.307,3.188-11.166,4.156-17.212,4.264-6.092.109-6.681.816-4.473,6.685,4.269,11.347,14.651,19.23,27.083,19.127m19.782-45.775c-12.006-13.143-31.841-10.912-39.678,0Z\" transform=\"translate(0 0)\" fill=\"#9792e4\"><\/path>\n    <path id=\"Path_10263\" data-name=\"Path 10263\" d=\"M151.077,175.34c-1.461,1.819-3.02,3.563-3.011,6.078a19.27,19.27,0,0,1,7.284-8.689c-3.56,1.088-7.143.578-10.689.66-2.024.047-3.858-.547-4.429-2.644-.552-2.029,1.144-3.16,2.558-4.029,3.179-1.954,6.92-2.2,10.466-3.012a13.842,13.842,0,0,1,6-.15c3.206.656,4.83,2.683,5.4,5.675,1.559,8.255-3.223,17.458-10.912,20.716a20.69,20.69,0,0,1-15.259.293c-1.325-.458-1.718-1.014-.529-2.049a3.788,3.788,0,0,1,.332-.327c1.686-1.132.781-3.385,1.82-4.548,1.026-1.147,3.2-.106,4.518-1.4a4.882,4.882,0,0,0,1.558-3.5c.14-3.681.95-4.189,4.9-3.079\" transform=\"translate(-105.606 -125.651)\" fill=\"#9792e4\"><\/path>\n    <path id=\"Path_10264\" data-name=\"Path 10264\" d=\"M176.011,59.168c0-.466-.038-.936.007-1.4.181-1.842.931-3.35,2.872-3.794s3.288.536,4.169,2.226a30.779,30.779,0,0,1,2.4,7.748c.853,3.851,1.516,7.743,2.343,11.6.354,1.653.035,2.576-1.87,2.458a15.344,15.344,0,0,0-5.545.563c-1.262.394-1.786-.149-1.945-1.24-.884-6.045-1.57-12.117-2.435-18.164h0\" transform=\"translate(-135.426 -41.452)\" fill=\"#9792e4\"><\/path>\n    <path id=\"Path_10265\" data-name=\"Path 10265\" d=\"M102.8,78.185a4.908,4.908,0,0,1,4.336,2.33c3.7,5.084,6.929,10.475,10.2,15.839.705,1.158.354,1.92-.879,2.3a19.918,19.918,0,0,0-4.7,2.025,1.274,1.274,0,0,1-1.959-.515c-3.6-5.416-7.618-10.584-10.4-16.5-1.49-3.163.072-5.551,3.407-5.474\" transform=\"translate(-76.046 -60.156)\" fill=\"#9792e4\"><\/path>\n    <path id=\"Path_10266\" data-name=\"Path 10266\" d=\"M109.125,172.731c-.174,3.249,1.758,4.837,4.149,6.059,2.27,1.16,3.209,2.763,2.626,4.676-.618,2.025-2.228,2.916-4.815,2.622a7.314,7.314,0,0,1-3.852-1.538,26.775,26.775,0,0,1-7.7-9.508c-1.178-2.6-.5-4.222,2.1-5.454a7.313,7.313,0,0,1,5.019-.387c1.857.466,3.053,1.566,2.466,3.53\" transform=\"translate(-76.161 -129.992)\" fill=\"#9792e4\"><\/path>\n    <path id=\"Path_10267\" data-name=\"Path 10267\" d=\"M84.9,217.37c-4.983-.023-12.016-6.541-12.317-10.824a4.646,4.646,0,0,1,.011-.929,4.408,4.408,0,0,1,3.042-3.767c1.783-.664,2.675.486,3.632,1.715a35.311,35.311,0,0,0,8.583,8.442c1.232.789.928,2.023.9,3.158-.03,1.236-.95,1.75-1.951,2.009a8.915,8.915,0,0,1-1.9.2\" transform=\"translate(-55.836 -155.171)\" fill=\"#9792e4\"><\/path>\n    <path id=\"Path_10268\" data-name=\"Path 10268\" d=\"M714.875,203.71c-6.331-.216-11.676-2.44-15.708-7.435-1.129-1.4-1.966-2.809-.664-4.6,1.248-1.719,2.835-1.621,4.575-1.055,3.02.983,5.69,2.782,8.866,3.471a15.967,15.967,0,0,0,12.258-2.3,42.568,42.568,0,0,1,3.907-2.078,3,3,0,0,1,3.662.466c1.2,1.144.92,2.42.226,3.606a18.644,18.644,0,0,1-13.207,9.384c-1.294.24-2.609.364-3.915.542\" transform=\"translate(-536.98 -145.663)\" fill=\"#9792e4\"><\/path>\n    <path id=\"Path_10269\" data-name=\"Path 10269\" d=\"M915.633,14.8a2.685,2.685,0,0,1,.361-1.354,2.71,2.71,0,0,1,2.354-1.361,2.685,2.685,0,0,1,1.354.361,2.648,2.648,0,0,1,1,.993,2.716,2.716,0,1,1-5.065,1.361m.513,0a2.211,2.211,0,1,0,.294-1.1,2.162,2.162,0,0,0-.294,1.1m3.3-.628a.838.838,0,0,1-.516.841l.856,1.444h-.917l-.643-1.22h-.17v1.22h-.827V13.149h.953a1.491,1.491,0,0,1,.959.253.942.942,0,0,1,.3.769m-1.39.458h.112a.377.377,0,0,0,.444-.444.449.449,0,0,0-.1-.332.5.5,0,0,0-.35-.1h-.1Z\" transform=\"translate(-704.567 -9.298)\" fill=\"#9792e4\"><\/path>\n  <\/g>\n<\/svg>",
+        "use_alt_bg": false
+      }
+    },
+    "1662353650fc285744": {
+      "type": "our-chill-experience",
+      "blocks": {
+        "19a8757e-3702-4af2-82da-17767cea24db": {
+          "type": "image-video",
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/701403418?h=b0173a7c7b&background=1&autoplay=0",
+            "placeholder_image": "shopify:\/\/shop_images\/Highline-in-colarado.jpg",
+            "video_heading": "Highline in colarado",
+            "video_subHeading": "<p>Reaching a Chill State of Mind even in life’s most…<\/p>",
+            "video_type": "Experience"
+          }
+        },
+        "aad4f506-e1c6-4635-9b4e-03dd4b988298": {
+          "type": "image-video",
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/701415930?h=9f3167f810&background=1&autoplay=0",
+            "placeholder_image": "shopify:\/\/shop_images\/Screenshot_2022-09-05_at_4.30.48_PM.png",
+            "video_heading": "Go Kart Races in Grand Junction, CO",
+            "video_subHeading": "<p>Chill CBD is essential for recovery in any landscape<\/p>",
+            "video_type": "Experience"
+          }
+        },
+        "aa0e8cf1-d7d5-425c-bf91-3d727ce1646d": {
+          "type": "image-video",
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/701403328?h=f2e3ac9e64&background=1&autoplay=0",
+            "placeholder_image": "shopify:\/\/shop_images\/Screenshot_2022-09-05_at_4.55.30_PM.png",
+            "video_heading": "Learning to Slackline",
+            "video_subHeading": "<p>Learning new things<\/p>",
+            "video_type": "Experience"
+          }
+        },
+        "e321885e-43b5-426b-afd4-7e9e10800c59": {
+          "type": "image-video",
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/701797123?h=f6dff18608&background=1&autoplay=1",
+            "placeholder_image": "shopify:\/\/shop_images\/Screenshot_2022-09-05_at_4.50.54_PM.png",
+            "video_heading": "Paramotor & Chill",
+            "video_subHeading": "<p>Chill State of Mind<\/p>",
+            "video_type": "Experience"
+          }
+        },
+        "481b2f67-76bf-4351-8f09-84f7d650db1f": {
+          "type": "image-video",
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/701403724?h=3362a9a4f0&background=1&autoplay=1",
+            "placeholder_image": "shopify:\/\/shop_images\/light-fixture.jpg",
+            "video_heading": "Home modification",
+            "video_subHeading": "<p>Installing a Chandelier<\/p>",
+            "video_type": "DIY"
+          }
+        },
+        "1f5ad00b-7f17-4f10-8fc0-054fa9437247": {
+          "type": "image-video",
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/701403502?h=cda287f9e3&background=1&autoplay=1",
+            "placeholder_image": "shopify:\/\/shop_images\/Colorado-gambler.jpg",
+            "video_heading": "Colorado gambler",
+            "video_subHeading": "<p>Colorado gambler<\/p>",
+            "video_type": "Experience"
+          }
+        },
+        "6fecb0c8-a2b6-4f63-9a63-832e14a33a02": {
+          "type": "image-video",
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/701403564?h=35952ce15f&background=1&autoplay=1",
+            "placeholder_image": "shopify:\/\/shop_images\/Screenshot_2022-09-05_at_8.24.40_PM.png",
+            "video_heading": "Mini Bike Race",
+            "video_subHeading": "<p>Tim in the mini bike race<\/p>",
+            "video_type": "Experience"
+          }
+        },
+        "8d77efa0-2df7-4a3f-8381-656b9dfa5093": {
+          "type": "image-video",
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/701804548?h=ff05130736&background=1&autoplay=1",
+            "placeholder_image": "shopify:\/\/shop_images\/Skatepark_Madness.png",
+            "video_heading": "Skatepark Madness",
+            "video_subHeading": "<p>Chill and enjoy whatever you love outside<\/p>",
+            "video_type": "Experience"
+          }
+        },
+        "8d37fb21-c1d4-464d-9632-173826ea532d": {
+          "type": "image-video",
+          "disabled": true,
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/701403328?h=f2e3ac9e6&background=1&autoplay=1",
+            "placeholder_image": "shopify:\/\/shop_images\/Slacklining_Practice.png",
+            "video_heading": "Slacklining Practice",
+            "video_subHeading": "<p>Preparing for the highline<\/p>",
+            "video_type": "Experience"
+          }
+        },
+        "e2a09a12-b0fb-49d3-bd1f-212d839e7563": {
+          "type": "image-video",
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/701812471?h=8a23ed9bc0&background=1&autoplay=1",
+            "placeholder_image": "shopify:\/\/shop_images\/Chill_meets_Rodeo.png",
+            "video_heading": "Chill meets Rodeo",
+            "video_subHeading": "<p>Steamboat Springs, CO<\/p>",
+            "video_type": "Experience"
+          }
+        }
+      },
+      "block_order": [
+        "19a8757e-3702-4af2-82da-17767cea24db",
+        "aad4f506-e1c6-4635-9b4e-03dd4b988298",
+        "aa0e8cf1-d7d5-425c-bf91-3d727ce1646d",
+        "e321885e-43b5-426b-afd4-7e9e10800c59",
+        "481b2f67-76bf-4351-8f09-84f7d650db1f",
+        "1f5ad00b-7f17-4f10-8fc0-054fa9437247",
+        "6fecb0c8-a2b6-4f63-9a63-832e14a33a02",
+        "8d77efa0-2df7-4a3f-8381-656b9dfa5093",
+        "8d37fb21-c1d4-464d-9632-173826ea532d",
+        "e2a09a12-b0fb-49d3-bd1f-212d839e7563"
+      ],
+      "settings": {
+        "bg_color": "#f2f2f3",
+        "text_color": "",
+        "title": "<p><strong>The Chill Experience<\/strong><\/p>",
+        "text_font_size": 54,
+        "text_alignment": "center",
+        "use_alt_bg": false
+      }
+    },
+    "16623543543c14a862": {
+      "type": "featured-background-video",
+      "disabled": true,
+      "settings": {
+        "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "autoplay": false,
+        "video_position": "left",
+        "use_alt_bg": false,
+        "height_desktop": 56,
+        "height_mobile": 56
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1662191494b63e7fec",
+    "1662206502e0ceb0c7",
+    "1662353650fc285744",
+    "16623543543c14a862"
+  ]
+}
