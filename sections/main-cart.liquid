@@ -11,6 +11,9 @@
     </div>
   {% else %}
     <form action="{{ routes.cart_url }}" method="post" id="cartform">
+      <!-- Begin Recharge code -->
+      {% render 'subscription-cart-footer' %}
+      <!-- End Recharge code -->
       <div class="cart-item-list content-divider">
         <div class="cart-item-list__head" data-cc-animate>
           <div class="cart-item-list-heading cart-item-list-heading--product">{{ 'cart.label.product' | t }}</div>

@@ -121,6 +121,7 @@
       <div class="product-form{% if section.settings.enable_sticky_columns %} sticky-content-container{% endif %}" data-ajax-add-to-cart="true" data-product-id="{{ product.id }}" data-enable-history-state="true">
         {%- assign product_form_present = false -%}
         {%- capture original_select -%}
+          {% render 'subscription-product' with product as product %}
           <select name="id" class="original-selector{% if product.variants.size == 1 %} hidden{% endif %}" aria-label="{{ 'products.product.selector_label' | t | escape }}">
             {% if product.variants.size > 1 %}<option value="">{{ 'products.product.no_selection' | t }}</option>{% endif %}
             {% for variant in product.variants %}
@@ -319,9 +320,9 @@
             {% when 'buy_buttons' %}
               {%- assign product_form_present = true -%}
               <div class="buy-buttons-row" {{ block.shopify_attributes }}>
-                {% form 'product', product, id: product_form_id, class: 'form product-purchase-form', data-product-id: product.id %}
-                  {{- original_select -}}
-
+                {% form 'product', product, id: product_form_id, class: 'form product-purchase-form', data-product-handle: product.handle, data-product-id: product.id, data-productid: product.id %}
+                  {{- original_select -}}                  
+                  
                   {% if product.available %}
                     {%- liquid
                       assign enable_dynamic_payment_button = false
@@ -331,7 +332,7 @@
                         endunless
                       endif
                     -%}
-                    <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
+                    <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">                      
                       {% if block.settings.show_quantity_selector %}
                         <label class="label" for="quantity">{{ 'products.product.quantity' | t }}</label>
                         <div class="quantity-wrapper">

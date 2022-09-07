@@ -34,7 +34,7 @@
           "settings": {
             "show_in_quickbuy": false
           }
-        },
+        },        
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -62,7 +62,7 @@
         "price",
         "vendor",
         "description",
-        "divider",
+        "divider",        
         "variant_picker",
         "buy_buttons"
       ],

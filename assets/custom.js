@@ -48,25 +48,6 @@ function hideVideo(index, e) {
 
 
 $(document).ready(function () {
-  updateContainer();
-  $(window).resize(function() {
-      updateContainer();
-      scrollAbout();
-  });
-  var figure2 = $(".chill-videos-item");
-  var vid = figure2.find(".play-video");
-  var videoNo = vid.length;
-
-  for (let i = 1; i <= videoNo; i++){
-      let iframees = document.querySelector('#player-'+i);
-      let playeer1 = new Vimeo.Player(iframees);
-      playeer1.getDuration().then(function(duration) {
-          var ids =  document.querySelector('#player-'+i);
-          ids.parentElement.parentElement.querySelector('.video-length').innerHTML  = duration.toFixed(0)+' sec';
-      });
-  }
-  scrollAbout();
-
   theme.icons = {    
     chevronLeft: '<svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M11.913,23.827l-1.564-1.6,9.2-9.2H0V10.8H19.545l-9.2-9.2L11.913,0,23.827,11.913Z" transform="translate(23.827 23.827) rotate(180)"/></svg>',
     chevronRight: '<svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M19.913,31.827l-1.564-1.6,9.2-9.2H8V18.8H27.545l-9.2-9.2L19.913,8,31.827,19.913Z" transform="translate(-8 -8)"/></svg>',
@@ -108,6 +89,58 @@ $(document).ready(function () {
   
     ]
   });
+  updateContainer();
+  $(window).resize(function() {
+      updateContainer();
+      scrollAbout();
+  });
+  var figure2 = $(".chill-videos-item");
+  var vid = figure2.find(".play-video");
+  var videoNo = vid.length;
+
+  for (let i = 1; i <= videoNo; i++){
+      let iframees = document.querySelector('#player-'+i);
+      let playeer1 = new Vimeo.Player(iframees);
+      playeer1.getDuration().then(function(duration) {
+          var ids =  document.querySelector('#player-'+i);
+          ids.parentElement.parentElement.querySelector('.video-length').innerHTML  = duration.toFixed(0)+' sec';
+      });
+  }
+  scrollAbout();
+
+  $('.custom_sub_button').click(function(){
+    $(this).closest('.block-inner').find('.block-inner-card-info').addClass('add_info_sub');
+  });
+  $('.close_card_info').click(function(){
+    $(this).closest('.block-inner').find('.block-inner-card-info').removeClass('add_info_sub');
+  });
+  
+  $('.add_to_cart_btn').click(function(){    
+    addItemToCart( $(this).attr("data-product-id") , 1)
+  });
+
+  function addItemToCart(variant_id, qty) {
+    data = {
+      "id": variant_id,
+      "quantity": qty
+    }
+    jQuery.ajax({
+      type: 'POST',
+      url: '/cart/add.js',
+      data: data,
+      dataType: 'json',
+      success: function() { 
+        document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
+        bubbles: true  
+       }));
+      }
+    });
+    document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
+    	bubbles: true 
+ 	 }));
+  }
+
+  
 });
 (function(){
   var d = document,

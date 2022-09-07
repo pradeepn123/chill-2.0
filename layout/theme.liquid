@@ -130,8 +130,14 @@
   {{ 'vendor.min.js'  | asset_url | script_tag }}
   {{ 'theme.js'  | asset_url | script_tag }}
   {{ 'custom.js'  | asset_url | script_tag }}
+
   <script src="https://player.vimeo.com/api/player.js"></script>
   <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
   
+
+  <!-- Begin ReCharge code -->
+  {% include 'subscription-theme-footer' %}
+  <!-- End ReCharge code -->
+
 </body>
 </html>
