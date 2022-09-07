@@ -45,12 +45,6 @@
           "settings": {
             "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel5.jpg"
           }
-        },
-        "d92886f2-5f89-4629-a50d-3039f83e375b": {
-          "type": "image",
-          "settings": {
-            "slider_image": "shopify:\/\/shop_images\/Collections-Vape.jpg"
-          }
         }
       },
       "block_order": [
@@ -59,8 +53,7 @@
         "02b3cc80-701c-47ad-ae9b-832ea72c7120",
         "ec17db10-6f2c-4e67-bd36-7653c3ecb379",
         "65274730-dc6b-4c1e-bdf8-3c4ff656d7a1",
-        "a04d4980-5c7a-4800-9933-96cefc9f7b9d",
-        "d92886f2-5f89-4629-a50d-3039f83e375b"
+        "a04d4980-5c7a-4800-9933-96cefc9f7b9d"
       ],
       "settings": {
         "bg_color": "#9792e4",
