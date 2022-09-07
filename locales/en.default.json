@@ -329,7 +329,8 @@
       "post": "Post comment"
     },
     "general": {
-      "no_matches": "You don't have any articles yet! Once you've written one, it will show up here."
+      "no_matches": "You don't have any articles yet! Once you've written one, it will show up here.",
+      "read_more": "Read more"
     }
   },
   "customer": {
