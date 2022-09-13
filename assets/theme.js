@@ -3312,7 +3312,7 @@
     if (theme.settings.cart_type === 'drawer') {
       $(window).off('.ajaxAddScroll').on('scroll.ajaxAddScroll', function () {
         // Hide notifications on scroll
-        theme.removeAddedCartDrawer();
+        //theme.removeAddedCartDrawer();
       });
     }
   };

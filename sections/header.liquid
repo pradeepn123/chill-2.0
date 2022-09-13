@@ -420,8 +420,7 @@
 </script>
 {%- endif -%}
 
-{%- endif -%}
-
+{%- endif -%}  
 
 {% schema %}
   {
@@ -496,6 +495,27 @@
         "id": "transparent_logo",
         "label": "Logo",
         "info": "Match your main logo size."
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu Main Heading and Links"
+      },
+      {
+        "type": "text",
+        "id": "mega_collection_heading",
+        "label": "Colletion Heading",
+        "default": "By Collection"
+      },
+      {
+        "type": "text",
+        "id": "shop_text",
+        "label": "Shop Text",
+        "default": "Shop all"
+      },
+      {
+        "type": "url",
+        "id": "shop_link",
+        "label": "Shop Link"        
       },
       {
         "type": "header",
@@ -676,7 +696,7 @@
       },
       {
         "type": "menu-promotion-large",
-        "name": "Wide menu promotion",
+        "name": "Mega Menu Collection",
         "settings": [
           {
             "type": "paragraph",
@@ -687,119 +707,12 @@
             "id": "dropdown_link_title",
             "label": "Link name",
             "info": "The name of any top-level link"
-          },
+          },          
           {
-            "type": "image_picker",
-            "id": "desktop_image",
-            "label": "Desktop image"
-          },
-          {
-            "type": "image_picker",
-            "id": "mobile_image",
-            "label": "Mobile image"
-          },
-          {
-            "type": "checkbox",
-            "id": "enable_fade",
-            "label": "Enable image fade",
-            "default": false
-          },
-          {
-            "type": "text",
-            "id": "subheading",
-            "label": "Subheading",
-            "default": "Tell your story"
-          },
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Heading",
-            "default": "Wide menu promotion"
-          },
-          {
-            "type": "richtext",
-            "id": "text",
-            "label": "Text",
-            "default": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.<\/p>"
-          },
-          {
-            "type": "text",
-            "id": "button_1_label",
-            "label": "Button 1",
-            "default": "Shop this"
-          },
-          {
-            "type": "url",
-            "id": "button_1_link",
-            "label": "Button 1 link"
-          },
-          {
-            "type": "select",
-            "id": "button_1_style",
-            "label": "Button 1 style",
-            "default": "secondary",
-            "options": [
-              {
-                "label": "Button - primary",
-                "value": "primary"
-              },
-              {
-                "label": "Button - secondary",
-                "value": "secondary"
-              },
-              {
-                "label": "Link",
-                "value": "link"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "id": "button_2_label",
-            "label": "Button 2",
-            "default": "Shop all"
-          },
-          {
-            "type": "url",
-            "id": "button_2_link",
-            "label": "Button 2 link"
-          },
-          {
-            "type": "select",
-            "id": "button_2_style",
-            "label": "Button 2 style",
-            "default": "primary",
-            "options": [
-              {
-                "label": "Button - primary",
-                "value": "primary"
-              },
-              {
-                "label": "Button - secondary",
-                "value": "secondary"
-              },
-              {
-                "label": "Link",
-                "value": "link"
-              }
-            ]
-          },
-          {
-            "type": "select",
-            "id": "image_position",
-            "label": "Image alignment",
-            "default": "right",
-            "options": [
-              {
-                "value": "left",
-                "label": "Left"
-              },
-              {
-                "value": "right",
-                "label": "Right"
-              }
-            ]
-          },
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          },          
           {
             "type": "select",
             "id": "text_alignment",
