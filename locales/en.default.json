@@ -226,7 +226,7 @@
     },
     "customer": {
       "account": "Account",
-      "log_out": "Log out"
+      "log_out": "Logout"
     },
     "header": {
       "cart": "Cart",
@@ -389,7 +389,7 @@
       "cancel": "Decline Invitation"
     },
     "addresses": {
-      "title": "Your Addresses",
+      "title": "Addresses",
       "add_new": "Add a New Address",
       "first_name": "First Name",
       "last_name": "Last Name",
@@ -409,7 +409,7 @@
       "delete_confirm": "Are you sure you wish to delete this address?",
       "delete": "Delete",
       "edit_address": "Edit address",
-      "update": "Update Address"
+      "update": "Update"
     },
     "order": {
       "title": "Order {{ name }}",
