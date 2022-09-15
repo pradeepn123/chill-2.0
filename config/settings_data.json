@@ -998,7 +998,7 @@
     "foot_heading_col": "#000000",
     "foot_divider_col": "#e4e4e4",
     "type_heading_font": "open_sans_n4",
-    "capitalize_headings": true,
+    "capitalize_headings": false,
     "type_base_font": "open_sans_n4",
     "type_nav_font": "basic_commercial_n4",
     "type_logo_font": "open_sans_n8",
