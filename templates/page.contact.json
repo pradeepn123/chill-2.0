@@ -83,7 +83,8 @@
         "support_text_font_size": 24,
         "contact_text": "",
         "button_text_font_size": 20,
-        "button_color": "#6EC59F"
+        "button_color": "#6ec59f",
+        "support_info": "<p>Mon-Fri 9:00am – 5:00pm PST *Excludes Holidays<\/p><p><\/p><p>Looking for more info on products, shipping, CBD, and more?  <a href=\"\/pages\/new-faq\" title=\"\/pages\/new-faq\">View FAQs<\/a><\/p>"
       }
     }
   },

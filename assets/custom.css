@@ -2515,47 +2515,75 @@ body {
   font-weight: 800 !important;
 }
 
-.contact-us_wrapper {
+.contact_us-container {
+  margin-top: 110px;
+}
+@media (max-width: 768px) {
+  .contact_us-container {
+    margin-top: 40px;
+  }
+}
+.contact_us-container .contact-us_wrapper {
   display: flex;
   gap: 100px;
   max-width: 80% !important;
-  color: #000 !important;
+  color: #7F7F7F !important;
+}
+.contact_us-container .contact-us_wrapper .support_content p {
+  color: #000;
+}
+.contact_us-container .contact-us_wrapper .support_content .support_heading {
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.contact_us-container .contact-us_wrapper .support_content a {
+  text-decoration: underline;
+}
+.contact_us-container .contact-us_wrapper .support_content a::before {
+  content: "\a";
+  white-space: pre;
+}
+.contact_us-container .contact-us_wrapper .contact_heading {
+  font-weight: 800;
+  text-transform: uppercase;
 }
 @media (max-width: 768px) {
-  .contact-us_wrapper {
-    flex-direction: column-reverse;
+  .contact_us-container .contact-us_wrapper {
+    flex-direction: column;
     gap: 40px;
     max-width: 100% !important;
   }
+  .contact_us-container .contact-us_wrapper .support_content .support_heading {
+    font-size: 24px !important;
+  }
+  .contact_us-container .contact-us_wrapper .contact_heading {
+    font-size: 24px !important;
+  }
 }
 @media (max-width: 1023px) and (min-width: 769px) {
-  .contact-us_wrapper {
+  .contact_us-container .contact-us_wrapper {
     max-width: 95% !important;
   }
 }
-.contact-us_wrapper .support_content .support_heading {
-  font-weight: 800;
-}
-.contact-us_wrapper .support_content span {
-  text-decoration: underline;
-}
-.contact-us_wrapper .contact_heading {
-  font-weight: 800;
-}
-.contact-us_wrapper .flexible-layout input {
+.contact_us-container .contact-us_wrapper .flexible-layout input {
   border-radius: 30px;
   color: #000;
 }
-.contact-us_wrapper .flexible-layout textarea {
+.contact_us-container .contact-us_wrapper .flexible-layout textarea {
   border-radius: 20px;
   color: #000;
 }
-.contact-us_wrapper .send_button {
+.contact_us-container .contact-us_wrapper .send_button {
   width: 15rem;
   border-radius: 30px;
   border: 0;
   font-weight: 800;
   padding: 17px 25px;
+}
+.contact_us-container .success_msg {
+  color: #000;
+  font-weight: 400 !important;
 }
 
 .template-blog .section-image-with-text-overlay .image-overlay .overlay-text .overlay-text__text .overlay-text__title {
@@ -2803,7 +2831,8 @@ body {
 }
 
 #template input[type=email],
-#template input[type=text] {
+#template input[type=text],
+#template input[type=tel] {
   border-radius: 50px;
 }
 
