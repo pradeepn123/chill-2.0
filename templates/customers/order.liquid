@@ -1,4 +1,167 @@
-<div id="admin_header" data-cc-animate>
+<div class="account-section" data-section-type="account">
+  <div class="account_banner">
+    <div class="account_banner_text">
+      <h5 class="customer_name">Hello, {{ customer.first_name | capitalize }}</h5>
+      <a href="{{ routes.account_logout_url }}" class="logout_btn">{{ 'layout.customer.log_out' | t }}</a>
+    </div>
+  </div>
+  <div class="account_content">
+    <div class="account_sidebar">
+      <ul class="sidebar_content">
+        <li class="sidebar_element active">
+          {% render 'icon', icon: 'order-history', size: 'small' %}<a href="{{ routes.account_url }}"> Order History</a>
+        </li>
+        <li class="sidebar_element">
+          {% render 'icon', icon: 'subscriptions', size: 'medium' %}<a href="#"> Subscriptions</a>
+        </li>
+        <li class="sidebar_element account_details_nav">
+          {% render 'icon', icon: 'account-details' %}<a href="{{ routes.account_url }}#account_details_section"> Account details</a>
+        </li>
+        <li class="sidebar_element ">
+          {% render 'icon', icon: 'addresses' %}<a href="{{ routes.account_addresses_url }}"> Addresses </a>
+        </li>
+        <li class="sidebar_help">
+          {% render 'icon', icon: 'help' %}Need help? <a href="/pages/new-contact-us">Contact Us</a>
+        </li>
+      </ul>  
+    </div>
+    <div class="order_details">
+      <div class="order_details_title">
+        <h1>
+          <a href={{ routes.account_url }} class="back_arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8.863" height="14.898" viewBox="0 0 8.863 14.898">
+              <path id="Path_10248" data-name="Path 10248" d="M9463.4-21920.516l-1.414-1.414,6.035-6.035-6.035-6.035,1.414-1.414,7.449,7.449Z" transform="translate(9470.851 -21920.516) rotate(180)"/>
+            </svg>
+          </a>Order details
+        </h1>
+        <a href="{{ order.order_status_url }}" target="_blank" class="button altcolour view_receipt_btn">View receipt</a>
+      </div>
+      <!-- <table class="details_table">
+        <tr>
+          <th>Placed on</th>
+          <th>Order Id</th>
+          <th>Ship to</th>
+          <th>Total</th>
+        </tr>
+        <tr>
+            <td>{{ order.created_at | slice: 0, 10 | date: "%d/%m/%Y" }}</td>
+            <td>{{order.name }}</td>
+            <td>
+              {% if order.shipping_address %}
+                  <div id="order_shipping">
+                    <p><span class="note">{{ 'customer.order.fulfillment_status' | t }}:</span> <span class="status_{{ order.fulfillment_status }}">{{ order.fulfillment_status_label }}</span></p>
+                    <div class="address_note">
+                      <div>{{ order.shipping_address.first_name | capitalize }} {{ order.shipping_address.last_name | capitalize }}</div>
+                      <div>{{ order.shipping_address.company }}</div>
+                      <div>{{ order.shipping_address.street }}, {{ order.shipping_address.city }}, {{ order.shipping_address.province }}</div>
+                      <div>{{ order.shipping_address.country }} - {{ order.shipping_address.zip }}</div>
+                      <div class="address_phone">{{ order.shipping_address.phone }}</div>
+                    </div>
+                  </div>
+                  {% endif %}
+            </td>
+            <td>{{ order.total_price }}</td>
+        </tr>
+      </table> -->
+      <div class="order_details_block">
+        <div class="order_details_wrapper">
+          <div class="order_placed_on">
+            <p class="details_title">{{ "Placed on" }}</p>
+            <p class="details_data">{{ order.created_at | slice: 0, 10 | date: "%d %b %Y" }}</p>
+          </div>
+
+          <div class="order_id_detail">
+            <p class="details_title"> {{ "Order Id" }} </p>
+            <p class="details_data">{{ order.name }}</p>
+          </div>
+          
+          <div class="shipping_details">
+            <p class="details_title">
+              {{ 'Ship to' }}
+            </p>
+            <div class="details_data">
+              {% if order.shipping_address %}
+                  <div id="order_shipping">
+                    <!-- <p><span class="note">{{ 'customer.order.fulfillment_status' | t }}:</span> <span class="status_{{ order.fulfillment_status }}">{{ order.fulfillment_status_label }}</span></p> -->
+                    <div class="address_note">
+                      <div>{{ order.shipping_address.first_name | capitalize }} {{ order.shipping_address.last_name | capitalize }}</div>
+                      <div>{{ order.shipping_address.company }}</div>
+                      <div>{{ order.shipping_address.street }}</div>
+                      <div>{{ order.shipping_address.city }}, {{ order.shipping_address.province }}</div>
+                      <div>{{ order.shipping_address.country }} - {{ order.shipping_address.zip }}</div>
+                      <div class="address_phone">{{ order.shipping_address.phone }}</div>
+                    </div>
+                  </div>
+                  {% endif %}
+            </div>
+          </div>
+
+          <div class="order_subtotal">
+            <p class="details_title">{{ "Total" }}</p>
+            <!-- <p class="details_data">{{ order.total_price }}</p> -->
+            <p class="details_data">{% render 'price', price: order.total_price, disable_currency_code: true %}</p>
+          </div>
+        </div>
+      </div>
+      <div class="order_details_table">
+        <div class="order_details_table_wrapper">
+          <table cellspacing="0" cellpadding="0">
+            {% for line_item in order.line_items %}
+            <!-- <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead> -->
+              <tr>
+                <td>
+                    <div class="product_image">
+                      <img src="{{ line_item.image | img_url: 'master' }}" alt="image" style="max-width: 86px; height: 86px;">
+                      <div class="product_info_details">
+                        <p class="product_item_title">{{ line_item.product.title | upcase }}</p>
+                        <p class="product_item_variant">{{ line_item.variant.title | replace: '/', '|' }}</p>
+                        <!-- <button class="order_item_action buy_btn">{{ "Buy Again" | upcase | link_to: line_item.product.url  }}</button> -->
+                      </div>
+                  </div>
+                </td>
+                <td>
+                    <!-- {{ line_item.final_price }} -->
+                    <p class="block_price">{% render 'price', price: line_item.final_price, disable_currency_code: true %}</p>
+                </td>
+                <td>
+                  <div class="block_quantity">
+                    <h5>Quantity</h5>
+                    <p>{{ line_item.quantity }}</p>
+                  </div>
+                  
+                </td>
+                <td>
+                  <div class="block_subtotal">
+                    <h5>Subtotal</h5>
+                    <p>{% render 'price', price: line_item.final_line_price, disable_currency_code: true %}</p>
+                  </div>
+              </td>
+              </tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- <div id="admin_header" data-cc-animate>
   <div class="action_link action_return note" id='return_to_store'><a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a></div>
 
   <h2 class="title">{{ 'customer.order.title' | t: name: order.name }}</h2>
@@ -187,4 +350,9 @@
       </tr>
     </tfoot>
   </table>
-</div>
+</div> -->
+<script>
+  if(window.screen.width <= 1024){
+    document.querySelector('.account_sidebar').style.display = 'none';
+  }
+</script>
