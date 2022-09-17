@@ -60,7 +60,50 @@ $(document).ready(function () {
     })
     el.classList.add('active')
   }
- 
+  //sub collection image
+  $('.subcollection_slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 8,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: '<div class="slick-nav prev-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
+    nextArrow: '<div class="slick-nav next-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
+    responsive: [
+        {
+            breakpoint: 1680,
+            settings: {
+              slidesToShow: 7,
+              slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 1300,
+            settings: {
+              slidesToShow: 6,
+              slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1
+            }
+        },
+        {
+        breakpoint: 600,
+        settings: {
+            arrows: false,
+            slidesToShow: 3,
+            slidesToScroll: 1
+        }
+        }
+    ]
+});
+$(".subcollection_slider").show();
+
   theme.icons = {    
     chevronLeft: '<svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M11.913,23.827l-1.564-1.6,9.2-9.2H0V10.8H19.545l-9.2-9.2L11.913,0,23.827,11.913Z" transform="translate(23.827 23.827) rotate(180)"/></svg>',
     chevronRight: '<svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M19.913,31.827l-1.564-1.6,9.2-9.2H8V18.8H27.545l-9.2-9.2L19.913,8,31.827,19.913Z" transform="translate(-8 -8)"/></svg>',
