@@ -21,7 +21,7 @@
           <h3 class="mobile" style="font-size: {{ section.settings.sub_title_font_size_mobile }}px; color: {{ section.settings.subtitle_color_mobile }};">{{ section.settings.sub_title_mobile }}</h3>
         {% endif %}
         {% if section.settings.join_now_btn %}
-          <button class="banner_btn">Join Now</button>
+          <button class="banner_btn"><a href="{{ section.settings.banner_btn_url }}" style="color: {{ section.settings.banner_btn_text_color }}">{{ section.settings.banner_btn_content }}</a></button>
         {% endif %}
         
         {% style %}
@@ -106,6 +106,22 @@
         "id": "join_now_btn",
         "label": "Show banner button",
         "default": true
+      },
+      {
+        "type": "text",
+        "id": "banner_btn_content",
+        "label": "Banner button content"
+      },
+      {
+        "type": "url",
+        "id": "banner_btn_url",
+        "label": "Add link to banner button"
+      },
+      {
+        "type": "color",
+        "id": "banner_btn_text_color",
+        "label": "Banner button text color",
+        "default": "#FFFFFF"
       },
       {
         "type": "color",
