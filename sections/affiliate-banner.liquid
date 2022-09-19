@@ -1,10 +1,18 @@
 
-<div class="banner_wrapper" data-section-type="affiliate-banner" style="background: url('{{ section.settings.banner-image | img_url: 'master' }}'); background-size: cover; background-repeat: no-repeat; background-position: center right">
+<div class="banner_wrapper" data-section-type="affiliate-banner">
     {% if section.settings.banner-image_mobile != blank %}
       {% style %}
         @media (max-width: 640px){
           .banner_wrapper{
             background: url('{{ section.settings.banner-image_mobile | img_url: 'master' }}'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center right;
+          }
+        }
+        @media (min-width: 641px){
+          .banner_wrapper{
+            background: url('{{ section.settings.banner-image | img_url: 'master' }}'); 
             background-size: cover; 
             background-repeat: no-repeat; 
             background-position: center right;

@@ -96,19 +96,20 @@
             <div class="account_name">
               <div class="account_firstname">
                 <label for="fname">First name </label>
-                <input type="text" class="account_firstname" id="fname" value="{{ customer.first_name }}">
+                <input type="text" name="customer[first_name]" class="account_firstname" id="fname" value="{{ customer.first_name }}">
               </div>
               <div class="account_lastname">
                 <label for="lname">Last name </label>
-                <input type="text" class="account_lastname" id="lname" value="{{ customer.last_name }}">
+                <input type="text" name="customer[last_name]" class="account_lastname" id="lname" value="{{ customer.last_name }}">
               </div>
             </div>
             <div class="account_email">
               <label for="email">Email</label>
-              <input type="text" class="account_email" id="email" value="{{ customer.email }}" disabled="disabled">
+              <input type="text" name="customer[email]" class="account_email" id="email" value="{{ customer.email }}" disabled="disabled">
             </div>
-            <div class="button_div">
-              <button class="account_update">Update</button>
+            <div class="button_div action_bottom">
+              <button class=" btn account_update" type="submit">Update</button>
+              <!-- <input type="submit" value="update"> -->
               <button class="acc_reset_password" onclick="open_reset_popup()">
                 <a href="#" onclick="showRecoverPasswordForm();return false;">{{ 'Reset password' }}</a>
               </button>

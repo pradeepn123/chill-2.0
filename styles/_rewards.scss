@@ -1,5 +1,5 @@
 .rewards_wrapper, .get_started_wrapper{
-    margin: 6.875rem 12.688rem 50px 12.688rem;
+    margin: 5.56rem 12.688rem 50px 12.688rem;
     @media (max-width: 640px){
         margin: 13.75rem 20px 50px 20px;
     }
@@ -25,6 +25,9 @@
         border-radius: 31px;
         font-weight: 800;
         width: 15rem;
+        a{
+            color: #fff;
+        }
     }
 }
 .get_started_wrapper{

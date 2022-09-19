@@ -2353,7 +2353,7 @@ body {
 }
 
 .rewards_wrapper, .get_started_wrapper {
-  margin: 6.875rem 12.688rem 50px 12.688rem;
+  margin: 5.56rem 12.688rem 50px 12.688rem;
 }
 @media (max-width: 640px) {
   .rewards_wrapper, .get_started_wrapper {
@@ -2387,6 +2387,9 @@ body {
   font-weight: 800;
   width: 15rem;
 }
+.rewards_wrapper .rewards_button a, .get_started_wrapper .rewards_button a {
+  color: #fff;
+}
 
 @media (max-width: 640px) {
   .get_started_wrapper {
@@ -2400,10 +2403,19 @@ body {
   color: #000;
   overflow: auto;
 }
+.responsive-table_rewards td, .responsive-table_rewards th {
+  padding: 0.7em 0 !important;
+}
+.responsive-table_rewards th {
+  border: 0;
+}
 @media (max-width: 640px) {
   .responsive-table_rewards {
     width: 100%;
     margin: 0;
+  }
+  .responsive-table_rewards td, .responsive-table_rewards th {
+    padding: 0.7em 20px !important;
   }
   .responsive-table_rewards td p {
     font-weight: 800;
