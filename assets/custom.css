@@ -2409,6 +2409,16 @@ body {
 .responsive-table_rewards th {
   border: 0;
 }
+.responsive-table_rewards td p {
+  margin: 0;
+}
+@media (max-width: 640px) {
+  .responsive-table_rewards td p {
+    padding: 0;
+    font-weight: 800;
+    font-size: 18px;
+  }
+}
 @media (max-width: 640px) {
   .responsive-table_rewards {
     width: 100%;
@@ -2416,10 +2426,6 @@ body {
   }
   .responsive-table_rewards td, .responsive-table_rewards th {
     padding: 0.7em 20px !important;
-  }
-  .responsive-table_rewards td p {
-    font-weight: 800;
-    font-size: 18px;
   }
 }
 @media (min-width: 641px) and (max-width: 1023px) {
@@ -2435,15 +2441,6 @@ body {
     padding-left: 20px;
   }
 }
-.responsive-table_rewards td p {
-  margin: 0;
-}
-@media (max-width: 640px) {
-  .responsive-table_rewards td p {
-    padding: 0;
-    font-size: 15px !important;
-  }
-}
 
 .account_login, .account_register {
   display: flex;
@@ -2457,12 +2454,10 @@ body {
 }
 @media (max-width: 1023px) {
   .account_login .small-form, .account_register .small-form {
-    margin: auto 20px;
-  }
-}
-@media (max-width: 641px) {
-  .account_login .small-form, .account_register .small-form {
     margin: 150px 20px;
+  }
+  .account_login .small-form p, .account_register .small-form p {
+    font-size: 16px;
   }
 }
 .account_login .account_img, .account_register .account_img {
@@ -2472,8 +2467,9 @@ body {
   height: 100vh;
   width: 100%;
   object-fit: cover;
+  margin-bottom: -6px;
 }
-@media (max-width: 641px) {
+@media (max-width: 1023px) {
   .account_login .account_img, .account_register .account_img {
     display: none;
   }
@@ -2494,6 +2490,11 @@ body {
   border-radius: 30px;
   background-color: #fff !important;
 }
+@media (max-width: 640px) {
+  .account_login #login_email label, .account_login #login_email input, .account_login #login_password label, .account_login #login_password input, .account_login #recover_email label, .account_login #recover_email input, .account_login #register_email label, .account_login #register_email input, .account_login #register_password label, .account_login #register_password input, .account_register #login_email label, .account_register #login_email input, .account_register #login_password label, .account_register #login_password input, .account_register #recover_email label, .account_register #recover_email input, .account_register #register_email label, .account_register #register_email input, .account_register #register_password label, .account_register #register_password input {
+    font-size: 16px;
+  }
+}
 .account_login .opposing-items, .account_login .action_bottom, .account_register .opposing-items, .account_register .action_bottom {
   display: flex;
   flex-direction: column;
@@ -2507,7 +2508,7 @@ body {
 }
 @media (min-width: 319px) {
   .account_login .opposing-items p, .account_login .opposing-items span, .account_login .action_bottom p, .account_login .action_bottom span, .account_register .opposing-items p, .account_register .opposing-items span, .account_register .action_bottom p, .account_register .action_bottom span {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .account_login .opposing-items a, .account_login .action_bottom a, .account_register .opposing-items a, .account_register .action_bottom a {
@@ -2520,6 +2521,9 @@ body {
   border-radius: 30px;
   width: 13.063rem;
   font-weight: 800;
+}
+.account_login .opposing-items div, .account_login .action_bottom div, .account_register .opposing-items div, .account_register .action_bottom div {
+  color: #000;
 }
 
 .faq-index__heading {
@@ -2856,7 +2860,8 @@ body {
 
 #template input[type=email],
 #template input[type=text],
-#template input[type=tel] {
+#template input[type=tel],
+#template input[type=password] {
   border-radius: 50px;
 }
 
@@ -2903,6 +2908,7 @@ body {
   text-transform: uppercase;
   color: #FFAC9A;
   border: 1px solid #FFAC9A;
+  cursor: pointer;
 }
 @media (max-width: 1024px) {
   .container.cf .account-section .account_banner {
@@ -3016,8 +3022,6 @@ body {
   background: #fff;
   border-radius: 4px;
   border: 1px solid #E6E6F1;
-  max-height: 97vh;
-  overflow: auto;
 }
 @media (max-width: 786px) {
   .container.cf .account-section .account_content .account_order_details, .container.cf .account-section .account_content .account_addresses, .container.cf .account-section .account_content .order_details, .container.cf .account-section .account_content .account_details {
@@ -3043,6 +3047,7 @@ body {
   display: flex;
   flex-direction: row;
   padding: 30px 40px;
+  text-transform: uppercase;
 }
 .container.cf .account-section .account_content .account_order_details .account_order_details_header h1, .container.cf .account-section .account_content .account_order_details .account_addresses_header h1, .container.cf .account-section .account_content .account_order_details .account_details_header h1, .container.cf .account-section .account_content .account_addresses .account_order_details_header h1, .container.cf .account-section .account_content .account_addresses .account_addresses_header h1, .container.cf .account-section .account_content .account_addresses .account_details_header h1, .container.cf .account-section .account_content .order_details .account_order_details_header h1, .container.cf .account-section .account_content .order_details .account_addresses_header h1, .container.cf .account-section .account_content .order_details .account_details_header h1, .container.cf .account-section .account_content .account_details .account_order_details_header h1, .container.cf .account-section .account_content .account_details .account_addresses_header h1, .container.cf .account-section .account_content .account_details .account_details_header h1 {
   font-size: 20px;
@@ -3387,7 +3392,7 @@ body {
 
 .form_div, .add_new_form_div {
   display: block;
-  margin: -90px 4.625rem 0 4.625rem;
+  margin: -90px 40px 0 0;
   width: 100%;
   background: #fff;
   border-radius: 4px;
@@ -3520,7 +3525,7 @@ body {
   background: #fff;
   width: 458px;
   margin: auto;
-  margin-top: 30%;
+  margin-top: 10%;
   padding: 30px 40px;
 }
 @media (max-width: 768px) {

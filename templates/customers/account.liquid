@@ -110,6 +110,7 @@
             <div class="button_div action_bottom">
               <button class=" btn account_update" type="submit">Update</button>
               <!-- <input type="submit" value="update"> -->
+              <!-- <button class="btn update_btn" type="submit">{{ 'customer.addresses.update' | t | upcase }}</button> -->
               <button class="acc_reset_password" onclick="open_reset_popup()">
                 <a href="#" onclick="showRecoverPasswordForm();return false;">{{ 'Reset password' }}</a>
               </button>
@@ -149,8 +150,8 @@
             {% else %}
 
               <div id="enter_email" class="input-row">
-                <label for="email" class="large">{{ 'Enter your registered e-mail ID' }}</label>
-                <input type="email" value="" size="30" name="email" id="recover-email" class="large" value=""/>
+                <label for="email" class="large">{{ 'Your registered e-mail ID' }}</label>
+                <input type="email" size="30" name="email" id="recover-email" class="large" value="{{ customer.email }}" disabled="disabled"/>
               </div>
             <div class="action_bottom">
                 <button class="recover_password_btn btn" type="submit">{{ 'customer.recover_password.submit' | t | upcase }}</button>

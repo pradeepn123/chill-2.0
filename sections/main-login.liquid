@@ -31,7 +31,7 @@
             <div class="text-over-input">
               <input type="password" value="" name="customer[password]" id="customer_password" class="large password" size="16" />
               <div id="forgot_password" class="text-over-input__text">
-                <a href="#" onclick="showRecoverPasswordForm();return false;" style="text-decoration: underline;">{{ 'customer.login.forgot_password' | t }}</a>
+                <a href="#" onclick="showRecoverPasswordForm();return false;" style="text-decoration: underline; color: #000;">{{ 'customer.login.forgot_password' | t }}</a>
               </div>
             </div>
           </div>
@@ -56,11 +56,7 @@
           {% if form.posted_successfully? %}
           {% assign reset_success = true %}
           {% endif %}
-          <div class="template_header">
-            <h2 class="title account_recoverPassword_title">{{ 'customer.recover_password.title' | t }}</h2>
-            <p class="account_recoverPassword_sub-title" style="color: #000">{{ section.settings.account_recoverPassword_subtitle }}</p>
-            
-          </div>
+          
 
 
           {{ form.errors | default_errors }}
@@ -68,12 +64,16 @@
           {% if reset_success %}
 
           <div class="action_bottom">
-            <p>{{ 'customer.recover_password.success' | t }}</p>
+            <p style="font-size: 20px;">{{ 'customer.recover_password.success' | t }}</p>
             <span class="note"><a href="#" onclick="hideRecoverPasswordForm();return false;">{{ 'customer.login.sign_in' | t }}</a></span>
           </div>
 
           {% else %}
-
+          <div class="template_header">
+            <h2 class="title account_recoverPassword_title">{{ 'customer.recover_password.title' | t }}</h2>
+            <p class="account_recoverPassword_sub-title" style="color: #000">{{ section.settings.account_recoverPassword_subtitle }}</p>
+            
+          </div>
           <div id="recover_email" class="input-row">
             <label for="email" class="large">{{ 'customer.recover_password.email' | t }}</label>
             <input type="email" value="" size="30" name="email" id="recover-email" class="large" />
