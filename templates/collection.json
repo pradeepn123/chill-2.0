@@ -1,1 +1,88 @@
-{"sections":{"main":{"type":"main-collection","settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "610bc810-ad35-432c-b2ff-94bb937a86d3": {
+          "type": "collection",
+          "settings": {
+            "collection": "cbd-gummies"
+          }
+        },
+        "1541c809-66c4-42d3-993c-0206c9ec630a": {
+          "type": "collection",
+          "settings": {
+            "collection": "cool-mint"
+          }
+        },
+        "97870c53-e3b6-44c5-be5b-62959ad9a67b": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-smokes"
+          }
+        },
+        "5bfff7bc-c159-4844-af9a-42698ea964af": {
+          "type": "collection",
+          "settings": {
+            "collection": "chill-apparel"
+          }
+        },
+        "6e6bafae-2635-47ec-b9b2-4a64d2fe1418": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "tobacco-free-nicotine-subscription"
+          }
+        },
+        "e1d7132a-f2df-4db0-86a8-d63c3905cf82": {
+          "type": "collection",
+          "settings": {
+            "collection": "chill-flavoured-drops",
+            "image": "shopify:\/\/shop_images\/Group_63224_1920x_01545ab2-a270-484a-9cb2-e91f52173c31.png"
+          }
+        }
+      },
+      "block_order": [
+        "610bc810-ad35-432c-b2ff-94bb937a86d3",
+        "1541c809-66c4-42d3-993c-0206c9ec630a",
+        "97870c53-e3b6-44c5-be5b-62959ad9a67b",
+        "5bfff7bc-c159-4844-af9a-42698ea964af",
+        "6e6bafae-2635-47ec-b9b2-4a64d2fe1418",
+        "e1d7132a-f2df-4db0-86a8-d63c3905cf82"
+      ],
+      "settings": {
+        "show_image_behind_heading": false,
+        "heading_image_height": "medium",
+        "overlay_style": "shadow",
+        "coll_num_per_page_int": 24,
+        "grid": 4,
+        "show_vendor": true,
+        "show_total": false,
+        "coll_desc_pos": "above",
+        "enable_filtering": false,
+        "collapse_tag_sidebar_by_default": false,
+        "collapse_filters_method": "over-12",
+        "show_filter_counts": false,
+        "show_disabled_filters": true,
+        "ajax_products": true,
+        "enable_sticky_filter": true,
+        "filter_two_columns": false,
+        "coll_show_sort": true,
+        "coll_show_feat": false,
+        "enable_subcoll": true,
+        "subcoll_menu": "main-menu",
+        "subcoll_style": "gallery",
+        "subcoll_gall_shape": "sq",
+        "image_position": "center center",
+        "subcoll_gall_enable_margin": true,
+        "subcoll_gall_full_width": false,
+        "subcoll_gall_overlay_style": "shadow",
+        "subcoll_gall_text_alignment": "center center",
+        "subcoll_gall_mobile_layout": "2"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
