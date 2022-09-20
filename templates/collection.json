@@ -69,7 +69,7 @@
         "filter_two_columns": false,
         "coll_show_sort": true,
         "coll_show_feat": false,
-        "enable_subcoll": true,
+        "enable_subcoll": false,
         "subcoll_menu": "main-menu",
         "subcoll_style": "gallery",
         "subcoll_gall_shape": "sq",
