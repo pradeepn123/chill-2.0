@@ -63,7 +63,7 @@ $(document).ready(function () {
   //sub collection image
   $('.subcollection_slider').slick({
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 8,
     slidesToScroll: 1,
@@ -96,8 +96,8 @@ $(document).ready(function () {
         breakpoint: 600,
         settings: {
             arrows: false,
-            slidesToShow: 3,
-            slidesToScroll: 1
+            slidesToShow: 2.6,
+            slidesToScroll: 2
         }
         }
     ]
