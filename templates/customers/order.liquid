@@ -32,7 +32,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="8.863" height="14.898" viewBox="0 0 8.863 14.898">
               <path id="Path_10248" data-name="Path 10248" d="M9463.4-21920.516l-1.414-1.414,6.035-6.035-6.035-6.035,1.414-1.414,7.449,7.449Z" transform="translate(9470.851 -21920.516) rotate(180)"/>
             </svg>
-          </a>Order details
+          </a>{{ "Order details" | upcase }}
         </h1>
         <a href="{{ order.order_status_url }}" target="_blank" class="button altcolour view_receipt_btn">View receipt</a>
       </div>
@@ -67,7 +67,7 @@
         <div class="order_details_wrapper">
           <div class="order_placed_on">
             <p class="details_title">{{ "Placed on" }}</p>
-            <p class="details_data">{{ order.created_at | slice: 0, 10 | date: "%d %b %Y" }}</p>
+            <p class="details_data">{{ order.created_at | slice: 0, 10 | date: "%d/%m/%Y" }}</p>
           </div>
 
           <div class="order_id_detail">

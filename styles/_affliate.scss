@@ -14,6 +14,10 @@
     max-width: 100%;
     height: 44.5rem;
     position: relative;
+    @media (max-width: 375px){
+        height: 25.125rem !important;
+        background-position: center right 7% !important;
+    }
     @media (max-width: 640px) {
         width: 100%;
         height: 29.125rem;
@@ -28,12 +32,12 @@
     .banner_text{
         width: 44%;
         height: 16.125rem;
-        margin: auto 72px;
+        margin: auto 43px;
         position: absolute;
         top: 30%;
         p{
             font-family: 'Open Sans', regular;
-            line-height: 1.2;
+            line-height: 1;
             margin: 0;
             text-transform: none;
             strong {
@@ -72,15 +76,19 @@
     }
     .banner_btn{
         width: 13.125rem;
-        margin-top: 30px; 
+        margin-top: 20px; 
         border-radius: 29px;
         font-size: 20px;
         font-weight: bold;
-        text-transform: uppercase;
+        text-transform: uppercase !important;
         border: #FFAC9A;
+        @media (max-width: 641px){
+            margin: 0;
+            margin-top: 20px;
+        }
         @media (min-width: 641px) and (max-width: 1023px){
             border: #FFAC9A !important;
-            background: #FFAC9A;;
+            background: #FFAC9A;
         }
     }
     
@@ -89,7 +97,7 @@
 .features_wrapper{
     margin: 6.875rem 10% 0 10%;
     @media (max-width: 640px){
-        margin: 19.313rem 20px 0 20px;
+        margin: 20.06rem 20px 0 20px;
     }
     @media (min-width: 641px) and (max-width: 1023px){
         margin: 65px 5% 0 5%;
@@ -104,7 +112,8 @@
     .block_wrapper{
         display: grid;
         grid-template-columns: auto auto;
-        grid-column-gap: 16.875rem;
+        grid-column-gap: 8.875rem;
+        margin-bottom: 40px;
         @media (max-width: 640px){
             grid-template-columns: auto;
         }
@@ -117,6 +126,9 @@
         .feature_blocks{
             display: flex;
             margin-bottom: 70px;
+            @media (max-width: 640px){
+                margin-bottom: 60px;
+            }
             .feature_icon{
                 margin: auto 40px 0 0;
                 svg{
@@ -168,12 +180,14 @@
     .join_btn{
         width: 15rem;
         height: 3.75rem;
-        color: #fff;
         border-radius: 30px;
         border: none;
         font-size: 20px;
         text-transform: uppercase;
         font-weight: bolder;
+        a{
+            color: #fff;
+        }
     }
     @media (max-width: 640px){
         padding: 60px 20px;
@@ -199,7 +213,7 @@
         transform: translate(0);
     }
     100% {
-        transform: translateX(-220px * 9);
+        transform: translateX(-220px * 10);
     }
 }
 .slider_wrapper{
@@ -207,10 +221,12 @@
     height: 43.75rem;
     overflow: hidden;
     .slider_images{
-        max-width: 37.563rem;
+        // max-width: 37.563rem;
+        max-width: 100%;
         height: 44.188rem;
         display: flex;
-        animation: scroll 40s linear infinite;
+        animation: scroll 30s linear infinite;
+        // transform: translate3d(0, 0, 0);
         img{
             width: 100%;
             height: auto;

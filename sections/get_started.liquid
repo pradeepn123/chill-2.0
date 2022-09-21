@@ -3,7 +3,7 @@
     <h1 class="mobile" style="font-size: {{ section.settings.rewards_title_font_size_mobile }}px;">{{ section.settings.rewards_heading_mobile }}</h1>
     <p class="rewards_description">{{ section.settings.rewards_description }}</p>
     {% if section.settings.add_button %}
-        <button class="rewards_button" style="font-size: {{ section.settings.button_font_size }}px; background: {{ section.settings.button_color }};">{{ section.settings.button_text | upcase }}</button>
+        <button class="rewards_button" style="font-size: {{ section.settings.button_font_size }}px; background: {{ section.settings.button_color }};"><a href="{{ section.settings.button_link }}">{{ section.settings.button_text | upcase }}</a></button>
     {% endif %}
     
 </div>
@@ -62,6 +62,11 @@
             "id": "button_text",
             "label": "Button Text",
             "default": "Shop Now"   
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
         },
         {
             "type": "range",

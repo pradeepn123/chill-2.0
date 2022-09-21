@@ -6,7 +6,7 @@
           <div class="faq-index__sticky-container">
             <div class="faq-index__item-container">
               {% if section.settings.index_heading != blank %}
-                <div class="faq-index__heading">{{ section.settings.index_heading }}</div>
+                <div class="faq-index__heading" style="font-size: 24px;">{{ section.settings.index_heading }}</div>
               {% endif %}
             </div>
           </div>
@@ -16,12 +16,23 @@
       <div class="faq-header__content">
         {% if section.settings.title != blank %}
           {% if section.settings.use_h1 %}
-            <h1 id="{{ section.id }}" style="font-weight: {{ section.settings.title_weight }}">{{ section.settings.title | escape }}</h1>
+            <h1 id="{{ section.id }}" style="font-weight: {{ section.settings.title_weight }};">{{ section.settings.title | escape }}</h1>
           {% else %}
-            <h2 id="{{ section.id }}" class="h1-style" style="font-weight: {{ section.settings.title_weight }}" >{{ section.settings.title | escape }}</h2>
+            <h2 id="{{ section.id }}" class="h1-style" style="font-weight: {{ section.settings.title_weight }};">{{ section.settings.title | escape }}</h2>
+            {% style %}
+            @media (max-width: 768px){
+              .h1-style{
+                font-size: 29px !important;
+              }
+            }
+            @media (min-width: 769px){
+              .h1-style{
+                font-size: 42px;
+              }
+            }
+            {% endstyle %}
           {% endif %}
         {% endif %}
-
         {% if section.settings.text != blank %}
           <div class="rte" style="color: #000;">{{ section.settings.text }}</div>
         {% endif %}
