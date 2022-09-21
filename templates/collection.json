@@ -47,6 +47,12 @@
             "collection": "shop",
             "image": "shopify:\/\/shop_images\/Group_6322.png"
           }
+        },
+        "1691f8d5-9f3a-4f93-be88-88acdbefcf76": {
+          "type": "collection",
+          "settings": {
+            "collection": "free-flavor-drops"
+          }
         }
       },
       "block_order": [
@@ -56,7 +62,8 @@
         "5bfff7bc-c159-4844-af9a-42698ea964af",
         "6e6bafae-2635-47ec-b9b2-4a64d2fe1418",
         "e1d7132a-f2df-4db0-86a8-d63c3905cf82",
-        "b930063b-f490-4633-aaf2-eacf3f379fa8"
+        "b930063b-f490-4633-aaf2-eacf3f379fa8",
+        "1691f8d5-9f3a-4f93-be88-88acdbefcf76"
       ],
       "settings": {
         "show_image_behind_heading": false,
