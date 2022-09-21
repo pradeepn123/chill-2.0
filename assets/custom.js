@@ -31,7 +31,7 @@ var videoBlog = $(".chill-videos-item");
 });
 function hoverVideo(index, e) {  
   this.querySelector('.video_image_container').style.display = "none";
-  this.querySelector('.play_overlay').style.display = "none";
+  this.querySelector('.play_overlay').style.display = "block";
   var num = index+1;
   var iframes = $('#player-'+num)[0];
   var player = $f(iframes); 
@@ -39,7 +39,7 @@ function hoverVideo(index, e) {
 }
 function hideVideo(index, e) {    
   this.querySelector('.video_image_container').style.display = "block";
-  this.querySelector('.play_overlay').style.display = "block";
+  this.querySelector('.play_overlay').style.display = "none";
   var num = index+1;
   var iframes = $('#player-'+num)[0];
   var player = $f(iframes);     
@@ -63,7 +63,7 @@ $(document).ready(function () {
   //sub collection image
   $('.subcollection_slider').slick({
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 8,
     slidesToScroll: 1,
@@ -96,8 +96,8 @@ $(document).ready(function () {
         breakpoint: 600,
         settings: {
             arrows: false,
-            slidesToShow: 2.6,
-            slidesToScroll: 2
+            slidesToShow: 3,
+            slidesToScroll: 1
         }
         }
     ]

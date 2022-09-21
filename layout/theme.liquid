@@ -13,7 +13,7 @@
 
   <link rel="preload" href="{{ 'styles.css' | asset_url }}" as="style">
   {{ 'custom.css' | asset_url | stylesheet_tag }}
-  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" rel="stylesheet" type="text/css" media="all" />
   {% render 'head-tag' %}
 
   <title>
@@ -133,7 +133,7 @@
 
   <script src="https://player.vimeo.com/api/player.js"></script>
   <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
 
   <!-- Begin ReCharge code -->
   {% include 'subscription-theme-footer' %}

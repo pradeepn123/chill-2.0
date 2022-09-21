@@ -1,13 +1,10 @@
-
 {% style%}
-.chill-experience-section{
-    background: {{ section.settings.bg_color }};
-}
-.chill-experience-section .chill-experience-wrapper .majortitle{
-    font-size: {{ section.settings.text_font_size }}px;
-}
-
-
+  .chill-experience-section{
+      background: {{ section.settings.bg_color }};
+  }
+  .chill-experience-section .chill-experience-wrapper .majortitle{
+      font-size: {{ section.settings.text_font_size }}px;
+  }
 {% endstyle %}
 
 <div class="{% if section.settings.use_alt_bg %}use-alt-bg fully-padded-row--medium{% else %}no-space{% endif %}">
@@ -23,8 +20,8 @@
                         {% case block.type %}
                             {% when 'image-video'%}
                             <div class="chill-videos-item">
-                                {%- if  block.settings.video != blank -%}
-                                <div  class="video_content">
+                                {%- if block.settings.video != blank -%}
+                                <div class="video_content">
                                     <iframe id="player-{{forloop.index}}" class="play-video mobile-video" src="{{ block.settings.video }}&background=1&autoplay=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"  style="position:absolute; width:100%; height:100%;" title="Chill Adventure Series: The Gambler 500"></iframe>                                    
                                 </div>
                                 {%- endif -%}
@@ -35,10 +32,15 @@
                                             <img class="play_image" src="{{ block.settings.placeholder_image |  img_url: '1920x' }}" alt="image">
                                         </div>
                                         <div class="play_overlay">
+                                          {% if block.settings.video_popup != blank %}<a data-fancybox href="{{ block.settings.video_popup }}&background=1&autoplay=1"> {% endif %}
                                             {% render 'svg-play-button' %}
+                                            <div class="video_popup" style="display:none;">
+                                              <iframe id="player-{{forloop.index}}" class="play-video mobile-video" src="{{ block.settings.video_popup }}&background=1&autoplay=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"  style="position:absolute; width:100%; height:100%;" title="Chill Adventure Series: The Gambler 500"></iframe>                                    
+                                            </div>
+                                          {% if block.settings.video_popup != blank %}</a>{% endif %}
                                         </div>
                                     </div>
-                                {%- endif -%}
+                                {%- endif -%}                                
                                 <div class="video-detail-container">
                                     <div class="video_details">
                                         {%- if block.settings.video_heading -%} 
@@ -136,7 +138,13 @@
             "id": "placeholder_image",
             "type": "image_picker",
             "label": "Placeholder image"
-        },        
+        },
+        {
+          "id": "video_popup",
+          "type": "text",
+          "label": "Video Popup link",
+          "default": "https:\/\/player.vimeo.com\/video\/701403418?h=b0173a7c7b"
+        },
         {
             "type": "text",
             "id": "video_heading",
