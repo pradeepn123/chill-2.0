@@ -51,7 +51,8 @@
         "1691f8d5-9f3a-4f93-be88-88acdbefcf76": {
           "type": "collection",
           "settings": {
-            "collection": "free-flavor-drops"
+            "collection": "free-flavor-drops",
+            "image": "shopify:\/\/shop_images\/Group_63224.png"
           }
         }
       },
