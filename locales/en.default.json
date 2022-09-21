@@ -278,7 +278,8 @@
   },
   "contact": {
     "form": {
-      "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
+      "post_success1": "Thanks for contacting us.",
+      "post_success2": "We'll get back to you as soon as possible.",
       "name": "Name",
       "email": "Email",
       "message": "Message",

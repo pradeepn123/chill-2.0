@@ -79,6 +79,7 @@
                     margin: -30px auto 4.625rem;
                     flex-basis: 100%;
                     width: 100%;
+                    max-width: 95%;
                 }
                 @media (min-width: 769px) and (max-width: 1024px){
                     // width: 100%;
@@ -148,6 +149,7 @@
                         }
                         @media (max-width: 768px){
                             padding: 225px 6px 20px;
+                            text-align: center;
                             svg{
                                 margin-right: 10px;
                             }
@@ -182,7 +184,7 @@
                     z-index: 2;
                     display: flex;
                     flex-direction: row;
-                    padding: 30px 40px;
+                    padding: 30px 15px;
                     text-transform: uppercase;
                     h1{
                         font-size: 20px;
@@ -370,6 +372,9 @@
                         text-transform: uppercase;
                         padding: 9px 15px;
                         color: #000;
+                        &:hover{
+                            color: #fff !important;
+                        }
                     }
                     @media (max-width: 768px) {
                         padding: 40px 20px;
@@ -377,7 +382,7 @@
                             font-size: 16px;
                         }
                         .view_receipt_btn{
-                            font-size: 10px;
+                            font-size: 14px;
                             padding: 7px 15px;
                             color: #6EC59F;
                         }
@@ -416,7 +421,7 @@
                             min-width: 627px;
                         }
                         @media (min-width: 767px) and (max-width: 1023px){
-                            min-width: 770px;
+                            min-width: 100%;
                         }
                         .product_image{
                             display: flex;
@@ -431,7 +436,7 @@
                                 margin: 13px 0;
                                 .product_item_title{
                                     font-size: 20px;
-                                    font-weight: bold;
+                                    font-weight: 600;
                                     color: #000;
                                     margin: 0;
                                     flex-basis: 50%;
@@ -462,16 +467,18 @@
                         }
                         .block_price{
                             font-size: 20px;
+                            font-weight: 600 !important;
                         }
                         .block_quantity, .block_subtotal{
                             h5{
                                 font-size: 14px;
-                                font-weight: 600;
+                                font-weight: 600 !important;
                                 text-transform: capitalize;
                                 margin-bottom: 0!important;
                             }
                             p{
                                 font-size: 20px;
+                                font-weight: 600 !important;
                             }
                         }
                     }

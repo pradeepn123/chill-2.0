@@ -9,8 +9,11 @@
         // @media (max-width: 1023px){
         //     margin: auto 20px;
         // }
+        @media (max-width: 767px){
+            margin: 150px 20px !important;
+        }
         @media (max-width: 1023px){
-            margin: 150px 20px;
+            margin: 150px auto;
             p{
                 font-size: 16px;
             }

@@ -2165,7 +2165,7 @@ body {
 }
 .banner_wrapper .banner_btn {
   width: 13.125rem;
-  margin-top: 30px;
+  margin-top: 20px;
   border-radius: 29px;
   font-size: 20px;
   font-weight: bold;
@@ -2175,6 +2175,7 @@ body {
 @media (max-width: 641px) {
   .banner_wrapper .banner_btn {
     margin: 0;
+    margin-top: 20px;
   }
 }
 @media (min-width: 641px) and (max-width: 1023px) {
@@ -2189,7 +2190,7 @@ body {
 }
 @media (max-width: 640px) {
   .features_wrapper {
-    margin: 23.06rem 20px 0 20px;
+    margin: 20.06rem 20px 0 20px;
   }
 }
 @media (min-width: 641px) and (max-width: 1023px) {
@@ -2459,9 +2460,14 @@ body {
 .account_login .small-form p, .account_register .small-form p {
   color: #000;
 }
+@media (max-width: 767px) {
+  .account_login .small-form, .account_register .small-form {
+    margin: 150px 20px !important;
+  }
+}
 @media (max-width: 1023px) {
   .account_login .small-form, .account_register .small-form {
-    margin: 150px 20px;
+    margin: 150px auto;
   }
   .account_login .small-form p, .account_register .small-form p {
     font-size: 16px;
@@ -2563,6 +2569,7 @@ body {
   gap: 100px;
   max-width: 80% !important;
   color: #7F7F7F !important;
+  margin-bottom: 50px;
 }
 .contact_us-container .contact-us_wrapper .support_content p {
   color: #000;
@@ -2618,7 +2625,8 @@ body {
 }
 .contact_us-container .success_msg {
   color: #000;
-  font-weight: 400 !important;
+  font-weight: 800 !important;
+  font-size: 24px;
 }
 
 .template-blog .section-image-with-text-overlay .image-overlay .overlay-text .overlay-text__text .overlay-text__title {
@@ -2959,6 +2967,7 @@ body {
     margin: -30px auto 4.625rem;
     flex-basis: 100%;
     width: 100%;
+    max-width: 95%;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -3032,6 +3041,7 @@ body {
 @media (max-width: 768px) {
   .container.cf .account-section .account_content .account_sidebar .sidebar_content .sidebar_help {
     padding: 225px 6px 20px;
+    text-align: center;
   }
   .container.cf .account-section .account_content .account_sidebar .sidebar_content .sidebar_help svg {
     margin-right: 10px;
@@ -3068,7 +3078,7 @@ body {
   z-index: 2;
   display: flex;
   flex-direction: row;
-  padding: 30px 40px;
+  padding: 30px 15px;
   text-transform: uppercase;
 }
 .container.cf .account-section .account_content .account_order_details .account_order_details_header h1, .container.cf .account-section .account_content .account_order_details .account_addresses_header h1, .container.cf .account-section .account_content .account_order_details .account_details_header h1, .container.cf .account-section .account_content .account_addresses .account_order_details_header h1, .container.cf .account-section .account_content .account_addresses .account_addresses_header h1, .container.cf .account-section .account_content .account_addresses .account_details_header h1, .container.cf .account-section .account_content .order_details .account_order_details_header h1, .container.cf .account-section .account_content .order_details .account_addresses_header h1, .container.cf .account-section .account_content .order_details .account_details_header h1, .container.cf .account-section .account_content .account_details .account_order_details_header h1, .container.cf .account-section .account_content .account_details .account_addresses_header h1, .container.cf .account-section .account_content .account_details .account_details_header h1 {
@@ -3251,6 +3261,9 @@ body {
   padding: 9px 15px;
   color: #000;
 }
+.container.cf .account-section .account_content .account_order_details .order_details_title .view_receipt_btn:hover, .container.cf .account-section .account_content .account_addresses .order_details_title .view_receipt_btn:hover, .container.cf .account-section .account_content .order_details .order_details_title .view_receipt_btn:hover, .container.cf .account-section .account_content .account_details .order_details_title .view_receipt_btn:hover {
+  color: #fff !important;
+}
 @media (max-width: 768px) {
   .container.cf .account-section .account_content .account_order_details .order_details_title, .container.cf .account-section .account_content .account_addresses .order_details_title, .container.cf .account-section .account_content .order_details .order_details_title, .container.cf .account-section .account_content .account_details .order_details_title {
     padding: 40px 20px;
@@ -3259,7 +3272,7 @@ body {
     font-size: 16px;
   }
   .container.cf .account-section .account_content .account_order_details .order_details_title .view_receipt_btn, .container.cf .account-section .account_content .account_addresses .order_details_title .view_receipt_btn, .container.cf .account-section .account_content .order_details .order_details_title .view_receipt_btn, .container.cf .account-section .account_content .account_details .order_details_title .view_receipt_btn {
-    font-size: 10px;
+    font-size: 14px;
     padding: 7px 15px;
     color: #6EC59F;
   }
@@ -3302,7 +3315,7 @@ body {
 }
 @media (min-width: 767px) and (max-width: 1023px) {
   .container.cf .account-section .account_content .account_order_details .order_details_table .order_details_table_wrapper, .container.cf .account-section .account_content .account_addresses .order_details_table .order_details_table_wrapper, .container.cf .account-section .account_content .order_details .order_details_table .order_details_table_wrapper, .container.cf .account-section .account_content .account_details .order_details_table .order_details_table_wrapper {
-    min-width: 770px;
+    min-width: 100%;
   }
 }
 .container.cf .account-section .account_content .account_order_details .order_details_table .order_details_table_wrapper .product_image, .container.cf .account-section .account_content .account_addresses .order_details_table .order_details_table_wrapper .product_image, .container.cf .account-section .account_content .order_details .order_details_table .order_details_table_wrapper .product_image, .container.cf .account-section .account_content .account_details .order_details_table .order_details_table_wrapper .product_image {
@@ -3320,7 +3333,7 @@ body {
 }
 .container.cf .account-section .account_content .account_order_details .order_details_table .order_details_table_wrapper .product_image .product_info_details .product_item_title, .container.cf .account-section .account_content .account_addresses .order_details_table .order_details_table_wrapper .product_image .product_info_details .product_item_title, .container.cf .account-section .account_content .order_details .order_details_table .order_details_table_wrapper .product_image .product_info_details .product_item_title, .container.cf .account-section .account_content .account_details .order_details_table .order_details_table_wrapper .product_image .product_info_details .product_item_title {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 600;
   color: #000;
   margin: 0;
   flex-basis: 50%;
@@ -3347,15 +3360,17 @@ body {
 }
 .container.cf .account-section .account_content .account_order_details .order_details_table .order_details_table_wrapper .block_price, .container.cf .account-section .account_content .account_addresses .order_details_table .order_details_table_wrapper .block_price, .container.cf .account-section .account_content .order_details .order_details_table .order_details_table_wrapper .block_price, .container.cf .account-section .account_content .account_details .order_details_table .order_details_table_wrapper .block_price {
   font-size: 20px;
+  font-weight: 600 !important;
 }
 .container.cf .account-section .account_content .account_order_details .order_details_table .order_details_table_wrapper .block_quantity h5, .container.cf .account-section .account_content .account_order_details .order_details_table .order_details_table_wrapper .block_subtotal h5, .container.cf .account-section .account_content .account_addresses .order_details_table .order_details_table_wrapper .block_quantity h5, .container.cf .account-section .account_content .account_addresses .order_details_table .order_details_table_wrapper .block_subtotal h5, .container.cf .account-section .account_content .order_details .order_details_table .order_details_table_wrapper .block_quantity h5, .container.cf .account-section .account_content .order_details .order_details_table .order_details_table_wrapper .block_subtotal h5, .container.cf .account-section .account_content .account_details .order_details_table .order_details_table_wrapper .block_quantity h5, .container.cf .account-section .account_content .account_details .order_details_table .order_details_table_wrapper .block_subtotal h5 {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 600 !important;
   text-transform: capitalize;
   margin-bottom: 0 !important;
 }
 .container.cf .account-section .account_content .account_order_details .order_details_table .order_details_table_wrapper .block_quantity p, .container.cf .account-section .account_content .account_order_details .order_details_table .order_details_table_wrapper .block_subtotal p, .container.cf .account-section .account_content .account_addresses .order_details_table .order_details_table_wrapper .block_quantity p, .container.cf .account-section .account_content .account_addresses .order_details_table .order_details_table_wrapper .block_subtotal p, .container.cf .account-section .account_content .order_details .order_details_table .order_details_table_wrapper .block_quantity p, .container.cf .account-section .account_content .order_details .order_details_table .order_details_table_wrapper .block_subtotal p, .container.cf .account-section .account_content .account_details .order_details_table .order_details_table_wrapper .block_quantity p, .container.cf .account-section .account_content .account_details .order_details_table .order_details_table_wrapper .block_subtotal p {
   font-size: 20px;
+  font-weight: 600 !important;
 }
 .container.cf .account-section .account_content .account_order_details .account_details_form, .container.cf .account-section .account_content .account_addresses .account_details_form, .container.cf .account-section .account_content .order_details .account_details_form, .container.cf .account-section .account_content .account_details .account_details_form {
   padding: 40px;

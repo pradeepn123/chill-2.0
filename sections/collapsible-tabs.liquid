@@ -2,7 +2,7 @@
   <div class="container">
     <div class="collapsible-tabs">
       {% if section.settings.title != blank %}
-        <h3 class="collapsible-tabs__heading collapsible-tabs__content" id="faq-{{ section.settings.title | handle }}">{{ section.settings.title | escape | upcase }}</h3>
+        <h3 class="collapsible-tabs__heading collapsible-tabs__content" id="faq-{{ section.settings.title | handle }}">{{ section.settings.title | escape  }}</h3>
       
       {% endif %}
 
@@ -10,7 +10,7 @@
         {%- for block in section.blocks -%}
           <div class="collapsible-tabs__block" {{ block.shopify_attributes }}>
             {% if block.type == 'content' %}
-              <div class="collapsible-tabs__text collapsible-tabs__content rte">{{ block.settings.content }}</div>
+              <div class="collapsible-tabs__text collapsible-tabs__content rte">{{ block.settings.content | capitalize }}</div>
 
             {% elsif block.type == 'button' %}
               <div class="collapsible-tabs__button collapsible-tabs__content">
