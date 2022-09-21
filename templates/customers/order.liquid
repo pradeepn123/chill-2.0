@@ -67,7 +67,7 @@
         <div class="order_details_wrapper">
           <div class="order_placed_on">
             <p class="details_title">{{ "Placed on" }}</p>
-            <p class="details_data">{{ order.created_at | slice: 0, 10 | date: "%d %b %Y" }}</p>
+            <p class="details_data">{{ order.created_at | slice: 0, 10 | date: "%d/%m/%Y" }}</p>
           </div>
 
           <div class="order_id_detail">

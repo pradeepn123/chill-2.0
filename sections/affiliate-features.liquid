@@ -21,7 +21,7 @@
 </div>
 <div class="join_program">
     <div class="join_text">{{ section.settings.join_text }}</div>
-    <button class="join_btn" style="background: {{ section.settings.join_btn_color }}; font-size: {{ section.settings.join_btn_font }}"> Join Now</button>
+    <button class="join_btn" style="background: {{ section.settings.join_btn_color }}; font-size: {{ section.settings.join_btn_font }}"><a href="{{ section.settings.join_btn_link }}"> {{ section.settings.join_btn_text }} </a></button>
 </div>
 <!-- "max_blocks": 8, -->
 {% schema %}
@@ -52,6 +52,11 @@
             "default": "<p>Join the chill Affiliate Program On ShareASale today!</p>"
         },
         {
+            "type": "text",
+            "id": "join_btn_text",
+            "label": "Join button Text"
+        },
+        {
             "type": "color",
             "id": "join_btn_color",
             "label": "Join Button Color",
@@ -66,6 +71,11 @@
             "step": 2,
             "unit": "px",
             "default": 20
+        },
+        {
+            "type": "url",
+            "id": "join_btn_link",
+            "label": "Add link to join button"
         },
         {
             "type": "richtext",

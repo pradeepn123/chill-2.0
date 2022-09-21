@@ -390,7 +390,7 @@
     },
     "addresses": {
       "title": "Addresses",
-      "add_new": "Add a New Address",
+      "add_new": "Add New Address",
       "first_name": "First Name",
       "last_name": "Last Name",
       "company": "Company",
