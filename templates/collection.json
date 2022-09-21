@@ -2,7 +2,87 @@
   "sections": {
     "main": {
       "type": "main-collection",
+      "blocks": {
+        "4161a433-5a21-44b6-8fac-d99b2395f5c0": {
+          "type": "collection",
+          "settings": {
+            "collection": "cbd-gummies",
+            "image": "shopify:\/\/shop_images\/Gummies.png"
+          }
+        },
+        "d89c5169-3a01-4a49-a9bb-cdfcb55b50bc": {
+          "type": "collection",
+          "settings": {
+            "collection": "cool-mint",
+            "image": "shopify:\/\/shop_images\/Pouches.png"
+          }
+        },
+        "1f5dbd86-c82c-42e1-8bbb-74c1bbe4e2f6": {
+          "type": "collection",
+          "settings": {
+            "collection": "cbd-smokes",
+            "image": "shopify:\/\/shop_images\/Smokes.png"
+          }
+        },
+        "c2e8b43c-d70c-454d-ac6b-8094dc1e1890": {
+          "type": "collection",
+          "settings": {
+            "collection": "chill-apparel",
+            "image": "shopify:\/\/shop_images\/Apparel.png"
+          }
+        },
+        "0bf2c311-14b7-4a60-9a8f-ab213f5e86ed": {
+          "type": "collection",
+          "settings": {
+            "collection": "chill-flavoured-drops",
+            "image": "shopify:\/\/shop_images\/Tinctures.png"
+          }
+        },
+        "7080a5e5-4a58-4f1d-8efc-c920fa6cc3a1": {
+          "type": "collection",
+          "settings": {
+            "collection": "shop",
+            "image": "shopify:\/\/shop_images\/All.png"
+          }
+        }
+      },
+      "block_order": [
+        "4161a433-5a21-44b6-8fac-d99b2395f5c0",
+        "d89c5169-3a01-4a49-a9bb-cdfcb55b50bc",
+        "1f5dbd86-c82c-42e1-8bbb-74c1bbe4e2f6",
+        "c2e8b43c-d70c-454d-ac6b-8094dc1e1890",
+        "0bf2c311-14b7-4a60-9a8f-ab213f5e86ed",
+        "7080a5e5-4a58-4f1d-8efc-c920fa6cc3a1"
+      ],
       "settings": {
+        "show_image_behind_heading": false,
+        "heading_image_height": "medium",
+        "overlay_style": "shadow",
+        "coll_num_per_page_int": 24,
+        "grid": 4,
+        "show_vendor": true,
+        "show_total": false,
+        "coll_desc_pos": "above",
+        "enable_filtering": false,
+        "collapse_tag_sidebar_by_default": false,
+        "collapse_filters_method": "over-12",
+        "show_filter_counts": false,
+        "show_disabled_filters": true,
+        "ajax_products": true,
+        "enable_sticky_filter": true,
+        "filter_two_columns": false,
+        "coll_show_sort": true,
+        "coll_show_feat": false,
+        "enable_subcoll": false,
+        "subcoll_menu": "main-menu",
+        "subcoll_style": "buttons",
+        "subcoll_gall_shape": "sq",
+        "image_position": "center center",
+        "subcoll_gall_enable_margin": true,
+        "subcoll_gall_full_width": false,
+        "subcoll_gall_overlay_style": "shadow",
+        "subcoll_gall_text_alignment": "center center",
+        "subcoll_gall_mobile_layout": "2"
       }
     }
   },
