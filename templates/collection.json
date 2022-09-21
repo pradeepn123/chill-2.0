@@ -54,6 +54,13 @@
             "collection": "free-flavor-drops",
             "image": "shopify:\/\/shop_images\/Group_63224.png"
           }
+        },
+        "7a1dfc39-65dc-42df-bc8c-e8a75daf84cb": {
+          "type": "collection",
+          "settings": {
+            "collection": "cbd-gummy-variety-pack",
+            "image": "shopify:\/\/shop_images\/Collections-Gummies.jpg"
+          }
         }
       },
       "block_order": [
@@ -64,7 +71,8 @@
         "6e6bafae-2635-47ec-b9b2-4a64d2fe1418",
         "e1d7132a-f2df-4db0-86a8-d63c3905cf82",
         "b930063b-f490-4633-aaf2-eacf3f379fa8",
-        "1691f8d5-9f3a-4f93-be88-88acdbefcf76"
+        "1691f8d5-9f3a-4f93-be88-88acdbefcf76",
+        "7a1dfc39-65dc-42df-bc8c-e8a75daf84cb"
       ],
       "settings": {
         "show_image_behind_heading": false,
