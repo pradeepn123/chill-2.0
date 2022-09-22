@@ -20,7 +20,7 @@
         </a>
         <a href="#">
           <li class="sidebar_element subscriptions_nav">
-            {% render 'icon', icon: 'subscriptions', size: 'medium' %}<a href="#"> Subscriptions</a>
+            {% render 'icon', icon: 'subscriptions', size: 'medium' %} Subscriptions
           </li>
         </a>
         <a href="#account_details_section">
@@ -33,25 +33,6 @@
             {% render 'icon', icon: 'addresses' %} Addresses
           </li>
         </a>
-        <a href="/pages/new-contact-us">
-          <li class="sidebar_help">
-            {% render 'icon', icon: 'help' %}Need help? Contact Us
-          </li>
-        </a>
-      </ul> 
-      <ul class="sidebar_content">
-        <li class="sidebar_element active">
-          {% render 'icon', icon: 'order-history', size: 'small' %}<a href="{{ routes.account_url }}"> Order History</a>
-        </li>
-        <li class="sidebar_element">
-          {% render 'icon', icon: 'subscriptions', size: 'medium' %}<a href="#"> Subscriptions</a>
-        </li>
-        <li class="sidebar_element account_details_nav">
-          {% render 'icon', icon: 'account-details' %}<a href="{{ routes.account_url }}#account_details_section"> Account details</a>
-        </li>
-        <li class="sidebar_element ">
-          {% render 'icon', icon: 'addresses' %}<a href="{{ routes.account_addresses_url }}"> Addresses </a>
-        </li>
         <li class="sidebar_help">
           {% render 'icon', icon: 'help' %}Need help? <a href="/pages/new-contact-us">Contact Us</a>
         </li>

@@ -8,18 +8,31 @@
   <div class="account_content">
     <div class="account_sidebar">
       <ul class="sidebar_content">
-        <li class="sidebar_element">
-          {% render 'icon', icon: 'order-history', size: 'small' %}<a href="{{ routes.account_url }}"> Order History</a>
-        </li>
-        <li class="sidebar_element">
-          {% render 'icon', icon: 'subscriptions', size: 'medium' %}<a href="#"> Subscriptions</a>
-        </li>
-        <li class="sidebar_element account_details_nav">
-          {% render 'icon', icon: 'account-details' %}<a href="{{ routes.account_url }}#account_details_section"> Account details</a>
-        </li>
-        <li class="sidebar_element active">
-          {% render 'icon', icon: 'addresses' %}<a href="{{ routes.account_addresses_url }}"> Addresses </a>
-        </li>
+        <a href="{{ routes.account_url }}">
+          <li class="sidebar_element order_history_nav_desktop">
+            {% render 'icon', icon: 'order-history', size: 'small' %} Order History
+          </li>
+        </a>
+        <a href="#">
+          <li class="sidebar_element order_history_nav_mobile" style="display: none;">
+            {% render 'icon', icon: 'order-history', size: 'small' %} Order History
+          </li>
+        </a>
+        <a href="#">
+          <li class="sidebar_element subscriptions_nav">
+            {% render 'icon', icon: 'subscriptions', size: 'medium' %} Subscriptions
+          </li>
+        </a>
+        <a href="#account_details_section">
+          <li class="sidebar_element account_details_nav">
+            {% render 'icon', icon: 'account-details' %}<a href="{{ routes.account_url }}#account_details_section"> Account details</a>
+          </li>
+        </a>
+        <a href="{{ routes.account_addresses_url }}">
+          <li class="sidebar_element addresses_nav active">
+            {% render 'icon', icon: 'addresses' %} Addresses
+          </li>
+        </a>
         <li class="sidebar_help">
           {% render 'icon', icon: 'help' %}Need help? <a href="/pages/new-contact-us">Contact Us</a>
         </li>
