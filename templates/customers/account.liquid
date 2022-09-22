@@ -8,28 +8,40 @@
   <div class="account_content">
     <div class="account_sidebar">
       <ul class="sidebar_content">
-        <li class="sidebar_element order_history_nav_desktop active">
-          {% render 'icon', icon: 'order-history', size: 'small' %}<a href="{{ routes.account_url }}"> Order History</a>
-        </li>
-        <li class="sidebar_element order_history_nav_mobile" style="display: none;">
-          {% render 'icon', icon: 'order-history', size: 'small' %}<a href="#"> Order History</a>
-        </li>
-        <li class="sidebar_element subscriptions_nav">
-          {% render 'icon', icon: 'subscriptions', size: 'medium' %}<a href="#"> Subscriptions</a>
-        </li>
-        <li class="sidebar_element account_details_nav">
-          {% render 'icon', icon: 'account-details' %}<a href="#account_details_section"> Account details</a>
-        </li>
-        <li class="sidebar_element addresses_nav">
-          {% render 'icon', icon: 'addresses' %}<a href="{{ routes.account_addresses_url }}"> Addresses </a>
-        </li>
-        <li class="sidebar_help">
-          {% render 'icon', icon: 'help' %}Need help? <a href="/pages/new-contact-us">Contact Us</a>
-        </li>
+        <a href="{{ routes.account_url }}">
+          <li class="sidebar_element order_history_nav_desktop active">
+            {% render 'icon', icon: 'order-history', size: 'small' %} Order History
+          </li>
+        </a>
+        <a href="#">
+          <li class="sidebar_element order_history_nav_mobile" style="display: none;">
+            {% render 'icon', icon: 'order-history', size: 'small' %} Order History
+          </li>
+        </a>
+        <a href="#">
+          <li class="sidebar_element subscriptions_nav">
+            {% render 'icon', icon: 'subscriptions', size: 'medium' %}<a href="#"> Subscriptions</a>
+          </li>
+        </a>
+        <a href="#account_details_section">
+          <li class="sidebar_element account_details_nav">
+            {% render 'icon', icon: 'account-details' %}<a href="#account_details_section"> Account details</a>
+          </li>
+        </a>
+        <a href="{{ routes.account_addresses_url }}">
+          <li class="sidebar_element addresses_nav">
+            {% render 'icon', icon: 'addresses' %} Addresses
+          </li>
+        </a>
+        <a href="/pages/new-contact-us">
+          <li class="sidebar_help">
+            {% render 'icon', icon: 'help' %}Need help? Contact Us
+          </li>
+        </a>
       </ul>  
     </div>
     <div class="account_order_details">
-      <div class="account_order_details_header">
+      <div class="account_order_details_header" style="padding: 30px 15px;">
         
         <h1>
           <a href={{ routes.account_url }} class="back_arrow" style="display: none;">
@@ -108,12 +120,15 @@
               <input type="text" name="customer[email]" class="account_email" id="email" value="{{ customer.email }}" disabled="disabled">
             </div>
             <div class="button_div action_bottom">
-              <button class=" btn account_update" type="submit">Update</button>
+              <!-- <button class=" btn account_update" type="submit">Update</button> -->
               <!-- <input type="submit" value="update"> -->
               <!-- <button class="btn update_btn" type="submit">{{ 'customer.addresses.update' | t | upcase }}</button> -->
-              <button class="acc_reset_password" onclick="showRecoverPasswordPopup();return false;">
+              <!-- <button class="acc_reset_password" onclick="showRecoverPasswordPopup();return false;"> -->
+              <a href="{{ routes.account_login_url }}">
+                <button class="acc_reset_password">    
                   {{ 'Reset password' }}
-              </button>
+                </button>
+            </a>
             </div>
         {% endform %}
       </div>
