@@ -24,6 +24,7 @@
         },
         "02b3cc80-701c-47ad-ae9b-832ea72c7120": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel3.jpg"
           }
