@@ -1,3 +1,8 @@
+{% style %}
+  .product-recommendations{
+    background: {{ section.settings.color_bg }};
+  }
+{% endstyle %}
 <div class="product-recommendations"
     data-section-id="{{ section.id }}"
     data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&limit={{ section.settings.grid }}&product_id={{ product.id }}"
@@ -7,6 +12,7 @@
   {% if recommendations.performed and recommendations.products_count > 0 %}
     <div class="container{% if settings.use_fullwidth_layout %} container--no-max{% endif %} fully-spaced-row">
       <h4 class="align-center hometitle">{{ section.settings.title }}</h4>
+      <h5 class="align-center homesubtitle">{{ section.settings.description }}</h5>
 
       <div class="collection-listing related-collection">
         <div class="product-list product-list--per-row-{{ section.settings.grid }} product-list--per-row-mob-{{ settings.prod_thumb_mob_per_row }} product-list--image-shape-{{ settings.prod_thumb_shape }}">
@@ -88,10 +94,20 @@ loadProductRecommendationsIntoSection();
         "content": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)"
       },
       {
-        "type": "text",
+        "type": "color",
+        "id": "color_bg",
+        "label": "Background color",
+        "default": "#F2F2F3"
+      },
+      {
+        "type": "richtext",
         "id": "title",
-        "label": "Heading",
-        "default": "You may also like"
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
       },
       {
         "type": "checkbox",

@@ -69,7 +69,7 @@
                                   <div class="ruby-col-3">
                                     {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
                                     <div class="product_image_wrapper">
-                                      <a href="{{ featured_image | img_url: '1024x' }}">
+                                      <a href="{{ product.url }}">
                                         <img src="{{ featured_image | img_url: '1024x' }}" alt="{{ featured_image.alt | escape }}">
                                       </a>
                                     </div>

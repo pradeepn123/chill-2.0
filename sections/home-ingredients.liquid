@@ -14,7 +14,7 @@
                         {%- for block in section.blocks -%}
                             {% case block.type %}
                                 {% when 'tabs-heading' %}
-                                <li class='{% if forloop.first %}active{% endif %}' data-tab-id='tab{{ forloop.index }}'>{{ block.settings.title}}</li>                                
+                                <li class='{% if forloop.first %}active{% endif %}' data-tab-id='tab{{ forloop.index }}'>{{ block.settings.title}}</li>
                             {% endcase %}
                         {% endfor%}
                     </ul>
