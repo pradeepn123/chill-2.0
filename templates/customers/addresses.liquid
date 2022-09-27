@@ -8,18 +8,31 @@
   <div class="account_content">
     <div class="account_sidebar">
       <ul class="sidebar_content">
-        <li class="sidebar_element">
-          {% render 'icon', icon: 'order-history', size: 'small' %}<a href="{{ routes.account_url }}"> Order History</a>
-        </li>
-        <li class="sidebar_element">
-          {% render 'icon', icon: 'subscriptions', size: 'medium' %}<a href="#"> Subscriptions</a>
-        </li>
-        <li class="sidebar_element account_details_nav">
-          {% render 'icon', icon: 'account-details' %}<a href="{{ routes.account_url }}#account_details_section"> Account details</a>
-        </li>
-        <li class="sidebar_element active">
-          {% render 'icon', icon: 'addresses' %}<a href="{{ routes.account_addresses_url }}"> Addresses </a>
-        </li>
+        <a href="{{ routes.account_url }}">
+          <li class="sidebar_element order_history_nav_desktop">
+            {% render 'icon', icon: 'order-history', size: 'small' %} Order History
+          </li>
+        </a>
+        <a href="#">
+          <li class="sidebar_element order_history_nav_mobile" style="display: none;">
+            {% render 'icon', icon: 'order-history', size: 'small' %} Order History
+          </li>
+        </a>
+        <a href="#">
+          <li class="sidebar_element subscriptions_nav">
+            {% render 'icon', icon: 'subscriptions', size: 'medium' %} Subscriptions
+          </li>
+        </a>
+        <a href="#account_details_section">
+          <li class="sidebar_element account_details_nav">
+            {% render 'icon', icon: 'account-details' %}<a href="{{ routes.account_url }}#account_details_section"> Account details</a>
+          </li>
+        </a>
+        <a href="{{ routes.account_addresses_url }}">
+          <li class="sidebar_element addresses_nav active">
+            {% render 'icon', icon: 'addresses' %} Addresses
+          </li>
+        </a>
         <li class="sidebar_help">
           {% render 'icon', icon: 'help' %}Need help? <a href="/pages/new-contact-us">Contact Us</a>
         </li>
@@ -166,9 +179,10 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="8.863" height="14.898" viewBox="0 0 8.863 14.898">
                     <path id="Path_10248" data-name="Path 10248" d="M9463.4-21920.516l-1.414-1.414,6.035-6.035-6.035-6.035,1.414-1.414,7.449,7.449Z" transform="translate(9470.851 -21920.516) rotate(180)"/>
                   </svg>
+                  {{ 'customer.addresses.edit_address' | t | upcase }}
                 </a>
-            </span>
-              {{ 'customer.addresses.edit_address' | t | upcase }}
+              </span>
+              
             </h1>
             <div class="edit_form_wrapper">
                 <div class="edit_group">
@@ -183,7 +197,7 @@
                 </div>
                 <div class="edit_group">
                     <div class="input-row">
-                      <label for="address_phone_{{form.id}}">{{ 'customer.addresses.phone' | t }} *</label>
+                      <label for="address_phone_{{form.id}}">{{ "Phone number" }} *</label>
                       <input type="tel" id="address_phone_{{form.id}}" class="address_form" name="address[phone]" value="{{form.phone}}" size="40" required/>
                     </div>
                     <div class="input-row">
@@ -250,9 +264,10 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="8.863" height="14.898" viewBox="0 0 8.863 14.898">
                 <path id="Path_10248" data-name="Path 10248" d="M9463.4-21920.516l-1.414-1.414,6.035-6.035-6.035-6.035,1.414-1.414,7.449,7.449Z" transform="translate(9470.851 -21920.516) rotate(180)"/>
               </svg>
+              {{ 'customer.addresses.add_new' | t | upcase }}
             </a>
         </span>
-          {{ 'customer.addresses.add_new' | t | upcase }}</h1>
+          </h1>
         {% form 'customer_address', customer.new_address %}
           
           <div class="new_form_wrapper">
@@ -268,7 +283,7 @@
               </div>
               <div class="new_group">
                 <div class="input-row">
-                  <label for="address_phone_new">{{ 'customer.addresses.phone' | t }} *</label>
+                  <label for="address_phone_new">{{ "Phone number" }} *</label>
                   <input type="tel" id="address_phone_new" class="address_form" name="address[phone]" value="{{form.phone}}" size="40" required/>
                 </div>
                 <div class="input-row">
@@ -290,11 +305,11 @@
               </div>
               <div class="new_group">
                 <div class="input-row">
-                  <label for="address_phone_{{form.id}}">{{ 'customer.addresses.phone' | t }} *</label>
-                  <input type="tel" id="address_phone_{{form.id}}" class="address_form" name="address[phone]" value="{{form.phone}}" size="40" required/>
+                  <label for="address_city_new">{{ 'customer.addresses.city' | t }} *</label>
+                  <input type="text" id="address_city_new" class="address_form" name="address[city]" value="{{form.city}}" size="40" required/>
                 </div>
                 <div id="address_province_container_new" class="input-row" style="display:none">
-                  <label for="address_province_new">{{ 'customer.addresses.province' | t }} *</label>
+                  <label for="address_province_new">{{ "State/ Province/ Region" }} *</label>
                   <!-- <span class="lightly-styled-select"> -->
                     <select id="address_province_new" class="address_form" name="address[province]" data-default="{{form.province}}" value="{{form.province}}" required></select>
                   <!-- </span> -->

@@ -2949,11 +2949,10 @@ body {
 }
 .container.cf .account-section .account_content {
   display: flex;
-  gap: 16px;
   padding-bottom: 100px;
 }
 .container.cf .account-section .account_content .account_sidebar {
-  margin: -90px 0 0 4.625rem;
+  margin: -90px 16px 0 4.625rem;
   flex-basis: 40%;
   max-width: 371px;
 }
@@ -2979,7 +2978,7 @@ body {
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
   .container.cf .account-section .account_content .account_sidebar {
-    margin: -90px 0 0 40px;
+    margin: -90px 16px 0 40px;
   }
 }
 .container.cf .account-section .account_content .account_sidebar .sidebar_content {
@@ -3004,9 +3003,10 @@ body {
 .container.cf .account-section .account_content .account_sidebar .sidebar_content .sidebar_element svg:first-child {
   display: none;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .container.cf .account-section .account_content .account_sidebar .sidebar_content .sidebar_element svg {
     margin-top: 0;
+    margin-right: 10px;
   }
 }
 .container.cf .account-section .account_content .account_sidebar .sidebar_content .sidebar_element:hover {
@@ -3015,6 +3015,11 @@ body {
 }
 .container.cf .account-section .account_content .account_sidebar .sidebar_content .sidebar_element .active {
   font-weight: 800;
+}
+@media (max-width: 1200px) {
+  .container.cf .account-section .account_content .account_sidebar .sidebar_content .sidebar_element {
+    padding: 30px 20px !important;
+  }
 }
 .container.cf .account-section .account_content .account_sidebar .sidebar_content .sidebar_element.active {
   display: block;
@@ -3045,6 +3050,11 @@ body {
   }
   .container.cf .account-section .account_content .account_sidebar .sidebar_content .sidebar_help svg {
     margin-right: 10px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .container.cf .account-section .account_content .account_sidebar .sidebar_content .sidebar_help {
+    padding: 225px 27px 20px;
   }
 }
 .container.cf .account-section .account_content .account_order_details, .container.cf .account-section .account_content .account_addresses, .container.cf .account-section .account_content .order_details, .container.cf .account-section .account_content .account_details {
@@ -3078,7 +3088,7 @@ body {
   z-index: 2;
   display: flex;
   flex-direction: row;
-  padding: 30px 15px;
+  padding: 30px 40px;
   text-transform: uppercase;
 }
 .container.cf .account-section .account_content .account_order_details .account_order_details_header h1, .container.cf .account-section .account_content .account_order_details .account_addresses_header h1, .container.cf .account-section .account_content .account_order_details .account_details_header h1, .container.cf .account-section .account_content .account_addresses .account_order_details_header h1, .container.cf .account-section .account_content .account_addresses .account_addresses_header h1, .container.cf .account-section .account_content .account_addresses .account_details_header h1, .container.cf .account-section .account_content .order_details .account_order_details_header h1, .container.cf .account-section .account_content .order_details .account_addresses_header h1, .container.cf .account-section .account_content .order_details .account_details_header h1, .container.cf .account-section .account_content .account_details .account_order_details_header h1, .container.cf .account-section .account_content .account_details .account_addresses_header h1, .container.cf .account-section .account_content .account_details .account_details_header h1 {
@@ -3117,14 +3127,16 @@ body {
 .container.cf .account-section .account_content .account_order_details .action_top .add_address_btn a:hover, .container.cf .account-section .account_content .account_addresses .action_top .add_address_btn a:hover, .container.cf .account-section .account_content .order_details .action_top .add_address_btn a:hover, .container.cf .account-section .account_content .account_details .action_top .add_address_btn a:hover {
   color: #fff;
 }
-@media (max-width: 400px) {
+@media (max-width: 340px) {
   .container.cf .account-section .account_content .account_order_details .action_top .add_address_btn a, .container.cf .account-section .account_content .account_addresses .action_top .add_address_btn a, .container.cf .account-section .account_content .order_details .action_top .add_address_btn a, .container.cf .account-section .account_content .account_details .action_top .add_address_btn a {
-    padding: 7px 6px !important;
+    padding: 7px 12px;
+    font-size: 10px;
+    color: #6EC59F;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 341px) and (max-width: 428px) {
   .container.cf .account-section .account_content .account_order_details .action_top .add_address_btn a, .container.cf .account-section .account_content .account_addresses .action_top .add_address_btn a, .container.cf .account-section .account_content .order_details .action_top .add_address_btn a, .container.cf .account-section .account_content .account_details .action_top .add_address_btn a {
-    padding: 7px 15px;
+    padding: 7px 22px;
     font-size: 10px;
     color: #6EC59F;
   }
@@ -3177,6 +3189,13 @@ body {
   border-radius: 20px;
   background: #fff;
   padding: 9px 9px;
+  width: 75%;
+}
+.container.cf .account-section .account_content .account_order_details table .order_details_btn button:hover, .container.cf .account-section .account_content .account_addresses table .order_details_btn button:hover, .container.cf .account-section .account_content .order_details table .order_details_btn button:hover, .container.cf .account-section .account_content .account_details table .order_details_btn button:hover {
+  background: #676869;
+}
+.container.cf .account-section .account_content .account_order_details table .order_details_btn button:hover a, .container.cf .account-section .account_content .account_addresses table .order_details_btn button:hover a, .container.cf .account-section .account_content .order_details table .order_details_btn button:hover a, .container.cf .account-section .account_content .account_details table .order_details_btn button:hover a {
+  color: #fff;
 }
 .container.cf .account-section .account_content .account_order_details table .order_details_btn button a, .container.cf .account-section .account_content .account_addresses table .order_details_btn button a, .container.cf .account-section .account_content .order_details table .order_details_btn button a, .container.cf .account-section .account_content .account_details table .order_details_btn button a {
   font-size: 14px;
@@ -3197,6 +3216,7 @@ body {
   font-weight: 600;
   color: #000;
   position: relative;
+  margin-bottom: 0;
 }
 .container.cf .account-section .account_content .account_order_details .address_actions, .container.cf .account-section .account_content .account_addresses .address_actions, .container.cf .account-section .account_content .order_details .address_actions, .container.cf .account-section .account_content .account_details .address_actions {
   padding-top: 40px;
@@ -3245,10 +3265,8 @@ body {
   font-weight: 800;
   margin: auto 0;
 }
-.container.cf .account-section .account_content .account_order_details .order_details_title h1 a, .container.cf .account-section .account_content .account_addresses .order_details_title h1 a, .container.cf .account-section .account_content .order_details .order_details_title h1 a, .container.cf .account-section .account_content .account_details .order_details_title h1 a {
+.container.cf .account-section .account_content .account_order_details .order_details_title h1 a svg, .container.cf .account-section .account_content .account_addresses .order_details_title h1 a svg, .container.cf .account-section .account_content .order_details .order_details_title h1 a svg, .container.cf .account-section .account_content .account_details .order_details_title h1 a svg {
   margin-right: 5px;
-}
-.container.cf .account-section .account_content .account_order_details .order_details_title h1 svg, .container.cf .account-section .account_content .account_addresses .order_details_title h1 svg, .container.cf .account-section .account_content .order_details .order_details_title h1 svg, .container.cf .account-section .account_content .account_details .order_details_title h1 svg {
   width: 9px;
   height: 15px;
 }
@@ -3320,11 +3338,11 @@ body {
 }
 .container.cf .account-section .account_content .account_order_details .order_details_table .order_details_table_wrapper .product_image, .container.cf .account-section .account_content .account_addresses .order_details_table .order_details_table_wrapper .product_image, .container.cf .account-section .account_content .order_details .order_details_table .order_details_table_wrapper .product_image, .container.cf .account-section .account_content .account_details .order_details_table .order_details_table_wrapper .product_image {
   display: flex;
-  gap: 20px;
 }
 .container.cf .account-section .account_content .account_order_details .order_details_table .order_details_table_wrapper .product_image img, .container.cf .account-section .account_content .account_addresses .order_details_table .order_details_table_wrapper .product_image img, .container.cf .account-section .account_content .order_details .order_details_table .order_details_table_wrapper .product_image img, .container.cf .account-section .account_content .account_details .order_details_table .order_details_table_wrapper .product_image img {
   border: 1px solid #D0D0D0;
   border-radius: 2px;
+  margin-right: 20px;
 }
 .container.cf .account-section .account_content .account_order_details .order_details_table .order_details_table_wrapper .product_image .product_info_details, .container.cf .account-section .account_content .account_addresses .order_details_table .order_details_table_wrapper .product_image .product_info_details, .container.cf .account-section .account_content .order_details .order_details_table .order_details_table_wrapper .product_image .product_info_details, .container.cf .account-section .account_content .account_details .order_details_table .order_details_table_wrapper .product_image .product_info_details {
   display: flex;
@@ -3386,10 +3404,10 @@ body {
 .container.cf .account-section .account_content .account_order_details .account_details_form .account_name, .container.cf .account-section .account_content .account_addresses .account_details_form .account_name, .container.cf .account-section .account_content .order_details .account_details_form .account_name, .container.cf .account-section .account_content .account_details .account_details_form .account_name {
   width: 100%;
   display: flex;
-  gap: 26px;
 }
 .container.cf .account-section .account_content .account_order_details .account_details_form .account_name .account_firstname, .container.cf .account-section .account_content .account_order_details .account_details_form .account_name .account_lastname, .container.cf .account-section .account_content .account_addresses .account_details_form .account_name .account_firstname, .container.cf .account-section .account_content .account_addresses .account_details_form .account_name .account_lastname, .container.cf .account-section .account_content .order_details .account_details_form .account_name .account_firstname, .container.cf .account-section .account_content .order_details .account_details_form .account_name .account_lastname, .container.cf .account-section .account_content .account_details .account_details_form .account_name .account_firstname, .container.cf .account-section .account_content .account_details .account_details_form .account_name .account_lastname {
   flex-basis: 50%;
+  margin-right: 26px;
 }
 .container.cf .account-section .account_content .account_order_details .account_details_form .account_name .account_firstname input, .container.cf .account-section .account_content .account_order_details .account_details_form .account_name .account_lastname input, .container.cf .account-section .account_content .account_addresses .account_details_form .account_name .account_firstname input, .container.cf .account-section .account_content .account_addresses .account_details_form .account_name .account_lastname input, .container.cf .account-section .account_content .order_details .account_details_form .account_name .account_firstname input, .container.cf .account-section .account_content .order_details .account_details_form .account_name .account_lastname input, .container.cf .account-section .account_content .account_details .account_details_form .account_name .account_firstname input, .container.cf .account-section .account_content .account_details .account_details_form .account_name .account_lastname input {
   width: 100%;
@@ -3474,11 +3492,11 @@ body {
   margin: 0;
   border-bottom: 1px solid #E6E6F1;
   display: flex;
-  gap: 20px;
 }
 .form_div h1 svg, .add_new_form_div h1 svg {
   width: 12px;
   height: 16px;
+  margin-right: 20px;
 }
 @media (max-width: 1024px) {
   .form_div h1, .add_new_form_div h1 {
@@ -3500,7 +3518,6 @@ body {
 .form_div .edit_address .edit_form_wrapper .edit_group, .form_div .edit_address .edit_form_wrapper .new_group, .form_div .edit_address .new_form_wrapper .edit_group, .form_div .edit_address .new_form_wrapper .new_group, .form_div .new_address .edit_form_wrapper .edit_group, .form_div .new_address .edit_form_wrapper .new_group, .form_div .new_address .new_form_wrapper .edit_group, .form_div .new_address .new_form_wrapper .new_group, .add_new_form_div .edit_address .edit_form_wrapper .edit_group, .add_new_form_div .edit_address .edit_form_wrapper .new_group, .add_new_form_div .edit_address .new_form_wrapper .edit_group, .add_new_form_div .edit_address .new_form_wrapper .new_group, .add_new_form_div .new_address .edit_form_wrapper .edit_group, .add_new_form_div .new_address .edit_form_wrapper .new_group, .add_new_form_div .new_address .new_form_wrapper .edit_group, .add_new_form_div .new_address .new_form_wrapper .new_group {
   display: flex;
   flex-direction: row;
-  gap: 15px;
 }
 @media (max-width: 768px) {
   .form_div .edit_address .edit_form_wrapper .edit_group, .form_div .edit_address .edit_form_wrapper .new_group, .form_div .edit_address .new_form_wrapper .edit_group, .form_div .edit_address .new_form_wrapper .new_group, .form_div .new_address .edit_form_wrapper .edit_group, .form_div .new_address .edit_form_wrapper .new_group, .form_div .new_address .new_form_wrapper .edit_group, .form_div .new_address .new_form_wrapper .new_group, .add_new_form_div .edit_address .edit_form_wrapper .edit_group, .add_new_form_div .edit_address .edit_form_wrapper .new_group, .add_new_form_div .edit_address .new_form_wrapper .edit_group, .add_new_form_div .edit_address .new_form_wrapper .new_group, .add_new_form_div .new_address .edit_form_wrapper .edit_group, .add_new_form_div .new_address .edit_form_wrapper .new_group, .add_new_form_div .new_address .new_form_wrapper .edit_group, .add_new_form_div .new_address .new_form_wrapper .new_group {
@@ -3509,10 +3526,15 @@ body {
 }
 .form_div .edit_address .edit_form_wrapper .edit_group .input-row, .form_div .edit_address .edit_form_wrapper .new_group .input-row, .form_div .edit_address .new_form_wrapper .edit_group .input-row, .form_div .edit_address .new_form_wrapper .new_group .input-row, .form_div .new_address .edit_form_wrapper .edit_group .input-row, .form_div .new_address .edit_form_wrapper .new_group .input-row, .form_div .new_address .new_form_wrapper .edit_group .input-row, .form_div .new_address .new_form_wrapper .new_group .input-row, .add_new_form_div .edit_address .edit_form_wrapper .edit_group .input-row, .add_new_form_div .edit_address .edit_form_wrapper .new_group .input-row, .add_new_form_div .edit_address .new_form_wrapper .edit_group .input-row, .add_new_form_div .edit_address .new_form_wrapper .new_group .input-row, .add_new_form_div .new_address .edit_form_wrapper .edit_group .input-row, .add_new_form_div .new_address .edit_form_wrapper .new_group .input-row, .add_new_form_div .new_address .new_form_wrapper .edit_group .input-row, .add_new_form_div .new_address .new_form_wrapper .new_group .input-row {
   flex-basis: 50%;
+  margin-right: 15px;
 }
 .form_div .edit_address .edit_form_wrapper .edit_group .input-row label, .form_div .edit_address .edit_form_wrapper .new_group .input-row label, .form_div .edit_address .new_form_wrapper .edit_group .input-row label, .form_div .edit_address .new_form_wrapper .new_group .input-row label, .form_div .new_address .edit_form_wrapper .edit_group .input-row label, .form_div .new_address .edit_form_wrapper .new_group .input-row label, .form_div .new_address .new_form_wrapper .edit_group .input-row label, .form_div .new_address .new_form_wrapper .new_group .input-row label, .add_new_form_div .edit_address .edit_form_wrapper .edit_group .input-row label, .add_new_form_div .edit_address .edit_form_wrapper .new_group .input-row label, .add_new_form_div .edit_address .new_form_wrapper .edit_group .input-row label, .add_new_form_div .edit_address .new_form_wrapper .new_group .input-row label, .add_new_form_div .new_address .edit_form_wrapper .edit_group .input-row label, .add_new_form_div .new_address .edit_form_wrapper .new_group .input-row label, .add_new_form_div .new_address .new_form_wrapper .edit_group .input-row label, .add_new_form_div .new_address .new_form_wrapper .new_group .input-row label {
   color: #000;
   font-size: 16px;
+}
+.form_div .edit_address .edit_form_wrapper .edit_group .input-row label input[type=checkbox], .form_div .edit_address .edit_form_wrapper .new_group .input-row label input[type=checkbox], .form_div .edit_address .new_form_wrapper .edit_group .input-row label input[type=checkbox], .form_div .edit_address .new_form_wrapper .new_group .input-row label input[type=checkbox], .form_div .new_address .edit_form_wrapper .edit_group .input-row label input[type=checkbox], .form_div .new_address .edit_form_wrapper .new_group .input-row label input[type=checkbox], .form_div .new_address .new_form_wrapper .edit_group .input-row label input[type=checkbox], .form_div .new_address .new_form_wrapper .new_group .input-row label input[type=checkbox], .add_new_form_div .edit_address .edit_form_wrapper .edit_group .input-row label input[type=checkbox], .add_new_form_div .edit_address .edit_form_wrapper .new_group .input-row label input[type=checkbox], .add_new_form_div .edit_address .new_form_wrapper .edit_group .input-row label input[type=checkbox], .add_new_form_div .edit_address .new_form_wrapper .new_group .input-row label input[type=checkbox], .add_new_form_div .new_address .edit_form_wrapper .edit_group .input-row label input[type=checkbox], .add_new_form_div .new_address .edit_form_wrapper .new_group .input-row label input[type=checkbox], .add_new_form_div .new_address .new_form_wrapper .edit_group .input-row label input[type=checkbox], .add_new_form_div .new_address .new_form_wrapper .new_group .input-row label input[type=checkbox] {
+  width: 17px;
+  height: 17px;
 }
 .form_div .edit_address .edit_form_wrapper .edit_group .input-row input, .form_div .edit_address .edit_form_wrapper .new_group .input-row input, .form_div .edit_address .new_form_wrapper .edit_group .input-row input, .form_div .edit_address .new_form_wrapper .new_group .input-row input, .form_div .new_address .edit_form_wrapper .edit_group .input-row input, .form_div .new_address .edit_form_wrapper .new_group .input-row input, .form_div .new_address .new_form_wrapper .edit_group .input-row input, .form_div .new_address .new_form_wrapper .new_group .input-row input, .add_new_form_div .edit_address .edit_form_wrapper .edit_group .input-row input, .add_new_form_div .edit_address .edit_form_wrapper .new_group .input-row input, .add_new_form_div .edit_address .new_form_wrapper .edit_group .input-row input, .add_new_form_div .edit_address .new_form_wrapper .new_group .input-row input, .add_new_form_div .new_address .edit_form_wrapper .edit_group .input-row input, .add_new_form_div .new_address .edit_form_wrapper .new_group .input-row input, .add_new_form_div .new_address .new_form_wrapper .edit_group .input-row input, .add_new_form_div .new_address .new_form_wrapper .new_group .input-row input {
   border: 1px solid #D0D0D0;
@@ -3539,6 +3561,7 @@ body {
 }
 .form_div .edit_address .edit_form_wrapper .input-row, .form_div .edit_address .new_form_wrapper .input-row, .form_div .new_address .edit_form_wrapper .input-row, .form_div .new_address .new_form_wrapper .input-row, .add_new_form_div .edit_address .edit_form_wrapper .input-row, .add_new_form_div .edit_address .new_form_wrapper .input-row, .add_new_form_div .new_address .edit_form_wrapper .input-row, .add_new_form_div .new_address .new_form_wrapper .input-row {
   flex-basis: 50%;
+  margin-right: 15px;
 }
 .form_div .edit_address .edit_form_wrapper .input-row label, .form_div .edit_address .new_form_wrapper .input-row label, .form_div .new_address .edit_form_wrapper .input-row label, .form_div .new_address .new_form_wrapper .input-row label, .add_new_form_div .edit_address .edit_form_wrapper .input-row label, .add_new_form_div .edit_address .new_form_wrapper .input-row label, .add_new_form_div .new_address .edit_form_wrapper .input-row label, .add_new_form_div .new_address .new_form_wrapper .input-row label {
   font-size: 16px;
@@ -3546,7 +3569,6 @@ body {
 }
 .form_div .edit_address .edit_form_wrapper .action_bottom, .form_div .edit_address .new_form_wrapper .action_bottom, .form_div .new_address .edit_form_wrapper .action_bottom, .form_div .new_address .new_form_wrapper .action_bottom, .add_new_form_div .edit_address .edit_form_wrapper .action_bottom, .add_new_form_div .edit_address .new_form_wrapper .action_bottom, .add_new_form_div .new_address .edit_form_wrapper .action_bottom, .add_new_form_div .new_address .new_form_wrapper .action_bottom {
   display: flex;
-  gap: 10px;
 }
 @media (max-width: 768px) {
   .form_div .edit_address .edit_form_wrapper .action_bottom, .form_div .edit_address .new_form_wrapper .action_bottom, .form_div .new_address .edit_form_wrapper .action_bottom, .form_div .new_address .new_form_wrapper .action_bottom, .add_new_form_div .edit_address .edit_form_wrapper .action_bottom, .add_new_form_div .edit_address .new_form_wrapper .action_bottom, .add_new_form_div .new_address .edit_form_wrapper .action_bottom, .add_new_form_div .new_address .new_form_wrapper .action_bottom {
@@ -3559,6 +3581,7 @@ body {
   padding: 18px;
   font-size: 18px;
   font-weight: 800;
+  margin-right: 10px;
 }
 @media (max-width: 768px) {
   .form_div .edit_address .edit_form_wrapper .action_bottom .update_btn, .form_div .edit_address .edit_form_wrapper .action_bottom .delete_btn, .form_div .edit_address .edit_form_wrapper .action_bottom .add_btn, .form_div .edit_address .new_form_wrapper .action_bottom .update_btn, .form_div .edit_address .new_form_wrapper .action_bottom .delete_btn, .form_div .edit_address .new_form_wrapper .action_bottom .add_btn, .form_div .new_address .edit_form_wrapper .action_bottom .update_btn, .form_div .new_address .edit_form_wrapper .action_bottom .delete_btn, .form_div .new_address .edit_form_wrapper .action_bottom .add_btn, .form_div .new_address .new_form_wrapper .action_bottom .update_btn, .form_div .new_address .new_form_wrapper .action_bottom .delete_btn, .form_div .new_address .new_form_wrapper .action_bottom .add_btn, .add_new_form_div .edit_address .edit_form_wrapper .action_bottom .update_btn, .add_new_form_div .edit_address .edit_form_wrapper .action_bottom .delete_btn, .add_new_form_div .edit_address .edit_form_wrapper .action_bottom .add_btn, .add_new_form_div .edit_address .new_form_wrapper .action_bottom .update_btn, .add_new_form_div .edit_address .new_form_wrapper .action_bottom .delete_btn, .add_new_form_div .edit_address .new_form_wrapper .action_bottom .add_btn, .add_new_form_div .new_address .edit_form_wrapper .action_bottom .update_btn, .add_new_form_div .new_address .edit_form_wrapper .action_bottom .delete_btn, .add_new_form_div .new_address .edit_form_wrapper .action_bottom .add_btn, .add_new_form_div .new_address .new_form_wrapper .action_bottom .update_btn, .add_new_form_div .new_address .new_form_wrapper .action_bottom .delete_btn, .add_new_form_div .new_address .new_form_wrapper .action_bottom .add_btn {
