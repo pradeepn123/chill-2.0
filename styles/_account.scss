@@ -15,10 +15,10 @@
             .account_banner_text{
                 display: flex;
                 justify-content: space-between;
-                padding: 60px 4.625rem 117px 4.625rem ;
+                padding: 60px 4.625rem 7.313rem 4.625rem ;
                 align-items: center;
                 @media (max-width: 1440px){
-                    padding: 60px 40px 117px 40px;
+                    padding: 60px 40px 7.313rem 40px;
                 }
                 .customer_name{
                     font-size: 36px;
@@ -42,7 +42,7 @@
         }
         @media (max-width: 1024px){
             .account_banner{
-                height: 225px;
+                height: 14.063rem;
                 .account_banner_text{
                     padding: 60px 40px;
                 }
@@ -50,7 +50,7 @@
         }
         @media(max-width: 768px){
             .account_banner{
-                height: 125px;
+                height: 7.813rem;
                 .account_banner_text{
                     padding: 30px 20px 60px 20px !important;
                     .customer_name{
@@ -70,7 +70,7 @@
                 margin: -90px 16px 0 4.625rem;
                 // width: 370px;
                 flex-basis: 40%;
-                max-width: 371px;
+                max-width: 23.188rem;
                 // height: 100vh;
                 @media (max-width: 400px){
                     margin: -30px 30px 4.625rem !important;
@@ -138,7 +138,7 @@
                     
                     .sidebar_help{
                         list-style: none;
-                        padding: 225px 30px 20px;
+                        padding: 14.063rem 30px 20px;
                         font-size: 16px;
                         text-transform: uppercase;
                         text-align: left;
@@ -154,14 +154,14 @@
                             font-weight: 800;
                         }
                         @media (max-width: 768px){
-                            padding: 225px 6px 20px;
+                            padding: 14.063rem 6px 20px;
                             text-align: center;
                             svg{
                                 margin-right: 10px;
                             }
                         }
                         @media (min-width: 769px) and (max-width: 1200px){
-                            padding: 225px 27px 20px;
+                            padding: 14.063rem 27px 20px;
                         }
                     }
                 }
@@ -287,16 +287,16 @@
                         // }
                     }
                     .order_description{
-                        max-width: 224px;
+                        max-width: 14rem;
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
                         @media (max-width: 1440px){
-                            max-width: 165px;
+                            max-width: 10.313rem;
                         }
                         @media (max-width: 1024px){
-                            max-width: 180px;
-                            max-width: 120px;
+                            max-width: 11.25rem;
+                            max-width: 7.5rem;
                         }
                         // @media (min-width: 641px) and (max-width: 1178px){
                         //     max-width: 120px;
@@ -444,7 +444,7 @@
                     .order_details_table_wrapper{
                         min-width: 790px;
                         @media(max-width: 768px){
-                            min-width: 627px;
+                            min-width: 39.188rem;
                         }
                         @media (min-width: 767px) and (max-width: 1023px){
                             min-width: 100%;
@@ -553,7 +553,7 @@
                         gap: 10px;
                         margin-top: 30px;
                         .account_update, .acc_reset_password{
-                            width: 260px;
+                            width: 16.25rem;
                             padding: 18px;
                             border-radius: 50px;
                             text-transform: uppercase;
@@ -684,7 +684,7 @@
                     flex-direction: column;
                 }
                 .update_btn, .delete_btn, .add_btn{
-                    width: 255px;
+                    width: 15.938rem;
                     border-radius: 50px;
                     padding: 18px;
                     font-size: 18px;
@@ -718,7 +718,7 @@
     background: rgba(0, 0, 0, 0.7);
     .reset_password_popup_block, .delete_popup_block{
         background: #fff;
-        width: 458px;
+        width: 28.625rem;
         // top: 30%;
         // position: absolute;
         margin: auto;
