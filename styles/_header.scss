@@ -213,6 +213,9 @@
                 &:last-child{
                     .coll_heading{
                         border-bottom: 1px solid #E6E6F1;
+                        @media(min-width:1200px){
+                            border-bottom: 0;
+                        }
                     }
                 }
                 .coll_heading{
@@ -223,6 +226,9 @@
                     display: block;
                     font-family: 'Open Sans', sans-serif;
                     border-top: 1px solid #E6E6F1;
+                    @media(min-width:1200px){
+                        border-top: 0;
+                    }
                 }
                 .ruby-grid{
                     opacity: 0;

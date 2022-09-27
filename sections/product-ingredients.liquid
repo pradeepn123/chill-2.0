@@ -1,0 +1,57 @@
+<div class="product_ingredients_section">
+    <div class="product_ingredients_sec_wrapper">
+        <div class="tab-content">
+            <div class="tab-heading">
+                <ul class='tabs'>
+                    {%- for block in product.metafields.settings.product_ingredients.value['ingredients_tab']  -%}
+                        <li class='{% if forloop.first %}active{% endif %}' data-tab-id='tab{{ forloop.index }}'>
+                            {{ block.tab_title}}
+                        </li>
+                    {% endfor%}
+                </ul>
+            </div>
+            <div class='content-section'>
+                {%- for block in product.metafields.settings.product_ingredients_tabs.value['tab_main'] -%}
+                    {% assign tab_id = tab_id | plus:1 %}
+                    <div id='tab{{tab_id}}' class='content {% if tab_id == 1 %}active{% endif %}'>
+                        <div class="heading_text align-center">
+                            <h3>{{ block.heading}}</h3>
+                            <p>{{ block.description}}</p>
+                        </div>
+                        <div class="tab-content-list">
+                            {%- for sub_block in block['tab_content']  -%}
+                                <div class="tab-content-item">
+                                    <img src="{{ sub_block.image }}" alt="">
+                                    <h3>{{sub_block.subtitle}}</h3>
+                                    <p>{{sub_block.subdescription}}</p>
+                                </div>
+                            {%- endfor -%}
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Product ingredients",
+    "class": "product_ingredients_sec",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable",
+        "label": "Show/Hide Section",
+        "default": true
+      }      
+    ],
+    "presets": [
+        {
+            "name": "Product ingredients",
+            "settings": {}     
+        }
+    ]
+  }
+{% endschema %}

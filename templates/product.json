@@ -31,10 +31,17 @@
         },
         "divider": {
           "type": "divider",
+          "disabled": true,
           "settings": {
             "show_in_quickbuy": false
           }
-        },        
+        },
+        "26d0afe5-d620-457e-89e4-f23bf6f1e94d": {
+          "type": "pro_custom_icon",
+          "settings": {
+            "show_icon": true
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -50,10 +57,17 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_quantity_selector": true,
-            "enable_payment_button": true,
+            "show_quantity_selector": false,
+            "enable_payment_button": false,
             "show_backorder_text": true,
-            "show_pickup_availability": true
+            "show_pickup_availability": true,
+            "show_single": false,
+            "select_first_variant": true,
+            "variant_style": "dropdown",
+            "disable_unavailable_variants": true,
+            "show_size_chart": false,
+            "size_chart_variant": "Size",
+            "size_chart_page": ""
           }
         }
       },
@@ -62,15 +76,17 @@
         "price",
         "vendor",
         "description",
-        "divider",        
+        "divider",
+        "26d0afe5-d620-457e-89e4-f23bf6f1e94d",
         "variant_picker",
         "buy_buttons"
       ],
       "settings": {
-        "show_breadcrumbs": true,
+        "show_breadcrumbs": false,
         "show_location_underneath": false,
         "inventory_transfers_enable": true,
         "enable_sticky_columns": false,
+        "show_thumbnail": false,
         "gallery_size": "medium",
         "gallery_layout": "carousel-under",
         "enable_zoom": true,
@@ -79,17 +95,33 @@
         "var_img_grouping_option": "Color,Colour,Couleur,Farbe"
       }
     },
+    "16639327190d7e5cec": {
+      "type": "product-ingredients",
+      "settings": {
+        "enable": true
+      }
+    },
+    "16639198461c244067": {
+      "type": "product-image-with-text",
+      "settings": {
+        "enable": true
+      }
+    },
     "recommendations": {
       "type": "product-recommendations",
       "settings": {
-        "title": "You may also like",
-        "show_vendor": false,
+        "color_bg": "#f2f2f3",
+        "title": "<p>You may also <strong>like<\/strong><\/p>",
+        "description": "<p>With our Naturally sourced, Intentional ingredients we ensure maximised experience to relieve stress and help rejuvenated both your mind and body<\/p>",
+        "show_vendor": true,
         "grid": 4
       }
     }
   },
   "order": [
     "main",
+    "16639327190d7e5cec",
+    "16639198461c244067",
     "recommendations"
   ]
 }

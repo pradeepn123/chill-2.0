@@ -161,25 +161,37 @@
 
               {% render 'unit-price', variant: cheapest_variant %}                            
             </a>
-            <!-- custom subscription info -->
-            <div class="custom_subscription_info">
-              <div class="custom_subscription_wrapper">
-                <div class="custom_button_info">
-                  <button class="btn btn-primary custom_sub_button">
-                    <span>Subscribe</span>
-                    <span class="product-price price__item_sub">
-                      <span class="product-price__item product-price__amount {% if cheapest_variant.compare_at_price > cheapest_variant.price %}product-price__amount--on-sale{% endif %} theme-money">
-                        {%- if settings.product_currency_code_enabled -%}
-                          {{ cheapest_variant.price | money_with_currency }}
-                        {%- else -%}
-                          {{ cheapest_variant.price | money }}
+            <div class="subscription_checkout_button">
+              <div class="dynamic_checkout_btn">
+                <button
+                  type="button"
+                  class="shopify-payment-button__button shopify-payment-button__button--unbranded js-buy-now-btn"
+                  data-variant-id="{{cheapest_variant.id}}"
+                  data-quantity="1"
+                  data-product-id="{{product.id}}"
+                  onclick="theme.handleBuyNow(this)"
+                >Buy it now</button>
+              </div>
+              <!-- custom subscription info -->
+              <div class="custom_subscription_info">
+                <div class="custom_subscription_wrapper">
+                  <div class="custom_button_info">
+                    <button class="btn btn-primary custom_sub_button">
+                      <span>Subscribe</span>
+                      <span class="product-price price__item_sub">
+                        <span class="product-price__item product-price__amount {% if cheapest_variant.compare_at_price > cheapest_variant.price %}product-price__amount--on-sale{% endif %} theme-money">
+                          {%- if settings.product_currency_code_enabled -%}
+                            {{ cheapest_variant.price | money_with_currency }}
+                          {%- else -%}
+                              {{ cheapest_variant.price | money }}
                         {%- endif -%}
+                        </span>
+                          {% if cheapest_variant.compare_at_price > cheapest_variant.price %}
+                          <span class="product-price__item product-price__compare theme-money">{{ cheapest_variant.compare_at_price | money }}</span>
+                        {% endif %}
                       </span>
-                      {% if cheapest_variant.compare_at_price > cheapest_variant.price %}
-                        <span class="product-price__item product-price__compare theme-money">{{ cheapest_variant.compare_at_price | money }}</span>
-                      {% endif %}
-                    </span>
-                  </button>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -289,11 +301,16 @@
       </div>
     </div>
 
-    
+    <!-- home page subscription on click popup -->
     {% if product.variants.size > 1 %}
     <div class="block-inner-card-info">
       <div class="block-inner-card-info-wrapper">        
         <div class="close_card_info">{% render 'svg-close' %}</div>
+        {% form 'product', product, id: product_form_id, class: 'form product-purchase-form', data-product-handle: product.handle, data-product-id: product.id, data-productid: product.id %}
+          <!-- recharge subscription -->
+          {% render 'subscription-product' with product as product %}
+          <!-- recharge Subscription -->
+        {% endform %}
 
         <div class="product_options_info">
           {% for option in product.options_with_values %}
