@@ -1,3 +1,6 @@
+<div id="coverScreen">
+  <p>Loading...</p>
+</div>
 <div class="account_login">
   <div class="account_img">
     <img src="{{ section.settings.side_image | img_url: 'master'}}" alt="chill account">
@@ -40,8 +43,8 @@
 
           <div class="action_bottom">
             <div class="opposing-items">
-              <button class="login_btn btn" type="submit" style="font-size: {{ section.settings.login_btn_font_size }}px; background: {{ section.settings.button_color}};">{{ 'customer.login.title' | t | upcase }}</button>
-              <div>Don't have an account?<a href="{{ routes.account_register_url }}"> {{ 'customer.login.register' | t }}</a></div>
+              <button class="login_btn btn" type="submit" style="font-size: {{ section.settings.login_btn_font_size }}px; background: {{ section.settings.button_color}};" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'customer.login.title' | t | upcase }}</button>
+              <div>Don't have an account?<a href="{{ routes.account_register_url }}" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';"> {{ 'customer.login.register' | t }}</a></div>
             </div>
           </div>
           {% endform %}
@@ -79,7 +82,7 @@
             <input type="email" value="" size="30" name="email" id="recover-email" class="large" />
           </div>
           <div class="action_bottom">
-              <button class="recover_password_btn btn" type="submit" style="font-size: {{ section.settings.password_recovery_btn_font_size }}px; background: {{ section.settings.recover_button_color}};">{{ 'customer.recover_password.submit' | t | upcase }}</button>
+              <button class="recover_password_btn btn" type="submit" style="font-size: {{ section.settings.password_recovery_btn_font_size }}px; background: {{ section.settings.recover_button_color}};" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'customer.recover_password.submit' | t | upcase }}</button>
               {% unless reset_success %}
                 <!-- <p>{{ 'customer.recover_password.subtext' | t }}</p> -->
                 <p class="note">An email with a link to reset your password will be sent to you.</p>
@@ -104,7 +107,7 @@
           <h3 class="title">{{ 'customer.login.guest_title' | t }}</h3>
         </div>
         {% form 'guest_login' %}
-          <button class="btn" type="submit">{{ 'customer.login.guest_continue' | t }}</button>
+          <button class="btn" type="submit" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'customer.login.guest_continue' | t }}</button>
         {% endform %}
       </div>
       {% endif %}
@@ -122,6 +125,9 @@
     document.getElementById('recover-password').style.display = 'none';
     document.getElementById('customer').style.display = 'block';
   }
+  document.addEventListener("DOMContentLoaded", function(event) {
+    $('#coverScreen').hide();
+  })
 
   {% if reset_success %}showRecoverPasswordForm();{% endif %}
   if (window.location.hash == '#recover') { showRecoverPasswordForm() }

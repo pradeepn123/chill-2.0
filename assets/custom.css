@@ -1,3 +1,21 @@
+#coverScreen{
+  width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    overflow: hidden !important;
+    z-index: 999999;
+}
+#coverScreen p{
+  text-align: center;
+  font-size: 40px;
+  top: 50%;
+  position: relative;
+}
 .product-list .product-block .block-inner {
   background-color: #FFFFFF;
 }
@@ -3392,12 +3410,12 @@ body {
 .container.cf .account-section .account_banner .account_banner_text {
   display: flex;
   justify-content: space-between;
-  padding: 60px 4.625rem 117px 4.625rem;
+  padding: 60px 4.625rem 7.313rem 4.625rem;
   align-items: center;
 }
 @media (max-width: 1440px) {
   .container.cf .account-section .account_banner .account_banner_text {
-    padding: 60px 40px 117px 40px;
+    padding: 60px 40px 7.313rem 40px;
   }
 }
 .container.cf .account-section .account_banner .account_banner_text .customer_name {
@@ -3420,7 +3438,7 @@ body {
 }
 @media (max-width: 1024px) {
   .container.cf .account-section .account_banner {
-    height: 225px;
+    height: 14.063rem;
   }
   .container.cf .account-section .account_banner .account_banner_text {
     padding: 60px 40px;
@@ -3428,7 +3446,7 @@ body {
 }
 @media (max-width: 768px) {
   .container.cf .account-section .account_banner {
-    height: 125px;
+    height: 7.813rem;
   }
   .container.cf .account-section .account_banner .account_banner_text {
     padding: 30px 20px 60px 20px !important;
@@ -3447,7 +3465,7 @@ body {
 .container.cf .account-section .account_content .account_sidebar {
   margin: -90px 16px 0 4.625rem;
   flex-basis: 40%;
-  max-width: 371px;
+  max-width: 23.188rem;
 }
 @media (max-width: 400px) {
   .container.cf .account-section .account_content .account_sidebar {
@@ -3521,7 +3539,7 @@ body {
 }
 .container.cf .account-section .account_content .account_sidebar .sidebar_content .sidebar_help {
   list-style: none;
-  padding: 225px 30px 20px;
+  padding: 14.063rem 30px 20px;
   font-size: 16px;
   text-transform: uppercase;
   text-align: left;
@@ -3538,7 +3556,7 @@ body {
 }
 @media (max-width: 768px) {
   .container.cf .account-section .account_content .account_sidebar .sidebar_content .sidebar_help {
-    padding: 225px 6px 20px;
+    padding: 14.063rem 6px 20px;
     text-align: center;
   }
   .container.cf .account-section .account_content .account_sidebar .sidebar_content .sidebar_help svg {
@@ -3547,7 +3565,7 @@ body {
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   .container.cf .account-section .account_content .account_sidebar .sidebar_content .sidebar_help {
-    padding: 225px 27px 20px;
+    padding: 14.063rem 27px 20px;
   }
 }
 .container.cf .account-section .account_content .account_order_details, .container.cf .account-section .account_content .account_addresses, .container.cf .account-section .account_content .order_details, .container.cf .account-section .account_content .account_details {
@@ -3661,20 +3679,20 @@ body {
   padding: 20px 15px;
 }
 .container.cf .account-section .account_content .account_order_details table .order_description, .container.cf .account-section .account_content .account_addresses table .order_description, .container.cf .account-section .account_content .order_details table .order_description, .container.cf .account-section .account_content .account_details table .order_description {
-  max-width: 224px;
+  max-width: 14rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 @media (max-width: 1440px) {
   .container.cf .account-section .account_content .account_order_details table .order_description, .container.cf .account-section .account_content .account_addresses table .order_description, .container.cf .account-section .account_content .order_details table .order_description, .container.cf .account-section .account_content .account_details table .order_description {
-    max-width: 165px;
+    max-width: 10.313rem;
   }
 }
 @media (max-width: 1024px) {
   .container.cf .account-section .account_content .account_order_details table .order_description, .container.cf .account-section .account_content .account_addresses table .order_description, .container.cf .account-section .account_content .order_details table .order_description, .container.cf .account-section .account_content .account_details table .order_description {
-    max-width: 180px;
-    max-width: 120px;
+    max-width: 11.25rem;
+    max-width: 7.5rem;
   }
 }
 .container.cf .account-section .account_content .account_order_details table .order_details_btn button, .container.cf .account-section .account_content .account_addresses table .order_details_btn button, .container.cf .account-section .account_content .order_details table .order_details_btn button, .container.cf .account-section .account_content .account_details table .order_details_btn button {
@@ -3821,7 +3839,7 @@ body {
 }
 @media (max-width: 768px) {
   .container.cf .account-section .account_content .account_order_details .order_details_table .order_details_table_wrapper, .container.cf .account-section .account_content .account_addresses .order_details_table .order_details_table_wrapper, .container.cf .account-section .account_content .order_details .order_details_table .order_details_table_wrapper, .container.cf .account-section .account_content .account_details .order_details_table .order_details_table_wrapper {
-    min-width: 627px;
+    min-width: 39.188rem;
   }
 }
 @media (min-width: 767px) and (max-width: 1023px) {
@@ -3929,7 +3947,7 @@ body {
   margin-top: 30px;
 }
 .container.cf .account-section .account_content .account_order_details .account_details_form .button_div .account_update, .container.cf .account-section .account_content .account_order_details .account_details_form .button_div .acc_reset_password, .container.cf .account-section .account_content .account_addresses .account_details_form .button_div .account_update, .container.cf .account-section .account_content .account_addresses .account_details_form .button_div .acc_reset_password, .container.cf .account-section .account_content .order_details .account_details_form .button_div .account_update, .container.cf .account-section .account_content .order_details .account_details_form .button_div .acc_reset_password, .container.cf .account-section .account_content .account_details .account_details_form .button_div .account_update, .container.cf .account-section .account_content .account_details .account_details_form .button_div .acc_reset_password {
-  width: 260px;
+  width: 16.25rem;
   padding: 18px;
   border-radius: 50px;
   text-transform: uppercase;
@@ -4069,7 +4087,7 @@ body {
   }
 }
 .form_div .edit_address .edit_form_wrapper .action_bottom .update_btn, .form_div .edit_address .edit_form_wrapper .action_bottom .delete_btn, .form_div .edit_address .edit_form_wrapper .action_bottom .add_btn, .form_div .edit_address .new_form_wrapper .action_bottom .update_btn, .form_div .edit_address .new_form_wrapper .action_bottom .delete_btn, .form_div .edit_address .new_form_wrapper .action_bottom .add_btn, .form_div .new_address .edit_form_wrapper .action_bottom .update_btn, .form_div .new_address .edit_form_wrapper .action_bottom .delete_btn, .form_div .new_address .edit_form_wrapper .action_bottom .add_btn, .form_div .new_address .new_form_wrapper .action_bottom .update_btn, .form_div .new_address .new_form_wrapper .action_bottom .delete_btn, .form_div .new_address .new_form_wrapper .action_bottom .add_btn, .add_new_form_div .edit_address .edit_form_wrapper .action_bottom .update_btn, .add_new_form_div .edit_address .edit_form_wrapper .action_bottom .delete_btn, .add_new_form_div .edit_address .edit_form_wrapper .action_bottom .add_btn, .add_new_form_div .edit_address .new_form_wrapper .action_bottom .update_btn, .add_new_form_div .edit_address .new_form_wrapper .action_bottom .delete_btn, .add_new_form_div .edit_address .new_form_wrapper .action_bottom .add_btn, .add_new_form_div .new_address .edit_form_wrapper .action_bottom .update_btn, .add_new_form_div .new_address .edit_form_wrapper .action_bottom .delete_btn, .add_new_form_div .new_address .edit_form_wrapper .action_bottom .add_btn, .add_new_form_div .new_address .new_form_wrapper .action_bottom .update_btn, .add_new_form_div .new_address .new_form_wrapper .action_bottom .delete_btn, .add_new_form_div .new_address .new_form_wrapper .action_bottom .add_btn {
-  width: 255px;
+  width: 15.938rem;
   border-radius: 50px;
   padding: 18px;
   font-size: 18px;
@@ -4103,7 +4121,7 @@ body {
 }
 .overlay_delete .reset_password_popup_block, .overlay_delete .delete_popup_block {
   background: #fff;
-  width: 458px;
+  width: 28.625rem;
   margin: auto;
   margin-top: 10%;
   padding: 30px 40px;
@@ -4169,4 +4187,154 @@ body {
   font-weight: 800;
   margin-top: 16px;
   text-transform: uppercase;
+}
+
+.age_verification {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.age_verification .section_content .video_container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.age_verification .section_content .video_container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.age_verification .section_content .video_container .page_content {
+  position: absolute;
+  top: 50%;
+  height: 80vh;
+  width: 100%;
+  transform: translate(0%, -50%);
+}
+.age_verification .section_content .video_container .page_content .outer_ring_svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  animation: rotation 16s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.age_verification .section_content .video_container .verification_block {
+  width: 70vh;
+  height: 70vh;
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  border-radius: 50%;
+  backdrop-filter: blur(30px);
+  transform: translate(-50%, 0%);
+}
+.age_verification .section_content .video_container .verification_block .verification_block_content {
+  text-align: center;
+  margin: 33% 0;
+  padding: 0 15%;
+}
+.age_verification .section_content .video_container .verification_block .verification_block_content .block_icon {
+  position: absolute;
+  top: 18%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.age_verification .section_content .video_container .verification_block .verification_block_content .block_icon svg {
+  width: 200px;
+  height: 50px;
+}
+.age_verification .section_content .video_container .verification_block .verification_block_content .verification_block_header, .age_verification .section_content .video_container .verification_block .verification_block_content .verification_block_description {
+  color: #fff;
+}
+.age_verification .section_content .video_container .verification_block .verification_block_content .verification_block_header {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.age_verification .section_content .video_container .verification_block .verification_block_content .verification_block_description {
+  font-size: 18px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .age_verification .section_content .video_container .verification_block .verification_block_content .verification_block_description {
+    font-size: 16px;
+  }
+}
+.age_verification .section_content .video_container .verification_block .verification_block_content .verification_buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.age_verification .section_content .video_container .verification_block .verification_block_content .verification_buttons .age_verification_yes {
+  border-radius: 30px;
+  border: none;
+  width: 218px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: 800;
+  margin: auto;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.age_verification .section_content .video_container .verification_block .verification_block_content .verification_buttons .age_verification_no {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .page_content {
+    height: 43vh !important;
+    top: 18% !important;
+  }
+  .page_content .outer_ring_svg {
+    height: 43vh;
+    top: 18%;
+  }
+  .page_content .verification_block {
+    width: 38vh !important;
+    height: 38vh !important;
+    top: 24% !important;
+  }
+  .page_content .verification_block .verification_block_content {
+    margin: 120% 0 !important;
+    padding: 0 !important;
+  }
+  .page_content .verification_block .verification_block_content .block_icon {
+    top: 50% !important;
+    transform: translate(0, -50%);
+  }
+  .page_content .verification_block .verification_block_content .block_icon svg {
+    width: 160px !important;
+    height: 50px;
+    top: 50%;
+  }
+  .page_content .verification_block .verification_block_content .verification_block_header {
+    font-size: 16px !important;
+  }
+  .page_content .verification_block .verification_block_content .verification_block_description {
+    font-size: 13px !important;
+  }
+  .page_content .verification_block .verification_block_content .verification_buttons .age_verification_yes {
+    height: 50px !important;
+    width: 80% !important;
+    font-size: 14px !important;
+  }
+  .page_content .verification_block .verification_block_content .verification_buttons .age_verification_no {
+    font-size: 14px !important;
+  }
 }

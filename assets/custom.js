@@ -46,8 +46,29 @@ function hideVideo(index, e) {
   player.api('pause');
 }
 
+function show_age_verification(){
+  var is_modal_show = sessionStorage.getItem('alreadyShow');
+  if(is_modal_show != 'already shown'){
+    $('#age_verification_popup').show();
+    sessionStorage.setItem('alreadyShow', 'already shown');
+  }
+  else{
+    $('#age_verification_popup').hide();
+
+  }
+}
+$('#age_verified').click(() => {
+  $('.age_verification').css('z-index', '-1');
+  $('.age_verification_section').hide();
+})
 
 $(document).ready(function () {
+
+  $('#age_verified').click(() => {
+    $('#age_verification_popup').hide();
+  })
+  show_age_verification();
+  
   let items = document.querySelectorAll('.menu-mega-nav li');
   items.forEach( item => item.addEventListener('mouseenter', function() {
     handleHover(this, items)

@@ -1,19 +1,22 @@
+<div id="coverScreen">
+  <p>Loading...</p>
+</div>
 <div class="account-section" data-section-type="account">
   <div class="account_banner">
     <div class="account_banner_text">
       <h5 class="customer_name">Hello, {{ customer.first_name | capitalize }}</h5>
-      <a href="{{ routes.account_logout_url }}" class="logout_btn">{{ 'layout.customer.log_out' | t }}</a>
+      <a href="{{ routes.account_logout_url }}" class="logout_btn" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'layout.customer.log_out' | t }}</a>
     </div>
   </div>
   <div class="account_content">
     <div class="account_sidebar">
       <ul class="sidebar_content">
-        <a href="{{ routes.account_url }}">
+        <a href="{{ routes.account_url }}" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">
           <li class="sidebar_element order_history_nav_desktop active">
             {% render 'icon', icon: 'order-history', size: 'small' %} Order History
           </li>
         </a>
-        <a href="#">
+        <a href="#" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">
           <li class="sidebar_element order_history_nav_mobile" style="display: none;">
             {% render 'icon', icon: 'order-history', size: 'small' %} Order History
           </li>
@@ -23,18 +26,18 @@
             {% render 'icon', icon: 'subscriptions', size: 'medium' %}<a href="#"> Subscriptions</a>
           </li>
         </a>
-        <a href="#account_details_section">
+        <a href="#account_details_section" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">
           <li class="sidebar_element account_details_nav">
             {% render 'icon', icon: 'account-details' %}<a href="#account_details_section"> Account details</a>
           </li>
         </a>
-        <a href="{{ routes.account_addresses_url }}">
+        <a href="{{ routes.account_addresses_url }}" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">
           <li class="sidebar_element addresses_nav">
             {% render 'icon', icon: 'addresses' %} Addresses
           </li>
         </a>
         <li class="sidebar_help">
-          {% render 'icon', icon: 'help' %}Need help? <a href="/pages/new-contact-us">Contact Us</a>
+          {% render 'icon', icon: 'help' %}Need help? <a href="/pages/new-contact-us" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">Contact Us</a>
         </li>
       </ul>  
     </div>
@@ -79,7 +82,7 @@
                     {%- endif -%}
                   </span>
                 </td>
-                <td class="order_details_btn"><button>{{ 'View Details' | upcase | link_to: order.customer_url }}</button></td>
+                <td class="order_details_btn"><button onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'View Details' | upcase | link_to: order.customer_url }}</button></td>
               </tr>
               {% endfor %}
             </tbody>
@@ -333,6 +336,7 @@
   
 
   document.addEventListener("DOMContentLoaded", function(event) {
+    $('#coverScreen').hide();
     const urlParams = new URLSearchParams(window.location.hash);
     if (urlParams != ''){
       account_details_tab.classList.add('active');
