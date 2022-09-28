@@ -133,6 +133,10 @@
                 .input-row{
                     .option-selectors{
                         .option-selector{
+                            margin-bottom: 10px;
+                            @media(min-width:1200px){
+                                margin-bottom: 20px;
+                            }
                             label{
                                 font-size: 16px;
                                 font-weight: 400;
@@ -211,10 +215,16 @@
                                 
                             }
                             .rc_block__type__onetime{
-                                margin-right: 5px;
+                                margin-bottom: 10px;
+                                @media(min-width:1200px){
+                                    margin-right: 5px;
+                                    margin-bottom: 0px;
+                                }
                             }
                             .rc_block__type__autodeliver{
-                                margin-left: 5px;
+                                @media(min-width:1200px){
+                                    margin-left: 5px;
+                                }
                             }
                             .rc_block__type__autodeliver.rc_block__type--active{
                                 #rc_autodeliver_options{
@@ -235,6 +245,10 @@
                 .quantity-submit-row{
                     .quantity-submit-row__submit{
                         margin-top: 18px;
+                        margin-bottom: 40px;
+                        @media(min-width:768px){
+                            margin-bottom: 0px;
+                        }
                         .button{
                             border-radius: 4rem;
                             font-size: 20px;
@@ -275,6 +289,7 @@
             margin-bottom: 0px;
             p{
                 margin-bottom: 20px;
+                text-transform: capitalize;
             }
             strong{
                 font-weight: 900;
@@ -293,7 +308,13 @@
             }
         }
     }
-    .collection-listing{         
+    .collection-listing{
+        .product-list{
+            margin-left: -18px;
+            .product-block{
+                padding-left: 18px;
+            }
+        }
         .product-list--per-row-4{
             .product-block{
                 @media(min-width:768px) and (max-width:1024px){
@@ -372,11 +393,18 @@
     }
     .product_ingredients_sec_wrapper{
         .heading_text{
+            padding: 0 16px;
+            @media(min-width:1200px){
+                padding: 0;
+            }
             h3{
-                font-size: 36px;
+                font-size: 28px;
                 font-family: 'Open Sans', sans-serif;
                 text-transform: inherit;
                 margin-bottom: 22px;
+                @media(min-width:1200px){
+                    font-size: 36px;
+                }
                 p{
                     font-size: 36px;
                     margin-bottom: 0;
@@ -391,12 +419,13 @@
                 }
             }
             p{
-                font-size: 18px;
+                font-size: 16px;
                 font-family: 'Open Sans', sans-serif;
                 line-height: 1.4;
                 color: #000000;
                 @media(min-width:1200px){
                     width: 60%;
+                    font-size: 18px;
                     margin: 0 auto 50px;
                 }
             }
@@ -414,22 +443,31 @@
                 padding: 10px 10px;
                 text-align: center;
                 border: 1px solid #000000;
-                font-size: 18px;
-                font-weight: 500;
+                border-left: 0;                
+                font-size: 16px;
+                font-weight: bold;
                 color: #000000;
                 font-family: "Open Sans", sans-serif;
                 cursor: pointer;
                 width: 65%;
                 flex: 1 0 65%;
+                @media(min-width:768px){
+                    width: 40%;
+                    flex: 1 0 40%;
+                }
                 @media(min-width:1200px){
                     width: 33.33%;
                     flex: 1 0 33.33%;
-                    padding: 10px 80px;
+                    padding: 10px 20px;
                     font-size: 24px;
                     font-weight: bold;
                 }
+                @media(min-width:1400px){
+                    padding: 10px 50px;
+                }
                 &.active {
                     border: 1px solid #000000;
+                    border-left: 0;
                     background: #FFAC9A;
                     color: #000000;            
                 }
@@ -438,6 +476,10 @@
         .content-section{
             padding-top: 35px;
             @media(min-width:1200px){
+                width: 95%;
+                margin: 0 auto;
+            }
+            @media(min-width:1440px){
                 width: 80%;
                 margin: 0 auto;
             }
@@ -467,10 +509,17 @@
                     flex: 0 0 100%;
                     padding: 0 18px;
                     text-align: center;
-                    margin-bottom: 35px;
+                    margin-bottom: 60px;
+                    @media(min-width:768px){
+                        margin-bottom: 35px;
+                    }
                     @media(min-width:1200px){
+                        padding: 0 50px;
                         flex: 0 0 33.33%;
                         margin-bottom: 0px;
+                    }
+                    @media(min-width:1440px){
+                        padding: 0 18px;
                     }
                     img{
                         width: 280px;
@@ -489,6 +538,93 @@
                         margin-bottom: 0;
                         line-height: 28px;
                         color: #000000;
+                    }
+                }
+            }
+        }
+    }
+}
+.section-apps{
+    .shopify-app-block{
+        .okeReviews{
+            .oke-w-header{
+                .oke-w-header-content{
+                    .oke-w-header-content-block{
+                        .oke-w-header-content-module{
+                            .oke-w-ratingAverageModule{
+                                .oke-w-ratingAverageModule-rating{
+                                    .oke-w-ratingAverageModule-rating-stars{
+                                        .oke-stars{
+                                            svg{
+                                                width: 90px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .oke-w-breakdownModule{
+                                .oke-w-breakdownModule-distribution{
+                                    .oke-stars{
+                                        svg{
+                                            width: 16px;
+                                            use{
+                                                width: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .oke-w-controls{
+                .oke-w-controls-nav{
+                    .oke-poweredBy{
+                        display: none;
+                    }
+                }
+            }
+            .oke-w-main{
+                .oke-w-panel{
+                    .oke-w-reviewsTab{
+                        .oke-w-reviews{
+                            .oke-w-reviews-head{
+                                .oke-button{
+                                    .oke-button-text{
+                                        text-transform: capitalize;
+                                        letter-spacing: 1px;
+                                    }
+                                }
+                                .oke-w-reviews-writeReview{
+                                    .oke-button{
+                                        text-transform: capitalize;
+                                        letter-spacing: 1px;
+                                    }
+                                }
+                            }
+                            .oke-w-reviews-main{
+                                .oke-w-reviews-list{
+                                    .oke-w-reviews-list-item{
+                                        .oke-w-review-main{
+                                            .oke-w-review-content{
+                                                .oke-reviewContent{
+                                                    .oke-reviewContent-top{
+                                                        .oke-reviewContent-stars{
+                                                            .oke-stars{
+                                                                svg{
+                                                                    width: 90px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
