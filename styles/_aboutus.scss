@@ -7,7 +7,18 @@
         .slider_images {
             max-width: 100%;            
             height: 25%;
-            animation: scroll_about 30s linear infinite;
+            -webkit-animation: marquee 3s linear infinite ;
+            -moz-animation: marquee 3s linear infinite ;
+            -o-animation: marquee 3s linear infinite ;
+            -ms-animation: marquee 3s linear infinite ;
+            animation: marquee 3s linear infinite ;
+            &:hover {
+                -webkit-animation-play-state: paused;
+                -moz-animation-play-state: paused;
+                -o-animation-play-state: paused;
+                -ms-animation-play-state: paused;
+                animation-play-state: paused;
+            }
             @media(min-width:1200px){
                 max-width: 25%;
             }
@@ -60,12 +71,12 @@
     }
 }
 
-@keyframes scroll_about {
+@keyframes marquee {
     0% {
-        transform: translate(0);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-200px * 4);
+        transform: translate(-50%);
     }
 }
 

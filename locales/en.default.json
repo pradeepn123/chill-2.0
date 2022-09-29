@@ -213,9 +213,9 @@
     },
     "signup": {
       "post_success": "Thank you for signing up!",
-      "placeholder": "Enter email",
+      "placeholder": "Email address",
       "input_label": "Email",
-      "submit": "Sign up",
+      "submit": "Submit",
       "label": "Sign up for our newsletter"
     },
     "search": {
@@ -244,7 +244,7 @@
   "collections": {
     "general": {
       "see_all_subcollections": "See all...",
-      "view_all": "View all",
+      "view_all": "Shop all",
       "product_count": {
         "one": "{{ count }} product",
         "other": "{{ count }} products"

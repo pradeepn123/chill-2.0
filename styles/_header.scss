@@ -140,11 +140,15 @@
             font-size: 26px;
             font-weight: bolder;
             color: #000000;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
             line-height: 1;
-            padding: 12px 16px;
+            padding: 20px;
             text-transform: inherit;
             font-family: 'Open Sans', sans-serif;
+            @media(min-width:1200px){
+                padding: 12px 16px;
+                margin-bottom: 20px;
+            }
         }
         a.coll_shop_link{
             text-transform: uppercase;
@@ -222,12 +226,13 @@
                     text-transform: uppercase;
                     font-size: 16px;
                     font-weight: bold;
-                    padding: 12px 16px;
+                    padding: 20px;
                     display: block;
                     font-family: 'Open Sans', sans-serif;
                     border-top: 1px solid #E6E6F1;
                     @media(min-width:1200px){
                         border-top: 0;
+                        padding: 12px 16px;
                     }
                 }
                 .ruby-grid{

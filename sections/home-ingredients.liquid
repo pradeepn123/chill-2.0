@@ -1,3 +1,15 @@
+{% style %}    
+    {%- for block in section.blocks -%}
+        {% case block.type %}                        
+            {% when 'tabs-content' %}
+            .explore-product-link .btn-explore-product{
+                background: {{ block.settings.button_bg_color }};
+                border: 1px solid {{ block.settings.button_bg_color }};
+                color: {{ block.settings.button_text_color}};
+            }
+        {% endcase %}
+    {%- endfor -%}
+{% endstyle %}
 <div class="home-ingredients-section fully-spaced-row--medium">
     <div class="container">
         <div class="ingredients-section-wrapper">
@@ -48,6 +60,9 @@
                                         {{ block.settings.text_three}}
                                     </div>
                                 </div>
+                                <a class="explore-product-link" href="{{ block.settings.button_link }}">
+                                    <button class="btn btn-explore-product">{{ block.settings.button_label }}</button>
+                                </a>
                             </div>                            
                         {% endcase %}
                     {% endfor%}           
@@ -168,6 +183,27 @@
                     "type": "richtext",
                     "id": "text_three",
                     "label": "Rich Text Content"
+                },
+                {
+                    "type": "text",
+                    "id": "button_label",
+                    "label": "Button",
+                    "default": "Explore Products"
+                },
+                {
+                    "type": "url",
+                    "id": "button_link",
+                    "label": "Button link"
+                },
+                {
+                    "type": "color",
+                    "id": "button_bg_color",
+                    "label": "Button Background color"
+                },
+                {
+                    "type": "color",
+                    "id": "button_text_color",
+                    "label": "Button Text color"
                 }
             ]
         }

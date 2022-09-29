@@ -22,8 +22,29 @@ body{
 /*section-background-video css here*/
 .section-background-video{
     .video-container{
+        @media(max-width:767px){
+            height: inherit !important;
+        }
+        .video-container__video{
+            @media(max-width:767px){
+                padding: 0 0 100% 0 !important;
+            }
+            video{
+                object-position: right center;
+                @media(min-width:1200px){
+                    object-position: 50% 50%;
+                }
+            }
+        }
         .overlay-text{
+            @media(max-width:767px){
+                position: relative;
+            }
             .overlay-text__inner{
+                @media(max-width:767px){
+                    background: #fff;
+                    color: #000000;
+                }
                 .overlay-text__text{
                     .overlay-text__title{
                         font-weight: 800;
@@ -62,12 +83,21 @@ body{
 /* section-rich-text rich text css here*/
 .section-rich-text{
     .article{
+        .align-center{
+            text-align: left;
+            @media(min-width:1200px){
+                text-align: center;
+            }
+        }
         .majortitle{
             font-family: 'Open Sans', sans-serif;
-            font-size: 52px;
+            font-size: 42px;
             text-transform: inherit;
             margin-bottom: 12px;
             color: #000000;
+            @media(min-width:1200px){
+                font-size: 52px;
+            }
             p{
                 margin-bottom: 0;
             }
@@ -75,9 +105,13 @@ body{
         .rte{
             p{
                 font-family: 'Open Sans', sans-serif;
-                font-size: 24px;
-                margin-bottom: 30px;
+                font-size: 16px;
+                margin-bottom: 20px;
                 color: #000000;
+                @media(min-width:1200px){
+                    font-size: 24px;
+                    margin-bottom: 30px;
+                }
             }
         }
         .button-row__button{
@@ -85,7 +119,7 @@ body{
             font-size: 18px;
             text-transform: uppercase;
             color: #000000;
-            font-weight: 600;
+            font-weight: bold;
             text-underline-offset:6px;
             text-decoration-color: #000000;
         }
@@ -97,51 +131,95 @@ body{
     .section-signup{
         position: relative;
         .hometitle{
-            font-size: 52px;
+            font-size: 36px;
             font-weight: 800;
             color: #E9E9F3;
             font-family: 'Open Sans', sans-serif;
             margin-bottom: 10px;
             text-transform: inherit;
+            margin-top: 30px;
+            @media(min-width:1200px){
+                font-size: 52px;
+                margin-top: 0px;
+            }
         }
         .rte{
-            font-size: 24px;            
+            font-size: 16px;
             color: #E9E9F3;
             font-family: 'Open Sans', sans-serif;
-            margin-bottom: 30px;
+            margin-bottom: 16px;
+            @media(min-width:1200px){
+                font-size: 24px;
+                margin-bottom: 40px;
+            }
             a{
                 color: #E9E9F3;
                 text-decoration: none;
             }
         }
         .signup-form{
+            #home_newsletter_signup{
+                width:  calc(100% - 8%);
+                margin: 0 auto;
+                @media(min-width:768px){
+                    width: calc(100% - 40%);
+                }
+                @media(min-width:1200px){
+                    width: 32%;                    
+                }
+            }
             .signup-form__inline-container{
                 flex-direction: column;
+                width: 100%;
                 @media(min-width:1200px){
                     
                 }
                 .signup-form__email{
                     margin-inline-end: 0;
                     border-radius: 2em;
-                    margin-bottom: 30px;                    
-                    width: calc(100% - 8%);
+                    margin-bottom: 15px;
+                    width: 100%;
                     padding: 1em 15px;
                     text-align: center;
                     font-size: 16px;
                     font-family: 'Open Sans', sans-serif;
-                    @media(min-width:1200px){
-                        width: 380px;
+                    @media(min-width:1200px){                        
+                        margin-bottom: 20px;
+                    }
+                    &::placeholder { 
+                        color: #000000;
                     }                    
+                    &:-ms-input-placeholder { 
+                        color: #000000;
+                    }
+                    
+                    &::-ms-input-placeholder { 
+                        color: #000000;
+                    }
                 }
                 .signup-form__button{
                     border-radius: 2em;                    
                     font-size: 16px;
                     padding: 1em 15px;
                     font-family: 'Open Sans', sans-serif;
-                    width: calc(100% - 8%);
-                    @media(min-width:1200px){
-                        width: 380px;
+                    width: 100%;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    @media(min-width:1200px){                        
+                        font-size: 20px;
                     }
+                }
+            }
+            .term_condition_dialog_box{
+                background: #fff;
+                opacity: 0.8;
+                padding: 30px;
+                margin: 20px auto 0;
+                color: #000000;
+                font-size: 14px;
+                font-family: 'Open Sans', sans-serif;
+                a{
+                    text-decoration: underline;
                 }
             }
         }
@@ -155,8 +233,8 @@ body{
                 border-radius: 50%;
                 border: 10px solid #fff;
                 svg{
-                    width: 90px;
-                    height: 90px;
+                    width: 60px;
+                    height: 60px;
                     @media(min-width:1200px){
                         width: 100px;
                         height: 100px;
@@ -180,8 +258,8 @@ body{
     .video-container{
         .video-container__play{
             svg{
-                width: 50px;
-                height: 50px;
+                width: 90px;
+                height: 90px;
                 @media(min-width:1200px){
                     width: 90px;
                     height: 90px;
@@ -193,8 +271,8 @@ body{
                 left: 50%;
                 transform: translate(-50%, -50%);                
                 svg {
-                    width: 70px;
-                    height: 70px;
+                    width: 120px;
+                    height: 120px;
                     animation: rotation 16s infinite linear;
                     @media(min-width:1200px){
                         width: 120px;
@@ -289,12 +367,15 @@ body{
     .stress-effect-wrapper{
         .heading-main{
             font-family: 'Open Sans', sans-serif;
-            font-size: 52px;
+            font-size: 42px;
+            margin-bottom: 42px;
+            @media(min-width:1200px){
+                font-size: 52px;
+            }
             p{
                 margin: 0;
                 line-height: 1.1;
             }
-            margin-bottom: 42px;
         }
         .stress-effect-block-list{
             .stress-list-item{
@@ -318,7 +399,7 @@ body{
                         .image_wrapper{
                             flex: 0 0 100%;
                             position: relative;
-                            
+                            margin-bottom: 44px;
                             @media(max-width:767px){
                                 text-align: center;
                             }
@@ -327,6 +408,7 @@ body{
                             }
                             @media(min-width:1200px){
                                 flex: 0 0 50%;
+                                margin-bottom: 4px;
                             }
                             .normal_img{
                                 text-align: center;
@@ -356,12 +438,17 @@ body{
                         }
                         .text_wrapper{
                             flex: 0 0 100%;
+                            margin-bottom: 44px;
                             @media(min-width:1200px){
                                 flex: 0 0 50%;
+                                margin-bottom: 4px;
                             }
                             .rte{
                                 font-family: 'Open Sans', sans-serif;
-                                font-size: 40px;
+                                font-size: 36px;
+                                @media(min-width:1200px){
+                                    font-size: 40px;
+                                }
                                 &.align-right{                                    
                                     @media(max-width:767px){
                                         text-align: center;
@@ -695,21 +782,28 @@ body{
         .ingredients-section-wrapper{
             .heading_text{
                 h3{
-                    font-size: 52px;
+                    font-size: 36px;
                     font-family: 'Open Sans', sans-serif;
                     text-transform: inherit;
                     margin-bottom: 22px;
-                    p{
+                    @media(min-width:1200px){
                         font-size: 52px;
+                    }
+                    p{
+                        font-size: 36px;
                         margin-bottom: 0;
+                        @media(min-width:1200px){
+                            font-size: 52px;
+                        }
                     }
                 }
                 p{
-                    font-size: 26px;
+                    font-size: 16px;
                     font-family: 'Open Sans', sans-serif;
                     line-height: 1.4;
                     color: #000000;
                     @media(min-width:1200px){
+                        font-size: 26px;
                         width: 80%;
                         margin: 0 auto 50px;
                     }
@@ -720,20 +814,32 @@ body{
                 margin: 0 0 35px 0  !important;
                 padding: 0;
                 text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                overflow: scroll;
+                @media(min-width:768px){
+                    justify-content: center;
+                }
                 li {
                     list-style: none;
                     display: inline-block;                 
                     margin-right: -4px;
-                    margin: 0 16px;
-                    padding: 10px 80px;
+                    margin: 0 10px;
+                    padding: 10px 40px;
                     text-align: center;
                     border: 2px solid #E6E6F1;
                     border-radius: 4em;
-                    font-size: 20px;
+                    font-size: 16px;
                     font-weight: 500;
                     color: #000000;
                     font-family: 'Open Sans', sans-serif;
                     cursor: pointer;
+                    @media(min-width:1200px){
+                        padding: 10px 80px;
+                        font-size: 20px;
+                        margin: 0 16px;
+                    }
                     &.active {
                         border: 2px solid #FFAC9A;
                         background: #FFAC9A;
@@ -754,6 +860,21 @@ body{
                         display: block;
                         opacity: 1;
                     }
+                    .explore-product-link{
+                        display: flex;
+                        justify-content: center;
+                        .btn-explore-product{
+                            margin-top: 0px;
+                            font-size: 18px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            border-radius: 30px;
+                            cursor: pointer;
+                            @media(min-width:1200px){
+                                margin-top: 70px;
+                            }
+                        }
+                    }
                 }
                 .tab-content-list {
                     display: flex;
@@ -767,7 +888,7 @@ body{
                         flex: 0 0 100%;
                         padding: 0 18px;
                         text-align: center;
-                        margin-bottom: 35px;
+                        margin-bottom: 60px;
                         @media(min-width:1200px){
                             flex: 0 0 33.33%;
                             margin-bottom: 0px;
@@ -779,16 +900,22 @@ body{
                         }
                         h3{
                             font-family: 'Open Sans', sans-serif;
-                            font-size: 28px;
+                            font-size: 18px;
                             font-weight: 800;
                             margin-bottom: 24px;
+                            @media(min-width:1200px){
+                                font-size: 28px;
+                            }
                         }
                         p{
                             font-size: 16px;
                             font-family: 'Open Sans', sans-serif;
                             margin-bottom: 0;
-                            line-height: 28px;
+                            line-height: 26px;
                             color: #000000;
+                            @media(min-width:1200px){
+                                line-height: 28px;
+                            }
                         }
                     }
                 }
@@ -939,6 +1066,9 @@ body{
                             font-family: 'Open Sans', sans-serif;
                             font-weight: bold;
                             line-height: 1.4;
+                            @media(max-width:767px){
+                                font-size: 16px;
+                            }
                         }
                     }
                 }
@@ -1016,8 +1146,10 @@ body{
             font-size: 36px;
             font-family: 'Open Sans', sans-serif;
             text-transform: inherit;
+            text-align: left;
             @media(min-width:1200px){
                 font-size: 52px;
+                text-align: center;
             }
             p{
                 margin-bottom: 0;
