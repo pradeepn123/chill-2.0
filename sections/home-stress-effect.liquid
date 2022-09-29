@@ -29,6 +29,11 @@
                                 {% when 'image' %}
                                     {% assign mod = forloop.index | modulo: 2 %}                                    
                                     <div class="column--half pos-rel {% if mod == 0 %}even{%else%}odd{%endif %}">
+                                        <div class="text_wrapper mobile-only">
+                                            <div class="rte align-{{ block.settings.text_alignment }}">
+                                                {{ block.settings.text }}
+                                            </div>
+                                        </div>
                                         <div class="image_wrapper">
                                             <div class="normal_img">
                                                 {% if block.settings.icon_image != blank%}
@@ -43,7 +48,7 @@
                                         </div>
                                         <div class="text_wrapper">
                                             <div class="rte align-{{ block.settings.text_alignment }}">
-                                                {{ block.settings.text }}
+                                                <span class="desktop-only">{{ block.settings.text }}</span>
                                                 {{ block.settings.text_ordered_list }}
                                             </div>                                            
                                         </div>

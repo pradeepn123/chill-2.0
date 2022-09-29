@@ -56,6 +56,9 @@
               {{- 'layout.signup.submit' | t -}}
             </button>
           </div>
+          <div class="term_condition_dialog_box">
+            {{ section.settings.terms_cond }}
+          </div>
         {% endif %}
       {% endform %}
     </div>
@@ -83,6 +86,12 @@
         "id": "subheading",
         "label": "Subheading",
         "default": "<p>Promotions, new products and sales. Directly to your inbox.</p>"
+      },
+      {
+        "type": "richtext",
+        "id": "terms_cond",
+        "label": "Terms and Condition Text",
+        "default": "<p>By signing up via email, you expressly consent to receive marketing communications from Chill Corp. See privacy policy and terms of service for details.</p>"
       },
       {
         "type": "image_picker",
