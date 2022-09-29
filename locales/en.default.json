@@ -99,7 +99,7 @@
       "agreement_html": "I agree to the <a href=\"{{ terms_url }}\" target=\"_blank\">terms and refund policy<\/a>"
     },
     "general": {
-      "title": "Shopping cart",
+      "title": "Your order",
       "empty": "Your cart is currently empty.",
       "quantity": "Quantity",
       "remove": "Remove",
@@ -110,7 +110,7 @@
       "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
       "update": "Update cart",
       "or": "or",
-      "checkout": "Check out",
+      "checkout": "Checkout",
       "continue": "Continue shopping",
       "backorder": "Product is backordered and will ship as soon as it is back in stock."
     },
@@ -121,7 +121,7 @@
       "total": "Total",
       "decrease": "Decrease",
       "increase": "Increase",
-      "note": "Add a note to your order"
+      "note": "Add a note"
     },
     "shipping_calculator": {
       "button_hide": "Hide shipping calculator",
