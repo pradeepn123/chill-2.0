@@ -1,8 +1,8 @@
-.page-section-spacing{
+.cart_page{
     max-width: 65%;
     margin: auto;
 }
-.page-header{
+.header_wrapper{
     display: flex;
     justify-content: space-between;
         .continue-shopping_desktop{
@@ -10,7 +10,7 @@
             text-decoration: underline;
             padding-top: 3%;
         }
-        @media (max-width: 768px){
+        @media (max-width: 767px){
             display: block;
             .continue-shopping_desktop{
                 display: none;
@@ -18,21 +18,21 @@
         }
 }
 @media (max-width: 1200px){
-    .page-section-spacing{
+    .cart_page{
         max-width: 100%;
         margin-top: 0 !important;
         margin-bottom: 0 !important;
-        .page-header{
+        .header_wrapper{
             padding: 0 !important;
         }
     }
 }
 @media (min-width: 1023px) and (max-width: 1280px){
-    .page-section-spacing{
-        max-width: 75%;
+    .cart_page{
+        max-width: 75% !important;
         margin-top: 0 !important;
         margin-bottom: 0 !important;
-        .page-header{
+        .header_wrapper{
             padding: 0 !important;
         }
     }

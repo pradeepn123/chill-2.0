@@ -1,6 +1,6 @@
 <div class="container fully-spaced-row cart_container" data-section-type="cart-template" data-ajax-update="true">
   {% if section.settings.show_page_title %}
-    <div class="page-header" data-cc-animate>
+    <div class="page-header header_wrapper" data-cc-animate>
       <h1 class="majortitle cart_title">{{ 'cart.general.title' | t }} <span class="cart_item_count">({{ cart.item_count }} items)</span></h1>
       <a class="continue-shopping_desktop" href="{{ collection_url }}">{{ 'cart.general.continue' | t }}</a>
     </div>
@@ -238,7 +238,7 @@
 {% schema %}
   {
     "name": "Cart page",
-    "class": "page-section-spacing",
+    "class": "page-section-spacing cart_page",
     "settings": [
       {
         "type": "checkbox",
