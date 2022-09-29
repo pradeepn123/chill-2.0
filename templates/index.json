@@ -554,16 +554,6 @@
         "bg_image": "shopify:\/\/shop_images\/footer_background_op.jpg",
         "color_bg": "#ffffff"
       }
-    },
-    "1663849022537f38e4": {
-      "type": "age-verification",
-      "settings": {
-        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2b03935476ed4ed3b8d21f58c8e1b472.mp4",
-        "verification_block_header": "Are you over the age of 21?",
-        "verification_block_description": "Please verify that you are 21 years of age or older to enter this site.",
-        "button_text": "YES I’M 21+",
-        "button_color": "#6ec59f"
-      }
     }
   },
   "order": [
@@ -580,7 +570,6 @@
     "16618284517e50f27f",
     "1660761962f1d04537",
     "16607619805b81a490",
-    "16607637867e64e5b3",
-    "1663849022537f38e4"
+    "16607637867e64e5b3"
   ]
 }
