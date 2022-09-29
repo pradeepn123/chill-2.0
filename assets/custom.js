@@ -64,9 +64,12 @@ $('#age_verified').click(() => {
 
 $(document).ready(function () {
 
+<<<<<<< HEAD
   $('#age_verified').click(() => {
     $('#age_verification_popup').hide();
   })
+=======
+>>>>>>> 94023b0 (Age verification page and loaders)
   show_age_verification();
   
   let items = document.querySelectorAll('.menu-mega-nav li');

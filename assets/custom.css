@@ -1,3 +1,21 @@
+#coverScreen{
+  width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    overflow: hidden !important;
+    z-index: 999999;
+}
+#coverScreen p{
+  text-align: center;
+  font-size: 40px;
+  top: 50%;
+  position: relative;
+}
 .product-list .product-block .block-inner {
   background-color: #FFFFFF;
 }
@@ -4416,6 +4434,7 @@ body {
   .page_content .verification_block .verification_block_content .verification_buttons .age_verification_no {
     font-size: 14px !important;
   }
+<<<<<<< HEAD
 }
 .page-section-spacing {
   max-width: 65%;
@@ -4691,4 +4710,6 @@ body {
     text-decoration: underline;
     color: #000;
   }
+=======
+>>>>>>> 94023b0 (Age verification page and loaders)
 }
