@@ -4,9 +4,11 @@
             <div class="tab-heading">
                 <ul class='tabs'>
                     {%- for block in product.metafields.settings.product_ingredients.value['ingredients_tab']  -%}
-                        <li class='{% if forloop.first %}active{% endif %}' data-tab-id='tab{{ forloop.index }}'>
-                            {{ block.tab_title}}
-                        </li>
+                        <a href="#{{block.tab_id}}" class="{% if forloop.first %}active{% endif %}">
+                            <li class='' data-tab-id='tab{{ forloop.index }}'>
+                                {{ block.tab_title}}
+                            </li>
+                        </a>
                     {% endfor%}
                 </ul>
             </div>
