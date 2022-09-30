@@ -31,7 +31,7 @@
                                     max-width:100% !important;
                                     .rimage-wrapper{
                                         @media(min-width:1680px){
-                                            padding-top: 80% !important;
+                                            // padding-top: 80% !important;
                                         }
                                         .rimage__image{
                                             object-fit: cover;
@@ -127,6 +127,12 @@
                         color: #000000;
                         line-height: 1.6;
                         font-family: 'Open Sans', sans-serif;
+                        .product-description-full{
+                            display: none;
+                        }
+                        .readmore, .readless{
+                            font-weight: bold;
+                        }
                     }
                 }
                 

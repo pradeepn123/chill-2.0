@@ -17,8 +17,8 @@ function scrollAbout(){
     //our story value scoll
     const stickyContainer = document.querySelector('.faq-index__sticky-container');
     const currentElement =  document.querySelector('.chill-story-value-block-section');
-    const stickyContainerRect = stickyContainer.getBoundingClientRect(),
-    currentElementRect = currentElement.getBoundingClientRect();
+    const stickyContainerRect = stickyContainer.getBoundingClientRect();
+    const currentElementRect = currentElement.getBoundingClientRect();
     stickyContainer.style.height = currentElementRect.bottom - stickyContainerRect.top + 'px';
   }
 }
@@ -65,6 +65,21 @@ $(document).ready(function () {
   $('.close_card_info').click(function(){
     $(this).closest('.block-inner').find('.block-inner-card-info').removeClass('add_info_sub');
   });
+  
+  $('.readmore').click(function (event) {
+    event.preventDefault();
+    var descriptionFull = document.querySelector('.product-description-full');
+    descriptionFull.style.display = 'block';
+    var descriptionShort = document.querySelector('.product-description-short');
+    descriptionShort.style.display = 'none';
+  });
+  $('.readless').click(function (event) {
+    event.preventDefault();
+    var descriptionFull = document.querySelector('.product-description-full');
+    descriptionFull.style.display = 'none';
+    var descriptionShort = document.querySelector('.product-description-short');
+    descriptionShort.style.display = 'block';
+  });  
   
   //sub collection image
   $('.subcollection_slider').slick({
@@ -152,6 +167,7 @@ $(document).ready(function () {
     ]
   });
   updateContainer();
+  scrollAbout();
   $(window).resize(function() {
       updateContainer();
       scrollAbout();
@@ -167,8 +183,7 @@ $(document).ready(function () {
           var ids =  document.querySelector('#player-'+i);
           ids.parentElement.parentElement.querySelector('.video-length').innerHTML  = duration.toFixed(0)+' sec';
       });
-  }
-  scrollAbout();
+  }  
   
   $('.add_to_cart_btn').click(function(){    
     addItemToCart( $(this).attr("data-product-id") , 1)

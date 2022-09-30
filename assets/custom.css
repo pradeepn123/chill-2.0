@@ -1917,11 +1917,6 @@ body {
 .section-main-product .product-detail .gallery .gallery__inner .main-image .product-slideshow .product-media-wrapper .product-media .rimage-outer-wrapper {
   max-width: 100% !important;
 }
-@media (min-width: 1680px) {
-  .section-main-product .product-detail .gallery .gallery__inner .main-image .product-slideshow .product-media-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper {
-    padding-top: 80% !important;
-  }
-}
 .section-main-product .product-detail .gallery .gallery__inner .main-image .product-slideshow .product-media-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper .rimage__image {
   object-fit: cover;
 }
@@ -2001,6 +1996,12 @@ body {
   color: #000000;
   line-height: 1.6;
   font-family: "Open Sans", sans-serif;
+}
+.section-main-product .product-detail .detail .product-form .not-in-quickbuy .product-description .product-description-full {
+  display: none;
+}
+.section-main-product .product-detail .detail .product-form .not-in-quickbuy .product-description .readmore, .section-main-product .product-detail .detail .product-form .not-in-quickbuy .product-description .readless {
+  font-weight: bold;
 }
 .section-main-product .product-detail .detail .product-form .input-row .option-selectors .option-selector {
   margin-bottom: 10px;
@@ -2452,11 +2453,11 @@ body {
 .chill-story-section .slider_wrapper .slider_images {
   max-width: 100%;
   height: 25%;
-  -webkit-animation: marquee 3s linear infinite;
-  -moz-animation: marquee 3s linear infinite;
-  -o-animation: marquee 3s linear infinite;
-  -ms-animation: marquee 3s linear infinite;
-  animation: marquee 3s linear infinite;
+  -webkit-animation: about_marquee 30s linear infinite;
+  -moz-animation: about_marquee 30s linear infinite;
+  -o-animation: about_marquee 30s linear infinite;
+  -ms-animation: about_marquee 30s linear infinite;
+  animation: about_marquee 30s linear infinite;
 }
 .chill-story-section .slider_wrapper .slider_images:hover {
   -webkit-animation-play-state: paused;
@@ -2526,12 +2527,12 @@ body {
   }
 }
 
-@keyframes marquee {
+@keyframes about_marquee {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translate(-50%);
+    transform: translateX(-2800px);
   }
 }
 .chill-story-value-section {

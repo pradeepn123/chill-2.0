@@ -176,7 +176,15 @@
                 {% else %}
                   <div class="product-description rte cf">
                     {%- if block.settings.icon == blank -%}
-                      {{- product.description | strip_html | truncate: 125 -}}
+                      <!-- {{- product.description | strip_html | truncate: 125 -}} -->                      
+                        <div class="product-description-short">
+                          {{ product.description | truncate: 152, "... " }}
+                          <a class="readmore" href="#">Read More &#62;</a>
+                        </div>
+                        <div class="product-description-full">
+                          {{ product.description }}
+                          <br><a class="readless" href="#">&#60; Read Less</a>
+                        </div>                           
                     {%- else -%}
                       <div class="with-icon">
                         {% render 'icon', icon: block.settings.icon, size: 'small' %}
