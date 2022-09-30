@@ -315,9 +315,13 @@ body{
                 flex-wrap: wrap;
                 justify-content: center;
                 text-align: center;
+                padding: 60px 0;
+                @media(min-width:1200px){
+                    padding: 0;
+                }
                 .icon-item {
                     flex: 0 0 calc(50% - 22px);
-                    margin: 0 10px 30px;
+                    margin: 0;
                     @media(min-width:768px){
                         flex: 0 0 calc(25% - 20px);
                         margin: 0 20px 30px;
@@ -360,9 +364,10 @@ body{
     display: block;
     position: relative;    
     clear:both;
-    padding: 80px 0;
+    padding: 80px 0 40px 0;
     @media(min-width:1200px){
         margin: 30px 0 0 0;
+        padding: 80px 0 110px 0;        
     }
     .stress-effect-wrapper{
         .heading-main{
@@ -371,6 +376,7 @@ body{
             margin-bottom: 42px;
             @media(min-width:1200px){
                 font-size: 52px;
+                margin-bottom: 84px;
             }
             p{
                 margin: 0;
@@ -436,9 +442,12 @@ body{
                                 }
                             }
                         }
+                        .text_wrapper.mobile-only{
+                            margin-bottom: 60px !important;
+                        }
                         .text_wrapper{
                             flex: 0 0 100%;
-                            margin-bottom: 44px;
+                            margin-bottom: 22px;
                             @media(min-width:1200px){
                                 flex: 0 0 50%;
                                 margin-bottom: 4px;
