@@ -1,68 +1,71 @@
 {%- liquid
-  assign current_variant = product.selected_or_first_available_variant
-  assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media  
--%}
+                    assign current_variant = product.selected_or_first_available_variant
+                    assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media  
+                  -%}
 <ul class="navigation__tier-1">
   {% for link in linklists[link_list].links %}
     {%- liquid
-      assign has_dropdown = false
-      assign use_columns = false
-      assign small_promo_count = 0
-      assign link_title_sanitised = link.title | downcase | strip
-
-      if link.links != blank
-        assign has_dropdown = true
-      endif
-
-      if link.levels >= 2
-        assign use_columns = true
-      else
-        for block in section.blocks
-          assign dropdown_link_title_sanitised = block.settings.dropdown_link_title | downcase | strip
-          if dropdown_link_title_sanitised == link_title_sanitised
-            assign use_columns = true
-            assign has_dropdown = true
-          endif
-        endfor
-      endif
-
-      for block in section.blocks
-        assign dropdown_link_title_sanitised = block.settings.dropdown_link_title | downcase | strip
-        if dropdown_link_title_sanitised == link_title_sanitised and block.type == 'menu-promotion-small'
-          assign small_promo_count = small_promo_count | plus: 1
-        endif
-      endfor
-
-      if use_columns and link.levels == 1
-        assign column_count = 1 | plus: small_promo_count
-      else
-        assign column_count = link.links.size | plus: small_promo_count
-      endif
-    -%}
+                        assign has_dropdown = false
+                        assign use_columns = false
+                        assign small_promo_count = 0
+                        assign link_title_sanitised = link.title | downcase | strip
+                  
+                        if link.links != blank
+                          assign has_dropdown = true
+                        endif
+                  
+                        if link.levels >= 2
+                          assign use_columns = true
+                        else
+                          for block in section.blocks
+                            assign dropdown_link_title_sanitised = block.settings.dropdown_link_title | downcase | strip
+                            if dropdown_link_title_sanitised == link_title_sanitised
+                              assign use_columns = true
+                              assign has_dropdown = true
+                            endif
+                          endfor
+                        endif
+                  
+                        for block in section.blocks
+                          assign dropdown_link_title_sanitised = block.settings.dropdown_link_title | downcase | strip
+                          if dropdown_link_title_sanitised == link_title_sanitised and block.type == 'menu-promotion-small'
+                            assign small_promo_count = small_promo_count | plus: 1
+                          endif
+                        endfor
+                  
+                        if use_columns and link.levels == 1
+                          assign column_count = 1 | plus: small_promo_count
+                        else
+                          assign column_count = link.links.size | plus: small_promo_count
+                        endif
+                      -%}
     <li class="navigation__item{% if has_dropdown %} navigation__item--with-children {% if use_columns %}navigation__item--with-mega-menu{% else %}navigation__item--with-small-menu{% endif %}{% endif %}{% if featured_links contains link.title %} featured-link{% endif %}{% if link.active %} navigation__item--active{% endif %}">
-      <a href="{{ link.url }}" class="navigation__link" {% if has_dropdown %}aria-haspopup="true" aria-expanded="false" aria-controls="NavigationTier2-{{ forloop.index }}{% if mobile %}-mob{% endif %}"{% endif %}>
+      <a href="{{ link.url }}" class="navigation__link" {% if has_dropdown %}aria-haspopup="true"aria-expanded="false"aria-controls="NavigationTier2-{{ forloop.index }}{% if mobile %}-mob{% endif %}"{% endif %}>
         {{- link.title | escape -}}
       </a>
 
       {% if has_dropdown %}
-        <a class="navigation__children-toggle" href="#">{% render 'icon-toggle-menu', stroke_width: 1.3 %}</a>
+        <a class="navigation__children-toggle" href="#">{% render 'icon-toggle-menu', stroke_width: 1.3 %}
+        </a>
 
         <div id="NavigationTier2-{{ forloop.index }}{% if mobile %}-mob{% endif %}" class="navigation__tier-2-container navigation__child-tier">
-          
-              <div class="navigation__wide-promotion{% if block.settings.enable_fade %} navigation__wide-promotion--with-fade{% endif %}">
-                <div class="container container--no-max">
 
-                  <div class="mega_menu">
-                    <div class="mega_menu_wrapper">
-                      <div class="mega_menu_title">
-                        <ul class="menu-mega-nav">
-                          <h4 class="main_coll_title">{{ section.settings.mega_collection_heading }}</h4>
-                          {%- for block in section.blocks -%}
-                          {%- assign dropdown_link_title_sanitised = block.settings.dropdown_link_title | downcase | strip -%}
-                          {%- if dropdown_link_title_sanitised == link_title_sanitised and block.type == 'menu-promotion-large' -%}
+          <div class="navigation__wide-promotion{% if block.settings.enable_fade %} navigation__wide-promotion--with-fade{% endif %}">
+            <div class="container container--no-max">
+
+              <div class="mega_menu">
+                <div class="mega_menu_wrapper">
+                  <div class="mega_menu_title">
+                    <ul class="menu-mega-nav">
+                      <h4 class="main_coll_title">{{ section.settings.mega_collection_heading }}
+                      </h4>
+                      {%- for block in section.blocks -%}
+                        {%- assign dropdown_link_title_sanitised = block.settings.dropdown_link_title | downcase | strip -%}
+                        {%- if dropdown_link_title_sanitised == link_title_sanitised and block.type == 'menu-promotion-large' -%}
                           {% assign collection = collections[block.settings.collection] %}
                           <li class="menu-item {% if forloop.first %}active{% endif%}">
-                            <a class="coll_heading" href="{{collection.url}}">{{collection.title}}</a>
+                            <a class="coll_heading" href="{{collection.url}}">{{collection.title}}
+                            </a>
                             <div class="ruby-grid ruby-grid-lined desktop-only">
                               <div class="ruby-row {% if forloop.first %}active{% endif%}">
                                 {% for product in collection.products limit: 3 %}
@@ -73,19 +76,20 @@
                                         <img src="{{ featured_image | img_url: '1024x' }}" alt="{{ featured_image.alt | escape }}">
                                       </a>
                                     </div>
-      
+
                                     <div class="product_title">
-                                      <h4>{{ product.title }}</h4>
+                                      <h4>{{ product.title }}
+                                      </h4>
                                     </div>
-      
+
                                     {%- liquid
-                                      assign product_vendor_handle = product.vendor | handle
-                                      if collections[product_vendor_handle].handle == product_vendor_handle
-                                        assign vendor_url = collections[product_vendor_handle].url
-                                      else
-                                        assign vendor_url = product.vendor | url_for_vendor
-                                      endif
-                                    -%}
+                                                        assign product_vendor_handle = product.vendor | handle
+                                                        if collections[product_vendor_handle].handle == product_vendor_handle
+                                                          assign vendor_url = collections[product_vendor_handle].url
+                                                        else
+                                                          assign vendor_url = product.vendor | url_for_vendor
+                                                        endif
+                                                      -%}
                                     <div class="vendor lightly-spaced-row" {{ block.shopify_attributes }}>
                                       <!-- <span class="product-detail-label">{{ 'products.product.vendor' | t }}</span> -->
                                       {% if product != blank %}
@@ -94,7 +98,7 @@
                                         {{ 'onboarding.product.vendor' | t }}
                                       {% endif %}
                                     </div>
-      
+
                                   </div>
                                 {% endfor %}
                                 <div class="ruby-col-3">
@@ -104,66 +108,70 @@
                                     </div>
                                   </a>
                                 </div>
-                                </div>
+                              </div>
                             </div>
                           </li>
-                          {%- endif -%}
-                          {%- endfor -%}
-                          <a class="coll_shop_link" href="{{ section.settings.shop_link}}">
-                            {{section.settings.shop_text}}
-                          </a>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  {% comment%}
-                  <div class="flexible-layout valign-middle">
-                    {%- if block.settings.desktop_image != blank and mobile == false -%}
-                      <div class="column column--half {% if block.settings.image_position == 'right' %}column--order-push-desktop{% endif %}">
-                        <div class="container__breakout">
-                          {%- render 'responsive-image', image: block.settings.desktop_image, cover: true -%}
-                        </div>
-                      </div>
-                    {%- endif -%}
-                    {%- if block.settings.mobile_image != blank and mobile == true -%}
-                      <div class="column column--full">
-                        <div class="container__breakout">
-                          {%- render 'responsive-image', image: block.settings.mobile_image, cover: true -%}
-                        </div>
-                      </div>
-                    {%- endif -%}
-
-                    <div class="column column--{% if block.settings.desktop_image == blank %}full{% else %}half{% endif %} align-{{ block.settings.text_alignment }}">
-                      <div class="feature-text-paired">
-                        {%- if block.settings.subheading != blank -%}
-                          <div class="subheading subheading--over">{{ block.settings.subheading | escape }}</div>
                         {%- endif -%}
-
-                        {% if block.settings.title != blank %}
-                          <h2 class="majortitle in-content h1-style">{{ block.settings.title | escape }}</h2>
-                        {% endif %}
-
-                        <div class="rte">{{ block.settings.text }}</div>
-
-                        {% if block.settings.button_1_label != blank or block.settings.button_2_label != blank %}
-                          <div class="button-row">
-                            {% if block.settings.button_1_label != blank %}
-                              <a class="button-row__button {% if block.settings.button_1_style != 'link' %}btn btn--{{ block.settings.button_1_style }}{% else %}small-feature-link{% endif %}" href="{{ block.settings.button_1_link }}">{{ block.settings.button_1_label | escape }}</a>
-                            {% endif %}
-                            {% if block.settings.button_2_label != blank %}
-                              <a class="button-row__button {% if block.settings.button_2_style != 'link' %}btn btn--{{ block.settings.button_2_style }}{% else %}small-feature-link{% endif %}" href="{{ block.settings.button_2_link }}">{{ block.settings.button_2_label | escape }}</a>
-                            {% endif %}
-                          </div>
-                        {% endif %}
-                      </div>
-                    </div>
+                      {%- endfor -%}
+                      <a class="coll_shop_link" href="{{ section.settings.shop_link}}">
+                        {{section.settings.shop_text}}
+                      </a>
+                    </ul>
                   </div>
-                  {% endcomment%}
-
                 </div>
               </div>
-           
+
+              {% comment%}
+                <div class="flexible-layout valign-middle">
+                {%- if block.settings.desktop_image != blank and mobile == false -%}
+                <div class="column column--half {% if block.settings.image_position == 'right' %}column--order-push-desktop{% endif %}">
+                <div class="container__breakout">
+                {%- render 'responsive-image', image: block.settings.desktop_image, cover: true -%}
+                </div>
+                </div>
+                {%- endif -%}
+                {%- if block.settings.mobile_image != blank and mobile == true -%}
+                <div class="column column--full">
+                <div class="container__breakout">
+                {%- render 'responsive-image', image: block.settings.mobile_image, cover: true -%}
+                </div>
+                </div>
+                {%- endif -%}
+
+                <div class="column column--{% if block.settings.desktop_image == blank %}full{% else %}half{% endif %} align-{{ block.settings.text_alignment }}">
+                <div class="feature-text-paired">
+                {%- if block.settings.subheading != blank -%}
+                <div class="subheading subheading--over">{{ block.settings.subheading | escape }}</div>
+                {%- endif -%}
+
+                {% if block.settings.title != blank %}
+                <h2 class="majortitle in-content h1-style">{{ block.settings.title | escape }}</h2>
+                {% endif %}
+
+                <div class="rte">{{ block.settings.text }}</div>
+
+                {% if block.settings.button_1_label != blank or block.settings.button_2_label != blank %}
+                <div class="button-row">
+                {% if block.settings.button_1_label != blank %}
+                <a class="button-row__button {% if block.settings.button_1_style != 'link' %}btn btn--{{ block.settings.button_1_style }}{% else %}small-feature-link{% endif %}" href="{{ block.settings.button_1_link }}">{{ block.settings.button_1_label | escape }}</a>
+                {% endif %}
+                {% if block.settings.button_2_label != blank %}
+                <a class="button-row__button {% if block.settings.button_2_style != 'link' %}btn btn--{{ block.settings.button_2_style }}{% else %}small-feature-link{% endif %}" href="{{ block.settings.button_2_link }}">{{ block.settings.button_2_label | escape }}</a>
+                {% endif %}
+                </div>
+                {% endif %}
+                </div>
+                </div>
+                </div>
+              {% endcomment%}
+
+            </div>
+          </div>
+          {%- comment -%}
+            <div>
+            <h1>Hellllloooooooooo......</h1>
+            </div>
+          {%- endcomment -%}
 
           {%- if link.links != blank or small_promo_count > 0 -%}
             <div class="container">
@@ -179,20 +187,22 @@
                 {% else %}
                   {% for child_link in link.links %}
                     <li class="navigation__item{% if child_link.links != blank %} navigation__item--with-children{% endif %}{% if use_columns %} navigation__column{% endif %}{% if featured_links contains child_link.title %} featured-link{% endif %}">
-                      <a href="{{ child_link.url }}" class="navigation__link{% if child_link.links != blank %} navigation__column-title{% endif %}" {% if child_link.links != blank %}aria-haspopup="true" aria-expanded="false"{% endif %}>
+                      <a href="{{ child_link.url }}" class="navigation__link{% if child_link.links != blank %} navigation__column-title{% endif %}" {% if child_link.links != blank %}aria-haspopup="true"aria-expanded="false"{% endif %}>
                         {{- child_link.title | escape -}}
                       </a>
                       {% if child_link.links != blank %}
-                        <a class="navigation__children-toggle" href="#">{% render 'icon-toggle-menu', stroke_width: 1.3 %}</a>
+                        <a class="navigation__children-toggle" href="#">{% render 'icon-toggle-menu', stroke_width: 1.3 %}
+                        </a>
                       {% endif %}
 
                       {% if child_link.links != blank %}
                         <div class="navigation__tier-3-container navigation__child-tier">
                           <ul class="navigation__tier-3">
                             {% for child_child_link in child_link.links %}
-                            <li class="navigation__item{% if featured_links contains child_child_link.title %} featured-link{% endif %}">
-                              <a class="navigation__link" href="{{ child_child_link.url }}">{{ child_child_link.title | escape }}</a>
-                            </li>
+                              <li class="navigation__item{% if featured_links contains child_child_link.title %} featured-link{% endif %}">
+                                <a class="navigation__link" href="{{ child_child_link.url }}">{{ child_child_link.title | escape }}
+                                </a>
+                              </li>
                             {% endfor %}
                           </ul>
                         </div>
@@ -210,14 +220,15 @@
                           <div class="menu-promotion">
                             {%- if block.settings.link_url != blank -%}
                               <a class="menu-promotion__link" href="{{ block.settings.link_url }}">
-                            {%- endif -%}
-                            <div class="menu-promotion__image">
-                              {%- render 'responsive-image', image: block.settings.image, manual_image_load: true -%}
-                            </div>
-                            {%- if block.settings.title != blank -%}
-                              <div class="menu-promotion__text">{{ block.settings.title | escape }}</div>
-                            {%- endif -%}
-                            {%- if block.settings.link_url != blank -%}
+                              {%- endif -%}
+                              <div class="menu-promotion__image">
+                                {%- render 'responsive-image', image: block.settings.image, manual_image_load: true -%}
+                              </div>
+                              {%- if block.settings.title != blank -%}
+                                <div class="menu-promotion__text">{{ block.settings.title | escape }}
+                                </div>
+                              {%- endif -%}
+                              {%- if block.settings.link_url != blank -%}
                               </a>
                             {%- endif -%}
                           </div>
@@ -232,14 +243,15 @@
                           <div class="menu-promotion">
                             {%- if block.settings.link_url != blank -%}
                               <a class="menu-promotion__link" href="{{ block.settings.link_url }}">
-                            {%- endif -%}
-                            <div class="menu-promotion__image">
-                              {%- render 'responsive-image', image: block.settings.image, manual_image_load: true -%}
-                            </div>
-                            {%- if block.settings.title != blank -%}
-                              <div class="menu-promotion__text">{{ block.settings.title | escape }}</div>
-                            {%- endif -%}
-                            {%- if block.settings.link_url != blank -%}
+                              {%- endif -%}
+                              <div class="menu-promotion__image">
+                                {%- render 'responsive-image', image: block.settings.image, manual_image_load: true -%}
+                              </div>
+                              {%- if block.settings.title != blank -%}
+                                <div class="menu-promotion__text">{{ block.settings.title | escape }}
+                                </div>
+                              {%- endif -%}
+                              {%- if block.settings.link_url != blank -%}
                               </a>
                             {%- endif -%}
                           </div>
@@ -253,7 +265,7 @@
           {%- endif -%}
         </div>
       {% endif %}
-    </li>    
+    </li>
   {% endfor %}
   <li class="navigation__item {% if has_dropdown %} navigation__item--with-children {% if use_columns %}navigation__item--with-mega-menu{% else %}navigation__item--with-small-menu{% endif %}{% endif %}{% if featured_links contains link.title %} featured-link{% endif %}{% if link.active %} navigation__item--active{% endif %}">
     <div class="country_selector dropdown navigation__link">
@@ -266,8 +278,11 @@
           <path id="Path_11111" data-name="Path 11111" d="M0,0H81.448V57.56H0Z" fill="#fff"/>
           <path id="Path_11112" data-name="Path 11112" d="M0,0V57.56H81.419V0ZM8.922,53.963l-1.957-1.41-1.928,1.41L5.756,51.8,3.8,50.394H6.216l.259-.835.46-1.439.46,1.439.288.835h2.389L8.2,51.8ZM8.2,40.292l.288.921.46,1.353-1.9-1.353L5.18,42.566l.432-1.353.144-.921L3.8,38.882H6.216l.72-2.274.748,2.274h2.389Zm0-11.282.748,2.274-1.957-1.41-1.928,1.41.691-2.3L3.8,27.571H6.216l.72-2.274.748,2.274h2.389ZM9.814,16.491,8.2,17.671l.748,2.274L6.993,18.563,5.065,19.945l.691-2.3-1.64-1.18-.317-.23H6.216l.72-2.274.748,2.274h2.389ZM8.2,6.13l.691,2.13V8.4l-.259-.173L6.879,6.965,5.123,8.231l-.173.144V8.231L5.756,6.1,3.8,4.691H6.216l.72-2.3.748,2.3h2.389Zm7.483,42.077L13.757,46.8,11.8,48.207l.748-2.159-1.928-1.41h2.389l.748-2.3.72,2.3h2.418l-1.957,1.41Zm-.748-13.671.748,2.274-1.928-1.381L11.8,36.81l.748-2.274-1.928-1.41h2.389l.72-2.159.691,2.159h2.418Zm0-11.282.489,1.5.259.777-1.065-.777-.863-.633-.892.633-1.065.777.259-.777.489-1.5-1.928-1.41h2.389l.748-2.274.633,2.216h2.418Zm0-11.339.748,2.3-1.928-1.41L11.8,14.217l.748-2.3L10.62,10.5h2.389l.72-2.216.662,2.159h2.418ZM22.42,54.02l-1.928-1.41-1.928,1.41.72-2.216L17.268,50.25h2.389l.288-.835.46-1.439.46,1.439.288.835h2.389L21.7,51.8ZM21.7,40.292l.288.921.432,1.353-1.871-1.353-1.871,1.353.432-1.353.173-.921-2.014-1.439h2.389l.748-2.274.748,2.274h2.389Zm0-11.282.719,2.274-1.928-1.41-1.928,1.41.72-2.274-2.014-1.439h2.389l.748-2.274.748,2.274h2.389Zm1.612-12.548L21.7,17.642l.719,2.274-1.928-1.381-1.928,1.381.72-2.274-1.612-1.18-.4-.23h2.389l.748-2.274.748,2.274h2.389ZM21.7,6.1l.691,2.13v.144l-.173-.144L20.463,6.965,18.707,8.231l-.173.144V8.231l.691-2.13-1.957-1.41h2.389l.748-2.3.748,2.3h2.389Zm7.483,42.076-1.957-1.41L25.3,48.178l.748-2.13-1.957-1.41h2.418l.719-2.3.748,2.3h2.389l-1.928,1.41Zm-.748-13.642.748,2.274-1.957-1.381L25.3,36.81l.748-2.274-1.957-1.41h2.418l.691-2.159.691,2.159h2.389Zm0-11.282.489,1.5.259.777-1.065-.777-.892-.633-.863.633-1.065.777.259-.777.489-1.5-1.957-1.41h2.418l.719-2.274.748,2.274h2.389Zm0-11.339.748,2.3-1.957-1.41L25.3,14.217l.748-2.3L24.089,10.5h2.418l.719-2.216.72,2.216h2.389ZM35.918,54.02l-1.928-1.41-1.957,1.41.748-2.3-1.928-1.41h2.389l.288-.835.46-1.439.46,1.439.259.835h2.417l-1.957,1.41Zm-.748-13.728.317.921.432,1.353-1.871-1.353-1.9,1.353.46-1.353.288-.921-1.928-1.41h2.389l.748-2.274.719,2.274h2.418Zm0-11.282.748,2.274-1.928-1.41-1.957,1.41.748-2.274L30.852,27.6h2.389l.748-2.274.719,2.274h2.418ZM36.81,16.491l-1.64,1.18.748,2.274-1.928-1.381-1.957,1.381.748-2.274-1.612-1.18-.317-.23h2.389l.748-2.274.719,2.274h2.418ZM35.169,6.13l.719,2.13V8.4l-.173-.144L33.96,6.994,32.2,8.26,32,8.4V8.26l.691-2.13L30.766,4.72h2.389l.748-2.3.719,2.3H37.04Zm7.483,42.077L40.724,46.8,38.8,48.207l.719-2.274-1.928-1.41h2.389l.748-2.3.748,2.3h2.389l-1.928,1.41Zm-.719-13.671.719,2.274-1.928-1.381L38.8,36.81l.719-2.274-1.928-1.41h2.389l.691-2.159.691,2.159h2.389Zm0-11.282.489,1.5.23.777-1.036-.777-.892-.633-.892.633-1.036.777.23-.777.489-1.5-1.928-1.41h2.389l.748-2.274.748,2.274h2.389Zm0-11.339.719,2.3-1.928-1.41L38.8,14.217l.719-2.3L37.587,10.5h2.389l.72-2.216.719,2.216H43.8ZM49.415,54.02l-1.957-1.41L45.53,54.02l.748-2.3-1.957-1.41h2.418L47,49.473l.46-1.439.489,1.439.259.835H50.6l-1.928,1.41Zm-.748-13.728.288.921.46,1.353-1.9-1.353-1.9,1.353.432-1.353.317-.921-1.957-1.41h2.418l.719-2.274.748,2.274h2.389Zm0-11.282.748,2.274-1.957-1.41-1.928,1.41.748-2.274L44.321,27.6h2.418l.719-2.274.748,2.274H50.6Zm1.612-12.519-1.612,1.18.748,2.274-1.957-1.381L45.53,19.945l.748-2.274-1.64-1.18-.317-.23h2.418l.719-2.274.748,2.274H50.6ZM48.667,6.13l.691,2.13V8.4l-.2-.144L47.4,6.994,45.645,8.26l-.173.144V8.26l.691-2.13L44.206,4.72h2.418l.719-2.3.748,2.3H50.48ZM56.15,48.207,54.222,46.8l-1.957,1.41.748-2.274-1.928-1.41h2.389l.748-2.3.719,2.3h2.418L55.4,45.933ZM55.4,34.536l.748,2.274-1.928-1.381L52.265,36.81l.748-2.274-1.928-1.41h2.389l.691-2.159.691,2.159h2.418Zm0-11.282.489,1.5.259.777-1.065-.777-.863-.633-.892.633-1.065.777.259-.777.489-1.5-1.928-1.41h2.389l.748-2.274.719,2.274h2.418Zm0-11.339.748,2.3-1.928-1.41-1.957,1.41.748-2.3L51.085,10.5h2.389l.719-2.216.72,2.216H57.33ZM62.884,54.02l-1.928-1.41-1.928,1.41.72-2.3-1.928-1.41h2.389l.288-.835.46-1.439.46,1.439.288.835h2.389l-1.928,1.5Zm-.72-13.728.288.921.432,1.353-1.871-1.353-1.871,1.353.432-1.353.288-.921-1.928-1.41h2.389l.748-2.274.748,2.274h2.389Zm0-11.282.719,2.274-1.928-1.41-1.928,1.41.72-2.274L57.819,27.6h2.389l.748-2.274L61.7,27.6h2.389Zm1.612-12.519-1.612,1.18.719,2.274-1.928-1.381-1.928,1.381.72-2.274-1.612-1.18-.317-.23h2.389l.748-2.274.748,2.274h2.389ZM62.165,6.13l.691,2.13V8.4l-.173-.144L60.927,6.994,59.172,8.26,59,8.4V8.231L59.69,6.1l-1.928-1.41H60.15l.748-2.3.748,2.3h2.389Zm7.483,42.077L67.691,46.8l-1.928,1.41.748-2.274-1.957-1.41h2.418l.719-2.3.748,2.3h2.389L68.9,45.933ZM68.9,34.536l.748,2.274-1.957-1.381L65.763,36.81l.748-2.274-1.957-1.41h2.418l.691-2.159.719,2.159H70.77Zm0-11.282.489,1.5.259.777-1.065-.777-.892-.633-.863.633-1.065.777.259-.777.489-1.5-1.957-1.41h2.418l.719-2.274.748,2.274h2.389Zm0-11.339.748,2.3-1.957-1.41-1.928,1.41.748-2.3L64.554,10.5h2.418l.719-2.216L68.41,10.5H70.8ZM76.382,54.02l-1.928-1.41L72.5,54.02l.748-2.3-1.928-1.41h2.389l.288-.835.46-1.439.46,1.439.259.835h2.533l-1.957,1.41Zm-.748-13.728.317.921.432,1.353-1.871-1.353-1.9,1.353.46-1.353.288-.921-1.928-1.41h2.389l.748-2.274.719,2.274h2.418Zm0-11.282.748,2.274-1.928-1.41L72.5,31.284l.748-2.274L71.317,27.6h2.389l.748-2.274.719,2.274h2.533Zm1.641-12.519-1.64,1.18.748,2.274-1.928-1.381L72.5,19.945l.748-2.274-1.612-1.18-.317-.23h2.389l.748-2.274.719,2.274h2.533ZM75.634,6.13l.719,2.13V8.4l-.173-.144L74.425,6.994,72.67,8.26l-.2.144V8.26l.691-2.13L71.231,4.72h2.389l.748-2.3.719,2.3h2.619Z" fill="#1b304f"/>
         </svg>
-        USA {% render 'icon-toggle-menu', stroke_width: 1.3 %}
-        {%- comment -%} <i class="fa fa-caret-down"></i> {%- endcomment -%}
+        USA
+        {% render 'icon-toggle-menu', stroke_width: 1.3 %}
+        {%- comment -%}
+          <i class="fa fa-caret-down"></i>
+        {%- endcomment -%}
       </a>
       <hr id="dropdown_linebreak" style="display: none;">
       <div class="dropdown-content">
@@ -286,27 +301,32 @@
           UK
         </a>
       </div>
-    </div> 
+    </div>
   </li>
   <li class="navigation__item{% if has_dropdown %} navigation__item--with-children {% if use_columns %}navigation__item--with-mega-menu{% else %}navigation__item--with-small-menu{% endif %}{% endif %}{% if featured_links contains link.title %} featured-link{% endif %}{% if link.active %} navigation__item--active{% endif %}">
-    {% if shop.customer_accounts_enabled %}            
+    {% if shop.customer_accounts_enabled %}
       {% if customer %}
-        <a class="navigation__link" href="{{ routes.account_url }}" aria-label="{{ 'layout.customer.account' | t | escape }}">                
-          <span class="header-account-link__icon{% if section.settings.icon_strategy == 'icons_cart_search' %} mobile-only{% endif %}">{% render 'svg-custom-user' %}</span>
-          <span class="header-account-link__text {% if section.settings.icon_strategy == 'icons_only' %} visually-hidden{% endif %}">{{ 'layout.customer.account' | t | escape }}</span>
+        <a class="navigation__link" href="{{ routes.account_url }}" aria-label="{{ 'layout.customer.account' | t | escape }}">
+          <span class="header-account-link__icon{% if section.settings.icon_strategy == 'icons_cart_search' %} mobile-only{% endif %}">{% render 'svg-custom-user' %}
+          </span>
+          <span class="header-account-link__text {% if section.settings.icon_strategy == 'icons_only' %} visually-hidden{% endif %}">{{ 'layout.customer.account' | t | escape }}
+          </span>
         </a>
       {% else %}
         <a class="navigation__link" href="{{ routes.account_login_url }}" aria-label="{{ 'layout.customer.account' | t | escape }}">
-          <span class="header-account-link__icon{% if section.settings.icon_strategy == 'icons_cart_search' %} mobile-only{% endif %}">{% render 'svg-custom-user' %}</span>
-          <span class="header-account-link__text {% if section.settings.icon_strategy == 'icons_only' %} visually-hidden{% endif %}">{{ 'layout.customer.account' | t | escape }}</span>
+          <span class="header-account-link__icon{% if section.settings.icon_strategy == 'icons_cart_search' %} mobile-only{% endif %}">{% render 'svg-custom-user' %}
+          </span>
+          <span class="header-account-link__text {% if section.settings.icon_strategy == 'icons_only' %} visually-hidden{% endif %}">{{ 'layout.customer.account' | t | escape }}
+          </span>
         </a>
       {% endif %}
     {% endif %}
   </li>
 </ul>
-{%- comment -%} <script>
+{%- comment -%}
+  <script>
   document.querySelector('.navigation__item .country_selector').addEventListener('click', function(){
-    document.querySelector('.dropdown-content').css('display', 'block');
-    console.log("dropdown>>>>>>>>>>>>")
+  document.querySelector('.dropdown-content').css('display', 'block');
+  console.log("dropdown>>>>>>>>>>>>")
   })
-</script> {%- endcomment -%}
+  </script>{%- endcomment -%}
