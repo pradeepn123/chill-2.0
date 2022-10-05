@@ -221,6 +221,11 @@
 .section-header .navigation .navigation__item .navigation__child-tier .navigation__wide-promotion {
   padding-top: 60px;
 }
+@media (min-width: 1200px) {
+  .section-header .navigation .navigation__item .navigation__child-tier .navigation__wide-promotion {
+    padding-bottom: 120px;
+  }
+}
 
 .mega_menu {
   position: relative;
@@ -992,7 +997,7 @@ body {
   }
 }
 
-@keyframes rotation {
+@keyframes rotation_anticlockwise {
   from {
     transform: rotate(359deg);
   }
@@ -1164,7 +1169,7 @@ body {
 }
 .home-stress-effect-section .stress-effect-wrapper .stress-effect-block-list .stress-list-item .fixed-layout .pos-rel .image_wrapper .svg_animation img {
   width: 300px;
-  animation: rotation 16s infinite linear;
+  animation: rotation_anticlockwise 16s infinite linear;
 }
 .home-stress-effect-section .stress-effect-wrapper .stress-effect-block-list .stress-list-item .fixed-layout .pos-rel .text_wrapper.mobile-only {
   margin-bottom: 60px !important;
@@ -1568,7 +1573,7 @@ body {
   .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper ul li {
     padding: 10px 80px;
     font-size: 20px;
-    margin: 0 16px;
+    margin: 0 8px;
   }
 }
 .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper ul li.active {
@@ -1916,6 +1921,15 @@ body {
   margin-left: 8px;
   padding-top: 4px;
   transition: all 0.4s cubic-bezier(0.23, 0.85, 0.61, 0.92);
+}
+
+#shopify-section-template--15968033865886__166453148629faf25b .fully-spaced-row--medium {
+  margin-top: 26px;
+}
+@media (min-width: 1200px) {
+  #shopify-section-template--15968033865886__166453148629faf25b .fully-spaced-row--medium {
+    margin-top: 46px;
+  }
 }
 
 .section-main-product {

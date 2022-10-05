@@ -1026,9 +1026,10 @@
     "enable_product_reviews_collection": false,
     "prod_thumb_show_options": false,
     "social_twitter_url": "https:\/\/twitter.com\/ChillCBD",
-    "social_facebook_url": "https:\/\/www.facebook.com\/chillstateofmind",
-    "social_vimeo_url": "#",
-    "social_youtube_url": "#",
+    "social_facebook_url": "https:\/\/www.facebook.com\/chillstateofmind",    
+    "social_vimeo_url": "",
+    "social_youtube_url": "",
+    "social_linkedin_url": "https:\/\/www.linkedin.com\/company\/chill-brands\/",
     "social_instagram_url": "https:\/\/www.instagram.com\/chill_cbd\/",
     "social_tiktok_url": "https:\/\/vm.tiktok.com\/ZTdfjDDmb\/",
     "search_type": "product,article,page",
@@ -1065,31 +1066,12 @@
               "collection": "cbd-smokes",
               "text_alignment": "center"
             }
-          },
-          "ade4ad7e-b400-4e19-a871-69b2f7fa4f72": {
-            "type": "menu-promotion-large",
-            "settings": {
-              "dropdown_link_title": "shop",
-              "collection": "chill-apparel",
-              "text_alignment": "center"
-            }
-          },
-          "3a53285b-b585-4ee7-88e2-50a3057840fd": {
-            "type": "menu-promotion-large",
-            "disabled": true,
-            "settings": {
-              "dropdown_link_title": "shop",
-              "collection": "chill-flavoured-drops",
-              "text_alignment": "center"
-            }
           }
         },
         "block_order": [
           "721b392b-54e3-4cd9-ae56-3cddef5b2b48",
           "1b792ef3-cee8-4951-be61-e8cc8c94491c",
-          "55dfc561-5ebf-4ef6-8975-0757fbd445b6",
-          "ade4ad7e-b400-4e19-a871-69b2f7fa4f72",
-          "3a53285b-b585-4ee7-88e2-50a3057840fd"
+          "55dfc561-5ebf-4ef6-8975-0757fbd445b6"
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/Screen_Shot_2022-08-17_at_3.04.20_PM.png",
@@ -1187,7 +1169,7 @@
           "da48b0a2-76c5-48ad-8408-466f85f5c9b6": {
             "type": "menu",
             "settings": {
-              "title": "SHOP BY",
+              "title": "Shop By",
               "menu": "new-shop-by-footer"
             }
           },
@@ -1208,6 +1190,7 @@
         "settings": {
           "lower_menu": "",
           "text_bottom": "<p>These statements have not been evaluated or approved by the Food and Drug Administration or any other regulatory body. The products shown on this website are lifestyle products and are not intended to diagnose, treat, cure, or prevent any disease. The information contained on this website is not intended to replace information from medical professionals. Please consult your doctor if you are concerned about using any product. <\/p><p><\/p><p>All CBD products on this website contain .03% THC or less. Chill products are made using premium CBD isolate only. <\/p>",
+          "wide_container": true,
           "show_payment_icons": true,
           "show_country_selector": true,
           "show_language_selector": true

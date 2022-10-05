@@ -1187,6 +1187,12 @@
       },
       {
         "type": "text",
+        "id": "social_linkedin_url",
+        "label": "Linkedin",
+        "info": "https:\/\/ca.linkedin.com\/company\/shopify"
+      },
+      {
+        "type": "text",
         "id": "social_instagram_url",
         "label": "Instagram",
         "info": "https:\/\/instagram.com\/shopify"

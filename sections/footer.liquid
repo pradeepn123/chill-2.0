@@ -1,6 +1,6 @@
 <div data-section-type="footer">
   {% if section.blocks != blank %}
-    <div class="container container--no-max section-footer__row-container">
+    <div class="container {% if section.settings.wide_container %}container--no-max{% endif%} section-footer__row-container">
       <div class="section-footer__row section-footer__row--blocks" data-num-blocks="{{ section.blocks.size }}">
         {% for block in section.blocks %}
           {% case block.type %}
@@ -171,9 +171,7 @@
 
         <div class="copyright">
           <span class="copy">&copy; {{ "now" | date: "%Y" }} <a href="{{ routes.root_url }}">{{ shop.name }}</a>.</span>
-
-          {{ powered_by_link }}
-
+          All Rights Reserved.
         </div>
       </div>
     </div>
@@ -196,6 +194,12 @@
         "type": "richtext",
         "id": "text_bottom",
         "label": "footer lower or bottom text"        
+      },
+      {
+        "type": "checkbox",
+        "id": "wide_container",
+        "label": "Show Wide Container",
+        "default": true
       },
       {
         "type": "header",
