@@ -1306,11 +1306,15 @@
             "label": "Drawer"
           },
           {
+            "value": "message",
+            "label": "Message"
+          },
+          {
             "value": "page",
             "label": "Page"
           }
         ],
-        "default": "drawer"
+        "default": "message"
       }
     ]
   },
