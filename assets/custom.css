@@ -195,7 +195,6 @@
   }
   #main-nav.desktop-only .navigation .navigation__tier-1 .navigation__item .country_selector.active .dropdown-content {
     position: absolute;
-    z-index: 9999999;
     top: 100%;
     width: 100%;
     background: #fff;
