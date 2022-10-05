@@ -1,3 +1,6 @@
+html{
+    padding: 0 !important;
+}
 .product-list{
     .product-block{
         .block-inner{
@@ -273,6 +276,16 @@
         }
     }
 }
-.tikshop-shoptrade-wrapper-17bdc8b1-555f-4abb-98d9-dde254415202{
+.tikshop-shoptrade-wrapper-17bdc8b1-555f-4abb-98d9-dde2544152022{
     margin: 0 !important;
+}
+
+.okeReviews.oke-sr{
+    .oke-sr-stars{
+        .oke-stars{
+            svg{
+                width: 90px;
+            }
+        }
+    }
 }
