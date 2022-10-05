@@ -86,12 +86,21 @@
             @media(min-width:1200px){
                 padding: inherit;
             }
+            &.detail.product-column-right{
+                margin-top: 20px;
+                @media(min-width:1200px){
+                    margin-top: 0px;
+                }
+            }
             .product-form{
                 .title-row{
                     .title{
-                        font-size: 42px;
+                        font-size: 24px;
                         font-weight: 900;
                         font-family: 'Open Sans', sans-serif;
+                        @media(min-width:1200px){
+                            font-size: 42px;
+                        }
                     }
                 }
                 .vendor{
@@ -536,7 +545,7 @@
                 align-items: center;
                 flex-wrap: nowrap;
                 flex-direction: column;
-                padding-top: 20px;
+                padding-top: 60px;
                 @media(min-width:1200px){
                     flex-direction: row;
                     padding-top: 50px;
@@ -581,6 +590,9 @@
     }
 }
 .section-apps{
+    .tikhop-shoptrade-block{
+        padding-bottom: 20px;
+    }
     .shopify-app-block{
         .okeReviews{
             .oke-w-header{
@@ -666,4 +678,15 @@
             }
         }
     }
+}
+
+.template-product{
+    .section-rich-text{
+        .h1-style{
+            font-size: 36px;
+            @media(min-width:1200px){
+                font-size: 42px;
+            }
+        }
+    }    
 }

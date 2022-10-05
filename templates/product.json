@@ -131,6 +131,27 @@
         "enable": true
       }
     },
+    "16645486535bae9f49": {
+      "type": "rich-text",
+      "blocks": {
+        "1664548653c7a2de08-0": {
+          "type": "heading",
+          "settings": {
+            "title": "<p>What Our <strong>Customers Say<\/strong><\/p>",
+            "use_h1": false
+          }
+        }
+      },
+      "block_order": [
+        "1664548653c7a2de08-0"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": true,
+        "use_alt_bg": false
+      }
+    },
     "1664344743b1e4a5f5": {
       "type": "apps",
       "blocks": {
@@ -175,6 +196,7 @@
     "main",
     "16639327190d7e5cec",
     "16639198461c244067",
+    "16645486535bae9f49",
     "1664344743b1e4a5f5",
     "recommendations",
     "16645236529448c1fa"
