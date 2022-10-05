@@ -26,7 +26,8 @@
                                 data-sizes="auto"
                                 alt="{{ collection_image.alt | escape }}">
                             <div class="image_title">
-                                <h4>{{ collection_block.title }}</h4>
+                                {%- assign collection_title = block.settings.title | default: collection_block.title -%}
+                                <h4>{{ collection_title }}</h4>
                                 <a class="small-feature-link shop_all" href="{{ collection_block.url }}">{{ 'collections.general.view_all' | t }}{% render 'svg-up-icon' %}</a>
                             </div>
                         </div>                        
@@ -75,8 +76,7 @@
                 {
                     "type": "text",
                     "id": "title",
-                    "label": "Heading",
-                    "default": "Icon title"
+                    "label": "Heading"                    
                 }              
             ]
         }            

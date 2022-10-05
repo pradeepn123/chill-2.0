@@ -47,12 +47,15 @@ body{
                 }
                 .overlay-text__text{
                     .overlay-text__title{
-                        font-weight: 800;
+                        font-weight: 600;
                         font-family: 'Open Sans', sans-serif;
+                        span{
+                            font-weight: 900;
+                        }
                         @media(min-width:1200px){
                             // width: 65%;
-                            font-weight: 800;
-                            text-transform: inherit;
+                            font-weight: 600;
+                            text-transform: inherit;                            
                         }
                         @media(min-width:1680px){
                             // width: 34%;
@@ -82,6 +85,19 @@ body{
 
 /* section-rich-text rich text css here*/
 .section-rich-text{
+    .majortitle{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 42px;
+        text-transform: inherit;
+        margin-bottom: 12px;
+        color: #000000;
+        @media(min-width:1200px){
+            font-size: 52px;
+        }
+        p{
+            margin-bottom: 0;
+        }
+    }
     .article{
         .align-center{
             text-align: left;
@@ -147,7 +163,7 @@ body{
             font-size: 16px;
             color: #E9E9F3;
             font-family: 'Open Sans', sans-serif;
-            margin-bottom: 16px;
+            margin-bottom: 48px;
             @media(min-width:1200px){
                 font-size: 24px;
                 margin-bottom: 40px;
@@ -801,20 +817,22 @@ body{
                     p{
                         font-size: 36px;
                         margin-bottom: 0;
+                        line-height: 46px;
                         @media(min-width:1200px){
                             font-size: 52px;
+                            line-height: 68px;
                         }
                     }
                 }
                 p{
                     font-size: 16px;
                     font-family: 'Open Sans', sans-serif;
-                    line-height: 1.4;
+                    line-height: 1;
                     color: #000000;
                     @media(min-width:1200px){
                         font-size: 26px;
-                        width: 80%;
-                        margin: 0 auto 50px;
+                        width: 80%; 
+                        margin: 0 auto 52px;
                     }
                 }
             }

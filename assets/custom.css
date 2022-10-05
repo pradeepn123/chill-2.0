@@ -158,6 +158,10 @@
   padding-right: 0;
 }
 
+.tikshop-shoptrade-wrapper-17bdc8b1-555f-4abb-98d9-dde254415202 {
+  margin: 0 !important;
+}
+
 /* header css here */
 .pageheader .logo-area .logo-area__left .navigation ul li a {
   font-weight: 600;
@@ -745,12 +749,15 @@ body {
   }
 }
 .section-background-video .video-container .overlay-text .overlay-text__inner .overlay-text__text .overlay-text__title {
-  font-weight: 800;
+  font-weight: 600;
   font-family: "Open Sans", sans-serif;
+}
+.section-background-video .video-container .overlay-text .overlay-text__inner .overlay-text__text .overlay-text__title span {
+  font-weight: 900;
 }
 @media (min-width: 1200px) {
   .section-background-video .video-container .overlay-text .overlay-text__inner .overlay-text__text .overlay-text__title {
-    font-weight: 800;
+    font-weight: 600;
     text-transform: inherit;
   }
 }
@@ -768,6 +775,21 @@ body {
 }
 
 /* section-rich-text rich text css here*/
+.section-rich-text .majortitle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 42px;
+  text-transform: inherit;
+  margin-bottom: 12px;
+  color: #000000;
+}
+@media (min-width: 1200px) {
+  .section-rich-text .majortitle {
+    font-size: 52px;
+  }
+}
+.section-rich-text .majortitle p {
+  margin-bottom: 0;
+}
 .section-rich-text .article .align-center {
   text-align: left;
 }
@@ -836,7 +858,7 @@ body {
   font-size: 16px;
   color: #E9E9F3;
   font-family: "Open Sans", sans-serif;
-  margin-bottom: 16px;
+  margin-bottom: 48px;
 }
 @media (min-width: 1200px) {
   .section-newsletter .section-signup .rte {
@@ -1492,23 +1514,25 @@ body {
 .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3 p {
   font-size: 36px;
   margin-bottom: 0;
+  line-height: 46px;
 }
 @media (min-width: 1200px) {
   .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3 p {
     font-size: 52px;
+    line-height: 68px;
   }
 }
 .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text p {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
-  line-height: 1.4;
+  line-height: 1;
   color: #000000;
 }
 @media (min-width: 1200px) {
   .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text p {
     font-size: 26px;
     width: 80%;
-    margin: 0 auto 50px;
+    margin: 0 auto 52px;
   }
 }
 .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper ul {
@@ -1972,10 +1996,23 @@ body {
     padding: inherit;
   }
 }
+.section-main-product .product-detail .detail.detail.product-column-right {
+  margin-top: 20px;
+}
+@media (min-width: 1200px) {
+  .section-main-product .product-detail .detail.detail.product-column-right {
+    margin-top: 0px;
+  }
+}
 .section-main-product .product-detail .detail .product-form .title-row .title {
-  font-size: 42px;
+  font-size: 24px;
   font-weight: 900;
   font-family: "Open Sans", sans-serif;
+}
+@media (min-width: 1200px) {
+  .section-main-product .product-detail .detail .product-form .title-row .title {
+    font-size: 42px;
+  }
 }
 .section-main-product .product-detail .detail .product-form .vendor a.underline {
   text-transform: uppercase;
@@ -2384,7 +2421,7 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: column;
-  padding-top: 20px;
+  padding-top: 60px;
 }
 @media (min-width: 1200px) {
   .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list {
@@ -2434,6 +2471,9 @@ body {
   color: #000000;
 }
 
+.section-apps .tikhop-shoptrade-block {
+  padding-bottom: 20px;
+}
 .section-apps .shopify-app-block .okeReviews .oke-w-header .oke-w-header-content .oke-w-header-content-block .oke-w-header-content-module .oke-w-ratingAverageModule .oke-w-ratingAverageModule-rating .oke-w-ratingAverageModule-rating-stars .oke-stars svg {
   width: 90px;
 }
@@ -2456,6 +2496,15 @@ body {
 }
 .section-apps .shopify-app-block .okeReviews .oke-w-main .oke-w-panel .oke-w-reviewsTab .oke-w-reviews .oke-w-reviews-main .oke-w-reviews-list .oke-w-reviews-list-item .oke-w-review-main .oke-w-review-content .oke-reviewContent .oke-reviewContent-top .oke-reviewContent-stars .oke-stars svg {
   width: 90px;
+}
+
+.template-product .section-rich-text .h1-style {
+  font-size: 36px;
+}
+@media (min-width: 1200px) {
+  .template-product .section-rich-text .h1-style {
+    font-size: 42px;
+  }
 }
 
 .chill-story-section .slider_wrapper {

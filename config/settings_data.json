@@ -1075,6 +1075,7 @@
           },
           "3a53285b-b585-4ee7-88e2-50a3057840fd": {
             "type": "menu-promotion-large",
+            "disabled": true,
             "settings": {
               "dropdown_link_title": "shop",
               "collection": "chill-flavoured-drops",
@@ -1451,7 +1452,7 @@
           "verification_block_header": "Are you over the age of 21?",
           "verification_block_description": "Please verify that you are 21 years of age or older to enter this site.",
           "button_text": "YES I’M 21+",
-          "button_color": "#6EC59F"
+          "button_color": "#6ec59f"
         }
       }
     },

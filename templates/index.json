@@ -5,7 +5,7 @@
       "settings": {
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4997f11a16bf4871b6e691543abcbd29.mp4",
         "subheading": "",
-        "title": "Cool <br> Calm &amp; <br>Carefree",
+        "title": "Cool <br> <span>Calm<\/span> &amp; <br>Carefree",
         "title_size": 112,
         "title_size_mobile": 50,
         "use_h1": true,
@@ -15,7 +15,7 @@
         "button_url_1": "https:\/\/chill.com\/collections\/shop",
         "button_label_2": "",
         "button_url_2": "",
-        "botton_bg": "#9792e4",
+        "botton_bg": "#6ec59f",
         "botton_text_color": "#ffffff",
         "text_alignment": "center left",
         "height_desktop": 700,
@@ -154,7 +154,7 @@
           "type": "image",
           "settings": {
             "icon_image": "shopify:\/\/shop_images\/Body.png",
-            "animate_image": "shopify:\/\/shop_images\/the-body-ring.png",
+            "animate_image": "shopify:\/\/shop_images\/The_body.png",
             "text": "<p><strong>How to Relax <\/strong><\/p><p><strong>Your <\/strong><\/p><p><strong>Body<\/strong><\/p>",
             "text_ordered_list": "<ul>\n<li>Spend time in nature<\/li>\n<li>Get enough sleep<\/li>\n<li>Go for a walk<\/li>\n<li>Try yoga<\/li>\n<li>Slow down and stretch<\/li>\n<\/ul>",
             "text_color": "#ffffff",
@@ -165,7 +165,7 @@
           "type": "image",
           "settings": {
             "icon_image": "shopify:\/\/shop_images\/Mind.png",
-            "animate_image": "shopify:\/\/shop_images\/the-mind-ring.png",
+            "animate_image": "shopify:\/\/shop_images\/The_mind.png",
             "text": "<p><strong>How to Calm <\/strong><\/p><p><strong>Your <\/strong><\/p><p><strong>Mind<\/strong><\/p>",
             "text_ordered_list": "<ul>\n<li>Focus on your breathing <\/li>\n<li>Talk about your problems<\/li>\n<li>Listen to your favorite songs<\/li>\n<li>Try meditation<\/li>\n<li>Do more of what you love<\/li>\n<\/ul>",
             "text_color": "#ffffff",
@@ -209,13 +209,13 @@
           "type": "tabs-content",
           "settings": {
             "image_one": "shopify:\/\/shop_images\/Tapioca.png",
-            "heading_one": "Tapioca Syrup",
+            "heading_one": "01. Tapioca Syrup",
             "text_one": "<p>Organic Tapioca Syrup is what makes our gummies so special. It’s this natural, vegan-friendly binding agent that gives that signature chewy texture.<\/p>",
             "image_two": "shopify:\/\/shop_images\/Pineapple_2.png",
-            "heading_two": "Natural Pineapple",
+            "heading_two": "02. Natural Pineapple",
             "text_two": "<p>This delicious and nutrient-rich tropical fruit is the sweet sensation that lends its fresh, juicy flavor to our vegan friendly CBD gummies.<\/p>",
             "image_three": "shopify:\/\/shop_images\/CBD_isolate.png",
-            "heading_three": "CBD isolate",
+            "heading_three": "03. CBD isolate",
             "text_three": "<p>Our premium CBD isolate is sourced from natural hemp to provide all the benefits of cannabidiol with zero THC and no psychoactive effects. <\/p>",
             "button_label": "Explore Products",
             "button_link": "shopify:\/\/collections\/cbd-gummies",
@@ -227,13 +227,13 @@
           "type": "tabs-content",
           "settings": {
             "image_one": "shopify:\/\/shop_images\/Lavendar.png",
-            "heading_one": "Lavender",
+            "heading_one": "01. Lavender",
             "text_one": "<p>Our fragrant lavender burns smoothly and produces a sweet floral scent for a perfectly relaxing moment of aromatherapy.<\/p>",
             "image_two": "shopify:\/\/shop_images\/Lobelia.png",
-            "heading_two": "Lobelia",
+            "heading_two": "02. Lobelia",
             "text_two": "<p>Native to the luscious valleys of North America, Lobelia is also known as Indian Tobacco and is sometimes used as an alternative to nicotine. <\/p>",
             "image_three": "shopify:\/\/shop_images\/CBD_isolate.png",
-            "heading_three": "CBD Isolate",
+            "heading_three": "03. CBD Isolate",
             "text_three": "<p>Our premium CBD isolate is sourced from natural hemp to provide all the benefits of cannabidiol with zero THC and no psychoactive effects. <\/p>",
             "button_label": "Explore Products",
             "button_link": "shopify:\/\/collections\/cbd-smokes-club-chill",
@@ -245,13 +245,13 @@
           "type": "tabs-content",
           "settings": {
             "image_one": "shopify:\/\/shop_images\/monk_fruit.png",
-            "heading_one": "Monk fruit",
+            "heading_one": "01. Monk fruit",
             "text_one": "<p>This subtly sweet exotic fruit extract contains natural sugars and a unique antioxidant profile that elevates the delicious flavors of our chew pouches. <\/p>",
             "image_two": "shopify:\/\/shop_images\/Coconut.png",
-            "heading_two": "Coconut Fiber",
+            "heading_two": "02. Coconut Fiber",
             "text_two": "<p>Often known as coconut coir, this CBD-infused filler provides an unbeatable smooth flavor for a satisfying chew like no other. <\/p>",
             "image_three": "shopify:\/\/shop_images\/CBD_isolate.png",
-            "heading_three": "CBD isolate",
+            "heading_three": "03. CBD isolate",
             "text_three": "<p>Our premium CBD isolate is sourced from natural hemp to provide all the benefits of cannabidiol with zero THC and no psychoactive effects.<\/p>",
             "button_label": "Explore Products",
             "button_link": "shopify:\/\/collections\/cbd-pouches",
@@ -282,7 +282,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Collections-Gummies.jpg",
             "collection": "cbd-gummies",
-            "title": "Icon title"
+            "title": ""
           }
         },
         "2419f036-9d7b-4f0b-b113-5c1eaaa9acc3": {
@@ -290,7 +290,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Collections-Pouch.jpg",
             "collection": "cool-mint",
-            "title": "Icon title"
+            "title": ""
           }
         },
         "3b6372a0-4677-429a-bf82-20402b224607": {
@@ -298,15 +298,15 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Collections-Smokes.jpg",
             "collection": "cbd-smokes",
-            "title": "Icon title"
+            "title": ""
           }
         },
         "12b2d340-74f6-4e2b-a23d-d4653ee7e087": {
           "type": "collection-image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Collections-Vape.jpg",
-            "collection": "chill-flavoured-drops",
-            "title": "Icon title"
+            "image": "shopify:\/\/shop_images\/US_-Collections_-_Coming_Soon.jpg",
+            "collection": "coming-soon",
+            "title": "Coming Soon"
           }
         }
       },
@@ -321,63 +321,6 @@
         "show_view_all": true
       }
     },
-    "1660761909160f340c": {
-      "type": "custom-row",
-      "disabled": true,
-      "blocks": {
-        "1660761909d33bb964-0": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "width": "half",
-            "image_position": "center center",
-            "height": "adapt",
-            "height_desktop": 600,
-            "height_mobile": 500,
-            "subheading": "Subheading",
-            "title": "Tell your story",
-            "text": "<p>Pair text with an image to tell a story<\/p>",
-            "enlarge_text": false,
-            "button_label": "",
-            "image_link": "",
-            "text_alignment": "center center",
-            "mobile_overlay_under": false,
-            "overlay_style": "shadow"
-          }
-        },
-        "1660761909d33bb964-1": {
-          "type": "text",
-          "settings": {
-            "width": "half",
-            "subheading": "",
-            "title": "Welcome",
-            "text": "<p>Use this text to share information about your store with your customers.<\/p><p>Describe products, share announcements, or welcome customers to your store.<\/p>",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "primary",
-            "text_alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "1660761909d33bb964-0",
-        "1660761909d33bb964-1"
-      ],
-      "settings": {
-        "alignment": "middle"
-      }
-    },
-    "1660761859754b018d": {
-      "type": "collection-list",
-      "disabled": true,
-      "settings": {
-        "title": "Collection list",
-        "enable_carousel": false,
-        "grid": 4,
-        "use_alt_bg": true,
-        "full_width": true
-      }
-    },
     "16618284517e50f27f": {
       "type": "home_testimonials",
       "blocks": {
@@ -385,9 +328,9 @@
           "type": "testimonial",
           "settings": {
             "product": "chill-cbd-gummies-10mg",
-            "testimonial": "“ Day 3 of them for me and I’m feeling a bit more…woosaba! I do wish there wasn’t so much sugar on the outside but it definitely won’t stop me from purchasing in the future! ”",
-            "author": "Raymond B.",
-            "author_designation": "Verified customer",
+            "testimonial": "“ I was #sponsored by Chill and received these tropical CBD gummies to try out for my honest opinion on them. I had my choice of tropical or berry, I chose tropical and they are great! There is pineapple and passionfruit flavors and the gummies themselves have a nice smooth texture and melt nicely in your mouth. I like that they are 100% THC free, so you don't have to worry about drug tests also. My only complaint is the child proof lid, it's very difficult to open and I needed assistance. @chill_cbd #livingchill”",
+            "author": "Christel S.",
+            "author_designation": "Verified Buyer",
             "image": "shopify:\/\/shop_images\/Customer_story_1.jpg",
             "link": ""
           }
@@ -396,9 +339,9 @@
           "type": "testimonial",
           "settings": {
             "product": "chill-hemp-smokes-carton-original",
-            "testimonial": "“ Day 3 of them for me and I’m feeling a bit more…woosaba! I do wish there wasn’t so much sugar on the outside but it definitely won’t stop me from purchasing in the future! ”",
-            "author": "Raymond A.",
-            "author_designation": "Verified customer",
+            "testimonial": "“ I love these CBD smoke products. I habe one in the morning and have notice an increase in focus and and more effective multi-tasking. I smoke one at night torelax my mind and it helps me fall asleep easy.”",
+            "author": "Brian S.",
+            "author_designation": "Verified Buyer",
             "image": "shopify:\/\/shop_images\/Customer_story_2.jpg",
             "link": ""
           }
@@ -415,77 +358,9 @@
         "use_alt_bg": true
       }
     },
-    "1660761962f1d04537": {
-      "type": "testimonials",
-      "disabled": true,
-      "blocks": {
-        "1660761962385b2a54-0": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
-            "author": "Author's name",
-            "image": "shopify:\/\/shop_images\/Customer_story_1.jpg",
-            "image_alignment": "center center",
-            "image_caption": "",
-            "link": ""
-          }
-        },
-        "1660761962385b2a54-1": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
-            "author": "Author's name",
-            "image": "shopify:\/\/shop_images\/Customer_story_2.jpg",
-            "image_alignment": "center center",
-            "image_caption": "",
-            "link": ""
-          }
-        },
-        "f50f9e75-d253-4197-ad91-18b99ca2951f": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
-            "author": "Author's name",
-            "image_alignment": "center center",
-            "image_caption": "",
-            "link": ""
-          }
-        },
-        "371eea1b-23d0-4b5e-9174-20162bcd9d67": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
-            "author": "Author's name",
-            "image_alignment": "center center",
-            "image_caption": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "1660761962385b2a54-0",
-        "1660761962385b2a54-1",
-        "f50f9e75-d253-4197-ad91-18b99ca2951f",
-        "371eea1b-23d0-4b5e-9174-20162bcd9d67"
-      ],
-      "settings": {
-        "title": "Customer reviews",
-        "layout": "image-left",
-        "text_caps": false,
-        "quote_text_size": 30,
-        "quote_text_size_mobile": 20,
-        "image_shape": "square",
-        "use_alt_bg": false,
-        "autoplay": true,
-        "autoplay_speed": 5
-      }
-    },
     "16607619805b81a490": {
       "type": "logo-list",
+      "disabled": true,
       "blocks": {
         "15de9db7-b491-41e3-9563-da240363bc42": {
           "type": "logo",
@@ -557,6 +432,27 @@
         "use_alt_bg": false
       }
     },
+    "3dee64a8-71bf-4655-926f-2db509dcd6a5": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15968033865886__3dee64a8-71bf-4655-926f-2db509dcd6a5-1664953474fa2ec11e-0": {
+          "type": "heading",
+          "settings": {
+            "title": "<p>Experience <strong>@Chill<\/strong><\/p>",
+            "use_h1": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15968033865886__3dee64a8-71bf-4655-926f-2db509dcd6a5-1664953474fa2ec11e-0"
+      ],
+      "settings": {
+        "height": "small",
+        "text_alignment": "center",
+        "full_width": true,
+        "use_alt_bg": false
+      }
+    },
     "166453148629faf25b": {
       "type": "apps",
       "blocks": {
@@ -594,11 +490,9 @@
     "1661508210e5eab38e",
     "1661759224933bf819",
     "16616836322167cf31",
-    "1660761909160f340c",
-    "1660761859754b018d",
     "16618284517e50f27f",
-    "1660761962f1d04537",
     "16607619805b81a490",
+    "3dee64a8-71bf-4655-926f-2db509dcd6a5",
     "166453148629faf25b",
     "16607637867e64e5b3"
   ]
