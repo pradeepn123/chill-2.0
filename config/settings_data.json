@@ -1180,14 +1180,14 @@
             "type": "menu",
             "settings": {
               "title": "About",
-              "menu": "footer"
+              "menu": "new-about"
             }
           },
           "da48b0a2-76c5-48ad-8408-466f85f5c9b6": {
             "type": "menu",
             "settings": {
-              "title": "Partner",
-              "menu": "new-partner"
+              "title": "SHOP BY",
+              "menu": "new-shop-by-footer"
             }
           },
           "2d0ee29b-4c80-463c-89d8-952071761c9c": {
