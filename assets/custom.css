@@ -157,6 +157,51 @@
   padding-left: 0;
   padding-right: 0;
 }
+.mobile-navigation-drawer .navigation .navigation__tier-1-container .navigation__tier-1 .navigation__item .country_selector {
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.mobile-navigation-drawer .navigation .navigation__tier-1-container .navigation__tier-1 .navigation__item .country_selector #dropdown_linebreak.show {
+  display: block !important;
+}
+.mobile-navigation-drawer .navigation .navigation__tier-1-container .navigation__tier-1 .navigation__item .country_selector .dropdown-content {
+  display: none;
+}
+.mobile-navigation-drawer .navigation .navigation__tier-1-container .navigation__tier-1 .navigation__item .country_selector .dropbtn, .mobile-navigation-drawer .navigation .navigation__tier-1-container .navigation__tier-1 .navigation__item .country_selector .dropdown-content {
+  font-size: 18px;
+  font-weight: 600;
+}
+.mobile-navigation-drawer .navigation .navigation__tier-1-container .navigation__tier-1 .navigation__item .country_selector .feather-chevron-down {
+  position: absolute;
+  right: 7%;
+  cursor: pointer;
+}
+.mobile-navigation-drawer .navigation .navigation__tier-1-container .navigation__tier-1 .navigation__item .country_selector.active .dropdown-content {
+  display: block;
+}
+.mobile-navigation-drawer .navigation .navigation__tier-1-container .navigation__tier-1 .navigation__item .country_selector.active .feather-chevron-down {
+  transform: rotate(180deg);
+  transition: 0.5s all;
+}
+
+#main-nav.desktop-only .navigation .navigation__tier-1 .navigation__item .dropdown-content {
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #main-nav.desktop-only .navigation .navigation__tier-1 .navigation__item .country_selector.active #dropdown_linebreak.show {
+    display: none !important;
+  }
+  #main-nav.desktop-only .navigation .navigation__tier-1 .navigation__item .country_selector.active .dropdown-content {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    display: block !important;
+  }
+}
 
 .tikshop-shoptrade-wrapper-17bdc8b1-555f-4abb-98d9-dde254415202 {
   margin: 0 !important;
@@ -169,14 +214,49 @@
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
 }
+.pageheader .logo-area .logo-area__right .logo-area__right__inner {
+  height: 90px;
+}
 .pageheader .logo-area .logo-area__right .logo-area__right__inner a {
   font-size: 18px;
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
 }
-.pageheader .logo-area .logo-area__right .logo-area__right__inner .header-account-link, .pageheader .logo-area .logo-area__right .logo-area__right__inner .show-search-link {
+.pageheader .logo-area .logo-area__right .logo-area__right__inner .header-account-link, .pageheader .logo-area .logo-area__right .logo-area__right__inner .show-search-link, .pageheader .logo-area .logo-area__right .logo-area__right__inner .country_selector {
   margin-inline-end: 32px;
+}
+.pageheader .logo-area .logo-area__right .logo-area__right__inner .country_selector .dropbtn {
+  padding: 34px 0;
+}
+.pageheader .logo-area .logo-area__right .logo-area__right__inner .country_selector .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  top: 100%;
+  border: 1px solid #ddd;
+  z-index: 1;
+  cursor: pointer;
+}
+.pageheader .logo-area .logo-area__right .logo-area__right__inner .country_selector .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.pageheader .logo-area .logo-area__right .logo-area__right__inner .country_selector .dropdown-content a:hover {
+  background-color: #ddd;
+}
+.pageheader .logo-area .logo-area__right .logo-area__right__inner .country_selector:hover .dropdown-content {
+  display: block;
+}
+@media (max-width: 969px) {
+  .pageheader .logo-area .logo-area__right .logo-area__right__inner .country_selector {
+    display: none;
+  }
 }
 .pageheader .logo-area .logo-area__right .logo-area__right__inner .header-account-link {
   display: none;
@@ -184,7 +264,7 @@
 .pageheader .logo-area .logo-area__right .logo-area__right__inner .header-account-link .header-account-link__text {
   margin-inline-start: 10px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 969px) {
   .pageheader .logo-area .logo-area__right .logo-area__right__inner .header-account-link {
     display: block;
   }

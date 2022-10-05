@@ -209,6 +209,66 @@
                         }
                     }
                 }
+                .navigation__item{
+                    .country_selector{
+                        padding: 20px;
+                        width: 100%;
+                        position: relative;
+                        cursor: pointer;
+                        #dropdown_linebreak.show{
+                            display: block !important;
+                        }
+                        .dropdown-content{
+                            display: none;
+                        }
+                        .dropbtn, .dropdown-content{
+                            font-size: 18px;
+                            font-weight: 600;
+                        }
+                        .feather-chevron-down{
+                            position: absolute;
+                            right: 7%;
+                            cursor: pointer;
+                        }
+                    }
+                    .country_selector.active{
+                        .dropdown-content{
+                            display: block;
+                        }
+                        .feather-chevron-down{
+                            transform: rotate(180deg);
+                            transition: 0.5s all;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+#main-nav.desktop-only{
+    .navigation{
+        .navigation__tier-1{
+            .navigation__item{
+                .dropdown-content{
+                    display: none;                    
+                }               
+                @media (min-width: 768px) and (max-width: 1024px){
+                    .country_selector.active{
+                        #dropdown_linebreak.show{
+                            display: none !important;
+                        }
+                        .dropdown-content{
+                            position: absolute;
+                            top: 100%;
+                            width: 100%;
+                            background: #fff;
+                            padding: 20px;
+                            display: block !important;
+                        }
+                    }
+                }
             }
         }
     }
