@@ -27,80 +27,95 @@
                   {% endif %}
                 {% endfor %}
                 <div class="cart-drawer-summary-item-container" data-product-id="{{ item.id }}">
-                  <div class="cart-drawer-summary-item">
-                    <div class="cart-drawer-summary-item__image" id="cart-drawer-item-image-{{ item.id }}">
-                      <a href="{% if has_subscriptions %}{{ item.product.metafields.subscriptions.original_handle | json }}{% else %}{{ item.url }}{% endif %}">
-                        {% render 'responsive-image', image: item.image %}
-                      </a>
-                    </div>
-                    <div class="cart-drawer-summary-item__detail">
-                      <div class="cart-drawer-summary-item__title-variant">
-                        <a
-                          class="cart-drawer-summary-item__title"
-                          href="{% if has_subscriptions %}{{ item.product.metafields.subscriptions.original_handle | json }}{% else %}{{ item.url }}{% endif %}">
-                          {{ item.product.title | replace: "Auto renew", "" | replace: "10.00% Off", "" }}
-                        </a>        
-                        {% if item.product.variants.size > 1 %}
-                          <span class="variant">{{ item.variant.title }}</span>
-                        {% elsif show_single_variant_details %}
-                          {% unless item.product.has_only_default_variant %}
-                            <span class="variant">{{ item.variant.title }}</span>
-                          {% endunless %}
-                        {% endif %}
-                        {% if item.selling_plan_allocation %}
-                          <div class="cart-drawer-summary-item__variant">{{ item.selling_plan_allocation.selling_plan.name }}</div>
-                        {% endif %}
-                      </div>
-                      {% if item.line_level_discount_allocations.size > 0 %}
-                        <ul class="cart-drawer-discount-list align-right">
-                        {% for discount_allocation in item.line_level_discount_allocations %}
-                          <li class="cart-drawer-discount cart-drawer-discount--inline cart-drawer-discount--flex">
-                            <span class="cart-drawer-discount__label">{{ discount_allocation.discount_application.title }}</span>
-                            <span class="cart-drawer-discount__amount theme-money">{% render 'price', price: discount_allocation.amount, disable_currency_code: true %}</span>
-                          </li>
-                        {% endfor %}
-                        </ul>
-                      {% endif %}
-
-                      {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' and item.variant.inventory_quantity <= item.quantity %}
-                        {% assign can_increase = false %}
-                      {% else %}
-                        {% assign can_increase = true %}
-                      {% endif %}
-                      <div class="cart-item__column cart-item__quantity cart-drawer-summary-item__quantity">
-                        <div class="quantity buttoned-input">
-                          <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 1 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}</a>
-                          <input
-                            class="cart-item__quantity-input"
-                            type="text"
-                            size="2"
-                            id="updates_{{ forloop.index }}"
-                            name="updates[]"
-                            value="{{ item.quantity }}"
-                            data-initial-value="{{ item.quantity }}"
-                            data-line="{{ forloop.index }}"
-                            {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' %}data-max="{{ item.variant.inventory_quantity }}"{% endif %}
-                            aria-label="{{ 'cart.general.quantity' | t | escape }}" />
-                          <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}</a>
-                        </div>
-                        <a class="remove" data-line="{{ forloop.index }}" href="#">
-                          {{ 'cart.general.remove' | t }}
+                  <div class="cart-drawer-summary-item-wrapper">
+                    <div class="cart-drawer-summary-item">
+                      <div class="cart-drawer-summary-item__image" id="cart-drawer-item-image-{{ item.id }}">
+                        <a href="{% if has_subscriptions %}{{ item.product.metafields.subscriptions.original_handle | json }}{% else %}{{ item.url }}{% endif %}">
+                          {% render 'responsive-image', image: item.image %}
                         </a>
                       </div>
+                      <div class="cart-drawer-summary-item__detail">
+                        <div class="cart-drawer-summary-item__title-variant">
+                          <a
+                            class="cart-drawer-summary-item__title"
+                            href="{% if has_subscriptions %}{{ item.product.metafields.subscriptions.original_handle | json }}{% else %}{{ item.url }}{% endif %}">
+                            {{ item.product.title | replace: "Auto renew", "" | replace: "10.00% Off", "" }}
+                          </a>        
+                          {% if item.product.variants.size > 1 %}
+                            <span class="variant">{{ item.variant.title }}</span>
+                          {% elsif show_single_variant_details %}
+                            {% unless item.product.has_only_default_variant %}
+                              <span class="variant">{{ item.variant.title }}</span>
+                            {% endunless %}
+                          {% endif %}
+                          {% if item.selling_plan_allocation %}
+                            <div class="cart-drawer-summary-item__variant">{{ item.selling_plan_allocation.selling_plan.name }}</div>
+                          {% endif %}
+                        </div>
+                        {% if item.line_level_discount_allocations.size > 0 %}
+                          <ul class="cart-drawer-discount-list align-right">
+                          {% for discount_allocation in item.line_level_discount_allocations %}
+                            <li class="cart-drawer-discount cart-drawer-discount--inline cart-drawer-discount--flex">
+                              <span class="cart-drawer-discount__label">{{ discount_allocation.discount_application.title }}</span>
+                              <span class="cart-drawer-discount__amount theme-money">{% render 'price', price: discount_allocation.amount, disable_currency_code: true %}</span>
+                            </li>
+                          {% endfor %}
+                          </ul>
+                        {% endif %}
+
+                        {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' and item.variant.inventory_quantity <= item.quantity %}
+                          {% assign can_increase = false %}
+                        {% else %}
+                          {% assign can_increase = true %}
+                        {% endif %}
+                        <div class="cart-item__column cart-item__quantity cart-drawer-summary-item__quantity">
+                          <div class="quantity buttoned-input">
+                            <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 1 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}</a>
+                            <input
+                              class="cart-item__quantity-input"
+                              type="text"
+                              size="2"
+                              id="updates_{{ forloop.index }}"
+                              name="updates[]"
+                              value="{{ item.quantity }}"
+                              data-initial-value="{{ item.quantity }}"
+                              data-line="{{ forloop.index }}"
+                              {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' %}data-max="{{ item.variant.inventory_quantity }}"{% endif %}
+                              aria-label="{{ 'cart.general.quantity' | t | escape }}" />
+                            <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}</a>
+                          </div>
+                          <a class="remove" data-line="{{ forloop.index }}" href="#">
+                            {{ 'cart.general.remove' | t }}
+                          </a>
+                        </div>
+                      </div>
+                      <div class="cart-drawer-summary-item__price">
+                        {% if item.original_line_price != item.final_line_price %}
+                          <span class="reduced-price cart-drawer-summary-item__price-current theme-money">{% render 'price', price: item.final_line_price, disable_currency_code: true %}</span>
+                          <span class="theme-money struck-out-price">{% render 'price', price: item.original_line_price, disable_currency_code: true %}</span>
+                        {% elsif item.variant.compare_at_price != blank and item.variant.price < item.variant.compare_at_price %}
+                          <span class="reduced-price cart-drawer-summary-item__price-current theme-money">{% render 'price', price: item.final_line_price, disable_currency_code: true %}</span>
+                          {%- assign total_price = item.variant.compare_at_price | times: item.quantity -%}
+                          <span class="theme-money struck-out-price">{% render 'price', price: total_price, disable_currency_code: true %}</span>
+                        {% else %}
+                          <span class="cart-drawer-summary-item__price-current theme-money">{% render 'price', price: item.final_line_price, disable_currency_code: true %}</span>
+                        {% endif %}
+                        {% render 'unit-price', variant: item %}
+                      </div>
                     </div>
-                    <div class="cart-drawer-summary-item__price">
-                      {% if item.original_line_price != item.final_line_price %}
-                        <span class="reduced-price cart-drawer-summary-item__price-current theme-money">{% render 'price', price: item.final_line_price, disable_currency_code: true %}</span>
-                        <span class="theme-money struck-out-price">{% render 'price', price: item.original_line_price, disable_currency_code: true %}</span>
-                      {% elsif item.variant.compare_at_price != blank and item.variant.price < item.variant.compare_at_price %}
-                        <span class="reduced-price cart-drawer-summary-item__price-current theme-money">{% render 'price', price: item.final_line_price, disable_currency_code: true %}</span>
-                        {%- assign total_price = item.variant.compare_at_price | times: item.quantity -%}
-                        <span class="theme-money struck-out-price">{% render 'price', price: total_price, disable_currency_code: true %}</span>
-                      {% else %}
-                        <span class="cart-drawer-summary-item__price-current theme-money">{% render 'price', price: item.final_line_price, disable_currency_code: true %}</span>
-                      {% endif %}
-                      {% render 'unit-price', variant: item %}
-                    </div>
+                    {% if has_subscriptions %}
+                      <div>Change</div>
+                    {% elsif item.product.metafields.subscriptions.shipping_interval_frequency %}
+                      <button
+                        type="button"
+                        class="upgrade-to-subscription"
+                        data-shipping_interval_frequency="{{product.metafields.subscriptions.shipping_interval_frequency}}"
+                        data-shipping_interval_unit_type="{{product.metafields.subscriptions.shipping_interval_unit_type}}"
+                        data-line="{{ forloop.index }}"
+                      >
+                        UPGRADE TO SUBSCRIPTION AND SAVE {{ item.product.metafields.subscriptions.discount_percentage }}%
+                      </button>
+                    {% endif %}
                   </div>
                 </div>
               {% endfor %}

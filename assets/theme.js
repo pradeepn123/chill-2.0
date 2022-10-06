@@ -5914,7 +5914,19 @@
 
       $(document).on('theme:cartDrawer:open', theme.openDrawerCart.bind(this))
       $(document).on('theme:cartDrawer:close', theme.closeDrawerCart.bind(this))
-      $(container).on('submit.cartTemplateSection', '.cart-drawer-form--checkout', theme.handleCheckoutSubmission)
+      $(container).on('submit.cartDrawerTemplateSection', '.cart-drawer-form--checkout', theme.handleCheckoutSubmission)
+      $(container).on('click.cartDrawerTemplateSection', '.upgrade-to-subscription', function(evt) {
+        if (this.replacingContent) {
+          return;
+        }
+        this.functions.updateCart.call(this, {
+          line: $(evt.currentTarget).data('line'),
+          properties: {
+            shipping_interval_unit_type: evt.currentTarget.dataset.shipping_interval_unit_type,
+            shipping_interval_frequency: evt.currentTarget.dataset.shipping_interval_frequency
+          }
+        }, function () {});
+      }.bind(this))
 
       $('.cart-link').on('click', function (e) {
         document.dispatchEvent(new CustomEvent('theme:cartDrawer:open', { bubbles: true, cancelable: false }));
