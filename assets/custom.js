@@ -12,6 +12,7 @@ function updateContainer() {
     );
   }
 }
+
 function scrollAbout(){
   if ($(window).width() >= 1200 ){
     //our story value scoll
@@ -29,6 +30,7 @@ var videoBlog = $(".chill-videos-item");
   item.addEventListener('mouseover', hoverVideo.bind(item,index), false);
   item.addEventListener('mouseout', hideVideo.bind(item,index), false);    
 });
+
 function hoverVideo(index, e) {  
   this.querySelector('.video_image_container').style.display = "none";
   this.querySelector('.play_overlay').style.display = "block";
@@ -37,6 +39,7 @@ function hoverVideo(index, e) {
   var player = $f(iframes); 
   player.api('play');  
 }
+
 function hideVideo(index, e) {    
   this.querySelector('.video_image_container').style.display = "block";
   this.querySelector('.play_overlay').style.display = "none";
@@ -45,7 +48,6 @@ function hideVideo(index, e) {
   var player = $f(iframes);     
   player.api('pause');
 }
-
 
 $(document).ready(function () {  
   let items = document.querySelectorAll('.menu-mega-nav li');
