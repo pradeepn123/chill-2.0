@@ -104,6 +104,7 @@
                       </div>
                     </div>
                     {% if has_subscriptions %}
+                      {% assign shipping_interval_frequencies = subscription_product.shipping_interval_frequency | split: ',' | default: 30 %}
                       <div>Change</div>
                     {% elsif item.product.metafields.subscriptions.shipping_interval_frequency %}
                       <button

@@ -5919,11 +5919,12 @@
         if (this.replacingContent) {
           return;
         }
+        var shippingIntervalFrequency = evt.currentTarget.dataset.shipping_interval_frequency.split(",")
         this.functions.updateCart.call(this, {
           line: $(evt.currentTarget).data('line'),
           properties: {
             shipping_interval_unit_type: evt.currentTarget.dataset.shipping_interval_unit_type,
-            shipping_interval_frequency: evt.currentTarget.dataset.shipping_interval_frequency
+            shipping_interval_frequency: shippingIntervalFrequency[0]
           }
         }, function () {});
       }.bind(this))
