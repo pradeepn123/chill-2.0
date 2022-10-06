@@ -111,7 +111,12 @@
               </div>
             </form>
           </div>
-          <form class="cart-drawer-form cart-drawer-form--checkout cart-drawer-form--checkout--sticky-{{ section.settings.checkout_sticky_form }}" {% unless has_recharge_subscriptions %}action="{{ routes.cart_url }}" method="post" {% endunless %}>
+          <form class="cart-drawer-form cart-drawer-form--checkout cart-drawer-form--checkout--sticky-{{ section.settings.checkout_sticky_form }}"
+            action="{{ routes.cart_url }}" method="post"
+            data-has_recharge_subscriptions="{{has_recharge_subscriptions}}"
+            data-checkout-domain="{{ shop.metafields.subscriptions.checkout_domain | default: 'checkout.rechargeapps.com' }}"
+            data-permanent-domain="{{ shop.permanent_domain }}"
+          >
             <div class="cart-drawer-form--non-stick cart-drawer-summary__section">
               <div class="cart-drawer-summary__subtotal {% if section.settings.enable_cart_notes == blank and section.settings.show_tax_and_shipping == false %}cart-drawer-summary__subtotal--sm-bottom{% endif %}">
                 <span class="cart-drawer-summary__subtotal-label">{{ 'cart.general.subtotal' | t }}</span>
@@ -134,15 +139,19 @@
               <div class="cart-drawer-policies rte cart-drawer-summary__section--compact">{{ taxes_shipping_checkout }}</div>
             </div>
             <div class="cart-drawer-summary__buttons cart-drawer-summary__section border-bottom">
-              {% if has_recharge_subscriptions %}
-                <button type="button" name="checkout" class="recharge_checkout_btn btn wide button button--large checkout_btn">
+              {%- if has_recharge_subscriptions -%}
+                <button
+                  type="submit"
+                  name="checkout"
+                  class="recharge_checkout_btn btn wide button button--large checkout_btn"
+                >
                   <span class="button-text">{{ 'cart.general.checkout' | t }}</span>
                 </button>
-              {% else %}
+              {%- else -%}
                 <button type="submit" name="checkout" class="btn wide button button--large checkout_btn" data-disable-recharge>
                   <span class="button-text">{{ 'cart.general.checkout' | t }}</span>
                 </button>
-              {% endif %}
+              {%- endif -%}
             </div>
           </form>
         {% else %}

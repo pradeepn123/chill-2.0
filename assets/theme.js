@@ -3398,26 +3398,48 @@
     $('#cart-drawer-backdrop')
     .fadeIn(100)
     .on("click", theme.closeDrawerCart.bind(theme))
-
-//    $(document).on('click.cartTemplateSection', '.quantity-down, .quantity-up', function (evt) {
-//      var $input = $(this).closest('.quantity').find('input'),
-//      step = $input.attr('step') ? parseInt($input.attr('step')) : 1;
-//      if ($(this).hasClass('quantity-down')) {
-//        $input.val(parseInt($input.val()) - step).trigger('changeFromButton', { data: this });
-//      } else {
-//        $input.val(parseInt($input.val()) + step).trigger('changeFromButton', { data: this });
-//      }
-//      return false;
-//    });
-
-    theme.cartNoteMonitor.load($('.checkout-note [name="note"]', cartSummary));
   };
+
+  theme.handleCheckoutSubmission = function (evt) {
+    // Build the Checkout URL
+    evt.preventDefault();
+    $(this).find(":submit").attr("disabled", "disabled")
+    .find(".button-text").html(`<span class="loading-spinner" style="width: 16px; height: 16px;"></span>`)
+    var checkoutUrl = '/checkout'
+    if (this.dataset.has_recharge_subscriptions == "true") {
+      // Do this in case of recharge only
+      var cartToken;
+      try {
+        cartToken = ['cart_token=' + (document.cookie.match('(^|; )cart=([^;]*)')||0)[2]];
+      } catch (e) {
+        cartToken = []
+      }
+      function get_ga_linker() {
+        // Build the ga_linker param for the URL generator
+        try {
+          return [ga.getAll()[0].get('linkerParam')];
+        } catch (e) {
+          return [];
+        }
+      }
+      checkoutUrl = 'https://' + this.dataset.checkoutDomain + '/r/checkout?',
+        url_params = [
+          'myshopify_domain=' + this.dataset.permanentDomain,
+        ];
+      url_params = url_params
+      .concat(cartToken)
+      .concat(get_ga_linker());
+      checkoutUrl = checkoutUrl + url_params.join('&');
+    }
+    window.location.href = checkoutUrl
+    return false
+  }
 
   theme.closeDrawerCart = function () {
     var cartSummary = document.querySelector("#cart-drawer-summary")
     cartSummary.classList.remove("cart-drawer-open")
     $('body').removeClass("cart-drawer-open")
-    theme.cartNoteMonitor.unload($('.checkout-note [name="note"]', cartSummary));
+
     $('#cart-drawer-backdrop')
     .fadeOut(100)
     .off("click", theme.closeDrawerCart.bind(theme))
@@ -5864,9 +5886,6 @@
             // after update, set focus
             $('#' + toFocusId).focus();
           });
-
-          // Note here
-
         }.bind(this));
 
         $(container).on('click.cartDrawerTemplateSection', '.quantity-down, .quantity-up', function (evt) {
@@ -5895,6 +5914,7 @@
 
       $(document).on('theme:cartDrawer:open', theme.openDrawerCart.bind(this))
       $(document).on('theme:cartDrawer:close', theme.closeDrawerCart.bind(this))
+      $(container).on('submit.cartTemplateSection', '.cart-drawer-form--checkout', theme.handleCheckoutSubmission)
 
       $('.cart-link').on('click', function (e) {
         document.dispatchEvent(new CustomEvent('theme:cartDrawer:open', { bubbles: true, cancelable: false }));
@@ -5902,7 +5922,7 @@
         return false
       })
 
-      theme.cartNoteMonitor.load($('.checkout-note [name="note"]', container));
+      theme.cartNoteMonitor.load($('.cart-drawer-summary__notes [name="note"]', container));
 
       $(container).on('click.cartDrawerTemplateSection', 'button[data-toggle-shipping]', function () {
         $('#shipping-calculator').toggle();
@@ -5993,7 +6013,7 @@
     this.onSectionUnload = function (container) {
       $(document).off('.cartDrawerTemplateSection');
       $(container).off('.cartDrawerTemplateSection');
-      theme.cartNoteMonitor.unload($('.checkout-note [name="note"]', container));
+      theme.cartNoteMonitor.unload($('.cart-drawer-summary__notes [name="note"]', container));
     };
   }();
 
