@@ -3281,21 +3281,22 @@
           return false;
         }
 
+        var shopifyAjaxAddURL = theme.routes.cart_add_url;
+        //Disable add button
+        $form.find('button[type="submit"]').attr('disabled', 'disabled').each(function () {
+          $(this).data('previous-value', $(this).val());
+        }).val(theme.strings.products_product_adding_to_cart);
+
         // Ajax-add
         if (theme.settings.cart_type === 'message' && $formContainer.is('[data-ajax-add-to-cart="true"]')) {
           evt.preventDefault();
-
-          var shopifyAjaxAddURL = theme.routes.cart_add_url;
-
-          //Disable add button
-          $form.find('button[type="submit"]').attr('disabled', 'disabled').each(function () {
-            $(this).data('previous-value', $(this).val());
-          }).val(theme.strings.products_product_adding_to_cart);
-
           theme.removeAddedCartMessage();
 
           //Add to cart
           var formData = new FormData($form[0]);
+          if ($form.find(".original-selector").val() != $form.find("[name=id]").val()) {
+            formData.set("id", $form.find(".original-selector").val())
+          }
           formData.append('sections', 'cart-message');
           $.post(shopifyAjaxAddURL, new URLSearchParams(formData).toString(), theme.addedToCartHandler.bind($form), 'json').fail(function (data) {
             //Enable add button
@@ -3316,15 +3317,11 @@
         } else if (theme.settings.cart_type === "drawer" && $formContainer.is('[data-ajax-add-to-cart="true"]')) {
           evt.preventDefault();
 
-          var shopifyAjaxAddURL = theme.routes.cart_add_url;
-
-          //Disable add button
-          $form.find('button[type="submit"]').attr('disabled', 'disabled').each(function () {
-            $(this).data('previous-value', $(this).val());
-          }).val(theme.strings.products_product_adding_to_cart);
-
           //Add to cart
           var formData = new FormData($form[0]);
+          if ($form.find(".original-selector").val() != $form.find("[name=id]").val()) {
+            formData.set("id", $form.find(".original-selector").val())
+          }
           formData.append('sections', 'cart-drawer');
           $.post(shopifyAjaxAddURL, new URLSearchParams(formData).toString(), theme.addedToCartHandler.bind($form), 'json').fail(function (data) {
             //Enable add button
