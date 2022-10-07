@@ -26,7 +26,7 @@
         "text_alignment": "center center",
         "full_width": true,
         "mobile_overlay_under": false,
-        "overlay_style": "no_background"
+        "overlay_style": "shadow"
       }
     },
     "main": {
@@ -39,7 +39,7 @@
         "show_excerpts": true,
         "show_article_tags": false,
         "show_sharing_icons": true,
-        "show_rss_icon": false,
+        "show_rss_icon": true,
         "crop_image": true,
         "crop_style": "1-1"
       }
