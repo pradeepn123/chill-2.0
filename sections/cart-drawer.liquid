@@ -34,7 +34,7 @@
                   <div class="cart-drawer-summary-item-wrapper">
                     <div class="cart-drawer-summary-item">
                       <div class="cart-drawer-summary-item__image" id="cart-drawer-item-image-{{ item.id }}">
-                        <a href="{% if has_subscriptions %}{{ item.product.metafields.subscriptions.original_handle | json }}{% else %}{{ item.url }}{% endif %}">
+                        <a href="{{ item.url }}">
                           {% render 'responsive-image', image: item.image %}
                         </a>
                       </div>
@@ -42,7 +42,7 @@
                         <div class="cart-drawer-summary-item__title-variant">
                           <a
                             class="cart-drawer-summary-item__title"
-                            href="{% if has_subscriptions %}{{ item.product.metafields.subscriptions.original_handle | json }}{% else %}{{ item.url }}{% endif %}">
+                            href="{{ item.url }}">
                             {{ item.product.title | replace: "Auto renew", "" | replace: "10.00% Off", "" }}
                           </a>        
                           {% if item.product.variants.size > 1 %}
@@ -97,8 +97,8 @@
                         {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}
                           {%- liquid
                             assign percentage = item.product.metafields.subscriptions.discount_percentage | divided_by: 100
-                            assign discountedPrice = item.price | times: percentage
-                            assign finalDiscountedPrice = item.price | minus: discountedPrice
+                            assign discountedPrice = item.final_line_price | times: percentage
+                            assign finalDiscountedPrice = item.final_line_price | minus: discountedPrice
                           -%}
                           {% assign subtotal = subtotal | plus : finalDiscountedPrice %}
                           <span class="cart-drawer-summary-item__price-current theme-money">
@@ -140,7 +140,7 @@
                           </div>
                         {% endif %}
                       </div>
-                    {% elsif item.product.metafields.subscriptions.shipping_interval_frequency %}
+                    {% elsif item.product.metafields.subscriptions.shipping_interval_frequency and item.product.metafields.subscriptions.discount_percentage %}
                       <button
                         type="button"
                         class="upgrade-to-subscription"
