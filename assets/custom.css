@@ -5333,6 +5333,16 @@ body.cart-drawer-open {
   background-position-x: 96%;
   background-size: 20px;
 }
+.cart-drawer-summary .cart-drawer-summary__inner .upgraded-sub-selection .drawer-shipping-interval-1 {
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #000;
+  border-radius: 4rem;
+  padding: 12px 25px;
+  width: 100%;
+  margin: 12px 0;
+  color: #000000;
+}
 .cart-drawer-summary .cart-drawer-summary__inner .upgrade-to-subscription {
   border: 2px solid #9792E4;
   color: #9792E4;

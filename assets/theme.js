@@ -5956,8 +5956,7 @@
           type: 'GET',
           url: location.origin + '?sections=cart-drawer',
           success: function (data) {
-            console.log(data)
-            var toReplace = ['.cart-drawer-summary__item-list', '.cart-drawer-form--checkout'];
+            var toReplace = ['.cart-drawer-summary__item-list', '.cart-drawer-form--checkout', '.cart_item_count'];
             var $newDom = $(data['cart-drawer'])
 
             // remove any transitions
