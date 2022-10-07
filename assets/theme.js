@@ -5963,17 +5963,26 @@
             $newDom.find('.fade-in').removeClass('fade-in');
             $newDom.find('[data-cc-animate]').removeAttr('data-cc-animate');
 
-            for (var i = 0; i < toReplace.length; i++) {
+            var listExists = this.$container.find('.cart-drawer-summary__item-list')
+            if (listExists.length > 0) {
+              for (var i = 0; i < toReplace.length; i++) {
+                this.replacingContent = true; // to avoid triggering change events when focus is lifted before DOM replacement
+                var $toReplace = this.$container.find(toReplace[i]),
+                $replaceWith = $newDom.find(toReplace[i]);
+                // preserve loaded images
+                $replaceWith.find('.cart-drawer-summary-item__image').each(function () {
+                  var $match = $toReplace.find('#' + this.id);
+                  if ($match.length) {
+                    $(this).replaceWith($match.clone());
+                  }
+                });
+                $toReplace.replaceWith($replaceWith);
+                this.replacingContent = false;
+              }
+            } else {
               this.replacingContent = true; // to avoid triggering change events when focus is lifted before DOM replacement
-              var $toReplace = this.$container.find(toReplace[i]),
-              $replaceWith = $newDom.find(toReplace[i]);
-              // preserve loaded images
-              $replaceWith.find('.cart-drawer-summary-item__image').each(function () {
-                var $match = $toReplace.find('#' + this.id);
-                if ($match.length) {
-                  $(this).replaceWith($match.clone());
-                }
-              });
+              var $toReplace = this.$container.find('.cart-drawer-summary__inner'),
+              $replaceWith = $newDom.find('.cart-drawer-summary__inner');
               $toReplace.replaceWith($replaceWith);
               this.replacingContent = false;
             }
@@ -6499,7 +6508,7 @@
 
       // listen to cart changes
       $(document).on('theme:cartchanged.headerSection', function () {
-        $.getJSON(location.origin + '?sections=header,cart-drawer', function (data) {
+        $.getJSON(location.origin + '?sections=header', function (data) {
           var cartSummarySelectors = ['#pageheader .logo-area__right__inner'];
           for (var i = 0; i < cartSummarySelectors.length; i++) {
             var $newCartObj = $('<div>' + data.header + '</div>').find(cartSummarySelectors[i]).first();
