@@ -165,17 +165,6 @@
             "video_type": "Experience"
           }
         },
-        "aad4f506-e1c6-4635-9b4e-03dd4b988298": {
-          "type": "image-video",
-          "settings": {
-            "video": "https:\/\/player.vimeo.com\/video\/701415930?h=9f3167f810&background=1&autoplay=0",
-            "placeholder_image": "shopify:\/\/shop_images\/Screenshot_2022-09-05_at_4.30.48_PM.png",
-            "video_popup": "https:\/\/player.vimeo.com\/video\/701414909?h=92029361e1",
-            "video_heading": "Go Kart Races in Grand Junction, CO",
-            "video_subHeading": "<p>Chill CBD is essential for recovery in any landscape<\/p>",
-            "video_type": "Experience"
-          }
-        },
         "aa0e8cf1-d7d5-425c-bf91-3d727ce1646d": {
           "type": "image-video",
           "settings": {
@@ -268,7 +257,6 @@
       },
       "block_order": [
         "19a8757e-3702-4af2-82da-17767cea24db",
-        "aad4f506-e1c6-4635-9b4e-03dd4b988298",
         "aa0e8cf1-d7d5-425c-bf91-3d727ce1646d",
         "e321885e-43b5-426b-afd4-7e9e10800c59",
         "481b2f67-76bf-4351-8f09-84f7d650db1f",
