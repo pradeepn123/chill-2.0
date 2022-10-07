@@ -497,7 +497,7 @@ const featureProductSubscriptionUtil = (function () {
                         .querySelector(elUtil.subscriptionFrequencyInputEl)
                         .setAttribute(
                             'name',
-                            'properties[shipping_interval_frequency_type]'
+                            'properties[shipping_interval_frequency]'
                         );
                     formEl
                         .querySelector(elUtil.subscriptionUnitInputEl)
