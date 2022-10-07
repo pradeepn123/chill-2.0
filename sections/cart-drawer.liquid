@@ -70,7 +70,7 @@
                         {% endif %}
                         <div class="cart-item__column cart-item__quantity cart-drawer-summary-item__quantity">
                           <div class="quantity buttoned-input">
-                            <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 1 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}</a>
+                            <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down {% if item.quantity == 1 %}pointer-evt-none{% endif %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 1 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}</a>
                             <input
                               class="cart-item__quantity-input"
                               type="text"
@@ -106,11 +106,22 @@
                     {% if has_subscriptions %}
                       {% assign shipping_interval_frequencies = item.product.metafields.subscriptions.shipping_interval_frequency | split: ',' | default: 30 %}
                       <div class="upgraded-sub-selection">
-                        <select id="">
-                          <option value="">Delivery every 30 days</option>
-                          <option value="">Delivery every 60 days</option>
-                          <option value="">Delivery every 90 days</option>
-                        </select>
+                        {% if shipping_interval_frequencies.size > 1 %}
+                          <select
+                            id="drawer-shipping-interval-selector-{{forloop.index}}"
+                            class="drawer-shipping-interval"
+                            data-shipping_interval_unit_type="{{item.product.metafields.subscriptions.shipping_interval_unit_type}}"
+                            data-line="{{ forloop.index }}"
+                          >
+                            {% for shipping_interval_frequency in shipping_interval_frequencies %}
+                              <option value="{{shipping_interval_frequency}}">Delivery every {{shipping_interval_frequency}} {{item.product.metafields.subscriptions.shipping_interval_unit_type}}</option>
+                            {% endfor %}
+                          </select>
+                        {% else %}
+                          <div class="drawer-shipping-interval-{{shipping_interval_frequencies.size}}">
+                            Delivery every {{item.product.metafields.subscriptions.shipping_interval_frequency}} {{item.product.metafields.subscriptions.shipping_interval_unit_type}}
+                          </div>
+                        {% endif %}
                       </div>
                     {% elsif item.product.metafields.subscriptions.shipping_interval_frequency %}
                       <button
