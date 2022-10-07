@@ -187,17 +187,6 @@
             "video_type": "Experience"
           }
         },
-        "481b2f67-76bf-4351-8f09-84f7d650db1f": {
-          "type": "image-video",
-          "settings": {
-            "video": "https:\/\/player.vimeo.com\/video\/701403724?h=3362a9a4f0&background=1&autoplay=1",
-            "placeholder_image": "shopify:\/\/shop_images\/light-fixture.jpg",
-            "video_popup": "https:\/\/player.vimeo.com\/video\/701408933?h=356c01b754",
-            "video_heading": "Home modification",
-            "video_subHeading": "<p>Installing a Chandelier<\/p>",
-            "video_type": "DIY"
-          }
-        },
         "1f5ad00b-7f17-4f10-8fc0-054fa9437247": {
           "type": "image-video",
           "settings": {
@@ -248,7 +237,6 @@
         "19a8757e-3702-4af2-82da-17767cea24db",
         "aa0e8cf1-d7d5-425c-bf91-3d727ce1646d",
         "e321885e-43b5-426b-afd4-7e9e10800c59",
-        "481b2f67-76bf-4351-8f09-84f7d650db1f",
         "1f5ad00b-7f17-4f10-8fc0-054fa9437247",
         "6fecb0c8-a2b6-4f63-9a63-832e14a33a02",
         "8d77efa0-2df7-4a3f-8381-656b9dfa5093",
