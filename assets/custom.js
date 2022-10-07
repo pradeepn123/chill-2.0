@@ -252,7 +252,7 @@ const featureProductSubscriptionUtil = (function () {
         variantDropDownSelector: '[feature-productvaraintselector]',
         productDataInfo: '[data-productInfo]',
         subscriptionDataInfo: '[data-productSubscriptionData]',
-        form: 'form.product-purchase-form',
+        form: 'form.feature-product-purchase-form',
         oneTimeRadioSelector: '[product-oneTime-selection]',
         subscriptionRadioSelector: '[product-subscription-selection]',
         originalProductIdInputEl: '[original-productId-input]',
@@ -500,6 +500,7 @@ const featureProductSubscriptionUtil = (function () {
                             'properties[shipping_interval_frequency]'
                         );
                     formEl
+
                         .querySelector(elUtil.subscriptionUnitInputEl)
                         .setAttribute(
                             'name',
