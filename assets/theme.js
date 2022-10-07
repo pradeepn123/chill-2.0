@@ -5887,6 +5887,10 @@
           });
         }.bind(this));
 
+        $(container).on('click.cartDrawerTemplateSection', '.cart-drawer-summary__close', function (evt) {
+          document.dispatchEvent(new CustomEvent('theme:cartDrawer:close', { bubbles: true, cancelable: false }));
+        })
+
         $(container).on('click.cartDrawerTemplateSection', '.quantity-down, .quantity-up', function (evt) {
           var $input = $(this).closest('.quantity').find('input'),
           step = $input.attr('step') ? parseInt($input.attr('step')) : 1;
@@ -5963,7 +5967,7 @@
             $newDom.find('[data-cc-animate]').removeAttr('data-cc-animate');
 
             var listExists = this.$container.find('.cart-drawer-summary__item-list')
-            if (listExists.length > 0) {
+            if (listExists.length > 0 && $newDom.find(".cart-drawer-summary__item-list").length > 0) {
               for (var i = 0; i < toReplace.length; i++) {
                 this.replacingContent = true; // to avoid triggering change events when focus is lifted before DOM replacement
                 var $toReplace = this.$container.find(toReplace[i]),
@@ -5984,6 +5988,9 @@
               $replaceWith = $newDom.find('.cart-drawer-summary__inner');
               $toReplace.replaceWith($replaceWith);
               this.replacingContent = false;
+              $(this.$container).on('click.cartDrawerTemplateSection', '.cart-drawer-summary__close', function (evt) {
+                document.dispatchEvent(new CustomEvent('theme:cartDrawer:close', { bubbles: true, cancelable: false }));
+              })
             }
             document.dispatchEvent(new CustomEvent('theme:cartDrawer:open', { bubbles: true, cancelable: false }));
           }.bind(this),
@@ -5995,6 +6002,7 @@
           },
           complete: function () {
             this.cartRefreshXhr = null;
+            theme.cartNoteMonitor.load($('.cart-drawer-summary__notes [name="note"]', this.$container));
           }.bind(this) });
 
       },
