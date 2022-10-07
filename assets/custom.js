@@ -49,7 +49,11 @@ function hideVideo(index, e) {
   player.api('pause');
 }
 
-$(document).ready(function () {  
+$(document).ready(function () {
+  AOS.init({
+    duration: 1200,
+  })
+
   let items = document.querySelectorAll('.menu-mega-nav li');
   items.forEach( item => item.addEventListener('mouseenter', function() {
     handleHover(this, items)

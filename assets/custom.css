@@ -5429,6 +5429,60 @@ body.cart-drawer-open {
   font-size: 23px;
   font-weight: 400;
 }
+.cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary__empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary__empty .cart-drawer-summary__section p {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+  font-family: "Open Sans";
+  color: #000000;
+}
+.cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary__empty .cart-drawer-summary__section .btn-cart-empty {
+  border-radius: 2em !important;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px 40px;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  background: #9792e4;
+  color: #fff;
+  border: 0 !important;
+}
+.cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary__empty .cart-drawer-summary__section .btn-cart-empty:before, .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary__empty .cart-drawer-summary__section .btn-cart-empty:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  background: #6ec59f;
+  z-index: -1;
+  transition: all 0.35s;
+  color: #fff;
+  border: 0;
+}
+.cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary__empty .cart-drawer-summary__section .btn-cart-empty:before {
+  opacity: 0.5;
+}
+.cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary__empty .cart-drawer-summary__section .btn-cart-empty:after {
+  transition-delay: 0.2s;
+}
+.cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary__empty .cart-drawer-summary__section .btn-cart-empty:hover {
+  color: #fff;
+}
+.cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary__empty .cart-drawer-summary__section .btn-cart-empty:hover:before, .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary__empty .cart-drawer-summary__section .btn-cart-empty:hover:after {
+  top: 0;
+}
+.cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary__empty, .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary__item-list {
+  flex: 1 0 auto;
+}
 .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary__item-list {
   flex: 1 0 auto;
 }

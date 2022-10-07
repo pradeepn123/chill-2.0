@@ -15,6 +15,9 @@
           <h1 class="cart-drawer-summary__title">
               {{ 'cart.general.title' | t }} <span class="cart_item_count">({{cart.item_count}} items)</span>
           </h1>
+          <a class="cart-summary__close toggle-cart-summary" href="#">
+            {% render 'svg-close' %}            
+          </a>
         </div>
         {% if cart.item_count > 0 %}
           <div class="cart-drawer-summary__item-list">
@@ -191,6 +194,7 @@
           <div class="cart-drawer-summary__empty">
             <div class="cart-drawer-summary__section">
               <p>{{ 'cart.general.empty' | t }}</p>
+              <a href="/collections/all" class="btn btn-cart-empty">{{ 'cart.general.continue' | t }}</a>
             </div>
           </div>
         {% endif %}

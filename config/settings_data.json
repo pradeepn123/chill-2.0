@@ -1438,6 +1438,11 @@
           "button_text": "YES I’M 21+",
           "button_color": "#6ec59f"
         }
+      },
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {
+        }
       }
     },
     "content_for_index": [
