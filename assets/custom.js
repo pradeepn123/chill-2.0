@@ -17,10 +17,12 @@ function scrollAbout(){
   if ($(window).width() >= 1200 ){
     //our story value scoll
     const stickyContainer = document.querySelector('.faq-index__sticky-container');
-    const currentElement =  document.querySelector('.chill-story-value-block-section');
-    const stickyContainerRect = stickyContainer.getBoundingClientRect();
-    const currentElementRect = currentElement.getBoundingClientRect();
-    stickyContainer.style.height = currentElementRect.bottom - stickyContainerRect.top + 'px';
+    if(stickyContainer){
+        const currentElement =  document.querySelector('.chill-story-value-block-section');
+        const stickyContainerRect = stickyContainer.getBoundingClientRect();
+        const currentElementRect = currentElement.getBoundingClientRect();
+        stickyContainer.style.height = currentElementRect.bottom - stickyContainerRect.top + 'px';
+    }
   }
 }
 
@@ -190,30 +192,31 @@ $(document).ready(function () {
       });
   }  
   
-  $('.add_to_cart_btn').click(function(){    
-    addItemToCart( $(this).attr("data-product-id") , 1)
-  });
+//   $('.add_to_cart_btn').click(function(){    
+//     addItemToCart( $(this).attr("data-product-id") , 1)
+//   });
 
-  function addItemToCart(variant_id, qty) {
-    data = {
-      "id": variant_id,
-      "quantity": qty
-    }
-    jQuery.ajax({
-      type: 'POST',
-      url: '/cart/add.js',
-      data: data,
-      dataType: 'json',
-      success: function() { 
-        document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
-        bubbles: true  
-       }));
-      }
-    });
-    document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
-    	bubbles: true 
- 	 }));
-  }
+//   function addItemToCart(variant_id, qty) {
+//     data = {
+//       "id": variant_id,
+//       "quantity": qty
+//     }
+//     jQuery.ajax({
+//       type: 'POST',
+//       url: '/cart/add.js',
+//       data: data,
+//       dataType: 'json',
+//       success: function() { 
+//         document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
+//         bubbles: true  
+//        }));
+//       }
+//     });
+//     document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
+//     	bubbles: true 
+//  	 }));
+//   }
+
 });
 
 (function(){
@@ -241,3 +244,288 @@ $(document).ready(function () {
       }  
   });
 })();
+
+
+const featureProductSubscriptionUtil = (function () {
+    // Reference all your elements here
+    const elUtil = {
+        variantDropDownSelector: '[feature-productvaraintselector]',
+        productDataInfo: '[data-productInfo]',
+        subscriptionDataInfo: '[data-productSubscriptionData]',
+        form: 'form.product-purchase-form',
+        oneTimeRadioSelector: '[product-oneTime-selection]',
+        subscriptionRadioSelector: '[product-subscription-selection]',
+        originalProductIdInputEl: '[original-productId-input]',
+        subscriptionProductInputEl: '[subscription-varaintId-input]',
+        subscriptionFrequencyInputEl: '[subscription-frequency-input]',
+        subscriptionUnitInputEl: '[subscription-unit-input]',
+        subscriptionIntervalSelector: '[subscription-interval-selectors-wrap]',
+    };
+
+    const classUtil = {
+        activeSubRadio: 'sub-radio-active',
+    };
+
+    // Common helper functions required
+
+    const _helperFunc = {
+        getVaraintData: (productData) => {
+            let { getProductObj, getSelectedValue } = productData;
+            let filteredObj = getProductObj.variants.filter(
+                (item) => item.title == getSelectedValue
+            );
+            return {
+                id: filteredObj[0].id,
+                varaintData: filteredObj[0],
+            };
+        },
+
+        getDuplicateVaraintId: function (actualProductId, currentEl) {
+            let productSubData = JSON.parse(
+                currentEl
+                    .closest(elUtil.form)
+                    .querySelector(elUtil.subscriptionDataInfo).innerText
+            );
+
+            return productSubData.original_to_hidden_variant_map[
+                actualProductId
+            ];
+        },
+
+        getProductObj: (currentEl) => {
+            return JSON.parse(
+                currentEl
+                    .closest(elUtil.form)
+                    .querySelector(elUtil.productDataInfo).innerText
+            );
+        },
+
+        dispatchOpenDrawerEvent: () => {
+            document.documentElement.dispatchEvent(
+                new CustomEvent('theme:cartchanged', {
+                    bubbles: true,
+                    cancelable: false,
+                })
+            );
+            console.log('Open cart drawer triggered');
+        },
+        dispatchCloseDrawerEvent: () => {
+            document.dispatchEvent(new CustomEvent('theme:cartDrawer:close'));
+        },
+        removeInputActiveClassfromEl: (currentInstance) => {
+            currentInstance.querySelectorAll('label').forEach((_el) => {
+                _el.classList.remove(classUtil.activeSubRadio);
+            });
+        },
+    };
+
+    // Handle View for input elements
+
+    const ViewHandler = function () {
+        const updateInputId = function (currInstance, id) {
+            const originalNameIdElement = currInstance
+                .closest(elUtil.form)
+                .querySelector(elUtil.originalProductIdInputEl);
+            const subscriptionNameIdElement = currInstance
+                .closest(elUtil.form)
+                .querySelector(elUtil.subscriptionProductInputEl);
+            let { discount_variant_id } = _helperFunc.getDuplicateVaraintId(
+                id,
+                currInstance
+            );
+            // Default varaint id should be updated
+            originalNameIdElement.setAttribute('value', id);
+            if (subscriptionNameIdElement) {
+                // Subscription varaint id should be updated
+                subscriptionNameIdElement.setAttribute(
+                    'value',
+                    discount_variant_id
+                );
+            }
+            // Update input based on varaint selector
+            // if (refNameIdElement.getAttribute('subscription-varaintId-input')) {
+            //     // Subscription varaint id should be updated
+            //     let { discount_variant_id } = _helperFunc.getDuplicateVaraintId(
+            //         id,
+            //         currInstance
+            //     );
+            //     // Update duplicate variant input id
+            //     refNameIdElement.setAttribute('value', discount_variant_id);
+            // } else {
+            //     // Default varaint id should be updated
+            //     refNameIdElement.setAttribute('value', id);
+            // }
+        };
+
+        const updateVariantRelatedData = (currentEl, variantObj) => {
+            const { id } = variantObj;
+            updateInputId(currentEl, id);
+            // *** Update varaint price.. will be done later
+            // updateVariantPrice();
+        };
+
+        return {
+            updateVariantRelatedData,
+        };
+    };
+
+    const EventHandler = function () {
+        const featureProductVariantSelectorEl = document.querySelectorAll(
+            elUtil.variantDropDownSelector
+        );
+
+        const featureProductRadioOneTimeSubEl = document.querySelectorAll(
+            elUtil.oneTimeRadioSelector
+        );
+        const featureProductRadioSubscriptionEl = document.querySelectorAll(
+            elUtil.subscriptionRadioSelector
+        );
+
+        const featureProductFormEl = document.querySelectorAll(elUtil.form);
+
+        if (featureProductFormEl) {
+            featureProductFormEl.forEach((_formEl) => {
+                _formEl.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    let serializeFormData = new URLSearchParams(
+                        new FormData(this)
+                    );
+                    try {
+                        // Add preloader to button
+                        console.log('Disabled buttons');
+                        // Make fetch reques to add product to cart
+                        fetch(window.Shopify.routes.root + 'cart/add.js', {
+                            method: 'POST',
+                            body: serializeFormData,
+                        })
+                            .then((response) => {
+                                if (!response.ok) {
+                                    throw new Error(
+                                        `HTTP error! Status: ${response.status}`
+                                    );
+                                }
+
+                                return response.json();
+                            })
+                            .then((data) => {
+                                console.log(data);
+                                // On successfully adding product to cart
+                                // Fire event to open drawer
+                                _helperFunc.dispatchOpenDrawerEvent();
+                            })
+                            .catch((error) => {
+                                console.log(error);
+                                console.log('Something went wrong');
+                            });
+                    } catch (err) {
+                        console.log(err);
+                    }
+                });
+            });
+        }
+
+        // Variant Dropdown selector change event handler
+        if (featureProductVariantSelectorEl) {
+            featureProductVariantSelectorEl.forEach((_el) => {
+                _el.addEventListener('change', function (e) {
+                    let getSelectedValue = this.value;
+                    let getProductObj = _helperFunc.getProductObj(this);
+                    let getVaraintData = _helperFunc.getVaraintData({
+                        getProductObj,
+                        getSelectedValue,
+                    });
+
+                    ViewHandler().updateVariantRelatedData(
+                        this,
+                        getVaraintData
+                    );
+
+                    // console.log(getVaraintData);
+                });
+            });
+        }
+
+        // Handle Subscription Selector
+        // 1) One time selection
+        if (featureProductRadioOneTimeSubEl) {
+            featureProductRadioOneTimeSubEl.forEach((_el) => {
+                _el.addEventListener('change', function (e) {
+                    let formEl = this.closest(elUtil.form);
+                    // formEl
+                    //     .querySelector(elUtil.originalProductIdInputEl)
+                    //     .setAttribute('name', 'id');
+                    // formEl
+                    //     .querySelector(elUtil.subscriptionProductInputEl)
+                    //     .setAttribute('name', '');
+
+                    // Remove properties to subscription input
+                    formEl
+                        .querySelector(elUtil.subscriptionFrequencyInputEl)
+                        .setAttribute('name', '');
+                    formEl
+                        .querySelector(elUtil.subscriptionUnitInputEl)
+                        .setAttribute('name', '');
+
+                    formEl.querySelector(
+                        elUtil.subscriptionIntervalSelector
+                    ).style.display = 'none';
+
+                    // Remove child active selector from form
+                    _helperFunc.removeInputActiveClassfromEl(formEl);
+
+                    _el.parentElement
+                        .querySelector(elUtil.oneTimeRadioSelector)
+                        .parentElement.classList.add(classUtil.activeSubRadio);
+                });
+            });
+        }
+
+        // Subscription selector
+        if (featureProductRadioSubscriptionEl) {
+            featureProductRadioSubscriptionEl.forEach((_el) => {
+                _el.addEventListener('change', function (e) {
+                    let formEl = this.closest(elUtil.form);
+                    // formEl
+                    //     .querySelector(elUtil.originalProductIdInputEl)
+                    //     .setAttribute('name', '');
+                    // formEl
+                    //     .querySelector(elUtil.subscriptionProductInputEl)
+                    //     .setAttribute('name', 'id');
+
+                    // Add properties to subscription input
+                    formEl
+                        .querySelector(elUtil.subscriptionFrequencyInputEl)
+                        .setAttribute(
+                            'name',
+                            'properties[shipping_interval_frequency]'
+                        );
+                    formEl
+                        .querySelector(elUtil.subscriptionUnitInputEl)
+                        .setAttribute(
+                            'name',
+                            'properties[shipping_interval_unit_type]'
+                        );
+
+                    formEl.querySelector(
+                        elUtil.subscriptionIntervalSelector
+                    ).style.display = 'block';
+
+                    _helperFunc.removeInputActiveClassfromEl(formEl);
+
+                    _el.parentElement
+                        .querySelector(elUtil.subscriptionRadioSelector)
+                        .parentElement.classList.add(classUtil.activeSubRadio);
+                });
+            });
+        }
+    };
+
+    return {
+        EventHandler: EventHandler,
+    };
+})();
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    featureProductSubscriptionUtil.EventHandler();
+})
