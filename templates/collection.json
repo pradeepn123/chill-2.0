@@ -26,6 +26,7 @@
         },
         "c2e8b43c-d70c-454d-ac6b-8094dc1e1890": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "chill-apparel",
             "image": "shopify:\/\/shop_images\/Apparel.png"
@@ -33,6 +34,7 @@
         },
         "0bf2c311-14b7-4a60-9a8f-ab213f5e86ed": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "chill-flavoured-drops",
             "image": "shopify:\/\/shop_images\/Tinctures.png"

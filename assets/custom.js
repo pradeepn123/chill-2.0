@@ -49,7 +49,11 @@ function hideVideo(index, e) {
   player.api('pause');
 }
 
-$(document).ready(function () {  
+$(document).ready(function () {
+  AOS.init({
+    duration: 1200,
+  })
+
   let items = document.querySelectorAll('.menu-mega-nav li');
   items.forEach( item => item.addEventListener('mouseenter', function() {
     handleHover(this, items)
@@ -130,18 +134,14 @@ $(document).ready(function () {
     $('.navigation__item .country_selector').toggleClass('active');
       $('.navigation__item .country_selector #dropdown_linebreak').toggleClass('show');
   })
-  theme.icons = {    
-    chevronLeft: '<svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M11.913,23.827l-1.564-1.6,9.2-9.2H0V10.8H19.545l-9.2-9.2L11.913,0,23.827,11.913Z" transform="translate(23.827 23.827) rotate(180)"/></svg>',
-    chevronRight: '<svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M19.913,31.827l-1.564-1.6,9.2-9.2H8V18.8H27.545l-9.2-9.2L19.913,8,31.827,19.913Z" transform="translate(-8 -8)"/></svg>',
-  };
 
   $('.testimonial_list__inner').slick({
     infinite: false,
     slidesToShow: 1.6,
     slidesToScroll: 1,
     arrows: true,
-    prevArrow: '<button type="button" class="slick-product-prev" aria-label="">' + theme.icons.chevronLeft + '</button>',
-    nextArrow: '<button type="button" class="slick-product-next" aria-label="">' + theme.icons.chevronRight + '</button>',
+    prevArrow: '<button type="button" class="slick-product-prev" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M11.913,23.827l-1.564-1.6,9.2-9.2H0V10.8H19.545l-9.2-9.2L11.913,0,23.827,11.913Z" transform="translate(23.827 23.827) rotate(180)"/></svg></button>',
+    nextArrow: '<button type="button" class="slick-product-next" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M19.913,31.827l-1.564-1.6,9.2-9.2H8V18.8H27.545l-9.2-9.2L19.913,8,31.827,19.913Z" transform="translate(-8 -8)"/></svg></button>',
     responsive: [
       {
         breakpoint: 1200,
@@ -218,7 +218,7 @@ $(document).ready(function () {
 
 (function(){
   var d = document,
-      tabs = d.querySelector('.tabs'),
+      tabs = d.querySelector('.tabs, .product-tabs'),
       tab = d.querySelectorAll('li'),
       contents = d.querySelectorAll('.content');
       if (!tabs) {

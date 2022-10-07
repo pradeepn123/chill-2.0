@@ -2,14 +2,14 @@
     <div class="product_ingredients_sec_wrapper">
         <div class="tab-content">
             <div class="tab-heading">
-                <ul class='tabs'>
+                <ul class='product-tabs'>
                     {%- for block in product.metafields.settings.product_ingredients.value['ingredients_tab']  -%}
-                        <a href="#{{block.tab_id}}" class="{% if forloop.first %}active{% endif %}">
-                            <li class='' data-tab-id='tab{{ forloop.index }}'>
-                                {{ block.tab_title}}
-                            </li>
-                        </a>
-                    {% endfor%}
+                        {% if block.tab_id != blank %} <a href="#{{block.tab_id}}" class="{% if forloop.first %}active{% endif %}"> {% endif %}
+                            {% if block.tab_id == blank %}<li class='{% if forloop.first %}active{% endif %}' data-tab-id='tab{{ forloop.index }}'>{% endif %}
+                                    {{ block.tab_title}}
+                            {% if block.tab_id == blank %}</li>{% endif %}                            
+                        {% if block.tab_id != blank %} </a> {% endif %}
+                    {% endfor %}
                 </ul>
             </div>
             <div class='content-section'>

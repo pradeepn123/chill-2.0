@@ -47,8 +47,20 @@
                                 left: unset;
                                 top: unset;
                                 bottom: 0px;
-                                right: 16%;
+                                right: 22%;
                                 border-radius: 50%;
+                                @media(min-width:1024px){
+                                    right: 20%;
+                                }
+                                @media(min-width:1200px){
+                                    right: 18%;
+                                }
+                                @media(min-width:1440px){
+                                    right: 16%;
+                                }
+                                @media(min-width:1680px){
+                                    right: 16%;
+                                }
                                 &::after{
                                     border-radius: 50%;
                                     background: #fff;
@@ -58,6 +70,11 @@
                                 &.slick-disabled{
                                     opacity: 0.8;
                                     pointer-events: inherit;
+                                }
+                                svg{
+                                    fill: currentColor;
+                                    stroke: currentColor;
+                                    width: 14px;
                                 }
                             }
                             .slick-product-next{
@@ -74,6 +91,11 @@
                                 &.slick-disabled{
                                     opacity: 0.8;
                                     pointer-events: inherit;
+                                }
+                                svg{
+                                    fill: currentColor;
+                                    stroke: currentColor;
+                                    width: 14px;
                                 }
                             }
                         }
@@ -144,7 +166,28 @@
                         }
                     }
                 }
-                
+                .product-detail-accordion.not-in-quickbuy{
+                    .cc-accordion{
+                        @media(min-width:1440px){
+                            padding-bottom: 50px;
+                        }
+                        .cc-accordion-item{
+                            .cc-accordion-item__title{
+                                font-size: 16px;
+                                color: #000000;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                            }
+                            .cc-accordion-item__panel{
+                                .cc-accordion-item__content{
+                                    p{
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 .input-row{
                     .option-selectors{
                         .option-selector{
@@ -489,33 +532,39 @@
             }
             li {
                 list-style: none;
-                // display: inline-block;
-                // margin-right: 0;
-                // padding: 10px 10px;
-                // text-align: center;
-                // border: 1px solid #000000;
-                // border-left: 0;                
-                // font-size: 16px;
-                // font-weight: bold;
-                // color: #000000;
-                // font-family: "Open Sans", sans-serif;
-                // cursor: pointer;
-                // width: 65%;
-                // flex: 1 0 65%;
-                // @media(min-width:768px){
-                //     width: 40%;
-                //     flex: 1 0 40%;
-                // }
-                // @media(min-width:1200px){
-                //     width: 33.33%;
-                //     flex: 1 0 33.33%;
-                //     padding: 10px 20px;
-                //     font-size: 24px;
-                //     font-weight: bold;
-                // }
-                // @media(min-width:1400px){
-                //     padding: 10px 50px;
-                // }                
+                display: inline-block;
+                margin-right: 0;
+                padding: 10px 10px;
+                text-align: center;
+                border: 1px solid #000000;
+                border-left: 0;                
+                font-size: 16px;
+                font-weight: bold;
+                color: #000000;
+                font-family: "Open Sans", sans-serif;
+                cursor: pointer;
+                width: 65%;
+                flex: 1 0 65%;
+                @media(min-width:768px){
+                    width: 40%;
+                    flex: 1 0 40%;
+                }
+                @media(min-width:1200px){
+                    width: 33.33%;
+                    flex: 1 0 33.33%;
+                    padding: 10px 20px;
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+                @media(min-width:1400px){
+                    padding: 10px 50px;
+                }
+                &.active {
+                    border: 1px solid #000000;
+                    border-left: 0;
+                    background: #FFAC9A;
+                    color: #000000;            
+                }               
             }
         }
         .content-section{

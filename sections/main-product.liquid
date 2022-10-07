@@ -156,9 +156,6 @@
                 <h1 class="title">{{ product.title }}</h1>
               </div>
 
-            
-              
-
             {% when 'description' %}
               <div class="{% unless block.settings.show_in_quickbuy %}not-in-quickbuy{% endunless %}{% if block.settings.show_in_tab %} product-detail-accordion{% endif %}" {{ block.shopify_attributes }}>
                 {% if block.settings.show_in_tab %}
@@ -179,11 +176,11 @@
                       <!-- {{- product.description | strip_html | truncate: 125 -}} -->                      
                         <div class="product-description-short">
                           {{ product.description | truncate: 152, "... " }}
-                          <a class="readmore" href="#">Read More &#62;</a>
+                          <a class="readmore" href="#">Read More</a>
                         </div>
                         <div class="product-description-full">
                           {{ product.description }}
-                          <br><a class="readless" href="#">&#60; Read Less</a>
+                          <br><a class="readless" href="#">Read Less</a>
                         </div>                           
                     {%- else -%}
                       <div class="with-icon">
@@ -210,15 +207,17 @@
               </div>
 
             {% when 'pro_custom_icon' %}
-              <div class="product_custom_icons">
-                <div class="product_custom_icons_list">
-                  {%- for icon in product.metafields.settings.product_icons.value['icon_sec']  -%}
-                    <div class="product_custom_icons_item">
-                      <img src="{{ icon.image_url }}">
-                    </div>
-                  {%- endfor  -%}
+              {% if product.metafields.settings.product_icons.value != blank %}
+                <div class="product_custom_icons">
+                  <div class="product_custom_icons_list">
+                    {%- for icon in product.metafields.settings.product_icons.value['icon_sec']  -%}
+                      <div class="product_custom_icons_item">
+                        <img src="{{ icon.image_url }}" alt="">
+                      </div>
+                    {%- endfor -%}
+                  </div>
                 </div>
-              </div>
+              {% endif %}
 
             {% when 'sku' %}
               <div class="sku {% if current_variant and current_variant.sku == blank %}sku--no-sku{% endif %}" {{ block.shopify_attributes }}>

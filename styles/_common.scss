@@ -17,6 +17,9 @@ html{
                                     font-weight: 500;
                                     line-height: 1.2;
                                     color: #000000;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
                                 }
                                 .product-block__title{
                                     font-size: 20px;
@@ -44,6 +47,14 @@ html{
                                     width: 100%;
                                     text-align: left;
                                     margin-top: 14px;
+                                    @media(min-width:1200px){
+                                        font-size: 16px;
+                                        padding: 1em 12px;
+                                    }
+                                    @media(min-width:1440px){
+                                        font-size: 18px;
+                                        padding: 1em 25px;
+                                    }
                                 }
                             }
                             .custom_subscription_info{
@@ -56,10 +67,22 @@ html{
                                             border-radius: 30px;
                                             margin-top: 14px;
                                             line-height: unset;
+                                            @media(min-width:1200px){
+                                                padding: 1em 12px;
+                                            }
+                                            @media(min-width:1440px){
+                                                padding: 1em 25px;
+                                            }
                                             span{
                                                 font-family: 'Open Sans', sans-serif;
                                                 font-weight: 500;
                                                 font-size: 18px;
+                                                @media(min-width:1200px){
+                                                    font-size: 16px;
+                                                }
+                                                @media(min-width:1440px){
+                                                    font-size: 18px;
+                                                }
                                             }
                                             .price__item_sub{
                                                 .product-price__amount{
@@ -284,6 +307,102 @@ html{
         .oke-stars{
             svg{
                 width: 90px;
+            }
+        }
+    }
+}
+.overlay-text__button.button{
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    border: 0 !important;
+    &:before, &:after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        background: #9792e4;
+        z-index: -1;
+        transition: all .35s;
+        color: #fff;
+        border: 0;
+    }
+    &:before{
+        opacity: .5;
+    }
+    &:after{
+        transition-delay: .2s;
+    }
+    &:hover{
+        color: #fff;
+        &:before, &:after{
+            top: 0;
+        }
+    }
+}
+
+.btn.btn-explore-product{
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    border: 0;
+    &:before, &:after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        background: #9792e4;
+        z-index: -1;
+        transition: all .35s;
+        color: #fff;
+    }
+    &:before{
+        opacity: .5;
+    }
+    &:after{
+        transition-delay: .2s;
+    }
+    &:hover{
+        color: #fff;
+        &:before, &:after{
+            top: 0;
+        }
+    }
+}
+
+.quantity-submit-row{
+    .button{
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        border: 0 !important;
+        &:before, &:after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: -100%;
+            left: 0;
+            background: #6ec59f;
+            z-index: -1;
+            transition: all .35s;
+            color: #fff;
+            border: 0;
+        }
+        &:before{
+            opacity: .5;
+        }
+        &:after{
+            transition-delay: .2s;
+        }
+        &:hover{
+            color: #fff;
+            &:before, &:after{
+                top: 0;
             }
         }
     }
