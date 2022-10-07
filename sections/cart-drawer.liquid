@@ -104,14 +104,20 @@
                       </div>
                     </div>
                     {% if has_subscriptions %}
-                      {% assign shipping_interval_frequencies = subscription_product.shipping_interval_frequency | split: ',' | default: 30 %}
-                      <div>Change</div>
+                      {% assign shipping_interval_frequencies = item.product.metafields.subscriptions.shipping_interval_frequency | split: ',' | default: 30 %}
+                      <div class="upgraded-sub-selection">
+                        <select id="">
+                          <option value="">Delivery every 30 days</option>
+                          <option value="">Delivery every 60 days</option>
+                          <option value="">Delivery every 90 days</option>
+                        </select>
+                      </div>
                     {% elsif item.product.metafields.subscriptions.shipping_interval_frequency %}
                       <button
                         type="button"
                         class="upgrade-to-subscription"
-                        data-shipping_interval_frequency="{{product.metafields.subscriptions.shipping_interval_frequency}}"
-                        data-shipping_interval_unit_type="{{product.metafields.subscriptions.shipping_interval_unit_type}}"
+                        data-shipping_interval_frequency="{{item.product.metafields.subscriptions.shipping_interval_frequency}}"
+                        data-shipping_interval_unit_type="{{item.product.metafields.subscriptions.shipping_interval_unit_type}}"
                         data-line="{{ forloop.index }}"
                       >
                         UPGRADE TO SUBSCRIPTION AND SAVE {{ item.product.metafields.subscriptions.discount_percentage }}%
