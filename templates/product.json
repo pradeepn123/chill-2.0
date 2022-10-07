@@ -81,7 +81,7 @@
           "settings": {
             "title": "See Ingredients",
             "icon": "",
-            "content": "<p>Collapsible tab content<\/p>",
+            "content": "<p>No Tobacco | No Nicotine | No THC<br\/><br\/><strong>Our fresh mint CBD pouches contain:<\/strong><br\/> <br\/>• Glycerin<br\/>• Coconut Fiber<br\/>• Erythritol<br\/>• Palm Oil<br\/>• Mint Flavoring<br\/>• CBD Isolate<br\/>• Salt<br\/>• Monk Fruit Extract<\/p>",
             "page": "",
             "open": false,
             "show_in_quickbuy": false
@@ -89,6 +89,7 @@
         },
         "f631a81f-1f59-4f8f-9ed7-0d2e00bed3f1": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "title": "Shipping Information",
             "icon": "",
