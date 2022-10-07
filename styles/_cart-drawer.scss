@@ -238,5 +238,7 @@ body.cart-drawer-open {
             margin: 1rem auto;
         }
     }
-
+    .pointer-evt-none {
+        pointer-events: none;
+    }
 }

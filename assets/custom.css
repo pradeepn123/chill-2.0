@@ -5354,3 +5354,6 @@ body.cart-drawer-open {
   padding: 15px 25px;
   margin: 1rem auto;
 }
+.cart-drawer-summary .pointer-evt-none {
+  pointer-events: none;
+}
