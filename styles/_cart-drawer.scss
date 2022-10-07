@@ -296,4 +296,8 @@ body.cart-drawer-open {
     .pointer-evt-none {
         pointer-events: none;
     }
+
+    .cart-drawer-summary__close {
+        cursor: pointer;
+    }
 }

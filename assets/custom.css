@@ -5624,3 +5624,6 @@ body.cart-drawer-open {
 .cart-drawer-summary .pointer-evt-none {
   pointer-events: none;
 }
+.cart-drawer-summary .cart-drawer-summary__close {
+  cursor: pointer;
+}
