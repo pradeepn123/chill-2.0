@@ -178,6 +178,9 @@
             color: #C3C3C3;
             line-height: 1;
             font-size: 16px;
+            img{
+                border-radius: 50%;
+            }
             .author{
                 font-size: 16px;
                 color: #000000;
@@ -192,13 +195,22 @@
     }
     .article-image.article-image--large{
         margin-top: 0 !important;
+        max-width: 85%;
+        height: 581px;
         .page-header{
             .rimage-background{
                 border-radius: 20px;
+                height: 581px;
             }
         }
     }
     .article{
+        .container{
+            max-width: 1016px !important;
+            .default-styles-wrapper{
+                text-align: center;
+            }
+        }
         .rte{
             h1, h2, h3, h4, h5, h6{
                 font-family: "Open Sans", sans-serif;
@@ -254,9 +266,16 @@
             margin-bottom: 20px;
         }
     }
+    
+    .comment_name_email, #comment_body{
+        color: #000;
+    }
     .comment_name_email{
         display: flex;
         grid-column-gap: 10px;
+        @media (max-width: 767px){
+            flex-direction: column;
+        }
     }
     .action_bottom{
         margin-top: 0 !important;        

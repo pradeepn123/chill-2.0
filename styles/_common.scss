@@ -356,10 +356,31 @@ html{
     .navigation{
         .navigation__tier-1{
             .navigation__item{
+                color: #000;
                 .dropdown-content{
-                    display: none;                    
+                    display: none;  
+                    border: 1px solid #ddd;              
                 }               
                 @media (min-width: 768px) and (max-width: 1024px){
+                    .country_selector{
+                        .dropdown-content{
+                            padding: 10px; 
+                        }   
+                        .dropbtn{
+                            position: relative;
+                            bottom: 8px;
+                            img{
+                                position: relative;
+                                top: 8px;
+                            }
+                        }
+                        .feather-chevron-down{
+                            // position: absolute;
+                            // right: 7%;
+                            cursor: pointer;
+                            transform: rotate(0deg);
+                        }
+                    }
                     .country_selector.active{
                         #dropdown_linebreak.show{
                             display: none !important;
@@ -367,10 +388,14 @@ html{
                         .dropdown-content{
                             position: absolute;
                             top: 100%;
-                            width: 100%;
+                            width: 70%;
                             background: #fff;
                             padding: 20px;
                             display: block !important;
+                        }
+                        .feather-chevron-down{
+                            transform: rotate(-180deg);
+                            transition: 0.5s all;
                         }
                     }
                 }
