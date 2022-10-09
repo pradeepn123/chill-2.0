@@ -486,3 +486,21 @@ html{
         }
     }
 }
+
+.section-image-with-text-overlay{
+    .overlay-text{
+        @media(max-width:767px){
+            position: relative;
+            background: transparent;
+            color: #000000;
+            text-align: left;
+            .overlay-text__button-row{
+                .overlay-text__button{
+                    background: #9792E4 !important;
+                    border: 0 !important;
+                    font-weight: bold !important;
+                }
+            }
+        }
+    }
+}
