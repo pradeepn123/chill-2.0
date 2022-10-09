@@ -1,4 +1,12 @@
 <link type="text/css" href="{{ 'affiliate-page.scss.css' | asset_url }}" rel="stylesheet">
+<div id="coverScreen">
+    <p>Loading...</p>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        $('#coverScreen').hide();
+    })
+</script>
 {% section 'affiliate-banner' %}
 {% section 'affiliate-features' %}
 {% section 'affiliate-slider' %}
