@@ -8,8 +8,8 @@
         "image_position": "center center",
         "mobile_image_position": "center center",
         "height": "fixed",
-        "height_desktop": 600,
-        "height_mobile": 460,
+        "height_desktop": 400,
+        "height_mobile": 300,
         "image_link": "",
         "subheading": "",
         "title": "Get in touch",
@@ -18,7 +18,7 @@
         "title_size_mobile": 46,
         "title_weight_mobile": 800,
         "use_h1": false,
-        "text": "<p>Questions? Comments? Let your customers get in touch with you by filling out the email form below. Reassure them that someone will get back to them within a certain timeframe.<\/p>",
+        "text": "<p>Have questions or comments? We'd love to hear from you. Get in touch via the form below and we'll get back to you as soon as we can!<\/p>",
         "enlarge_text": true,
         "button_label_1": "",
         "button_url_1": "",
@@ -85,7 +85,7 @@
         "button_color": "#6ec59f",
         "support_heading": "<p>SUPPORT<\/p>",
         "support_text_font_size": 24,
-        "support_info": "<p>Mon-Fri 9:00am – 5:00pm PST *Excludes Holidays<\/p><p><\/p><p>Looking for more info on products, shipping, CBD, and more?  <a href=\"\/pages\/new-faq\" title=\"\/pages\/new-faq\">View FAQs<\/a><\/p>"
+        "support_info": "<p>Mon-Fri 9:00am – 5:00pm PST *Excludes Holidays<\/p><p><\/p><p>Looking for more products, FAQ, CBD & more?  <a href=\"\/pages\/new-faq\" title=\"\/pages\/new-faq\">View FAQs<\/a><\/p>"
       }
     },
     "166374008756ed6082": {

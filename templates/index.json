@@ -15,7 +15,7 @@
         "button_url_1": "https:\/\/chill.com\/collections\/shop",
         "button_label_2": "",
         "button_url_2": "",
-        "botton_bg": "#6ec59f",
+        "botton_bg": "#ffac9a",
         "botton_text_color": "#ffffff",
         "text_alignment": "center left",
         "height_desktop": 700,
@@ -215,7 +215,7 @@
             "heading_two": "02. Natural Pineapple",
             "text_two": "<p>This delicious and nutrient-rich tropical fruit is the sweet sensation that lends its fresh, juicy flavor to our vegan friendly CBD gummies.<\/p>",
             "image_three": "shopify:\/\/shop_images\/CBD-min.png",
-            "heading_three": "03. CBD isolate",
+            "heading_three": "03. CBD Isolate",
             "text_three": "<p>Our premium CBD isolate is sourced from natural hemp to provide all the benefits of cannabidiol with zero THC and no psychoactive effects. <\/p>",
             "button_label": "Explore Products",
             "button_link": "shopify:\/\/collections\/cbd-gummies",
@@ -251,7 +251,7 @@
             "heading_two": "02. Coconut Fiber",
             "text_two": "<p>Often known as coconut coir, this CBD-infused filler provides an unbeatable smooth flavor for a satisfying chew like no other. <\/p>",
             "image_three": "shopify:\/\/shop_images\/CBD-min.png",
-            "heading_three": "03. CBD isolate",
+            "heading_three": "03. CBD Isolate",
             "text_three": "<p>Our premium CBD isolate is sourced from natural hemp to provide all the benefits of cannabidiol with zero THC and no psychoactive effects.<\/p>",
             "button_label": "Explore Products",
             "button_link": "shopify:\/\/collections\/cbd-pouches",
@@ -327,29 +327,89 @@
         "1661828451bf6865ce-0": {
           "type": "testimonial",
           "settings": {
-            "product": "chill-cbd-gummies-10mg",
-            "testimonial": "“ I was #sponsored by Chill and received these tropical CBD gummies to try out for my honest opinion on them. I had my choice of tropical or berry, I chose tropical and they are great! There is pineapple and passionfruit flavors and the gummies themselves have a nice smooth texture and melt nicely in your mouth. I like that they are 100% THC free, so you don't have to worry about drug tests also. My only complaint is the child proof lid, it's very difficult to open and I needed assistance. @chill_cbd #livingchill”",
-            "author": "Christel S.",
-            "author_designation": "Verified Buyer",
-            "image": "shopify:\/\/shop_images\/Customer_story_1.jpg",
+            "product": "chill-cbd-isolate-chew-pouches",
+            "testimonial": "“ Love these CBD pouches! I started off using the Cool Mint and loved it! So I thought I'd try some new flavors. The peach is nice and my new fave is Rich Vanilla! I pop one in about 45 minutes before bed and it helps me relax and sleep better. Plus, they help with feeling better after a workout. The oils are good as well but you should give these a try!”",
+            "author": "Joe N.",
+            "author_designation": "09\/29\/2022",
+            "image": "shopify:\/\/shop_images\/Shop-Products-PouchesBundle2.jpg",
             "link": ""
           }
         },
         "1661828451bf6865ce-1": {
           "type": "testimonial",
           "settings": {
-            "product": "chill-hemp-smokes-carton-original",
-            "testimonial": "“ I love these CBD smoke products. I habe one in the morning and have notice an increase in focus and and more effective multi-tasking. I smoke one at night torelax my mind and it helps me fall asleep easy.”",
-            "author": "Brian S.",
-            "author_designation": "Verified Buyer",
-            "image": "shopify:\/\/shop_images\/Customer_story_2.jpg",
+            "product": "chill-cbd-gummies-10mg",
+            "testimonial": "“ A must have product! I love using these gummies when i'm trying to relax. chill or sleep”",
+            "author": "Tyleen",
+            "author_designation": "02\/09\/2022",
+            "image": "shopify:\/\/shop_images\/6407987561299968-1.jpg",
+            "link": ""
+          }
+        },
+        "66d12521-04ad-452b-9ac3-f2f734c9b3b9": {
+          "type": "testimonial",
+          "settings": {
+            "product": "chill-cbd-smokes-mint",
+            "testimonial": "“ Chill smokes are great and I'm so glad you can buy them in a carton of 10. It's really convenient. Delivery is quick and they really are a smooth smoke!”",
+            "author": "Dan O.",
+            "author_designation": "12\/15\/2021",
+            "image": "shopify:\/\/shop_images\/6G5A7906-min.jpg",
+            "link": ""
+          }
+        },
+        "59ecb584-0553-4021-97f2-d4749dbff8ef": {
+          "type": "testimonial",
+          "settings": {
+            "product": "chill-cbd-gummies-10mg-1",
+            "testimonial": "“ I've tried a lot of gummies and these are some of the best on the market. They taste great and always help me to feel a little more me and a litte more Chill”",
+            "author": "Chantelle",
+            "author_designation": "10\/5\/2022",
+            "image": "shopify:\/\/shop_images\/IMG_6764-min.jpg",
+            "link": ""
+          }
+        },
+        "2ec17fa9-16ae-491a-a993-9cdd3c5d2419": {
+          "type": "testimonial",
+          "settings": {
+            "product": "chill-cbd-smokes-mint",
+            "testimonial": "“ As a non-smoker I was a little apprehensive to try, but I had read how smokes can be a good way to get the benefits of CBD. \n\nI’ve tried various CBD tinctures and CBD gummies without any noticeable benefits. The first night after smoking two, I scored my first ever excellent for sleep on my Fitbit! It could have been a coincidence but the second night I had a great sleep too! Will have to try the mint ones next!”",
+            "author": "Rich",
+            "author_designation": "07\/06\/2021",
+            "image": "shopify:\/\/shop_images\/4_-_Chill-Shop-Smokes-Mint.jpg",
+            "link": ""
+          }
+        },
+        "2189170f-243a-4c77-917d-afc4b6a18280": {
+          "type": "testimonial",
+          "settings": {
+            "product": "chill-cbd-gummies-10mg",
+            "testimonial": "“ Absolutely love these gummies! They taste amazing, they're vegan but mostly they really work. Really helps with me anxiety and love to take one before bed for a better nights sleep”",
+            "author": "Tom K.",
+            "author_designation": "05\/27\/2022",
+            "image": "shopify:\/\/shop_images\/IMG_2129_2-min.jpg",
+            "link": ""
+          }
+        },
+        "44667fab-9174-47d0-8c52-14f688eccdf9": {
+          "type": "testimonial",
+          "settings": {
+            "product": "chill-cbd-smokes-calm",
+            "testimonial": "“Really smooth and love the biodegradable filters”",
+            "author": "Chantelle",
+            "author_designation": "04\/22\/2022",
+            "image": "shopify:\/\/shop_images\/IMG_6703.jpg",
             "link": ""
           }
         }
       },
       "block_order": [
         "1661828451bf6865ce-0",
-        "1661828451bf6865ce-1"
+        "1661828451bf6865ce-1",
+        "66d12521-04ad-452b-9ac3-f2f734c9b3b9",
+        "59ecb584-0553-4021-97f2-d4749dbff8ef",
+        "2ec17fa9-16ae-491a-a993-9cdd3c5d2419",
+        "2189170f-243a-4c77-917d-afc4b6a18280",
+        "44667fab-9174-47d0-8c52-14f688eccdf9"
       ],
       "settings": {
         "title": "<p>Our <strong>Customer Stories<\/strong><\/p>",

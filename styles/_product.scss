@@ -167,10 +167,15 @@
                     }
                 }
                 .product-detail-accordion.not-in-quickbuy{
-                    .cc-accordion{
-                        @media(min-width:1440px){
-                            padding-bottom: 50px;
+                    &:last-child{
+                        .cc-accordion{ 
+                            @media(min-width:1440px){
+                                padding-bottom: 50px;
+                            }
                         }
+                    }
+                    .cc-accordion{                        
+                        
                         .cc-accordion-item{
                             .cc-accordion-item__title{
                                 font-size: 16px;
@@ -633,6 +638,23 @@
                         line-height: 28px;
                         color: #000000;
                     }
+                }
+            }
+            .direction_to_use{
+                h3{
+                    font-size: 28px;
+                    font-family: 'Open Sans', sans-serif;
+                    text-transform: inherit;
+                    margin-bottom: 22px;
+                    @media(min-width:1200px){
+                        font-size: 52px;
+                    }
+                }
+                p{
+                    color: #000000;
+                    font-size: 16px;
+                    font-weight: normal;
+                    font-family: 'Open Sans', sans-serif;
                 }
             }
         }

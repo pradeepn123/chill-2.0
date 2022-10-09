@@ -81,7 +81,8 @@
           "settings": {
             "title": "See Ingredients",
             "icon": "",
-            "content": "<p>No Tobacco | No Nicotine | No THC<br\/><br\/><strong>Our fresh mint CBD pouches contain:<\/strong><br\/> <br\/>• Glycerin<br\/>• Coconut Fiber<br\/>• Erythritol<br\/>• Palm Oil<br\/>• Mint Flavoring<br\/>• CBD Isolate<br\/>• Salt<br\/>• Monk Fruit Extract<\/p>",
+            "content": "<p>{{ product.metafields.settings.ingredients | metafield_tag }}<\/p>",
+            "test_result_link": "",
             "page": "",
             "open": false,
             "show_in_quickbuy": false
@@ -89,11 +90,11 @@
         },
         "f631a81f-1f59-4f8f-9ed7-0d2e00bed3f1": {
           "type": "accordion",
-          "disabled": true,
           "settings": {
-            "title": "Shipping Information",
+            "title": "Product test results",
             "icon": "",
-            "content": "<p>Collapsible tab content<\/p>",
+            "content": "<p>See our test results here.{{ product.metafields.settings.product_test_result | metafield_tag }}<\/p>",
+            "test_result_link": "{{ product.metafields.settings.test_result.value }}",
             "page": "",
             "open": false,
             "show_in_quickbuy": false
@@ -130,7 +131,8 @@
     "16639327190d7e5cec": {
       "type": "product-ingredients",
       "settings": {
-        "enable": true
+        "enable": true,
+        "direction": ""
       }
     },
     "16639198461c244067": {
@@ -183,7 +185,7 @@
       "settings": {
         "color_bg": "#f2f2f3",
         "title": "<p>You may also <strong>like<\/strong><\/p>",
-        "description": "<p>With our Naturally sourced, Intentional ingredients we ensure maximised experience to relieve stress and help rejuvenated both your mind and body<\/p>",
+        "description": "<p>{{ product.metafields.settings.recommend_pro_description | metafield_tag }}<\/p>",
         "show_vendor": true,
         "grid": 4
       }
