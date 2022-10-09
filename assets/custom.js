@@ -273,7 +273,10 @@ const featureProductSubscriptionUtil = (function () {
         subscriptionUnitInputEl: '[subscription-unit-input]',
         subscriptionIntervalSelector: '[subscription-interval-selectors-wrap]',
         intervalFrequencySelector:
-        '[interval-frequency-selector]'
+        '[interval-frequency-selector]',
+        onetimepriceEl: '[onetime-price]',
+        subscriptionPriceEl: '[subscription-price]'
+
 
     };
 
@@ -372,11 +375,30 @@ const featureProductSubscriptionUtil = (function () {
             // }
         };
 
+        const updateVariantPrice = (currentInstance, variantObj) =>{
+            let getSubscriptionVaraintData =  _helperFunc.getDuplicateVaraintId(variantObj.id, currentInstance);
+            let getActualVaraintPrice = variantObj.varaintData.price;
+            let formatPrice = theme.Shopify.formatMoney(getActualVaraintPrice, theme.money_format)
+            let currFormEl = currentInstance.closest(elUtil.form);
+
+
+            // Update subscription price
+            currFormEl.querySelector(elUtil.subscriptionPriceEl).innerHTML = getSubscriptionVaraintData.discount_variant_price
+
+            // Update actual product price
+            currFormEl.querySelector(elUtil.onetimepriceEl).innerHTML = formatPrice
+            console.log({
+                currentInstance,
+                variantObj,
+                getSubscriptionVaraintData
+            })
+        }
+
         const updateVariantRelatedData = (currentEl, variantObj) => {
             const { id } = variantObj;
             updateInputId(currentEl, id);
             // *** Update varaint price.. will be done later
-            // updateVariantPrice();
+            updateVariantPrice(currentEl,variantObj);
         };
 
         return {
