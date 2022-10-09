@@ -1,5 +1,5 @@
 <div data-section-type="blog-template" class="article_blog_section">
-  {% paginate blog.articles by 2 %}
+  {% paginate blog.articles by 5 %}
 
     <div class="article_blog_filter">
       <div class="container">
@@ -52,7 +52,9 @@
             <div class="utility-bar__right" data-cc-animate>
               {% if section.settings.show_sharing_icons %}
                 <span class="utility-bar__item desktop-only">
-                  {%- comment -%} {% render 'social-sharing', share_title: blog.title, share_permalink: blog.url, share_image: false %} {%- endcomment -%}
+                  {%- comment -%}
+                    {% render 'social-sharing', share_title: blog.title, share_permalink: blog.url, share_image: false %}
+                  {%- endcomment -%}
                   {% render 'social-icons', icon_setting: settings.social_custom_icon, icon_size: icon_size, container_class: container_class %}
                 </span>
               {% endif %}
@@ -95,7 +97,9 @@
                 <div class="meta">
                   <span class="iconmeta time">
                     {% if section.settings.show_author %}
-                      <img src="{{ article.user.image | img_url: 'master' }}" alt="{{ article.author }}" class="article_author_img" width="30" height="30" loading="lazy">
+                      {% if article.user.image != blank %}
+                        <img src="{{ article.user.image | img_url: 'master' }}" alt="{{ article.author }}" class="article_author_img" width="30" height="30" loading="lazy">
+                      {% endif %}
                       <span class="author">{{ article.author }}
                       </span>
                       {% if section.settings.show_date %}&#9679;{% endif %}

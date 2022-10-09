@@ -323,11 +323,11 @@
       "author_meta_said": "{{ author }} said:",
       "form_title": "Leave a comment",
       "success": "Your comment was posted successfully! Thank you!",
-      "moderated": "Please note: comments must be approved before they are published.",
+      "moderated": "Please note: Your email address will not be published.",
       "name": "Name",
       "email": "Email",
       "message": "Comment",
-      "post": "Post comment"
+      "post": "Post a comment"
     },
     "general": {
       "no_matches": "You don't have any articles yet! Once you've written one, it will show up here.",

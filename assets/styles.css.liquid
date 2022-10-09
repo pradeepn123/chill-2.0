@@ -7085,6 +7085,12 @@ svg.feather {
   margin-bottom: 20px;
   padding-bottom: 25px;
 }
+.pagination-row .prev{
+  text-align: left;
+}
+.pagination-row .next{
+  text-align: right;
+}
 
 [dir=rtl] .pagination {
   display: flex;
@@ -7112,6 +7118,7 @@ svg.feather {
 .pagination-row.pagination-row-tabular > * {
   flex: 1 1 0;
 }
+
 
 [dir=rtl] .ltr-icon svg,
 [dir=rtl] svg.ltr-icon {
@@ -8963,8 +8970,22 @@ shopify-payment-terms {
 #comments.container,
 .container .shopify-policy__container {
   max-width: {{ reading_container_width }}px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
-
+.shopify-policy__title h1{
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+.shopify-policy__body h2 span{
+  /* font-size: 36px; */
+  font-weight: 600 !important;
+}
+.shopify-policy__body p span{
+  font-size: 16px;
+  color: #000;
+}
 .article .meta {
   margin-top: 1em;
   font-size: 90%;
@@ -11494,9 +11515,9 @@ textarea {
     content: none;
   }
 
-  .pagination-row.pagination-row-tabular {
+  /* .pagination-row.pagination-row-tabular {
     display: block;
-  }
+  } */
   .pagination-row.pagination-row-tabular > .inner {
     display: flex;
     flex-wrap: wrap;
