@@ -1047,7 +1047,7 @@
             "type": "menu-promotion-large",
             "settings": {
               "dropdown_link_title": "shop",
-              "collection": "cbd-gummies",
+              "collection": "new-cbd-gummies",
               "text_alignment": "center"
             }
           },
@@ -1055,7 +1055,7 @@
             "type": "menu-promotion-large",
             "settings": {
               "dropdown_link_title": "shop",
-              "collection": "cool-mint",
+              "collection": "new-cbd-pouches",
               "text_alignment": "center"
             }
           },
@@ -1063,7 +1063,7 @@
             "type": "menu-promotion-large",
             "settings": {
               "dropdown_link_title": "shop",
-              "collection": "cbd-smokes",
+              "collection": "new-cbd-smokes",
               "text_alignment": "center"
             }
           }
