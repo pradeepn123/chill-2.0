@@ -222,6 +222,19 @@ html {
   font-weight: 500;
   line-height: 1.2;
   color: #000000;
+  margin-bottom: 10px;
+}
+.product-list .product-block .block-inner .block-inner-card-info.add_info_sub form .product-subscription-selection-wrapper .feature-product-shipping-interval {
+  border: 1px solid #000000;
+  background: transparent;
+  border-radius: 4rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #000000;
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 10px;
 }
 .product-list .product-block .block-inner .block-inner-card-info.add_info_sub .product-form .quantity-submit-row__submit {
   margin: 0;

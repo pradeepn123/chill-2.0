@@ -246,6 +246,18 @@ $(document).ready(function () {
 })();
 
 
+function customFeatureProductSubcriptionEvents (){
+    $('.custom_sub_button').click(function() {
+        $(this).closest('.block-inner').find('.block-inner-card-info').addClass('add_info_sub');
+      });
+      featureProductSubscriptionUtil.EventHandler();
+
+      $('.close_card_info').click(function(){
+        $(this).closest('.block-inner').find('.block-inner-card-info').removeClass('add_info_sub');
+      });
+}
+
+
 const featureProductSubscriptionUtil = (function () {
     // Reference all your elements here
     const elUtil = {
@@ -260,6 +272,9 @@ const featureProductSubscriptionUtil = (function () {
         subscriptionFrequencyInputEl: '[subscription-frequency-input]',
         subscriptionUnitInputEl: '[subscription-unit-input]',
         subscriptionIntervalSelector: '[subscription-interval-selectors-wrap]',
+        intervalFrequencySelector:
+        '[interval-frequency-selector]'
+
     };
 
     const classUtil = {
@@ -382,6 +397,8 @@ const featureProductSubscriptionUtil = (function () {
         );
 
         const featureProductFormEl = document.querySelectorAll(elUtil.form);
+
+        const intervalFrequencySelectorEl = document.querySelectorAll(elUtil.intervalFrequencySelector);
 
         if (featureProductFormEl) {
             featureProductFormEl.forEach((_formEl) => {
@@ -518,6 +535,19 @@ const featureProductSubscriptionUtil = (function () {
                         .parentElement.classList.add(classUtil.activeSubRadio);
                 });
             });
+        }
+
+        // Subscription interval frequency Selector
+        if(intervalFrequencySelectorEl){
+            intervalFrequencySelectorEl.forEach(_el => {
+                _el.addEventListener('change', function(){
+                    let getValue = this.value;
+                    let formEl = this.closest(elUtil.form);
+                    formEl
+                        .querySelector(elUtil.subscriptionFrequencyInputEl)
+                        .setAttribute('value', getValue);
+                })
+            })
         }
     };
 
