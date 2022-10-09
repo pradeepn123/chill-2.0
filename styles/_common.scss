@@ -333,6 +333,7 @@ html{
                             position: absolute;
                             right: 7%;
                             cursor: pointer;
+                            transform: rotate(-90deg);
                         }
                     }
                     .country_selector.active{
@@ -340,7 +341,7 @@ html{
                             display: block;
                         }
                         .feather-chevron-down{
-                            transform: rotate(180deg);
+                            transform: rotate(0deg);
                             transition: 0.5s all;
                         }
                     }
