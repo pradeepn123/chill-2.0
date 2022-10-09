@@ -408,6 +408,7 @@ html {
 }
 .quantity-submit-row .button:hover:before, .quantity-submit-row .button:hover:after {
   top: 0;
+}
 @media (max-width: 767px) {
   .section-image-with-text-overlay .overlay-text {
     position: relative;
