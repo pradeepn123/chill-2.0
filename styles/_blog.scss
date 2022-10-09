@@ -63,6 +63,9 @@
                     }
                 }
                 .article-text-info{
+                    @media (max-width: 767px){
+                        text-align: center !important;
+                    }
                     @media(min-width:768px){
                         padding-left: 30px;
                     }
@@ -72,6 +75,10 @@
                     .meta{
                         margin-bottom: 14px;
                         font-family: "Open Sans", sans-serif;
+                        @media (max-width: 767px){
+                            display: block ;
+                            text-align: center !important;
+                        }
                         .iconmeta.time{
                             display: flex;
                             align-items: center;
@@ -83,6 +90,9 @@
                                 font-size: 16px;
                                 color: #000000;
                                 font-weight: 600;
+                            }
+                            .article_author_img{
+                                border-radius: 50%;
                             }
                             .publish_date{
                                 color: #808080;
@@ -127,6 +137,10 @@
                                 transform: translate(5px, -5px);
                                 transition: all 0.4s cubic-bezier(0.23, 0.85, 0.61, 0.92);
                             }
+                        }
+                        @media (max-width: 767px){
+                            display: block;
+                            text-align: center !important;
                         }
                         svg{
                             margin-left: 6px;

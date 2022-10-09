@@ -38,7 +38,7 @@ body{
         }
         .overlay-text{
             @media(max-width:767px){
-                position: relative;
+                position: relative !important;
             }
             .overlay-text__inner{
                 @media(max-width:767px){

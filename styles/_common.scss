@@ -333,6 +333,7 @@ html{
                             position: absolute;
                             right: 7%;
                             cursor: pointer;
+                            transform: rotate(-90deg);
                         }
                     }
                     .country_selector.active{
@@ -340,7 +341,7 @@ html{
                             display: block;
                         }
                         .feather-chevron-down{
-                            transform: rotate(180deg);
+                            transform: rotate(0deg);
                             transition: 0.5s all;
                         }
                     }
@@ -481,6 +482,24 @@ html{
             color: #fff;
             &:before, &:after{
                 top: 0;
+            }
+        }
+    }
+}
+
+.section-image-with-text-overlay{
+    .overlay-text{
+        @media(max-width:767px){
+            position: relative;
+            background: transparent;
+            color: #000000;
+            text-align: left;
+            .overlay-text__button-row{
+                .overlay-text__button{
+                    background: #9792E4 !important;
+                    border: 0 !important;
+                    font-weight: bold !important;
+                }
             }
         }
     }
