@@ -1088,6 +1088,11 @@ body{
                     .testimonial__text{
                         height: 170px;
                         overflow-y: scroll;
+                        -ms-overflow-style: none;
+                        scrollbar-width: none;
+                        &::-webkit-scrollbar { 
+                            display: none;
+                        }
                         .testimonial__blockquote{                         
                             color: #000000;
                             font-family: 'Open Sans', sans-serif;

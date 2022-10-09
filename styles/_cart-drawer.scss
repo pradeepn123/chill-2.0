@@ -70,9 +70,11 @@ body.cart-drawer-open {
             z-index: 999999;
 
             .cart-drawer-summary__title {
-                font-size: 30px;
+                font-size: 24px;
                 font-weight: 800;
-
+                @media(min-width:1200px){
+                    font-size: 30px;
+                }
                 .cart_item_count {
                     font-size: 23px;
                     font-weight: 400;
@@ -154,8 +156,12 @@ body.cart-drawer-open {
             .cart-drawer-summary-item__image {
                 position: relative;
                 flex: 0 0 auto;
-                width: 142px;
-                height: 142px;
+                width: 92px;
+                height: 92px;
+                @media(min-width:1200px){
+                    width: 142px;
+                    height: 142px;
+                }
             }
 
             .cart-drawer-summary-item__detail {
@@ -163,23 +169,29 @@ body.cart-drawer-open {
                 max-width: 55%;
 
                 .cart-drawer-summary-item__title {
-                    font-size: 18px;
+                    font-size: 16px;
                     font-family: "Open Sans";
                     display: block;
                     font-weight: 600;
+                    line-height: 1.2;
+                    @media(min-width:1200px){
+                        font-size: 18px; 
+                    }
                 }
-
-                .variant {
+                .variant{
                     font-size: 14px;
                     color: #000000;
                 }
 
-                .cart-item__column {
-                    padding-top: 1rem;
+                .cart-item__column {                    
                     display: flex;
                     align-items: center;
                     column-gap: 0.7rem;
-
+                    flex-wrap:nowrap;
+                    @media(min-width:1200px){
+                        flex-wrap:wrap;
+                        padding-top: 1rem;
+                    }
                     .remove {
                         margin: unset;
                     }
@@ -192,15 +204,21 @@ body.cart-drawer-open {
                 flex-direction: column;
 
                 .theme-money {
-                    font-size: 21px;
+                    font-size: 16px;
                     font-weight: 600;
                     color: #000000;
                     font-family: "open sans";
+                    @media(min-width:1200px){
+                        font-size: 21px;
+                    }
                 }
 
                 .struck-out-price {
-                    font-size: 18px;
+                    font-size: 16px;
                     font-weight: 400;
+                    @media(min-width:1200px){
+                        font-size: 18px;
+                    }
                 }
             }
         }
@@ -209,16 +227,22 @@ body.cart-drawer-open {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 600;
             color: #000000;
+            @media(min-width:1200px){
+                font-size: 24px;
+            }
         }
 
         .cart-drawer-policies {
-            font-size: 16px;
+            font-size: 14px;
             color:#000000;
             margin-bottom: 1rem;
             margin-top: 0.2rem;
+            @media(min-width:1200px){
+                font-size: 16px;
+            }
         }
 
         .checkout_btn {
@@ -230,6 +254,9 @@ body.cart-drawer-open {
             font-weight: 800;
             text-transform: uppercase;
             border: none;
+            @media(min-width:1200px){
+                font-size: 16px;
+            }
         }
 
         .cart-drawer-summary__notes {
@@ -286,11 +313,15 @@ body.cart-drawer-open {
             color: #9792E4;
             background: rgba(151, 146, 228, 0.2);
             font-weight: 700;
-            font-size: 18px;
+            font-size: 16px;
             width: 100%;
             border-radius: 26px;
             padding: 15px 25px;
             margin: 1rem auto;
+            line-height: 1.2;
+            @media(min-width:1200px){
+                font-size: 18px;
+            }
         }
     }
     .pointer-evt-none {
