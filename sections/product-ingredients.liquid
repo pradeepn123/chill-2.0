@@ -16,19 +16,36 @@
                 {%- for block in product.metafields.settings.product_ingredients_tabs.value['tab_main'] -%}
                     {% assign tab_id = tab_id | plus:1 %}
                     <div id='tab{{tab_id}}' class='content {% if tab_id == 1 %}active{% endif %}'>
-                        <div class="heading_text align-center">
-                            <h3>{{ block.heading}}</h3>
-                            <p>{{ block.description}}</p>
-                        </div>
-                        <div class="tab-content-list">
-                            {%- for sub_block in block['tab_content']  -%}
-                                <div class="tab-content-item">
-                                    <img src="{{ sub_block.image }}" alt="">
-                                    <h3>{{sub_block.subtitle}}</h3>
-                                    <p>{{sub_block.subdescription}}</p>
-                                </div>
-                            {%- endfor -%}
-                        </div>
+                        {% if block.heading != blank %}
+                            <div class="heading_text align-center">
+                                <h3>{{ block.heading }}</h3>
+                                <p>{{ block.description}}</p>
+                            </div>
+                        {% endif %}                        
+                        {% assign sub_block_value = block['tab_content']%}
+                        {% if sub_block_value != blank%}
+                            <div class="tab-content-list">
+                                {%- for sub_block in block['tab_content']  -%}
+                                    {% if sub_block.image != blank and sub_block.subtitle != blank and sub_block.subdescription != blank %}
+                                        <div class="tab-content-item">
+                                            <img src="{{ sub_block.image }}" alt="">
+                                            <h3>{{sub_block.subtitle}}</h3>
+                                            <p>{{sub_block.subdescription}}</p>
+                                        </div>
+                                    {% endif %}
+                                {%- endfor -%}
+                            </div>
+                        {% endif %}
+                        {% if block.para1 != blank or block.para2 != blank or block.para3 != blank or block.para4 != blank or block.direction_heading != blank or block.para5 != blank  %}
+                            <div class="direction_to_use">
+                                <h3 class="align-center">{{ block.direction_heading }}</h3>
+                                <p>{{ block.para1 }}</p>
+                                <p>{{ block.para2 }}</p>
+                                <p>{{ block.para3 }}</p>
+                                <p>{{ block.para4 }}</p>
+                                <p>{{ block.para5 }}</p>
+                            </div>
+                        {% endif %}
                     </div>
                 {%- endfor -%}
             </div>
@@ -47,7 +64,12 @@
         "id": "enable",
         "label": "Show/Hide Section",
         "default": true
-      }      
+      },
+      {
+        "type": "richtext",
+        "id": "direction",
+        "label": "Direction to use"        
+      }
     ],
     "presets": [
         {
