@@ -5,24 +5,7 @@
 html {
   padding: 0 !important;
 }
-#coverScreen{
-  width: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 100vh;
-    background: #fff;
-    position: fixed;
-    overflow: hidden !important;
-    z-index: 999999;
-}
-#coverScreen p{
-  text-align: center;
-  font-size: 40px;
-  top: 50%;
-  position: relative;
-}
+
 .product-list .product-block .block-inner {
   background-color: #FFFFFF;
 }
@@ -575,7 +558,11 @@ html {
 
 .mega_menu {
   position: relative;
-  max-width: 40%;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .mega_menu {
+    max-width: 40%;
+  }
 }
 .mega_menu .mega_menu_wrapper {
   display: grid;
