@@ -40,11 +40,39 @@
                       </div>
                       <div class="cart-drawer-summary-item__detail">
                         <div class="cart-drawer-summary-item__title-variant">
-                          <a
-                            class="cart-drawer-summary-item__title"
-                            href="{{ item.url }}">
-                            {{ item.product.title | replace: "Auto renew", "" | replace: "10.00% Off", "" }}
-                          </a>                          
+                          <div class="cart-drawer-summary-item_title_price_total">
+                            <a
+                              class="cart-drawer-summary-item__title"
+                              href="{{ item.url }}">
+                              {{ item.product.title | replace: "Auto renew", "" | replace: "10.00% Off", "" }}
+                            </a>
+                            <div class="cart-drawer-summary-item__price">
+                              {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}
+                                {%- liquid
+                                  assign percentage = item.product.metafields.subscriptions.discount_percentage | divided_by: 100
+                                  assign discountedPrice = item.final_line_price | times: percentage
+                                  assign finalDiscountedPrice = item.final_line_price | minus: discountedPrice
+                                -%}
+                                {% assign subtotal = subtotal | plus : finalDiscountedPrice %}
+                                <span class="cart-drawer-summary-item__price-current theme-money">
+                                  {% render 'price', price: finalDiscountedPrice, disable_currency_code: true %}
+                                </span>
+                              {% else %}
+                                {% if item.original_line_price != item.final_line_price %}
+                                  <span class="reduced-price cart-drawer-summary-item__price-current theme-money">{% render 'price', price: item.final_line_price, disable_currency_code: true %}</span>
+                                  <span class="theme-money struck-out-price">{% render 'price', price: item.original_line_price, disable_currency_code: true %}</span>
+                                {% elsif item.variant.compare_at_price != blank and item.variant.price < item.variant.compare_at_price %}
+                                  <span class="reduced-price cart-drawer-summary-item__price-current theme-money">{% render 'price', price: item.final_line_price, disable_currency_code: true %}</span>
+                                  {%- assign total_price = item.variant.compare_at_price | times: item.quantity -%}
+                                  <span class="theme-money struck-out-price">{% render 'price', price: total_price, disable_currency_code: true %}</span>
+                                {% else %}
+                                  <span class="cart-drawer-summary-item__price-current theme-money">{% render 'price', price: item.final_line_price, disable_currency_code: true %}</span>
+                                {% endif %}
+                                {% render 'unit-price', variant: item %}
+                                {% assign subtotal = subtotal | plus : item.final_line_price %}
+                              {% endif %}
+                            </div>
+                          </div>
                           {% if item.product.variants.size > 1 %}
                             <span class="variant">{{ item.variant.title }}</span>
                           {% elsif show_single_variant_details %}
@@ -94,32 +122,7 @@
                         </div>
                         
                       </div>
-                      <div class="cart-drawer-summary-item__price desktop-only">
-                        {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}
-                          {%- liquid
-                            assign percentage = item.product.metafields.subscriptions.discount_percentage | divided_by: 100
-                            assign discountedPrice = item.final_line_price | times: percentage
-                            assign finalDiscountedPrice = item.final_line_price | minus: discountedPrice
-                          -%}
-                          {% assign subtotal = subtotal | plus : finalDiscountedPrice %}
-                          <span class="cart-drawer-summary-item__price-current theme-money">
-                            {% render 'price', price: finalDiscountedPrice, disable_currency_code: true %}
-                          </span>
-                        {% else %}
-                          {% if item.original_line_price != item.final_line_price %}
-                            <span class="reduced-price cart-drawer-summary-item__price-current theme-money">{% render 'price', price: item.final_line_price, disable_currency_code: true %}</span>
-                            <span class="theme-money struck-out-price">{% render 'price', price: item.original_line_price, disable_currency_code: true %}</span>
-                          {% elsif item.variant.compare_at_price != blank and item.variant.price < item.variant.compare_at_price %}
-                            <span class="reduced-price cart-drawer-summary-item__price-current theme-money">{% render 'price', price: item.final_line_price, disable_currency_code: true %}</span>
-                            {%- assign total_price = item.variant.compare_at_price | times: item.quantity -%}
-                            <span class="theme-money struck-out-price">{% render 'price', price: total_price, disable_currency_code: true %}</span>
-                          {% else %}
-                            <span class="cart-drawer-summary-item__price-current theme-money">{% render 'price', price: item.final_line_price, disable_currency_code: true %}</span>
-                          {% endif %}
-                          {% render 'unit-price', variant: item %}
-                          {% assign subtotal = subtotal | plus : item.final_line_price %}
-                        {% endif %}
-                      </div>
+                      
                     </div>
                     {% if has_subscriptions %}
                       {% assign shipping_interval_frequencies = item.product.metafields.subscriptions.shipping_interval_frequency | split: ',' | default: 30 %}

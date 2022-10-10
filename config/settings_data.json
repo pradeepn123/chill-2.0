@@ -1019,6 +1019,7 @@
     "prod_reduction_type": "percent",
     "prod_stock_warn_show": true,
     "prod_stock_warn_limit_int": 10,
+    "prod_new_show": false,
     "prod_new_method": "collection",
     "prod_new_limit_int": 100,
     "prod_sale_show": true,
@@ -1443,6 +1444,7 @@
       "cart-drawer": {
         "type": "cart-drawer",
         "settings": {
+          "continue_shopping_url": ""
         }
       }
     },

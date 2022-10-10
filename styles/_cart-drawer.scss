@@ -154,18 +154,29 @@ body.cart-drawer-open {
             .cart-drawer-summary-item__image {
                 position: relative;
                 flex: 0 0 auto;
-                width: 92px;
-                height: 92px;
+                width: 25%;
                 @media(min-width:1200px){
-                    width: 142px;
-                    height: 142px;
+                    width: 25%;                    
                 }
             }
 
             .cart-drawer-summary-item__detail {
                 flex: 1 0 auto;
-                max-width: 55%;
-
+                max-width: 75%;
+                .cart-drawer-summary-item_title_price_total{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
+                    flex-direction: column;
+                    @media(min-width:768px){
+                        flex-direction: row;
+                    }
+                    .cart-drawer-summary-item__title{
+                        @media(min-width:1200px){
+                            width: 70%;
+                        }
+                    }
+                }
                 .cart-drawer-summary-item__title {
                     font-size: 16px;
                     font-family: "Open Sans";
@@ -180,7 +191,11 @@ body.cart-drawer-open {
                     font-size: 14px;
                     color: #000000;
                 }
-
+                .cart-item__quantity{
+                    @media only screen and (max-width: 767.98px){
+                        justify-content: unset !important;
+                    }
+                }
                 .cart-item__column {                    
                     display: flex;
                     align-items: center;
@@ -199,8 +214,7 @@ body.cart-drawer-open {
                 }
             }
 
-            .cart-drawer-summary-item__price {
-                margin: 0 auto;
+            .cart-drawer-summary-item__price { 
                 display: flex;
                 flex-direction: column;
 
