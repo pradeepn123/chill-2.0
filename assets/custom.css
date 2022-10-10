@@ -1033,7 +1033,7 @@ body.overflow-hidden {
   text-align: left;
 }
 .filter_coll .utility-bar-main .page-header h1 {
-  font-size: 36px;
+  font-size: 26px;
   color: #000000;
   font-weight: 900;
   line-height: 1;
@@ -1309,6 +1309,9 @@ body {
 .section-newsletter .section-signup .rte a {
   color: #E9E9F3;
   text-decoration: none;
+}
+.section-newsletter .section-signup .signup-form #home_newsletter_signup .signup-form__response--success h4 {
+  color: #fff !important;
 }
 .section-newsletter .section-signup .signup-form #home_newsletter_signup {
   width: 92%;
@@ -3078,8 +3081,8 @@ body {
   display: flex;
 }
 .chill-story-section .slider_wrapper .slider_images {
-  max-width: 100%;
-  height: 25%;
+  max-width: 100% !important;
+  height: 25% !important;
   -webkit-animation: about_marquee 30s linear infinite;
   -moz-animation: about_marquee 30s linear infinite;
   -o-animation: about_marquee 30s linear infinite;
@@ -5151,11 +5154,11 @@ body {
 }
 
 .age_verification {
-  width: 100vw;
-  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   z-index: 9999;
 }
 .age_verification .section_content .video_container {
@@ -5177,8 +5180,8 @@ body {
 }
 .age_verification .section_content .video_container .page_content .outer_ring_svg {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   color: #fff;
   animation: rotation 16s infinite linear;
 }

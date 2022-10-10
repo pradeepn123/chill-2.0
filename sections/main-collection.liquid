@@ -222,7 +222,7 @@
           <div class="utility-bar" data-ajax-container data-ajax-scroll-to>
             <div class="utility-bar__left">
               {% if section.settings.coll_show_sort or show_filters %}
-                <a href="#" class="toggle-btn utility-bar__item{% if section.settings.collapse_tag_sidebar_by_default == false %} toggle-btn--revealed-desktop{% endif %}{% if show_filters == false %} mobile-only{% endif %}" data-toggle-filters>
+                {%- comment -%} <a href="#" class="toggle-btn utility-bar__item{% if section.settings.collapse_tag_sidebar_by_default == false %} toggle-btn--revealed-desktop{% endif %}{% if show_filters == false %} mobile-only{% endif %}" data-toggle-filters>
                   <span class="button-icon">{% render 'svg-filter' %}</span>
                   <span>{{ 'collections.filtering.filter' | t }}</span>
                   {% liquid
@@ -240,7 +240,7 @@
                     <span class="toggle-btn__count">({{ filter_count }})</span>
                   {% endif %}
                   <span class="toggle-btn__chevron ltr-icon">{% render 'svg-chevron-right', stroke_width: 1.3 %}</span>
-                </a>
+                </a> {%- endcomment -%}
               {% endif %}
               <!-- <div class="page-header page-header--with-upper-spacing"></div> -->
               <div class="page-header">

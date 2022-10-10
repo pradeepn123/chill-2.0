@@ -22,7 +22,7 @@
                 <ul class="section-footer__menu-block__menu" {{ block.shopify_attributes }}>
                   {% for link in linklists[block.settings.menu].links %}
                     <li>
-                      <a href="{{ link.url }}" {% if link.title.size < 25 %}class="no-wrap"{% endif %}>
+                      <a href="{{ link.url }}" {% if link.title.size < 25 %}class="no-wrap"{% endif %} onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">
                         {{- link.title -}}
                       </a>
                     </li>
