@@ -1,5 +1,5 @@
 <div id="coverScreen">
-  <p>Loading...</p>
+  <div class="loader"></div>
 </div>
 <div class="account-section" data-section-type="account">
   <div class="account_banner">
@@ -292,7 +292,6 @@
 
 
   account_details_tab.addEventListener('click', function(){
-    console.log("account details>>>>>>>>>>.")
     account_details_tab.classList.add('active');
     order_history_tab.classList.remove('active');
     order_history_section.style.display = 'none';

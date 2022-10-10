@@ -6,6 +6,39 @@ html {
   padding: 0 !important;
 }
 
+#coverScreen {
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  overflow: hidden !important;
+  z-index: 999999;
+}
+#coverScreen .loader {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  top: 40%;
+  margin: auto;
+  background: #fff;
+  border-top: 4px solid #9792e4;
+  border-right: 4px solid transparent;
+  border-radius: 50%;
+  animation: 1s spin linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .product-list .product-block .block-inner {
   background-color: #FFFFFF;
 }
@@ -377,15 +410,11 @@ html {
   left: 0;
   background: #9792e4;
   z-index: -1;
-  transition: all 0.35s;
   color: #fff;
   border: 0;
 }
 .overlay-text__button.button:before {
   opacity: 0.5;
-}
-.overlay-text__button.button:after {
-  transition-delay: 0.2s;
 }
 .overlay-text__button.button:hover {
   color: #fff;
