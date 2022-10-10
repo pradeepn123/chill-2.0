@@ -188,9 +188,11 @@ body.cart-drawer-open {
                     align-items: center;
                     column-gap: 0.7rem;
                     flex-wrap:nowrap;
+                    margin: 10px 0;
                     @media(min-width:1200px){
                         flex-wrap:wrap;
                         padding-top: 1rem;
+                        margin: auto;
                     }
                     .remove {
                         margin: unset;

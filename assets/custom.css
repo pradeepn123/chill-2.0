@@ -5752,11 +5752,13 @@ body.cart-drawer-open {
   align-items: center;
   column-gap: 0.7rem;
   flex-wrap: nowrap;
+  margin: 10px 0;
 }
 @media (min-width: 1200px) {
   .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__detail .cart-item__column {
     flex-wrap: wrap;
     padding-top: 1rem;
+    margin: auto;
   }
 }
 .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__detail .cart-item__column .remove {
