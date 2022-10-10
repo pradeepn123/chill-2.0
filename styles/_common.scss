@@ -529,3 +529,32 @@ html{
         }
     }
 }
+
+//mega menu ipad css
+div#main-nav{
+    @media(min-width:768px) and (max-width:1024px){
+        display: none;
+    }
+}
+.navigation .navigation__tier-1>.navigation__item{
+    @media(min-width:768px){
+        display: flex !important;
+    }
+    @media(min-width:1200px){
+        display: inline-block !important;
+    }
+}
+.pageheader--layout-inline-permitted .navigation--left{
+    @media(min-width:768px){
+        visibility: hidden !important;
+    }
+    @media(min-width:1200px){
+        visibility: visible !important;
+    }
+}
+.navigation .navigation__tier-2-container{
+    @media(min-width:768px) and (max-width:1024px){
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}

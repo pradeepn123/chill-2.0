@@ -73,7 +73,7 @@
                             display: block;
                         }
                     }
-                    @media (max-width: 969px){
+                    @media (max-width: 1200px){
                         display: none;
                     }
                 }
@@ -82,7 +82,7 @@
                         margin-inline-start: 10px;
                     }
                     display: none;
-                    @media(min-width:969px){
+                    @media(min-width:1200px){
                         display: block;
                     }
                 }
@@ -264,9 +264,11 @@
                         }
                     }
                     .ruby-grid{
-                        opacity: 1;
-                        visibility: visible;
-                        display: block;                        
+                        @media(min-width:1200px){
+                            opacity: 1;
+                            visibility: visible;
+                            display: block;                        
+                        }
                     }
                     
                 }

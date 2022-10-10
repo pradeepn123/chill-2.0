@@ -441,6 +441,41 @@ html {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  div#main-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .navigation .navigation__tier-1 > .navigation__item {
+    display: flex !important;
+  }
+}
+@media (min-width: 1200px) {
+  .navigation .navigation__tier-1 > .navigation__item {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .pageheader--layout-inline-permitted .navigation--left {
+    visibility: hidden !important;
+  }
+}
+@media (min-width: 1200px) {
+  .pageheader--layout-inline-permitted .navigation--left {
+    visibility: visible !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navigation .navigation__tier-2-container {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
 /* header css here */
 .pageheader .logo-area .logo-area__left .navigation ul li a {
   font-weight: 600;
@@ -502,7 +537,7 @@ html {
 .pageheader .logo-area .logo-area__right .logo-area__right__inner .country_selector:hover .dropdown-content {
   display: block;
 }
-@media (max-width: 969px) {
+@media (max-width: 1200px) {
   .pageheader .logo-area .logo-area__right .logo-area__right__inner .country_selector {
     display: none;
   }
@@ -513,7 +548,7 @@ html {
 .pageheader .logo-area .logo-area__right .logo-area__right__inner .header-account-link .header-account-link__text {
   margin-inline-start: 10px;
 }
-@media (min-width: 969px) {
+@media (min-width: 1200px) {
   .pageheader .logo-area .logo-area__right .logo-area__right__inner .header-account-link {
     display: block;
   }
@@ -646,10 +681,12 @@ html {
     transform: translate(-50%, 0);
   }
 }
-.mega_menu .mega_menu_title .menu-mega-nav li.active .ruby-grid {
-  opacity: 1;
-  visibility: visible;
-  display: block;
+@media (min-width: 1200px) {
+  .mega_menu .mega_menu_title .menu-mega-nav li.active .ruby-grid {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
 }
 .mega_menu .mega_menu_title .menu-mega-nav li:last-child .coll_heading {
   border-bottom: 1px solid #E6E6F1;
@@ -5580,7 +5617,7 @@ body.cart-drawer-open {
 
 .cart-drawer-summary {
   z-index: 999999;
-  width: 35%;
+  width: 40%;
   background: #ffffff;
   position: fixed;
   top: 0;
@@ -5752,11 +5789,14 @@ body.cart-drawer-open {
   align-items: center;
   column-gap: 0.7rem;
   flex-wrap: nowrap;
+  margin: 10px 0;
 }
 @media (min-width: 1200px) {
   .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__detail .cart-item__column {
     flex-wrap: wrap;
     padding-top: 1rem;
+    margin: auto;
+    width: 100%;
   }
 }
 .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__detail .cart-item__column .remove {
