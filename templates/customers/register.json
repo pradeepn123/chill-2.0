@@ -3,7 +3,7 @@
     "main": {
       "type": "main-register",
       "settings": {
-        "side_image": "shopify:\/\/shop_images\/SIGN_UP_US_768be588-95fd-45fd-9ccc-5724c0b8b6f4.jpg",
+        "side_image": "shopify:\/\/shop_images\/SIGN_UP_IMAGE.jpg",
         "register_subtitle": "<p>Please enter your <strong>e-mail <\/strong>and <strong>password<\/strong>:<\/p>",
         "register_btn_font": 20,
         "register_btn_color": "#6ec59f"

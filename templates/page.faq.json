@@ -55,157 +55,83 @@
         "question-1": {
           "type": "question",
           "settings": {
-            "title": "What size should I buy?",
-            "answer": "<p>If you’re not quite sure which size is right for you, refer to our size guides. They’re located underneath the available sizes for each of our products.<\/p>"
+            "title": "What are the benefits of CBD?",
+            "answer": "<p>We don’t make health claims in respect of the products we sell and only recommend them for general wellness. <\/p><p>Some people suggest that CBD could lead to better sleep, reduced stress and anxiety, or even pain relief. While we aren’t supporting any of these claims, we are glad that so many people seem to have had a good experience with CBD products. <\/p><p>Many people do take CBD to aid their body’s recovery, alleviate particular symptoms, or as a daily supplement to support their well-being. There is at least one pharmaceutical product that has been approved by the authorities for medical use.<\/p>"
           }
         },
         "question-2": {
           "type": "question",
           "settings": {
-            "title": "Can I cancel my order?",
-            "answer": "<p>We completely get it, we change our minds too! While we wish could, once an order is placed, we are unable to alter or cancel it at this time. We hope to have a cancellation window one day in the future.<\/p><p>Should the item(s) not work out, make sure to exchange for a preferred style or return for a refund. As a reminder, domestic return shipping is free.<\/p>"
+            "title": "What is the difference between CBD and Hemp?",
+            "answer": "<p>Hemp, cannabis and marijuana are all part of the same family of plants. Hemp is a strain of cannabis sativa whereas marijuana – colloquially called cannabis - may be cannabis sativa, cannabis indica or cannabis ruderalis. Generally, marijuana will contain a high amount of THC but a low amount of CBD. However, hemp has a very high level of CBD and only a very small amount of THC.<\/p><p>The plants look different too. Although there are a number of different strains of hemp, the plants tend to be taller and more fibrous than marijuana which is a smaller, bushier plant and often with more flowering buds. In addition to being a source of CBD, the strength of the hemp plant makes it suitable for a wide range of uses, including building materials and paper, whereas marijuana’s uses are normally limited to the extraction of cannabinoids for recreational and medicinal purposes.<\/p>"
+          }
+        },
+        "cbb98722-e226-4f43-b59e-81437702ffc1": {
+          "type": "question",
+          "settings": {
+            "title": "Will CBD make me high?",
+            "answer": "<p>No. Our CBD-infused products are entirely free of THC (0.0%). THC is the compound in marijuana and cannabis that produces the psychoactive effect. We use CBD isolate which means no other cannabinoid compounds are found in most of our products.<\/p>"
+          }
+        },
+        "a7f2e4c4-ecb2-474c-b78a-0dfd7c6cf669": {
+          "type": "question",
+          "settings": {
+            "title": "What is CBD isolate?",
+            "answer": "<p>CBD Isolate is 99% pure cannabidiol offering CBD in its purest and most concentrated form.<\/p>"
+          }
+        },
+        "c36d44de-baf1-4d86-a91d-75d6401d966f": {
+          "type": "question",
+          "settings": {
+            "title": "Can I take CBD if I am using other medicines?",
+            "answer": "<p>If you are taking other medication, then we always recommend that you speak with your GP first before including CBD in your wellness routine. We also advise that you should not take CBD if you are pregnant or breastfeeding.<\/p>"
+          }
+        },
+        "d7178bb8-28cd-441d-94b8-143fd4ba8cf1": {
+          "type": "question",
+          "settings": {
+            "title": "Is CBD safe for children?",
+            "answer": "<p>CBD should not be taken by, or given to, anyone under the age of 18. Please consult a qualified medical professional if you have questions or concerns.<\/p>"
+          }
+        },
+        "0207c0ed-cd62-40af-ac6f-50560c6e1778": {
+          "type": "question",
+          "settings": {
+            "title": "What does CBD stand for?",
+            "answer": "<p>CBD stands for cannabidiol. It’s one of the many compounds found in marijuana and hemp. There are more than 80 other naturally occurring compounds found within the Cannabis Sativa plant.<\/p>"
           }
         }
       },
       "block_order": [
         "1f1f5ef6-b5d0-47c7-8a39-5a7460b5e5b9",
         "question-1",
-        "question-2"
+        "question-2",
+        "cbb98722-e226-4f43-b59e-81437702ffc1",
+        "a7f2e4c4-ecb2-474c-b78a-0dfd7c6cf669",
+        "c36d44de-baf1-4d86-a91d-75d6401d966f",
+        "d7178bb8-28cd-441d-94b8-143fd4ba8cf1",
+        "0207c0ed-cd62-40af-ac6f-50560c6e1778"
       ],
       "settings": {
-        "title": "Ordering"
+        "title": "General Questions"
       }
     },
     "faq-content-2": {
       "type": "collapsible-tabs",
       "blocks": {
-        "para-1": {
-          "type": "content",
-          "disabled": true,
-          "settings": {
-            "content": "<p>We use all major carriers, and local courier partners. You’ll be asked to select a delivery method during checkout.<\/p>"
-          }
-        },
         "question-1": {
           "type": "question",
           "settings": {
-            "title": "What is the shipping policy?",
-            "answer": "<p>Once your order is placed, you will receive a confirmation email letting you know that our fulfillment team has received your order. Once your order is fulfilled, you will receive an email notification with your tracking information. Shipping fees are non-refundable in the case of returns.<\/p>"
-          }
-        },
-        "question-2": {
-          "type": "question",
-          "settings": {
-            "title": "Do you ship overseas?",
-            "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout.<\/p>"
+            "title": "What is your online returns policy?",
+            "answer": "<p>Eligible returns of products may be made by mail. Items must be returned in accordance with our policy requirements, within 10 days from the date of delivery to the Chill return address listed on the return shipping label. Please email info@chill.com and put Chill Returns in the subject line.<\/p><p>Returned merchandise must meet the below requirements in order to be accepted for a refund:<\/p><p>All items must be in original condition. Merchandise that has been used, altered or damaged will not be accepted.  Damaged or faulty merchandise will be replaced with like-kind items. <\/p>"
           }
         }
       },
       "block_order": [
-        "para-1",
-        "question-1",
-        "question-2"
+        "question-1"
       ],
       "settings": {
-        "title": "Shipping"
-      }
-    },
-    "1662096120276ec1bc": {
-      "type": "collapsible-tabs",
-      "blocks": {
-        "166209612085b38089-0": {
-          "type": "question",
-          "settings": {
-            "title": "What is CBD?",
-            "answer": "<p>CBD (cannabidiol) is the most abundant cannabinoid present in the hemp plant. The plants contain over 100 other cannabinoids but all in far lower amounts.<\/p>"
-          }
-        },
-        "166209612085b38089-1": {
-          "type": "question",
-          "settings": {
-            "title": "What are the benefits of using CBD?",
-            "answer": "<p>Answer<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "166209612085b38089-0",
-        "166209612085b38089-1"
-      ],
-      "settings": {
-        "title": "Returns & Exchanges"
-      }
-    },
-    "16620961675c8ec9db": {
-      "type": "collapsible-tabs",
-      "blocks": {
-        "1662096167a94d7d7b-0": {
-          "type": "question",
-          "settings": {
-            "title": "What is CBD?",
-            "answer": "<p>CBD (cannabidiol) is the most abundant cannabinoid present in the hemp plant. The plants contain over 100 other cannabinoids but all in far lower amounts.<\/p>"
-          }
-        },
-        "1662096167a94d7d7b-1": {
-          "type": "question",
-          "settings": {
-            "title": "What are the benefits of using CBD?",
-            "answer": "<p>Answer<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "1662096167a94d7d7b-0",
-        "1662096167a94d7d7b-1"
-      ],
-      "settings": {
-        "title": "Sustainability"
-      }
-    },
-    "contact": {
-      "type": "rich-text",
-      "disabled": true,
-      "blocks": {
-        "icon": {
-          "type": "icon",
-          "settings": {
-            "icon": "chat_bubble"
-          }
-        },
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": "<p>Get in touch<\/p>",
-            "use_h1": false
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Have questions about your order, or a general enquiry?<\/p>",
-            "enlarge_text": true
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_label": "Contact us",
-            "button_link": "",
-            "button_style": "primary"
-          }
-        }
-      },
-      "block_order": [
-        "icon",
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "height": "medium",
-        "text_alignment": "center",
-        "full_width": false,
-        "use_alt_bg": true
+        "title": "Returns and Exchanges"
       }
     },
     "166373799976443927": {
@@ -225,9 +151,6 @@
     "main",
     "faq-content-1",
     "faq-content-2",
-    "1662096120276ec1bc",
-    "16620961675c8ec9db",
-    "contact",
     "166373799976443927"
   ]
 }
