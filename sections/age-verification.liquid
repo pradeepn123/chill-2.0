@@ -233,12 +233,15 @@
   (function () {
     document.querySelector('body').classList.add("overflow-hidden")
     if (document.querySelector('.age_verification')) {
+      let ageVerificationModal = document.querySelector('.age_verification')
       var isModalShown = sessionStorage.getItem('alreadyShown');
       if (isModalShown != 'true') {
-        document.querySelector('.age_verification').style.display = 'block';        
+        ageVerificationModal.style.display = 'block';        
       } else {
-        document.querySelector('.age_verification').style.display = 'none'
+        ageVerificationModal.style.display = 'none'
       }
+      ageVerificationModal.style.height = window.innerHeight
+      ageVerificationModal.style.height = 'calc(var(--vh, 1vh) * 100)'
     }
     if (document.querySelector(".age_verification_yes")) {
       document.querySelector(".age_verification_yes").addEventListener('click', () => {
@@ -247,6 +250,14 @@
         sessionStorage.setItem('alreadyShown', 'true');
       })
     }
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
   })();
 </script>
 
