@@ -1,11 +1,3 @@
-<div id="coverScreen">
-  <div class="loader"></div>
-</div>
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    $('#coverScreen').hide();
-  })
-</script>
 {% style %}
   .chill-story-section {
     background: {{ section.settings.bg_color }};
@@ -19,7 +11,7 @@
       font-size: {{ section.settings.text_font_size }}px !important;
     }
   }
-{% endstyle%}
+{% endstyle %}
 
 <div class="chill-story-section">
   <div class="chill-story-block-section">

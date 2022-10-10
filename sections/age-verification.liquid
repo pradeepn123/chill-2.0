@@ -235,16 +235,19 @@
     show_age_verification();
   })();
   function show_age_verification() {
+    
     var is_modal_show = sessionStorage.getItem('alreadyShow');
     if (is_modal_show != 'already shown') {
-        ageVerifyPopUp[0].style.display = 'block'
+        ageVerifyPopUp[0].style.display = 'block';
+        $('body').addClass('age_varification_overflow')
         sessionStorage.setItem('alreadyShow', 'already shown');
     } else {
         ageVerifyPopUp[0].style.display = 'none'
     }
 }
   document.getElementsByClassName("age_verification_yes")[0].addEventListener('click', () => {
-    ageVerifyPopUp[0].style.display = 'none'
+    ageVerifyPopUp[0].style.display = 'none';
+    $('body').removeClass('age_varification_overflow')
 })
 </script>
 

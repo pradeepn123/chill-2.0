@@ -178,12 +178,9 @@
         //     padding-bottom: 18rem;
         // }
     }
-}
+} 
 .mega_menu{
-    position: relative;
-    @media (min-width: 768px) and (max-width: 1024px){
-        max-width: 40%;
-    }
+    position: relative; 
     .mega_menu_wrapper{
         display: grid;
         // grid-template-columns: 1fr 4fr;
