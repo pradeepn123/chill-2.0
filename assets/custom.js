@@ -278,14 +278,14 @@ const featureProductSubscriptionUtil = (function () {
         subscriptionPriceEl: '[subscription-price]',
         buttonAddtocart: '[feature-addto-cart]',
         buttonDirectAddToCart: '[direct-addToCart-btn]',
-        productInfoWrapper: '[product-main-block]'
-
-
+        productInfoWrapper: '[product-main-block]',
+        featureProductPopup: '[featureProduct-subscription-popup]'
     };
 
     const classUtil = {
         activeSubRadio: 'sub-radio-active',
         activeButtonPreloader: 'show--preloader',
+        activeSubPopup: 'add_info_sub'
 
     };
 
@@ -432,9 +432,15 @@ const featureProductSubscriptionUtil = (function () {
             }
 
         }
+
+        const hideSubscriptionPopup = (currentInstance) => {
+            const subPopup = currentInstance.closest(elUtil.productInfoWrapper).querySelector(elUtil.featureProductPopup);
+            subPopup.classList.remove(classUtil.activeSubPopup);
+        }
         return {
             updateVariantRelatedData,
-            updateAddToCartButton
+            updateAddToCartButton,
+            hideSubscriptionPopup
         };
     };
 
@@ -490,6 +496,7 @@ const featureProductSubscriptionUtil = (function () {
                                 _helperFunc.dispatchOpenDrawerEvent();
                                 // Hide Preloader part
                                 ViewHandler().updateAddToCartButton(_formEl).hidePreloaderState();
+                                ViewHandler().hideSubscriptionPopup(_formEl);
                             })
                             .catch((error) => {
                                 console.log(error);
