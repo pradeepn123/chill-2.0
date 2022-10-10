@@ -178,21 +178,16 @@
               <div class="custom_subscription_info">
                 <div class="custom_subscription_wrapper">
                   <div class="custom_button_info">
-                    <button class="btn btn-primary custom_sub_button">
+                   {%- if productSubscription.has_subscription -%}
+                    <button class="btn btn-primary  custom_sub_button default_addToCart_btn">
                       <span>
-                        {% if productSubscription.has_subscription %}
                           Subscribe
-                        {% else %}
-                          Add Options
-                        {% endif %}
                       </span>
                       <span class="product-price price__item_sub">
                         <span class="product-price__item product-price__amount {% if cheapest_variant.compare_at_price > cheapest_variant.price %}product-price__amount--on-sale{% endif %} theme-money">
-                          {%- if settings.product_currency_code_enabled -%}
-                            {{ cheapest_variant.price | money_with_currency }}
-                          {%- else -%}
-                            {{ cheapest_variant.price | money }}
-                          {%- endif -%}
+                            {% assign actualVaraintId = current_variant.id | escape %}
+                            {%  assign subscriptionVaraintPrice =  productSubscription.original_to_hidden_variant_map[actualVaraintId].discount_variant_price  %}
+                            {{ subscriptionVaraintPrice | prepend: '$'  }}
                         </span>
                         {% if cheapest_variant.compare_at_price > cheapest_variant.price %}
                           <span class="product-price__item product-price__compare theme-money">{{ cheapest_variant.compare_at_price | money }}
@@ -200,6 +195,26 @@
                         {% endif %}
                       </span>
                     </button>
+                    {%- else -%}
+                      <button class="btn btn-primary default_addToCart_btn" form="{{product_form_id}}">
+                        <span>
+                            Add to cart
+                        </span>
+                        <span class="product-price price__item_sub">
+                          <span class="product-price__item product-price__amount {% if cheapest_variant.compare_at_price > cheapest_variant.price %}product-price__amount--on-sale{% endif %} theme-money">
+                              {%- if settings.product_currency_code_enabled -%}
+                                {{ cheapest_variant.price | money_with_currency }}
+                              {%- else -%}
+                                {{ cheapest_variant.price | money }}
+                              {%- endif -%}
+                          </span>
+                          {% if cheapest_variant.compare_at_price > cheapest_variant.price %}
+                            <span class="product-price__item product-price__compare theme-money">{{ cheapest_variant.compare_at_price | money }}
+                            </span>
+                          {% endif %}
+                        </span>
+                      </button>
+                   {%- endif -%}
                   </div>
                 </div>
               </div>
@@ -454,7 +469,7 @@
                   {{- 'products.product.add_to_cart' | t -}}
                 {%- endif -%}
               {%- endcapture -%}
-              <button class="button button--large add_to_cart_btn" data-product-id="{{ current_variant.id }}" type="submit" data-add-to-cart-text="{{ add_to_cart_text | escape }}">
+              <button class="button button--large add_to_cart_btn" data-product-id="{{ current_variant.id }}" type="submit" data-add-to-cart-text="{{ add_to_cart_text | escape }}" feature-addto-cart>
                 <span class="button-actual-text">
                   {%- comment -%}
                     <span class="product-price price__item_sub">

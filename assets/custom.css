@@ -97,7 +97,7 @@ html {
     padding: 1em 25px;
   }
 }
-.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .custom_sub_button {
+.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .default_addToCart_btn {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -106,34 +106,34 @@ html {
   line-height: unset;
 }
 @media (min-width: 1200px) {
-  .product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .custom_sub_button {
+  .product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .default_addToCart_btn {
     padding: 1em 12px;
   }
 }
 @media (min-width: 1440px) {
-  .product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .custom_sub_button {
+  .product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .default_addToCart_btn {
     padding: 1em 25px;
   }
 }
-.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .custom_sub_button span {
+.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .default_addToCart_btn span {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 18px;
 }
 @media (min-width: 1200px) {
-  .product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .custom_sub_button span {
+  .product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .default_addToCart_btn span {
     font-size: 16px;
   }
 }
 @media (min-width: 1440px) {
-  .product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .custom_sub_button span {
+  .product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .default_addToCart_btn span {
     font-size: 18px;
   }
 }
-.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .custom_sub_button .price__item_sub .product-price__amount {
+.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .default_addToCart_btn .price__item_sub .product-price__amount {
   font-weight: bold;
 }
-.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .custom_sub_button .price__item_sub .product-price__compare {
+.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .default_addToCart_btn .price__item_sub .product-price__compare {
   opacity: 1;
   font-weight: normal;
 }
@@ -276,6 +276,12 @@ html {
   width: 100%;
   padding: 10px 20px;
   margin-bottom: 10px;
+}
+.product-list .product-block .block-inner .block-inner-card-info.add_info_sub form button.show--preloader {
+  pointer-events: none;
+  cursor: none;
+  background-color: var(--solid-black);
+  border-color: var(--solid-black);
 }
 .product-list .product-block .block-inner .block-inner-card-info.add_info_sub .product-form .quantity-submit-row__submit {
   margin: 0;

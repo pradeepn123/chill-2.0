@@ -112,7 +112,7 @@ html{
                             .custom_subscription_info{
                                 .custom_subscription_wrapper{
                                     .custom_button_info{
-                                        .custom_sub_button{
+                                        .default_addToCart_btn{
                                             display: flex;
                                             justify-content: space-between;
                                             width: 100%;
@@ -302,6 +302,14 @@ html{
                                 width: 100%;
                                 padding: 10px 20px;
                                 margin-bottom: 10px;
+                            }
+                        }
+                        button{
+                            &.show--preloader{
+                                pointer-events: none;
+                                cursor: none;
+                                background-color: var(--solid-black);
+                                border-color: var(--solid-black);
                             }
                         }
                     }
