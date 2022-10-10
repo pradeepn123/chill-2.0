@@ -5,6 +5,44 @@
 html{
     padding: 0 !important;
 }
+
+#coverScreen{
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    overflow: hidden !important;
+    z-index: 999999;
+    .loader{
+        width: 70px;
+        height: 70px;
+        position: relative;
+        top: 40%;
+        margin: auto;
+        background: #fff;
+        border-top: 4px solid #9792e4;
+        border-right: 4px solid transparent;
+        border-radius: 50%;
+        // -webkit-animation: 1s spin linear infinite;
+        animation: 1s spin linear infinite;
+        @keyframes spin {
+            from {
+            //   -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+            }
+            to {
+            //   -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+            }
+          }
+    }
+   
+}
+
 .product-list{
     .product-block{
         .block-inner{
@@ -455,16 +493,16 @@ html{
         left: 0;
         background: #9792e4;
         z-index: -1;
-        transition: all .35s;
+        // transition: all .35s;
         color: #fff;
         border: 0;
     }
     &:before{
         opacity: .5;
     }
-    &:after{
-        transition-delay: .2s;
-    }
+    // &:after{
+    //     transition-delay: .2s;
+    // }
     &:hover{
         color: #fff;
         &:before, &:after{
