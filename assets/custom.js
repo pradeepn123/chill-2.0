@@ -276,7 +276,9 @@ const featureProductSubscriptionUtil = (function () {
         '[interval-frequency-selector]',
         onetimepriceEl: '[onetime-price]',
         subscriptionPriceEl: '[subscription-price]',
-        buttonAddtocart: '[feature-addto-cart]'
+        buttonAddtocart: '[feature-addto-cart]',
+        buttonDirectAddToCart: '[direct-addToCart-btn]',
+        productInfoWrapper: '[product-main-block]'
 
 
     };
@@ -406,13 +408,21 @@ const featureProductSubscriptionUtil = (function () {
 
         const updateAddToCartButton = (currentInstance) => {
             let formAddToCartBtn = currentInstance.querySelector(elUtil.buttonAddtocart);
-            
+            let getOtherAddToCartBtn = currentInstance.closest(elUtil.productInfoWrapper).querySelector(elUtil.buttonDirectAddToCart);
             const showPreloaderState = () => {
-                formAddToCartBtn.classList.add(classUtil.activeButtonPreloader)
+                formAddToCartBtn.classList.add(classUtil.activeButtonPreloader);
+                
+                if(getOtherAddToCartBtn){
+                    getOtherAddToCartBtn.classList.add(classUtil.activeButtonPreloader);
+                }
+
             }
 
             const hidePreloaderState = () => {
-                formAddToCartBtn.classList.remove(classUtil.activeButtonPreloader)
+                formAddToCartBtn.classList.remove(classUtil.activeButtonPreloader);
+                if(getOtherAddToCartBtn){
+                    getOtherAddToCartBtn.classList.remove(classUtil.activeButtonPreloader);
+                }
             }
 
 
