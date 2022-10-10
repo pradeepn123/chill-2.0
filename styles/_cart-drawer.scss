@@ -14,12 +14,10 @@ body.cart-drawer-open {
 
 .cart-drawer-summary {
     z-index: 999999;
-    width: 35%;
-
+    width: 40%;
     @media (max-width: 1024px){
         width: 60%;
     }
-
     @media (max-width: 560px){
         width: 95%;
     }
@@ -193,6 +191,7 @@ body.cart-drawer-open {
                         flex-wrap:wrap;
                         padding-top: 1rem;
                         margin: auto;
+                        width: 100%;
                     }
                     .remove {
                         margin: unset;

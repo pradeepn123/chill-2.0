@@ -222,7 +222,7 @@
                 </span>
               </a>
             {% endif %}
-            <a href="{{ routes.cart_url }}" class="cart-link">
+            <a href="{% if settings.cart_type != "drawer" %}{{ routes.cart_url }}{% else %}#{% endif %}" class="cart-link">
               <span class="cart-link__icon {%if section.settings.cart_icon == 'custom' %}custom_bag{% endif %}">
                 {%- if section.settings.cart_icon == 'basket' -%}
                   {%- render 'svg-basket' -%}
@@ -248,11 +248,11 @@
 
       {%- if section.settings.enable_search -%}
         {%- liquid
-                                                                                                                                                                 assign show_search_suggestions = false
-                                                                                                                                                                 if section.settings.search_suggestions_title != blank or section.settings.search_suggestions_menu != blank
-                                                                                                                                                                   assign show_search_suggestions = true
-                                                                                                                                                                 endif
-                                                                                                                                                               -%}
+          assign show_search_suggestions = false
+          if section.settings.search_suggestions_title != blank or section.settings.search_suggestions_menu != blank
+            assign show_search_suggestions = true
+          endif
+        -%}
         <div id="main-search" class="main-search {% if show_search_suggestions %}main-search--with-suggestions{% endif %}" data-live-search="{{ settings.enable_live_search }}" data-live-search-price="{{ settings.live_search_show_price }}" data-live-search-vendor="{{ settings.live_search_show_vendor }}" data-live-search-meta="{{ settings.live_search_search_meta }}" data-per-row-mob="{{ settings.prod_thumb_mob_per_row }}">
 
           <div class="main-search__container container">
