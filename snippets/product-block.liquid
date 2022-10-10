@@ -39,7 +39,7 @@
                                                                                                          assign shipping_interval_frequency = productSubscription.shipping_interval_frequency | split: ','
                                                                                                        -%}
 
-<div data-product-id="{{ product.id }}" class="product-block" {% if animate %}data-cc-animate{% endif %}>
+<div data-product-id="{{ product.id }}" class="product-block" {% if animate %}data-cc-animate{% endif %} product-main-block>
   <div class="block-inner">
     <div class="block-inner-inner">
       {% if product.featured_media %}
@@ -196,7 +196,7 @@
                       </span>
                     </button>
                     {%- else -%}
-                      <button class="btn btn-primary default_addToCart_btn" form="{{product_form_id}}">
+                      <button class="btn btn-primary default_addToCart_btn" form="{{product_form_id}}" direct-addToCart-btn>
                         <span>
                             Add to cart
                         </span>
@@ -329,7 +329,7 @@
     </div>
 
     <!-- home page subscription on click popup -->
-    <div class="block-inner-card-info">
+    <div class="block-inner-card-info" featureProduct-subscription-popup>
       <div class="block-inner-card-info-wrapper">
         <div class="close_card_info">{% render 'svg-close' %}
         </div>

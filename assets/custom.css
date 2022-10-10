@@ -109,6 +109,12 @@ body.overflow-hidden {
   margin-top: 14px;
   line-height: unset;
 }
+.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .default_addToCart_btn.show--preloader {
+  pointer-events: none;
+  cursor: none;
+  background-color: var(--solid-black);
+  border-color: var(--solid-black);
+}
 @media (min-width: 1200px) {
   .product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .default_addToCart_btn {
     padding: 1em 12px;

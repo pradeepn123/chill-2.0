@@ -276,14 +276,16 @@ const featureProductSubscriptionUtil = (function () {
         '[interval-frequency-selector]',
         onetimepriceEl: '[onetime-price]',
         subscriptionPriceEl: '[subscription-price]',
-        buttonAddtocart: '[feature-addto-cart]'
-
-
+        buttonAddtocart: '[feature-addto-cart]',
+        buttonDirectAddToCart: '[direct-addToCart-btn]',
+        productInfoWrapper: '[product-main-block]',
+        featureProductPopup: '[featureProduct-subscription-popup]'
     };
 
     const classUtil = {
         activeSubRadio: 'sub-radio-active',
         activeButtonPreloader: 'show--preloader',
+        activeSubPopup: 'add_info_sub'
 
     };
 
@@ -406,13 +408,21 @@ const featureProductSubscriptionUtil = (function () {
 
         const updateAddToCartButton = (currentInstance) => {
             let formAddToCartBtn = currentInstance.querySelector(elUtil.buttonAddtocart);
-            
+            let getOtherAddToCartBtn = currentInstance.closest(elUtil.productInfoWrapper).querySelector(elUtil.buttonDirectAddToCart);
             const showPreloaderState = () => {
-                formAddToCartBtn.classList.add(classUtil.activeButtonPreloader)
+                formAddToCartBtn.classList.add(classUtil.activeButtonPreloader);
+                
+                if(getOtherAddToCartBtn){
+                    getOtherAddToCartBtn.classList.add(classUtil.activeButtonPreloader);
+                }
+
             }
 
             const hidePreloaderState = () => {
-                formAddToCartBtn.classList.remove(classUtil.activeButtonPreloader)
+                formAddToCartBtn.classList.remove(classUtil.activeButtonPreloader);
+                if(getOtherAddToCartBtn){
+                    getOtherAddToCartBtn.classList.remove(classUtil.activeButtonPreloader);
+                }
             }
 
 
@@ -422,9 +432,15 @@ const featureProductSubscriptionUtil = (function () {
             }
 
         }
+
+        const hideSubscriptionPopup = (currentInstance) => {
+            const subPopup = currentInstance.closest(elUtil.productInfoWrapper).querySelector(elUtil.featureProductPopup);
+            subPopup.classList.remove(classUtil.activeSubPopup);
+        }
         return {
             updateVariantRelatedData,
-            updateAddToCartButton
+            updateAddToCartButton,
+            hideSubscriptionPopup
         };
     };
 
@@ -480,6 +496,7 @@ const featureProductSubscriptionUtil = (function () {
                                 _helperFunc.dispatchOpenDrawerEvent();
                                 // Hide Preloader part
                                 ViewHandler().updateAddToCartButton(_formEl).hidePreloaderState();
+                                ViewHandler().hideSubscriptionPopup(_formEl);
                             })
                             .catch((error) => {
                                 console.log(error);

@@ -123,6 +123,12 @@ body.overflow-hidden {
                                             border-radius: 30px;
                                             margin-top: 14px;
                                             line-height: unset;
+                                            &.show--preloader{
+                                                pointer-events: none;
+                                                cursor: none;
+                                                background-color: var(--solid-black);
+                                                border-color: var(--solid-black);
+                                            }
                                             @media(min-width:1200px){
                                                 padding: 1em 12px;
                                             }
