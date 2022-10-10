@@ -175,6 +175,13 @@ body{
         }
         .signup-form{
             #home_newsletter_signup{
+                .signup-form__response--success{
+                    h4{
+                        color: #fff !important;
+                    }
+                } 
+            }
+            #home_newsletter_signup{
                 width:  calc(100% - 8%);
                 margin: 0 auto;
                 @media(min-width:768px){
