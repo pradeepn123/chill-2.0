@@ -244,6 +244,12 @@ html {
   padding: 10px 20px;
   margin-bottom: 10px;
 }
+.product-list .product-block .block-inner .block-inner-card-info.add_info_sub form button.show--preloader {
+  pointer-events: none;
+  cursor: none;
+  background-color: var(--solid-black);
+  border-color: var(--solid-black);
+}
 .product-list .product-block .block-inner .block-inner-card-info.add_info_sub .product-form .quantity-submit-row__submit {
   margin: 0;
 }

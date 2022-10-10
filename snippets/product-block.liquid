@@ -454,7 +454,7 @@
                   {{- 'products.product.add_to_cart' | t -}}
                 {%- endif -%}
               {%- endcapture -%}
-              <button class="button button--large add_to_cart_btn" data-product-id="{{ current_variant.id }}" type="submit" data-add-to-cart-text="{{ add_to_cart_text | escape }}">
+              <button class="button button--large add_to_cart_btn" data-product-id="{{ current_variant.id }}" type="submit" data-add-to-cart-text="{{ add_to_cart_text | escape }}" feature-addto-cart>
                 <span class="button-actual-text">
                   {%- comment -%}
                     <span class="product-price price__item_sub">

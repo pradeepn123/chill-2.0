@@ -275,13 +275,16 @@ const featureProductSubscriptionUtil = (function () {
         intervalFrequencySelector:
         '[interval-frequency-selector]',
         onetimepriceEl: '[onetime-price]',
-        subscriptionPriceEl: '[subscription-price]'
+        subscriptionPriceEl: '[subscription-price]',
+        buttonAddtocart: '[feature-addto-cart]'
 
 
     };
 
     const classUtil = {
         activeSubRadio: 'sub-radio-active',
+        activeButtonPreloader: 'show--preloader',
+
     };
 
     // Common helper functions required
@@ -401,8 +404,27 @@ const featureProductSubscriptionUtil = (function () {
             updateVariantPrice(currentEl,variantObj);
         };
 
+        const updateAddToCartButton = (currentInstance) => {
+            let formAddToCartBtn = currentInstance.querySelector(elUtil.buttonAddtocart);
+            
+            const showPreloaderState = () => {
+                formAddToCartBtn.classList.add(classUtil.activeButtonPreloader)
+            }
+
+            const hidePreloaderState = () => {
+                formAddToCartBtn.classList.remove(classUtil.activeButtonPreloader)
+            }
+
+
+            return {
+                showPreloaderState,
+                hidePreloaderState
+            }
+
+        }
         return {
             updateVariantRelatedData,
+            updateAddToCartButton
         };
     };
 
@@ -431,7 +453,8 @@ const featureProductSubscriptionUtil = (function () {
                     );
                     try {
                         // Add preloader to button
-                        console.log('Disabled buttons');
+                        ViewHandler().updateAddToCartButton(_formEl).showPreloaderState();
+
                         // Make fetch reques to add product to cart
                         fetch(window.Shopify.routes.root + 'cart/add.js', {
                             method: 'POST',
@@ -439,9 +462,13 @@ const featureProductSubscriptionUtil = (function () {
                         })
                             .then((response) => {
                                 if (!response.ok) {
+
+                                    ViewHandler().updateAddToCartButton(_formEl).hidePreloaderState();
+
                                     throw new Error(
                                         `HTTP error! Status: ${response.status}`
                                     );
+
                                 }
 
                                 return response.json();
@@ -451,6 +478,8 @@ const featureProductSubscriptionUtil = (function () {
                                 // On successfully adding product to cart
                                 // Fire event to open drawer
                                 _helperFunc.dispatchOpenDrawerEvent();
+                                // Hide Preloader part
+                                ViewHandler().updateAddToCartButton(_formEl).hidePreloaderState();
                             })
                             .catch((error) => {
                                 console.log(error);

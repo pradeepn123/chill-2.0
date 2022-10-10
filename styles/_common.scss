@@ -266,6 +266,14 @@ html{
                                 margin-bottom: 10px;
                             }
                         }
+                        button{
+                            &.show--preloader{
+                                pointer-events: none;
+                                cursor: none;
+                                background-color: var(--solid-black);
+                                border-color: var(--solid-black);
+                            }
+                        }
                     }
                     .product-form{
                         .quantity-submit-row__submit{
