@@ -30,8 +30,8 @@
                                 .rimage-outer-wrapper{
                                     max-width:100% !important;
                                     .rimage-wrapper{
-                                        @media(min-width:1680px){
-                                            // padding-top: 80% !important;
+                                        @media(min-width:1200px){
+                                            padding-top: 80% !important;
                                         }
                                         .rimage__image{
                                             object-fit: cover;

@@ -44,7 +44,7 @@
                             class="cart-drawer-summary-item__title"
                             href="{{ item.url }}">
                             {{ item.product.title | replace: "Auto renew", "" | replace: "10.00% Off", "" }}
-                          </a>        
+                          </a>                          
                           {% if item.product.variants.size > 1 %}
                             <span class="variant">{{ item.variant.title }}</span>
                           {% elsif show_single_variant_details %}
@@ -209,7 +209,7 @@
           <div class="cart-drawer-summary__empty">
             <div class="cart-drawer-summary__section">
               <p>{{ 'cart.general.empty' | t }}</p>
-              <a href="/collections/all" class="btn btn-cart-empty">{{ 'cart.general.continue' | t }}</a>
+              <a href="{{ section.settings.continue_shopping_url}}" class="btn btn-cart-empty">{{ 'cart.general.continue' | t }}</a>
             </div>
           </div>
         {% endif %}
@@ -220,6 +220,12 @@
 {% schema %}
   {
     "name": "Cart Drawer",
-    "settings": []
+    "settings": [
+      {
+        "type": "url",
+        "id": "continue_shopping_url",
+        "label": "Add url to 'Continue Shopping' button"
+      }
+    ]
   }
 {% endschema %}
