@@ -44,6 +44,14 @@ html {
   text-align: left;
   margin-top: 14px;
 }
+.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .dynamic_checkout_btn .shopify-payment-button__button.btn-has-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .dynamic_checkout_btn .shopify-payment-button__button.btn-has-price .span:first-child {
+  margin-right: 10px;
+}
 @media (min-width: 1200px) {
   .product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .dynamic_checkout_btn .shopify-payment-button__button {
     font-size: 16px;
@@ -222,6 +230,19 @@ html {
   font-weight: 500;
   line-height: 1.2;
   color: #000000;
+  margin-bottom: 10px;
+}
+.product-list .product-block .block-inner .block-inner-card-info.add_info_sub form .product-subscription-selection-wrapper .feature-product-shipping-interval {
+  border: 1px solid #000000;
+  background: transparent;
+  border-radius: 4rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #000000;
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 10px;
 }
 .product-list .product-block .block-inner .block-inner-card-info.add_info_sub .product-form .quantity-submit-row__submit {
   margin: 0;
@@ -238,6 +259,9 @@ html {
   font-size: 16px;
   text-transform: uppercase;
   line-height: 1;
+}
+.product-list .product-block .block-inner .block-inner-card-info.add_info_sub .product-form .quantity-submit-row__submit button.button--large span.button-actual-text {
+  display: flex;
 }
 
 .mobile-navigation-drawer .navigation .navigation__children-toggle {

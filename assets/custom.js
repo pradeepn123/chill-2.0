@@ -246,6 +246,18 @@ $(document).ready(function () {
 })();
 
 
+function customFeatureProductSubcriptionEvents (){
+    $('.custom_sub_button').click(function() {
+        $(this).closest('.block-inner').find('.block-inner-card-info').addClass('add_info_sub');
+      });
+      featureProductSubscriptionUtil.EventHandler();
+
+      $('.close_card_info').click(function(){
+        $(this).closest('.block-inner').find('.block-inner-card-info').removeClass('add_info_sub');
+      });
+}
+
+
 const featureProductSubscriptionUtil = (function () {
     // Reference all your elements here
     const elUtil = {
@@ -260,6 +272,12 @@ const featureProductSubscriptionUtil = (function () {
         subscriptionFrequencyInputEl: '[subscription-frequency-input]',
         subscriptionUnitInputEl: '[subscription-unit-input]',
         subscriptionIntervalSelector: '[subscription-interval-selectors-wrap]',
+        intervalFrequencySelector:
+        '[interval-frequency-selector]',
+        onetimepriceEl: '[onetime-price]',
+        subscriptionPriceEl: '[subscription-price]'
+
+
     };
 
     const classUtil = {
@@ -357,11 +375,30 @@ const featureProductSubscriptionUtil = (function () {
             // }
         };
 
+        const updateVariantPrice = (currentInstance, variantObj) =>{
+            let getSubscriptionVaraintData =  _helperFunc.getDuplicateVaraintId(variantObj.id, currentInstance);
+            let getActualVaraintPrice = variantObj.varaintData.price;
+            let formatPrice = theme.Shopify.formatMoney(getActualVaraintPrice, theme.money_format)
+            let currFormEl = currentInstance.closest(elUtil.form);
+
+
+            // Update subscription price
+            currFormEl.querySelector(elUtil.subscriptionPriceEl).innerHTML = getSubscriptionVaraintData.discount_variant_price
+
+            // Update actual product price
+            currFormEl.querySelector(elUtil.onetimepriceEl).innerHTML = formatPrice
+            console.log({
+                currentInstance,
+                variantObj,
+                getSubscriptionVaraintData
+            })
+        }
+
         const updateVariantRelatedData = (currentEl, variantObj) => {
             const { id } = variantObj;
             updateInputId(currentEl, id);
             // *** Update varaint price.. will be done later
-            // updateVariantPrice();
+            updateVariantPrice(currentEl,variantObj);
         };
 
         return {
@@ -382,6 +419,8 @@ const featureProductSubscriptionUtil = (function () {
         );
 
         const featureProductFormEl = document.querySelectorAll(elUtil.form);
+
+        const intervalFrequencySelectorEl = document.querySelectorAll(elUtil.intervalFrequencySelector);
 
         if (featureProductFormEl) {
             featureProductFormEl.forEach((_formEl) => {
@@ -518,6 +557,19 @@ const featureProductSubscriptionUtil = (function () {
                         .parentElement.classList.add(classUtil.activeSubRadio);
                 });
             });
+        }
+
+        // Subscription interval frequency Selector
+        if(intervalFrequencySelectorEl){
+            intervalFrequencySelectorEl.forEach(_el => {
+                _el.addEventListener('change', function(){
+                    let getValue = this.value;
+                    let formEl = this.closest(elUtil.form);
+                    formEl
+                        .querySelector(elUtil.subscriptionFrequencyInputEl)
+                        .setAttribute('value', getValue);
+                })
+            })
         }
     };
 
