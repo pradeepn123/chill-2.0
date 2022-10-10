@@ -20,13 +20,13 @@
         "text": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the<\/p>",
         "enlarge_text": true,
         "button_label_1": "READ MORE",
-        "button_url_1": "#shopify-section-template--15938741305502__main",
+        "button_url_1": "#article_blog",
         "button_label_2": "",
         "button_url_2": "",
         "text_alignment": "center center",
         "full_width": true,
         "mobile_overlay_under": false,
-        "overlay_style": "shadow"
+        "overlay_style": "no_background"
       }
     },
     "main": {
