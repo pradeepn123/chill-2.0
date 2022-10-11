@@ -2385,7 +2385,7 @@ body {
 @media (min-width: 768px) {
   .section-main-product .product-detail {
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 @media (min-width: 1040px) {
@@ -2402,6 +2402,11 @@ body {
   .section-main-product .product-detail .gallery {
     width: 55%;
   }
+}
+.section-main-product .product-detail .gallery.gallery--layout-carousel-under {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5rem;
 }
 .section-main-product .product-detail .gallery .gallery__inner .main-image {
   margin: 0;
@@ -2495,6 +2500,9 @@ body {
   .section-main-product .product-detail .detail.detail.product-column-right {
     margin-top: 0px;
   }
+}
+.section-main-product .product-detail .detail .product-form .not-in-quickbuy .shopify-app-block .okeReviews {
+  margin: 16px 0 10px 0;
 }
 .section-main-product .product-detail .detail .product-form .title-row .title {
   font-size: 24px;
@@ -2636,6 +2644,9 @@ body {
 .section-main-product .product-detail .detail .product-form .buy-buttons-row #rc_container #rc_radio_options .rc_block input[type=radio]:focus + .rc_label:before {
   outline: none;
   border-color: #9792e4;
+}
+.section-main-product .product-detail .detail .product-form .buy-buttons-row #rc_container #rc_radio_options .rc_block .rc_label .rc_popup .rc_popup__block {
+  display: none;
 }
 .section-main-product .product-detail .detail .product-form .buy-buttons-row #rc_container #rc_radio_options .rc_block__type__onetime {
   margin-bottom: 10px;
@@ -3971,6 +3982,29 @@ body {
 }
 .account_login .opposing-items div, .account_login .action_bottom div, .account_register .opposing-items div, .account_register .action_bottom div {
   color: #000;
+}
+
+#guest {
+  padding-left: 0;
+  margin-top: 16px;
+}
+#guest .template_header {
+  margin: 10px 0 20px;
+}
+#guest .template_header .title {
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+}
+#guest #customer_login_guest .btn {
+  background: #9792E3;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4rem;
+  border: 0;
+  width: 100%;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
 }
 
 .faq-index__heading {

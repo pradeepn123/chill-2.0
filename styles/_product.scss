@@ -5,7 +5,7 @@
         margin-bottom: 0;
         @media(min-width: 768px){
             justify-content: flex-start;
-            align-items: center;
+            align-items: flex-start;
         }
         .gallery-size-medium+.product-column-right{
             @media (min-width: 1040px){
@@ -20,6 +20,11 @@
         .gallery{
             @media (min-width: 1040px){
                 width: 55%;
+            }
+            &.gallery--layout-carousel-under{
+                position: -webkit-sticky;
+                position: sticky;
+                top: 5rem;
             }
             .gallery__inner{
                 .main-image{
@@ -115,6 +120,13 @@
                 }
             }
             .product-form{
+                .not-in-quickbuy{
+                    .shopify-app-block{
+                        .okeReviews{
+                            margin: 16px 0 10px 0;
+                        }
+                    }
+                }
                 .title-row{
                     .title{
                         font-size: 24px;
@@ -274,6 +286,13 @@
                                 & input[type=radio]:focus + .rc_label:before {
                                     outline: none;
                                     border-color: #9792e4;
+                                }
+                                .rc_label{
+                                    .rc_popup{
+                                        .rc_popup__block{
+                                            display: none;
+                                        }
+                                    }
                                 }
                                 
                             }

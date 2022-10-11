@@ -85,3 +85,28 @@
     }
     
 }
+
+#guest{
+    padding-left:0;
+    margin-top: 16px;
+    .template_header{
+        margin: 10px 0 20px;
+        .title{
+            text-align: left;
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+    #customer_login_guest{
+        .btn{
+            background: #9792E3;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4rem;
+            border: 0;
+            width: 100%;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+}

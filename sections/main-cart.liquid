@@ -1,3 +1,4 @@
+{% assign subtotal = 0 %}
 <div class="container fully-spaced-row cart_container" data-section-type="cart-template" data-ajax-update="true">
   {% if section.settings.show_page_title %}
     <div class="page-header header_wrapper" data-cc-animate>
@@ -33,6 +34,12 @@
         </div>
         <div class="cart-item-list__body">
           {% for item in cart.items %}
+            {% assign has_subscriptions = false %}
+            {% for p in item.properties %}
+              {% if p.first == 'shipping_interval_frequency' %}
+                {% assign has_subscriptions = true %}
+              {% endif %}
+            {% endfor %}
             <div class="cart-item product-{{ item.product.handle }}" data-cc-animate>
               {%- comment -%}
                 Determining the handle of the collection that was last seen for the 'continue shopping' link.
@@ -98,21 +105,32 @@
                 </div>
 
                 <div class="cart-item__column cart-item__price">
-                  {% if item.variant.compare_at_price > item.variant.price %}
-                    <div class="struck-out-price">
-                      <span class="theme-money">{{ item.variant.compare_at_price | money }}
+                  {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}
+                      {%- liquid
+                        assign percentage = item.product.metafields.subscriptions.discount_percentage | divided_by: 100
+                        assign discountedPrice = item.price | times: percentage
+                        assign finalDiscountedPrice = item.price | minus: discountedPrice
+                      -%}
+                      <span class="theme-money">
+                        {% render 'price', price: finalDiscountedPrice, disable_currency_code: true %}
                       </span>
-                    </div>
-                  {% elsif item.original_line_price > item.final_line_price %}
-                    <div class="struck-out-price">
-                      <span class="theme-money">{{ item.original_price | money }}
-                      </span>
-                    </div>
+                    {% else %}
+                      {% if item.variant.compare_at_price > item.variant.price %}
+                        <div class="struck-out-price">
+                          <span class="theme-money">{{ item.variant.compare_at_price | money }}
+                          </span>
+                        </div>
+                      {% elsif item.original_line_price > item.final_line_price %}
+                        <div class="struck-out-price">
+                          <span class="theme-money">{{ item.original_price | money }}
+                          </span>
+                        </div>
+                      {% endif %}
+                      <div>
+                        <span class="theme-money">{{ item.final_price | money }}
+                        </span>
+                      </div>
                   {% endif %}
-                  <div>
-                    <span class="theme-money">{{ item.final_price | money }}
-                    </span>
-                  </div>
 
                   {% render 'unit-price', variant: item %}
 
@@ -154,16 +172,29 @@
                   </a>
                 </div>
 
-                <div class="cart-item__column cart-item__total" data-line="{{ forloop.index }}">
-                  {% if item.variant.compare_at_price > item.variant.price %}
-                    <div class="theme-money struck-out-price">{{ item.variant.compare_at_price | times: item.quantity | money }}
-                    </div>
-                  {% elsif item.original_line_price != item.final_line_price %}
-                    <div class="theme-money struck-out-price">{{ item.original_line_price | money }}
-                    </div>
-                  {% endif %}
-                  <span class="theme-money">{{ item.final_line_price | money }}
-                  </span>
+                <div class="cart-item__column cart-item__total" data-line="{{ forloop.index }}"> 
+                  {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}   
+                    {%- liquid
+                      assign percentage = item.product.metafields.subscriptions.discount_percentage | divided_by: 100
+                      assign discountedPrice = item.final_line_price | times: percentage
+                      assign finalDiscountedPrice = item.final_line_price | minus: discountedPrice
+                    -%}                 
+                    {% assign subtotal = subtotal | plus : finalDiscountedPrice %}
+                    <span class="item__price-current theme-money">
+                      {% render 'price', price: finalDiscountedPrice, disable_currency_code: true %}
+                    </span>
+                  {% else %}
+                    {% if item.variant.compare_at_price > item.variant.price %}
+                      <div class="theme-money struck-out-price">{{ item.variant.compare_at_price | times: item.quantity | money }}
+                      </div>
+                    {% elsif item.original_line_price != item.final_line_price %}
+                      <div class="theme-money struck-out-price">{{ item.original_line_price | money }}
+                      </div>
+                    {% endif %}
+                    <span class="theme-money">{{ item.final_line_price | money }}
+                    </span>
+                    {% assign subtotal = subtotal | plus : item.final_line_price %}
+                  {% endif %}                  
                 </div>
               </div>
             </div>
@@ -213,11 +244,12 @@
 
               <h2 class="subtotal h2-style">
                 {{ 'cart.general.subtotal' | t }}
+                
                 <span class="theme-money">
                   {%- if settings.cart_currency_code_enabled -%}
-                    {{- cart.total_price | money_with_currency -}}
+                    {{- subtotal | money_with_currency -}}
                   {%- else -%}
-                    {{- cart.total_price | money -}}
+                    {{- subtotal | money -}}
                   {%- endif -%}
                 </span>
               </h2>

@@ -383,7 +383,7 @@
           "type": "testimonial",
           "settings": {
             "product": "chill-cbd-gummies-10mg",
-            "testimonial": "“ Absolutely love these gummies! They taste amazing, they're vegan but mostly they really work. Really helps with me anxiety and love to take one before bed for a better nights sleep”",
+            "testimonial": "“ Absolutely love these gummies! They taste amazing, they're vegan but mostly they really work. Really helps with my anxiety and love to take one before bed for a better nights sleep”",
             "author": "Tom K.",
             "author_designation": "05\/27\/2022",
             "image": "shopify:\/\/shop_images\/IMG_2129_2-min.jpg",
@@ -498,7 +498,7 @@
         "template--15968033865886__3dee64a8-71bf-4655-926f-2db509dcd6a5-1664953474fa2ec11e-0": {
           "type": "heading",
           "settings": {
-            "title": "<p>Experience <strong>@Chill<\/strong><\/p>",
+            "title": "<p>Discover <a><strong>@chill_cbd<\/strong><\/a><\/p>",
             "use_h1": false
           }
         }

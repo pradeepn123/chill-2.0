@@ -18,7 +18,9 @@
                     <div id='tab{{tab_id}}' class='content {% if tab_id == 1 %}active{% endif %}'>
                         {% if block.heading != blank %}
                             <div class="heading_text align-center">
-                                <h3>{{ block.heading }}</h3>
+                                {% if section.settings.heading != blank %}
+                                    <h3>{{section.settings.heading}}</h3>
+                                {% endif %}
                                 <p>{{ block.description}}</p>
                             </div>
                         {% endif %}                        
@@ -68,7 +70,12 @@
       {
         "type": "richtext",
         "id": "direction",
-        "label": "Direction to use"        
+        "label": "Direction to use"
+      },
+      {
+        "type": "richtext",
+        "id": "heading",
+        "label": "Ingrediant Heading"
       }
     ],
     "presets": [
