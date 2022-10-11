@@ -3480,6 +3480,7 @@
         }
 
         theme.ProductBlockManager.loadImages(this.$container);
+        customFeatureProductSubcriptionEvents();
       },
 
       switchGridLayout: function switchGridLayout(evt) {
