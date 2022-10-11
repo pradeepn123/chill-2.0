@@ -221,12 +221,17 @@ body.overflow-hidden {
   font-size: 14px;
   font-weight: 600;
   display: block;
-  padding: 13px 16px;
+  padding: 13px;
   cursor: pointer;
   margin-bottom: 12px;
   color: var(--solid-black);
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
+}
+@media (min-width: 1440px) and (max-width: 1600px) {
+  .product-list .product-block .block-inner .block-inner-card-info.add_info_sub form .product-subscription-selection-wrapper label {
+    font-size: 12px;
+  }
 }
 .product-list .product-block .block-inner .block-inner-card-info.add_info_sub form .product-subscription-selection-wrapper label input {
   display: none;
@@ -1134,9 +1139,10 @@ body.overflow-hidden {
   background: none;
   border-bottom: 3px solid #000000;
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
-  .filter_coll .collection-listing .product-list--per-row-4 .product-block {
-    width: 50%;
+  .collection-listing .product-list--per-row-4 .product-block {
+    width: 50% !important;
   }
 }
 
