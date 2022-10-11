@@ -1,0 +1,21 @@
+.page-section-spacing{
+    .majortitle{
+        display: none;
+    }
+    @media (max-width: 767px){
+        margin-top: 0 !important;
+    }
+}
+.contact_us-container{
+    margin-top: 0;
+    .support_content{
+        display: none;
+    }
+    .contact_heading.collab_heading{
+        text-align: center;
+        margin-bottom: 70px;
+        @media (max-width: 767px){
+            margin: 30px 0;
+        }
+    }
+}

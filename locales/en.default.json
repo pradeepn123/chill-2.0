@@ -283,6 +283,7 @@
       "name": "Name",
       "email": "Email",
       "message": "Message",
+      "social_media_link": "Social media link",
       "phone": "Phone",
       "send": "Send"
     }
