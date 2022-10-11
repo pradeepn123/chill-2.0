@@ -237,12 +237,15 @@ body.overflow-hidden {
                                 font-size: 14px;
                                 font-weight: 600;
                                 display: block;
-                                padding: 13px 16px;
+                                padding: 13px;
                                 cursor: pointer;
                                 margin-bottom: 12px;
                                 color: var(--solid-black);
                                 font-family: 'Open Sans', sans-serif;
                                 font-weight: 700;
+                                @media(min-width:1440px) and (max-width:1600px){
+                                    font-size: 12px;
+                                }
                                 input {
                                     display: none;
                                 }

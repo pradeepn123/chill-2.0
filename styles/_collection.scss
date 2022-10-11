@@ -170,12 +170,12 @@
             }
         }
     } 
-    .collection-listing{         
-        .product-list--per-row-4{
-            .product-block{
-                @media(min-width:768px) and (max-width:1024px){
-                    width: 50%;
-                }
+}
+.collection-listing{         
+    .product-list--per-row-4{
+        .product-block{
+            @media(min-width:768px) and (max-width:1024px){
+                width: 50% !important;
             }
         }
     }
