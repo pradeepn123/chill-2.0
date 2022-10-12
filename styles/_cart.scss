@@ -45,6 +45,15 @@
         margin-top: 0 !important;
         margin-bottom: 0 !important;
     }
+    .empty_cart{
+        .empty_cart_message{
+            color: #000;
+        }
+        a{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
     .cart_title{
         font-size: 40px;
         font-weight: 800;

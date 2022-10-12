@@ -76,8 +76,9 @@
                         margin-bottom: 14px;
                         font-family: "Open Sans", sans-serif;
                         @media (max-width: 767px){
-                            display: block ;
+                            display: grid;
                             text-align: center !important;
+                            justify-content: space-around;
                         }
                         .iconmeta.time{
                             display: flex;
