@@ -7,17 +7,17 @@
   - item_open {boolean} [optional] - Whether the item should be open on page load. Default is false.{% endcomment %}
 
 {%- liquid
-      assign item_attr = 'class="cc-accordion-item"'
+          assign item_attr = 'class="cc-accordion-item"'
+        
+          if item_open == true
+            assign item_attr = 'class="cc-accordion-item is-open" open'
+          endif
+        
+          if add_content_class
+            assign content_class = add_content_class | prepend: ' '
+          endif
     
-      if item_open == true
-        assign item_attr = 'class="cc-accordion-item is-open" open'
-      endif
-    
-      if add_content_class
-        assign content_class = add_content_class | prepend: ' '
-      endif
-
-    -%}
+        -%}
 
 <details {{ item_attr }}>
   <summary class="cc-accordion-item__title">{{- title -}}
@@ -26,9 +26,11 @@
   <div class="cc-accordion-item__panel">
     <div class="cc-accordion-item__content{{ content_class }}">
       {{- content -}}
+      {%- if test_results != blank -%}
+        See our test results
+        <a href="{{ test_results }}">here</a>.
+      {%- endif -%}
     </div>
   </div>
-  {%- if test_results -%}
-  See our test results <a href="{{ test_results }}">here</a>.
-  {%- endif -%}
+
 </details>
