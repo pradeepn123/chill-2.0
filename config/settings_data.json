@@ -1040,6 +1040,7 @@
     "live_search_search_meta": false,
     "cart_type": "drawer",
     "product_currency_code_enabled": false,
+    "enable_domain_redirect": false,
     "sections": {
       "header": {
         "type": "header",
