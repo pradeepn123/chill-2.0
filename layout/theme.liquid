@@ -16,7 +16,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" rel="stylesheet" type="text/css" media="all" />
   {% render 'head-tag' %}
   
-  {% if settings.enable_domain_redirect %}
+  {% if settings.enable_domain_redirect == true %}
     {% render 'ipdata-us-uk-redirect' %}
   {% endif %}
   
