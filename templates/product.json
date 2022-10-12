@@ -88,18 +88,6 @@
             "show_in_quickbuy": false
           }
         },
-        "f631a81f-1f59-4f8f-9ed7-0d2e00bed3f1": {
-          "type": "accordion",
-          "settings": {
-            "title": "Product test results",
-            "icon": "",
-            "content": "",
-            "test_result_link": "{{ product.metafields.product_accordion.product_custom_url.value }}",
-            "page": "",
-            "open": false,
-            "show_in_quickbuy": false
-          }
-        },
         "6f5bb160-f854-4fc2-8c84-116e793e8335": {
           "type": "accordion",
           "settings": {
@@ -107,6 +95,18 @@
             "icon": "",
             "content": "<p>{{ product.metafields.settings.shipping_info | metafield_tag }}<\/p>",
             "test_result_link": "",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "f631a81f-1f59-4f8f-9ed7-0d2e00bed3f1": {
+          "type": "accordion",
+          "settings": {
+            "title": "Product test results",
+            "icon": "",
+            "content": "",
+            "test_result_link": "{{ product.metafields.product_accordion.product_custom_url.value }}",
             "page": "",
             "open": false,
             "show_in_quickbuy": false
@@ -124,8 +124,8 @@
         "variant_picker",
         "buy_buttons",
         "3102f34a-bede-4e71-913e-ac198794cf3f",
-        "f631a81f-1f59-4f8f-9ed7-0d2e00bed3f1",
-        "6f5bb160-f854-4fc2-8c84-116e793e8335"
+        "6f5bb160-f854-4fc2-8c84-116e793e8335",
+        "f631a81f-1f59-4f8f-9ed7-0d2e00bed3f1"
       ],
       "settings": {
         "show_breadcrumbs": false,
