@@ -105,14 +105,14 @@ const webRedirectUtil = (function() {
                 //         }
                 // }  
                 if(!isLocation_inURL().hasLocation || !isLocationStored_inSession().hasLocation){
-                            fetchUserLocationData( data => {
-                                let location = data.country_code;
+                            // fetchUserLocationData( data => {
+                            //     let location = data.country_code;
 
-                                _helperFunc.setItem_InSession(_helperVar.storedLocationKey, location);
+                            //     _helperFunc.setItem_InSession(_helperVar.storedLocationKey, location);
 
-                                redirecUserAsPerLocation(location);
+                            //     redirecUserAsPerLocation(location);
 
-                            })
+                            // })
                         }
             
     }
