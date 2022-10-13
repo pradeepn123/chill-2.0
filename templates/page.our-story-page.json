@@ -231,6 +231,18 @@
             "video_subHeading": "<p>Preparing for the highline<\/p>",
             "video_type": "Experience"
           }
+        },
+        "a2cb1286-a386-4532-a85b-41d6cd45bb3a": {
+          "type": "image-video",
+          "disabled": true,
+          "settings": {
+            "video": "<iframe src=\"https:\/\/player.vimeo.com\/video\/760082707?h=8b5c62cac0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen><\/iframe> <p><a href=\"https:\/\/vimeo.com\/760082707\">Chill x WUF Tease V2.4<\/a> from <a href=\"https:\/\/vimeo.com\/user159915237\">Chill.com<\/a> on <a href=\"https:\/\/vimeo.com\">Vimeo<\/a>.<\/p>",
+            "placeholder_image": "shopify:\/\/shop_images\/Screenshot_2022-10-13_at_23.55.24.png",
+            "video_popup": "<iframe src=\"https:\/\/player.vimeo.com\/video\/760082707?h=8b5c62cac0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen><\/iframe> <p><a href=\"https:\/\/vimeo.com\/760082707\">Chill x WUF Tease V2.4<\/a> from <a href=\"https:\/\/vimeo.com\/user159915237\">Chill.com<\/a> on <a href=\"https:\/\/vimeo.com\">Vimeo<\/a>.<\/p>",
+            "video_heading": "Warm Up  Festival",
+            "video_subHeading": "<p>Serving up some Chill at one of the UK's coolest festivals <\/p>",
+            "video_type": "Warm Up Festival"
+          }
         }
       },
       "block_order": [
@@ -240,7 +252,8 @@
         "1f5ad00b-7f17-4f10-8fc0-054fa9437247",
         "6fecb0c8-a2b6-4f63-9a63-832e14a33a02",
         "8d77efa0-2df7-4a3f-8381-656b9dfa5093",
-        "8d37fb21-c1d4-464d-9632-173826ea532d"
+        "8d37fb21-c1d4-464d-9632-173826ea532d",
+        "a2cb1286-a386-4532-a85b-41d6cd45bb3a"
       ],
       "settings": {
         "bg_color": "#f2f2f3",
