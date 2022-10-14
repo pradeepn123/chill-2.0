@@ -22,6 +22,12 @@
             "slider_image": "shopify:\/\/shop_images\/OurStory-Carousel2.jpg"
           }
         },
+        "65274730-dc6b-4c1e-bdf8-3c4ff656d7a1": {
+          "type": "image",
+          "settings": {
+            "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel2_8b3dfa48-cb82-4606-aa34-34d19ed95cac.jpg"
+          }
+        },
         "02b3cc80-701c-47ad-ae9b-832ea72c7120": {
           "type": "image",
           "settings": {
@@ -34,12 +40,6 @@
             "slider_image": "shopify:\/\/shop_images\/OurStory-Carousel4.jpg"
           }
         },
-        "65274730-dc6b-4c1e-bdf8-3c4ff656d7a1": {
-          "type": "image",
-          "settings": {
-            "slider_image": "shopify:\/\/shop_images\/OurStory-Carousel5.jpg"
-          }
-        },
         "a04d4980-5c7a-4800-9933-96cefc9f7b9d": {
           "type": "image",
           "settings": {
@@ -49,7 +49,7 @@
         "15dac98d-7166-48b1-ab53-36ec331474fa": {
           "type": "image",
           "settings": {
-            "slider_image": "shopify:\/\/shop_images\/OurStory-Carousel7.jpg"
+            "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel1_bc77d2ac-1f2c-4fde-8bf8-4bb582729d0b.jpg"
           }
         },
         "4d1e7544-348f-4a39-a537-4e953c19a8cd": {
@@ -70,6 +70,12 @@
             "slider_image": "shopify:\/\/shop_images\/OurStory-Carousel1.jpg"
           }
         },
+        "48a22953-e7ea-498a-993d-9462da0feefd": {
+          "type": "image",
+          "settings": {
+            "slider_image": "shopify:\/\/shop_images\/4_-_Chill-Shop-Smokes-Mint.jpg"
+          }
+        },
         "35270f8e-a768-4e08-93c0-04dc1351362f": {
           "type": "image",
           "settings": {
@@ -81,21 +87,29 @@
           "settings": {
             "slider_image": "shopify:\/\/shop_images\/OurStory-Carousel3.jpg"
           }
+        },
+        "3c752b99-c83b-4a9f-878e-a2874af0a4b4": {
+          "type": "image",
+          "settings": {
+            "slider_image": "shopify:\/\/shop_images\/Our_Story-Carousel10.jpg"
+          }
         }
       },
       "block_order": [
         "091bf8b6-b030-402d-932e-c999f5d48dda",
         "223cc8e6-4742-4921-898e-9aff97ae4e1e",
+        "65274730-dc6b-4c1e-bdf8-3c4ff656d7a1",
         "02b3cc80-701c-47ad-ae9b-832ea72c7120",
         "ec17db10-6f2c-4e67-bd36-7653c3ecb379",
-        "65274730-dc6b-4c1e-bdf8-3c4ff656d7a1",
         "a04d4980-5c7a-4800-9933-96cefc9f7b9d",
         "15dac98d-7166-48b1-ab53-36ec331474fa",
         "4d1e7544-348f-4a39-a537-4e953c19a8cd",
         "fac87674-63b1-4d5c-b99f-89a14c55a525",
         "b317fa97-6f0e-48b3-9f20-645b973434aa",
+        "48a22953-e7ea-498a-993d-9462da0feefd",
         "35270f8e-a768-4e08-93c0-04dc1351362f",
-        "f01d66f3-6dd6-4ba4-9462-4a3c7f3f89da"
+        "f01d66f3-6dd6-4ba4-9462-4a3c7f3f89da",
+        "3c752b99-c83b-4a9f-878e-a2874af0a4b4"
       ],
       "settings": {
         "bg_color": "#9792e4",
