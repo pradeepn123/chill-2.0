@@ -3864,6 +3864,16 @@ body {
     font-size: 16px;
   }
 }
+.rewards_wrapper .rewards_description_main p, .get_started_wrapper .rewards_description_main p {
+  font-size: 20px;
+  color: black;
+  max-width: 46.563rem;
+}
+@media (max-width: 640px) {
+  .rewards_wrapper .rewards_description_main p, .get_started_wrapper .rewards_description_main p {
+    font-size: 16px;
+  }
+}
 .rewards_wrapper .rewards_button, .get_started_wrapper .rewards_button {
   border: none;
   border-radius: 31px;
