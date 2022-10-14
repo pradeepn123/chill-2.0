@@ -422,33 +422,6 @@
         "use_alt_bg": true
       }
     },
-    "0a2c9d3c-d156-4960-b940-4af22be1e9e1": {
-      "type": "affiliate-banner",
-      "settings": {
-        "banner-image": "shopify:\/\/shop_images\/Recycle_Banner_-_WITH_TEXT.jpg",
-        "banner-image_mobile": "shopify:\/\/shop_images\/Recycle_Banner_-_WITH_TEXT.jpg",
-        "title_color": "#ffffff",
-        "title": "",
-        "title_font_size": 16,
-        "sub_title": "",
-        "subtitle_color": "#ffffff",
-        "sub_title_font_size": 16,
-        "join_now_btn": true,
-        "banner_btn_content": "Shop gumies",
-        "banner_btn_url": "shopify:\/\/collections\/new-cbd-gummies",
-        "banner_btn_text_color": "#ffffff",
-        "banner_btn_color": "#9792e4",
-        "banner_btn_font_size": 16,
-        "mobile_title": "<p>Join the Chill Affiliate program on Shareasale!<\/p>",
-        "title_color_mobile": "#000000",
-        "title_font_size_mobile": 16,
-        "sub_title_mobile": "<p>Buy Chill products. Earn Rewards.<\/p>",
-        "subtitle_color_mobile": "#000000",
-        "sub_title_font_size_mobile": 16,
-        "banner_btn_color_mobile": "#ffac9a",
-        "banner_btn_font_size_mobile": 16
-      }
-    },
     "16607619805b81a490": {
       "type": "logo-list",
       "disabled": true,
@@ -582,7 +555,6 @@
     "1661759224933bf819",
     "16616836322167cf31",
     "16618284517e50f27f",
-    "0a2c9d3c-d156-4960-b940-4af22be1e9e1",
     "16607619805b81a490",
     "3dee64a8-71bf-4655-926f-2db509dcd6a5",
     "166453148629faf25b",

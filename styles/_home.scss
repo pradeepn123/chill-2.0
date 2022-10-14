@@ -1234,7 +1234,23 @@ body{
     }
 }
 
-
+#shopify-section-template--15938741469342__bd7bd1fb-932d-4c82-9a5c-5b3dcc9ee8a5{
+        .overlay-text{
+            .overlay-text__inner{
+                .overlay-text__button{
+                    border-radius: 30px;
+                    margin-left: 7%;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    color: #fff;
+                    background: #9792E4;
+                    &:hover{
+                        background: #000;
+                    }
+                }
+            }
+        }
+    }
 // tikshop spacing
 #shopify-section-template--15968033865886__166453148629faf25b .fully-spaced-row--medium{
     margin-top: 26px;
