@@ -578,16 +578,16 @@ body.overflow-hidden {
             left: 0;
             background: #6ec59f;
             z-index: -1;
-            transition: all .35s;
+            // transition: all .35s;
             color: #fff;
             border: 0;
         }
         &:before{
             opacity: .5;
         }
-        &:after{
-            // transition-delay: .2s;
-        }
+        // &:after{
+        //     // transition-delay: .2s;
+        // }
         &:hover{
             color: #fff;
             &:before, &:after{

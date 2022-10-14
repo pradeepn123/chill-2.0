@@ -100,13 +100,13 @@
             "show_in_quickbuy": false
           }
         },
-        "f631a81f-1f59-4f8f-9ed7-0d2e00bed3f1": {
+        "a7013d3f-0653-4f9c-8d1b-aabe369293b7": {
           "type": "accordion",
           "disabled": true,
           "settings": {
             "title": "Product test results",
             "icon": "",
-            "content": "",
+            "content": "<p>{{ product.metafields.custom.test_result_description | metafield_tag }}<\/p>",
             "test_result_link": "{{ product.metafields.product_accordion.product_custom_url.value }}",
             "page": "",
             "open": false,
@@ -137,15 +137,14 @@
         "variant_picker",
         "buy_buttons",
         "3102f34a-bede-4e71-913e-ac198794cf3f",
-        "6f5bb160-f854-4fc2-8c84-116e793e8335",
-        "f631a81f-1f59-4f8f-9ed7-0d2e00bed3f1",
-        "159bfb1a-f3fd-441a-a5d1-71f32e1a06ae"
+        "7b9519ce-2f85-4c0b-87e1-05cafe37a25f",
+        "a7013d3f-0653-4f9c-8d1b-aabe369293b7"
       ],
       "settings": {
         "show_breadcrumbs": false,
         "show_location_underneath": false,
         "inventory_transfers_enable": true,
-        "enable_sticky_columns": false,
+        "enable_sticky_columns": true,
         "show_thumbnail": false,
         "gallery_size": "medium",
         "gallery_layout": "carousel-under",
