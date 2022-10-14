@@ -67,7 +67,7 @@
         "48a22953-e7ea-498a-993d-9462da0feefd": {
           "type": "image",
           "settings": {
-            "slider_image": "shopify:\/\/shop_images\/4_-_Chill-Shop-Smokes-Mint.jpg"
+            "slider_image": "shopify:\/\/shop_images\/Our_Story-Carousel11.jpg"
           }
         },
         "3c752b99-c83b-4a9f-878e-a2874af0a4b4": {
@@ -78,21 +78,36 @@
         },
         "b317fa97-6f0e-48b3-9f20-645b973434aa": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "slider_image": "shopify:\/\/shop_images\/OurStory-Carousel1.jpg"
           }
         },
+        "4071a1e0-45eb-41bd-a00c-409418472797": {
+          "type": "image",
+          "settings": {
+            "slider_image": "shopify:\/\/shop_images\/OurStory-Carousel9.jpg"
+          }
+        },
+        "d168e42e-df26-42be-9b0d-c80ec3eaad06": {
+          "type": "image",
+          "settings": {
+            "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel2_8b3dfa48-cb82-4606-aa34-34d19ed95cac.jpg"
+          }
+        },
         "35270f8e-a768-4e08-93c0-04dc1351362f": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "slider_image": "shopify:\/\/shop_images\/OurStory-Carousel2.jpg"
           }
         },
+        "0a1a8bb5-ce42-4032-b9f6-68774d9587b9": {
+          "type": "image",
+          "settings": {
+            "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel1_bc77d2ac-1f2c-4fde-8bf8-4bb582729d0b.jpg"
+          }
+        },
         "f01d66f3-6dd6-4ba4-9462-4a3c7f3f89da": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "slider_image": "shopify:\/\/shop_images\/OurStory-Carousel3.jpg"
           }
@@ -111,7 +126,10 @@
         "48a22953-e7ea-498a-993d-9462da0feefd",
         "3c752b99-c83b-4a9f-878e-a2874af0a4b4",
         "b317fa97-6f0e-48b3-9f20-645b973434aa",
+        "4071a1e0-45eb-41bd-a00c-409418472797",
+        "d168e42e-df26-42be-9b0d-c80ec3eaad06",
         "35270f8e-a768-4e08-93c0-04dc1351362f",
+        "0a1a8bb5-ce42-4032-b9f6-68774d9587b9",
         "f01d66f3-6dd6-4ba4-9462-4a3c7f3f89da"
       ],
       "settings": {
