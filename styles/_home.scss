@@ -91,6 +91,9 @@ body{
         text-transform: inherit;
         margin-bottom: 12px;
         color: #000000;
+        @media (max-width: 768px){
+            font-size: 35px;
+        }
         @media(min-width:1200px){
             font-size: 52px;
         }

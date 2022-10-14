@@ -487,7 +487,6 @@ body.overflow-hidden {
   left: 0;
   background: #6ec59f;
   z-index: -1;
-  transition: all 0.35s;
   color: #fff;
   border: 0;
 }
@@ -1024,12 +1023,13 @@ body.overflow-hidden {
   margin-bottom: 40px;
 }
 .filter_coll .utility-bar-main .utility-bar {
-  padding: 12px;
+  padding: 12px 12px 20px 12px;
   flex-direction: column;
   align-items: flex-start;
 }
 @media (min-width: 768px) {
   .filter_coll .utility-bar-main .utility-bar {
+    padding: 12px;
     align-items: center;
     flex-direction: row;
   }
@@ -1227,6 +1227,11 @@ body {
   text-transform: inherit;
   margin-bottom: 12px;
   color: #000000;
+}
+@media (max-width: 768px) {
+  .section-rich-text .majortitle {
+    font-size: 35px;
+  }
 }
 @media (min-width: 1200px) {
   .section-rich-text .majortitle {
