@@ -243,6 +243,17 @@
             "video_subHeading": "<p>Serving up some Chill at one of the UK's coolest festivals <\/p>",
             "video_type": "Warm Up Festival"
           }
+        },
+        "9ba6f619-c346-4e0d-b0d2-bb29f6b5d077": {
+          "type": "image-video",
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/760081974",
+            "placeholder_image": "shopify:\/\/shop_images\/IMG_1226.jpg",
+            "video_popup": "https:\/\/player.vimeo.com\/video\/760081974",
+            "video_heading": "Saying No to Stress is a Choice",
+            "video_subHeading": "<p>Are we encouraged to be stressed? Finding a calm state of mind is a choice. Choose to find your chill.<\/p>",
+            "video_type": "Saying No to Stress is a Choice"
+          }
         }
       },
       "block_order": [
@@ -253,7 +264,8 @@
         "6fecb0c8-a2b6-4f63-9a63-832e14a33a02",
         "8d77efa0-2df7-4a3f-8381-656b9dfa5093",
         "8d37fb21-c1d4-464d-9632-173826ea532d",
-        "a2cb1286-a386-4532-a85b-41d6cd45bb3a"
+        "a2cb1286-a386-4532-a85b-41d6cd45bb3a",
+        "9ba6f619-c346-4e0d-b0d2-bb29f6b5d077"
       ],
       "settings": {
         "bg_color": "#f2f2f3",
