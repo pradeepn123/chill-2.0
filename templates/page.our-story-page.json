@@ -242,6 +242,7 @@
         },
         "6fecb0c8-a2b6-4f63-9a63-832e14a33a02": {
           "type": "image-video",
+          "disabled": true,
           "settings": {
             "video": "https:\/\/player.vimeo.com\/video\/701403564?h=35952ce15f&background=1&autoplay=1",
             "placeholder_image": "shopify:\/\/shop_images\/Screenshot_2022-09-05_at_8.24.40_PM.png",
@@ -257,7 +258,7 @@
             "video": "https:\/\/player.vimeo.com\/video\/701804548?h=ff05130736&background=1&autoplay=1",
             "placeholder_image": "shopify:\/\/shop_images\/Skatepark_Madness.png",
             "video_popup": "https:\/\/player.vimeo.com\/video\/701803219?h=50a41ce592",
-            "video_heading": "Skatepark Madness",
+            "video_heading": "Skatepark Chillin'",
             "video_subHeading": "<p>Chill and enjoy whatever you love outside<\/p>",
             "video_type": "Experience"
           }
