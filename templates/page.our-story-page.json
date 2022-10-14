@@ -80,7 +80,6 @@
         },
         "b317fa97-6f0e-48b3-9f20-645b973434aa": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "slider_image": "shopify:\/\/shop_images\/OurStory-Carousel1.jpg"
           }
@@ -115,7 +114,6 @@
         },
         "f01d66f3-6dd6-4ba4-9462-4a3c7f3f89da": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "slider_image": "shopify:\/\/shop_images\/OurStory-Carousel3.jpg"
           }
