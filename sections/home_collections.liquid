@@ -6,9 +6,9 @@
           <h3>{{ section.settings.text }}
           </h3>
         {%- endif -%}
-        {%- if section.settings.show_view_all -%}
+        {%- if section.settings.show_shop_all -%}
           <div class="view-all align-center" data-cc-animate data-cc-animate-delay="0.3s">
-            <a class="small-feature-link collection_shop_all" href="{{ collection.url }}">{{ 'collections.general.view_all' | t }}
+            <a class="small-feature-link collection_shop_all" href="{{ section.settings.shop_all_link }}">{{ 'collections.general.view_all' | t }}
               {% render 'svg-up-icon' %}
             </a>
           </div>
@@ -53,9 +53,13 @@
         "default": "<p>Our Collections</p>"
       }, {
         "type": "checkbox",
-        "id": "show_view_all",
-        "label": "Show 'View all' link",
+        "id": "show_shop_all",
+        "label": "Show 'Shop all' link",
         "default": true
+      }, {
+        "type": "url",
+        "id": "shop_all_link",
+        "label": "Add url to 'Shop All'"
       }
     ],
     "blocks": [
@@ -90,4 +94,4 @@
       }
     ]
   }
-{% endschema %}}
+{% endschema %}

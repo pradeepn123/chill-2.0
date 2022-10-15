@@ -446,7 +446,7 @@ body.overflow-hidden {
                     display: none;  
                     border: 1px solid #ddd;              
                 }               
-                @media (min-width: 768px) and (max-width: 1024px){
+                @media (min-width: 768px) and (max-width: 1023px){
                     .country_selector{
                         .dropdown-content{
                             padding: 10px; 
@@ -625,7 +625,7 @@ div#main-nav{
     @media(min-width:768px){
         display: flex !important;
     }
-    @media(min-width:1200px){
+    @media(min-width:1024px){
         display: inline-block !important;
     }
 }
@@ -633,7 +633,7 @@ div#main-nav{
     @media(min-width:768px){
         visibility: hidden !important;
     }
-    @media(min-width:1200px){
+    @media(min-width:1024px){
         visibility: visible !important;
     }
 }
