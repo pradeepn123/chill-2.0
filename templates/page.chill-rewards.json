@@ -10,8 +10,8 @@
     "166149528801bd4d3b": {
       "type": "affiliate-banner",
       "settings": {
-        "banner-image": "shopify:\/\/shop_images\/CHILL_COIN_Banner_2.jpg",
-        "banner-image_mobile": "shopify:\/\/shop_images\/CHILL_COIN_Banner_2.jpg",
+        "banner-image": "shopify:\/\/shop_images\/CHILL_COIN_Banner_3.jpg",
+        "banner-image_mobile": "shopify:\/\/shop_images\/CHILLCOIN_Banner_MOBILE.jpg",
         "title_color": "#ffffff",
         "title": "<p>Buy Products.<br\/>Earn <strong>Rewards. <\/strong><br\/><strong>Chill. <\/strong><\/p>",
         "title_font_size": 70,
@@ -211,12 +211,12 @@
       "settings": {
         "rewards_heading": "<p><strong>How to Get Started<\/strong><\/p>",
         "rewards_title_font_size": 50,
-        "rewards_description": "<p>Simply place an order to get started with Chillcoin. You can check your balance at any time by clicking the icon in the corner of your screen.<\/p><p>*Discounts can only be redeemed on purchases with a value greater than the discount. Chillcoins are only redeemable for products. <\/p>",
+        "rewards_description": "<p>Simply place an order to get started with Chillcoin. You can check your balance at any time. <\/p><p>*Discounts can only be redeemed on purchases with a value greater than the discount. Chillcoins are only redeemable for products. <\/p>",
         "rewards_heading_mobile": "<p><strong>How to Get Started<\/strong><\/p>",
         "rewards_title_font_size_mobile": 42,
         "add_button": true,
         "button_text": "Shop Now",
-        "button_link": "shopify:\/\/collections\/all",
+        "button_link": "shopify:\/\/collections\/newshop",
         "button_font_size": 16,
         "button_color": "#9792e4"
       }
