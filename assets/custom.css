@@ -4357,11 +4357,11 @@ body {
 .article_single_blog_post .article-image.article-image--large {
   margin-top: 0 !important;
   max-width: 85%;
-  height: 581px;
+  height: 400px;
 }
 .article_single_blog_post .article-image.article-image--large .page-header .rimage-background {
   border-radius: 20px;
-  height: 581px;
+  height: 400px;
 }
 .article_single_blog_post .article .container {
   max-width: 1016px !important;

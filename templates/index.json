@@ -322,7 +322,8 @@
       ],
       "settings": {
         "text": "<p>Our <strong>Collections<\/strong><\/p>",
-        "show_view_all": true
+        "show_shop_all": true,
+        "shop_all_link": "shopify:\/\/collections\/newshop"
       }
     },
     "16618284517e50f27f": {
