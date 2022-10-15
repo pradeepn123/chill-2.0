@@ -1234,20 +1234,31 @@ body{
     }
 }
 
-#shopify-section-template--15938741469342__bd7bd1fb-932d-4c82-9a5c-5b3dcc9ee8a5{
+#section-id-template--15938741469342__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e{
         .overlay-text{
             .overlay-text__inner{
                 .overlay-text__button{
                     border-radius: 30px;
-                    margin-left: 7%;
+                    // margin-left: 4%;
                     text-transform: uppercase;
                     font-weight: 800;
                     color: #fff;
                     background: #9792E4;
+                    position: relative;
+                    top: 10px;
+                    left: 5%;
                     &:hover{
                         background: #000;
                     }
+                    @media (min-width: 768px) and (max-width: 1023px){
+                        font-size: 10px;
+                    }
                 }
+            }
+        }
+        @media (max-width: 767px){
+            .overlay-text__button-row {
+                margin: 0;
             }
         }
     }

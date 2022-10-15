@@ -310,7 +310,7 @@
             "image": "shopify:\/\/shop_images\/US_-Collections_-_Coming_Soon.jpg",
             "collection": "coming-soon",
             "title": "Coming Soon",
-            "shop_all_link": ""
+            "shop_all_link": "shopify:\/\/collections\/newshop"
           }
         }
       },
@@ -420,6 +420,36 @@
         "quote_text_size": 24,
         "quote_text_size_mobile": 20,
         "use_alt_bg": true
+      }
+    },
+    "829c3c02-065e-4087-a6c0-f8a0cb3d5f6e": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Recycle_Banner_-_WITH_TEXT_840617f2-c25a-4e69-8a73-bc8e97e09340.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/RECYCLE_Banner_MOBILE.jpg",
+        "image_position": "center center",
+        "mobile_image_position": "center center",
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "subheading": "",
+        "title": "",
+        "title_size": 84,
+        "title_weight": 800,
+        "title_size_mobile": 46,
+        "title_weight_mobile": 800,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": true,
+        "button_label_1": "Shop Gummies",
+        "button_url_1": "shopify:\/\/collections\/new-cbd-gummies",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "bottom left",
+        "full_width": true,
+        "mobile_overlay_under": true,
+        "overlay_style": "no_background"
       }
     },
     "16607619805b81a490": {
@@ -555,6 +585,7 @@
     "1661759224933bf819",
     "16616836322167cf31",
     "16618284517e50f27f",
+    "829c3c02-065e-4087-a6c0-f8a0cb3d5f6e",
     "16607619805b81a490",
     "3dee64a8-71bf-4655-926f-2db509dcd6a5",
     "166453148629faf25b",
