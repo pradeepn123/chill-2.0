@@ -18,7 +18,7 @@ function scrollAbout(){
     //our story value scoll
     const stickyContainer = document.querySelector('.faq-index__sticky-container');
     if(stickyContainer){
-        const currentElement =  document.querySelector('.chill-story-value-block-section');
+        const currentElement =  document.querySelector('.chill-story-value-block-section, .featured_block_list');
         const stickyContainerRect = stickyContainer.getBoundingClientRect();
         const currentElementRect = currentElement.getBoundingClientRect();
         stickyContainer.style.height = currentElementRect.bottom - stickyContainerRect.top + 'px';
@@ -186,6 +186,23 @@ $(document).ready(function () {
       updateContainer();
       scrollAbout();
   });
+  // const animation_items = [...document.getElementsByClassName('list__item')];
+  const containerElem = document.getElementById('containerElem');
+  const leftSideOfContainer = containerElem.getBoundingClientRect().left;
+  const listElem = document.getElementById('list');
+  let currentLeftValue = 0;
+          
+  window.setInterval(animationLoop, 10);    
+  function animationLoop() {
+      const firstListItem = listElem.querySelector('.list__item:first-child');      
+      let rightSideOfFirstItem = firstListItem.getBoundingClientRect().right;
+      if(rightSideOfFirstItem == leftSideOfContainer){
+      currentLeftValue = -1;
+      listElem.appendChild(firstListItem);
+      }      
+      listElem.style.marginLeft = `${currentLeftValue}px`;
+      currentLeftValue--;
+  }
   var figure2 = $(".chill-videos-item");
   var vid = figure2.find(".play-video");
   var videoNo = vid.length;

@@ -345,6 +345,18 @@ body{
                 @media(min-width:1200px){
                     padding: 0;
                 }
+                a{
+                    flex: 0 0 calc(50% - 22px);
+                    margin: 0;
+                    @media(min-width:768px){
+                        flex: 0 0 calc(25% - 20px);
+                        margin: 0 20px 30px;
+                    }
+                    @media(min-width:1200px){
+                        flex: 0 0 calc(20% - 50px);
+                        margin: 0 16px 10px;
+                    }
+                }
                 .icon-item {
                     flex: 0 0 calc(50% - 22px);
                     margin: 0;
@@ -367,10 +379,13 @@ body{
                     }
                     h3{
                         margin-top: 13px;
-                        font-size: 20px;
+                        font-size: 16px;
                         font-weight: bold;
                         text-transform: uppercase;
                         font-family: 'Open Sans', sans-serif;
+                        @media(min-width:768px){
+                            font-size: 20px;
+                        }
                     }
                     p{
                         margin-top: 8px;
@@ -1267,5 +1282,51 @@ body{
     margin-top: 26px;
     @media(min-width:1200px){
         margin-top: 46px;
+    }
+}
+
+#section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e,
+#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e{
+    .overlay-text{
+        .overlay-text__inner{
+            .overlay-text__button{
+                border-radius: 30px;
+                // margin-left: 4%;
+                text-transform: uppercase;
+                font-weight: 800;
+                color: #fff;
+                background: #9792E4;
+                position: relative;
+                top: -20px;
+                left: 6%;
+                &:hover{
+                    background: #000;
+                }
+                @media(max-width:767px){
+                    top: 16px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);                
+                }                
+                @media (min-width: 768px) and (max-width: 1023px){
+                    font-size: 10px;
+                    top: 16px;
+                }
+                @media(min-width:1024px) and (max-width:1199px){
+                    top: 0px;
+                }
+                @media(min-width:1680px){
+                    top: -30px;
+                }
+                @media(min-width:1920px){
+                    top: -50px;
+                    left: 7%;
+                }
+            }
+        }
+    }
+    @media (max-width: 767px){
+        .overlay-text__button-row {
+            margin: 0;
+        }
     }
 }
