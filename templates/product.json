@@ -88,7 +88,7 @@
             "show_in_quickbuy": false
           }
         },
-        "203102fb-aec8-4136-8829-026d2de2ad0b": {
+        "1fb67a9d-a0c3-48e7-b413-30ffa96c7b41": {
           "type": "accordion",
           "settings": {
             "title": "Shipping Information",
@@ -124,6 +124,7 @@
         "variant_picker",
         "buy_buttons",
         "3102f34a-bede-4e71-913e-ac198794cf3f",
+        "1fb67a9d-a0c3-48e7-b413-30ffa96c7b41",
         "a7013d3f-0653-4f9c-8d1b-aabe369293b7"
       ],
       "settings": {
