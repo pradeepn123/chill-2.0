@@ -20,7 +20,7 @@
         "1f5dbd86-c82c-42e1-8bbb-74c1bbe4e2f6": {
           "type": "collection",
           "settings": {
-            "collection": "cbd-smokes",
+            "collection": "new-cbd-smokes",
             "image": "shopify:\/\/shop_images\/Smokes.png"
           }
         },
@@ -43,7 +43,7 @@
         "7080a5e5-4a58-4f1d-8efc-c920fa6cc3a1": {
           "type": "collection",
           "settings": {
-            "collection": "shop",
+            "collection": "newshop",
             "image": "shopify:\/\/shop_images\/All.png"
           }
         }
