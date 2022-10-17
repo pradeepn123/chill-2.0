@@ -5933,6 +5933,19 @@
         }, function () {});
       }.bind(this))
 
+      $(container).on('change.cartDrawerTemplateSection', '.drawer-shipping-interval', function(evt) {
+        if (this.replacingContent) {
+          return;
+        }
+        this.functions.updateCart.call(this, {
+          line: $(evt.currentTarget).data('line'),
+          properties: {
+            shipping_interval_unit_type: evt.currentTarget.dataset.shipping_interval_unit_type,
+            shipping_interval_frequency: evt.target.value
+          }
+        }, function () {});
+      }.bind(this))
+
       $('.cart-link').on('click', function (e) {
         document.dispatchEvent(new CustomEvent('theme:cartDrawer:open', { bubbles: true, cancelable: false }));
         e.preventDefault()

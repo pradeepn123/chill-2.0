@@ -97,6 +97,7 @@ body.overflow-hidden {
                                         display: flex;
                                         align-items: center;
                                         justify-content: space-between;
+                                        border: 2px solid #808080;
                                         .span{
                                             &:first-child{
                                                 margin-right: 10px;
@@ -305,8 +306,7 @@ body.overflow-hidden {
                             color: #000000;
                             margin-bottom: 10px;
                         }
-                        .feature-product-shipping-interval{
-                            border: 1px solid #000000;
+                        .feature-product-shipping-interval{                            
                             background: transparent;
                             border-radius: 4rem;
                             font-family: "Open Sans", sans-serif;
@@ -316,6 +316,13 @@ body.overflow-hidden {
                             width: 100%;
                             padding: 10px 20px;
                             margin-bottom: 10px;
+                            border: 2px solid #808080;
+                            -webkit-appearance: none !important;
+                            -moz-appearance: none !important;
+                            background-color: transparent;
+                            background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik03LjQxIDcuODRMMTIgMTIuNDJsNC41OS00LjU4TDE4IDkuMjVsLTYgNi02LTZ6Ij48L3BhdGg+CiAgICA8cGF0aCBkPSJNMC0uNzVoMjR2MjRIMHoiIGZpbGw9Im5vbmUiPjwvcGF0aD4KPC9zdmc+');
+                            background-position: 96% 55%;
+                            background-repeat: no-repeat;
                         }
                     }
                     button{
@@ -641,5 +648,37 @@ div#main-nav{
     @media(min-width:768px) and (max-width:1024px){
         visibility: visible !important;
         opacity: 1 !important;
+    }
+}
+
+.rc_main_container {
+    margin-bottom: 7rem !important;
+    .rc_block__type__autodeliver{
+        .rc_label__deliver_every{
+            display: flex !important;
+            flex-direction: column;
+        }
+        #rc_autodeliver_options{
+            margin-top: 14px;
+            .rc_select__frequency{
+                width: 100%;
+                border-radius: 30px;
+                padding: 0.8em 40px 0.8em 20px;
+                font-family: "Open Sans", sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+                height: 49px;
+                color: #000000;
+                text-transform: uppercase;
+                line-height: 1;
+                border: 2px solid #808080;
+                -webkit-appearance: none !important;
+                -moz-appearance: none !important;
+                background-color: transparent;
+                background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik03LjQxIDcuODRMMTIgMTIuNDJsNC41OS00LjU4TDE4IDkuMjVsLTYgNi02LTZ6Ij48L3BhdGg+CiAgICA8cGF0aCBkPSJNMC0uNzVoMjR2MjRIMHoiIGZpbGw9Im5vbmUiPjwvcGF0aD4KPC9zdmc+');
+                background-position: 96% 55%;
+                background-repeat: no-repeat;
+            }
+        }
     }
 }

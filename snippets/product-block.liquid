@@ -411,13 +411,14 @@
               </label>
               <div class="subscription-interval-container" style="display: none" subscription-interval-selectors-wrap>
                 {% assign shipping_interval_frequency = productSubscription.shipping_interval_frequency | split: ',' | size %}
+                {% assign selected_shipping_interval_frequency = productSubscription.shipping_interval_frequency | split: ',' %}
                 {%- comment -%}
                   {% assign shipping_interval_unit = productSubscription.shipping_interval_unit_type | split: ',' | size %}
                 {%- endcomment -%}
                 {%- if shipping_interval_frequency >  1 %}
                   <div class="subscription-interval-wrapper">
                     <select interval-frequency-selector class="feature-product-shipping-interval">
-                      {% for shipping_interval_frequency in productSubscription.shipping_interval_frequency %}
+                      {% for shipping_interval_frequency in selected_shipping_interval_frequency %}
                         <option value="{{shipping_interval_frequency}}">Delivery every
                           {{shipping_interval_frequency}}
                           {{item.product.metafields.subscriptions.shipping_interval_unit_type}}

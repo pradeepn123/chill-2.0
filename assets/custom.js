@@ -55,11 +55,10 @@ $(document).ready(function () {
   AOS.init({
     duration: 1200,
   })
-
-  let items = document.querySelectorAll('.menu-mega-nav li');
-  items.forEach( item => item.addEventListener('mouseenter', function() {
-    handleHover(this, items)
-  }))
+    let items = document.querySelectorAll('.menu-mega-nav li');
+    items.forEach( item => item.addEventListener('mouseenter', function() {
+        handleHover(this, items)
+    }))
 
   function handleHover(el, objects) {
     items.forEach(item => {
@@ -188,20 +187,22 @@ $(document).ready(function () {
   });
   // const animation_items = [...document.getElementsByClassName('list__item')];
   const containerElem = document.getElementById('containerElem');
-  const leftSideOfContainer = containerElem.getBoundingClientRect().left;
-  const listElem = document.getElementById('list');
-  let currentLeftValue = 0;
-          
-  window.setInterval(animationLoop, 10);    
-  function animationLoop() {
-      const firstListItem = listElem.querySelector('.list__item:first-child');      
-      let rightSideOfFirstItem = firstListItem.getBoundingClientRect().right;
-      if(rightSideOfFirstItem == leftSideOfContainer){
-      currentLeftValue = -1;
-      listElem.appendChild(firstListItem);
-      }      
-      listElem.style.marginLeft = `${currentLeftValue}px`;
-      currentLeftValue--;
+  if (containerElem) {
+    const leftSideOfContainer = containerElem.getBoundingClientRect().left; 
+    const listElem = document.getElementById('list');
+    let currentLeftValue = 0;
+            
+    window.setInterval(animationLoop, 10);    
+    function animationLoop() {
+        const firstListItem = listElem.querySelector('.list__item:first-child');      
+        let rightSideOfFirstItem = firstListItem.getBoundingClientRect().right;
+        if(rightSideOfFirstItem == leftSideOfContainer){
+        currentLeftValue = -1;
+        listElem.appendChild(firstListItem);
+        }      
+        listElem.style.marginLeft = `${currentLeftValue}px`;
+        currentLeftValue--;
+    }
   }
   var figure2 = $(".chill-videos-item");
   var vid = figure2.find(".play-video");
