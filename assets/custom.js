@@ -274,12 +274,12 @@ $(document).ready(function () {
 function customFeatureProductSubcriptionEvents (){
     $('.custom_sub_button').click(function() {
         $(this).closest('.block-inner').find('.block-inner-card-info').addClass('add_info_sub');
-      });
-      featureProductSubscriptionUtil.EventHandler();
+    });
+    featureProductSubscriptionUtil.EventHandler();
 
-      $('.close_card_info').click(function(){
+    $('.close_card_info').click(function(){
         $(this).closest('.block-inner').find('.block-inner-card-info').removeClass('add_info_sub');
-      });
+    });
 }
 
 
@@ -641,6 +641,9 @@ const featureProductSubscriptionUtil = (function () {
                         .setAttribute('value', getValue);
                 })
             })
+        }
+        if (window.ReCharge) {
+            ReCharge.showAddToCartButton()
         }
     };
 
