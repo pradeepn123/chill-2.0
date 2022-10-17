@@ -291,6 +291,7 @@
                                 }
                                 .rc_label{
                                     .rc_popup{
+                                        display: none;
                                         .rc_popup__block{
                                             display: none;
                                         }
@@ -317,7 +318,7 @@
                                     left: 0;
                                     overflow: hidden;
                                     border-radius: unset;
-                                    border:none;
+                                    border:none;                                 
                                     label{
                                         padding: 10px 0;
                                     }
@@ -477,6 +478,19 @@
     padding-bottom: 20px;
     @media(min-width:1200px){
         padding-bottom: 50px;
+    }
+    &.remove_space{
+        padding-bottom: 0;
+        .tab-content{
+            .tab-heading{
+                .product-tabs{
+                    margin: 0 !important;
+                }
+            }
+            .content-section{
+                padding-top: 0;
+            }
+        }
     }
     .product_ingredients_sec_wrapper{
         .heading_text{

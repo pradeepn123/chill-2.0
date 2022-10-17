@@ -85,6 +85,7 @@ body.overflow-hidden {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 2px solid #808080;
 }
 .product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .dynamic_checkout_btn .shopify-payment-button__button.btn-has-price .span:first-child {
   margin-right: 10px;
@@ -281,7 +282,6 @@ body.overflow-hidden {
   margin-bottom: 10px;
 }
 .product-list .product-block .block-inner .block-inner-card-info form .product-subscription-selection-wrapper .feature-product-shipping-interval {
-  border: 1px solid #000000;
   background: transparent;
   border-radius: 4rem;
   font-family: "Open Sans", sans-serif;
@@ -291,6 +291,13 @@ body.overflow-hidden {
   width: 100%;
   padding: 10px 20px;
   margin-bottom: 10px;
+  border: 2px solid #808080;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik03LjQxIDcuODRMMTIgMTIuNDJsNC41OS00LjU4TDE4IDkuMjVsLTYgNi02LTZ6Ij48L3BhdGg+CiAgICA8cGF0aCBkPSJNMC0uNzVoMjR2MjRIMHoiIGZpbGw9Im5vbmUiPjwvcGF0aD4KPC9zdmc+");
+  background-position: 96% 55%;
+  background-repeat: no-repeat;
 }
 .product-list .product-block .block-inner .block-inner-card-info form button.show--preloader {
   pointer-events: none;
@@ -547,6 +554,36 @@ body.overflow-hidden {
     visibility: visible !important;
     opacity: 1 !important;
   }
+}
+
+.rc_main_container {
+  margin-bottom: 7rem !important;
+}
+.rc_main_container .rc_block__type__autodeliver .rc_label__deliver_every {
+  display: flex !important;
+  flex-direction: column;
+}
+.rc_main_container .rc_block__type__autodeliver #rc_autodeliver_options {
+  margin-top: 14px;
+}
+.rc_main_container .rc_block__type__autodeliver #rc_autodeliver_options .rc_select__frequency {
+  width: 100%;
+  border-radius: 30px;
+  padding: 0.8em 40px 0.8em 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  height: 49px;
+  color: #000000;
+  text-transform: uppercase;
+  line-height: 1;
+  border: 2px solid #808080;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik03LjQxIDcuODRMMTIgMTIuNDJsNC41OS00LjU4TDE4IDkuMjVsLTYgNi02LTZ6Ij48L3BhdGg+CiAgICA8cGF0aCBkPSJNMC0uNzVoMjR2MjRIMHoiIGZpbGw9Im5vbmUiPjwvcGF0aD4KPC9zdmc+");
+  background-position: 96% 55%;
+  background-repeat: no-repeat;
 }
 
 /* header css here */
@@ -2759,6 +2796,9 @@ body {
   outline: none;
   border-color: #9792e4;
 }
+.section-main-product .product-detail .detail .product-form .buy-buttons-row #rc_container #rc_radio_options .rc_block .rc_label .rc_popup {
+  display: none;
+}
 .section-main-product .product-detail .detail .product-form .buy-buttons-row #rc_container #rc_radio_options .rc_block .rc_label .rc_popup .rc_popup__block {
   display: none;
 }
@@ -2925,6 +2965,15 @@ body {
   .product_ingredients_section {
     padding-bottom: 50px;
   }
+}
+.product_ingredients_section.remove_space {
+  padding-bottom: 0;
+}
+.product_ingredients_section.remove_space .tab-content .tab-heading .product-tabs {
+  margin: 0 !important;
+}
+.product_ingredients_section.remove_space .tab-content .content-section {
+  padding-top: 0;
 }
 .product_ingredients_section .product_ingredients_sec_wrapper .heading_text {
   padding: 0 16px;
