@@ -1072,7 +1072,7 @@
           "60e60139-618d-4044-8f92-55d5ef5f105e": {
             "type": "menu-promotion-large",
             "settings": {
-              "dropdown_link_title": "shop all",
+              "dropdown_link_title": "shop",
               "collection": "shop-all",
               "text_alignment": "center"
             }
