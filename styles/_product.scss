@@ -642,22 +642,22 @@
                 align-items: center;
                 flex-wrap: nowrap;
                 flex-direction: column;
-                padding-top: 60px;
+                // padding-top: 60px;
                 @media(min-width:1200px){
                     flex-direction: row;
-                    padding-top: 50px;
+                    // padding-top: 50px;
                 }
                 .tab-content-item{
                     flex: 0 0 100%;
-                    padding: 0 18px;
+                    padding: 0 15%;
                     text-align: center;
                     margin-bottom: 60px;
                     @media(min-width:768px){
                         margin-bottom: 35px;
                     }
                     @media(min-width:1200px){
-                        padding: 0 50px;
-                        flex: 0 0 33.33%;
+                        padding: 0 30%;
+                        flex: 0 0 100%;
                         margin-bottom: 0px;
                     }
                     @media(min-width:1440px){
@@ -675,11 +675,14 @@
                         margin-bottom: 24px;
                     }
                     p{
-                        font-size: 16px;
+                        font-size: 18px;
                         font-family: 'Open Sans', sans-serif;
                         margin-bottom: 0;
                         line-height: 28px;
                         color: #000000;
+                        @media (max-width: 1023px){
+                            font-size: 16px;
+                        }
                     }
                 }
             }

@@ -149,12 +149,12 @@ body.cart-drawer-open {
             display: flex;
             transition: transform .3s,opacity .3s;
             transform-origin: center;
-            column-gap: 1rem;
 
             .cart-drawer-summary-item__image {
                 position: relative;
                 flex: 0 0 auto;
                 width: 25%;
+                margin-right: 1rem;
                 @media(min-width:1200px){
                     width: 25%;                    
                 }
@@ -199,7 +199,7 @@ body.cart-drawer-open {
                 .cart-item__column {                    
                     display: flex;
                     align-items: center;
-                    column-gap: 0.7rem;
+                    // column-gap: 0.7rem;
                     flex-wrap:nowrap;
                     margin: 10px 0;
                     @media(min-width:1200px){

@@ -784,6 +784,7 @@ body.overflow-hidden {
     right: 10px;
     top: 40%;
     transform: translate(-50%, 0);
+    pointer-events: auto;
   }
 }
 @media (min-width: 1024px) {
@@ -3148,17 +3149,15 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: column;
-  padding-top: 60px;
 }
 @media (min-width: 1200px) {
   .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list {
     flex-direction: row;
-    padding-top: 50px;
   }
 }
 .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item {
   flex: 0 0 100%;
-  padding: 0 18px;
+  padding: 0 15%;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -3169,8 +3168,8 @@ body {
 }
 @media (min-width: 1200px) {
   .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item {
-    padding: 0 50px;
-    flex: 0 0 33.33%;
+    padding: 0 30%;
+    flex: 0 0 100%;
     margin-bottom: 0px;
   }
 }
@@ -3191,11 +3190,16 @@ body {
   margin-bottom: 24px;
 }
 .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item p {
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 0;
   line-height: 28px;
   color: #000000;
+}
+@media (max-width: 1023px) {
+  .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item p {
+    font-size: 16px;
+  }
 }
 .product_ingredients_section .product_ingredients_sec_wrapper .content-section .direction_to_use h3 {
   font-size: 28px;
@@ -5152,6 +5156,7 @@ body {
 }
 .container.cf .account-section .account_content .account_order_details .account_details_form .account_email, .container.cf .account-section .account_content .account_addresses .account_details_form .account_email, .container.cf .account-section .account_content .order_details .account_details_form .account_email, .container.cf .account-section .account_content .account_details .account_details_form .account_email {
   margin-top: 20px;
+  margin-right: 26px;
 }
 .container.cf .account-section .account_content .account_order_details .account_details_form .account_email input, .container.cf .account-section .account_content .account_addresses .account_details_form .account_email input, .container.cf .account-section .account_content .order_details .account_details_form .account_email input, .container.cf .account-section .account_content .account_details .account_details_form .account_email input {
   margin: 0;
@@ -5415,6 +5420,26 @@ body {
   bottom: 0;
   right: 0;
   z-index: 9999;
+}
+.age_verification .section_content #age_verification_preloader_desktop, .age_verification .section_content #age_verification_preloader_tab, .age_verification .section_content #age_verification_preloader_mobile {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.age_verification .section_content #age_verification_preloader_desktop img, .age_verification .section_content #age_verification_preloader_tab img, .age_verification .section_content #age_verification_preloader_mobile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 767px) {
+  .age_verification .section_content #age_verification_preloader_desktop, .age_verification .section_content #age_verification_preloader_tab {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .age_verification .section_content #age_verification_preloader_desktop, .age_verification .section_content #age_verification_preloader_mobile {
+    display: none;
+  }
 }
 .age_verification .section_content .video_container {
   width: 100vw;
@@ -5768,6 +5793,7 @@ body {
 }
 .cart_container .cart-item__quantity .buttoned-input {
   border-radius: 25px;
+  margin-right: 0.7rem;
 }
 .cart_container .cart-item__quantity .buttoned-input .quantity-down, .cart_container .cart-item__quantity .buttoned-input .quantity-up, .cart_container .cart-item__quantity .buttoned-input .cart-item__quantity-input {
   color: #000;
@@ -6169,12 +6195,12 @@ body.cart-drawer-open {
   display: flex;
   transition: transform 0.3s, opacity 0.3s;
   transform-origin: center;
-  column-gap: 1rem;
 }
 .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__image {
   position: relative;
   flex: 0 0 auto;
   width: 25%;
+  margin-right: 1rem;
 }
 @media (min-width: 1200px) {
   .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__image {
@@ -6225,7 +6251,6 @@ body.cart-drawer-open {
 .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__detail .cart-item__column {
   display: flex;
   align-items: center;
-  column-gap: 0.7rem;
   flex-wrap: nowrap;
   margin: 10px 0;
 }
