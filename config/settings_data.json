@@ -1069,12 +1069,21 @@
               "collection": "cbd-smokes",
               "text_alignment": "center"
             }
+          },
+          "60e60139-618d-4044-8f92-55d5ef5f105e": {
+            "type": "menu-promotion-large",
+            "settings": {
+              "dropdown_link_title": "shop",
+              "collection": "shop-all",
+              "text_alignment": "center"
+            }
           }
         },
         "block_order": [
           "721b392b-54e3-4cd9-ae56-3cddef5b2b48",
           "1b792ef3-cee8-4951-be61-e8cc8c94491c",
-          "55dfc561-5ebf-4ef6-8975-0757fbd445b6"
+          "55dfc561-5ebf-4ef6-8975-0757fbd445b6",
+          "60e60139-618d-4044-8f92-55d5ef5f105e"
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/Screen_Shot_2022-08-17_at_3.04.20_PM.png",
