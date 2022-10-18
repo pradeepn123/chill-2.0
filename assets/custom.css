@@ -784,6 +784,7 @@ body.overflow-hidden {
     right: 10px;
     top: 40%;
     transform: translate(-50%, 0);
+    pointer-events: auto;
   }
 }
 @media (min-width: 1024px) {
@@ -3148,17 +3149,15 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: column;
-  padding-top: 60px;
 }
 @media (min-width: 1200px) {
   .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list {
     flex-direction: row;
-    padding-top: 50px;
   }
 }
 .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item {
   flex: 0 0 100%;
-  padding: 0 18px;
+  padding: 0 15%;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -3169,8 +3168,8 @@ body {
 }
 @media (min-width: 1200px) {
   .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item {
-    padding: 0 50px;
-    flex: 0 0 33.33%;
+    padding: 0 30%;
+    flex: 0 0 100%;
     margin-bottom: 0px;
   }
 }
@@ -3191,11 +3190,16 @@ body {
   margin-bottom: 24px;
 }
 .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item p {
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 0;
   line-height: 28px;
   color: #000000;
+}
+@media (max-width: 1023px) {
+  .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item p {
+    font-size: 16px;
+  }
 }
 .product_ingredients_section .product_ingredients_sec_wrapper .content-section .direction_to_use h3 {
   font-size: 28px;
@@ -5152,6 +5156,7 @@ body {
 }
 .container.cf .account-section .account_content .account_order_details .account_details_form .account_email, .container.cf .account-section .account_content .account_addresses .account_details_form .account_email, .container.cf .account-section .account_content .order_details .account_details_form .account_email, .container.cf .account-section .account_content .account_details .account_details_form .account_email {
   margin-top: 20px;
+  margin-right: 26px;
 }
 .container.cf .account-section .account_content .account_order_details .account_details_form .account_email input, .container.cf .account-section .account_content .account_addresses .account_details_form .account_email input, .container.cf .account-section .account_content .order_details .account_details_form .account_email input, .container.cf .account-section .account_content .account_details .account_details_form .account_email input {
   margin: 0;
@@ -5415,6 +5420,16 @@ body {
   bottom: 0;
   right: 0;
   z-index: 9999;
+}
+.age_verification .section_content #age_verification_preloader {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.age_verification .section_content #age_verification_preloader img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .age_verification .section_content .video_container {
   width: 100vw;

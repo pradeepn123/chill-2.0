@@ -25,9 +25,10 @@
                         {% assign sub_block_value = block['tab_content']%}
                         <div class="tab-content-list">
                             {%- for sub_block in block['tab_content']  -%}
-                                {% if sub_block.image != blank and sub_block.subtitle != blank and sub_block.subdescription != blank %}
+                                {% if sub_block.image != blank or sub_block.subtitle != blank or sub_block.subdescription != blank %}
                                     <div class="tab-content-item">
-                                        <img src="{{ sub_block.image }}" alt="">
+                                        {% if sub_block.image %}<img src="{{ sub_block.image }}" alt=""> {% endif %}
+                                        
                                         <h3>{{sub_block.subtitle}}</h3>
                                         <p>{{sub_block.subdescription}}</p>
                                     </div>

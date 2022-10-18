@@ -179,6 +179,8 @@
         // }
     }
 } 
+
+
 .mega_menu{
     position: relative; 
     .mega_menu_wrapper{
@@ -257,6 +259,7 @@
                                 right: 10px;
                                 top: 40%;
                                 transform: translate(-50%, 0);
+                                pointer-events: auto;
                             }
                         }
                     }

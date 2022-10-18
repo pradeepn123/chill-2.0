@@ -222,6 +222,7 @@
         },
         "a2cb1286-a386-4532-a85b-41d6cd45bb3a": {
           "type": "image-video",
+          "disabled": true,
           "settings": {
             "video": "https:\/\/player.vimeo.com\/video\/760082707?h=8b5c62cac0&background=1&autoplay=1",
             "placeholder_image": "shopify:\/\/shop_images\/Screenshot_2022-10-13_at_23.55.24.png",
@@ -233,6 +234,7 @@
         },
         "9ba6f619-c346-4e0d-b0d2-bb29f6b5d077": {
           "type": "image-video",
+          "disabled": true,
           "settings": {
             "video": "https:\/\/player.vimeo.com\/video\/760081974",
             "placeholder_image": "shopify:\/\/shop_images\/IMG_1226.jpg",
@@ -240,6 +242,26 @@
             "video_heading": "Say No to Stress",
             "video_subHeading": "<p>Are we encouraged to be stressed? Finding a calm state of mind is a choice. Choose to find your chill.<\/p>",
             "video_type": "Experience"
+          }
+        },
+        "0d6af386-f803-449e-a47d-2a67de8b0a13": {
+          "type": "image-video",
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/761024201?h=c32cf223ff",
+            "video_popup": "https:\/\/player.vimeo.com\/video\/761023894?h=235aa803d8",
+            "video_heading": "Warm Up Festival",
+            "video_subHeading": "<p>Serving Chill at the UK's coolest festival<\/p>",
+            "video_type": ""
+          }
+        },
+        "103cb338-9675-45f6-a765-9601f2816a02": {
+          "type": "image-video",
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/761024152?h=8eb2d52364",
+            "video_popup": "https:\/\/player.vimeo.com\/video\/761023791?h=75d993df90",
+            "video_heading": "Are We Encouraged to Stress",
+            "video_subHeading": "<p>hoose to find calm<\/p>",
+            "video_type": ""
           }
         }
       },
@@ -252,7 +274,9 @@
         "8d77efa0-2df7-4a3f-8381-656b9dfa5093",
         "8d37fb21-c1d4-464d-9632-173826ea532d",
         "a2cb1286-a386-4532-a85b-41d6cd45bb3a",
-        "9ba6f619-c346-4e0d-b0d2-bb29f6b5d077"
+        "9ba6f619-c346-4e0d-b0d2-bb29f6b5d077",
+        "0d6af386-f803-449e-a47d-2a67de8b0a13",
+        "103cb338-9675-45f6-a765-9601f2816a02"
       ],
       "settings": {
         "bg_color": "#f2f2f3",
