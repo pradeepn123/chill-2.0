@@ -43,7 +43,7 @@
         "7080a5e5-4a58-4f1d-8efc-c920fa6cc3a1": {
           "type": "collection",
           "settings": {
-            "collection": "newshop",
+            "collection": "shop-all",
             "image": "shopify:\/\/shop_images\/All.png"
           }
         }

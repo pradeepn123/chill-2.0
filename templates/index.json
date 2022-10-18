@@ -12,7 +12,7 @@
         "text": "<p>Find peace with functional products made from all-natural ingredients.<\/p>",
         "enlarge_text": true,
         "button_label_1": "SHOP NOW",
-        "button_url_1": "shopify:\/\/collections\/newshop",
+        "button_url_1": "shopify:\/\/collections\/shop-all",
         "button_label_2": "",
         "button_url_2": "",
         "botton_bg": "#ffac9a",
@@ -66,7 +66,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Our <strong> Trending Products <\/strong>",
-        "collection": "newshop",
+        "collection": "shop-all",
         "show_vendor": true,
         "enable_carousel": false,
         "grid": 4,
@@ -315,7 +315,7 @@
             "image": "shopify:\/\/shop_images\/US_-Collections_-_Coming_Soon.jpg",
             "collection": "coming-soon",
             "title": "Coming Soon",
-            "shop_all_link": "shopify:\/\/collections\/newshop"
+            "shop_all_link": "shopify:\/\/collections\/shop-all"
           }
         }
       },
@@ -328,7 +328,7 @@
       "settings": {
         "text": "<p>Our <strong>Collections<\/strong><\/p>",
         "show_shop_all": true,
-        "shop_all_link": "shopify:\/\/collections\/newshop"
+        "shop_all_link": "shopify:\/\/collections\/shop-all"
       }
     },
     "16618284517e50f27f": {
