@@ -140,6 +140,28 @@
     "1662353650fc285744": {
       "type": "our-chill-experience",
       "blocks": {
+        "0d6af386-f803-449e-a47d-2a67de8b0a13": {
+          "type": "image-video",
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/761024201?h=c32cf223ff&badge=0&autopause=1",
+            "placeholder_image": "shopify:\/\/shop_images\/Screenshot_2022-10-13_at_23.55.24.png",
+            "video_popup": "https:\/\/player.vimeo.com\/video\/761023894",
+            "video_heading": "Warm Up Festival",
+            "video_subHeading": "<p>Serving Chill at the UK's coolest festival<\/p>",
+            "video_type": ""
+          }
+        },
+        "103cb338-9675-45f6-a765-9601f2816a02": {
+          "type": "image-video",
+          "settings": {
+            "video": "https:\/\/player.vimeo.com\/video\/761024152?h=8eb2d52364&badge=0&autopause=1",
+            "placeholder_image": "shopify:\/\/shop_images\/AffiliateCarousel3.jpg",
+            "video_popup": "https:\/\/player.vimeo.com\/video\/761023791",
+            "video_heading": "Are We Encouraged to Stress?",
+            "video_subHeading": "<p>Choose Calm<\/p>",
+            "video_type": ""
+          }
+        },
         "19a8757e-3702-4af2-82da-17767cea24db": {
           "type": "image-video",
           "settings": {
@@ -243,31 +265,11 @@
             "video_subHeading": "<p>Are we encouraged to be stressed? Finding a calm state of mind is a choice. Choose to find your chill.<\/p>",
             "video_type": "Experience"
           }
-        },
-        "0d6af386-f803-449e-a47d-2a67de8b0a13": {
-          "type": "image-video",
-          "settings": {
-            "video": "https:\/\/player.vimeo.com\/video\/761024201?h=c32cf223ff&badge=0&autopause=1",
-            "placeholder_image": "shopify:\/\/shop_images\/Screenshot_2022-10-13_at_23.55.24.png",
-            "video_popup": "https:\/\/player.vimeo.com\/video\/761023894",
-            "video_heading": "Warm Up Festival",
-            "video_subHeading": "<p>Serving Chill at the UK's coolest festival<\/p>",
-            "video_type": ""
-          }
-        },
-        "103cb338-9675-45f6-a765-9601f2816a02": {
-          "type": "image-video",
-          "settings": {
-            "video": "https:\/\/player.vimeo.com\/video\/761024152?h=8eb2d52364&badge=0&autopause=1",
-            "placeholder_image": "shopify:\/\/shop_images\/AffiliateCarousel3.jpg",
-            "video_popup": "https:\/\/player.vimeo.com\/video\/761023791",
-            "video_heading": "Are We Encouraged to Stress",
-            "video_subHeading": "<p>hoose to find calm<\/p>",
-            "video_type": ""
-          }
         }
       },
       "block_order": [
+        "0d6af386-f803-449e-a47d-2a67de8b0a13",
+        "103cb338-9675-45f6-a765-9601f2816a02",
         "19a8757e-3702-4af2-82da-17767cea24db",
         "aa0e8cf1-d7d5-425c-bf91-3d727ce1646d",
         "e321885e-43b5-426b-afd4-7e9e10800c59",
@@ -276,9 +278,7 @@
         "8d77efa0-2df7-4a3f-8381-656b9dfa5093",
         "8d37fb21-c1d4-464d-9632-173826ea532d",
         "a2cb1286-a386-4532-a85b-41d6cd45bb3a",
-        "9ba6f619-c346-4e0d-b0d2-bb29f6b5d077",
-        "0d6af386-f803-449e-a47d-2a67de8b0a13",
-        "103cb338-9675-45f6-a765-9601f2816a02"
+        "9ba6f619-c346-4e0d-b0d2-bb29f6b5d077"
       ],
       "settings": {
         "bg_color": "#f2f2f3",
