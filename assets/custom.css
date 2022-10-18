@@ -3149,15 +3149,17 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: column;
+  padding-top: 60px;
 }
 @media (min-width: 1200px) {
   .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list {
     flex-direction: row;
+    padding-top: 50px;
   }
 }
 .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item {
   flex: 0 0 100%;
-  padding: 0 15%;
+  padding: 0 15px;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -3168,8 +3170,8 @@ body {
 }
 @media (min-width: 1200px) {
   .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item {
-    padding: 0 30%;
-    flex: 0 0 100%;
+    padding: 0 15px;
+    flex: 0 0 33.33%;
     margin-bottom: 0px;
   }
 }
