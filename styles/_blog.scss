@@ -76,8 +76,9 @@
                         margin-bottom: 14px;
                         font-family: "Open Sans", sans-serif;
                         @media (max-width: 767px){
-                            display: block ;
+                            display: grid;
                             text-align: center !important;
+                            justify-content: space-around;
                         }
                         .iconmeta.time{
                             display: flex;
@@ -196,11 +197,11 @@
     .article-image.article-image--large{
         margin-top: 0 !important;
         max-width: 85%;
-        height: 581px;
+        height: 400px;
         .page-header{
             .rimage-background{
                 border-radius: 20px;
-                height: 581px;
+                height: 400px;
             }
         }
     }

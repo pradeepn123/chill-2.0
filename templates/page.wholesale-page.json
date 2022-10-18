@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "93cb45ae-75bf-4325-ab61-d25735f59aee": {
+      "type": "wholesale-page",
+      "settings": {
+        "icon_image": "shopify:\/\/shop_images\/WHOLESALE.png",
+        "url": "",
+        "title": "<p>Wholesale<\/p>",
+        "subheading": "<p>Become a chill retail partner!<\/p>",
+        "button_label_1": "Apply for wholesale",
+        "button_url_1": "https:\/\/the-chill-way.wholesale.shopifyapps.com\/accounts\/sign_up",
+        "button_label_2": "Login to your wholesale store",
+        "button_url_2": "https:\/\/wholesale.chill.com\/accounts\/sign_in"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "93cb45ae-75bf-4325-ab61-d25735f59aee"
+  ]
+}

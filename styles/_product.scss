@@ -22,9 +22,11 @@
                 width: 55%;
             }
             &.gallery--layout-carousel-under{
-                position: -webkit-sticky;
-                position: sticky;
-                top: 5rem;
+                @media(min-width:1200px){
+                    position: -webkit-sticky;
+                    position: sticky;
+                    top: 5rem;
+                }
             }
             .gallery__inner{
                 .main-image{
@@ -289,6 +291,7 @@
                                 }
                                 .rc_label{
                                     .rc_popup{
+                                        display: none;
                                         .rc_popup__block{
                                             display: none;
                                         }
@@ -315,7 +318,7 @@
                                     left: 0;
                                     overflow: hidden;
                                     border-radius: unset;
-                                    border:none;
+                                    border:none;                                 
                                     label{
                                         padding: 10px 0;
                                     }
@@ -476,6 +479,19 @@
     @media(min-width:1200px){
         padding-bottom: 50px;
     }
+    &.remove_space{
+        padding-bottom: 0;
+        .tab-content{
+            .tab-heading{
+                .product-tabs{
+                    margin: 0 !important;
+                }
+            }
+            .content-section{
+                padding-top: 0;
+            }
+        }
+    }
     .product_ingredients_sec_wrapper{
         .heading_text{
             padding: 0 16px;
@@ -604,6 +620,11 @@
                 width: 80%;
                 margin: 0 auto;
             }
+            #tab2{
+                .tab-content-list{
+                    padding-top: 0;
+                }
+            }
             .content {
                 display: none;
                 opacity: 0;        
@@ -621,22 +642,22 @@
                 align-items: center;
                 flex-wrap: nowrap;
                 flex-direction: column;
-                padding-top: 60px;
+                // padding-top: 60px;
                 @media(min-width:1200px){
                     flex-direction: row;
-                    padding-top: 50px;
+                    // padding-top: 50px;
                 }
                 .tab-content-item{
                     flex: 0 0 100%;
-                    padding: 0 18px;
+                    padding: 0 15%;
                     text-align: center;
                     margin-bottom: 60px;
                     @media(min-width:768px){
                         margin-bottom: 35px;
                     }
                     @media(min-width:1200px){
-                        padding: 0 50px;
-                        flex: 0 0 33.33%;
+                        padding: 0 30%;
+                        flex: 0 0 100%;
                         margin-bottom: 0px;
                     }
                     @media(min-width:1440px){
@@ -654,11 +675,14 @@
                         margin-bottom: 24px;
                     }
                     p{
-                        font-size: 16px;
+                        font-size: 18px;
                         font-family: 'Open Sans', sans-serif;
                         margin-bottom: 0;
                         line-height: 28px;
                         color: #000000;
+                        @media (max-width: 1023px){
+                            font-size: 16px;
+                        }
                     }
                 }
             }

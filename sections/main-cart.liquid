@@ -12,9 +12,11 @@
   {% endif %}
 
   {% if cart.items == empty %}
-    <div class="fully-spaced-row align-centre" data-cc-animate>
-      <p>{{ 'cart.general.empty' | t }}
+    <div class="fully-spaced-row align-centre empty_cart" data-cc-animate>
+      <p class="empty_cart_message">{{ 'cart.general.empty' | t }}
       </p>
+      <a class="continue-shopping_mobile" href="{{ section.settings.continue_shopping_url }}">{{ 'cart.general.continue' | t }}
+      </a>
     </div>
   {% else %}
     <form action="{{ routes.cart_url }}" method="post" id="cartform">
@@ -106,30 +108,30 @@
 
                 <div class="cart-item__column cart-item__price">
                   {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}
-                      {%- liquid
-                        assign percentage = item.product.metafields.subscriptions.discount_percentage | divided_by: 100
-                        assign discountedPrice = item.price | times: percentage
-                        assign finalDiscountedPrice = item.price | minus: discountedPrice
-                      -%}
-                      <span class="theme-money">
-                        {% render 'price', price: finalDiscountedPrice, disable_currency_code: true %}
-                      </span>
-                    {% else %}
-                      {% if item.variant.compare_at_price > item.variant.price %}
-                        <div class="struck-out-price">
-                          <span class="theme-money">{{ item.variant.compare_at_price | money }}
-                          </span>
-                        </div>
-                      {% elsif item.original_line_price > item.final_line_price %}
-                        <div class="struck-out-price">
-                          <span class="theme-money">{{ item.original_price | money }}
-                          </span>
-                        </div>
-                      {% endif %}
-                      <div>
-                        <span class="theme-money">{{ item.final_price | money }}
+                    {%- liquid
+                                      assign percentage = item.product.metafields.subscriptions.discount_percentage | divided_by: 100
+                                      assign discountedPrice = item.price | times: percentage
+                                      assign finalDiscountedPrice = item.price | minus: discountedPrice
+                                    -%}
+                    <span class="theme-money">
+                      {% render 'price', price: finalDiscountedPrice, disable_currency_code: true %}
+                    </span>
+                  {% else %}
+                    {% if item.variant.compare_at_price > item.variant.price %}
+                      <div class="struck-out-price">
+                        <span class="theme-money">{{ item.variant.compare_at_price | money }}
                         </span>
                       </div>
+                    {% elsif item.original_line_price > item.final_line_price %}
+                      <div class="struck-out-price">
+                        <span class="theme-money">{{ item.original_price | money }}
+                        </span>
+                      </div>
+                    {% endif %}
+                    <div>
+                      <span class="theme-money">{{ item.final_price | money }}
+                      </span>
+                    </div>
                   {% endif %}
 
                   {% render 'unit-price', variant: item %}
@@ -172,13 +174,13 @@
                   </a>
                 </div>
 
-                <div class="cart-item__column cart-item__total" data-line="{{ forloop.index }}"> 
-                  {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}   
+                <div class="cart-item__column cart-item__total" data-line="{{ forloop.index }}">
+                  {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}
                     {%- liquid
-                      assign percentage = item.product.metafields.subscriptions.discount_percentage | divided_by: 100
-                      assign discountedPrice = item.final_line_price | times: percentage
-                      assign finalDiscountedPrice = item.final_line_price | minus: discountedPrice
-                    -%}                 
+                                    assign percentage = item.product.metafields.subscriptions.discount_percentage | divided_by: 100
+                                    assign discountedPrice = item.final_line_price | times: percentage
+                                    assign finalDiscountedPrice = item.final_line_price | minus: discountedPrice
+                                  -%}
                     {% assign subtotal = subtotal | plus : finalDiscountedPrice %}
                     <span class="item__price-current theme-money">
                       {% render 'price', price: finalDiscountedPrice, disable_currency_code: true %}
@@ -194,7 +196,7 @@
                     <span class="theme-money">{{ item.final_line_price | money }}
                     </span>
                     {% assign subtotal = subtotal | plus : item.final_line_price %}
-                  {% endif %}                  
+                  {% endif %}
                 </div>
               </div>
             </div>
@@ -244,7 +246,7 @@
 
               <h2 class="subtotal h2-style">
                 {{ 'cart.general.subtotal' | t }}
-                
+
                 <span class="theme-money">
                   {%- if settings.cart_currency_code_enabled -%}
                     {{- subtotal | money_with_currency -}}

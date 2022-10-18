@@ -18,7 +18,7 @@ function scrollAbout(){
     //our story value scoll
     const stickyContainer = document.querySelector('.faq-index__sticky-container');
     if(stickyContainer){
-        const currentElement =  document.querySelector('.chill-story-value-block-section');
+        const currentElement =  document.querySelector('.chill-story-value-block-section, .featured_block_list');
         const stickyContainerRect = stickyContainer.getBoundingClientRect();
         const currentElementRect = currentElement.getBoundingClientRect();
         stickyContainer.style.height = currentElementRect.bottom - stickyContainerRect.top + 'px';
@@ -55,11 +55,10 @@ $(document).ready(function () {
   AOS.init({
     duration: 1200,
   })
-
-  let items = document.querySelectorAll('.menu-mega-nav li');
-  items.forEach( item => item.addEventListener('mouseenter', function() {
-    handleHover(this, items)
-  }))
+    let items = document.querySelectorAll('.menu-mega-nav li');
+    items.forEach( item => item.addEventListener('mouseenter', function() {
+        handleHover(this, items)
+    }))
 
   function handleHover(el, objects) {
     items.forEach(item => {
@@ -154,9 +153,9 @@ $(document).ready(function () {
         }
       },
       {
-        breakpoint: 1008,
+        breakpoint: 1112,
         settings: {
-          slidesToShow: 1.4,
+          slidesToShow: 2.2,
           slidesToScroll: 1,
           arrows: false,
         }
@@ -164,11 +163,18 @@ $(document).ready(function () {
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 1.2,
+          slidesToShow: 2.2,
           slidesToScroll: 1,
           arrows: false,
         }
-        // settings: "unslick"
+      },
+      {
+        breakpoint: 625,
+        settings: {
+          slidesToShow: 1.2,
+          slidesToScroll: 1,
+          arrows: false,
+        }        
       }
   
     ]
@@ -179,6 +185,25 @@ $(document).ready(function () {
       updateContainer();
       scrollAbout();
   });
+  // const animation_items = [...document.getElementsByClassName('list__item')];
+  const containerElem = document.getElementById('containerElem');
+  if (containerElem) {
+    const leftSideOfContainer = containerElem.getBoundingClientRect().left; 
+    const listElem = document.getElementById('list');
+    let currentLeftValue = 0;
+            
+    window.setInterval(animationLoop, 10);    
+    function animationLoop() {
+        const firstListItem = listElem.querySelector('.list__item:first-child');      
+        let rightSideOfFirstItem = firstListItem.getBoundingClientRect().right;
+        if(rightSideOfFirstItem == leftSideOfContainer){
+        currentLeftValue = -1;
+        listElem.appendChild(firstListItem);
+        }      
+        listElem.style.marginLeft = `${currentLeftValue}px`;
+        currentLeftValue--;
+    }
+  }
   var figure2 = $(".chill-videos-item");
   var vid = figure2.find(".play-video");
   var videoNo = vid.length;
@@ -249,12 +274,12 @@ $(document).ready(function () {
 function customFeatureProductSubcriptionEvents (){
     $('.custom_sub_button').click(function() {
         $(this).closest('.block-inner').find('.block-inner-card-info').addClass('add_info_sub');
-      });
-      featureProductSubscriptionUtil.EventHandler();
+    });
+    featureProductSubscriptionUtil.EventHandler();
 
-      $('.close_card_info').click(function(){
+    $('.close_card_info').click(function(){
         $(this).closest('.block-inner').find('.block-inner-card-info').removeClass('add_info_sub');
-      });
+    });
 }
 
 
@@ -616,6 +641,9 @@ const featureProductSubscriptionUtil = (function () {
                         .setAttribute('value', getValue);
                 })
             })
+        }
+        if (window.ReCharge) {
+            ReCharge.showAddToCartButton()
         }
     };
 

@@ -25,9 +25,11 @@
             <form class="cart-drawer-form cart-drawer-summary__section" action="{{ routes.cart_url }}" method="post">
               {% for item in cart.items %}
                 {% assign has_subscriptions = false %}
+                {% assign selected_shipping_interval_frequency = blank %}
                 {% for p in item.properties %}
                   {% if p.first == 'shipping_interval_frequency' %}
                     {% assign has_subscriptions = true %}
+                    {% assign selected_shipping_interval_frequency = p.last %}
                   {% endif %}
                 {% endfor %}
                 <div class="cart-drawer-summary-item-container" data-product-id="{{ item.id }}">
@@ -135,7 +137,7 @@
                             data-line="{{ forloop.index }}"
                           >
                             {% for shipping_interval_frequency in shipping_interval_frequencies %}
-                              <option value="{{shipping_interval_frequency}}">Delivery every {{shipping_interval_frequency}} {{item.product.metafields.subscriptions.shipping_interval_unit_type}}</option>
+                              <option value="{{shipping_interval_frequency}}" {% if selected_shipping_interval_frequency == shipping_interval_frequency %}selected{% endif %} >Delivery every {{shipping_interval_frequency}} {{item.product.metafields.subscriptions.shipping_interval_unit_type}}</option>
                             {% endfor %}
                           </select>
                         {% else %}

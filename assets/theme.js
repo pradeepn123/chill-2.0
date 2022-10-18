@@ -3480,6 +3480,7 @@
         }
 
         theme.ProductBlockManager.loadImages(this.$container);
+        customFeatureProductSubcriptionEvents();
       },
 
       switchGridLayout: function switchGridLayout(evt) {
@@ -5928,6 +5929,19 @@
           properties: {
             shipping_interval_unit_type: evt.currentTarget.dataset.shipping_interval_unit_type,
             shipping_interval_frequency: shippingIntervalFrequency[0]
+          }
+        }, function () {});
+      }.bind(this))
+
+      $(container).on('change.cartDrawerTemplateSection', '.drawer-shipping-interval', function(evt) {
+        if (this.replacingContent) {
+          return;
+        }
+        this.functions.updateCart.call(this, {
+          line: $(evt.currentTarget).data('line'),
+          properties: {
+            shipping_interval_unit_type: evt.currentTarget.dataset.shipping_interval_unit_type,
+            shipping_interval_frequency: evt.target.value
           }
         }, function () {});
       }.bind(this))
