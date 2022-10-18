@@ -3268,16 +3268,40 @@ body {
   height: 25%;
   list-style: none;
   display: flex;
-  animation: none;
+  -webkit-animation: about_marquee_mobile 30s linear infinite;
+  -moz-animation: about_marquee_mobile 30s linear infinite;
+  -o-animation: about_marquee_mobile 30s linear infinite;
+  -ms-animation: about_marquee_mobile 30s linear infinite;
+  animation: about_marquee_mobile 30s linear infinite;
 }
 @media (min-width: 768px) {
   .chill-story-section .slider_wrapper .slider_images {
     max-width: 50%;
+    -webkit-animation: about_marquee_tab 30s linear infinite;
+    -moz-animation: about_marquee_tab 30s linear infinite;
+    -o-animation: about_marquee_tab 30s linear infinite;
+    -ms-animation: about_marquee_tab 30s linear infinite;
+    animation: about_marquee_tab 30s linear infinite;
+  }
+}
+@media (min-width: 820px) and (max-width: 912px) {
+  .chill-story-section .slider_wrapper .slider_images {
+    max-width: 50%;
+    -webkit-animation: about_marquee_tab2 30s linear infinite;
+    -moz-animation: about_marquee_tab2 30s linear infinite;
+    -o-animation: about_marquee_tab2 30s linear infinite;
+    -ms-animation: about_marquee_tab2 30s linear infinite;
+    animation: about_marquee_tab2 30s linear infinite;
   }
 }
 @media (min-width: 1200px) {
   .chill-story-section .slider_wrapper .slider_images {
     max-width: 25%;
+    -webkit-animation: about_marquee 25s linear infinite;
+    -moz-animation: about_marquee 25s linear infinite;
+    -o-animation: about_marquee 25s linear infinite;
+    -ms-animation: about_marquee 25s linear infinite;
+    animation: about_marquee 25s linear infinite;
   }
 }
 .chill-story-section .slider_wrapper .slider_images .list__item {
@@ -3343,6 +3367,30 @@ body {
 }
 
 @keyframes about_marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2100px);
+  }
+}
+@keyframes about_marquee_tab {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-3015px);
+  }
+}
+@keyframes about_marquee_tab2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2952px);
+  }
+}
+@keyframes about_marquee_mobile {
   0% {
     transform: translateX(0);
   }
