@@ -2,9 +2,15 @@
   <div class="section_content">
     {% if  section.settings.video != blank  and  section.settings.verification_block_header != blank  %}
       <div class="video_container">
-        <img src="{{ section.settings.preloader_desktop }}" alt="preloader" id="age_verification_preloader_desktop"/>
-        <img src="{{ section.settings.preloader_tablet }}" alt="preloader" id="age_verification_preloader_tab"/>
-        <img src="{{ section.settings.preloader_mobile }}" alt="preloader" id="age_verification_preloader_mobile"/>
+          {% if section.settings.preloader_desktop != blank %}
+            <img src="{{ section.settings.preloader_desktop }}" alt="preloader" id="age_verification_preloader_desktop"/>
+          {% endif %}
+          {% if section.settings.preloader_tablet != blank %}
+            <img src="{{ section.settings.preloader_tablet }}" alt="preloader" id="age_verification_preloader_tab"/>
+          {% endif %}
+          {% if section.settings.preloader_mobile != blank %}
+            <img src="{{ section.settings.preloader_mobile }}" alt="preloader" id="age_verification_preloader_mobile"/>
+          {% endif %}
           <video autoplay muted loop id="myVideo">
               <source src="{{ section.settings.video | escape }}" type="video/mp4">
           </video>
