@@ -2443,15 +2443,39 @@ body {
   color: #fff;
   background: #9792E4;
   position: relative;
-  top: 10px;
-  left: 5%;
+  top: -20px;
+  left: 6%;
 }
 .template-index .section-image-with-text-overlay .overlay-text .overlay-text__inner .overlay-text__button:hover {
   background: #000;
 }
+@media (max-width: 767px) {
+  .template-index .section-image-with-text-overlay .overlay-text .overlay-text__inner .overlay-text__button {
+    top: 16px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 @media (min-width: 768px) and (max-width: 1023px) {
   .template-index .section-image-with-text-overlay .overlay-text .overlay-text__inner .overlay-text__button {
     font-size: 10px;
+    top: 16px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .template-index .section-image-with-text-overlay .overlay-text .overlay-text__inner .overlay-text__button {
+    top: 0px;
+  }
+}
+@media (min-width: 1680px) {
+  .template-index .section-image-with-text-overlay .overlay-text .overlay-text__inner .overlay-text__button {
+    top: -30px;
+  }
+}
+@media (min-width: 1920px) {
+  .template-index .section-image-with-text-overlay .overlay-text .overlay-text__inner .overlay-text__button {
+    top: -50px;
+    left: 7%;
   }
 }
 @media (max-width: 767px) {
