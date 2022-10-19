@@ -2581,7 +2581,7 @@ body {
     width: 55%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .section-main-product .product-detail .gallery.gallery--layout-carousel-under {
     position: -webkit-sticky;
     position: sticky;
@@ -2730,6 +2730,7 @@ body {
 }
 .section-main-product .product-detail .detail .product-form .not-in-quickbuy .product-description .readmore, .section-main-product .product-detail .detail .product-form .not-in-quickbuy .product-description .readless {
   font-weight: bold;
+  cursor: pointer;
 }
 @media (min-width: 1440px) {
   .section-main-product .product-detail .detail .product-form .product-detail-accordion.not-in-quickbuy:last-child .cc-accordion {
@@ -3285,64 +3286,6 @@ body {
   }
 }
 
-.chill-story-section .slider_wrapper {
-  width: 100%;
-  height: 25%;
-  overflow: hidden;
-  display: flex;
-}
-.chill-story-section .slider_wrapper .slider_images {
-  max-width: 100%;
-  height: 25%;
-  list-style: none;
-  display: flex;
-  -webkit-animation: about_marquee_mobile 30s linear infinite;
-  -moz-animation: about_marquee_mobile 30s linear infinite;
-  -o-animation: about_marquee_mobile 30s linear infinite;
-  -ms-animation: about_marquee_mobile 30s linear infinite;
-  animation: about_marquee_mobile 30s linear infinite;
-}
-@media (min-width: 768px) {
-  .chill-story-section .slider_wrapper .slider_images {
-    max-width: 50%;
-    -webkit-animation: about_marquee_tab 30s linear infinite;
-    -moz-animation: about_marquee_tab 30s linear infinite;
-    -o-animation: about_marquee_tab 30s linear infinite;
-    -ms-animation: about_marquee_tab 30s linear infinite;
-    animation: about_marquee_tab 30s linear infinite;
-  }
-}
-@media (min-width: 820px) and (max-width: 912px) {
-  .chill-story-section .slider_wrapper .slider_images {
-    max-width: 50%;
-    -webkit-animation: about_marquee_tab2 30s linear infinite;
-    -moz-animation: about_marquee_tab2 30s linear infinite;
-    -o-animation: about_marquee_tab2 30s linear infinite;
-    -ms-animation: about_marquee_tab2 30s linear infinite;
-    animation: about_marquee_tab2 30s linear infinite;
-  }
-}
-@media (min-width: 1200px) {
-  .chill-story-section .slider_wrapper .slider_images {
-    max-width: 25%;
-    -webkit-animation: about_marquee 25s linear infinite;
-    -moz-animation: about_marquee 25s linear infinite;
-    -o-animation: about_marquee 25s linear infinite;
-    -ms-animation: about_marquee 25s linear infinite;
-    animation: about_marquee 25s linear infinite;
-  }
-}
-.chill-story-section .slider_wrapper .slider_images .list__item {
-  flex-grow: 0;
-  flex-shrink: 0;
-  text-align: center;
-  width: 100%;
-}
-.chill-story-section .slider_wrapper .slider_images img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .chill-story-section .chill-story-section-wrapper {
   display: flex;
   padding: 3rem 0;
@@ -6139,7 +6082,7 @@ body.cart-drawer-open {
 }
 
 .cart-drawer-summary {
-  z-index: 999999;
+  z-index: 9999999999;
   width: 40%;
   background: #ffffff;
   position: fixed;

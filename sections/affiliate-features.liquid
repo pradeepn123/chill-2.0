@@ -1,4 +1,4 @@
-<div class="features_wrapper">  
+<div class="features_wrapper">
   <div class="block_wrapper">
     <div class="redirection_text" style="position: relative;">
       <div class="faq-index__sticky-container">
@@ -9,8 +9,12 @@
             <h1 class="mobile" style="font-size: {{ section.settings.heading_font_size_mobile}}px">{{ section.settings.mobile_title }}
             </h1>
           </div>
-          <p>{{ section.settings.sub_text }}</p>
-          <a href="{{ section.settings.apply_btn_link }}"><button class="join_btn" style="background: {{ section.settings.apply_btn_color }}; font-size: {{ section.settings.apply_btn_font }}px;">{{ section.settings.apply_btn_text }}</button></a>
+          <p>{{ section.settings.sub_text }}
+          </p>
+          <a href="{{ section.settings.apply_btn_link }}" target="_blank">
+            <button class="join_btn" style="background: {{ section.settings.apply_btn_color }}; font-size: {{ section.settings.apply_btn_font }}px;">{{ section.settings.apply_btn_text }}
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -31,18 +35,19 @@
         {% endcase %}
       {% endfor %}
     </div>
-    
+
   </div>
 </div>
-{%- comment -%} <div class="join_program">
+{%- comment -%}
+  <div class="join_program">
   <div class="join_text">{{ section.settings.join_text }}
   </div>
   <a href="{{ section.settings.join_btn_link }}" target="_blank">
-    <button class="join_btn" style="background: {{ section.settings.join_btn_color }}; font-size: {{ section.settings.join_btn_font }}">
-      {{ section.settings.join_btn_text }}
-    </button>
+  <button class="join_btn" style="background: {{ section.settings.join_btn_color }}; font-size: {{ section.settings.join_btn_font }}">
+  {{ section.settings.join_btn_text }}
+  </button>
   </a>
-</div> {%- endcomment -%}
+  </div>{%- endcomment -%}
 <!-- "max_blocks": 8, -->
 {% schema %}
   {
