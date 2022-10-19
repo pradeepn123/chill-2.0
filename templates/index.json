@@ -4,6 +4,7 @@
       "type": "background-video",
       "settings": {
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4997f11a16bf4871b6e691543abcbd29.mp4",
+        "placeholder_image": "shopify:\/\/shop_images\/home_banner_placeholder.png",
         "subheading": "",
         "title": "Cool <br> <span>Calm<\/span> &amp; <br>Carefree",
         "title_size": 112,
