@@ -1692,7 +1692,10 @@ button[disabled]{
     cursor: not-allowed;
     opacity: .5;
 }
-</style>
+.sa-editIcon {
+    width: 15px;
+    height: 15px;
+}</style>
         <style></style>
         <input id="sa-token" type="hidden" value="{% capture saPayload %}sh_shop=the-chill-way.myshopify.com&customer_id={{ customer.id | url_encode }}&iat={{ "now" | date: "%s" }}{% endcapture %}{{ saPayload }}#{{ saPayload | hmac_sha256: "93372a35d99da01c0e0f913ccddc1e108473b8f80be8fbac224048d2e20fa5e2" }}">
         <input id="sa-logged-in" type="hidden" value="{% if customer %}yes{% endif %}">
@@ -1922,6 +1925,6 @@ button[disabled]{
         </div>
         <div class="sa-Polaris-Modal__Backdrop"></div></div>
             {% endif %}
-            <script async="async" src="https://app.simple-affiliate.com/i/customer-frontend-09252a6c.js"></script>
+            <script async="async" src="https://app.simple-affiliate.com/i/customer-frontend-a9ddd1e5.js"></script>
             <script>(function(m){if(m) document.body.appendChild(m)})(document.getElementById("sa-modal"))</script>
         </div>
