@@ -1038,9 +1038,10 @@
     "live_search_show_vendor": false,
     "live_search_show_price": false,
     "live_search_search_meta": false,
+    "favicon": "shopify:\/\/shop_images\/Chill_Fevicon.png",
     "cart_type": "drawer",
     "product_currency_code_enabled": false,
-    "enable_domain_redirect": false,
+    "enable_domain_redirect": true,
     "sections": {
       "header": {
         "type": "header",
@@ -1425,7 +1426,7 @@
       "cart-drawer": {
         "type": "cart-drawer",
         "settings": {
-          "continue_shopping_url": ""
+          "continue_shopping_url": "shopify:\/\/collections\/shop-all"
         }
       }
     },
