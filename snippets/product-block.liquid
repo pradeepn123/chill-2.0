@@ -361,12 +361,20 @@
             {% elsif shipping_interval_unit_type == 'month' %}
               {% assign shipping_interval_unit_type = 'Months' %}
             {% endif %}
+            {% assign shipping_interval_frequency = productSubscription.shipping_interval_frequency | split: ',' | size %}
+            {% assign selected_shipping_interval_frequency = productSubscription.shipping_interval_frequency | split: ',' %}
             {%- comment -%}
               Create inputs required to send recharge data
             {%- endcomment -%}
 
             <input type="hidden" name="" value="{{duplicateVaraintId}}" subscription-varaintId-input="true">
-            <input type="hidden" name="" value="{{productSubscription.shipping_interval_frequency}}" subscription-frequency-input>
+            {%- if shipping_interval_frequency > 1 -%}
+                {%- assign updatedShippingInterval = selected_shipping_interval_frequency[0] -%} 
+            {% else %}
+              {%- assign updatedShippingInterval = shipping_interval_frequency -%} 
+            {%- endif -%}
+          
+            <input type="hidden" name="" value="{{updatedShippingInterval}}" subscription-frequency-input>
             <input type="hidden" name="" value="{{shipping_interval_unit_type}}" subscription-unit-input>
 
             {%- comment -%}
@@ -410,8 +418,6 @@
                 </div>
               </label>
               <div class="subscription-interval-container" style="display: none" subscription-interval-selectors-wrap>
-                {% assign shipping_interval_frequency = productSubscription.shipping_interval_frequency | split: ',' | size %}
-                {% assign selected_shipping_interval_frequency = productSubscription.shipping_interval_frequency | split: ',' %}
                 {%- comment -%}
                   {% assign shipping_interval_unit = productSubscription.shipping_interval_unit_type | split: ',' | size %}
                 {%- endcomment -%}

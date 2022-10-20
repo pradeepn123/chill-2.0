@@ -5814,7 +5814,6 @@ body {
 }
 .cart_container .cart-item__quantity .buttoned-input {
   border-radius: 25px;
-  margin-right: 0.7rem;
 }
 .cart_container .cart-item__quantity .buttoned-input .quantity-down, .cart_container .cart-item__quantity .buttoned-input .quantity-up, .cart_container .cart-item__quantity .buttoned-input .cart-item__quantity-input {
   color: #000;
@@ -6285,6 +6284,7 @@ body.cart-drawer-open {
 }
 .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__detail .cart-item__column .remove {
   margin: unset;
+  padding-left: 0.7em;
 }
 .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__price {
   display: flex;
