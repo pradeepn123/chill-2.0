@@ -1426,7 +1426,7 @@
       "cart-drawer": {
         "type": "cart-drawer",
         "settings": {
-          "continue_shopping_url": ""
+          "continue_shopping_url": "shopify:\/\/collections\/shop-all"
         }
       }
     },
