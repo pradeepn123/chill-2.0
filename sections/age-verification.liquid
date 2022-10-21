@@ -91,7 +91,8 @@
     if (document.querySelector('.age_verification')) {
       let ageVerificationModal = document.querySelector('.age_verification')
       var isModalShown = sessionStorage.getItem('alreadyShown');
-      if (isModalShown != 'true') {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (isModalShown != 'true' && !urlParams.has('{{ routes.account_url }}/reset')) {
         ageVerificationModal.style.display = '';
         document.querySelector('body').classList.add("overflow-hidden")     
       } else {
