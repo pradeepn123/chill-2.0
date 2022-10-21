@@ -906,6 +906,10 @@ body.overflow-hidden {
   color: #6EC59F;
   font-family: "Open Sans", sans-serif;
 }
+.mega_menu .mega_menu_title .menu-mega-nav li .ruby-grid .ruby-row .view_all_collection:hover {
+  background: #6EC59F;
+  color: #fff !important;
+}
 
 /* footer css here */
 @media (min-width: 768px) {
@@ -2456,7 +2460,7 @@ body {
 @media (max-width: 767px) {
   .template-index .section-image-with-text-overlay .overlay-text .overlay-text__inner .overlay-text__button {
     top: 16px;
-    left: 50%;
+    left: 25%;
     transform: translate(-50%, -50%);
   }
 }
@@ -6440,5 +6444,28 @@ body.cart-drawer-open {
 @media (max-width: 767px) {
   .contact_us-container .contact_heading.collab_heading {
     margin: 30px 0;
+  }
+}
+
+.reset_container {
+  margin: 80px auto !important;
+}
+.reset_container .template_header .note {
+  text-align: center;
+}
+.reset_container .action_bottom {
+  text-align: center;
+}
+.reset_container .action_bottom button {
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .reset_container {
+    padding: 0 20px;
+  }
+  .reset_container .action_bottom button {
+    font-size: 16px;
   }
 }
