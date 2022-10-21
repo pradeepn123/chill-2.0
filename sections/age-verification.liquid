@@ -91,7 +91,12 @@
     if (document.querySelector('.age_verification')) {
       let ageVerificationModal = document.querySelector('.age_verification')
       var isModalShown = sessionStorage.getItem('alreadyShown');
-      if (isModalShown != 'true') {
+      let urlString = window.location.href;
+      let isResetPage = urlString.indexOf('/account/reset') > 0 ? true : false ;
+      if(isResetPage){
+        ageVerificationModal.style.display = 'none'
+      }
+      else if (!isModalShown) {
         ageVerificationModal.style.display = '';
         document.querySelector('body').classList.add("overflow-hidden")     
       } else {
