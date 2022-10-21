@@ -128,7 +128,7 @@
                     </div>
                     {% if has_subscriptions %}
                       {% assign shipping_interval_frequencies = item.product.metafields.subscriptions.shipping_interval_frequency | split: ',' | default: 30 %}
-                      <div class="upgraded-sub-selection">
+                      {%- comment -%} <div class="upgraded-sub-selection">
                         {% if shipping_interval_frequencies.size > 1 %}
                           <select
                             id="drawer-shipping-interval-selector-{{forloop.index}}"
@@ -145,9 +145,9 @@
                             Delivery every {{item.product.metafields.subscriptions.shipping_interval_frequency}} {{item.product.metafields.subscriptions.shipping_interval_unit_type}}
                           </div>
                         {% endif %}
-                      </div>
+                      </div> {%- endcomment -%}
                     {% elsif item.product.metafields.subscriptions.shipping_interval_frequency and item.product.metafields.subscriptions.discount_percentage %}
-                      <button
+                      {%- comment -%} <button
                         type="button"
                         class="upgrade-to-subscription"
                         data-shipping_interval_frequency="{{item.product.metafields.subscriptions.shipping_interval_frequency}}"
@@ -155,7 +155,7 @@
                         data-line="{{ forloop.index }}"
                       >
                         UPGRADE TO SUBSCRIPTION AND SAVE {{ item.product.metafields.subscriptions.discount_percentage }}%
-                      </button>
+                      </button> {%- endcomment -%}
                     {% endif %}
                   </div>
                 </div>

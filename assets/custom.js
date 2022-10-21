@@ -588,12 +588,12 @@ const featureProductSubscriptionUtil = (function () {
             featureProductRadioOneTimeSubEl.forEach((_el) => {
                 _el.addEventListener('change', function (e) {
                     let formEl = this.closest(elUtil.form);
-                    // formEl
-                    //     .querySelector(elUtil.originalProductIdInputEl)
-                    //     .setAttribute('name', 'id');
-                    // formEl
-                    //     .querySelector(elUtil.subscriptionProductInputEl)
-                    //     .setAttribute('name', '');
+                    formEl
+                        .querySelector(elUtil.originalProductIdInputEl)
+                        .setAttribute('name', 'id');
+                    formEl
+                        .querySelector(elUtil.subscriptionProductInputEl)
+                        .setAttribute('name', '');
 
                     // Remove properties to subscription input
                     formEl
@@ -622,12 +622,12 @@ const featureProductSubscriptionUtil = (function () {
             featureProductRadioSubscriptionEl.forEach((_el) => {
                 _el.addEventListener('change', function (e) {
                     let formEl = this.closest(elUtil.form);
-                    // formEl
-                    //     .querySelector(elUtil.originalProductIdInputEl)
-                    //     .setAttribute('name', '');
-                    // formEl
-                    //     .querySelector(elUtil.subscriptionProductInputEl)
-                    //     .setAttribute('name', 'id');
+                    formEl
+                        .querySelector(elUtil.originalProductIdInputEl)
+                        .setAttribute('name', '');
+                    formEl
+                        .querySelector(elUtil.subscriptionProductInputEl)
+                        .setAttribute('name', 'id');
 
                     // Add properties to subscription input
                     formEl
