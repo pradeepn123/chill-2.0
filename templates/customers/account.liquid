@@ -161,7 +161,7 @@
 
                 <div id="enter_email" class="input-row">
                   <label for="email" class="large">{{ 'Your registered e-mail ID' }}</label>
-                  <input type="email" size="30" name="email" id="recover-email" class="large" />
+                  <input type="email" size="30" name="email" id="recover-email" class="large" value={{ customer.email }} />
                 </div>
                 <div class="action_bottom">
                     <button class="recover_password_btn btn" type="submit">{{ 'customer.recover_password.submit' | t | upcase }}</button>
