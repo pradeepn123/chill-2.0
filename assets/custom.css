@@ -6446,3 +6446,26 @@ body.cart-drawer-open {
     margin: 30px 0;
   }
 }
+
+.reset_container {
+  margin: 80px auto !important;
+}
+.reset_container .template_header .note {
+  text-align: center;
+}
+.reset_container .action_bottom {
+  text-align: center;
+}
+.reset_container .action_bottom button {
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .reset_container {
+    padding: 0 20px;
+  }
+  .reset_container .action_bottom button {
+    font-size: 16px;
+  }
+}
