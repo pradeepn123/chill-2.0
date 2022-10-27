@@ -241,7 +241,7 @@
                     {% if widget_settings != blank %}
                       <h4 class="subscription_main_title">CHOOSE YOUR OPTION</h4>
                     {% endif %}
-                      {% render 'subscriptions-product-custom' with product as product %}
+                    {% render 'subscription-product' with product as product %}
                     <!-- recharge Subscription -->
                     <div class="input-row" {{ block.shopify_attributes }}>
                       {% render 'variant-picker', section: section, product: product, block: block %}

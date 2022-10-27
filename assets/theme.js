@@ -3321,9 +3321,9 @@
 
           //Add to cart
           var formData = new FormData($form[0]);
-          if ($form.find(".original-selector").val() != $form.find("[name=id]").val()) {
-            formData.set("id", $form.find(".original-selector").val())
-          }
+          // if ($form.find(".original-selector").val() != $form.find("[name=id]").val()) {
+          //   formData.set("id", $form.find(".original-selector").val())
+          // }
           formData.append('sections', 'cart-drawer');
           $.post(shopifyAjaxAddURL, new URLSearchParams(formData).toString(), theme.addedToCartHandler.bind($form), 'json').fail(function (data) {
             //Enable add button
