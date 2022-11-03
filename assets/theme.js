@@ -5923,6 +5923,9 @@
         if (this.replacingContent) {
           return;
         }
+
+        //remove existing product and add subscription product 
+        
         var shippingIntervalFrequency = evt.currentTarget.dataset.shipping_interval_frequency.split(",")
         this.functions.updateCart.call(this, {
           line: $(evt.currentTarget).data('line'),

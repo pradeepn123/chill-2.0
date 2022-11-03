@@ -1,3 +1,4 @@
+
 {% if settings.cart_type contains 'drawer' and template != 'cart' %}
   {% assign has_recharge_subscriptions = false %}
   {% for i in cart.items %}
@@ -22,8 +23,106 @@
         </div>
         {% if cart.item_count > 0 %}
           <div class="cart-drawer-summary__item-list">
+          {% comment %}
+          {%- assign threshold_in_cents = settings.cart_free_shipping_threshold | times: 100 -%}
+          <div class="Drawer__Container">
+            <div class="Cart__ShippingNotice Text--subdued">
+              
+              {%- if cart.total_price >= threshold_in_cents -%}
+                <p>{{- 'cart.general.free_shipping' | t -}}</p>
+                <span class="free-shipping text-green">{{- 'cart.general.free_shipping_remaining' | t }}</span>
+              {%- else -%}
+                {%- capture remaining_amount -%}{{ cart.total_price | minus: threshold_in_cents | abs | money_without_trailing_zeros }}{%- endcapture -%}
+                  <p>
+                    <span class="saw-extra-note"></span>
+                    {{- 'cart.general.spend' | t -}}
+                    <span class="saw-cart-original-total text-green"><span>{{ remaining_amount }}</span></span>
+                    {{- 'cart.general.more_and_get' | t -}}
+                    <span class="saw-cart-total text-green">{{- 'cart.general.free_shipping_remaining' | t }}</span>
+                  </p>
+              {%- endif -%}
+            </div>
+          </div>
+          {% endcomment%}
+          {%- liquid
+            assign free_shipping_text = block.settings.message | default: settings.message
+            assign is_enable = false
+          
+            if block.settings.message != blank
+              assign is_enable = true
+            endif
+          
+            if settings.show_free_shipping_message and settings.free_shipping_limit != blank and free_shipping_text != blank
+              assign is_enable = true
+            endif
+          -%}
+          
+          {%- if is_enable -%}
+            {%- liquid
+              assign limit = settings.free_shipping_limit | plus: 0
+              assign limit_currency = limit | times: 100
+              assign cart_total_price = cart.total_price
+              assign subtotal_without_currency = cart_total_price | plus: 0 | divided_by: 100
+            -%}
+          
+            {%- capture left_to_spend -%}
+              <span data-left-to-spend>
+                {%- if settings.currency_code_enable -%}
+                  {{- limit_currency | minus: cart_total_price | money_with_currency | remove: '.00' | remove: ',00' -}}
+                {%- else -%}
+                  {{- limit_currency | minus: cart_total_price | money_without_trailing_zeros -}}
+                {%- endif -%}
+              </span>
+            {%- endcapture -%}
+          
+            {%- liquid
+              assign free_shipping_message = free_shipping_text | replace: '||amount||', left_to_spend
+              assign qualified_shipping_message = 'cart.general.qualified_shipping_message' | t
+              assign class_message = ''
+          
+              if subtotal_without_currency >= limit
+                if qualified_shipping_message != blank
+                  assign class_message = ' is-success'
+                  assign is_default_message_hidden = ' is-hidden'
+                else
+                  assign class_message = ' is-hidden'
+                endif
+              elsif subtotal_without_currency == 0
+                assign class_message = ' is-hidden'
+              endif
+          
+              assign percent = limit | minus: subtotal_without_currency | times: 100 | divided_by: limit
+              assign percent = 100 | minus: percent
+            -%}
+          
+            <p class="{% unless template.name == 'cart' or section.id == 'announcement-bar' %}cart-drawer__message {% endunless %}cart__message{{ class_message }}"
+              data-cart-message="{% if qualified_shipping_message != blank %}true{% else %}false{% endif %}"
+              data-limit="{{ limit }}"
+              data-cart-total-price="{{ cart_total_price }}"
+              {% if animations_enabled %}
+                data-aos="fade-up"
+                data-aos-delay="{{ animation_delay }}"
+                {%- assign animation_delay = animation_delay | plus: 100 -%}
+              {% endif %}>
+              <span class="cart__message__default{{ is_default_message_hidden }}" data-message-default>{{ free_shipping_message }}</span>
+          
+              {%- if qualified_shipping_message != blank -%}
+                <span class="cart__message__success">{{ qualified_shipping_message }}</span>
+              {%- endif -%}
+          
+              {%- unless is_top -%}
+                <progress class="cart__message__progress" data-cart-message-progress value="{{ percent }}" max="100"></progress>
+              {%- endunless -%}
+            </p>
+          {%- endif -%}
             <form class="cart-drawer-form cart-drawer-summary__section" action="{{ routes.cart_url }}" method="post">
               {% for item in cart.items %}
+                {% if item.product.metafields.subscriptions.original_handle != blank %}
+                  {% assign original_product = all_products[item.product.metafields.subscriptions.original_handle.value] %}    
+                {% else %}                
+                  {% assign original_product = item.product %}    
+                {% endif %}
+                
                 {% assign has_subscriptions = false %}
                 {% assign selected_shipping_interval_frequency = blank %}
                 {% for p in item.properties %}
@@ -36,7 +135,7 @@
                   <div class="cart-drawer-summary-item-wrapper">
                     <div class="cart-drawer-summary-item">
                       <div class="cart-drawer-summary-item__image" id="cart-drawer-item-image-{{ item.id }}">
-                        <a href="{{ item.url }}">
+                        <a href="{{ original_product.url }}">
                           {% render 'responsive-image', image: item.image %}
                         </a>
                       </div>
@@ -45,8 +144,8 @@
                           <div class="cart-drawer-summary-item_title_price_total">
                             <a
                               class="cart-drawer-summary-item__title"
-                              href="{{ item.url }}">
-                              {{ item.product.title | replace: "Auto renew", "" | replace: "10.00% Off", "" }}
+                              href="{{ original_product.url }}">
+                              {{ original_product.title }}
                             </a>
                             <div class="cart-drawer-summary-item__price">
                               {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}
@@ -125,37 +224,37 @@
                         
                       </div>
                       
-                    </div>
-                    {% if has_subscriptions %}
-                      {% assign shipping_interval_frequencies = item.product.metafields.subscriptions.shipping_interval_frequency | split: ',' | default: 30 %}
-                      {%- comment -%} <div class="upgraded-sub-selection">
+                    </div>                    
+                    {% if has_subscriptions %} 
+                      {% assign shipping_interval_frequencies = original_product.metafields.subscriptions.shipping_interval_frequency | split: ',' | default: 30 %}
+                       <div class="upgraded-sub-selection">
                         {% if shipping_interval_frequencies.size > 1 %}
                           <select
                             id="drawer-shipping-interval-selector-{{forloop.index}}"
                             class="drawer-shipping-interval"
-                            data-shipping_interval_unit_type="{{item.product.metafields.subscriptions.shipping_interval_unit_type}}"
+                            data-shipping_interval_unit_type="{{original_product.metafields.subscriptions.shipping_interval_unit_type}}"
                             data-line="{{ forloop.index }}"
                           >
                             {% for shipping_interval_frequency in shipping_interval_frequencies %}
-                              <option value="{{shipping_interval_frequency}}" {% if selected_shipping_interval_frequency == shipping_interval_frequency %}selected{% endif %} >Delivery every {{shipping_interval_frequency}} {{item.product.metafields.subscriptions.shipping_interval_unit_type}}</option>
+                              <option value="{{shipping_interval_frequency}}" {% if selected_shipping_interval_frequency == shipping_interval_frequency %}selected{% endif %} >Delivery every {{shipping_interval_frequency}} {{original_product.metafields.subscriptions.shipping_interval_unit_type}}</option>
                             {% endfor %}
                           </select>
                         {% else %}
                           <div class="drawer-shipping-interval-{{shipping_interval_frequencies.size}}">
-                            Delivery every {{item.product.metafields.subscriptions.shipping_interval_frequency}} {{item.product.metafields.subscriptions.shipping_interval_unit_type}}
+                            Delivery every {{original_product.metafields.subscriptions.shipping_interval_frequency}} {{original_product.metafields.subscriptions.shipping_interval_unit_type}}
                           </div>
                         {% endif %}
-                      </div> {%- endcomment -%}
-                    {% elsif item.product.metafields.subscriptions.shipping_interval_frequency and item.product.metafields.subscriptions.discount_percentage %}
-                      {%- comment -%} <button
+                      </div>
+                    {% elsif original_product.metafields.subscriptions.shipping_interval_frequency and original_product.metafields.subscriptions.discount_percentage %}
+                       <button
                         type="button"
                         class="upgrade-to-subscription"
-                        data-shipping_interval_frequency="{{item.product.metafields.subscriptions.shipping_interval_frequency}}"
-                        data-shipping_interval_unit_type="{{item.product.metafields.subscriptions.shipping_interval_unit_type}}"
+                        data-shipping_interval_frequency="{{original_product.metafields.subscriptions.shipping_interval_frequency}}"
+                        data-shipping_interval_unit_type="{{original_product.metafields.subscriptions.shipping_interval_unit_type}}"
                         data-line="{{ forloop.index }}"
                       >
-                        UPGRADE TO SUBSCRIPTION AND SAVE {{ item.product.metafields.subscriptions.discount_percentage }}%
-                      </button> {%- endcomment -%}
+                        UPGRADE TO SUBSCRIPTION AND SAVE {{ original_product.metafields.subscriptions.discount_percentage }}%
+                      </button> 
                     {% endif %}
                   </div>
                 </div>
