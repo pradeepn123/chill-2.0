@@ -166,7 +166,20 @@
 
               {% render 'unit-price', variant: cheapest_variant %}
             </a>
+            {%- if settings.enable_product_reviews_collection and product.metafields.reviews.rating_count != blank -%}
+              {%- assign rating_count = product.metafields.reviews.rating_count | plus: 0 -%}
+              {%- if rating_count > 0 -%}
+                <div class="product-block__rating">
+                  {% render 'rating', rating_value: product.metafields.reviews.rating.value %}
+                  <span class="cc-rating-custom-caption">
+                    {{ rating_count }}
+                    {{ 'products.product.reviews_link' | t: count: rating_count | downcase }}
+                  </span>
+                </div>
+              {%- endif -%}
+            {%- endif -%}
             <div class="subscription_checkout_button">
+              {% comment %}
               <div class="dynamic_checkout_btn">
                 <button type="button" class="shopify-payment-button__button shopify-payment-button__button--unbranded js-buy-now-btn btn-has-price" data-variant-id="{{cheapest_variant.id}}" data-quantity="1" data-product-id="{{product.id}}" onclick="theme.handleBuyNow(this)">
                   {% if productSubscription.has_subscription %}
@@ -178,6 +191,7 @@
                   </span>
                 </button>
               </div>
+              {% endcomment %}
               <!-- custom subscription info -->
               <div class="custom_subscription_info">
                 <div class="custom_subscription_wrapper">
@@ -200,7 +214,7 @@
                         </span>
                       </button>
                     {%- else -%}
-                      <button class="btn btn-primary default_addToCart_btn" form="{{product_form_id}}" direct-addToCart-btn>
+                      <button class="btn btn-primary primary_addtocart default_addToCart_btn" form="{{product_form_id}}" direct-addToCart-btn>
                         <span>
                           Add to cart
                         </span>
@@ -227,27 +241,27 @@
 
             {%- if settings.prod_thumb_show_options -%}
               {%- liquid
-                                                                                assign option_limit = 3
-                                                                                assign options_to_show = settings.swatch_option_name | append: ',' | append: settings.prod_thumb_options_names | replace: ', ', ',' | split: ','
-                                                                             -%}
+                assign option_limit = 3
+                assign options_to_show = settings.swatch_option_name | append: ',' | append: settings.prod_thumb_options_names | replace: ', ', ',' | split: ','
+              -%}
               {%- for product_option in product.options_with_values -%}
                 {%- if options_to_show contains product_option.name -%}
                   {%- liquid
-                                                                                   if settings.swatch_enabled and settings.swatch_option_name contains product_option.name
-                                                                                     assign is_swatch = true
-                                                                                   else
-                                                                                     assign is_swatch = false
-                                                                                   endif
-                                                                                 -%}
+                    if settings.swatch_enabled and settings.swatch_option_name contains product_option.name
+                      assign is_swatch = true
+                    else
+                      assign is_swatch = false
+                    endif
+                  -%}
                   <div class="product-block-options{% if is_swatch %} product-block-options--swatch{% endif %}" data-option-name="{{ product_option.name | escape }}">
                     <div class="product-block-options__inner">
                       {%- if product.options.size == 1 -%}
                         {%- for variant in product.variants -%}
                           {%- liquid
-                                                                                           if is_swatch and settings.swatch_method == 'image' and variant.featured_media == blank
-                                                                                             continue
-                                                                                           endif
-                                                                                         -%}
+                            if is_swatch and settings.swatch_method == 'image' and variant.featured_media == blank
+                              continue
+                            endif
+                          -%}
                           <span class="product-block-options__item{% unless settings.prod_thumb_options_disable_unavailable == false or variant.available %} product-block-options__item--unavailable{% endunless %}{% if forloop.index > option_limit and is_swatch %} product-block-options__item--truncated{% endif %}{% if is_swatch %} lazyload{% if manual_image_load %}--manual{% endif %}{% endif %}" data-option-item="{{ variant.title | escape }}" {% if variant.featured_media %}data-media="{{ variant.featured_media.id }}"{% endif %}
                             {% if is_swatch -%}
                             {%- if settings.swatch_method == 'standard' -%}
@@ -268,30 +282,30 @@
                         {%- assign product_option_position_0index = product_option.position | minus: 1 -%}
                         {%- for product_option_value in product_option.values -%}
                           {%- liquid
-                                                                                           assign option_value_variant = false
-                                                                                           for variant in product.variants
-                                                                                             if variant.options[product_option_position_0index] == product_option_value
-                                                                                               assign option_value_variant = variant
-                                                                                               break
-                                                                                             endif
-                                                                                           endfor
-                                                               
-                                                                                           if settings.prod_thumb_options_disable_unavailable
-                                                                                             assign is_unavailable = true
-                                                                                             for variant in product.variants
-                                                                                               if variant.available and variant.options[product_option_position_0index] == product_option_value
-                                                                                                 assign is_unavailable = false
-                                                                                                 break
-                                                                                               endif
-                                                                                             endfor
-                                                                                           else
-                                                                                             assign is_unavailable = false
-                                                                                           endif
-                                                               
-                                                                                           if is_swatch and settings.swatch_method == 'image' and option_value_variant.featured_media == blank
-                                                                                             continue
-                                                                                           endif
-                                                                                         -%}
+                            assign option_value_variant = false
+                            for variant in product.variants
+                              if variant.options[product_option_position_0index] == product_option_value
+                                assign option_value_variant = variant
+                                break
+                              endif
+                            endfor
+
+                            if settings.prod_thumb_options_disable_unavailable
+                              assign is_unavailable = true
+                              for variant in product.variants
+                                if variant.available and variant.options[product_option_position_0index] == product_option_value
+                                  assign is_unavailable = false
+                                  break
+                                endif
+                              endfor
+                            else
+                              assign is_unavailable = false
+                            endif
+
+                            if is_swatch and settings.swatch_method == 'image' and option_value_variant.featured_media == blank
+                              continue
+                            endif
+                          -%}
                           <span class="product-block-options__item{% if is_unavailable %} product-block-options__item--unavailable{% endif %}{% if forloop.index > option_limit and is_swatch %} product-block-options__item--truncated{% endif %}{% if is_swatch %} lazyload{% if manual_image_load %}--manual{% endif %}{% endif %}" data-option-item="{{ product_option_value | escape }}" {% if option_value_variant.featured_media %}data-media="{{ option_value_variant.featured_media.id }}"{% endif %}
                             {% if is_swatch %}
                             {%- if settings.swatch_method == 'standard' -%}
@@ -315,18 +329,7 @@
               {%- endfor -%}
             {%- endif -%}
 
-            {%- if settings.enable_product_reviews_collection and product.metafields.reviews.rating_count != blank -%}
-              {%- assign rating_count = product.metafields.reviews.rating_count | plus: 0 -%}
-              {%- if rating_count > 0 -%}
-                <div class="product-block__rating">
-                  {% render 'rating', rating_value: product.metafields.reviews.rating.value %}
-                  <span class="cc-rating-custom-caption">
-                    {{ rating_count }}
-                    {{ 'products.product.reviews_link' | t: count: rating_count | downcase }}
-                  </span>
-                </div>
-              {%- endif -%}
-            {%- endif -%}
+            
           </div>
         </div>
       </div>

@@ -40,21 +40,39 @@
                                 <div class="tab-content-list">
                                     <div class="tab-content-item">
                                         {% if block.settings.image_one != blank %}
-                                            <img src="{{ block.settings.image_one | img_url: '1920x'}}" alt="" />
+                                            {%- assign img_url = block.settings.image_one | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                                            <img class="lazyload"
+                                                data-src="{{ img_url }}"
+                                                data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                                                data-aspectratio="{{ image.aspect_ratio }}"
+                                                data-sizes="auto"
+                                                alt="{{ image.alt | escape }}" />
                                         {% endif %}
                                         <h3>{{ block.settings.heading_one }}</h3>
                                         {{ block.settings.text_one}}
                                     </div>
                                     <div class="tab-content-item">
                                         {% if block.settings.image_two != blank %}
-                                            <img src="{{ block.settings.image_two | img_url: '1920x'}}" alt="" />
+                                            {%- assign img_url = block.settings.image_two | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                                            <img class="lazyload"
+                                                data-src="{{ img_url }}"
+                                                data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                                                data-aspectratio="{{ image.aspect_ratio }}"
+                                                data-sizes="auto"
+                                                alt="{{ image.alt | escape }}" />
                                         {% endif %}
                                         <h3>{{ block.settings.heading_two }}</h3>
                                         {{ block.settings.text_two}}
                                     </div>
                                     <div class="tab-content-item">
                                         {% if block.settings.image_three != blank %}
-                                            <img src="{{ block.settings.image_three | img_url: '1920x'}}" alt="" />
+                                            {%- assign img_url = block.settings.image_three | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                                            <img class="lazyload"
+                                                data-src="{{ img_url }}"
+                                                data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                                                data-aspectratio="{{ image.aspect_ratio }}"
+                                                data-sizes="auto"
+                                                alt="{{ image.alt | escape }}" />
                                         {% endif %}
                                         <h3>{{ block.settings.heading_three }}</h3>
                                         {{ block.settings.text_three}}
