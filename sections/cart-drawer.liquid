@@ -117,12 +117,6 @@
           {%- endif -%}
             <form class="cart-drawer-form cart-drawer-summary__section" action="{{ routes.cart_url }}" method="post">
               {% for item in cart.items %}
-                {% if item.product.metafields.subscriptions.original_handle != blank %}
-                  {% assign original_product = all_products[item.product.metafields.subscriptions.original_handle.value] %}    
-                {% else %}                
-                  {% assign original_product = item.product %}    
-                {% endif %}
-                
                 {% assign has_subscriptions = false %}
                 {% assign selected_shipping_interval_frequency = blank %}
                 {% for p in item.properties %}
@@ -135,7 +129,7 @@
                   <div class="cart-drawer-summary-item-wrapper">
                     <div class="cart-drawer-summary-item">
                       <div class="cart-drawer-summary-item__image" id="cart-drawer-item-image-{{ item.id }}">
-                        <a href="{{ original_product.url }}">
+                        <a href="{{ item.url }}">
                           {% render 'responsive-image', image: item.image %}
                         </a>
                       </div>
@@ -144,8 +138,8 @@
                           <div class="cart-drawer-summary-item_title_price_total">
                             <a
                               class="cart-drawer-summary-item__title"
-                              href="{{ original_product.url }}">
-                              {{ original_product.title }}
+                              href="{{ item.url }}">
+                              {{ item.product.title | replace: "Auto renew", "" | replace: "10.00% Off", "" }}
                             </a>
                             <div class="cart-drawer-summary-item__price">
                               {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}
@@ -226,13 +220,13 @@
                       
                     </div>                    
                     {% if has_subscriptions %} 
-                      {% assign shipping_interval_frequencies = original_product.metafields.subscriptions.shipping_interval_frequency | split: ',' | default: 30 %}
-                       <div class="upgraded-sub-selection">
+                      {% assign shipping_interval_frequencies = item.product.metafields.subscriptions.shipping_interval_frequency | split: ',' | default: 30 %}
+                       {%- comment -%}<div class="upgraded-sub-selection">
                         {% if shipping_interval_frequencies.size > 1 %}
                           <select
                             id="drawer-shipping-interval-selector-{{forloop.index}}"
                             class="drawer-shipping-interval"
-                            data-shipping_interval_unit_type="{{original_product.metafields.subscriptions.shipping_interval_unit_type}}"
+                            data-shipping_interval_unit_type="{{item.product.metafields.subscriptions.shipping_interval_unit_type}}"
                             data-line="{{ forloop.index }}"
                           >
                             {% for shipping_interval_frequency in shipping_interval_frequencies %}
@@ -241,20 +235,20 @@
                           </select>
                         {% else %}
                           <div class="drawer-shipping-interval-{{shipping_interval_frequencies.size}}">
-                            Delivery every {{original_product.metafields.subscriptions.shipping_interval_frequency}} {{original_product.metafields.subscriptions.shipping_interval_unit_type}}
+                            Delivery every {{item.product.metafields.subscriptions.shipping_interval_frequency}} {{item.product.metafields.subscriptions.shipping_interval_unit_type}}
                           </div>
                         {% endif %}
-                      </div>
-                    {% elsif original_product.metafields.subscriptions.shipping_interval_frequency and original_product.metafields.subscriptions.discount_percentage %}
-                       <button
+                      </div>{%- endcomment -%}
+                    {% elsif item.product.metafields.subscriptions.shipping_interval_frequency and item.product.metafields.subscriptions.discount_percentage %}
+                       {%- comment -%}<button
                         type="button"
                         class="upgrade-to-subscription"
-                        data-shipping_interval_frequency="{{original_product.metafields.subscriptions.shipping_interval_frequency}}"
-                        data-shipping_interval_unit_type="{{original_product.metafields.subscriptions.shipping_interval_unit_type}}"
+                        data-shipping_interval_frequency="{{item.product.metafields.subscriptions.shipping_interval_frequency}}"
+                        data-shipping_interval_unit_type="{{item.product.metafields.subscriptions.shipping_interval_unit_type}}"
                         data-line="{{ forloop.index }}"
                       >
                         UPGRADE TO SUBSCRIPTION AND SAVE {{ original_product.metafields.subscriptions.discount_percentage }}%
-                      </button> 
+                      </button> {%- endcomment -%}
                     {% endif %}
                   </div>
                 </div>

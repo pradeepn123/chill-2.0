@@ -84,6 +84,9 @@ body.overflow-hidden {
                             .product-block__rating{
                                 font-size: 16px;
                                 color: #000000;
+                                .cc-rating-stars--active{
+                                    color: #FFAC9A;
+                                }
                                 .cc-rating-stars__svg{
                                     width: 1.2em;
                                     height: 1.2em;
