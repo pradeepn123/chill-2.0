@@ -347,6 +347,12 @@
                             .price-container{
                                 margin-bottom: 0;
                                 .price-area{
+                                    .price{
+                                        @media(max-width: 767.98px){                                        
+                                            font-size: 20px;
+                                            margin-right: 5px;
+                                        }
+                                    }
                                     .current-price {
                                         color: #ffffff;
                                     }
@@ -688,6 +694,10 @@
                 }
             }
             .direction_to_use{
+                padding: 0 16px;
+                @media(min-width:767px){
+                    padding: 0;
+                }
                 h3{
                     font-size: 28px;
                     font-family: 'Open Sans', sans-serif;

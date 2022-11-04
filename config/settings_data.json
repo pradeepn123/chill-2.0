@@ -1024,7 +1024,7 @@
     "prod_new_limit_int": 100,
     "prod_sale_show": true,
     "prod_sold_out_show": true,
-    "enable_product_reviews_collection": false,
+    "enable_product_reviews_collection": true,
     "prod_thumb_show_options": false,
     "social_twitter_url": "https:\/\/twitter.com\/ChillCBD",
     "social_facebook_url": "https:\/\/www.facebook.com\/chillstateofmind",
@@ -1040,6 +1040,8 @@
     "live_search_search_meta": false,
     "favicon": "shopify:\/\/shop_images\/Chill_Fevicon.png",
     "cart_type": "drawer",
+    "cart_show_free_shipping_threshold": true,
+    "free_shipping_limit": "50",
     "product_currency_code_enabled": false,
     "enable_domain_redirect": true,
     "sections": {

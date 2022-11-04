@@ -81,6 +81,17 @@ body.overflow-hidden {
 
                                 }                                        
                             }
+                            .product-block__rating{
+                                font-size: 16px;
+                                color: #000000;
+                                .cc-rating-stars--active{
+                                    color: #FFAC9A;
+                                }
+                                .cc-rating-stars__svg{
+                                    width: 1.2em;
+                                    height: 1.2em;
+                                }
+                            }
                             .dynamic_checkout_btn{
                                 .shopify-payment-button__button{
                                     border: 1px solid #000000;
@@ -117,6 +128,16 @@ body.overflow-hidden {
                             .custom_subscription_info{
                                 .custom_subscription_wrapper{
                                     .custom_button_info{
+                                        .btn-primary:hover {
+                                            background: #ffac9a;
+                                            border-color: #ffac9a;
+                                            color: #fff;
+                                        }
+                                        .primary_addtocart {
+                                            background: transparent;
+                                            color: #9792e4;
+                                            border: 2px solid #9792e4;
+                                        }
                                         .default_addToCart_btn{
                                             display: flex;
                                             justify-content: space-between;
@@ -337,6 +358,11 @@ body.overflow-hidden {
                 .product-form{
                     .quantity-submit-row__submit{
                         margin: 0;
+                        button.button:hover{
+                            background: #ffac9a;
+                            border-color: #ffac9a;
+                            color: #fff;
+                        }
                         button.button--large{
                             width: 100%;
                             display: flex;
@@ -681,4 +707,9 @@ div#main-nav{
             }
         }
     }
+}
+
+*::-webkit-media-controls-start-playback-button {
+    display: none!important;
+    -webkit-appearance: none;
 }
