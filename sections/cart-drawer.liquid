@@ -168,27 +168,34 @@
                               {% endif %}
                             </div>
                           </div>
-                          {% if item.product.variants.size > 1 %}
-                            <span class="variant">{{ item.variant.title }}</span>
-                          {% elsif show_single_variant_details %}
-                            {% unless item.product.has_only_default_variant %}
+
+                          <div class="variant_discount_block_sec">
+                            {% if item.product.variants.size > 1 %}
                               <span class="variant">{{ item.variant.title }}</span>
-                            {% endunless %}
-                          {% endif %}
-                          {% if item.selling_plan_allocation %}
-                            <div class="cart-drawer-summary-item__variant">{{ item.selling_plan_allocation.selling_plan.name }}</div>
-                          {% endif %}
+                            {% elsif show_single_variant_details %}
+                              {% unless item.product.has_only_default_variant %}
+                                <span class="variant">{{ item.variant.title }}</span>
+                              {% endunless %}
+                            {% endif %}
+                            {% if item.selling_plan_allocation %}
+                              <div class="cart-drawer-summary-item__variant">{{ item.selling_plan_allocation.selling_plan.name }}</div>
+                            {% endif %}
+                            
+                            {% if item.line_level_discount_allocations.size > 0 %}
+                              <ul class="cart-drawer-discount-list align-right">
+                              {% for discount_allocation in item.line_level_discount_allocations %}
+                                <li class="cart-drawer-discount cart-drawer-discount--inline cart-drawer-discount--flex">
+                                  <span class="cart-drawer-discount__label">{{ discount_allocation.discount_application.title }}</span>
+                                  <span class="cart-drawer-discount__amount theme-money">{% render 'price', price: discount_allocation.amount, disable_currency_code: true %}</span>
+                                </li>
+                              {% endfor %}
+                              </ul>
+                            {% endif %}
+                          </div>
+                          
+
                         </div>                        
-                        {% if item.line_level_discount_allocations.size > 0 %}
-                          <ul class="cart-drawer-discount-list align-right">
-                          {% for discount_allocation in item.line_level_discount_allocations %}
-                            <li class="cart-drawer-discount cart-drawer-discount--inline cart-drawer-discount--flex">
-                              <span class="cart-drawer-discount__label">{{ discount_allocation.discount_application.title }}</span>
-                              <span class="cart-drawer-discount__amount theme-money">{% render 'price', price: discount_allocation.amount, disable_currency_code: true %}</span>
-                            </li>
-                          {% endfor %}
-                          </ul>
-                        {% endif %}
+                        
 
                         {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' and item.variant.inventory_quantity <= item.quantity %}
                           {% assign can_increase = false %}
