@@ -113,16 +113,6 @@ body.overflow-hidden {
     padding: 1em 25px;
   }
 }
-.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .btn-primary:hover {
-  background: #ffac9a;
-  border-color: #ffac9a;
-  color: #fff;
-}
-.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .primary_addtocart {
-  background: transparent;
-  color: #9792e4;
-  border: 2px solid #9792e4;
-}
 .product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .default_addToCart_btn {
   display: flex;
   justify-content: space-between;
@@ -6376,6 +6366,23 @@ body.cart-drawer-open {
   flex: 1 0 auto;
   max-width: 75%;
 }
+.cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__detail .cart-drawer-discount-list {
+  margin: 0;
+}
+.cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__detail .cart-drawer-discount-list li {
+  list-style: none;
+  color: #000;
+}
+.cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__detail .variant_discount_block_sec {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media (min-width: 1200px) {
+  .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__detail .variant_discount_block_sec {
+    flex-direction: row;
+  }
+}
 .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__detail .cart-drawer-summary-item_title_price_total {
   display: flex;
   justify-content: space-between;
@@ -6433,7 +6440,8 @@ body.cart-drawer-open {
 }
 .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__price {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  column-gap: 0.4rem;
 }
 .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__price .theme-money {
   font-size: 16px;
