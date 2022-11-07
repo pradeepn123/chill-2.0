@@ -1024,7 +1024,7 @@
     "prod_new_limit_int": 100,
     "prod_sale_show": true,
     "prod_sold_out_show": true,
-    "enable_product_reviews_collection": true,
+    "enable_product_reviews_collection": false,
     "prod_thumb_show_options": false,
     "social_twitter_url": "https:\/\/twitter.com\/ChillCBD",
     "social_facebook_url": "https:\/\/www.facebook.com\/chillstateofmind",
