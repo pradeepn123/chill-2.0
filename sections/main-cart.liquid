@@ -11,7 +11,7 @@
     </div>
   {% endif %}
 
-  {% comment %}
+
   {%- liquid
     assign free_shipping_text = block.settings.message | default: settings.message
     assign is_enable = false
@@ -83,7 +83,7 @@
       {%- endunless -%}
     </p>
   {%- endif -%}
-  {% endcomment %}
+  
 
   {% if cart.items == empty %}
     <div class="fully-spaced-row align-centre empty_cart" data-cc-animate>

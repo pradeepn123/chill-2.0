@@ -5769,7 +5769,7 @@
           type: 'GET',
           url: theme.routes.cart_url,
           success: function (data) {
-            var toReplace = ['.cart-item-list', '.checkout-subtotal-container__dynamic'];
+            var toReplace = ['.cart-item-list', '.checkout-subtotal-container__dynamic', '.cart__message'];
             var $newDom = $('<div>' + data + '</div>');
 
             // remove any transitions
@@ -5925,7 +5925,7 @@
         }
 
         //remove existing product and add subscription product 
-        
+
         var shippingIntervalFrequency = evt.currentTarget.dataset.shipping_interval_frequency.split(",")
         this.functions.updateCart.call(this, {
           line: $(evt.currentTarget).data('line'),

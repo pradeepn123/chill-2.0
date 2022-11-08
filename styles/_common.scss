@@ -713,3 +713,11 @@ div#main-nav{
     display: none!important;
     -webkit-appearance: none;
 }
+
+.tikshop-shoptrade-wrapper .tikshop-shoptrade-header{
+    font-weight: 800 !important;
+    font-size: 2em !important;
+    @media(min-width:1200px){
+        font-size: 52px !important;
+    }
+}
