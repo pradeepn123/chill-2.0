@@ -607,6 +607,16 @@ body.overflow-hidden {
   -webkit-appearance: none;
 }
 
+.tikshop-shoptrade-wrapper .tikshop-shoptrade-header {
+  font-weight: 800 !important;
+  font-size: 2em !important;
+}
+@media (min-width: 1200px) {
+  .tikshop-shoptrade-wrapper .tikshop-shoptrade-header {
+    font-size: 52px !important;
+  }
+}
+
 /* header css here */
 .pageheader .logo-area .logo-area__left .navigation ul li a {
   font-weight: 600;
