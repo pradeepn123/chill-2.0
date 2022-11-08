@@ -210,17 +210,17 @@
                         
                       </div>
                       
-                    </div>                    
+                    </div>
+                    {% assign shipping_interval_frequencies = original_product.metafields.subscriptions.shipping_interval_frequency | split: ',' | default: 30 %}
+                    {% assign shipping_interval_unit_type = original_product.metafields.subscriptions.shipping_interval_unit_type | default: 'Days' %}
+                    {% if shipping_interval_unit_type == 'day' %}
+                      {% assign shipping_interval_unit_type = 'Days' %}
+                    {% elsif shipping_interval_unit_type == 'week' %}
+                      {% assign shipping_interval_unit_type = 'Weeks' %}
+                    {% elsif shipping_interval_unit_type == 'month' %}
+                      {% assign shipping_interval_unit_type = 'Months' %}
+                    {% endif %}                    
                     {% if has_subscriptions %} 
-                      {% assign shipping_interval_frequencies = original_product.metafields.subscriptions.shipping_interval_frequency | split: ',' | default: 30 %}
-                      {% assign shipping_interval_unit_type = original_product.metafields.subscriptions.shipping_interval_unit_type | default: 'Days' %}
-                      {% if shipping_interval_unit_type == 'day' %}
-                        {% assign shipping_interval_unit_type = 'Days' %}
-                      {% elsif shipping_interval_unit_type == 'week' %}
-                        {% assign shipping_interval_unit_type = 'Weeks' %}
-                      {% elsif shipping_interval_unit_type == 'month' %}
-                        {% assign shipping_interval_unit_type = 'Months' %}
-                      {% endif %}
                        <div class="upgraded-sub-selection">
                         {% if shipping_interval_frequencies.size > 1 %}
                           <select
@@ -243,7 +243,7 @@
                        <button
                         type="button"
                         class="upgrade-to-subscription"
-                        data-shipping_interval_frequency="{{original_product.metafields.subscriptions.shipping_interval_frequency}}"
+                        data-shipping_interval_frequency="{{shipping_interval_frequencies[0]}}"
                         data-shipping_interval_unit_type="{{shipping_interval_unit_type}}"
                         data-line="{{ forloop.index }}"
                         data-product_quantity="{{ item.quantity }}"
