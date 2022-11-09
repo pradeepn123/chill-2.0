@@ -5763,6 +5763,60 @@
         if (this.cartRefreshXhr) {
           this.cartRefreshXhr.abort();
         }
+        $.getJSON(theme.routes.cart_url, function(cart) {
+          let promotionalProducts;
+          const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties["Product Type"] == "Promotional")
+          const promotionalLineItemPrice = promotionalLineItems.reduce(function(acc, line) {
+            return line.original_line_price + acc
+          }, 0)
+
+          if (cart.original_total_price - promotionalLineItemPrice > 10000) {
+            promotionalProducts = theme.promotionalProducts[100]
+          } else if (cart.original_total_price - promotionalLineItemPrice > 5000) {
+            promotionalProducts = theme.promotionalProducts[50]
+          } else if (cart.original_total_price - promotionalLineItemPrice > 2500) {
+            promotionalProducts = theme.promotionalProducts[25]
+          }
+
+          let updateParams = {}
+          if (this.cartXhr) {
+            this.functions.postRefreshCartDependentContent.call(this)
+          } else {
+            promotionalLineItems.forEach(promotionalLine => {
+              updateParams[promotionalLine.key] = 0
+            })
+          }
+
+          $.ajax({
+            type: 'POST',
+            url: theme.routes.cart_update_url + '.js',
+            data: {
+              updates: updateParams
+            },
+            dataType: 'json',
+            success: function success() {
+              if (promotionalProducts.length > 0) {
+                // Add the Free products to cart
+                let lineItems = {
+                  items: promotionalProducts.map(product => {
+                    return {
+                      id: product.variantId,
+                      quantity: product.quantity,
+                      properties: {
+                        "Product Type": "Promotional"
+                      }
+                    }
+                  }
+                )}
+                return this.functions.addItemsToCart.call(this, lineItems);
+              }
+              this.functions.postRefreshCartDependentContent.call(this)
+            }.bind(this)
+          });
+        }.bind(this))
+      },
+
+      postRefreshCartDependentContent: function postRefreshCartDependentContent() {
         // fetch new html for the page
         this.cartRefreshXhr = $.ajax({
           type: 'GET',
@@ -5798,8 +5852,32 @@
           },
           complete: function () {
             this.cartRefreshXhr = null;
-          }.bind(this) });
+          }.bind(this)
+        });
+      },
 
+      addItemsToCart: function addItemToCart(params) {
+        if (this.cartXhr) {
+          this.cartXhr.abort();
+        }
+        if (this.cartRefreshXhr) {
+          this.cartRefreshXhr.abort();
+        }
+        this.cartXhr = $.ajax({
+          type: 'POST',
+          url: theme.routes.cart_add_url,
+          data: JSON.stringify(params),
+          contentType: "application/json; charset=utf-8",
+          success: function success() {
+            this.functions.postRefreshCartDependentContent.call(this)
+          }.bind(this),
+          error: function error(data) {
+            if (data.statusText != 'abort') {
+              console.log('Error processing update');
+              console.log(data);
+            }
+          }
+        });
       },
 
       updateCart: function updateCart(params, successCallback) {
@@ -6000,6 +6078,60 @@
         if (this.cartRefreshXhr) {
           this.cartRefreshXhr.abort();
         }
+
+        $.getJSON(theme.routes.cart_url, function(cart) {
+          let promotionalProducts;
+          const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties["Product Type"] == "Promotional")
+          const promotionalLineItemPrice = promotionalLineItems.reduce(function(acc, line) {
+            return line.original_line_price + acc
+          }, 0)
+
+          if (cart.original_total_price - promotionalLineItemPrice > 10000) {
+            promotionalProducts = theme.promotionalProducts[100]
+          } else if (cart.original_total_price - promotionalLineItemPrice > 5000) {
+            promotionalProducts = theme.promotionalProducts[50]
+          } else if (cart.original_total_price - promotionalLineItemPrice > 2500) {
+            promotionalProducts = theme.promotionalProducts[25]
+          }
+
+          let updateParams = {}
+          if (this.cartXhr) {
+            this.functions.postRefreshCartDependentContent.call(this)
+          } else {
+            promotionalLineItems.forEach(promotionalLine => {
+              updateParams[promotionalLine.key] = 0
+            })
+          }
+
+          $.ajax({
+            type: 'POST',
+            url: theme.routes.cart_update_url + '.js',
+            data: {
+              updates: updateParams
+            },
+            dataType: 'json',
+            success: function success() {
+              if (promotionalProducts.length > 0) {
+                // Add the Free products to cart
+                let lineItems = {
+                  items: promotionalProducts.map(product => {
+                    return {
+                      id: product.variantId,
+                      quantity: product.quantity,
+                      properties: {
+                        "Product Type": "Promotional"
+                      }
+                    }
+                  }
+                )}
+                return this.functions.addItemsToCart.call(this, lineItems);
+              }
+              this.functions.postRefreshCartDependentContent.call(this)
+            }.bind(this)
+          });
+        }.bind(this))
+      },
+      postRefreshCartDependentContent: function postRefreshCartDependentContent() {
         // fetch new html for the page
         this.cartRefreshXhr = $.ajax({
           type: 'GET',
@@ -6048,9 +6180,33 @@
           },
           complete: function () {
             this.cartRefreshXhr = null;
+            this.cartXhr = null;
             theme.cartNoteMonitor.load($('.cart-drawer-summary__notes [name="note"]', this.$container));
           }.bind(this) });
+      },
 
+      addItemsToCart: function addItemToCart(params) {
+        if (this.cartXhr) {
+          this.cartXhr.abort();
+        }
+        if (this.cartRefreshXhr) {
+          this.cartRefreshXhr.abort();
+        }
+        this.cartXhr = $.ajax({
+          type: 'POST',
+          url: theme.routes.cart_add_url,
+          data: JSON.stringify(params),
+          contentType: "application/json; charset=utf-8",
+          success: function success() {
+            this.functions.postRefreshCartDependentContent.call(this)
+          }.bind(this),
+          error: function error(data) {
+            if (data.statusText != 'abort') {
+              console.log('Error processing update');
+              console.log(data);
+            }
+          }
+        });
       },
 
       updateCart: function updateCart(params, successCallback) {

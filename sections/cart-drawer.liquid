@@ -1,3 +1,18 @@
+<script>
+  theme.promotionalProducts = { "25": [], "50": [], "100": [] }
+  {% if section.settings.enable_promotion %}
+    {% for block in section.blocks %}
+      {% for blockSetting in block.settings %}
+        {% assign product = all_products[block.settings[blockSetting]] %}
+        theme.promotionalProducts[{{block.type | replace : "promotion-", ""}}].push({
+          productId: {{ product.id | json }},
+          variantId: {{ product.first_available_variant.id | json }},
+          quantity: {{ blockSetting | replace : "product-", "" }}
+        })
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
+</script>
 
 {% if settings.cart_type contains 'drawer' and template != 'cart' %}
   {% assign has_recharge_subscriptions = false %}
@@ -326,6 +341,53 @@
         "type": "url",
         "id": "continue_shopping_url",
         "label": "Add url to 'Continue Shopping' button"
+      }, {
+        "type": "checkbox",
+        "id": "enable_promotion",
+        "label": "Enable Promotion product",
+        "default": false
+      }
+    ],
+    "blocks": [
+      {
+        "type": "@app"
+      }, {
+        "type": "promotion-25",
+        "name": "When spend $25",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "product",
+            "id": "product-1",
+            "label": "Spend $25 and get a product as FREE!"
+          }
+        ]
+      }, {
+        "type": "promotion-50",
+        "name": "When spend $50",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "product",
+            "id": "product-2",
+            "label": "Spend $50 and get 2 products as FREE!"
+          }
+        ]
+      }, {
+        "type": "promotion-100",
+        "name": "When spend $100",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "product",
+            "id": "product-1",
+            "label": "Spend $100 and get 1 product as FREE!"
+          }, {
+            "type": "product",
+            "id": "product-2",
+            "label": "Spend $100 and get 2 product as FREE!"
+          }
+        ]
       }
     ]
   }
