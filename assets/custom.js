@@ -183,15 +183,6 @@ $(document).ready(function () {
   
     ]
   });
-  $('#marquee_section').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    speed: 9000,
-    pauseOnHover: false,
-    cssEase: 'linear'
-  })
   $('#gallery').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
