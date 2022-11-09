@@ -5690,7 +5690,6 @@
       this.$container = $(container);
 
       // listen to cart changes
-      console.log("Pradeep")
       $(document).on('theme:cartchanged.cartTemplateSection', this.functions.refreshCartDependentContent.bind(this));
 
       // terms and conditions checkbox
@@ -5925,15 +5924,45 @@
         }
 
         //remove existing product and add subscription product 
+        var shippingIntervalFrequency = evt.currentTarget.dataset.shipping_interval_frequency.split(",");
 
-        var shippingIntervalFrequency = evt.currentTarget.dataset.shipping_interval_frequency.split(",")
-        this.functions.updateCart.call(this, {
-          line: $(evt.currentTarget).data('line'),
-          properties: {
+         let formData = {
+          'items': [{
+           id: $(evt.currentTarget).data('first_scription_id'),
+           quantity: $(evt.currentTarget).data('product_quantity'),
+           properties: {
             shipping_interval_unit_type: evt.currentTarget.dataset.shipping_interval_unit_type,
             shipping_interval_frequency: shippingIntervalFrequency[0]
           }
-        }, function () {});
+           }]
+         };
+         
+         fetch(window.Shopify.routes.root + 'cart/add.js', {
+           method: 'POST',
+           headers: {
+             'Content-Type': 'application/json'
+           },
+           body: JSON.stringify(formData)
+         })
+         .then(response => {
+           return response.json();
+         }).then(data => {
+          
+              this.functions.updateCart.call(this, {
+                line: $(evt.currentTarget).data('line') + 1,
+                quantity: 0,
+                properties: {},
+      
+              }, function () {
+
+                  document.documentElement.dispatchEvent(
+                  new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false }));
+              });
+         })
+         .catch((error) => {
+           console.error('Error:', error);
+         });
+      
       }.bind(this))
 
       $(container).on('change.cartDrawerTemplateSection', '.drawer-shipping-interval', function(evt) {
