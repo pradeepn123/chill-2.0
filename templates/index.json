@@ -25,6 +25,15 @@
         "overlay_style": "shadow"
       }
     },
+    "d02b80e5-b8ee-41d5-9512-71af9b2c25c7": {
+      "type": "marquee",
+      "settings": {
+        "marquee_text": "FREE SHIPPING ON ORDERS OVER $50",
+        "marquee_background_color": "#9792e4",
+        "marquee_text_color": "#ffffff",
+        "marquee_text_font_size": 24
+      }
+    },
     "1635927863703110df": {
       "type": "rich-text",
       "blocks": {
@@ -585,6 +594,7 @@
   },
   "order": [
     "1660761564dddf193c",
+    "d02b80e5-b8ee-41d5-9512-71af9b2c25c7",
     "1635927863703110df",
     "16359278676808bea5",
     "166149763181cc2acb",
