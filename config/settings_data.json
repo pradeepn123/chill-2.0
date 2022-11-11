@@ -1108,9 +1108,9 @@
           "enable_nav_mob_products": false,
           "nav_mob_products_title": "Best Sellers",
           "nav_mob_products_collection": "",
-          "enable_search": false,
+          "enable_search": true,
           "search_suggestions_title": "",
-          "search_suggestions_menu": "",
+          "search_suggestions_menu": "shop",
           "icon_strategy": "icons_all",
           "cart_icon": "custom"
         }

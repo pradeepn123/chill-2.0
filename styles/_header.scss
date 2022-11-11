@@ -28,55 +28,7 @@
                 .header-account-link, .show-search-link, .country_selector{
                     margin-inline-end: 28px;
                 }
-                .country_selector{
-                    .dropbtn{
-                        padding: 34px 0 34px 34px;
-                        position: relative;
-                        img{
-                            position: absolute;
-                            top: 38%;
-                            right: 77%;
-                        }
-                    }
-                    .dropdown-content {
-                        display: none;
-                        position: absolute;
-                        background-color: #fff;
-                        min-width: 100px;
-                        top: 100%;
-                        border: 1px solid #ddd;
-                        z-index: 1;
-                        cursor: pointer;
-                        a {
-                            float: none;
-                            color: black;
-                            padding: 12px 16px;
-                            text-decoration: none;
-                            display: block;
-                            text-align: left;
-                            img{
-                                position: relative;
-                                top: 6px;
-                                right: 6px;
-                            }
-                            &:hover {
-                                background-color: #ddd;
-                              }
-                          }
-                      }
-                    &:hover {
-                        .feather-chevron-down{
-                            transform: rotate(180deg);
-                            transition: 0.5s all;
-                        }
-                        .dropdown-content {
-                            display: block;
-                        }
-                    }
-                    @media (max-width: 1023px){
-                        display: none;
-                    }
-                }
+                
                 .header-account-link{
                     .header-account-link__text{
                         margin-inline-start: 10px;
@@ -388,7 +340,22 @@
         }
     }    
 }
-
+.default_search{
+    display: block !important;
+    .default_search_suggestions{
+        display: flex;
+        .product-block{
+            flex-basis: 25%;
+            border: 1px solid #E8E8E8;
+            margin: 0 15px;
+            .product-block__title{
+                font-size: 20px;
+                font-weight: 400;
+                color: #000;
+            }
+        }
+    }
+}
 
 
 
