@@ -1455,7 +1455,7 @@
         ],
         "settings": {
           "continue_shopping_url": "shopify:\/\/collections\/shop-all",
-          "enable_promotion": true
+          "enable_promotion": false
         }
       }
     },
