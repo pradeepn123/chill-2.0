@@ -5924,6 +5924,10 @@ body {
 .cart_container .cart-item__quantity .buttoned-input .cart-item__quantity-input {
   padding: 10px 0;
 }
+.cart_container .cart-item__quantity .buttoned-input .visibility-hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
 @media (max-width: 767px) {
   .cart_container .cart-item__quantity {
     margin-top: 1em;

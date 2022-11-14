@@ -3399,7 +3399,7 @@
     .on("click", theme.closeDrawerCart.bind(theme))
   };
 
-  theme.handleCheckoutSubmission = function (evt) {
+  theme.handleCheckoutSubmission = function (evt) {    
     // Build the Checkout URL
     evt.preventDefault();
     $(this).find(":submit").attr("disabled", "disabled")
@@ -5748,7 +5748,7 @@
       }
 
       theme.cartNoteMonitor.load($('.checkout-note [name="note"]', container));
-
+      $(container).on('submit.cartTemplateSection', '.cart-form--checkout', theme.handleCheckoutSubmission)
       $(container).on('click.cartTemplateSection', 'button[data-toggle-shipping]', function () {
         $('#shipping-calculator').toggle();
         var alt = $(this).data('toggle-html');
@@ -5795,7 +5795,7 @@
             },
             dataType: 'json',
             success: function success() {
-              if (promotionalProducts.length > 0) {
+              if (promotionalProducts && promotionalProducts.length > 0) {
                 // Add the Free products to cart
                 let lineItems = {
                   items: promotionalProducts.map(product => {
@@ -6049,6 +6049,7 @@
         }
         this.functions.updateCart.call(this, {
           line: $(evt.currentTarget).data('line'),
+          quantity: evt.currentTarget.dataset.quantity,
           properties: {
             shipping_interval_unit_type: evt.currentTarget.dataset.shipping_interval_unit_type,
             shipping_interval_frequency: evt.target.value
@@ -6079,7 +6080,7 @@
           this.cartRefreshXhr.abort();
         }
 
-        $.getJSON(theme.routes.cart_url, function(cart) {
+        $.getJSON(theme.routes.cart_url + ".js", function(cart) {
           let promotionalProducts;
           const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties["Product Type"] == "Promotional")
           const promotionalLineItemPrice = promotionalLineItems.reduce(function(acc, line) {
@@ -6096,7 +6097,7 @@
 
           let updateParams = {}
           if (this.cartXhr) {
-            this.functions.postRefreshCartDependentContent.call(this)
+            return this.functions.postRefreshCartDependentContent.call(this)
           } else {
             promotionalLineItems.forEach(promotionalLine => {
               updateParams[promotionalLine.key] = 0
@@ -6110,8 +6111,8 @@
               updates: updateParams
             },
             dataType: 'json',
-            success: function success() {
-              if (promotionalProducts.length > 0) {
+            success: function success(response) {
+              if (promotionalProducts && promotionalProducts.length > 0) {
                 // Add the Free products to cart
                 let lineItems = {
                   items: promotionalProducts.map(product => {
@@ -6216,12 +6217,14 @@
         if (this.cartRefreshXhr) {
           this.cartRefreshXhr.abort();
         }
+        console.log(params)
         this.cartXhr = $.ajax({
           type: 'POST',
           url: theme.routes.cart_change_url + '.js',
           data: params,
           dataType: 'json',
-          success: function success() {
+          success: function success(response) {
+            console.log(response.items)
             document.documentElement.dispatchEvent(
             new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false }));
 
