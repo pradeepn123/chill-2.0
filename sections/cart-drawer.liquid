@@ -221,7 +221,7 @@
                               value="{{ item.quantity }}"
                               data-initial-value="{{ item.quantity }}"
                               data-line="{{ forloop.index }}"
-                              {% if promotionalLine %}disabled{% endif %}
+                              disabled="disabled"
                               {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' %}data-max="{{ item.variant.inventory_quantity }}"{% endif %}
                               aria-label="{{ 'cart.general.quantity' | t | escape }}" />                            
                               <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% if promotionalLine == true %}visibility-hidden{%endif%} {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}</a>                            
