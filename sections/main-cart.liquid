@@ -263,7 +263,7 @@
                     </a>
                   </div>
                   {% unless promotionalLine %}
-                  <a class="remove" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity=0">
+                  <a class="remove" data-line="{{ forloop.index }}" href="#">
                     {{ 'cart.general.remove' | t }}
                     <!-- {% render 'svg-x' %} -->
                   </a>

@@ -5745,6 +5745,17 @@
           }
           return false;
         });
+        $(container).on('click.cartTemplateSection removeFromButton.cartTemplateSection', '.remove', function (evt) {
+          if (this.replacingContent) {
+            return;
+          }
+
+          this.functions.updateCart.call(this, {
+            line: $(evt.currentTarget).data('line'),
+            quantity: 0
+          }, function () {});
+          return false
+        }.bind(this));
       }
 
       theme.cartNoteMonitor.load($('.checkout-note [name="note"]', container));
@@ -5794,7 +5805,11 @@
               updates: updateParams
             },
             dataType: 'json',
-            success: function success() {
+            success: function success(response) {
+              if (response.items.length === 0) {
+                window.location.reload()
+                return false
+              }
               if (promotionalProducts && promotionalProducts.length > 0) {
                 // Add the Free products to cart
                 let lineItems = {
@@ -6136,10 +6151,25 @@
         // fetch new html for the page
         this.cartRefreshXhr = $.ajax({
           type: 'GET',
-          url: location.origin + '?sections=cart-drawer',
+          url: location.origin + '?sections=cart-drawer,header',
           success: function (data) {
             var toReplace = ['.cart-drawer-summary__item-list', '.cart-drawer-form--checkout', '.cart_item_count'];
             var $newDom = $(data['cart-drawer'])
+            var cartSummarySelectors = ['#pageheader .logo-area__right__inner'];
+
+            for (var i = 0; i < cartSummarySelectors.length; i++) {
+              var $newCartObj = $('<div>' + data.header + '</div>').find(cartSummarySelectors[i]).first();
+              var $currCart = $(cartSummarySelectors[i]);
+              $currCart.html($newCartObj.html());
+            }
+
+            if (theme.settings.cart_type === "drawer") {
+              $('.cart-link').on('click', function (e) {
+                document.dispatchEvent(new CustomEvent('theme:cartDrawer:open', { bubbles: true, cancelable: false }));
+                e.preventDefault()
+                return false
+              })
+            }
 
             // remove any transitions
             $newDom.find('.fade-in').removeClass('fade-in');
