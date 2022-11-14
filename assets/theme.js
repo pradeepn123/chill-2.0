@@ -3399,7 +3399,7 @@
     .on("click", theme.closeDrawerCart.bind(theme))
   };
 
-  theme.handleCheckoutSubmission = function (evt) {
+  theme.handleCheckoutSubmission = function (evt) {    
     // Build the Checkout URL
     evt.preventDefault();
     $(this).find(":submit").attr("disabled", "disabled")
@@ -5748,7 +5748,7 @@
       }
 
       theme.cartNoteMonitor.load($('.checkout-note [name="note"]', container));
-
+      $(container).on('submit.cartTemplateSection', '.cart-form--checkout', theme.handleCheckoutSubmission)
       $(container).on('click.cartTemplateSection', 'button[data-toggle-shipping]', function () {
         $('#shipping-calculator').toggle();
         var alt = $(this).data('toggle-html');
@@ -5763,6 +5763,60 @@
         if (this.cartRefreshXhr) {
           this.cartRefreshXhr.abort();
         }
+        $.getJSON(theme.routes.cart_url, function(cart) {
+          let promotionalProducts;
+          const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties["Product Type"] == "Promotional")
+          const promotionalLineItemPrice = promotionalLineItems.reduce(function(acc, line) {
+            return line.original_line_price + acc
+          }, 0)
+
+          if (cart.original_total_price - promotionalLineItemPrice > 10000) {
+            promotionalProducts = theme.promotionalProducts[100]
+          } else if (cart.original_total_price - promotionalLineItemPrice > 5000) {
+            promotionalProducts = theme.promotionalProducts[50]
+          } else if (cart.original_total_price - promotionalLineItemPrice > 2500) {
+            promotionalProducts = theme.promotionalProducts[25]
+          }
+
+          let updateParams = {}
+          if (this.cartXhr) {
+            this.functions.postRefreshCartDependentContent.call(this)
+          } else {
+            promotionalLineItems.forEach(promotionalLine => {
+              updateParams[promotionalLine.key] = 0
+            })
+          }
+
+          $.ajax({
+            type: 'POST',
+            url: theme.routes.cart_update_url + '.js',
+            data: {
+              updates: updateParams
+            },
+            dataType: 'json',
+            success: function success() {
+              if (promotionalProducts && promotionalProducts.length > 0) {
+                // Add the Free products to cart
+                let lineItems = {
+                  items: promotionalProducts.map(product => {
+                    return {
+                      id: product.variantId,
+                      quantity: product.quantity,
+                      properties: {
+                        "Product Type": "Promotional"
+                      }
+                    }
+                  }
+                )}
+                return this.functions.addItemsToCart.call(this, lineItems);
+              }
+              this.functions.postRefreshCartDependentContent.call(this)
+            }.bind(this)
+          });
+        }.bind(this))
+      },
+
+      postRefreshCartDependentContent: function postRefreshCartDependentContent() {
         // fetch new html for the page
         this.cartRefreshXhr = $.ajax({
           type: 'GET',
@@ -5798,8 +5852,32 @@
           },
           complete: function () {
             this.cartRefreshXhr = null;
-          }.bind(this) });
+          }.bind(this)
+        });
+      },
 
+      addItemsToCart: function addItemToCart(params) {
+        if (this.cartXhr) {
+          this.cartXhr.abort();
+        }
+        if (this.cartRefreshXhr) {
+          this.cartRefreshXhr.abort();
+        }
+        this.cartXhr = $.ajax({
+          type: 'POST',
+          url: theme.routes.cart_add_url,
+          data: JSON.stringify(params),
+          contentType: "application/json; charset=utf-8",
+          success: function success() {
+            this.functions.postRefreshCartDependentContent.call(this)
+          }.bind(this),
+          error: function error(data) {
+            if (data.statusText != 'abort') {
+              console.log('Error processing update');
+              console.log(data);
+            }
+          }
+        });
       },
 
       updateCart: function updateCart(params, successCallback) {
@@ -5971,6 +6049,7 @@
         }
         this.functions.updateCart.call(this, {
           line: $(evt.currentTarget).data('line'),
+          quantity: evt.currentTarget.dataset.quantity,
           properties: {
             shipping_interval_unit_type: evt.currentTarget.dataset.shipping_interval_unit_type,
             shipping_interval_frequency: evt.target.value
@@ -6000,6 +6079,60 @@
         if (this.cartRefreshXhr) {
           this.cartRefreshXhr.abort();
         }
+
+        $.getJSON(theme.routes.cart_url + ".js", function(cart) {
+          let promotionalProducts;
+          const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties["Product Type"] == "Promotional")
+          const promotionalLineItemPrice = promotionalLineItems.reduce(function(acc, line) {
+            return line.original_line_price + acc
+          }, 0)
+
+          if (cart.original_total_price - promotionalLineItemPrice > 10000) {
+            promotionalProducts = theme.promotionalProducts[100]
+          } else if (cart.original_total_price - promotionalLineItemPrice > 5000) {
+            promotionalProducts = theme.promotionalProducts[50]
+          } else if (cart.original_total_price - promotionalLineItemPrice > 2500) {
+            promotionalProducts = theme.promotionalProducts[25]
+          }
+
+          let updateParams = {}
+          if (this.cartXhr) {
+            return this.functions.postRefreshCartDependentContent.call(this)
+          } else {
+            promotionalLineItems.forEach(promotionalLine => {
+              updateParams[promotionalLine.key] = 0
+            })
+          }
+
+          $.ajax({
+            type: 'POST',
+            url: theme.routes.cart_update_url + '.js',
+            data: {
+              updates: updateParams
+            },
+            dataType: 'json',
+            success: function success(response) {
+              if (promotionalProducts && promotionalProducts.length > 0) {
+                // Add the Free products to cart
+                let lineItems = {
+                  items: promotionalProducts.map(product => {
+                    return {
+                      id: product.variantId,
+                      quantity: product.quantity,
+                      properties: {
+                        "Product Type": "Promotional"
+                      }
+                    }
+                  }
+                )}
+                return this.functions.addItemsToCart.call(this, lineItems);
+              }
+              this.functions.postRefreshCartDependentContent.call(this)
+            }.bind(this)
+          });
+        }.bind(this))
+      },
+      postRefreshCartDependentContent: function postRefreshCartDependentContent() {
         // fetch new html for the page
         this.cartRefreshXhr = $.ajax({
           type: 'GET',
@@ -6048,9 +6181,33 @@
           },
           complete: function () {
             this.cartRefreshXhr = null;
+            this.cartXhr = null;
             theme.cartNoteMonitor.load($('.cart-drawer-summary__notes [name="note"]', this.$container));
           }.bind(this) });
+      },
 
+      addItemsToCart: function addItemToCart(params) {
+        if (this.cartXhr) {
+          this.cartXhr.abort();
+        }
+        if (this.cartRefreshXhr) {
+          this.cartRefreshXhr.abort();
+        }
+        this.cartXhr = $.ajax({
+          type: 'POST',
+          url: theme.routes.cart_add_url,
+          data: JSON.stringify(params),
+          contentType: "application/json; charset=utf-8",
+          success: function success() {
+            this.functions.postRefreshCartDependentContent.call(this)
+          }.bind(this),
+          error: function error(data) {
+            if (data.statusText != 'abort') {
+              console.log('Error processing update');
+              console.log(data);
+            }
+          }
+        });
       },
 
       updateCart: function updateCart(params, successCallback) {
@@ -6060,12 +6217,14 @@
         if (this.cartRefreshXhr) {
           this.cartRefreshXhr.abort();
         }
+        console.log(params)
         this.cartXhr = $.ajax({
           type: 'POST',
           url: theme.routes.cart_change_url + '.js',
           data: params,
           dataType: 'json',
-          success: function success() {
+          success: function success(response) {
+            console.log(response.items)
             document.documentElement.dispatchEvent(
             new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false }));
 

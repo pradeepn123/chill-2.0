@@ -11,77 +11,78 @@
     </div>
   {% endif %}
 
-
-  {%- liquid
-    assign free_shipping_text = block.settings.message | default: settings.message
-    assign is_enable = false
-  
-    if block.settings.message != blank
-      assign is_enable = true
-    endif
-  
-    if settings.show_free_shipping_message and settings.free_shipping_limit != blank and free_shipping_text != blank
-      assign is_enable = true
-    endif
-  -%}
-  
-  {%- if is_enable -%}
+  {%- if cart.item_count > 0 -%}
     {%- liquid
-      assign limit = settings.free_shipping_limit | plus: 0
-      assign limit_currency = limit | times: 100
-      assign cart_total_price = cart.total_price
-      assign subtotal_without_currency = cart_total_price | plus: 0 | divided_by: 100
+      assign free_shipping_text = block.settings.message | default: settings.message
+      assign is_enable = false
+    
+      if block.settings.message != blank
+        assign is_enable = true
+      endif
+    
+      if settings.show_free_shipping_message and settings.free_shipping_limit != blank and free_shipping_text != blank
+        assign is_enable = true
+      endif
     -%}
-  
-    {%- capture left_to_spend -%}
-      <span data-left-to-spend>
-        {%- if settings.currency_code_enable -%}
-          {{- limit_currency | minus: cart_total_price | money_with_currency | remove: '.00' | remove: ',00' -}}
-        {%- else -%}
-          {{- limit_currency | minus: cart_total_price | money_without_trailing_zeros -}}
-        {%- endif -%}
-      </span>
-    {%- endcapture -%}
-  
-    {%- liquid
-      assign free_shipping_message = free_shipping_text | replace: '||amount||', left_to_spend
-      assign qualified_shipping_message = 'cart.general.qualified_shipping_message' | t
-      assign class_message = ''
-  
-      if subtotal_without_currency >= limit
-        if qualified_shipping_message != blank
-          assign class_message = ' is-success'
-          assign is_default_message_hidden = ' is-hidden'
-        else
+    
+    {%- if is_enable -%}
+      {%- liquid
+        assign limit = settings.free_shipping_limit | plus: 0
+        assign limit_currency = limit | times: 100
+        assign cart_total_price = cart.total_price
+        assign subtotal_without_currency = cart_total_price | plus: 0 | divided_by: 100
+      -%}
+    
+      {%- capture left_to_spend -%}
+        <span data-left-to-spend>
+          {%- if settings.currency_code_enable -%}
+            {{- limit_currency | minus: cart_total_price | money_with_currency | remove: '.00' | remove: ',00' -}}
+          {%- else -%}
+            {{- limit_currency | minus: cart_total_price | money_without_trailing_zeros -}}
+          {%- endif -%}
+        </span>
+      {%- endcapture -%}
+    
+      {%- liquid
+        assign free_shipping_message = free_shipping_text | replace: '||amount||', left_to_spend
+        assign qualified_shipping_message = 'cart.general.qualified_shipping_message' | t
+        assign class_message = ''
+    
+        if subtotal_without_currency >= limit
+          if qualified_shipping_message != blank
+            assign class_message = ' is-success'
+            assign is_default_message_hidden = ' is-hidden'
+          else
+            assign class_message = ' is-hidden'
+          endif
+        elsif subtotal_without_currency == 0
           assign class_message = ' is-hidden'
         endif
-      elsif subtotal_without_currency == 0
-        assign class_message = ' is-hidden'
-      endif
-  
-      assign percent = limit | minus: subtotal_without_currency | times: 100 | divided_by: limit
-      assign percent = 100 | minus: percent
-    -%}
-  
-    <p class="{% unless template.name == 'cart' or section.id == 'announcement-bar' %}cart-drawer__message {% endunless %}cart__message{{ class_message }}"
-      data-cart-message="{% if qualified_shipping_message != blank %}true{% else %}false{% endif %}"
-      data-limit="{{ limit }}"
-      data-cart-total-price="{{ cart_total_price }}"
-      {% if animations_enabled %}
-        data-aos="fade-up"
-        data-aos-delay="{{ animation_delay }}"
-        {%- assign animation_delay = animation_delay | plus: 100 -%}
-      {% endif %}>
-      <span class="cart__message__default{{ is_default_message_hidden }}" data-message-default>{{ free_shipping_message }}</span>
-  
-      {%- if qualified_shipping_message != blank -%}
-        <span class="cart__message__success">{{ qualified_shipping_message }}</span>
-      {%- endif -%}
-  
-      {%- unless is_top -%}
-        <progress class="cart__message__progress" data-cart-message-progress value="{{ percent }}" max="100"></progress>
-      {%- endunless -%}
-    </p>
+    
+        assign percent = limit | minus: subtotal_without_currency | times: 100 | divided_by: limit
+        assign percent = 100 | minus: percent
+      -%}
+    
+      <p class="{% unless template.name == 'cart' or section.id == 'announcement-bar' %}cart-drawer__message {% endunless %}cart__message{{ class_message }}"
+        data-cart-message="{% if qualified_shipping_message != blank %}true{% else %}false{% endif %}"
+        data-limit="{{ limit }}"
+        data-cart-total-price="{{ cart_total_price }}"
+        {% if animations_enabled %}
+          data-aos="fade-up"
+          data-aos-delay="{{ animation_delay }}"
+          {%- assign animation_delay = animation_delay | plus: 100 -%}
+        {% endif %}>
+        <span class="cart__message__default{{ is_default_message_hidden }}" data-message-default>{{ free_shipping_message }}</span>
+    
+        {%- if qualified_shipping_message != blank -%}
+          <span class="cart__message__success">{{ qualified_shipping_message }}</span>
+        {%- endif -%}
+    
+        {%- unless is_top -%}
+          <progress class="cart__message__progress" data-cart-message-progress value="{{ percent }}" max="100"></progress>
+        {%- endunless -%}
+      </p>
+    {%- endif -%}
   {%- endif -%}
   
 
@@ -93,10 +94,19 @@
       </a>
     </div>
   {% else %}
-    <form action="{{ routes.cart_url }}" method="post" id="cartform">
-      <!-- Begin Recharge code -->
-      {% render 'subscription-cart-footer' %}
-      <!-- End Recharge code -->
+  {% assign has_recharge_subscriptions = false %}
+    {% for i in cart.items %}
+      {% for p in i.properties %}
+        {% if p.first == 'shipping_interval_frequency' %}
+          {% assign has_recharge_subscriptions = true %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    <form action="{{ routes.cart_url }}" method="post" id="cartform" class="cart-form--checkout"
+      data-has_recharge_subscriptions="{{has_recharge_subscriptions}}"
+      data-checkout-domain="{{ shop.metafields.subscriptions.checkout_domain | default: 'checkout.rechargeapps.com' }}"
+      data-permanent-domain="{{ shop.permanent_domain }}"
+    >
       <div class="cart-item-list content-divider">
         <div class="cart-item-list__head cart_list_header" data-cc-animate>
           <div class="cart-item-list-heading cart-item-list-heading--product">{{ 'cart.label.product' | t }}
@@ -111,9 +121,13 @@
         <div class="cart-item-list__body">
           {% for item in cart.items %}
             {% assign has_subscriptions = false %}
+            {% assign promotionalLine = false %}
             {% for p in item.properties %}
               {% if p.first == 'shipping_interval_frequency' %}
                 {% assign has_subscriptions = true %}
+              {% endif %}
+              {% if p.first == 'Product Type' and p.last == 'Promotional' %}
+                {% assign promotionalLine = true %}
               {% endif %}
             {% endfor %}
             <div class="cart-item product-{{ item.product.handle }}" data-cc-animate>
@@ -183,15 +197,17 @@
                 <div class="cart-item__column cart-item__price">
                   {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}
                     {%- liquid
-                                      assign percentage = item.product.metafields.subscriptions.discount_percentage | divided_by: 100
-                                      assign discountedPrice = item.price | times: percentage
-                                      assign finalDiscountedPrice = item.price | minus: discountedPrice
-                                    -%}
+                      assign percentage = item.product.metafields.subscriptions.discount_percentage | divided_by: 100
+                      assign discountedPrice = item.price | times: percentage
+                      assign finalDiscountedPrice = item.price | minus: discountedPrice
+                    -%}
                     <span class="theme-money">
                       {% render 'price', price: finalDiscountedPrice, disable_currency_code: true %}
                     </span>
                   {% else %}
-                    {% if item.variant.compare_at_price > item.variant.price %}
+                    {% if item.final_line_price == 0 %}
+                      <span class="cart-drawer-summary-item__price-current theme-money">FREE</span>
+                    {% elsif item.variant.compare_at_price > item.variant.price %}
                       <div class="struck-out-price">
                         <span class="theme-money">{{ item.variant.compare_at_price | money }}
                         </span>
@@ -202,29 +218,33 @@
                         </span>
                       </div>
                     {% endif %}
+                    {% unless promotionalLine %}
                     <div>
                       <span class="theme-money">{{ item.final_price | money }}
                       </span>
                     </div>
+                    {% endunless %}
                   {% endif %}
 
                   {% render 'unit-price', variant: item %}
 
                   {% if item.line_level_discount_allocations.size > 0 %}
-                    <ul class="cart-discount-list">
-                      {% for discount_allocation in item.line_level_discount_allocations %}
-                        <li class="cart-discount">
-                          <div class="cart-discount__label">
-                            <span class="cart-discount__icon">{% render 'icon-label' %}
-                            </span>
-                            <span class="cart-discount__title">{{ discount_allocation.discount_application.title }}
-                            </span>
-                          </div>
-                          <div class="cart-discount__amount theme-money">{{ discount_allocation.amount | money }}
-                          </div>
-                        </li>
-                      {% endfor %}
-                    </ul>
+                    {% unless promotionalLine %}
+                      <ul class="cart-discount-list">
+                        {% for discount_allocation in item.line_level_discount_allocations %}
+                          <li class="cart-discount">
+                            <div class="cart-discount__label">
+                              <span class="cart-discount__icon">{% render 'icon-label' %}
+                              </span>
+                              <span class="cart-discount__title">{{ discount_allocation.discount_application.title }}
+                              </span>
+                            </div>
+                            <div class="cart-discount__amount theme-money">{{ discount_allocation.amount | money }}
+                            </div>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endunless  %}
                   {% endif %}
                 </div>
 
@@ -235,43 +255,51 @@
                 {% endif %}
                 <div class="cart-item__column cart-item__quantity">
                   <div class="quantity buttoned-input">
-                    <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 1 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}
+                    <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down {% if promotionalLine == true %}visibility-hidden{%endif%}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 1 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}
                     </a>
                     <input class="cart-item__quantity-input" type="text" size="2" id="updates_{{ forloop.index }}" name="updates[]" value="{{ item.quantity }}" data-initial-value="{{ item.quantity }}" data-line="{{ forloop.index }}" {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' %}data-max="{{ item.variant.inventory_quantity }}"{% endif %}
-                      aria-label="{{ 'cart.general.quantity' | t | escape }}"/>
-                    <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}
+                    {% if promotionalLine %}disabled{% endif %} aria-label="{{ 'cart.general.quantity' | t | escape }}"/>
+                    <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% if promotionalLine == true %}visibility-hidden{%endif%} {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}
                     </a>
                   </div>
+                  {% unless promotionalLine %}
                   <a class="remove" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity=0">
                     {{ 'cart.general.remove' | t }}
                     <!-- {% render 'svg-x' %} -->
                   </a>
+                  {% endunless %}
                 </div>
 
+                
                 <div class="cart-item__column cart-item__total" data-line="{{ forloop.index }}">
                   {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}
                     {%- liquid
-                                    assign percentage = item.product.metafields.subscriptions.discount_percentage | divided_by: 100
-                                    assign discountedPrice = item.final_line_price | times: percentage
-                                    assign finalDiscountedPrice = item.final_line_price | minus: discountedPrice
-                                  -%}
+                      assign percentage = item.product.metafields.subscriptions.discount_percentage | divided_by: 100
+                      assign discountedPrice = item.final_line_price | times: percentage
+                      assign finalDiscountedPrice = item.final_line_price | minus: discountedPrice
+                    -%}
                     {% assign subtotal = subtotal | plus : finalDiscountedPrice %}
                     <span class="item__price-current theme-money">
                       {% render 'price', price: finalDiscountedPrice, disable_currency_code: true %}
                     </span>
                   {% else %}
-                    {% if item.variant.compare_at_price > item.variant.price %}
+                    {% if item.final_line_price == 0 %}
+                      <span class="theme-money">FREE</span>
+                    {% elsif item.variant.compare_at_price > item.variant.price %}
                       <div class="theme-money struck-out-price">{{ item.variant.compare_at_price | times: item.quantity | money }}
                       </div>
                     {% elsif item.original_line_price != item.final_line_price %}
                       <div class="theme-money struck-out-price">{{ item.original_line_price | money }}
                       </div>
                     {% endif %}
-                    <span class="theme-money">{{ item.final_line_price | money }}
-                    </span>
+                    {% unless promotionalLine %}
+                      <span class="theme-money">{{ item.final_line_price | money }}
+                      </span>
+                    {% endunless %}
                     {% assign subtotal = subtotal | plus : item.final_line_price %}
                   {% endif %}
                 </div>
+                
               </div>
             </div>
           {% endfor %}
@@ -363,9 +391,15 @@
                   </button>
                   {{ 'cart.general.or' | t }}
                 </span>
-
-                <button type="submit" class="button button--large checkout_btn" id="update-cart" name="checkout">{{ 'cart.general.checkout' | t }}
-                </button>
+                {% if has_recharge_subscriptions %}
+                  <button type="submit" class="button button--large checkout_btn" name="checkout">
+                    {{ 'cart.general.checkout' | t }}
+                  </button>
+                {% else %}
+                  <button type="submit" class="button button--large checkout_btn" id="update-cart" name="checkout" data-disable-recharge>
+                    {{ 'cart.general.checkout' | t }}
+                  </button>
+                {% endif %}
 
                 {% if section.settings.show_additional_checkout_buttons and additional_checkout_buttons and section.settings.cart_terms_page == blank %}
                   <div class="additional-checkout-buttons">

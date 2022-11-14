@@ -63,7 +63,7 @@ $(document).ready(function () {
     document.addEventListener("TikShop:cart:updated", function(e) {
         document.documentElement.dispatchEvent(new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false }))
     })
-    
+
   function handleHover(el, objects) {
     items.forEach(item => {
       item.classList.remove('active')      
@@ -673,7 +673,7 @@ const featureProductSubscriptionUtil = (function () {
                 })
             })
         }
-        if (window.ReCharge) {
+        if (window.ReCharge && ReCharge.showAddToCartButton) {
             ReCharge.showAddToCartButton()
         }
     };
