@@ -268,11 +268,19 @@ body.overflow-hidden {
                             color: var(--solid-black);
                             font-family: 'Open Sans', sans-serif;
                             font-weight: 700;
+                            position: relative;
                             @media(min-width:1440px) and (max-width:1600px){
                                 font-size: 12px;
                             }
                             input {
-                                display: none;
+                                opacity: 0;
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                top: 0;
+                                bottom: 0;
+                                width: 100%;
+                                height: 100%;
                             }
                             .radio-flex-wrapper {
                                 display: flex;

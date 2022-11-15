@@ -69,6 +69,10 @@
 .main-search.main-search--has-results{
     .main-search__results-all-link{
         color: #000;
+        &:hover{
+            background: #000;
+            color: #fff;
+        }
     }
     .block-inner{
         border: 1px solid #E8E8E8;
@@ -363,6 +367,16 @@
 .default_search{
     .search-suggestions__item{
         width: 20%;
+        .product-block{
+            .image-page-button--previous, .image-page-button--next{
+                display: none;
+            }
+        }
+        .image-cont--with-secondary-image{
+            .product-block__image--active{
+                opacity: 1;
+            }
+        }
     }
         .product-block{
             flex-basis: 25%;
