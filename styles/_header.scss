@@ -66,7 +66,19 @@
         font-size: 52px;
     }
 }
-
+.main-search.main-search--has-results{
+    .main-search__results-all-link{
+        color: #000;
+    }
+    .block-inner{
+        border: 1px solid #E8E8E8;
+    }
+    .product-info{
+        .subscription_checkout_button{
+            display: none;
+        }
+    }
+}
 /* mega menu css */
 .section-header{
     &.section-header--nav-open{

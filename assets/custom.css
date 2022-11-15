@@ -676,6 +676,16 @@ body.overflow-hidden {
   font-size: 52px;
 }
 
+.main-search.main-search--has-results .main-search__results-all-link {
+  color: #000;
+}
+.main-search.main-search--has-results .block-inner {
+  border: 1px solid #E8E8E8;
+}
+.main-search.main-search--has-results .product-info .subscription_checkout_button {
+  display: none;
+}
+
 /* mega menu css */
 .section-header.section-header--nav-open .logo-area .logo-area__left .logo-area__left__inner .navigation .navigation__item.navigation__item--with-children.navigation__item--with-mega-menu a::after {
   transform: rotate(0deg);
