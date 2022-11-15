@@ -341,7 +341,7 @@
             "collection": "shop-all",
             "title": "Coming soon",
             "coming_soon_link": "Shop all",
-            "shop_all_link": ""
+            "shop_all_link": "shopify:\/\/collections\/shop-all"
           }
         }
       },
