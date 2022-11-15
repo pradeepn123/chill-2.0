@@ -8,9 +8,7 @@
     {% for block in section.blocks %}
       {% for blockSetting in block.settings %}
         {% assign product = all_products[block.settings[blockSetting]] %}
-        theme.promotionalProducts[{{block.type | replace : "promotion-", ""}}].push({productId: {{ product.id | json }}, variantId: {{ product.first_available_variant.id | json }}, quantity: {{ blockSetting | replace : "product-", "" }}}){% endfor %}
-    {% endfor %}
-  {% endif %}
+        theme.promotionalProducts[{{block.type | replace : "promotion-", ""}}].push({productId: {{ product.id | json }}, variantId: {{ product.first_available_variant.id | json }}, quantity: {{ blockSetting | replace : "product-", "" }}}){% endfor %}{% endfor %}{% endif %}
 </script>
 
 {% if settings.cart_type contains 'drawer' and template != 'cart' %}
@@ -289,16 +287,8 @@
               <div class="cart-drawer-policies rte cart-drawer-summary__section--compact">Taxes and
                 <span class="tooltip_wrap">shipping
                   <div class="tooltip_content">
-                    <h4>Shipping Hours</h4>
-                    <p>
-                      The Chill CBD Fulfillment Center operates 9-4pm Monday through Friday and 8-12pm on Saturday. Closed Sundays.  All orders processed prior to 12pm will be shipped same day.
-                      <br>
-                      <br>
-                      Orders originating outside the United States and all other inquiries email info@chill.com. We do not currently ship to Canada.
-                      <br>
-                      <br>
-                      You will receive an email containing a tracking number once your package has been shipped from our Distribution Center.
-                    </p>
+                    <h4>{{ section.settings.shipping_policy_title }}</h4>
+                    <p>{{ section.settings.shipping_policy_content }}</p>
                   </div>
                 </span>
                 calculated at checkout
@@ -343,6 +333,14 @@
         "type": "url",
         "id": "continue_shopping_url",
         "label": "Add url to 'Continue Shopping' button"
+      }, {
+        "type": "text",
+        "id": "shipping_policy_title",
+        "label": "Shipping policy title"
+      }, {
+        "type": "richtext",
+        "id": "shipping_policy_content",
+        "label": "Shipping policy content"
       }, {
         "type": "checkbox",
         "id": "enable_promotion",
