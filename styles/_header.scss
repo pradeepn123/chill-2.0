@@ -26,57 +26,13 @@
                     text-transform: uppercase;
                 }
                 .header-account-link, .show-search-link, .country_selector{
-                    margin-inline-end: 28px;
-                }
-                .country_selector{
-                    .dropbtn{
-                        padding: 34px 0 34px 34px;
-                        position: relative;
-                        img{
-                            position: absolute;
-                            top: 38%;
-                            right: 77%;
-                        }
-                    }
-                    .dropdown-content {
-                        display: none;
-                        position: absolute;
-                        background-color: #fff;
-                        min-width: 100px;
-                        top: 100%;
-                        border: 1px solid #ddd;
-                        z-index: 1;
-                        cursor: pointer;
-                        a {
-                            float: none;
-                            color: black;
-                            padding: 12px 16px;
-                            text-decoration: none;
-                            display: block;
-                            text-align: left;
-                            img{
-                                position: relative;
-                                top: 6px;
-                                right: 6px;
-                            }
-                            &:hover {
-                                background-color: #ddd;
-                              }
-                          }
-                      }
-                    &:hover {
-                        .feather-chevron-down{
-                            transform: rotate(180deg);
-                            transition: 0.5s all;
-                        }
-                        .dropdown-content {
-                            display: block;
-                        }
-                    }
-                    @media (max-width: 1023px){
-                        display: none;
+                    margin-inline-end: 27px;
+                    @media (max-width: 767px){
+                        margin-inline-start: 28px;
+                        margin-inline-end: 0;
                     }
                 }
+                
                 .header-account-link{
                     .header-account-link__text{
                         margin-inline-start: 10px;
@@ -105,7 +61,11 @@
         }
     }
 }
-
+.main-search__suggestions{
+    .h1-style{
+        font-size: 52px;
+    }
+}
 
 /* mega menu css */
 .section-header{
@@ -388,7 +348,41 @@
         }
     }    
 }
-
+.default_search{
+    .search-suggestions__item{
+        width: 20%;
+    }
+        .product-block{
+            flex-basis: 25%;
+            border: 1px solid #E8E8E8;
+            // margin: 0 15px;
+            .product-info{
+                width: 85%;
+                margin: auto;
+                .product-block__title{
+                    font-size: 20px;
+                    font-family: "Open Sans", sans-serif;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    color: #000000;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                .vendor{
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+    }
+    .subscription_checkout_button, .block-inner-card-info{
+        display: none;
+    }
+    .product-block__image-dots{
+        display: none;
+    }
+}
 
 
 

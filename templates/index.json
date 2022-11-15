@@ -31,7 +31,8 @@
         "marquee_text": "FREE SHIPPING ON ORDERS OVER $50",
         "marquee_background_color": "#9792e4",
         "marquee_text_color": "#ffffff",
-        "marquee_text_font_size": 24
+        "marquee_text_font_size": 24,
+        "marquee_text_font_size_mobile": 16
       }
     },
     "1635927863703110df": {
@@ -309,6 +310,7 @@
             "image": "shopify:\/\/shop_images\/Collections-Gummies.jpg",
             "collection": "cbd-gummies",
             "title": "",
+            "coming_soon_link": "",
             "shop_all_link": "shopify:\/\/collections\/cbd-gummies"
           }
         },
@@ -318,6 +320,7 @@
             "image": "shopify:\/\/shop_images\/Collections-Pouch.jpg",
             "collection": "cbd-pouches",
             "title": "",
+            "coming_soon_link": "",
             "shop_all_link": "shopify:\/\/collections\/cbd-pouches"
           }
         },
@@ -327,6 +330,7 @@
             "image": "shopify:\/\/shop_images\/Collections-Smokes.jpg",
             "collection": "cbd-smokes",
             "title": "",
+            "coming_soon_link": "",
             "shop_all_link": "shopify:\/\/collections\/cbd-smokes"
           }
         },
@@ -335,8 +339,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/US_-Collections_-_Coming_Soon.jpg",
             "collection": "shop-all",
-            "title": "Coming Soon",
-            "shop_all_link": "shopify:\/\/collections\/shop-all"
+            "title": "Vape",
+            "coming_soon_link": "Coming soon",
+            "shop_all_link": ""
           }
         }
       },

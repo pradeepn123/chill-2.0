@@ -1,57 +1,56 @@
 {%- liquid
-                                                                 if collection and settings.prod_thumb_url_within_coll
-                                                                   assign product_url = product.url | within: collection
-                                                                 else
-                                                                   assign product_url = product.url
-                                                                 endif
-                                                               
-                                                                 assign product_images = product.media | where: 'media_type', 'image'
-                                                                 if settings.prod_thumb_hover_image and product_images.size > 1
-                                                                   assign show_hover_image = true
-                                                                 else
-                                                                   assign show_hover_image = false
-                                                                 endif
-                                                               
-                                                                 assign cheapest_variant = product.variants | sort: 'price' | first
-                                                               -%}
+    if collection and settings.prod_thumb_url_within_coll
+      assign product_url = product.url | within: collection
+    else
+      assign product_url = product.url
+    endif
+  
+    assign product_images = product.media | where: 'media_type', 'image'
+    if settings.prod_thumb_hover_image and product_images.size > 1
+      assign show_hover_image = true
+    else
+      assign show_hover_image = false
+    endif    
+    assign cheapest_variant = product.variants | sort: 'price' | first
+  -%}
 
 {%- liquid
-                                                                                                                                                                                         assign current_variant = product.selected_or_first_available_variant
-                                                                                                                                                                                         assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
-                                                                                                                                                                                       
-                                                                                                                                                                                         for block in section.blocks
-                                                                                                                                                                                           if block.type == 'variant_picker' and block.settings.select_first_variant == false
-                                                                                                                                                                                             assign current_variant = product.selected_variant | default: false
-                                                                                                                                                                                             assign featured_media = product.featured_media
-                                                                                                                                                                                           endif
-                                                                                                                                                                                         endfor
-                                                                                                                                                                                       
-                                                                                                                                                                                         assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: product.id
-                                                                                                                                                                                         assign min_aspect_ratio = 0.6
-                                                                                                                                                                                         assign show_preorder_label = false
-                                                                                                                                                                                         if settings.prod_pre_order_label_show and product != blank and product.template_suffix contains 'preorder'
-                                                                                                                                                                                           assign show_preorder_label = true
-                                                                                                                                                                                         endif
-                                                                                                                                                                                         assign description_shown = false
-                                                                                                                                                                                       
-                                                                                                                                                                                         assign productSubscription = product.metafields.subscriptions
-                                                                                                                                                                                         assign doesProductHaveMultiVariant = product.variants | size
-                                                                                                                                                                                         assign shipping_interval_frequency = productSubscription.shipping_interval_frequency | split: ','
-                                                                                                                                                                                       -%}
+    assign current_variant = product.selected_or_first_available_variant
+    assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
+  
+    for block in section.blocks
+      if block.type == 'variant_picker' and block.settings.select_first_variant == false
+        assign current_variant = product.selected_variant | default: false
+        assign featured_media = product.featured_media
+      endif
+    endfor
+  
+    assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: product.id
+    assign min_aspect_ratio = 0.6
+    assign show_preorder_label = false
+    if settings.prod_pre_order_label_show and product != blank and product.template_suffix contains 'preorder'
+      assign show_preorder_label = true
+    endif
+    assign description_shown = false
+  
+    assign productSubscription = product.metafields.subscriptions
+    assign doesProductHaveMultiVariant = product.variants | size
+    assign shipping_interval_frequency = productSubscription.shipping_interval_frequency | split: ','
+  -%}
 
 <div data-product-id="{{ product.id }}" class="product-block" {% if animate %}data-cc-animate{% endif %} product-main-block>
   <div class="block-inner">
     <div class="block-inner-inner">
       {% if product.featured_media %}
         {%- liquid
-                                                                         assign aspect_ratios_same = true
-                                                                         for media in product.media offset: 1
-                                                                           if media.preview_image.aspect_ratio != product.media.first.preview_image.aspect_ratio
-                                                                             assign aspect_ratios_same = false
-                                                                             break
-                                                                           endif
-                                                                         endfor
-                                                                       -%}
+            assign aspect_ratios_same = true
+            for media in product.media offset: 1
+              if media.preview_image.aspect_ratio != product.media.first.preview_image.aspect_ratio
+                assign aspect_ratios_same = false
+                break
+              endif
+            endfor
+          -%}
         <div class="image-cont {% if show_hover_image %}image-cont--with-secondary-image {% if aspect_ratios_same %}image-cont--same-aspect-ratio{% endif %}{% endif %}">
           <a class="product-link{% if settings.quickbuy_style == 'whole' %} quickbuy-toggle{% endif %}" href="{{ product_url }}" aria-label="{{ product.title | escape }}" tabindex="-1">
             <div class="image-label-wrap">
@@ -128,7 +127,7 @@
               <div class="product-block__title">{{ product.title }}
               </div>
 
-              {%- if section.settings.show_vendor -%}
+              {%- if settings.live_search_show_vendor == true -%}
                 <div class="vendor">{{ product.vendor }}
                 </div>
               {%- endif -%}
@@ -180,17 +179,17 @@
             {%- endif -%}
             <div class="subscription_checkout_button">
               {% comment %}
-              <div class="dynamic_checkout_btn">
+                <div class="dynamic_checkout_btn">
                 <button type="button" class="shopify-payment-button__button shopify-payment-button__button--unbranded js-buy-now-btn btn-has-price" data-variant-id="{{cheapest_variant.id}}" data-quantity="1" data-product-id="{{product.id}}" onclick="theme.handleBuyNow(this)">
-                  {% if productSubscription.has_subscription %}
-                    <span>Buy once</span>
-                  {% else %}
-                    <span>Buy now</span>
-                  {% endif %}
-                  <span>{{current_variant.price | money}}
-                  </span>
+                {% if productSubscription.has_subscription %}
+                <span>Buy once</span>
+                {% else %}
+                <span>Buy now</span>
+                {% endif %}
+                <span>{{current_variant.price | money}}
+                </span>
                 </button>
-              </div>
+                </div>
               {% endcomment %}
               <!-- custom subscription info -->
               <div class="custom_subscription_info">
@@ -329,7 +328,7 @@
               {%- endfor -%}
             {%- endif -%}
 
-            
+
           </div>
         </div>
       </div>
@@ -376,11 +375,11 @@
 
             <input type="hidden" name="" value="{{duplicateVaraintId}}" subscription-varaintId-input="true">
             {%- if shipping_interval_frequency > 1 -%}
-                {%- assign updatedShippingInterval = selected_shipping_interval_frequency[0] -%} 
+              {%- assign updatedShippingInterval = selected_shipping_interval_frequency[0] -%}
             {% else %}
-              {%- assign updatedShippingInterval = shipping_interval_frequency -%} 
+              {%- assign updatedShippingInterval = shipping_interval_frequency -%}
             {%- endif -%}
-          
+
             <input type="hidden" name="" value="{{updatedShippingInterval}}" subscription-frequency-input>
             <input type="hidden" name="" value="{{shipping_interval_unit_type}}" subscription-unit-input>
 
