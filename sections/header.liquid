@@ -270,7 +270,7 @@
             {% if show_search_suggestions %}
               <div class="main-search__suggestions">
                 {% if section.settings.search_suggestions_title != blank %}
-                  <div class="h4-style heading-font">{{ section.settings.search_suggestions_title }}
+                  <div class="h1-style heading-font desktop-only">{{ section.settings.search_suggestions_title }}
                   </div>
                 {% endif %}
                 {% if section.settings.search_suggestions_menu != blank %}
@@ -357,31 +357,31 @@
                                                                                                                                                                                     -%}
                   <div class="search-suggestions">
                     <div class="search-suggestions__item-row default_search">
-                      {%- comment -%}
-                        {%- for link in suggestions_menu.links -%}
-                        {%- for product in link.object.products limit: 4 -%}
-                        <li>{{ product.title }}</li>
-                        {%- endfor -%}
-                        {%- endfor -%}
-                      {%- endcomment -%}
                       {% for link in suggestions_menu.links %}
-                        {% if link.links != blank %}
+                        {% if link.object.products != blank %}
                           <div class="search-suggestions__item search-suggestions__item--with-row">
-                            <div class="search-suggestions__heading h5-style heading-font">
+                            {%- comment -%}
+                              <div class="search-suggestions__heading h5-style heading-font">
                               <a href="{{ link.url }}">{{ link.title | escape }}
                               </a>
-                            </div>
+                              </div>
+                            {%- endcomment -%}
                             <div class="search-suggestions__item-row">
-                              {% for child_link in link.links %}
+                              {% for child_link in link.object.products limit: 4 %}
                                 <div class="search-suggestions__item">
-                                  {% if child_link.type == 'collection_link' %}
-                                    {% render 'collection-block', collection: child_link.object, custom_aspect_ratio: collection_aspect_ratio, manual_image_load: true %}
-                                  {% elsif child_link.type == 'product_link' %}
-                                    {% render 'product-block', product: child_link.object, custom_aspect_ratio: product_aspect_ratio, manual_image_load: true %}
-                                  {% else %}
+                                  {%- comment -%}
+                                    {% if child_link.type == 'collection_link' %}
+                                    {% render 'collection-block', collection: child_link, custom_aspect_ratio: collection_aspect_ratio, manual_image_load: true %}
+                                    {% elsif child_link.type == 'product_link' %}
+
+                                    {% render 'product-block', product: child_link, custom_aspect_ratio: product_aspect_ratio, manual_image_load: true %}
+
+                                    {% else %}
                                     <a class="search-suggestions__link" href="{{ child_link.url }}">{{ child_link.title | escape }}
                                     </a>
-                                  {% endif %}
+                                    {% endif %}
+                                  {%- endcomment -%}
+                                  {% render 'product-block', product: child_link, custom_aspect_ratio: product_aspect_ratio, manual_image_load: true %}
                                 </div>
                               {% endfor %}
                             </div>
@@ -702,7 +702,7 @@
         "label": "Enable search",
         "default": true
       }, {
-        "type": "text",
+        "type": "richtext",
         "id": "search_suggestions_title",
         "label": "Suggestions title",
         "info": "Suggestions show when the search is opened."

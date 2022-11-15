@@ -1,15 +1,14 @@
 <script>
-  theme.promotionalProducts = { "25": [], "50": [], "100": [] }
+  theme.promotionalProducts = {
+    "25": [],
+    "50": [],
+    "100": []
+  }
   {% if section.settings.enable_promotion %}
     {% for block in section.blocks %}
       {% for blockSetting in block.settings %}
         {% assign product = all_products[block.settings[blockSetting]] %}
-        theme.promotionalProducts[{{block.type | replace : "promotion-", ""}}].push({
-          productId: {{ product.id | json }},
-          variantId: {{ product.first_available_variant.id | json }},
-          quantity: {{ blockSetting | replace : "product-", "" }}
-        })
-      {% endfor %}
+        theme.promotionalProducts[{{block.type | replace : "promotion-", ""}}].push({productId: {{ product.id | json }}, variantId: {{ product.first_available_variant.id | json }}, quantity: {{ blockSetting | replace : "product-", "" }}}){% endfor %}
     {% endfor %}
   {% endif %}
 </script>
@@ -30,10 +29,11 @@
       <div class="cart-drawer-summary__inner" aria-live="polite">
         <div class="cart-drawer-summary__header toggle-cart-drawer-summary cart-drawer-summary__section">
           <h1 class="cart-drawer-summary__title">
-              {{ 'cart.general.title' | t }} <span class="cart_item_count">({{cart.item_count}} items)</span>
+            {{ 'cart.general.title' | t }}
+            <span class="cart_item_count">({{cart.item_count}} items)</span>
           </h1>
           <a class="cart-drawer-summary__close toggle-cart-summary">
-            {% render 'svg-close' %}            
+            {% render 'svg-close' %}
           </a>
         </div>
         {% if cart.item_count > 0 %}
@@ -50,7 +50,7 @@
                 assign is_enable = true
               endif
             -%}
-            
+
             {%- if is_enable -%}
               {%- liquid
                 assign limit = settings.free_shipping_limit | plus: 0
@@ -58,7 +58,7 @@
                 assign cart_total_price = cart.total_price
                 assign subtotal_without_currency = cart_total_price | plus: 0 | divided_by: 100
               -%}
-            
+
               {%- capture left_to_spend -%}
                 <span data-left-to-spend>
                   {%- if settings.currency_code_enable -%}
@@ -68,7 +68,7 @@
                   {%- endif -%}
                 </span>
               {%- endcapture -%}
-            
+
               {%- liquid
                 assign free_shipping_message = free_shipping_text | replace: '||amount||', left_to_spend
                 assign qualified_shipping_message = 'cart.general.qualified_shipping_message' | t
@@ -88,22 +88,19 @@
                 assign percent = limit | minus: subtotal_without_currency | times: 100 | divided_by: limit
                 assign percent = 100 | minus: percent
               -%}
-            
-              <p class="{% unless template.name == 'cart' or section.id == 'announcement-bar' %}cart-drawer__message {% endunless %}cart__message{{ class_message }}"
-                data-cart-message="{% if qualified_shipping_message != blank %}true{% else %}false{% endif %}"
-                data-limit="{{ limit }}"
-                data-cart-total-price="{{ cart_total_price }}"
+
+              <p class="{% unless template.name == 'cart' or section.id == 'announcement-bar' %}cart-drawer__message {% endunless %}cart__message{{ class_message }}" data-cart-message="{% if qualified_shipping_message != blank %}true{% else %}false{% endif %}" data-limit="{{ limit }}" data-cart-total-price="{{ cart_total_price }}"
                 {% if animations_enabled %}
-                  data-aos="fade-up"
-                  data-aos-delay="{{ animation_delay }}"
-                  {%- assign animation_delay = animation_delay | plus: 100 -%}
+                data-aos="fade-up"
+                data-aos-delay="{{ animation_delay }}"
+                {%- assign animation_delay = animation_delay | plus: 100 -%}
                 {% endif %}>
                 <span class="cart__message__default{{ is_default_message_hidden }}" data-message-default>{{ free_shipping_message }}</span>
-            
+
                 {%- if qualified_shipping_message != blank -%}
                   <span class="cart__message__success">{{ qualified_shipping_message }}</span>
                 {%- endif -%}
-            
+
                 {%- unless is_top -%}
                   <progress class="cart__message__progress" data-cart-message-progress value="{{ percent }}" max="100"></progress>
                 {%- endunless -%}
@@ -112,11 +109,11 @@
             <form class="cart-drawer-form cart-drawer-summary__section" action="{{ routes.cart_url }}" method="post">
               {% for item in cart.items %}
                 {% if item.product.metafields.subscriptions.original_handle != blank %}
-                  {% assign original_product = all_products[item.product.metafields.subscriptions.original_handle.value] %}    
-                {% else %}                
-                  {% assign original_product = item.product %}    
+                  {% assign original_product = all_products[item.product.metafields.subscriptions.original_handle.value] %}
+                {% else %}
+                  {% assign original_product = item.product %}
                 {% endif %}
-                
+
                 {% assign has_subscriptions = false %}
                 {% assign selected_shipping_interval_frequency = blank %}
                 {% assign promotionalLine = false %}
@@ -126,7 +123,7 @@
                     {% assign selected_shipping_interval_frequency = p.last %}
                   {% endif %}
                   {% if p.first == 'Product Type' and p.last == 'Promotional' %}
-                  {% assign promotionalLine = true %}
+                    {% assign promotionalLine = true %}
                   {% endif %}
                 {% endfor %}
                 <div class="cart-drawer-summary-item-container" data-product-id="{{ item.id }}">
@@ -140,9 +137,7 @@
                       <div class="cart-drawer-summary-item__detail">
                         <div class="cart-drawer-summary-item__title-variant">
                           <div class="cart-drawer-summary-item_title_price_total">
-                            <a
-                              class="cart-drawer-summary-item__title"
-                              href="{{ original_product.url }}">
+                            <a class="cart-drawer-summary-item__title" href="{{ original_product.url }}">
                               {{ original_product.title }}
                             </a>
                             <div class="cart-drawer-summary-item__price">
@@ -186,7 +181,7 @@
                             {% if item.selling_plan_allocation %}
                               <div class="cart-drawer-summary-item__variant">{{ item.selling_plan_allocation.selling_plan.name }}</div>
                             {% endif %}
-                            
+
                             {% if item.line_level_discount_allocations.size > 0 %}
                               {% unless promotionalLine %}
                                 <ul class="cart-drawer-discount-list align-right">
@@ -210,21 +205,11 @@
                           {% assign can_increase = true %}
                         {% endif %}
                         <div class="cart-item__column cart-item__quantity cart-drawer-summary-item__quantity">
-                          <div class="quantity buttoned-input">                            
-                            <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down {% if promotionalLine == true %}visibility-hidden{%endif%} {% if item.quantity == 1 %}pointer-evt-none{% endif %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 1 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}</a>                            
-                            <input
-                              class="cart-item__quantity-input {% if promotionalLine %}promotional-quantity{% endif %}"
-                              type="text"
-                              size="2"
-                              id="updates_{{ forloop.index }}"
-                              name="updates[]"
-                              value="{{ item.quantity }}"
-                              data-initial-value="{{ item.quantity }}"
-                              data-line="{{ forloop.index }}"
-                              disabled="disabled"
-                              {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' %}data-max="{{ item.variant.inventory_quantity }}"{% endif %}
-                              aria-label="{{ 'cart.general.quantity' | t | escape }}" />                            
-                              <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% if promotionalLine == true %}visibility-hidden{%endif%} {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}</a>                            
+                          <div class="quantity buttoned-input">
+                            <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down {% if promotionalLine == true %}visibility-hidden{%endif%} {% if item.quantity == 1 %}pointer-evt-none{% endif %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 1 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}</a>
+                            <input class="cart-item__quantity-input {% if promotionalLine %}promotional-quantity{% endif %}" type="text" size="2" id="updates_{{ forloop.index }}" name="updates[]" value="{{ item.quantity }}" data-initial-value="{{ item.quantity }}" data-line="{{ forloop.index }}" disabled="disabled" {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' %}data-max="{{ item.variant.inventory_quantity }}"{% endif %}
+                              aria-label="{{ 'cart.general.quantity' | t | escape }}"/>
+                            <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% if promotionalLine == true %}visibility-hidden{%endif%} {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}</a>
                           </div>
                           {% unless promotionalLine %}
                             <a class="remove" data-line="{{ forloop.index }}" href="#">
@@ -232,9 +217,9 @@
                             </a>
                           {% endunless %}
                         </div>
-                        
+
                       </div>
-                      
+
                     </div>
                     {% assign shipping_interval_frequencies = original_product.metafields.subscriptions.shipping_interval_frequency | split: ',' | default: 30 %}
                     {% assign shipping_interval_unit_type = original_product.metafields.subscriptions.shipping_interval_unit_type | default: 'Days' %}
@@ -244,18 +229,13 @@
                       {% assign shipping_interval_unit_type = 'Weeks' %}
                     {% elsif shipping_interval_unit_type == 'month' %}
                       {% assign shipping_interval_unit_type = 'Months' %}
-                    {% endif %}                    
-                    {% if has_subscriptions %} 
-                       <div class="upgraded-sub-selection">
+                    {% endif %}
+                    {% if has_subscriptions %}
+                      <div class="upgraded-sub-selection">
                         {% if shipping_interval_frequencies.size > 1 %}
-                          <select
-                            id="drawer-shipping-interval-selector-{{forloop.index}}"
-                            class="drawer-shipping-interval"
-                            data-shipping_interval_unit_type="{{shipping_interval_unit_type}}"
-                            data-line="{{ forloop.index }}"
-                            data-quantity="{{item.quantity}}">
+                          <select id="drawer-shipping-interval-selector-{{forloop.index}}" class="drawer-shipping-interval" data-shipping_interval_unit_type="{{shipping_interval_unit_type}}" data-line="{{ forloop.index }}" data-quantity="{{item.quantity}}">
                             {% for shipping_interval_frequency in shipping_interval_frequencies %}
-                              <option value="{{shipping_interval_frequency}}" {% if selected_shipping_interval_frequency == shipping_interval_frequency %}selected{% endif %} >Delivery every {{shipping_interval_frequency}} {{shipping_interval_unit_type}}</option>
+                              <option value="{{shipping_interval_frequency}}" {% if selected_shipping_interval_frequency == shipping_interval_frequency %}selected{% endif %}>Delivery every {{shipping_interval_frequency}} {{shipping_interval_unit_type}}</option>
                             {% endfor %}
                           </select>
                         {% else %}
@@ -266,18 +246,12 @@
                       </div>
                     {% elsif original_product.metafields.subscriptions.shipping_interval_frequency and original_product.metafields.subscriptions.discount_percentage %}
                       {%- assign actual_varaint_id = item.variant_id | escape -%}
-                       <button
-                        type="button"
-                        class="upgrade-to-subscription"
-                        data-shipping_interval_frequency="{{shipping_interval_frequencies[0]}}"
-                        data-shipping_interval_unit_type="{{shipping_interval_unit_type}}"
-                        data-line="{{ forloop.index }}"
-                        data-product_quantity="{{ item.quantity }}"
-                        data-first_scription_id="{{ original_product.metafields.subscriptions.original_to_hidden_variant_map[actual_varaint_id].discount_variant_id}}"
-                      >                    
-                        {%- comment -%} {{ item.product.metafields.subscriptions.original_to_hidden_variant_map}} {%- endcomment -%}
+                      <button type="button" class="upgrade-to-subscription" data-shipping_interval_frequency="{{shipping_interval_frequencies[0]}}" data-shipping_interval_unit_type="{{shipping_interval_unit_type}}" data-line="{{ forloop.index }}" data-product_quantity="{{ item.quantity }}" data-first_scription_id="{{ original_product.metafields.subscriptions.original_to_hidden_variant_map[actual_varaint_id].discount_variant_id}}">
+                        {%- comment -%}
+                          {{ item.product.metafields.subscriptions.original_to_hidden_variant_map}}
+                        {%- endcomment -%}
                         UPGRADE TO SUBSCRIPTION AND SAVE {{ original_product.metafields.subscriptions.discount_percentage }}%
-                      </button> 
+                      </button>
                     {% endif %}
                   </div>
                 </div>
@@ -289,12 +263,7 @@
               </div>
             </form>
           </div>
-          <form class="cart-drawer-form cart-drawer-form--checkout cart-drawer-form--checkout--sticky-{{ section.settings.checkout_sticky_form }}"
-            action="{{ routes.cart_url }}" method="post"
-            data-has_recharge_subscriptions="{{has_recharge_subscriptions}}"
-            data-checkout-domain="{{ shop.metafields.subscriptions.checkout_domain | default: 'checkout.rechargeapps.com' }}"
-            data-permanent-domain="{{ shop.permanent_domain }}"
-          >
+          <form class="cart-drawer-form cart-drawer-form--checkout cart-drawer-form--checkout--sticky-{{ section.settings.checkout_sticky_form }}" action="{{ routes.cart_url }}" method="post" data-has_recharge_subscriptions="{{has_recharge_subscriptions}}" data-checkout-domain="{{ shop.metafields.subscriptions.checkout_domain | default: 'checkout.rechargeapps.com' }}" data-permanent-domain="{{ shop.permanent_domain }}">
             <div class="cart-drawer-form--non-stick cart-drawer-summary__section">
               <div class="cart-drawer-summary__subtotal {% if section.settings.enable_cart_notes == blank and section.settings.show_tax_and_shipping == false %}cart-drawer-summary__subtotal--sm-bottom{% endif %}">
                 <span class="cart-drawer-summary__subtotal-label">{{ 'cart.general.subtotal' | t }}</span>
@@ -303,26 +272,46 @@
                 </span>
               </div>
 
-              {%- capture taxes_shipping_checkout -%}
+              {%- comment -%}
+                {%- capture taxes_shipping_checkout -%}
                 {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
-                  {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
                 {%- elsif cart.taxes_included -%}
-                  {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
+                {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
                 {%- elsif shop.shipping_policy.body != blank -%}
-                  {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+                {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
                 {%- else -%}
-                  {{ 'cart.general.taxes_and_shipping_at_checkout' | t }}
+                {{ 'cart.general.taxes_and_shipping_at_checkout' | t }}
                 {%- endif -%}
-              {%- endcapture -%}
-              <div class="cart-drawer-policies rte cart-drawer-summary__section--compact">{{ taxes_shipping_checkout }}</div>
+                {%- endcapture -%}
+                <div class="cart-drawer-policies rte cart-drawer-summary__section--compact">{{ taxes_shipping_checkout }}</div>
+              {%- endcomment -%}
+              <div class="cart-drawer-policies rte cart-drawer-summary__section--compact">Taxes and
+                <span class="tooltip_wrap">shipping
+                  <div class="tooltip_content">
+                    <h4>Shipping Hours</h4>
+                    <p>
+                      The Chill CBD Fulfillment Center operates 9-4pm Monday through Friday and 8-12pm on Saturday. Closed Sundays.  All orders processed prior to 12pm will be shipped same day.
+                      <br>
+                      <br>
+                      Orders originating outside the United States and all other inquiries email info@chill.com. We do not currently ship to Canada.
+                      <br>
+                      <br>
+                      You will receive an email containing a tracking number once your package has been shipped from our Distribution Center.
+                    </p>
+                  </div>
+                </span>
+                calculated at checkout
+              </div>
+              <div id="shipping_policy_popup" style="display: none;">
+                <h1>Shipping policy</h1>
+              </div>
             </div>
+
+
             <div class="cart-drawer-summary__buttons cart-drawer-summary__section border-bottom">
               {%- if has_recharge_subscriptions -%}
-                <button
-                  type="submit"
-                  name="checkout"
-                  class="recharge_checkout_btn btn wide button button--large checkout_btn"
-                >
+                <button type="submit" name="checkout" class="recharge_checkout_btn btn wide button button--large checkout_btn">
                   <span class="button-text">{{ 'cart.general.checkout' | t }}</span>
                 </button>
               {%- else -%}
@@ -341,9 +330,11 @@
           </div>
         {% endif %}
       </div>
-    </div><!-- /#cart-drawer-summary -->
+    </div>
+    <!-- /#cart-drawer-summary -->
   </div>
 {% endif %}
+<script></script>
 {% schema %}
   {
     "name": "Cart Drawer",
