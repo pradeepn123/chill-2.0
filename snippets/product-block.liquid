@@ -198,13 +198,20 @@
                     {%- if productSubscription.has_subscription -%}
                       <button class="btn btn-primary  custom_sub_button default_addToCart_btn">
                         <span>
-                          Subscribe
+                          Add to cart
                         </span>
                         <span class="product-price price__item_sub">
                           <span class="product-price__item product-price__amount {% if cheapest_variant.compare_at_price > cheapest_variant.price %}product-price__amount--on-sale{% endif %} theme-money">
+                            {% comment %}
                             {% assign actualVaraintId = current_variant.id | escape %}
                             {%  assign subscriptionVaraintPrice =  productSubscription.original_to_hidden_variant_map[actualVaraintId].discount_variant_price  %}
                             {{ subscriptionVaraintPrice | prepend: '$'  }}
+                            {% endcomment %}
+                            {%- if settings.product_currency_code_enabled -%}
+                              {{ cheapest_variant.price | money_with_currency }}
+                            {%- else -%}
+                              {{ cheapest_variant.price | money }}
+                            {%- endif -%}
                           </span>
                           {% if cheapest_variant.compare_at_price > cheapest_variant.price %}
                             <span class="product-price__item product-price__compare theme-money">{{ cheapest_variant.compare_at_price | money }}
