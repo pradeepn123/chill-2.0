@@ -27,9 +27,12 @@
                 {%- assign collection_title = block.settings.title | default: collection_block.title -%}
                 <h4>{{ collection_title }}
                 </h4>
-                <a class="small-feature-link shop_all" href="{{ block.settings.shop_all_link }}">{{ 'collections.general.view_all' | t }}
-                  {% render 'svg-up-icon' %}
-                </a>
+                <h5 class="small-feature-link shop_all">{{ block.settings.coming_soon_link }}</h5>
+                {% if block.settings.shop_all_link != blank %}
+                  <a class="small-feature-link shop_all" href="{{ block.settings.shop_all_link }}">{{ 'collections.general.view_all' | t }}
+                    {% render 'svg-up-icon' %}
+                  </a>
+                {% endif %}
               </div>
             </div>
           {% endif %}
@@ -71,14 +74,21 @@
             "id": "image",
             "type": "image_picker",
             "label": "Choose image"
-          }, {
+          },
+          {
             "type": "collection",
             "id": "collection",
             "label": "Collection"
-          }, {
+          },
+          {
             "type": "text",
             "id": "title",
             "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "coming_soon_link",
+            "label": "Coming soon"
           }, {
             "type": "url",
             "id": "shop_all_link",

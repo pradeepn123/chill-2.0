@@ -190,19 +190,16 @@
 
         <div class="logo-area__right">
           <div class="logo-area__right__inner">
-            <div class="country_selector dropdown">
-              <a class="dropbtn" href="#">
-                <img src="https://cdn.shopify.com/s/files/1/0536/9115/4590/files/USA_Flag_icon.svg?v=1665047699" alt="." width="24" height="24" loading="lazy">
-                <span>USA</span>
-                {% render 'icon-toggle-menu', stroke_width: 1.3 %}
+            {% if section.settings.enable_search %}
+              <a class="show-search-link" href="{{ routes.search_url }}">
+                <span class="show-search-link__icon">
+                  {%- render 'svg-search' -%}
+                </span>
+                <span class="show-search-link__text{% if section.settings.icon_strategy == 'icons_only' %} visually-hidden{% endif %}">
+                  {{- 'layout.search.open' | t -}}
+                </span>
               </a>
-              <div class="dropdown-content">
-                <a href="http://uk.chill.com?location=GB">
-                  <img src="https://cdn.shopify.com/s/files/1/0536/9115/4590/files/UK_Flag_icon.svg?v=1665048505" alt="." width="24" height="24" loading="lazy">
-                  <span>UK</span>
-                </a>
-              </div>
-            </div>
+            {% endif %}
             {% if shop.customer_accounts_enabled %}
               {% if customer %}
                 <a class="header-account-link" href="{{ routes.account_url }}" aria-label="{{ 'layout.customer.account' | t | escape }}">
@@ -219,16 +216,6 @@
                   </span>
                 </a>
               {% endif %}
-            {% endif %}
-            {% if section.settings.enable_search %}
-              <a class="show-search-link" href="{{ routes.search_url }}">
-                <span class="show-search-link__icon">
-                  {%- render 'svg-search' -%}
-                </span>
-                <span class="show-search-link__text{% if section.settings.icon_strategy == 'icons_only' %} visually-hidden{% endif %}">
-                  {{- 'layout.search.open' | t -}}
-                </span>
-              </a>
             {% endif %}
             <a href="{% if settings.cart_type != "drawer" %}{{ routes.cart_url }}{% else %}#{% endif %}" class="cart-link">
               <span class="cart-link__icon {%if section.settings.cart_icon == 'custom' %}custom_bag{% endif %}">
@@ -275,6 +262,7 @@
               </div>
               <button class="main-search__button button notabutton" type="submit" aria-label="{{ 'layout.header.search_submit' | t }}">{% render 'svg-search' %}
               </button>
+
             </form>
 
             <div class="main-search__results"></div>
@@ -282,125 +270,184 @@
             {% if show_search_suggestions %}
               <div class="main-search__suggestions">
                 {% if section.settings.search_suggestions_title != blank %}
-                  <div class="h4-style heading-font">{{ section.settings.search_suggestions_title }}
+                  <div class="h1-style heading-font desktop-only">{{ section.settings.search_suggestions_title }}
                   </div>
                 {% endif %}
                 {% if section.settings.search_suggestions_menu != blank %}
                   {%- liquid
-                                                                                                                                                                                      assign suggestions_menu = linklists[section.settings.search_suggestions_menu]
-                                                                                                                                                                    
-                                                                                                                                                                                      if settings.coll_grid_image_shape == 'portrait-23'
-                                                                                                                                                                                        assign collection_aspect_ratio = 0.67
-                                                                                                                                                                                      elsif settings.coll_grid_image_shape == 'portrait-45'
-                                                                                                                                                                                        assign collection_aspect_ratio = 0.8
-                                                                                                                                                                                      elsif settings.coll_grid_image_shape == 'square'
-                                                                                                                                                                                        assign collection_aspect_ratio = 1.0
-                                                                                                                                                                                      elsif settings.coll_grid_image_shape == 'landscape-54'
-                                                                                                                                                                                        assign collection_aspect_ratio = 1.25
-                                                                                                                                                                                      elsif settings.coll_grid_image_shape == 'landscape-32'
-                                                                                                                                                                                        assign collection_aspect_ratio = 1.50
-                                                                                                                                                                                      elsif settings.coll_grid_image_shape == 'tallest'
-                                                                                                                                                                                        assign collection_aspect_ratio = 999
-                                                                                                                                                                                        for link in suggestions_menu.links
-                                                                                                                                                                                          for child_link in link.links
-                                                                                                                                                                                            if child_link.type == 'collection_link'
-                                                                                                                                                                                              if child_link.object.featured_image.aspect_ratio < collection_aspect_ratio
-                                                                                                                                                                                                assign collection_aspect_ratio = child_link.object.featured_image.aspect_ratio
-                                                                                                                                                                                              endif
-                                                                                                                                                                                            endif
-                                                                                                                                                                                          endfor
-                                                                                                                                                                    
-                                                                                                                                                                                          if link.type == 'collection_link'
-                                                                                                                                                                                            if link.object.featured_image.aspect_ratio < collection_aspect_ratio
-                                                                                                                                                                                              assign collection_aspect_ratio = link.object.featured_image.aspect_ratio
-                                                                                                                                                                                            endif
-                                                                                                                                                                                          endif
-                                                                                                                                                                                        endfor
-                                                                                                                                                                                      else
-                                                                                                                                                                                        assign collection_aspect_ratio = 0
-                                                                                                                                                                                        for link in suggestions_menu.links
-                                                                                                                                                                                          for child_link in link.links
-                                                                                                                                                                                            if child_link.type == 'collection_link' and child_link.object.featured_image.aspect_ratio > collection_aspect_ratio
-                                                                                                                                                                                              assign collection_aspect_ratio = child_link.object.featured_image.aspect_ratio
-                                                                                                                                                                                            endif
-                                                                                                                                                                                          endfor
-                                                                                                                                                                    
-                                                                                                                                                                                          if link.type == 'collection_link' and link.object.featured_image.aspect_ratio > collection_aspect_ratio
-                                                                                                                                                                                            assign collection_aspect_ratio = link.object.featured_image.aspect_ratio
-                                                                                                                                                                                          endif
-                                                                                                                                                                                        endfor
-                                                                                                                                                                                      endif
-                                                                                                                                                                    
-                                                                                                                                                                                      if settings.prod_thumb_shape == 'portrait-23'
-                                                                                                                                                                                        assign product_aspect_ratio = 0.67
-                                                                                                                                                                                      elsif settings.prod_thumb_shape == 'portrait-45'
-                                                                                                                                                                                        assign product_aspect_ratio = 0.8
-                                                                                                                                                                                      elsif settings.prod_thumb_shape == 'square'
-                                                                                                                                                                                        assign product_aspect_ratio = 1.0
-                                                                                                                                                                                      elsif settings.prod_thumb_shape == 'landscape-54'
-                                                                                                                                                                                        assign product_aspect_ratio = 1.25
-                                                                                                                                                                                      elsif settings.prod_thumb_shape == 'landscape-32'
-                                                                                                                                                                                        assign product_aspect_ratio = 1.50
-                                                                                                                                                                                      elsif settings.prod_thumb_shape == 'tallest'
-                                                                                                                                                                                        assign product_aspect_ratio = 99
-                                                                                                                                                                                        for link in suggestions_menu.links
-                                                                                                                                                                                          for child_link in link.links
-                                                                                                                                                                                            if child_link.type == 'product_link' and child_link.object.featured_media.preview_image.aspect_ratio < product_aspect_ratio
-                                                                                                                                                                                              assign product_aspect_ratio = child_link.object.featured_media.preview_image.aspect_ratio
-                                                                                                                                                                                            endif
-                                                                                                                                                                                          endfor
-                                                                                                                                                                                          if link.type == 'product_link' and link.object.featured_media.preview_image.aspect_ratio < product_aspect_ratio
-                                                                                                                                                                                            assign product_aspect_ratio = link.object.featured_media.preview_image.aspect_ratio
-                                                                                                                                                                                          endif
-                                                                                                                                                                                        endfor
-                                                                                                                                                                                      else
-                                                                                                                                                                                        assign product_aspect_ratio = 0
-                                                                                                                                                                                        for link in suggestions_menu.links
-                                                                                                                                                                                          for child_link in link.links
-                                                                                                                                                                                            if child_link.type == 'product_link' and child_link.object.featured_media.preview_image.aspect_ratio > product_aspect_ratio
-                                                                                                                                                                                              assign product_aspect_ratio = child_link.object.featured_media.preview_image.aspect_ratio
-                                                                                                                                                                                            endif
-                                                                                                                                                                                          endfor
-                                                                                                                                                                                          if link.type == 'product_link' and link.object.featured_media.preview_image.aspect_ratio > product_aspect_ratio
-                                                                                                                                                                                            assign product_aspect_ratio = link.object.featured_media.preview_image.aspect_ratio
-                                                                                                                                                                                          endif
-                                                                                                                                                                                        endfor
-                                                                                                                                                                                      endif
-                                                                                                                                                                                    -%}
+                    assign suggestions_menu = linklists[section.settings.search_suggestions_menu]
+  
+                    if settings.coll_grid_image_shape == 'portrait-23'
+                      assign collection_aspect_ratio = 0.67
+                    elsif settings.coll_grid_image_shape == 'portrait-45'
+                      assign collection_aspect_ratio = 0.8
+                    elsif settings.coll_grid_image_shape == 'square'
+                      assign collection_aspect_ratio = 1.0
+                    elsif settings.coll_grid_image_shape == 'landscape-54'
+                      assign collection_aspect_ratio = 1.25
+                    elsif settings.coll_grid_image_shape == 'landscape-32'
+                      assign collection_aspect_ratio = 1.50
+                    elsif settings.coll_grid_image_shape == 'tallest'
+                      assign collection_aspect_ratio = 999
+                      for link in suggestions_menu.links
+                        for child_link in link.links
+                          if child_link.type == 'collection_link'
+                            if child_link.object.featured_image.aspect_ratio < collection_aspect_ratio
+                              assign collection_aspect_ratio = child_link.object.featured_image.aspect_ratio
+                            endif
+                          endif
+                        endfor
+  
+                        if link.type == 'collection_link'
+                          if link.object.featured_image.aspect_ratio < collection_aspect_ratio
+                            assign collection_aspect_ratio = link.object.featured_image.aspect_ratio
+                          endif
+                        endif
+                      endfor
+                    else
+                      assign collection_aspect_ratio = 0
+                      for link in suggestions_menu.links
+                        for child_link in link.links
+                          if child_link.type == 'collection_link' and child_link.object.featured_image.aspect_ratio > collection_aspect_ratio
+                            assign collection_aspect_ratio = child_link.object.featured_image.aspect_ratio
+                          endif
+                        endfor
+  
+                        if link.type == 'collection_link' and link.object.featured_image.aspect_ratio > collection_aspect_ratio
+                          assign collection_aspect_ratio = link.object.featured_image.aspect_ratio
+                        endif
+                      endfor
+                    endif
+  
+                    if settings.prod_thumb_shape == 'portrait-23'
+                      assign product_aspect_ratio = 0.67
+                    elsif settings.prod_thumb_shape == 'portrait-45'
+                      assign product_aspect_ratio = 0.8
+                    elsif settings.prod_thumb_shape == 'square'
+                      assign product_aspect_ratio = 1.0
+                    elsif settings.prod_thumb_shape == 'landscape-54'
+                      assign product_aspect_ratio = 1.25
+                    elsif settings.prod_thumb_shape == 'landscape-32'
+                      assign product_aspect_ratio = 1.50
+                    elsif settings.prod_thumb_shape == 'tallest'
+                      assign product_aspect_ratio = 99
+                      for link in suggestions_menu.links
+                        for child_link in link.links
+                          if child_link.type == 'product_link' and child_link.object.featured_media.preview_image.aspect_ratio < product_aspect_ratio
+                            assign product_aspect_ratio = child_link.object.featured_media.preview_image.aspect_ratio
+                          endif
+                        endfor
+                        if link.type == 'product_link' and link.object.featured_media.preview_image.aspect_ratio < product_aspect_ratio
+                          assign product_aspect_ratio = link.object.featured_media.preview_image.aspect_ratio
+                        endif
+                      endfor
+                    else
+                      assign product_aspect_ratio = 0
+                      for link in suggestions_menu.links
+                        for child_link in link.links
+                          if child_link.type == 'product_link' and child_link.object.featured_media.preview_image.aspect_ratio > product_aspect_ratio
+                            assign product_aspect_ratio = child_link.object.featured_media.preview_image.aspect_ratio
+                          endif
+                        endfor
+                        if link.type == 'product_link' and link.object.featured_media.preview_image.aspect_ratio > product_aspect_ratio
+                          assign product_aspect_ratio = link.object.featured_media.preview_image.aspect_ratio
+                        endif
+                      endfor
+                    endif
+                  -%}
                   <div class="search-suggestions">
-                    <div class="search-suggestions__item-row">
+                    <div class="search-suggestions__item-row default_search">
                       {% for link in suggestions_menu.links %}
-                        {% if link.links != blank %}
+                        {% if link.object.products != blank %}
                           <div class="search-suggestions__item search-suggestions__item--with-row">
-                            <div class="search-suggestions__heading h5-style heading-font">
+                            {%- comment -%}
+                              <div class="search-suggestions__heading h5-style heading-font">
                               <a href="{{ link.url }}">{{ link.title | escape }}
                               </a>
-                            </div>
+                              </div>
+                            {%- endcomment -%}
                             <div class="search-suggestions__item-row">
-                              {% for child_link in link.links %}
+                              {% for child_link in link.object.products limit: 4 %}
                                 <div class="search-suggestions__item">
-                                  {% if child_link.type == 'collection_link' %}
-                                    {% render 'collection-block', collection: child_link.object, custom_aspect_ratio: collection_aspect_ratio, manual_image_load: true %}
-                                  {% elsif child_link.type == 'product_link' %}
-                                    {% render 'product-block', product: child_link.object, custom_aspect_ratio: product_aspect_ratio, manual_image_load: true %}
-                                  {% else %}
+                                  {%- comment -%}
+                                    {% if child_link.type == 'collection_link' %}
+                                    {% render 'collection-block', collection: child_link, custom_aspect_ratio: collection_aspect_ratio, manual_image_load: true %}
+                                    {% elsif child_link.type == 'product_link' %}
+
+                                    {% render 'product-block', product: child_link, custom_aspect_ratio: product_aspect_ratio, manual_image_load: true %}
+
+                                    {% else %}
                                     <a class="search-suggestions__link" href="{{ child_link.url }}">{{ child_link.title | escape }}
                                     </a>
-                                  {% endif %}
+                                    {% endif %}
+                                  {%- endcomment -%}
+                                  {% render 'product-block', product: child_link, custom_aspect_ratio: product_aspect_ratio, manual_image_load: true %}
                                 </div>
                               {% endfor %}
                             </div>
                           </div>
                         {% else %}
-                          <div class="search-suggestions__item">
-                            {% if link.type == 'collection_link' %}
+                          <div class="search-suggestions__item default_search_suggestions">
+                            {%- for child_link in link.object.products limit: 4 -%}
+                              {% if link.type == 'collection_link' %}
+                                {% render 'collection-block', collection: child_link, custom_aspect_ratio: collection_aspect_ratio, manual_image_load: true %}
+                              {% elsif link.type == 'product_link' %}
+                                {% render 'product-block', product: child_link, custom_aspect_ratio: product_aspect_ratio, manual_image_load: true %}
+                              {% else %}
+                                <a class="search-suggestions__link" href="{{ link.url }}">{{ link.title | escape }}
+                                </a>
+                              {% endif %}
+                            {%- endfor -%}
+                            {%- comment -%}
+                              {% if link.type == 'collection_link' %}
                               {% render 'collection-block', collection: link.object, custom_aspect_ratio: collection_aspect_ratio, manual_image_load: true %}
-                            {% elsif link.type == 'product_link' %}
+                              {% elsif link.type == 'product_link' %}
                               {% render 'product-block', product: link.object, custom_aspect_ratio: product_aspect_ratio, manual_image_load: true %}
-                            {% else %}
+                              {% else %}
                               <a class="search-suggestions__link" href="{{ link.url }}">{{ link.title | escape }}
                               </a>
-                            {% endif %}
+                              {% endif %}
+                            {%- endcomment -%}
+                            {%- comment -%}
+                              <div class="ruby-grid ruby-grid-lined desktop-only">
+                              <div class="ruby-row {% if forloop.first %}active{% endif%}">
+                              {% for product in collection.products limit: 4 %}
+                              <div class="ruby-col-3">
+                              {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
+                              <div class="product_image_wrapper">
+                              <a href="{{ product.url }}">
+                              {%- assign img_url = featured_image | img_url: '2x2' | replace: '_2x2.', '_{width}x.' -%}
+                              <img class="lazyload" data-src="{{ img_url }}" data-widths="[360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ featured_image.aspect_ratio }}" data-sizes="auto" alt="{{ featured_image.alt | escape }}">
+                              </a>
+                              </div>
+
+                              <div class="product_title">
+                              <h4>{{ product.title }}
+                              </h4>
+                              </div>
+
+                              {%- liquid
+                              assign product_vendor_handle = product.vendor | handle
+                              if collections[product_vendor_handle].handle == product_vendor_handle
+                              assign vendor_url = collections[product_vendor_handle].url
+                              else
+                              assign vendor_url = product.vendor | url_for_vendor
+                              endif
+                              -%}
+                              <div class="vendor lightly-spaced-row" {{ block.shopify_attributes }}>
+                              <!-- <span class="product-detail-label">{{ 'products.product.vendor' | t }}</span> -->
+                              {% if product != blank %}
+                              {{ product.vendor | link_to: vendor_url }}
+                              {% else %}
+                              {{ 'onboarding.product.vendor' | t }}
+                              {% endif %}
+                              </div>
+
+                              </div>
+                              {% endfor %}
+                              </div>
+                              </div>
+                            {%- endcomment -%}
                           </div>
                         {% endif %}
                       {% endfor %}
@@ -655,7 +702,7 @@
         "label": "Enable search",
         "default": true
       }, {
-        "type": "text",
+        "type": "richtext",
         "id": "search_suggestions_title",
         "label": "Suggestions title",
         "info": "Suggestions show when the search is opened."
