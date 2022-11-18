@@ -256,13 +256,14 @@
                     {% endif %}
                   </div>
                 </div>
-              {% endfor %}
+              {% endfor %}             
 
               <div class="cart-drawer-summary__notes">
                 <label class="cart-drawer-note-label" for="cart-drawer-summary-note">Add a note to your order:</label>
                 <textarea id="cart-drawer-summary-note" placeholder="How can we help you?" name="note" rows="10" cols="50">{{ cart.note }}</textarea>
               </div>
             </form>
+            {% render 'cart-product-recommendation' %}
           </div>
           <form class="cart-drawer-form cart-drawer-form--checkout cart-drawer-form--checkout--sticky-{{ section.settings.checkout_sticky_form }}" action="{{ routes.cart_url }}" method="post" data-has_recharge_subscriptions="{{has_recharge_subscriptions}}" data-checkout-domain="{{ shop.metafields.subscriptions.checkout_domain | default: 'checkout.rechargeapps.com' }}" data-permanent-domain="{{ shop.permanent_domain }}">
             <div class="cart-drawer-form--non-stick cart-drawer-summary__section">

@@ -686,3 +686,32 @@ const featureProductSubscriptionUtil = (function () {
 document.addEventListener('DOMContentLoaded', () => {
     featureProductSubscriptionUtil.EventHandler();
 })
+
+// theme.openDrawerCartQuickView = function () {
+//     var cartSummary = document.querySelector("#quick-view-product-drawer")
+//     cartSummary.classList.add("cart-drawer-open")
+//     $('body').addClass("cart-drawer-open")
+//     $('#cart-drawer-backdrop')
+//     .fadeIn(100)
+//     .on("click", theme.closeDrawerCart.bind(theme))
+// };
+
+// theme.closeDrawerCartQuickView = function () {
+//     var cartSummary = document.querySelector("#quick-view-product-drawer")
+//     cartSummary.classList.remove("cart-drawer-open")
+//     $('body').removeClass("cart-drawer-open")
+
+//     $('#cart-drawer-backdrop')
+//     .fadeOut(100)
+//     .off("click", theme.closeDrawerCart.bind(theme))
+// };
+
+
+
+var cartSummaryAddToCart = document.querySelector(".js-addtocart-btn")
+cartSummaryAddToCart.addEventListener('click', function(e) {
+    var cartSummary = document.querySelector("#quick-view-product-drawer")
+    cartSummary.classList.add("cart-drawer-open")
+    $('body').addClass("cart-drawer-open")
+    $('#cart-drawer-backdrop').fadeIn(100)
+})
