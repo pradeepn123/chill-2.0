@@ -1215,25 +1215,32 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
-          "1478526632860": {
-            "type": "announcement",
-            "settings": {
-              "text": "<p>Get 20% off on your first order <a href=\"\/collections\/shop-all\" title=\"SHOP\"><strong>GET IT NOW<\/strong><\/a><\/p>"
-            }
-          },
           "1478526632861": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "<p>Announce <a href=\"#\">something<\/a> here<\/p>"
+              "text": "<p>Spend over $25 get 15% off, all products + 1 Free 10mg gummies<\/p>"
+            }
+          },
+          "e4c440fa-3711-4545-8a77-f888d1611c6d": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>Spend over $50 get 25% off, all products + 2 Free 10mg gummies<\/p>"
+            }
+          },
+          "58f376fa-7f3f-4d1b-bc75-d9dbfce3dd4d": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>Spend over $100 get 50% off, all products + 3 Free 10mg gummies<\/p>"
             }
           }
         },
         "block_order": [
-          "1478526632860",
-          "1478526632861"
+          "1478526632861",
+          "e4c440fa-3711-4545-8a77-f888d1611c6d",
+          "58f376fa-7f3f-4d1b-bc75-d9dbfce3dd4d"
         ],
         "settings": {
+          "fixed_text": "Black Friday Deals",
           "announcement_bar_col": "#000000",
           "announcement_text_col": "#ffffff",
           "message_font_size": 14,

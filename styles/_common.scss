@@ -731,3 +731,95 @@ div#main-nav{
         font-size: 52px !important;
     }
 }
+
+// Announcement Bar Slick Slider Styles
+.Newannouncement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3d5a80;
+    color: #3d5a80;
+
+  &__inner{
+    .Newannouncement-slider{
+    .slick-list{
+        @media screen and (max-width: 1024px){
+            max-width: 50%;
+            margin: 0 auto;
+        }
+    }
+    .slick-slide{
+        text-align: center;
+        padding: 0;
+        .Newannouncement_box .Newannouncement_box-inner{
+            p{
+                padding: 0;
+                margin-top: 1em;
+                font-size: 16px;
+                font-weight: 600;
+                a{
+                text-decoration: underline;
+                text-underline-offset: 1px;
+                text-decoration-color: var(--link-underline);
+                text-decoration-thickness: 1px;
+                }
+            }
+        }
+      }
+    }    
+  }
+    &-slide{
+        padding:40px 20px;
+      color: white;
+    }
+}
+
+.announcement-bar{
+    .slick-prev:before{
+        color: #fff;
+        font-family: initial;
+        font-size: 15px;
+        color: #fff;
+        content: "<" !IMPORTANT;
+    }
+    .slick-next:after{
+        color: #fff;
+        font-family: initial;
+        font-size: 15px;
+        color: #fff;
+        content: ">" !IMPORTANT;
+    }
+    .container{
+        .announcement-bar__left{
+            p{
+                font-size: 16px;
+                font-weight: 600;
+                margin: 0;
+                a{
+                    text-decoration: underline;
+                    text-underline-offset: 1px;
+                    text-decoration-color: var(--link-underline);
+                    text-decoration-thickness: 1px;
+                }
+            }
+            @media screen and (max-width: 1023px){
+                &{
+                    display: none;
+                }
+            }
+        }
+         .announcement-bar__right{
+             .country_selector{
+                 width: 100%;
+             }
+         }
+    }
+    .announcement-bar__middle{
+        @media screen and (max-width: 768px) {
+            &{
+                width: 100%;
+                max-width: 100% !important;
+            }
+        }
+    }
+}

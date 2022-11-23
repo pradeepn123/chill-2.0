@@ -22,34 +22,29 @@
     {% endstyle %}
 
     <div class="container container--no-max">
-      <div class="announcement-bar__left">
-        {% if section.settings.show_social_icons %}
-          {% render 'social-icons', icon_setting: settings.social_custom_icon, icon_size: 'x30' %}
+      <div class="announcement-bar__left desktop-only">
+        {% if section.settings.fixed_text != blank %}
+        <p>
+          {{ section.settings.fixed_text }}
+        </p>
         {% endif %}
-        {%- if section.settings.show_country_selector == true -%}
-          {%- for block in section.blocks -%}
-            <div class="announcement{% unless forloop.first %} announcement--inactive{% endunless %}" {{ block.shopify_attributes }}>
-              <div class="announcement__text">{{ block.settings.text }}</div>
-            </div>
-          {%- endfor -%}
-        {%- endif -%}
       </div>
 
-      <div class="announcement-bar__middle desktop-only">
+      <div class="announcement-bar__middle">
         {%- if section.blocks.size > 0 -%}
-          <div class="announcement-bar__announcements">
-            {%- if section.settings.show_country_selector == false -%}
-              {%- for block in section.blocks -%}
-                <div class="announcement{% unless forloop.first %} announcement--inactive{% endunless %}" {{ block.shopify_attributes }}>
-                  <div class="announcement__text">{{ block.settings.text }}</div>
+            <div class="Newannouncement__inner">
+              <div class="Newannouncement-slider">
+                {% for block in section.blocks %}
+                <div class="Newannouncement-slide">
+                  <div class="Newannouncement_box">
+                    <div class="Newannouncement_box-inner">
+                        {{ block.settings.text }}
+                    </div>
+                  </div>
                 </div>
-              {%- endfor -%}
-            {%- endif -%}
-          </div>
-          <div class="announcement-bar__announcement-controller">
-            <button class="announcement-button announcement-button--previous notabutton" aria-label="{{ 'general.accessibility_labels.previous' | t | escape }}">{% render 'svg-chevron-left' %}</button>
-            <button class="announcement-button announcement-button--next notabutton" aria-label="{{ 'general.accessibility_labels.next' | t | escape }}">{% render 'svg-chevron-right' %}</button>
-          </div>
+                  {% endfor %}
+              </div>
+              </div>
         {%- endif -%}
       </div>
 
@@ -97,6 +92,11 @@
     "name": "Announcement bar",
     "class": "section-announcement-bar",
     "settings": [
+      {
+        "type": "text",
+        "id": "fixed_text",
+        "label": "Enter Left Text for Announcement Bar"
+      },
       {
         "type": "color",
         "id": "announcement_bar_col",
