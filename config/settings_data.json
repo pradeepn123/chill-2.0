@@ -1459,7 +1459,7 @@
           "continue_shopping_url": "shopify:\/\/collections\/shop-all",
           "shipping_policy_title": "Shipping Hours",
           "shipping_policy_content": "<p>The Chill CBD Fulfillment Center operates 9-4pm Monday through Friday and 8-12pm on Saturday. Closed Sundays<strong>.<\/strong>  All orders processed prior to 12pm will be shipped same day.<\/p><p>Orders originating outside the United States and all other inquiries email <a href=\"mailto:%20info@chill.com\" target=\"_blank\">info@chill.com<\/a>. We do not currently ship to Canada.<\/p><p>You will receive an email containing a tracking number once your package has been shipped from our Distribution Center.<\/p>",
-          "enable_promotion": false
+          "enable_promotion": true
         }
       }
     },
