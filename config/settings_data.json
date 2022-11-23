@@ -1232,12 +1232,19 @@
             "settings": {
               "text": "<p>Spend over $100 get 50% off, all products + 3 Free 10mg gummies<\/p>"
             }
+          },
+          "0bae46c1-b506-4fd4-abcf-c78161f13f66": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>Free shipping only for orders over $50 (after discount)<\/p>"
+            }
           }
         },
         "block_order": [
           "1478526632861",
           "e4c440fa-3711-4545-8a77-f888d1611c6d",
-          "58f376fa-7f3f-4d1b-bc75-d9dbfce3dd4d"
+          "58f376fa-7f3f-4d1b-bc75-d9dbfce3dd4d",
+          "0bae46c1-b506-4fd4-abcf-c78161f13f66"
         ],
         "settings": {
           "fixed_text": "Black Friday Deals",
