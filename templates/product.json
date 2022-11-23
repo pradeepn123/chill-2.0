@@ -60,6 +60,18 @@
             "size_chart_page": ""
           }
         },
+        "3102f34a-bede-4e71-913e-ac198794cf3f": {
+          "type": "accordion",
+          "settings": {
+            "title": "See Ingredients",
+            "icon": "",
+            "content": "<p>{{ product.metafields.settings.ingredients | metafield_tag }}<\/p>",
+            "test_result_link": "",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -76,15 +88,15 @@
             "size_chart_page": ""
           }
         },
-        "3102f34a-bede-4e71-913e-ac198794cf3f": {
-          "type": "accordion",
+        "630f2a51-da4e-4dbf-93d6-325c3ee1e383": {
+          "type": "richtext",
           "settings": {
-            "title": "See Ingredients",
+            "custom_class_product_page": "black_friday_sale_text",
+            "richtext": "<p>{{ product.metafields.custom.black_friday_sale_text | metafield_tag }}<\/p>",
             "icon": "",
-            "content": "<p>{{ product.metafields.settings.ingredients | metafield_tag }}<\/p>",
-            "test_result_link": "",
-            "page": "",
-            "open": false,
+            "icon_size": "small",
+            "enable_box": false,
+            "box_color": "#e0f4d5",
             "show_in_quickbuy": false
           }
         },
@@ -122,8 +134,9 @@
         "divider",
         "26d0afe5-d620-457e-89e4-f23bf6f1e94d",
         "variant_picker",
-        "buy_buttons",
         "3102f34a-bede-4e71-913e-ac198794cf3f",
+        "buy_buttons",
+        "630f2a51-da4e-4dbf-93d6-325c3ee1e383",
         "1fb67a9d-a0c3-48e7-b413-30ffa96c7b41",
         "a7013d3f-0653-4f9c-8d1b-aabe369293b7"
       ],
