@@ -710,8 +710,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 var cartSummaryAddToCart = document.querySelector(".js-addtocart-btn")
 cartSummaryAddToCart.addEventListener('click', function(e) {
-    var cartSummary = document.querySelector("#quick-view-product-drawer")
+    var cartSummary = document.querySelector(".quick-view-product-drawer")
     cartSummary.classList.add("cart-drawer-open")
     $('body').addClass("cart-drawer-open")
     $('#cart-drawer-backdrop').fadeIn(100)
+})
+
+var cartSummaryClose = document.querySelector('.quick-view-product__close')
+cartSummaryClose.addEventListener('click', function(e) {
+    var cartSummaryClose = document.querySelector(".quick-view-product-drawer")
+    cartSummaryClose.classList.remove("cart-drawer-open")
+    $('body').removeClass("cart-drawer-open")
+    // $('#cart-drawer-backdrop').fadeOut(100)
 })

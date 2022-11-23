@@ -1,4 +1,11 @@
-<div class="cart-drawer-recommendations" id="mini-cart__recommendations">
+{%- for product in recommendations.products -%}
+    {%- capture first_line_item_id -%}
+        {{product.id}}
+    {%- endcapture -%}
+{%- endfor -%}
+<div class="cart-drawer-recommendations" id="mini-cart__recommendations" 
+    data-section-id="{{ section.id }}" 
+    data-url="{{ routes.product_recommendations_url }}.json?product_id={{first_line_item_id}}&limit=4&intent=related">
     <div class="mini-cart__recommendations-inner">
         <p class="mini-cart__recommendations-heading heading heading--small">You may also like</p>
         <div class="scroller">
@@ -30,18 +37,40 @@
                 <div class="cart-product-item">
                     <div class="product-item__image-wrapper">
                         <a href="">
-                            <img src="https://cdn.shopify.com/s/files/1/0536/9115/4590/products/Chill-Shop-PouchStack-Mint2_300x.jpg?v=1665141063" alt="">
+                            <img src="https://cdn.shopify.com/s/files/1/0536/9115/4590/products/Chill-Shop-PouchBundle-MintPeachVanilla_720x.jpg" alt="">
                         </a>
                     </div>
                     <div class="product-item__info">
                         <div class="product-item-info-header">
-                            <a href="" class="product-item-meta__title">Variety Pack- CBD</a>
+                            <a href="" class="product-item-meta__title">CBD Pouch Variety Pack</a>
                             <p class="product-item__vendor">3 Cans | 150mg per can.</p>
                         </div>
                         <div class="product-item-price-info">
                             <div class="main-product-price">
                                 <div class="item-price">$19.99</div>
                                 <div class="compare-price">$19.99</div>
+                            </div>
+                            <button class="btn btn_add_to_cart js-addtocart-btn">+Option</button>                                                        
+                        </div>
+                    </div>
+                </div>
+                <!-- product-item loop ends here -->
+                <!-- product-item loop start here -->
+                <div class="cart-product-item">
+                    <div class="product-item__image-wrapper">
+                        <a href="">
+                            <img src="https://cdn.shopify.com/s/files/1/0536/9115/4590/products/Chill-Shop-Pouch-Peach_720x.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="product-item__info">
+                        <div class="product-item-info-header">
+                            <a href="" class="product-item-meta__title">Fresh Peach CBD Pouches</a>
+                            <p class="product-item__vendor">15 pouches | 10mg per pouch</p>
+                        </div>
+                        <div class="product-item-price-info">
+                            <div class="main-product-price">
+                                <div class="item-price">$7.99</div>
+                                <div class="compare-price">$16.99</div>
                             </div>
                             <button class="btn btn_add_to_cart js-addtocart-btn">+Option</button>                                                        
                         </div>
@@ -57,10 +86,50 @@
 
 
 <!-- quick-buy-drawer with product variant -->
-<div id="quick-view-product-drawer" class="quick-view-product-drawer cart-drawer-open">
+<div id="quick-view-product-drawer" class="quick-view-product-drawer">
     <div id="cart-drawer-backdrop" class="cart-drawer-backdrop"></div>
-    Hi
-    <a class="cart-drawer-summary__close toggle-cart-summary">
-        {% render 'svg-close' %}
-    </a>
+    <div class="cart-drawer-summary__header toggle-cart-drawer-summary cart-drawer-summary__section">
+        <h1 class="cart-drawer-summary__title">Choose Options</h1>
+        <a class="quick-view-product__close toggle-cart-summary">
+          {% render 'svg-close' %}
+        </a>
+    </div>
+    <div class="drawer__content">
+        <div class="drawer__quick-view__image-wrapper">
+            <a href="">
+                <img src="https://cdn.shopify.com/s/files/1/0536/9115/4590/products/Chill-Shop-PouchStack-Mint2_300x.jpg?v=1665141063" alt="">
+            </a>
+        </div>
+        <div class="drawer__quick-view__info">
+            <div class="drawer__quick-view-info-header">
+                <a href="" class="product-item-meta__title">Variety Pack- CBD</a>
+                <p class="product-item__vendor">3 Cans | 150mg per can.</p>
+            </div>
+            <div class="drawer__quick-view-price-info">
+                <div class="main-product-price">
+                    <div class="item-price">$19.99</div>
+                    <div class="compare-price">$19.99</div>
+                </div>
+            </div>
+            <div class="custom_button_info">
+                <button class="btn btn-primary custom_sub_button quick__view__addToCartBtn">
+                    <span>Add to cart</span>
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script>
+    // fetch(window.Shopify.routes.root + "recommendations/products.json?product_id=6579331989662&limit=4&intent=related")
+    // .then(response => response.json())
+    // .then(({ products }) => {
+    //     if (products.length > 0) {
+    //     const firstRecommendedProduct = products[0];
+
+    //     alert(
+    //         `The title of the first recommended product is: ${firstRecommendedProduct.title}`
+    //     );
+    //     }
+    // });
+</script>
