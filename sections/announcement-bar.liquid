@@ -19,6 +19,9 @@
         --link-underline: {{ section.settings.announcement_text_col | color_modify: "alpha", 0.6 }};
         --announcement-font-size: {{ section.settings.message_font_size }}px;
       }
+      .announcement-bar__middle .Newannouncement-slider .Newannouncement-slide .Newannouncement_box .Newannouncement_box-inner p{
+        color: {{ section.settings.sliding_text_col }};
+      }
     {% endstyle %}
 
     <div class="container container--no-max">
@@ -108,6 +111,12 @@
         "id": "announcement_text_col",
         "label": "Text",
         "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "sliding_text_col",
+        "label": "Sliding Text Color",
+        "default": "#fff"
       },
       {
         "type": "range",
