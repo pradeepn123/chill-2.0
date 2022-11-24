@@ -104,6 +104,7 @@
           "settings": {
             "announcement_bar_col": "#f7f1f0",
             "announcement_text_col": "#212121",
+            "sliding_text_col": "#fff",
             "show_social_icons": true
           }
         },
@@ -321,6 +322,7 @@
           "settings": {
             "announcement_bar_col": "#202020",
             "announcement_text_col": "#ffffff",
+            "sliding_text_col": "#fff",
             "show_social_icons": true
           }
         },
@@ -665,6 +667,7 @@
           "settings": {
             "announcement_bar_col": "#001d7c",
             "announcement_text_col": "#ffffff",
+            "sliding_text_col": "#fff",
             "show_social_icons": true
           }
         },
@@ -796,6 +799,7 @@
           "settings": {
             "announcement_bar_col": "#000000",
             "announcement_text_col": "#ffffff",
+            "sliding_text_col": "#fff",
             "show_social_icons": true
           }
         },
@@ -1045,7 +1049,7 @@
     "cart_show_free_shipping_threshold": true,
     "free_shipping_limit": "50",
     "product_currency_code_enabled": false,
-    "enable_domain_redirect": false,
+    "enable_domain_redirect": true,
     "sections": {
       "header": {
         "type": "header",
@@ -1250,6 +1254,7 @@
           "fixed_text": "🔥 Black Friday Deals",
           "announcement_bar_col": "#000000",
           "announcement_text_col": "#ffffff",
+          "sliding_text_col": "#ffac9a",
           "message_font_size": 14,
           "show_social_icons": false,
           "menu": "",
@@ -1486,6 +1491,18 @@
         "disabled": false,
         "settings": {
           "show_preview_data": true
+        }
+      },
+      "7990132695519299173": {
+        "type": "shopify:\/\/apps\/simple-affiliate\/blocks\/sa-tracker\/da6b7ee2-2e27-43e4-9184-0df8dc5be07a",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
         }
       }
     }

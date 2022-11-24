@@ -60,18 +60,6 @@
             "size_chart_page": ""
           }
         },
-        "3102f34a-bede-4e71-913e-ac198794cf3f": {
-          "type": "accordion",
-          "settings": {
-            "title": "See Ingredients",
-            "icon": "",
-            "content": "<p>{{ product.metafields.settings.ingredients | metafield_tag }}<\/p>",
-            "test_result_link": "",
-            "page": "",
-            "open": false,
-            "show_in_quickbuy": false
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -124,6 +112,18 @@
             "show_in_quickbuy": false
           }
         },
+        "3102f34a-bede-4e71-913e-ac198794cf3f": {
+          "type": "accordion",
+          "settings": {
+            "title": "See Ingredients",
+            "icon": "",
+            "content": "<p>{{ product.metafields.settings.ingredients | metafield_tag }}<\/p>",
+            "test_result_link": "",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
         "1fb67a9d-a0c3-48e7-b413-30ffa96c7b41": {
           "type": "accordion",
           "settings": {
@@ -158,11 +158,11 @@
         "divider",
         "26d0afe5-d620-457e-89e4-f23bf6f1e94d",
         "variant_picker",
-        "3102f34a-bede-4e71-913e-ac198794cf3f",
         "buy_buttons",
         "630f2a51-da4e-4dbf-93d6-325c3ee1e383",
         "eb90c5a1-a811-417c-acbd-bde693f1eb0e",
         "e80884ff-38fb-4d81-8752-01b6d8753d5d",
+        "3102f34a-bede-4e71-913e-ac198794cf3f",
         "1fb67a9d-a0c3-48e7-b413-30ffa96c7b41",
         "a7013d3f-0653-4f9c-8d1b-aabe369293b7"
       ],
