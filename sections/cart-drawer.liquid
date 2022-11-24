@@ -8,7 +8,10 @@
     {% for block in section.blocks %}
       {% for blockSetting in block.settings %}
         {% assign product = all_products[block.settings[blockSetting]] %}
-        theme.promotionalProducts[{{block.type | replace : "promotion-", ""}}].push({productId: {{ product.id | json }}, variantId: {{ product.first_available_variant.id | json }}, quantity: {{ blockSetting | replace : "product-", "" }}}){% endfor %}{% endfor %}{% endif %}
+        theme.promotionalProducts[{{block.type | replace : "promotion-", ""}}].push({productId: {{ product.id | json }}, variantId: {{ product.first_available_variant.id | json }}, quantity: {{ blockSetting | replace : "product-", "" }}})
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
 </script>
 
 {% if settings.cart_type contains 'drawer' and template != 'cart' %}
@@ -120,7 +123,7 @@
                     {% assign has_subscriptions = true %}
                     {% assign selected_shipping_interval_frequency = p.last %}
                   {% endif %}
-                  {% if p.first == 'Product Type' and p.last == 'Promotional' %}
+                  {% if p.first == 'Product Type' and p.last == 'FREE' %}
                     {% assign promotionalLine = true %}
                   {% endif %}
                 {% endfor %}
@@ -194,7 +197,7 @@
                             {% endif %}
                           </div>
                           {% if promotionalLine %}
-                            <div class="line-promotional-banner">Promotional</div>
+                            <div class="line-promotional-banner">Free</div>
                           {% endif %}
                         </div>
                         {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' and item.variant.inventory_quantity <= item.quantity %}
