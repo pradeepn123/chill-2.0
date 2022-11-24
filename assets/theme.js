@@ -5774,18 +5774,15 @@
         if (this.cartRefreshXhr) {
           this.cartRefreshXhr.abort();
         }
-        $.getJSON(theme.routes.cart_url, function(cart) {
+        this.cartRefreshXhr = $.getJSON(theme.routes.cart_url, function(cart) {
           let promotionalProducts;
-          const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties["Product Type"] == "Promotional")
-          const promotionalLineItemPrice = promotionalLineItems.reduce(function(acc, line) {
-            return line.original_line_price + acc
-          }, 0)
+          const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties && lineItem.properties["Product Type"] == "FREE")          
 
-          if (cart.original_total_price - promotionalLineItemPrice > 10000) {
+          if (cart.items_subtotal_price > 10000) {
             promotionalProducts = theme.promotionalProducts[100]
-          } else if (cart.original_total_price - promotionalLineItemPrice > 5000) {
+          } else if (cart.items_subtotal_price > 5000) {
             promotionalProducts = theme.promotionalProducts[50]
-          } else if (cart.original_total_price - promotionalLineItemPrice > 2500) {
+          } else if (cart.items_subtotal_price > 2500) {
             promotionalProducts = theme.promotionalProducts[25]
           }
 
@@ -5818,7 +5815,7 @@
                       id: product.variantId,
                       quantity: product.quantity,
                       properties: {
-                        "Product Type": "Promotional"
+                        "Product Type": "FREE"
                       }
                     }
                   }
@@ -5833,7 +5830,7 @@
 
       postRefreshCartDependentContent: function postRefreshCartDependentContent() {
         // fetch new html for the page
-        this.cartRefreshXhr = $.ajax({
+        $.ajax({
           type: 'GET',
           url: theme.routes.cart_url,
           success: function (data) {
@@ -6097,16 +6094,14 @@
 
         $.getJSON(theme.routes.cart_url + ".js", function(cart) {
           let promotionalProducts;
-          const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties["Product Type"] == "Promotional")
-          const promotionalLineItemPrice = promotionalLineItems.reduce(function(acc, line) {
-            return line.original_line_price + acc
-          }, 0)
+          const paidProducts = cart.items.filter(lineItem => !lineItem.properties || lineItem.properties["Product Type"] != "FREE")
+          const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties && lineItem.properties["Product Type"] == "FREE")          
 
-          if (cart.original_total_price - promotionalLineItemPrice > 10000) {
+          if (cart.items_subtotal_price > 10000) {
             promotionalProducts = theme.promotionalProducts[100]
-          } else if (cart.original_total_price - promotionalLineItemPrice > 5000) {
+          } else if (cart.items_subtotal_price > 5000) {
             promotionalProducts = theme.promotionalProducts[50]
-          } else if (cart.original_total_price - promotionalLineItemPrice > 2500) {
+          } else if (cart.items_subtotal_price > 2500) {
             promotionalProducts = theme.promotionalProducts[25]
           }
 
@@ -6119,7 +6114,7 @@
             })
           }
 
-          $.ajax({
+          this.cartRefreshXhr = $.ajax({
             type: 'POST',
             url: theme.routes.cart_update_url + '.js',
             data: {
@@ -6127,7 +6122,7 @@
             },
             dataType: 'json',
             success: function success(response) {
-              if (promotionalProducts && promotionalProducts.length > 0) {
+              if (promotionalProducts && promotionalProducts.length > 0 && paidProducts.length > 0) {
                 // Add the Free products to cart
                 let lineItems = {
                   items: promotionalProducts.map(product => {
@@ -6135,7 +6130,7 @@
                       id: product.variantId,
                       quantity: product.quantity,
                       properties: {
-                        "Product Type": "Promotional"
+                        "Product Type": "FREE"
                       }
                     }
                   }
@@ -6149,7 +6144,7 @@
       },
       postRefreshCartDependentContent: function postRefreshCartDependentContent() {
         // fetch new html for the page
-        this.cartRefreshXhr = $.ajax({
+        $.ajax({
           type: 'GET',
           url: location.origin + '?sections=cart-drawer,header',
           success: function (data) {
