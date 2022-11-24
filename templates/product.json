@@ -76,6 +76,42 @@
             "size_chart_page": ""
           }
         },
+        "630f2a51-da4e-4dbf-93d6-325c3ee1e383": {
+          "type": "richtext",
+          "settings": {
+            "custom_class_product_page": "black_friday_sale_text",
+            "richtext": "<p>Spend over $25 get 15% off, all products + 1 Free 10mg gummies<\/p>",
+            "icon": "",
+            "icon_size": "small",
+            "enable_box": false,
+            "box_color": "#e0f4d5",
+            "show_in_quickbuy": false
+          }
+        },
+        "eb90c5a1-a811-417c-acbd-bde693f1eb0e": {
+          "type": "richtext",
+          "settings": {
+            "custom_class_product_page": "black_friday_sale_text",
+            "richtext": "<p>Spend over $50 get 25% off, all products + 2 Free 10mg gummies<\/p>",
+            "icon": "",
+            "icon_size": "small",
+            "enable_box": false,
+            "box_color": "#e0f4d5",
+            "show_in_quickbuy": false
+          }
+        },
+        "e80884ff-38fb-4d81-8752-01b6d8753d5d": {
+          "type": "richtext",
+          "settings": {
+            "custom_class_product_page": "black_friday_sale_text",
+            "richtext": "<p>Spend over $100 get 50% off, all products + 3 Free 10mg gummies<\/p>",
+            "icon": "",
+            "icon_size": "small",
+            "enable_box": false,
+            "box_color": "#e0f4d5",
+            "show_in_quickbuy": false
+          }
+        },
         "3102f34a-bede-4e71-913e-ac198794cf3f": {
           "type": "accordion",
           "settings": {
@@ -123,6 +159,9 @@
         "26d0afe5-d620-457e-89e4-f23bf6f1e94d",
         "variant_picker",
         "buy_buttons",
+        "630f2a51-da4e-4dbf-93d6-325c3ee1e383",
+        "eb90c5a1-a811-417c-acbd-bde693f1eb0e",
+        "e80884ff-38fb-4d81-8752-01b6d8753d5d",
         "3102f34a-bede-4e71-913e-ac198794cf3f",
         "1fb67a9d-a0c3-48e7-b413-30ffa96c7b41",
         "a7013d3f-0653-4f9c-8d1b-aabe369293b7"
