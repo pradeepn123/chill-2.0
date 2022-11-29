@@ -129,20 +129,6 @@
                         }
                     }
                 }
-                .black_friday_sale_text{
-                    border-radius: 4rem;
-                    font-size: 16px;
-                    font-weight: 900;
-                    font-family: "Open Sans", sans-serif;
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    color: red;
-                    font-style: italic;
-                    &:last-child{
-                        margin-bottom: 25px;
-                    }
-                }
                 .title-row{
                     .title{
                         font-size: 24px;
@@ -251,11 +237,6 @@
                     }
                 }
                 .buy-buttons-row{
-                    @media screen and (max-width: 480px){
-                        &{
-                            margin-bottom: 0;
-                        }
-                    }
                     .subscription_main_title{
                         font-size: 16px;
                         color: #000000;
@@ -353,12 +334,7 @@
                         margin-bottom: 40px;
                         @media(min-width:768px){
                             margin-bottom: 0px;
-                        }
-                         @media screen and (max-width: 480px){
-                            &{
-                                margin-bottom: 20px;
-                            }
-                        }
+                        } 
                         .button{
                             border-radius: 4rem;
                             font-size: 20px;
