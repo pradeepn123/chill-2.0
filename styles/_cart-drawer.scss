@@ -563,6 +563,10 @@ body.cart-drawer-open {
         text-align: center;
         z-index: 9999999;
     }
+    .container{
+        padding: 0;
+        max-width: none;
+    }
     .mini-cart__recommendations-inner {
         @media(min-width:1200px){
             margin: 0;
