@@ -104,7 +104,6 @@
           "settings": {
             "announcement_bar_col": "#f7f1f0",
             "announcement_text_col": "#212121",
-            "sliding_text_col": "#fff",
             "show_social_icons": true
           }
         },
@@ -322,7 +321,6 @@
           "settings": {
             "announcement_bar_col": "#202020",
             "announcement_text_col": "#ffffff",
-            "sliding_text_col": "#fff",
             "show_social_icons": true
           }
         },
@@ -667,7 +665,6 @@
           "settings": {
             "announcement_bar_col": "#001d7c",
             "announcement_text_col": "#ffffff",
-            "sliding_text_col": "#fff",
             "show_social_icons": true
           }
         },
@@ -799,7 +796,6 @@
           "settings": {
             "announcement_bar_col": "#000000",
             "announcement_text_col": "#ffffff",
-            "sliding_text_col": "#fff",
             "show_social_icons": true
           }
         },
@@ -1428,18 +1424,21 @@
         "blocks": {
           "a12d5a57-5bc2-4e12-9906-561f787d9e76": {
             "type": "promotion-25",
+            "disabled": true,
             "settings": {
               "product-1": "chill-cbd-gummies-10mg-1"
             }
           },
           "0e59d448-8c37-4a93-aa9d-9b45cf15d06c": {
             "type": "promotion-50",
+            "disabled": true,
             "settings": {
               "product-2": "chill-cbd-gummies-10mg-1"
             }
           },
           "56e5df1e-27f3-480e-84c3-72288b009432": {
             "type": "promotion-100",
+            "disabled": true,
             "settings": {
               "product-1": "chill-cbd-gummies-10mg",
               "product-2": "chill-cbd-gummies-10mg-1"
@@ -1455,7 +1454,7 @@
           "continue_shopping_url": "shopify:\/\/collections\/shop-all",
           "shipping_policy_title": "Shipping Hours",
           "shipping_policy_content": "<p>The Chill CBD Fulfillment Center operates 9-4pm Monday through Friday and 8-12pm on Saturday. Closed Sundays<strong>.<\/strong>  All orders processed prior to 12pm will be shipped same day.<\/p><p>Orders originating outside the United States and all other inquiries email <a href=\"mailto:%20info@chill.com\" target=\"_blank\">info@chill.com<\/a>. We do not currently ship to Canada.<\/p><p>You will receive an email containing a tracking number once your package has been shipped from our Distribution Center.<\/p>",
-          "enable_promotion": true
+          "enable_promotion": false
         }
       }
     },

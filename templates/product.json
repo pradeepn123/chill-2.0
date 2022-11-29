@@ -81,7 +81,7 @@
           "settings": {
             "title": "See Ingredients",
             "icon": "",
-            "content": "<p>{{ product.metafields.settings.ingredients | metafield_tag }}</p>",
+            "content": "<p>{{ product.metafields.settings.ingredients | metafield_tag }}<\/p>",
             "test_result_link": "",
             "page": "",
             "open": false
