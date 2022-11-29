@@ -104,7 +104,6 @@
           "settings": {
             "announcement_bar_col": "#f7f1f0",
             "announcement_text_col": "#212121",
-            "sliding_text_col": "#fff",
             "show_social_icons": true
           }
         },
@@ -322,7 +321,6 @@
           "settings": {
             "announcement_bar_col": "#202020",
             "announcement_text_col": "#ffffff",
-            "sliding_text_col": "#fff",
             "show_social_icons": true
           }
         },
@@ -667,7 +665,6 @@
           "settings": {
             "announcement_bar_col": "#001d7c",
             "announcement_text_col": "#ffffff",
-            "sliding_text_col": "#fff",
             "show_social_icons": true
           }
         },
@@ -799,7 +796,6 @@
           "settings": {
             "announcement_bar_col": "#000000",
             "announcement_text_col": "#ffffff",
-            "sliding_text_col": "#fff",
             "show_social_icons": true
           }
         },
@@ -1219,42 +1215,19 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
-          "1478526632861": {
+          "2e9b0b00-d8fb-4143-be2d-eefe5fb293f5": {
             "type": "announcement",
             "settings": {
-              "text": "<p>Spend over $25 get 15% off, all products + 1 Free 10mg gummies<\/p>"
-            }
-          },
-          "e4c440fa-3711-4545-8a77-f888d1611c6d": {
-            "type": "announcement",
-            "settings": {
-              "text": "<p>Spend over $50 get 25% off, all products + 2 Free 10mg gummies<\/p>"
-            }
-          },
-          "58f376fa-7f3f-4d1b-bc75-d9dbfce3dd4d": {
-            "type": "announcement",
-            "settings": {
-              "text": "<p>Spend over $100 get 50% off, all products + 3 Free 10mg gummies<\/p>"
-            }
-          },
-          "0bae46c1-b506-4fd4-abcf-c78161f13f66": {
-            "type": "announcement",
-            "settings": {
-              "text": "<p>Free shipping only for orders over $50 (after discount)<\/p>"
+              "text": "<p>Get 10% off on your first order <a href=\"\/collections\/shop-all\" title=\"\/collections\/shop-all\"><strong>GET IT NOW<\/strong><\/a><\/p>"
             }
           }
         },
         "block_order": [
-          "1478526632861",
-          "e4c440fa-3711-4545-8a77-f888d1611c6d",
-          "58f376fa-7f3f-4d1b-bc75-d9dbfce3dd4d",
-          "0bae46c1-b506-4fd4-abcf-c78161f13f66"
+          "2e9b0b00-d8fb-4143-be2d-eefe5fb293f5"
         ],
         "settings": {
-          "fixed_text": "🔥 Cyber Monday Deals",
           "announcement_bar_col": "#000000",
           "announcement_text_col": "#ffffff",
-          "sliding_text_col": "#ffac9a",
           "message_font_size": 14,
           "show_social_icons": false,
           "menu": "",

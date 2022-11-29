@@ -683,21 +683,6 @@ const featureProductSubscriptionUtil = (function () {
     };
 })();
 
-const AnnouncementBarSlider = function(){
-    $(".Newannouncement-slider").slick({
-      autoplay: true,
-      autoplaySpeed: 5000,
-      speed: 600,
-      draggable: true,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      dots: false,
-    });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     featureProductSubscriptionUtil.EventHandler();
-    AnnouncementBarSlider();
 })
