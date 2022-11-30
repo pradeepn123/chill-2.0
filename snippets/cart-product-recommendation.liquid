@@ -1,60 +1,61 @@
-{% assign uniqueProductIdsString= cart.items | map: 'product_id'| uniq | split: ", " | first | remove_first: "[" %}
+{% assign uniqueProductIdsString= cart.items | map: 'product_id'| uniq | split: ", " | first | remove_first: "[" | remove_last: "]" %}
 
 <div class="cart-drawer-recommendations" id="mini-cart__recommendations" 
     data-section-id="{{ section.id }}" 
     data-url="{{ routes.product_recommendations_url }}?section_id=template--16053096448158__recommendations&product_id={{uniqueProductIdsString}}&limit=4&intent=related">    
     <div class="container">        
         <div class="mini-cart__recommendations-inner">
-            <p class="mini-cart__recommendations-heading heading heading--small">You may also like</p>
-            {%- if recommendations.performed? -%}
-                <div id="product-recommendations">
-                    {%- if recommendations.products_count > 0 -%}
-                    {% if recommendations.intent == 'related' %}
-                        <h2>You may also like</h2>
-                    {% elsif recommendations.intent == 'complementary' %}
-                        <h2>Pair it with</h2>
-                    {% endif %}
-
-                    <ul>
-                        {%- for product in recommendations.products -%}
-                        <li class="grid__item small--one-half medium-up--one-quarter">
-                            <a href="{{ product.url }}">
-                            <span>{{ product.title }}</span>
-                            <span>{{ product.price | money }}</span>
-                            </a>
-                        </li>
-                        {%- endfor -%}
-                    </ul>
-                    {%- endif -%}
-                </div>
-            {%- endif -%}
+            <p class="mini-cart__recommendations-heading heading heading--small">You may also like</p>           
             <div class="scroller">
                 <div class="scroller__inner">
                     <div class="mini-cart__recommendations-list">
                         {%- for product in recommendations.products -%}
-                            <!-- product-item loop start here -->
-                            <div class="cart-product-item">
-                                <div class="product-item__image-wrapper">
-                                    <a href="">
-                                        <img src="https://cdn.shopify.com/s/files/1/0536/9115/4590/products/Chill-Shop-PouchStack-Mint2_300x.jpg?v=1665141063" alt="">
-                                    </a>
+                            {{ product.title}}
+                        {%- endfor -%}
+                        <!-- product-item loop start here -->
+                        <div class="cart-product-item">
+                            <div class="product-item__image-wrapper">
+                                <a href="">
+                                    <img src="https://cdn.shopify.com/s/files/1/0536/9115/4590/products/Chill-Shop-PouchStack-Mint2_300x.jpg?v=1665141063" alt="">
+                                </a>
+                            </div>
+                            <div class="product-item__info">
+                                <div class="product-item-info-header">
+                                    <a href="" class="product-item-meta__title">{{product.title}}</a>
+                                    <p class="product-item__vendor">3 Cans | 150mg per can.</p>
                                 </div>
-                                <div class="product-item__info">
-                                    <div class="product-item-info-header">
-                                        <a href="" class="product-item-meta__title">{{product.title}}</a>
-                                        <p class="product-item__vendor">3 Cans | 150mg per can.</p>
+                                <div class="product-item-price-info">
+                                    <div class="main-product-price">
+                                        <div class="item-price">$19.99</div>
+                                        <div class="compare-price">$19.99</div>
                                     </div>
-                                    <div class="product-item-price-info">
-                                        <div class="main-product-price">
-                                            <div class="item-price">$19.99</div>
-                                            <div class="compare-price">$19.99</div>
-                                        </div>
-                                        <button class="btn btn_add_to_cart">+ADD</button>
-                                    </div>
+                                    <button class="btn btn_add_to_cart">+ADD</button>
                                 </div>
                             </div>
-                            <!-- product-item loop ends here -->                        
-                        {%- endfor -%}
+                        </div>
+                        <!-- product-item loop ends here -->
+                        <!-- product-item loop start here -->
+                        <div class="cart-product-item">
+                            <div class="product-item__image-wrapper">
+                                <a href="">
+                                    <img src="https://cdn.shopify.com/s/files/1/0536/9115/4590/products/Chill-Shop-PouchStack-Mint2_300x.jpg?v=1665141063" alt="">
+                                </a>
+                            </div>
+                            <div class="product-item__info">
+                                <div class="product-item-info-header">
+                                    <a href="" class="product-item-meta__title">{{product.title}}</a>
+                                    <p class="product-item__vendor">3 Cans | 150mg per can.</p>
+                                </div>
+                                <div class="product-item-price-info">
+                                    <div class="main-product-price">
+                                        <div class="item-price">$19.99</div>
+                                        <div class="compare-price">$19.99</div>
+                                    </div>
+                                    <button class="btn btn_add_to_cart js-addtocart-btn">+ADD</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product-item loop ends here -->
                     </div>
                 </div>
             </div>
