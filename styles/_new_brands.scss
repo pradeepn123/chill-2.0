@@ -16,7 +16,7 @@
             }
         }
         
-        .logo_area img{
+        .logo_area .logo_image{
             border: 4px solid #FFFFFF;
             border-radius: 50%;
             width: 250px;
@@ -38,7 +38,7 @@
             margin: 30px auto 60px;
             .description_text{
                 margin-left: 15%;
-                h1 p{
+                h1{
                     font-size: 24px;
                     font-weight: 800;
                 }
@@ -54,7 +54,6 @@
                 .brand_learn_more_btn{
                     border-radius: 30px;
                     width: 166px;
-                    margin-right: 20px;
                     font-weight: bold;
                     a{
                         font-size: 16px;
@@ -122,15 +121,30 @@
             // max-height: 30%;
             max-width: 1600px;
             margin: auto;
-            height: auto;
-            
+            height: 100%;
+            position: relative;
             video{
                 margin: auto;
                 height: 100%;
                 object-fit: cover;
                 transition: all ease-in .4s;
             }
+            svg{
+                width: 10%;
+                height: 15%;
+                position: absolute;
+                left: 0%;
+                right: 0%;
+                top: 0%;
+                bottom: 0%;
+                margin: auto;
+                background-size: contain;
+                background-position: center;
+            }
+            }
+        
         }
+        
         
         .close_icon{
             text-align: center;
@@ -155,8 +169,17 @@
             // vertical-align: middle;
 
         }
+        
+        @media (max-width: 767px){
+            width: 100%;
+            top: 15%;
+            height: 240px;
+        }
     }
 }
+// .popup_overlay.active{
+//     display: block;
+// }
 #shopify-section-template--16048954769566__main .utility-bar{
     padding: 38px 0;
 }
