@@ -100,22 +100,7 @@
     </div>
 </div>
 
-<script>
-    // let url = document.getElementById("mini-cart__recommendations").getAttribute('data-url')    
-    // var productRecommendationsSection = document.querySelector("#mini-cart__recommendations.cart-drawer-recommendations");
- 
-    // fetch(url)
-    // .then(response => response.json())
-    // .then(({ products }) => {
-    //         if (products.length > 0) {             
-    //             for (var i in products) {
-    //                 console.log(products)       
-    //                 console.log(products[i].title)                   
-    //             }
-    //         }
-    //     }
-    // );
-
+<script>    
     const productRecommendationsSection = document.querySelector('.cart-drawer-recommendations');  
     let url = document.getElementById("mini-cart__recommendations").getAttribute('data-url') 
     fetch(url)
@@ -128,6 +113,5 @@
         if (recommendations && recommendations.innerHTML.trim().length) {
             productRecommendationsSection.innerHTML = recommendations.innerHTML;
         }
-    });
-    
+    });    
 </script>
