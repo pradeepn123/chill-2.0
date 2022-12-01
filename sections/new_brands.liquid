@@ -57,80 +57,98 @@
     endfor
   endif
 -%}
-
-    {% for item in collection.metafields.settings.brand_details.value['brand_details'] %}
-
-
-
-      <div class="collection_banner_wrapper">
-        <div class="new_brand_banner_container">
-          <div class="banner_image desktop-only" style="background: url('{{ item.banner_image }}') no-repeat; background-size: cover; background-position: {{ section.settings.banner_image_position_desktop }}"></div>
-
-          <div class="banner_image_mobile" style="background: url('{{ item.banner_image  }}') no-repeat; background-size: cover; background-position: {{ section.settings.banner_image_position_mobile }}"></div>
-
-          <div class="logo_area">
-            <img class="logo_image" src="{{ item.logo_image  }}" alt="logo">
-          </div>
-          {% style %}
-            .logo_image {
-              background: {{ section.settings.logo_image_bg_color }};
-            }
-          {% endstyle%}
-          <div class="new_brand_description">
-            <div class="description_text">
-              <h1>{{ item.brand_name }}</h1>
-              <p>{{ item.description | strip_html | truncatewords: 400, '' }}</p>
-              <div class="banner_buttons">
-                {% if item.brand_page_link != blank %}
-                  <button class="btn brand_learn_more_btn" style="background: {{ section.settings.learn_more_button_bg_color }}">
-                    <a href="{{ item.brand_page_link }}" style="color: {{ section.settings.learn_more_button_text_color }}">Learn more</a>
-                  </button>
-                {% endif %}
-                {% if item.video_link != blank %}
-                  <button class="btn brand_video_btn" style="color: {{ section.settings.video_button_text_color }}; border: 2px solid {{ section.settings.video_button_color }};">
-                    Watch
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="20" viewBox="0 0 13 20">
-                      <path id="Polygon_3" data-name="Polygon 3" d="M10,0,20,13H0Z" transform="translate(13) rotate(90)" fill="#9792e4" opacity="0.801"/>
-                    </svg>
-                  </button>
-                {% endif %}
+    {% if collection.metafields.settings.brand_details.value['brand_details'] != blank %}
+      {% for item in collection.metafields.settings.brand_details.value['brand_details'] %}
+        <div class="collection_banner_wrapper">
+          <div class="new_brand_banner_container">
+            <div class="banner_image desktop-only" style="background: url('{{ item.banner_image }}') no-repeat; background-size: cover; background-position: {{ section.settings.banner_image_position_desktop }}"></div>
+            {%- if item.banner_image_mobile != blank -%}
+              <div class="banner_image_mobile" style="background: url('{{ item.banner_image_mobile  }}') no-repeat; background-size: cover; background-position: {{ item.banner_image_position_on_mobile }}"></div>
+            {% else %}
+              <div class="banner_image_mobile" style="background: url('{{ item.banner_image  }}') no-repeat; background-size: cover; background-position: {{ item.banner_image_position_on_mobile }}"></div>
+            {%- endif -%}
+            <div class="logo_area">
+              {% if item.logo_image != blank %}
+                <img class="logo_image" src="{{ item.logo_image  }}" alt="logo">
+              {% else %}
+                <div class="logo_image"></div>
+              {% endif %}
+            </div>
+            {% style %}
+              .logo_image {
+                background: {{ section.settings.logo_image_bg_color }};
+              }
+            {% endstyle%}
+            <div class="new_brand_description">
+              <div class="description_text">
+                <h1>{{ item.brand_name }}</h1>
+                <p>{{ item.description | strip_html | truncatewords: 400, '' }}</p>
+                <div class="banner_buttons">
+                  {% if item.learn_more_button_link != blank %}
+                    <button class="btn brand_learn_more_btn" style="background: {{ section.settings.learn_more_button_bg_color }}; {% if item.video_link != blank %} margin-right: 20px; {% endif %}">
+                      <a href="{{ item.learn_more_button_link }}" style="color: {{ section.settings.learn_more_button_text_color }}">Learn more</a>
+                    </button>
+                  {% endif %}
+                  {% if item.video_link != blank %}
+                    <button class="btn brand_video_btn" style="color: {{ section.settings.video_button_text_color }}; border: 2px solid {{ section.settings.video_button_color }};">
+                      Watch
+                      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="20" viewBox="0 0 13 20">
+                        <path id="Polygon_3" data-name="Polygon 3" d="M10,0,20,13H0Z" transform="translate(13) rotate(90)" fill="#9792e4" opacity="0.801"/>
+                      </svg>
+                    </button>
+                  {% endif %}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      {%- comment -%}
-        Video popup
-      {%- endcomment -%}
-      <div class="popup_overlay" id="play_popup" style="display: none;">
-        <div class="play_overlay_popup">
-          <div class="video_popup">
-            <video id="a" width="100%" itemtype="2" controls>
-              <source src="{{ collection.metafields.settings.brand_details.value['brand_details'].video_link }}" type="video/mp4">
-            </video>
-          </div>
-          <div class="close_icon" onclick="closePopup();">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
-              <defs>
-                <clipPath id="clip-Artboard_1">
-                  <rect width="56" height="56"/>
-                </clipPath>
-              </defs>
-              <g id="Artboard_1" data-name="Artboard – 1" clip-path="url(#clip-Artboard_1)">
-                <g id="Group_7970" data-name="Group 7970" transform="translate(-17898.465 -6550.465)">
-                  <g id="Group_7892" data-name="Group 7892" transform="translate(17898 6550)">
-                    <circle id="Ellipse_95" data-name="Ellipse 95" cx="28" cy="28" r="28" transform="translate(0.465 0.465)" fill="#fff"/>
+        {%- comment -%}
+          Video popup
+        {%- endcomment -%}
+        <div class="popup_overlay" id="play_popup" style="display: none;">
+          <div class="play_overlay_popup">
+            <div class="video_popup">
+              <video id="video_player" width="100%" itemtype="2" controls>
+                <source src="{{ item.video_link }}" type="video/mp4">
+              </video>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="135" height="135" viewBox="0 0 135 135">
+                <defs>
+                  <clipPath id="clip-Desk_play_button">
+                    <rect width="135" height="135"/>
+                  </clipPath>
+                </defs>
+                <g id="Desk_play_button" data-name="Desk play button" clip-path="url(#clip-Desk_play_button)">
+                  <g id="Group_7973" data-name="Group 7973" transform="translate(0.217 0.252)">
+                    <g id="Group_7590" data-name="Group 7590" transform="translate(0)">
+                      <circle id="Ellipse_46" data-name="Ellipse 46" cx="67.5" cy="67.5" r="67.5" transform="translate(-0.216 -0.252)" fill="#fff" opacity="0.401"/>
+                      <path id="Polygon_3" data-name="Polygon 3" d="M14.5,0,29,16H0Z" transform="translate(78.783 52.748) rotate(90)" fill="#fff" opacity="0.801"/>
+                    </g>
                   </g>
-                  <line id="Line_222" data-name="Line 222" y2="17.079" transform="translate(17932.502 6572.782) rotate(45)" fill="none" stroke="#000" stroke-width="2"/>
-                  <line id="Line_223" data-name="Line 223" y2="17.079" transform="translate(17932.502 6584.859) rotate(135)" fill="none" stroke="#000" stroke-width="2"/>
                 </g>
-              </g>
-            </svg>
+              </svg>
+            </div>
+            <div class="close_icon" onclick="closePopup();">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+                <defs>
+                  <clipPath id="clip-Artboard_1">
+                    <rect width="56" height="56"/>
+                  </clipPath>
+                </defs>
+                <g id="Artboard_1" data-name="Artboard – 1" clip-path="url(#clip-Artboard_1)">
+                  <g id="Group_7970" data-name="Group 7970" transform="translate(-17898.465 -6550.465)">
+                    <g id="Group_7892" data-name="Group 7892" transform="translate(17898 6550)">
+                      <circle id="Ellipse_95" data-name="Ellipse 95" cx="28" cy="28" r="28" transform="translate(0.465 0.465)" fill="#fff"/>
+                    </g>
+                    <line id="Line_222" data-name="Line 222" y2="17.079" transform="translate(17932.502 6572.782) rotate(45)" fill="none" stroke="#000" stroke-width="2"/>
+                    <line id="Line_223" data-name="Line 223" y2="17.079" transform="translate(17932.502 6584.859) rotate(135)" fill="none" stroke="#000" stroke-width="2"/>
+                  </g>
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
-
-    {% endfor %}
+      {% endfor %}
+    {% endif %}
     <div class="custom_collection_main filter_coll">
       <div class="utility-bar-main">
         <div class="container{% if settings.use_fullwidth_layout %} container--no-max{% endif %}">
@@ -284,8 +302,10 @@
   document.querySelector('.brand_video_btn').addEventListener('click', function() {
     document.getElementById('play_popup').style.display = 'block';
   })
+  var vid = document.getElementById('video_player')
   function closePopup() {
     document.getElementById('play_popup').style.display = 'none';
+    vid.pause();
   }
 </script>
 {% schema %}
