@@ -84,7 +84,8 @@
             "content": "<p>{{ product.metafields.settings.ingredients | metafield_tag }}<\/p>",
             "test_result_link": "",
             "page": "",
-            "open": false
+            "open": false,
+            "show_in_quickbuy": false
           }
         },
         "1fb67a9d-a0c3-48e7-b413-30ffa96c7b41": {
@@ -110,6 +111,17 @@
             "open": false,
             "show_in_quickbuy": false
           }
+        },
+        "c06c3291-f178-4504-8a2d-023f97b00808": {
+          "type": "richtext",
+          "settings": {
+            "richtext": "<p><strong>Valid across our full range of products on <\/strong><a href=\"https:\/\/chill.com\/\" title=\"https:\/\/chill.com\/\"><strong>Chill.com<\/strong><\/a><\/p>",
+            "icon": "",
+            "icon_size": "small",
+            "enable_box": false,
+            "box_color": "#e0f4d5",
+            "show_in_quickbuy": false
+          }
         }
       },
       "block_order": [
@@ -124,7 +136,8 @@
         "buy_buttons",
         "630f2a51-da4e-4dbf-93d6-325c3ee1e383",
         "1fb67a9d-a0c3-48e7-b413-30ffa96c7b41",
-        "a7013d3f-0653-4f9c-8d1b-aabe369293b7"
+        "a7013d3f-0653-4f9c-8d1b-aabe369293b7",
+        "c06c3291-f178-4504-8a2d-023f97b00808"
       ],
       "settings": {
         "show_breadcrumbs": false,
