@@ -3391,6 +3391,7 @@
   };
 
   theme.openDrawerCart = function () {
+    theme.drawerRecommendation.render()
     var cartSummary = document.querySelector("#cart-drawer-summary")
     cartSummary.classList.add("cart-drawer-open")
     $('body').addClass("cart-drawer-open")
@@ -3445,6 +3446,73 @@
     .fadeOut(100)
     .off("click", theme.closeDrawerCart.bind(theme))
   };
+
+  theme.drawerRecommendation = {
+    selectors: {
+      miniCart: "#mini-cart__recommendations",
+      miniCartRecommendationsInner: ".mini-cart__recommendations-inner",
+      recommendationList : '.mini-cart__recommendations-list'
+    },
+    render: function() {
+      const recommendationContainer = document.querySelector(this.selectors.miniCart)
+
+      $.getJSON(recommendationContainer.dataset.url, function(response) {
+        this.products = response.products;
+        const cartRecommendationsInner = recommendationContainer.querySelector(this.selectors.miniCartRecommendationsInner)
+        const miniCartRecommendationsList = cartRecommendationsInner.querySelector(this.selectors.recommendationList)
+        miniCartRecommendationsList.innerHTML = this.products.map(product => `<div class="cart-product-item">
+          <div class="product-item__image-wrapper">
+              <a href="${product.url}">
+                <img src="${product.featured_image}" alt="${product.handle}">
+              </a>
+          </div>
+          <div class="product-item__info">
+              <div class="product-item-info-header">
+                  <a href="${product.url}" class="product-item-meta__title">${product.title}</a>
+                  <p class="product-item__vendor">${product.vendor}</p>
+              </div>
+              <div class="product-item-price-info">
+                  <div class="main-product-price">
+                      <div class="item-price">${theme.Shopify.formatMoney(product.price, theme.money_format)}</div>
+                      ${product.compare_at_price > 0 ? `<div class="compare-price">${theme.Shopify.formatMoney(product.compare_at_price, theme.money_format)}</div>` : ''}
+                  </div>
+                  <button class="btn btn_add_to_cart js-addtocart-btn" data-product-id="${product.id}" data-variant-id="${product.variants[0].id}">
+                    +ADD
+                  </button>
+              </div>
+          </div>
+        </div>`).join("")
+        cartRecommendationsInner.classList.add("open")
+        this.addEventListeners()
+      }.bind(this))
+    },
+    addEventListeners: function() {
+      var cartSummaryAddToCarts = document.querySelectorAll(".js-addtocart-btn")
+
+      cartSummaryAddToCarts.forEach(function(element) {
+        element.addEventListener('click', this.updateQuickRecommendationView.bind(this))
+      }.bind(this))
+
+      var cartSummaryClose = document.querySelector('.quick-view-product__close')
+      cartSummaryClose.addEventListener('click', function(e) {
+        const recommendationContainer = document.querySelector(this.selectors.miniCart)
+        var cartSummaryClose = document.querySelector(".quick-view-product-drawer")
+        cartSummaryClose.classList.remove("cart-drawer-open")
+        $('#cart-drawer-recommendations-backdrop').fadeOut(100)
+        recommendationContainer.style.overflow = ""
+      })
+    },
+    updateQuickRecommendationView: function(evt) {
+      console.log(this, evt)
+      const recommendationContainer = document.querySelector(this.selectors.miniCart)
+      recommendationContainer.style.overflow = "hidden"
+
+      var cartSummary = document.querySelector(".quick-view-product-drawer")
+      cartSummary.classList.add("cart-drawer-open")
+      $('#cart-drawer-recommendations-backdrop').fadeIn(100)
+    }
+
+  }
 
   theme.removeAddedCartMessage = function () {
     document.querySelectorAll('.cart-summary-overlay').forEach(summary => {
@@ -6198,8 +6266,8 @@
                 document.dispatchEvent(new CustomEvent('theme:cartDrawer:close', { bubbles: true, cancelable: false }));
               })
             }
+            theme.drawerRecommendation.render()
             document.dispatchEvent(new CustomEvent('theme:cartDrawer:open', { bubbles: true, cancelable: false }));
-            this.functions.updateRecommendation()
           }.bind(this),
           error: function error(data) {
             if (data.statusText != 'abort') {
@@ -6212,16 +6280,6 @@
             this.cartXhr = null;
             theme.cartNoteMonitor.load($('.cart-drawer-summary__notes [name="note"]', this.$container));
           }.bind(this) });
-      },
-
-      updateRecommendation: function() {
-        debugger;
-        const recommendationContainer = document.querySelector("#mini-cart__recommendations")
-        $.getJSON(recommendationContainer.dataset.url, function(response) {
-          const cartRecommendationsInner = recommendationContainer.querySelector('.mini-cart__recommendations-inner')
-          cartRecommendationsInner.classList.add("open")
-          console.log(response)
-        })
       },
 
       addItemsToCart: function addItemToCart(params) {

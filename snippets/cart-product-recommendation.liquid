@@ -2,67 +2,22 @@
 
 <div class="cart-drawer-recommendations" id="mini-cart__recommendations" 
     data-section-id="drawer-cart__recommendations"
-    data-url="{{ routes.product_recommendations_url }}.json?product_id={{uniqueProductIdsString}}&limit=4&intent=related">
+    data-url="{{ routes.product_recommendations_url }}.json?product_id={{uniqueProductIdsString}}&limit=6&intent=related">
     <div class="container">
         <div class="mini-cart__recommendations-inner">
             <p class="mini-cart__recommendations-heading heading heading--small">You may also like</p>
             <div class="scroller">
                 <div class="scroller__inner">
-                    <div class="mini-cart__recommendations-list">
-                        <!-- product-item loop start here -->
-                        <div class="cart-product-item">
-                            <div class="product-item__image-wrapper">
-                                <a href="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0536/9115/4590/products/Chill-Shop-PouchStack-Mint2_300x.jpg?v=1665141063" alt="">
-                                </a>
-                            </div>
-                            <div class="product-item__info">
-                                <div class="product-item-info-header">
-                                    <a href="" class="product-item-meta__title">{{product.title}}</a>
-                                    <p class="product-item__vendor">3 Cans | 150mg per can.</p>
-                                </div>
-                                <div class="product-item-price-info">
-                                    <div class="main-product-price">
-                                        <div class="item-price">$19.99</div>
-                                        <div class="compare-price">$19.99</div>
-                                    </div>
-                                    <button class="btn btn_add_to_cart js-addtocart-btn">+ADD</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- product-item loop ends here -->
-                        <!-- product-item loop start here -->
-                        <div class="cart-product-item">
-                            <div class="product-item__image-wrapper">
-                                <a href="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0536/9115/4590/products/Chill-Shop-PouchStack-Mint2_300x.jpg?v=1665141063" alt="">
-                                </a>
-                            </div>
-                            <div class="product-item__info">
-                                <div class="product-item-info-header">
-                                    <a href="" class="product-item-meta__title">{{product.title}}</a>
-                                    <p class="product-item__vendor">3 Cans | 150mg per can.</p>
-                                </div>
-                                <div class="product-item-price-info">
-                                    <div class="main-product-price">
-                                        <div class="item-price">$19.99</div>
-                                        <div class="compare-price">$19.99</div>
-                                    </div>
-                                    <button class="btn btn_add_to_cart js-addtocart-btn">+ADD</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- product-item loop ends here -->
-                    </div>
+                    <div class="mini-cart__recommendations-list"></div>
                 </div>
             </div>
+            <div id="cart-drawer-recommendations-backdrop" class="cart-drawer-recommendations-backdrop"></div>
         </div>
     </div>
 </div>
 
 <!-- quick-buy-drawer with product variant -->
 <div id="quick-view-product-drawer" class="quick-view-product-drawer">
-    <div id="cart-drawer-backdrop" class="cart-drawer-backdrop"></div>
     <div class="cart-drawer-summary__header toggle-cart-drawer-summary cart-drawer-summary__section">
         <h1 class="cart-drawer-summary__title">Choose Options</h1>
         <a class="quick-view-product__close toggle-cart-summary">
@@ -94,19 +49,3 @@
         </div>
     </div>
 </div>
-
-<script>
-//    const productRecommendationsSection = document.querySelector('.cart-drawer-recommendations');  
-//    let url = document.getElementById("mini-cart__recommendations").getAttribute('data-url') 
-//    fetch(url)
-//    .then(response => response.text())
-//    .then((text) => {
-//        const html = document.createElement('div');        
-//        html.innerHTML = text.response;
-//        const recommendations = html.querySelector('.cart-drawer-recommendations'); 
-//        console.log(recommendations)
-//        if (recommendations && recommendations.innerHTML.trim().length) {
-//            productRecommendationsSection.innerHTML = recommendations.innerHTML;
-//        }
-//    });    
-</script>
