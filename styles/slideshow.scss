@@ -1,4 +1,4 @@
-.section-slideshow #section-id-template--16038250872990__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d{
+.section-slideshow #section-id-template--16060106277022__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d{
     .slick-prev, .slick-next{
         border: 0px;
         background: #fff;
@@ -31,9 +31,11 @@
         }
         .overlay-text__rte p{
             font-size: 20px;
+            font-weight: 600;
         }
         .overlay-text__button{
             width: 268px;
+            padding: 15px 0;
             border-radius: 30px;
             background: #F3B09F;
             text-transform: uppercase;
@@ -42,7 +44,7 @@
             font-weight: bold;
         }
     }
-    @media (max-width: 768px){
+    @media (max-width: 767px){
         .overlay-text{
             width: 100%;
             margin-left: 0;
