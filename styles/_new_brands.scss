@@ -11,7 +11,7 @@
         }
         .banner_image_mobile{
             min-height: 389px;
-            @media(min-width: 768px){
+            @media(min-width: 767px){
                 display: none;
             }
         }
@@ -54,23 +54,32 @@
                 .brand_learn_more_btn{
                     border-radius: 30px;
                     width: 166px;
+                    height: 46px;
                     font-weight: bold;
                     a{
                         font-size: 16px;
                         font-weight: bold;
                     }
+                    &:hover{
+                        background: #000 !important;
+                    }
                 }
                 .brand_video_btn{
                     border-radius: 30px;
-                    width: 138px;
+                    width: 150px;
+                    height: 46px;
                     background: transparent;
-                    
-                        font-size: 16px;
-                        font-weight: bold;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                    
+                    font-size: 16px;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 20px;
+                    &:hover{
+                        background: #000;
+                        color: #fff !important;
+                        border: #000 !important;
+                    }
                 }
             }
             @media(max-width: 1023px){
@@ -103,22 +112,12 @@
     opacity: 1;
     z-index:99;
     .play_overlay_popup{
-        // margin: 70px auto;
-        // background: transparent;
         position: relative;
         margin: auto;
         width: 90%;
         transform: translateY(25%);
-        /* top: 50%; */
         height: 70%;
-        // border-radius: 5px;
-        // width: 70%;
-        // position: relative;
-        // transition: all 5s ease-in-out;
-        // transform: scale(1.3);
-        // transform: scale(1.4) translateX(15%) translateY(30%);
         .video_popup{
-            // max-height: 30%;
             max-width: 1600px;
             margin: auto;
             height: 100%;
@@ -140,9 +139,9 @@
                 margin: auto;
                 background-size: contain;
                 background-position: center;
+                cursor: pointer;
             }
             }
-        
         }
         
         
@@ -154,20 +153,6 @@
                 margin-top: 25px;
                 cursor: pointer;
             }
-            // border: 1px solid white;
-            // margin: 10px auto;
-            // color: black;
-            // /* background: red; */
-            // text-align: center;
-            // width: 40px;
-            // height: 40px;
-            // align-items: center;
-            // border-radius: 50%;
-            // background: white;
-            // font-weight: 700;
-            // font-size: 20px;
-            // vertical-align: middle;
-
         }
         
         @media (max-width: 767px){
@@ -176,10 +161,6 @@
             height: 240px;
         }
     }
-}
-// .popup_overlay.active{
-//     display: block;
-// }
-#shopify-section-template--16048954769566__main .utility-bar{
+#shopify-section-template--16057833324702__main .utility-bar{
     padding: 38px 0;
 }
