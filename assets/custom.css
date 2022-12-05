@@ -6519,6 +6519,7 @@ body.cart-drawer-open {
   will-change: transform, opacity, visibility;
 }
 .cart-drawer-summary .cart-drawer-summary__inner #quick-view-product-drawer .drawer__content {
+  width: 50%;
   margin: 60px auto;
 }
 .cart-drawer-summary .cart-drawer-summary__inner #quick-view-product-drawer .drawer__content .drawer__quick-view__image-wrapper img {

@@ -3451,7 +3451,8 @@
     selectors: {
       miniCart: "#mini-cart__recommendations",
       miniCartRecommendationsInner: ".mini-cart__recommendations-inner",
-      recommendationList : '.mini-cart__recommendations-list'
+      recommendationList : '.mini-cart__recommendations-list',
+      drawerContent: '.drawer__content'
     },
     render: function() {
       const recommendationContainer = document.querySelector(this.selectors.miniCart)
@@ -3460,34 +3461,58 @@
         this.products = response.products;
         const cartRecommendationsInner = recommendationContainer.querySelector(this.selectors.miniCartRecommendationsInner)
         const miniCartRecommendationsList = cartRecommendationsInner.querySelector(this.selectors.recommendationList)
-        miniCartRecommendationsList.innerHTML = this.products.map(product => `<div class="cart-product-item">
-          <div class="product-item__image-wrapper">
-              <a href="${product.url}">
-                <img src="${product.featured_image}" alt="${product.handle}">
-              </a>
+        miniCartRecommendationsList.innerHTML = this.products.map(product => {
+          let openingTag = '<div class="cart-product-item">'
+          let closingTag = '</div>'
+          if (product.variants.length == 1) {
+            openingTag = `<form class="cart-product-item product-purchase-form" data-ajax-add-to-cart="true">`
+            closingTag ='</form>'
+          }
+
+          let data = `<div class="product-item__image-wrapper">
+            <a href="${product.url}">
+              <img src="${product.featured_image}" alt="${product.handle}">
+            </a>
           </div>
           <div class="product-item__info">
-              <div class="product-item-info-header">
-                  <a href="${product.url}" class="product-item-meta__title">${product.title}</a>
-                  <p class="product-item__vendor">${product.vendor}</p>
+            <div class="product-item-info-header">
+              <a href="${product.url}" class="product-item-meta__title">${product.title}</a>
+              <p class="product-item__vendor">${product.vendor}</p>
+            </div>
+            <input type="hidden" name="id" value="${product.variants[0].id}" class="original-selector">
+            <input type="hidden" name="quantity" value="1" >
+            <div class="product-item-price-info">
+              <div class="main-product-price">
+                <div class="item-price">${theme.Shopify.formatMoney(product.price, theme.money_format)}</div>
+                  ${product.compare_at_price > 0 ? `<div class="compare-price">${theme.Shopify.formatMoney(product.compare_at_price, theme.money_format)}</div>` : ''}
+                </div>
+                <button
+                  ${product.variants.length == 1 ? `type="submit"` : ``}
+                  class="btn btn_add_to_cart ${product.variants.length > 1 ? `js-addtocart-btn` : ``}"
+                  data-product-id="${product.id}"
+                  data-variant-id="${product.variants[0].id}"
+                >
+                  ${product.variants.length > 1 ? "OPTIONS" : "+ADD"}
+                </button>
               </div>
-              <div class="product-item-price-info">
-                  <div class="main-product-price">
-                      <div class="item-price">${theme.Shopify.formatMoney(product.price, theme.money_format)}</div>
-                      ${product.compare_at_price > 0 ? `<div class="compare-price">${theme.Shopify.formatMoney(product.compare_at_price, theme.money_format)}</div>` : ''}
-                  </div>
-                  <button class="btn btn_add_to_cart js-addtocart-btn" data-product-id="${product.id}" data-variant-id="${product.variants[0].id}">
-                    +ADD
-                  </button>
-              </div>
-          </div>
-        </div>`).join("")
+            </div>
+          </div>`
+          return openingTag + data + closingTag
+        }).join("")
+        theme.applyAjaxToProductForm($(miniCartRecommendationsList))
         cartRecommendationsInner.classList.add("open")
         this.addEventListeners()
       }.bind(this))
     },
+
     addEventListeners: function() {
       var cartSummaryAddToCarts = document.querySelectorAll(".js-addtocart-btn")
+      const recommendationContainer = document.querySelector(this.selectors.miniCart)
+      var cartSummaryContainer = document.querySelector(".quick-view-product-drawer")
+      cartSummaryContainer.classList.remove("cart-drawer-open")
+      $('#cart-drawer-recommendations-backdrop').fadeOut(100)
+      recommendationContainer.style.overflow = ""
+
 
       cartSummaryAddToCarts.forEach(function(element) {
         element.addEventListener('click', this.updateQuickRecommendationView.bind(this))
@@ -3495,23 +3520,80 @@
 
       var cartSummaryClose = document.querySelector('.quick-view-product__close')
       cartSummaryClose.addEventListener('click', function(e) {
-        const recommendationContainer = document.querySelector(this.selectors.miniCart)
-        var cartSummaryClose = document.querySelector(".quick-view-product-drawer")
-        cartSummaryClose.classList.remove("cart-drawer-open")
+        cartSummaryContainer.classList.remove("cart-drawer-open")
         $('#cart-drawer-recommendations-backdrop').fadeOut(100)
         recommendationContainer.style.overflow = ""
-      })
+      }.bind(this))
     },
-    updateQuickRecommendationView: function(evt) {
-      console.log(this, evt)
-      const recommendationContainer = document.querySelector(this.selectors.miniCart)
-      recommendationContainer.style.overflow = "hidden"
 
+    updateQuickRecommendationView: function(evt) {
+      const recommendationContainer = document.querySelector(this.selectors.miniCart)
+      const btn = evt.target
+      const product = this.products.find(product => product.id == btn.dataset.productId)
+
+      const drawerContent = document.querySelector(this.selectors.drawerContent)
+      drawerContent.innerHTML = `<form class="drawer__quick-view__image-wrapper product-purchase-form" data-ajax-add-to-cart="true">
+        <a href="${product.url}">
+          <img src="${product.featured_image}">
+        </a>
+      </div>
+      <div class="drawer__quick-view__info">
+        <div class="drawer__quick-view-info-header">
+          <a href="${product.url}" class="product-item-meta__title">${product.title}</a>
+          <p class="product-item__vendor">${product.vendor}</p>
+        </div>
+        <div class="drawer__quick-view-price-info">
+          <div class="main-product-price">
+            <div class="item-price">${theme.Shopify.formatMoney(product.price, theme.money_format)}</div>
+            ${product.compare_at_price > 0 ? `<div class="compare-price">${theme.Shopify.formatMoney(product.compare_at_price, theme.money_format)}</div>` : ''}
+          </div>
+        </div>
+        ${product.variants.length == 1 ? 
+          `<input type="hidden" name="id" value="${btn.dataset.variantId}" class="original-selector">`
+        : `<select class="original-selector" name="id" data-product-id="${product.id}">
+          ${product.variants.map(variant => `<option value="${variant.id}">
+            ${variant.title}
+          </option>`).join("")}
+        </select>`}
+        <div class="quantity-wrapper">
+          <a href="#" data-quantity="down">-</a>
+          <input aria-label="quantity" id="quantity" type="text" name="quantity" value="1" />
+          <a href="#" data-quantity="up">+</a>
+        </div>
+        <div class="custom_button_info">
+          <button class="btn btn-primary custom_sub_button quick__view__addToCartBtn" type="submit">
+            <span>Add to cart</span>
+          </button>
+        </div>
+      </form>`
+
+      recommendationContainer.style.overflow = "hidden"
       var cartSummary = document.querySelector(".quick-view-product-drawer")
       cartSummary.classList.add("cart-drawer-open")
       $('#cart-drawer-recommendations-backdrop').fadeIn(100)
-    }
 
+      $(drawerContent).on("change", 'select', function(evt) {
+        const $form = $(evt.target).closest("form")
+        const $itemPrice = $form.find(".item-price")
+        const $comparePrice = $form.find(".compare-price")
+        const $featuredImage = $form.find("img")
+        const product = this.products.find(product => product.id == evt.target.dataset.productId)
+        const variant = product.variants.find(variant => variant.id == evt.target.value)
+
+        $itemPrice.html(theme.Shopify.formatMoney(variant.price, theme.money_format))
+        if ($comparePrice.length) {
+          $comparePrice.html(theme.Shopify.formatMoney(variant.compare_at_price, theme.money_format))
+        }
+
+        if (variant.featured_image) {
+          $featuredImage.attr("src", variant.featured_image.src)
+        } else {
+          $featuredImage.attr("src", product.featured_image)
+        }
+      }.bind(this))
+
+      theme.applyAjaxToProductForm($(drawerContent))
+    }
   }
 
   theme.removeAddedCartMessage = function () {

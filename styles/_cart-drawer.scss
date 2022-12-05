@@ -65,9 +65,11 @@ body.cart-drawer-open {
         display: flex;
         flex-direction: column;
         overflow: scroll;
-        @media(min-width:1200px){
+
+        @media (min-width:1200px){
             overflow: visible;
         }
+
         .cart-drawer-summary__header {
             padding: 1em 25px;
             display: flex;
@@ -221,7 +223,9 @@ body.cart-drawer-open {
             transform: translate3d(100%, 0, 0);
             transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
             will-change: transform, opacity, visibility;
+
             .drawer__content{
+                width: 50%;
                 margin: 60px auto;
                 .drawer__quick-view__image-wrapper{
                     img{

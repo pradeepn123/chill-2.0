@@ -8,7 +8,7 @@
             <p class="mini-cart__recommendations-heading heading heading--small">You may also like</p>
             <div class="scroller">
                 <div class="scroller__inner">
-                    <div class="mini-cart__recommendations-list"></div>
+                    <div class="mini-cart__recommendations-list" data-ajax-add-to-cart="true"></div>
                 </div>
             </div>
             <div id="cart-drawer-recommendations-backdrop" class="cart-drawer-recommendations-backdrop"></div>
@@ -24,28 +24,5 @@
           {% render 'svg-close' %}
         </a>
     </div>
-    <div class="drawer__content">
-        <div class="drawer__quick-view__image-wrapper">
-            <a href="">
-                <img src="https://cdn.shopify.com/s/files/1/0536/9115/4590/products/Chill-Shop-PouchStack-Mint2_300x.jpg?v=1665141063" alt="">
-            </a>
-        </div>
-        <div class="drawer__quick-view__info">
-            <div class="drawer__quick-view-info-header">
-                <a href="" class="product-item-meta__title">Variety Pack- CBD</a>
-                <p class="product-item__vendor">3 Cans | 150mg per can.</p>
-            </div>
-            <div class="drawer__quick-view-price-info">
-                <div class="main-product-price">
-                    <div class="item-price">$19.99</div>
-                    <div class="compare-price">$19.99</div>
-                </div>
-            </div>
-            <div class="custom_button_info">
-                <button class="btn btn-primary custom_sub_button quick__view__addToCartBtn">
-                    <span>Add to cart</span>
-                </button>
-            </div>
-        </div>
-    </div>
+    <div class="drawer__content" data-ajax-add-to-cart="true"></div>
 </div>
