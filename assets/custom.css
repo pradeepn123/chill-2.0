@@ -6840,7 +6840,7 @@ body.cart-drawer-open {
   border-radius: 6px;
 }
 
-.cart-drawer-summary.cart-drawer-open .mini-cart__recommendations-inner {
+.cart-drawer-summary.cart-drawer-open .mini-cart__recommendations-inner.open {
   transform: translate(0);
   transition-delay: 0.3s;
 }

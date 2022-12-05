@@ -706,8 +706,6 @@ document.addEventListener('DOMContentLoaded', () => {
 //     .off("click", theme.closeDrawerCart.bind(theme))
 // };
 
-
-
 var cartSummaryAddToCart = document.querySelector(".js-addtocart-btn")
 cartSummaryAddToCart.addEventListener('click', function(e) {
     var cartSummary = document.querySelector(".quick-view-product-drawer")

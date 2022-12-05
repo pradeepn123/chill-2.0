@@ -3437,6 +3437,8 @@
   theme.closeDrawerCart = function () {
     var cartSummary = document.querySelector("#cart-drawer-summary")
     cartSummary.classList.remove("cart-drawer-open")
+    const cartRecommendationsInner = document.querySelector('#mini-cart__recommendations .mini-cart__recommendations-inner')
+    cartRecommendationsInner.classList.remove("open")
     $('body').removeClass("cart-drawer-open")
 
     $('#cart-drawer-backdrop')
@@ -6197,6 +6199,7 @@
               })
             }
             document.dispatchEvent(new CustomEvent('theme:cartDrawer:open', { bubbles: true, cancelable: false }));
+            this.functions.updateRecommendation()
           }.bind(this),
           error: function error(data) {
             if (data.statusText != 'abort') {
@@ -6209,6 +6212,16 @@
             this.cartXhr = null;
             theme.cartNoteMonitor.load($('.cart-drawer-summary__notes [name="note"]', this.$container));
           }.bind(this) });
+      },
+
+      updateRecommendation: function() {
+        debugger;
+        const recommendationContainer = document.querySelector("#mini-cart__recommendations")
+        $.getJSON(recommendationContainer.dataset.url, function(response) {
+          const cartRecommendationsInner = recommendationContainer.querySelector('.mini-cart__recommendations-inner')
+          cartRecommendationsInner.classList.add("open")
+          console.log(response)
+        })
       },
 
       addItemsToCart: function addItemToCart(params) {
