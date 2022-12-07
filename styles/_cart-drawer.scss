@@ -717,9 +717,11 @@ body.cart-drawer-open {
                 @media(max-width:320px){
                     grid-auto-columns: minmax(84vw,1fr);
                 }
-                .cart-product-item{
-                    // margin-bottom: 30px;
+                .cart-product-item{ 
                     position: relative;
+                    @media(min-width:1200px){
+                        margin-bottom: 30px;
+                    }
                     @media(max-width:1199px){
                         display: flex;
                         flex-direction: row;
