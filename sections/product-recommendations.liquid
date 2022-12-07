@@ -9,8 +9,13 @@
     <div class="container{% if settings.use_fullwidth_layout %} container--no-max{% endif %} fully-spaced-row">
       <h4 class="align-center hometitle">{{ section.settings.title }}
       </h4>
-      <h5 class="align-center homesubtitle">{{ section.settings.description }}
-      </h5>
+      {% if section.settings.description != blank %}
+        <h5 class="align-center homesubtitle">{{ section.settings.description }}
+        </h5>
+      {% else %}
+        <div class="align-center homesubtitle"></div>
+      {% endif %}
+
 
       <div class="collection-listing related-collection">
         <div class="product-list product-list--per-row-{{ section.settings.grid }} product-list--per-row-mob-{{ settings.prod_thumb_mob_per_row }} product-list--image-shape-{{ settings.prod_thumb_shape }}">
