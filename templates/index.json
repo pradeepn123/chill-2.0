@@ -73,6 +73,69 @@
         "use_alt_bg": false
       }
     },
+    "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d": {
+      "type": "slideshow",
+      "blocks": {
+        "template--16038250872990__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d-166911842947303ba6-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_Group_122_2x_f388a7fa-f8cc-4eec-b220-ca1c618929d9.png",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "shopify:\/\/collections\/zoetic",
+            "subheading": "",
+            "title": "Welcome<br> <strong>Mad Tasty<\/strong>",
+            "title_size": 52,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Recreational supplements brand that uses natural functional ingredients to encourage authentic relaxation<\/p>",
+            "enlarge_text": true,
+            "button_label_1": "Shop mad tasty",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center left"
+          }
+        },
+        "template--16038250872990__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d-166911842947303ba6-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "Tell your story",
+            "title": "Two line\nslide heading",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>And optional subtext<\/p>",
+            "enlarge_text": true,
+            "button_label_1": "Shop this",
+            "button_url_1": "",
+            "button_label_2": "Shop all",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "template--16038250872990__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d-166911842947303ba6-0",
+        "template--16038250872990__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d-166911842947303ba6-1"
+      ],
+      "settings": {
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "full_width": true,
+        "mobile_overlay_under": true,
+        "overlay_style": "shadow",
+        "slide_transition": "fade",
+        "slide_navigation": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
     "16359278676808bea5": {
       "type": "featured-collection",
       "settings": {
@@ -310,6 +373,7 @@
             "image": "shopify:\/\/shop_images\/Collections-Gummies.jpg",
             "collection": "cbd-gummies",
             "title": "",
+            "coming_soon_link": "",
             "shop_all_link": "shopify:\/\/collections\/cbd-gummies"
           }
         },
@@ -319,6 +383,7 @@
             "image": "shopify:\/\/shop_images\/Collections-Pouch.jpg",
             "collection": "cbd-pouches",
             "title": "",
+            "coming_soon_link": "",
             "shop_all_link": "shopify:\/\/collections\/cbd-pouches"
           }
         },
@@ -328,6 +393,7 @@
             "image": "shopify:\/\/shop_images\/Collections-Smokes.jpg",
             "collection": "cbd-smokes",
             "title": "",
+            "coming_soon_link": "",
             "shop_all_link": "shopify:\/\/collections\/cbd-smokes"
           }
         },
@@ -337,6 +403,7 @@
             "image": "shopify:\/\/shop_images\/US_-Collections_-_Coming_Soon.jpg",
             "collection": "shop-all",
             "title": "Coming soon",
+            "coming_soon_link": "",
             "shop_all_link": ""
           }
         }
@@ -468,7 +535,7 @@
         "title_size_mobile": 46,
         "title_weight_mobile": 800,
         "use_h1": false,
-        "text": "",
+        "text": "<p><\/p>",
         "enlarge_text": true,
         "button_label_1": "Shop Gummies",
         "button_url_1": "shopify:\/\/collections\/cbd-gummies",
@@ -608,6 +675,7 @@
     "1660761564dddf193c",
     "d02b80e5-b8ee-41d5-9512-71af9b2c25c7",
     "1635927863703110df",
+    "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d",
     "16359278676808bea5",
     "166149763181cc2acb",
     "1661495934a2300196",

@@ -390,7 +390,7 @@
                 font-weight: 900;
             }
         }
-        .homesubtitle{
+        h5.homesubtitle{
             font-size: 18px;
             font-weight: 400;
             line-height: 1.4;
@@ -401,6 +401,9 @@
             p{
                 margin-bottom: 4rem;
             }
+        }
+        div.homesubtitle{
+            height: 3rem;
         }
     }
     .collection-listing{
@@ -817,4 +820,18 @@
             }
         }
     }    
+}
+
+@media (min-width: 1200px){
+    #shopify-section-template--16013749911710__main, #shopify-section-template--16038250250398__main{
+        #FeaturedMedia-template--16038250250398__main-27425367228574-wrapper, #FeaturedMedia-template--16013749911710__main-27425367228574-wrapper{
+            .product-media {
+                .rimage-outer-wrapper{
+                    .rimage-wrapper{
+                        padding-top: 100% !important;
+                    }
+                }
+            }
+        }      
+    }
 }

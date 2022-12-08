@@ -13,9 +13,24 @@
         "enable_title_overlay": false,
         "overlay_style": "no_background"
       }
+    },
+    "771892a6-23ea-4629-888c-91a24f77206a": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Related Products",
+        "collection": "shop-all",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 3,
+        "rows": 1,
+        "use_alt_bg": false,
+        "show_view_all": false,
+        "full_width": false
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "771892a6-23ea-4629-888c-91a24f77206a"
   ]
 }
