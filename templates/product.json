@@ -112,9 +112,22 @@
             "show_in_quickbuy": false
           }
         },
+        "57631e90-1baf-4e41-9691-499be1451989": {
+          "type": "richtext",
+          "settings": {
+            "custom_class_product_page": "chill_holiday_sale_text",
+            "richtext": "<p>Extra 20% off at checkout until midnight 24th December<\/p>",
+            "icon": "",
+            "icon_size": "small",
+            "enable_box": false,
+            "box_color": "#e0f4d5",
+            "show_in_quickbuy": false
+          }
+        },
         "c06c3291-f178-4504-8a2d-023f97b00808": {
           "type": "richtext",
           "settings": {
+            "custom_class_product_page": "",
             "richtext": "<p><strong>Valid across our full range of products on <\/strong><a href=\"https:\/\/chill.com\/\" title=\"https:\/\/chill.com\/\"><strong>Chill.com<\/strong><\/a><\/p>",
             "icon": "",
             "icon_size": "small",
@@ -137,6 +150,7 @@
         "630f2a51-da4e-4dbf-93d6-325c3ee1e383",
         "1fb67a9d-a0c3-48e7-b413-30ffa96c7b41",
         "a7013d3f-0653-4f9c-8d1b-aabe369293b7",
+        "57631e90-1baf-4e41-9691-499be1451989",
         "c06c3291-f178-4504-8a2d-023f97b00808"
       ],
       "settings": {
