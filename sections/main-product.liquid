@@ -548,7 +548,14 @@
                     {%- endif -%}
                   </div>
                   {% else %}
-                  <div class="product-info-block"></div>
+                  <div class="product-info-block">
+                    {% if block.settings.custom_icon == blank %}
+                      {% render 'icon', icon: block.settings.icon, size: block.settings.icon_size %}
+                    {% else %}
+                      <span class="icon icon--image icon--{{ block.settings.icon_size }}">{% render 'responsive-image', image: block.settings.custom_icon %}</span>
+                    {% endif %}
+                    <div class="with-icon__beside rte cf">{{ block.settings.richtext }}</div>
+                  </div>
                   {% endif %}
                 </div>
               {% endif %}
