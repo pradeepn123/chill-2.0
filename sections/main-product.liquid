@@ -518,8 +518,7 @@
 
             {% when 'richtext' %}
               {% if block.settings.richtext != blank %}
-                <div class="lightly-spaced-row{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %} {{ block.settings.custom_class_product_page }}" {{ block.shopify_attributes }}>
-                  {% if product.handle != 'chill-gift-card'%}
+                <div class="lightly-spaced-row{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %} {{ block.settings.custom_class_product_page }} {%- if product.handle == 'chill-gift-card' -%}richtext-hidden{%- endif -%}" {{ block.shopify_attributes }}>                  
                   {%- liquid
                     if block.settings.enable_box
                       assign box_color_brightness = block.settings.box_color | color_brightness
@@ -546,17 +545,7 @@
                       {% endif %}
                       <div class="with-icon__beside rte cf">{{ block.settings.richtext }}</div>
                     {%- endif -%}
-                  </div>
-                  {% else %}
-                  <div class="product-info-block">
-                    {% if block.settings.custom_icon == blank %}
-                      {% render 'icon', icon: block.settings.icon, size: block.settings.icon_size %}
-                    {% else %}
-                      <span class="icon icon--image icon--{{ block.settings.icon_size }}">{% render 'responsive-image', image: block.settings.custom_icon %}</span>
-                    {% endif %}
-                    <div class="with-icon__beside rte cf">{{ block.settings.richtext }}</div>
-                  </div>
-                  {% endif %}
+                  </div>                  
                 </div>
               {% endif %}
 
