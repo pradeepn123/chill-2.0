@@ -1223,6 +1223,7 @@
           },
           "ba09120b-5b07-4fe0-95ef-bf983d98ac02": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "<p>For subscription products USE CODE: <strong>CHILLHOLIDAY20 <\/strong>at the checkout<\/p>"
             }
