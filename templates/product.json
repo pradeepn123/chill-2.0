@@ -116,7 +116,7 @@
           "type": "richtext",
           "settings": {
             "custom_class_product_page": "chill_holiday_sale_text",
-            "richtext": "<p>Extra 20% off at checkout until midnight 24th December<\/p>",
+            "richtext": "<p>Extra 20% off at checkout until midnight 24th December only for one time purchase products.<\/p>",
             "icon": "",
             "icon_size": "small",
             "enable_box": false,
