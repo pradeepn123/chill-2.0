@@ -7,11 +7,11 @@
 
   {% if recommendations.performed and recommendations.products_count > 0 %}
     <div class="container{% if settings.use_fullwidth_layout %} container--no-max{% endif %} fully-spaced-row">
-      <h4 class="align-center hometitle">{{ section.settings.title }}
-      </h4>
+      <h3 class="align-center hometitle">{{ section.settings.title }}
+      </h3>
       {% if section.settings.description != blank %}
-        <h5 class="align-center homesubtitle">{{ section.settings.description }}
-        </h5>
+        <h3 class="align-center homesubtitle">{{ section.settings.description }}
+        </h3>
       {% else %}
         <div class="align-center homesubtitle"></div>
       {% endif %}
