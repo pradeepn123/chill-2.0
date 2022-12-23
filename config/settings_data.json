@@ -1168,7 +1168,7 @@
             "type": "text",
             "settings": {
               "title": "Zoetic Corp",
-              "text": "",
+              "text": "<p><\/p>",
               "image": "shopify:\/\/shop_images\/Chill_black.png",
               "image_width": 160,
               "show_social_icons": true,
@@ -1218,12 +1218,20 @@
           "2e9b0b00-d8fb-4143-be2d-eefe5fb293f5": {
             "type": "announcement",
             "settings": {
-              "text": "<p>Get 10% off on your first order <a href=\"\/collections\/shop-all\" title=\"\/collections\/shop-all\"><strong>GET IT NOW<\/strong><\/a><\/p>"
+              "text": "<p><strong>Extra 20% off<\/strong> at checkout until midnight 24th December <a href=\"\/collections\/shop\" title=\"\/collections\/shop\"><strong>GET IT NOW<\/strong><\/a><\/p>"
+            }
+          },
+          "ba09120b-5b07-4fe0-95ef-bf983d98ac02": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "<p>For subscription products USE CODE: <strong>CHILLHOLIDAY20 <\/strong>at the checkout<\/p>"
             }
           }
         },
         "block_order": [
-          "2e9b0b00-d8fb-4143-be2d-eefe5fb293f5"
+          "2e9b0b00-d8fb-4143-be2d-eefe5fb293f5",
+          "ba09120b-5b07-4fe0-95ef-bf983d98ac02"
         ],
         "settings": {
           "announcement_bar_col": "#000000",
