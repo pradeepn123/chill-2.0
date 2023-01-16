@@ -14,9 +14,7 @@
         "subheading": "",
         "title": "Get in touch",
         "title_size": 52,
-        "title_weight": 800,
         "title_size_mobile": 46,
-        "title_weight_mobile": 800,
         "use_h1": false,
         "text": "<p>Have questions or comments? We'd love to hear from you. Get in touch via the form below and we'll get back to you as soon as we can!<\/p>",
         "enlarge_text": true,
@@ -79,13 +77,7 @@
         "show_page_title": false,
         "use_columns": true,
         "contact_title": "Contact us",
-        "contact_us_text_font_size": 42,
-        "contact_text": "",
-        "button_text_font_size": 20,
-        "button_color": "#6ec59f",
-        "support_heading": "<p>SUPPORT<\/p>",
-        "support_text_font_size": 24,
-        "support_info": "<p>Mon-Fri 9:00am – 5:00pm PST *Excludes Holidays<\/p><p><\/p><p>Looking for more products, FAQ, CBD & more?  <a href=\"\/pages\/new-faq\" title=\"\/pages\/new-faq\">View FAQs<\/a><\/p>"
+        "contact_text": ""
       }
     },
     "166374008756ed6082": {

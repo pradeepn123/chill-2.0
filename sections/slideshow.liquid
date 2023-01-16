@@ -30,6 +30,11 @@
             line-height: 1em;
           {%- endif %}
         }
+        #section-id-{{ section.id }} .slide-{{ forloop.index }} .overlay-text__button{
+          background: {{ block.settings.button_background_color }};
+          color: {{ block.settings.button_text_color }};
+          font-size: {{ block.settings.button_text_font_size }}px;
+        }
       {%- endfor -%}
     }
 
@@ -40,6 +45,11 @@
           {%- if block.settings.title_size >= 90 -%}
             line-height: 1em;
           {%- endif %}
+        }
+        #section-id-{{ section.id }} .slide-{{ forloop.index }} .overlay-text__button{
+          background: {{ block.settings.button_background_color }};
+          color: {{ block.settings.button_text_color }};
+          font-size: {{ block.settings.button_text_font_size }}px;
         }
       {%- endfor -%}
     }
@@ -476,6 +486,27 @@
             "type": "url",
             "id": "button_url_2",
             "label": "Button 2 link"
+          },
+          {
+            "type": "color",
+            "id": "button_background_color",
+            "label": "Button background color",
+            "default": "#F3B09F"
+          },
+          {
+            "type": "color",
+            "id": "button_text_color",
+            "label": "Button text color",
+            "default": "#FFFFFF"
+          },
+          {
+            "type": "range",
+            "id": "button_text_font_size",
+            "label": "Button text font-size",
+            "min": 10,
+            "max": 50,
+            "step": 1,
+            "default": 20
           }, {
             "type": "select",
             "id": "text_alignment",
