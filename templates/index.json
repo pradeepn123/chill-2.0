@@ -28,7 +28,7 @@
     "d02b80e5-b8ee-41d5-9512-71af9b2c25c7": {
       "type": "marquee",
       "settings": {
-        "marquee_text": "EXTRA 20% OFF AT CHECKOUT",
+        "marquee_text": "FREE SHIPPING ON ORDERS OVER $50",
         "marquee_background_color": "#9792e4",
         "marquee_text_color": "#ffffff",
         "marquee_text_font_size": 24,
@@ -90,8 +90,8 @@
             "title_size_mobile": 46,
             "use_h1": false,
             "text": "<p>Recreational supplements brand that uses natural functional ingredients to encourage authentic relaxation<\/p>",
-            "heading_color": "#000",
-            "text_color": "#000",
+            "heading_color": "#000000",
+            "text_color": "#000000",
             "enlarge_text": true,
             "button_label_1": "Shop mad tasty",
             "button_url_1": "",
@@ -113,8 +113,8 @@
             "title_size_mobile": 46,
             "use_h1": false,
             "text": "<p>And optional subtext<\/p>",
-            "heading_color": "#000",
-            "text_color": "#000",
+            "heading_color": "#000000",
+            "text_color": "#000000",
             "enlarge_text": true,
             "button_label_1": "Shop this",
             "button_url_1": "",
@@ -652,7 +652,7 @@
       "type": "apps",
       "blocks": {
         "17bdc8b1-555f-4abb-98d9-dde254415202": {
-          "type": "shopify:\/\/apps\/tikshop-tiktok-insta-feeds\/blocks\/tikshop-shoptrade\/9cc01fbc-7a70-4c25-8768-b96d953c7a70",
+          "type": "shopify:\/\/apps\/checkit-formerly-tikshop\/blocks\/tikshop-shoptrade\/9cc01fbc-7a70-4c25-8768-b96d953c7a70",
           "settings": {
           }
         }
