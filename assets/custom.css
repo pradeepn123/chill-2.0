@@ -767,6 +767,7 @@ body.overflow-hidden {
   height: 100%;
   left: 0;
   top: 0;
+  padding-bottom: 50px;
 }
 @media (min-width: 1024px) {
   .mega_menu .mega_menu_title .menu-mega-nav {
@@ -7399,11 +7400,11 @@ body.cart-drawer-open {
   font-weight: bold;
 }
 @media (max-width: 767px) {
-  .section-slideshow #section-id-template--15860249591966__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d .overlay-text .overlay-text, .section-slideshow #section-id-template--16088153948318__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d .overlay-text .overlay-text {
-    width: 100%;
+  .section-slideshow #section-id-template--15860249591966__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d .overlay-text, .section-slideshow #section-id-template--16088153948318__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d .overlay-text {
+    width: 100% !important;
+    background: #F2F2F3;
     margin-left: 0;
     text-align: left;
-    background: #F2F2F3;
   }
 }
 
@@ -7431,8 +7432,8 @@ body.cart-drawer-open {
 .collection_banner_wrapper .new_brand_banner_container .logo_area .logo_image {
   border: 4px solid #FFFFFF;
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  width: 14.375rem;
+  height: 14.375rem;
   position: absolute;
   top: 30%;
   left: 3%;

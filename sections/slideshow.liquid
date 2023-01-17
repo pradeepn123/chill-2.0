@@ -13,6 +13,11 @@
           line-height: 1em;
         {%- endif %}
       }
+      #section-id-{{ section.id }} .slide-{{ forloop.index }} .overlay-text__button{
+        background: {{ block.settings.button_background_color }};
+        color: {{ block.settings.button_text_color }};
+        font-size: {{ block.settings.button_text_font_size }}px;
+      }
     {%- endfor -%}
 
     @media(min-width: 768px) {
@@ -53,6 +58,16 @@
         }
       {%- endfor -%}
     }
+    {%- for block in section.blocks -%}
+      {% if forloop.length == 1 %}
+        #section-id-{{ section.id }} .overlay-text{
+          margin-left: 0 !important;
+        }
+        #section-id-{{ section.id }} .overlay-text__inner{
+          padding-left: 0 !important;
+        }
+      {% endif %}
+    {%- endfor -%}
   {% endstyle %}
 
   {%- unless section.settings.full_width -%}
@@ -72,11 +87,11 @@
           assign wrap_slide_with_link = true
         endif
       -%}
+      
         <div class="slide slide-{{ forloop.index }} height--{{ section.settings.height }} image-overlay image-overlay--bg-{{ section.settings.overlay_style }} {% if section.settings.mobile_overlay_under %}overlay-text-parent--mobile-stack{% endif %}" {{ block.shopify_attributes }}>
           {%- if wrap_slide_with_link -%}
             <a class="image-overlay__image-link" href="{{ block.settings.slide_link }}">
             {%- endif -%}
-
             {%- if block.settings.image == blank -%}
               <div class="placeholder-image placeholder--banner{% if show_overlay_text %} dark{% endif %}{% if section.settings.height == 'fixed' %} fixed-height-item{% endif %}" {% if section.settings.height == 'adapt' %}style="padding-top: 50%"{% endif %}>
                 {% capture current %}
