@@ -14,7 +14,9 @@
         "subheading": "",
         "title": "Frequently asked questions",
         "title_size": 52,
+        "title_weight": 800,
         "title_size_mobile": 36,
+        "title_weight_mobile": 800,
         "use_h1": false,
         "text": "<p>If talking to a real-life human is more your thing, you can reach our Customer Happiness Team via email (below).<\/p>",
         "enlarge_text": true,
@@ -32,6 +34,7 @@
       "type": "faq-header",
       "settings": {
         "title": "FAQ",
+        "title_weight": 800,
         "use_h1": false,
         "text": "<p>We might have already read your mind. Use the search to find what you are looking for.<\/p>",
         "show_search": true,
