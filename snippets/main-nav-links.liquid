@@ -57,14 +57,25 @@
                 <div class="mega_menu_wrapper">
                   <div class="mega_menu_title">
                     <ul class="menu-mega-nav">
-                      <h1 class="main_coll_title">{{ section.settings.mega_collection_heading }}
+                      <h1 class="main_coll_title">
+                        {% if link.title != "Shop" %}
+                          By {{ link.title }}
+                        {% else %}
+                          {{ section.settings.mega_collection_heading }}
+                        {% endif %}
                       </h1>
+                      {% assign BlockFirstLoop = true %}
                       {%- for block in section.blocks -%}
                         {%- assign dropdown_link_title_sanitised = block.settings.dropdown_link_title | downcase | strip -%}
                         {%- if dropdown_link_title_sanitised == link_title_sanitised and block.type == 'menu-promotion-large' -%}
                           {% assign collection = collections[block.settings.collection] %}
-                          <li class="menu-item {% if forloop.first %}active{% endif%}">
-                            <a class="coll_heading" href="{{collection.url}}">{{collection.title}}
+                          <li class="menu-item {% if BlockFirstLoop %}active{% endif%}">
+                            <a class="coll_heading" href="{{collection.url}}">
+                              {% if block.settings.collection_title != blank %}
+                              {{ block.settings.collection_title }}
+                              {% else %}
+                              {{ collection.title }}
+                              {% endif %}
                             </a>
                             <div class="ruby-grid ruby-grid-lined desktop-only">
                               <div class="ruby-row {% if forloop.first %}active{% endif%}">
@@ -112,6 +123,7 @@
                               </div>
                             </div>
                           </li>
+                          {% assign BlockFirstLoop = false %}
                         {%- endif -%}
                       {%- endfor -%}
                     </ul>
