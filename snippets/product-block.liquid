@@ -38,7 +38,11 @@
     assign shipping_interval_frequency = productSubscription.shipping_interval_frequency | split: ','
   -%}
 
-<div data-product-id="{{ product.id }}" class="product-block" {% if animate %}data-cc-animate{% endif %} product-main-block>
+<div
+  data-product-id="{{ product.id }}"
+  class="product-block"
+  {% if animate %}data-cc-animate{% endif %}
+  product-main-block>
   <div class="block-inner">
     <div class="block-inner-inner">
       {% if product.featured_media %}
@@ -52,7 +56,11 @@
             endfor
           -%}
         <div class="image-cont {% if show_hover_image %}image-cont--with-secondary-image {% if aspect_ratios_same %}image-cont--same-aspect-ratio{% endif %}{% endif %}">
-          <a class="product-link{% if settings.quickbuy_style == 'whole' %} quickbuy-toggle{% endif %}" href="{{ product_url }}" aria-label="{{ product.title | escape }}" tabindex="-1">
+          <a
+            class="product-link{% if settings.quickbuy_style == 'whole' %} quickbuy-toggle{% endif %}"
+            href="{{ product_url }}"
+            aria-label="{{ product.title | escape }}"
+            tabindex="-1">
             <div class="image-label-wrap">
               <div>
                 {%- if show_hover_image -%}
@@ -74,8 +82,17 @@
                                                                                        endif
                                                                                      endif
                                                                                    -%}
-                    <div class="product-block__image product-block__image--secondary rimage-wrapper lazyload--placeholder {{ image_state_class }}" data-media-id="{{ media.id }}" data-image-index="{{ forloop.index }}">
-                      <div class="lazyload--manual rimage-background fade-in{% if settings.prod_thumb_crop %} cover{% endif %}" data-lazy-bgset-src="{{ media.preview_image | img_url: 'master' }}" data-lazy-bgset-aspect-ratio="{{ media.preview_image.aspect_ratio }}" data-lazy-bgset-width="{{ media.preview_image.width }}" data-sizes="auto" data-parent-fit="{% if settings.prod_thumb_crop %}cover{% else %}contain{% endif %}"></div>
+                    <div
+                      class="product-block__image product-block__image--secondary rimage-wrapper lazyload--placeholder {{ image_state_class }}"
+                      data-media-id="{{ media.id }}"
+                      data-image-index="{{ forloop.index }}">
+                      <div
+                        class="lazyload--manual rimage-background fade-in{% if settings.prod_thumb_crop %} cover{% endif %}"
+                        data-lazy-bgset-src="{{ media.preview_image | img_url: 'master' }}"
+                        data-lazy-bgset-aspect-ratio="{{ media.preview_image.aspect_ratio }}"
+                        data-lazy-bgset-width="{{ media.preview_image.width }}"
+                        data-sizes="auto"
+                        data-parent-fit="{% if settings.prod_thumb_crop %}cover{% else %}contain{% endif %}"></div>
                     </div>
                   {%- endfor -%}
                 {%- else -%}
@@ -99,9 +116,17 @@
             </div>
           </a>
           {%- if show_hover_image -%}
-            <a class="image-page-button image-page-button--previous ltr-icon" href="#" aria-label="{{ 'general.accessibility_labels.previous' | t | escape }}" tabindex="-1">{%- render 'svg-chevron-left', stroke_width: 1.3 -%}
+            <a
+              class="image-page-button image-page-button--previous ltr-icon"
+              href="#"
+              aria-label="{{ 'general.accessibility_labels.previous' | t | escape }}"
+              tabindex="-1">{%- render 'svg-chevron-left', stroke_width: 1.3 -%}
             </a>
-            <a class="image-page-button image-page-button--next ltr-icon" href="#" aria-label="{{ 'general.accessibility_labels.previous' | t | escape }}" tabindex="-1">{%- render 'svg-chevron-right', stroke_width: 1.3 -%}
+            <a
+              class="image-page-button image-page-button--next ltr-icon"
+              href="#"
+              aria-label="{{ 'general.accessibility_labels.previous' | t | escape }}"
+              tabindex="-1">{%- render 'svg-chevron-right', stroke_width: 1.3 -%}
             </a>
           {%- endif -%}
 
@@ -128,7 +153,8 @@
               </div>
 
               {%- if settings.live_search_show_vendor == true -%}
-                <div class="vendor">{{ product.vendor }}
+                <div class="vendor">
+                  <p>{{ product.metafields.custom.product_varient_pack }}</p>
                 </div>
               {%- endif -%}
 
@@ -137,29 +163,28 @@
                 </div>
               {%- endif -%}
 
-              <div class="product-price">
-                {% comment %}
-                  {% if product.price_varies %}
-                  <span class="product-price__item product-price__from">{{ 'products.listing.from' | t }}</span>
-                  {% endif %}
-                  <span class="product-price__item product-price__amount {% if cheapest_variant.compare_at_price > cheapest_variant.price %}product-price__amount--on-sale{% endif %} theme-money">
-                  {%- if settings.product_currency_code_enabled -%}
-                  {{ cheapest_variant.price | money_with_currency }}
-                  {%- else -%}
-                  {{ cheapest_variant.price | money }}
-                  {%- endif -%}
-                  </span>
-                  {% if cheapest_variant.compare_at_price > cheapest_variant.price %}
-                  <span class="product-price__item product-price__compare theme-money">{{ cheapest_variant.compare_at_price | money }}</span>
-                  {% endif %}                
+              <div class="product-price">{% comment %}
+                {% if product.price_varies %}
+                <span class="product-price__item product-price__from">{{ 'products.listing.from' | t }}</span>
+                {% endif %}
+                <span class="product-price__item product-price__amount {% if cheapest_variant.compare_at_price > cheapest_variant.price %}product-price__amount--on-sale{% endif %} theme-money">
+                {%- if settings.product_currency_code_enabled -%}
+                {{ cheapest_variant.price | money_with_currency }}
+                {%- else -%}
+                {{ cheapest_variant.price | money }}
+                {%- endif -%}
+                </span>
+                {% if cheapest_variant.compare_at_price > cheapest_variant.price %}
+                <span class="product-price__item product-price__compare theme-money">{{ cheapest_variant.compare_at_price | money }}</span>
+                {% endif %}                
 
-                  {% if settings.prod_sold_out_show and product.available == false %}
-                  <span class="product-price__item price-label price-label--sold-out">{{ 'products.labels.sold_out' | t }}</span>
-                  {% elsif settings.prod_pre_order_label_show and product.template_suffix contains 'preorder' %}
-                  <span class="product-price__item price-label price-label--preorder">{{ 'products.product.preorder' | t }}</span>
-                  {% elsif settings.prod_sale_show and cheapest_variant.compare_at_price > cheapest_variant.price %}
-                  <span class="product-price__item price-label price-label--sale">{{ 'products.labels.sale' | t }}</span>
-                  {% endif %}
+                {% if settings.prod_sold_out_show and product.available == false %}
+                <span class="product-price__item price-label price-label--sold-out">{{ 'products.labels.sold_out' | t }}</span>
+                {% elsif settings.prod_pre_order_label_show and product.template_suffix contains 'preorder' %}
+                <span class="product-price__item price-label price-label--preorder">{{ 'products.product.preorder' | t }}</span>
+                {% elsif settings.prod_sale_show and cheapest_variant.compare_at_price > cheapest_variant.price %}
+                <span class="product-price__item price-label price-label--sale">{{ 'products.labels.sale' | t }}</span>
+                {% endif %}
                 {% endcomment %}
               </div>
 
@@ -179,21 +204,20 @@
             {%- endif -%}
             <div class="subscription_checkout_button">
               {% comment %}
-                <div class="dynamic_checkout_btn">
-                <button type="button" class="shopify-payment-button__button shopify-payment-button__button--unbranded js-buy-now-btn btn-has-price" data-variant-id="{{cheapest_variant.id}}" data-quantity="1" data-product-id="{{product.id}}" onclick="theme.handleBuyNow(this)">
-                {% if productSubscription.has_subscription %}
-                <span>Buy once</span>
-                {% else %}
-                <span>Buy now</span>
-                {% endif %}
-                <span>{{current_variant.price | money}}
-                </span>
-                </button>
-                </div>
+              <div class="dynamic_checkout_btn">
+              <button type="button" class="shopify-payment-button__button shopify-payment-button__button--unbranded js-buy-now-btn btn-has-price" data-variant-id="{{cheapest_variant.id}}" data-quantity="1" data-product-id="{{product.id}}" onclick="theme.handleBuyNow(this)">
+              {% if productSubscription.has_subscription %}
+              <span>Buy once</span>
+              {% else %}
+              <span>Buy now</span>
+              {% endif %}
+              <span>{{current_variant.price | money}}
+              </span>
+              </button>
+              </div>
               {% endcomment %}
               <!-- custom subscription info -->
-              <div class="custom_subscription_info">
-                <div class="custom_subscription_wrapper">
+                <div class="custom_subscription_info"> <div class="custom_subscription_wrapper">
                   <div class="custom_button_info">
                     {%- if productSubscription.has_subscription -%}
                       <button class="btn btn-primary  custom_sub_button default_addToCart_btn">
@@ -220,7 +244,10 @@
                         </span>
                       </button>
                     {%- else -%}
-                      <button class="btn btn-primary primary_addtocart default_addToCart_btn" form="{{product_form_id}}" direct-addToCart-btn>
+                      <button
+                        class="btn btn-primary primary_addtocart default_addToCart_btn"
+                        form="{{product_form_id}}"
+                        direct-addToCart-btn>
                         <span>
                           Add to cart
                         </span>
@@ -268,14 +295,11 @@
                               continue
                             endif
                           -%}
-                          <span class="product-block-options__item{% unless settings.prod_thumb_options_disable_unavailable == false or variant.available %} product-block-options__item--unavailable{% endunless %}{% if forloop.index > option_limit and is_swatch %} product-block-options__item--truncated{% endif %}{% if is_swatch %} lazyload{% if manual_image_load %}--manual{% endif %}{% endif %}" data-option-item="{{ variant.title | escape }}" {% if variant.featured_media %}data-media="{{ variant.featured_media.id }}"{% endif %}
-                            {% if is_swatch -%}
-                            {%- if settings.swatch_method == 'standard' -%}
-                            data-swatch="{{ variant.title | replace: '"', '' | downcase }}"
-                            {%- elsif settings.swatch_method == 'image' and variant.featured_media.preview_image -%}
-                            data-bgset="{{ variant.featured_media.preview_image | img_url: '48x48', crop: settings.swatch_crop_align }}"
-                            {%- endif -%}
-                            {%- endif %}><span class="product-block-options__item__text">{{ variant.title }}
+                          <span
+                            class="product-block-options__item{% unless settings.prod_thumb_options_disable_unavailable == false or variant.available %} product-block-options__item--unavailable{% endunless %}{% if forloop.index > option_limit and is_swatch %} product-block-options__item--truncated{% endif %}{% if is_swatch %} lazyload{% if manual_image_load %}--manual{% endif %}{% endif %}"
+                            data-option-item="{{ variant.title | escape }}"
+                            {% if variant.featured_media %}data-media="{{ variant.featured_media.id }}"{% endif %}{% if is_swatch -%}{%- if settings.swatch_method == 'standard' -%}data-swatch="{{ variant.title | replace: '"', '' | downcase }}"{%- elsif settings.swatch_method == 'image' and variant.featured_media.preview_image -%}data-bgset="{{ variant.featured_media.preview_image | img_url: '48x48', crop: settings.swatch_crop_align }}"{%- endif -%}{%- endif %}>
+                            <span class="product-block-options__item__text">{{ variant.title }}
                             </span>
                           </span>
                         {%- endfor -%}
@@ -312,14 +336,11 @@
                               continue
                             endif
                           -%}
-                          <span class="product-block-options__item{% if is_unavailable %} product-block-options__item--unavailable{% endif %}{% if forloop.index > option_limit and is_swatch %} product-block-options__item--truncated{% endif %}{% if is_swatch %} lazyload{% if manual_image_load %}--manual{% endif %}{% endif %}" data-option-item="{{ product_option_value | escape }}" {% if option_value_variant.featured_media %}data-media="{{ option_value_variant.featured_media.id }}"{% endif %}
-                            {% if is_swatch %}
-                            {%- if settings.swatch_method == 'standard' -%}
-                            data-swatch="{{ product_option_value | replace: '"', '' | downcase }}"
-                            {%- elsif settings.swatch_method == 'image' and option_value_variant.featured_media -%}
-                            data-bgset="{{ option_value_variant.featured_media.preview_image | img_url: '48x48', crop: settings.swatch_crop_align }}"
-                            {%- endif -%}
-                            {% endif %}><span class="product-block-options__item__text">{{ product_option_value }}
+                          <span
+                            class="product-block-options__item{% if is_unavailable %} product-block-options__item--unavailable{% endif %}{% if forloop.index > option_limit and is_swatch %} product-block-options__item--truncated{% endif %}{% if is_swatch %} lazyload{% if manual_image_load %}--manual{% endif %}{% endif %}"
+                            data-option-item="{{ product_option_value | escape }}"
+                            {% if option_value_variant.featured_media %}data-media="{{ option_value_variant.featured_media.id }}"{% endif %}{% if is_swatch %}{%- if settings.swatch_method == 'standard' -%}data-swatch="{{ product_option_value | replace: '"', '' | downcase }}"{%- elsif settings.swatch_method == 'image' and option_value_variant.featured_media -%}data-bgset="{{ option_value_variant.featured_media.preview_image | img_url: '48x48', crop: settings.swatch_crop_align }}"{%- endif -%}{% endif %}>
+                            <span class="product-block-options__item__text">{{ product_option_value }}
                             </span>
                           </span>
                         {%- endfor -%}
@@ -347,20 +368,26 @@
         <div class="close_card_info">{% render 'svg-close' %}
         </div>
         {% form 'product', product, id: product_form_id, class: 'form feature-product-purchase-form', data-product-handle: product.handle, data-product-id: product.id, data-productid: product.id %}
-          <input type="hidden" name="id" value="{{current_variant.id}}" original-productId-input>
-          <input type="hidden" name="quantity" value="1">
+          <input
+            type="hidden"
+            name="id"
+            value="{{current_variant.id}}"
+            original-productId-input>
+          <input type="hidden"
+            name="quantity"
+            value="1">
           {%- comment -%}Product Json Data{%- endcomment -%}
           <script type="application/json" data-productInfo>
             {{ product | json }}
           </script>
           {% if productSubscription.has_subscription %}
             {%- comment -%}
-              `1) actualVaraintId => To set varaint id in varaible
-              2) duplicateVaraintId => Get Duplicate varaint id from subscription "original_to_hidden_variant_map"
+            `1) actualVaraintId => To set varaint id in varaible
+            2) duplicateVaraintId => Get Duplicate varaint id from subscription "original_to_hidden_variant_map"
             {%- endcomment -%}
             {% assign actualVaraintId = current_variant.id | escape %}
-            {%  assign duplicateVaraintId =  productSubscription.original_to_hidden_variant_map[actualVaraintId].discount_variant_id  %}
-            {%  assign subscriptionVaraintPrice =  productSubscription.original_to_hidden_variant_map[actualVaraintId].discount_variant_price  %}
+            {% assign duplicateVaraintId = productSubscription.original_to_hidden_variant_map[actualVaraintId].discount_variant_id %}
+            {% assign subscriptionVaraintPrice = productSubscription.original_to_hidden_variant_map[actualVaraintId].discount_variant_price %}
             {% assign discount_percentage = productSubscription.discount_percentage | round: 2 %}
             {% assign discount_floor = productSubscription.discount_percentage | floor %}
             {% if discount_percentage == discount_floor %}
@@ -377,32 +404,49 @@
             {% assign shipping_interval_frequency = productSubscription.shipping_interval_frequency | split: ',' | size %}
             {% assign selected_shipping_interval_frequency = productSubscription.shipping_interval_frequency | split: ',' %}
             {%- comment -%}
-              Create inputs required to send recharge data
+            Create inputs required to send recharge data
             {%- endcomment -%}
 
-            <input type="hidden" name="" value="{{duplicateVaraintId}}" subscription-varaintId-input="true">
+            <input
+              type="hidden"
+              name=""
+              value="{{duplicateVaraintId}}"
+              subscription-varaintId-input="true">
             {%- if shipping_interval_frequency > 1 -%}
               {%- assign updatedShippingInterval = selected_shipping_interval_frequency[0] -%}
             {% else %}
               {%- assign updatedShippingInterval = shipping_interval_frequency -%}
             {%- endif -%}
 
-            <input type="hidden" name="" value="{{updatedShippingInterval}}" subscription-frequency-input>
-            <input type="hidden" name="" value="{{shipping_interval_unit_type}}" subscription-unit-input>
+            <input
+              type="hidden"
+              name=""
+              value="{{updatedShippingInterval}}"
+              subscription-frequency-input>
+            <input type="hidden"
+              name=""
+              value="{{shipping_interval_unit_type}}"
+              subscription-unit-input>
 
             {%- comment -%}
-              end comment
+            end comment
             {%- endcomment -%}
 
             <script type="application/json" data-productSubscriptionData>
               {{ productSubscription | json }}
             </script>
             {%- comment -%}
-              Input radio  for subscription selection
+            Input radio  for subscription selection
             {%- endcomment -%}
             <div class="product-subscription-selection-wrapper">
               <label for="{{current_variant.id}}-onetime-radio" class="sub-radio-active">
-                <input type="radio" id="{{current_variant.id}}-onetime-radio" name="{{current_variant.id}}-subscribe_product" value="{{duplicateVaraintId}}" product-oneTime-selection checked>
+                <input
+                  type="radio"
+                  id="{{current_variant.id}}-onetime-radio"
+                  name="{{current_variant.id}}-subscribe_product"
+                  value="{{duplicateVaraintId}}"
+                  product-oneTime-selection
+                  checked>
                 <div class="radio-flex-wrapper">
                   <div class="flex-container">
                     <span class="radio_icon"></span>
@@ -415,7 +459,12 @@
                 </div>
               </label>
               <label for="{{current_variant.id}}-subscribe-radio">
-                <input type="radio" id="{{current_variant.id}}-subscribe-radio" name="{{current_variant.id}}-subscribe_product" value="{{duplicateVaraintId}}" product-subscription-selection>
+                <input
+                  type="radio"
+                  id="{{current_variant.id}}-subscribe-radio"
+                  name="{{current_variant.id}}-subscribe_product"
+                  value="{{duplicateVaraintId}}"
+                  product-subscription-selection>
                 <div class="radio-flex-wrapper">
                   <div class="flex-container">
                     <span class="radio_icon"></span>
@@ -425,22 +474,24 @@
                   <div class="flex-container margin-r-auto">
                     <span>$</span>
                     <span subscription-price>
-                      {{subscriptionVaraintPrice | escape}}
+                      {{ subscriptionVaraintPrice | escape }}
                     </span>
                   </div>
                 </div>
               </label>
-              <div class="subscription-interval-container" style="display: none" subscription-interval-selectors-wrap>
+              <div class="subscription-interval-container"
+                style="display: none"
+                subscription-interval-selectors-wrap>
                 {%- comment -%}
-                  {% assign shipping_interval_unit = productSubscription.shipping_interval_unit_type | split: ',' | size %}
+                {% assign shipping_interval_unit = productSubscription.shipping_interval_unit_type | split: ',' | size %}
                 {%- endcomment -%}
-                {%- if shipping_interval_frequency >  1 %}
+                {%- if shipping_interval_frequency > 1 %}
                   <div class="subscription-interval-wrapper">
                     <select interval-frequency-selector class="feature-product-shipping-interval">
                       {% for shipping_interval_frequency in selected_shipping_interval_frequency %}
                         <option value="{{shipping_interval_frequency}}">Delivery every
-                          {{shipping_interval_frequency}}
-                          {{item.product.metafields.subscriptions.shipping_interval_unit_type}}
+                          {{ shipping_interval_frequency }}
+                          {{ item.product.metafields.subscriptions.shipping_interval_unit_type }}
                         </option>
                       {% endfor %}
                     </select>
@@ -449,10 +500,10 @@
                   <div class="subscription-singleline-text">
                     Delivery every
                     <span>
-                      {{productSubscription.shipping_interval_frequency}}
+                      {{ productSubscription.shipping_interval_frequency }}
                     </span>
                     <span>
-                      {{shipping_interval_unit_type}}
+                      {{ shipping_interval_unit_type }}
                     </span>
                   </div>
                 {%- endif -%}
@@ -460,7 +511,7 @@
             </div>
 
             {%- comment -%}
-              Input radio  for subscription selection ends
+            Input radio  for subscription selection ends
             {%- endcomment -%}
 
           {% endif %}
@@ -470,7 +521,10 @@
                 <div class="options">
                   <div class="option_label">{{ option.name }}
                   </div>
-                  <select class="product-variants {{ option.name | handleize }} option-{{option.position}}" data-url="{{ product.url }}" feature-productVaraintSelector>
+                  <select
+                    class="product-variants {{ option.name | handleize }} option-{{option.position}}"
+                    data-url="{{ product.url }}"
+                    feature-productVaraintSelector>
                     {% for value in option.values %}
                       <option {% if option.selected_value == value %}selected{% endif %}>{{ value }}
                       </option>
@@ -480,7 +534,11 @@
               {% endfor %}
             </div>
           {% endif %}
-          <div class="product-form" data-ajax-add-to-cart="false" data-product-id="{{ current_variant.id }}" data-enable-history-state="false">
+          <div
+            class="product-form"
+            data-ajax-add-to-cart="false"
+            data-product-id="{{ current_variant.id }}"
+            data-enable-history-state="false">
             <div class="quantity-submit-row__submit input-row">
               {%- capture add_to_cart_text -%}
                 {%- if product.template_suffix contains 'preorder' -%}
@@ -489,22 +547,27 @@
                   {{- 'products.product.add_to_cart' | t -}}
                 {%- endif -%}
               {%- endcapture -%}
-              <button class="button button--large add_to_cart_btn" data-product-id="{{ current_variant.id }}" type="submit" data-add-to-cart-text="{{ add_to_cart_text | escape }}" feature-addto-cart>
+              <button
+                class="button button--large add_to_cart_btn"
+                data-product-id="{{ current_variant.id }}"
+                type="submit"
+                data-add-to-cart-text="{{ add_to_cart_text | escape }}"
+                feature-addto-cart>
                 <span class="button-actual-text">
                   {%- comment -%}
-                    <span class="product-price price__item_sub">
-                    <span class="product-price__item product-price__amount {% if cheapest_variant.compare_at_price > cheapest_variant.price %}product-price__amount--on-sale{% endif %} theme-money">
-                    {%- if settings.product_currency_code_enabled -%}
-                    {{ cheapest_variant.price | money_with_currency }}
-                    {%- else -%}
-                    {{ cheapest_variant.price | money }}
-                    {%- endif -%}
-                    </span>
-                    {% if cheapest_variant.compare_at_price > cheapest_variant.price %}
-                    <span class="product-price__item product-price__compare theme-money">{{ cheapest_variant.compare_at_price | money }}
-                    </span>
-                    {% endif %}
-                    </span>
+                  <span class="product-price price__item_sub">
+                  <span class="product-price__item product-price__amount {% if cheapest_variant.compare_at_price > cheapest_variant.price %}product-price__amount--on-sale{% endif %} theme-money">
+                  {%- if settings.product_currency_code_enabled -%}
+                  {{ cheapest_variant.price | money_with_currency }}
+                  {%- else -%}
+                  {{ cheapest_variant.price | money }}
+                  {%- endif -%}
+                  </span>
+                  {% if cheapest_variant.compare_at_price > cheapest_variant.price %}
+                  <span class="product-price__item product-price__compare theme-money">{{ cheapest_variant.compare_at_price | money }}
+                  </span>
+                  {% endif %}
+                  </span>
                   {%- endcomment -%}
                   <span>{{- add_to_cart_text -}}
                   </span>
@@ -523,7 +586,11 @@
   {%- if settings.quickbuy_style != 'off' -%}
     {%- unless no_quick_buy_markup or no_quick_buy -%}
       <div class="quickbuy-container">
-        <a href="#" class="close-detail" aria-label="{{ 'products.quick_buy.close' | t }}" tabindex="-1">{% render 'svg-x' %}
+        <a
+          href="#"
+          class="close-detail"
+          aria-label="{{ 'products.quick_buy.close' | t }}"
+          tabindex="-1">{% render 'svg-x' %}
         </a>
         <div class="inner"></div>
       </div>
