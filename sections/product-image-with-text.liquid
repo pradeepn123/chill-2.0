@@ -1,25 +1,73 @@
+
+{% style %}
+.gummies-button {
+  background: {{ section.settings.button-background-color}};
+  color: {{ section.settings.gummies-text-color}};
+  border: 1px solid {{ section.settings.gummies-border-color}};
+  font-size:{{section.settings.btn_font_size}}px;
+  font-weight:{{section.settings.btn_font_weight}};
+  border-radius:29px;
+
+}
+<!-- @media(max-width:768px){
+    .gummies-button{
+    font-size: {{section.settings.mobilebtn_font_size}}px; 
+    }
+} -->
+
+{% endstyle %}
+
+
 {% if section.settings.enable != false and product.metafields.setting.image_with_text.value != blank %}
-    <div class="product-image-with-text-section">
-        <div class="product-image-text-section-wrapper">
-            <div class="product-image-text-list">
-                {% for block in product.metafields.setting.image_with_text.value['image_text'] %}
-                    <div class="product-image-text-item">
-                        {% if block.image_url != blank%}
-                            <div class="image_wrapper">
-                                <img src="{{ block.image_url }}" alt="" />
-                            </div>
-                        {% endif %}
-                        {% if block.title != blank %}
-                            <div class="text_wrapper">
-                                {{block.title}}
-                            </div>
-                        {% endif %}
-                    </div>
-                {% endfor%}
-            </div>
-        </div>
+  <div class="product-image-with-text-section">
+    <div class="product-image-text-section-wrapper">
+      <div class="product-image-text-list">
+        {% for block in product.metafields.setting.image_with_text.value['image_text'] %}
+          <div class="product-image-text-item">
+            {% if block.image_url != blank %}
+              <div class="image_wrapper">
+                <img src="{{ block.image_url }}" alt="" />
+              </div>
+            {% endif %}
+
+            {% if block.title != blank %}
+              <div class="text_wrapper">
+                {{ block.title }}
+              </div>
+            {% endif %}
+          </div>
+
+        {% endfor %}
+
+      </div>
     </div>
+  </div>
 {% endif %}
+
+
+<div class="metafielf-gummies-img-mobile">
+
+    {% assign image_url = product.metafields.custom.mobile_recycle_banner %}
+    {% if image_url != blank %}
+      <img src="{{ image_url }}" class="desktop-recycle-img-mobile">
+      <!-- <button class="gummies-button">{{ section.settings.gummies-img-button }}</button> -->
+    {% endif %}
+  
+</div>
+
+
+<div class="metafielf-gummies-img">
+
+  {% assign image_url = product.metafields.custom.gummies_recycle_banner %}
+  {% if image_url != blank %}
+    <img src="{{ image_url }}" class="desktop-recycle-img">
+    <button class="gummies-button">{{ section.settings.gummies-img-button }}</button>
+  {% endif %}
+
+</div>
+
+
+
 
 {% schema %}
   {
@@ -31,13 +79,64 @@
         "id": "enable",
         "label": "Show/Hide Section",
         "default": true
-      }      
+      },
+      {
+        "type": "text",
+        "id": "gummies-img-button",
+        "label": "gummies-Button",
+        "default": "shop Now"
+      },
+      {
+        "type": "range",
+        "id": "btn_font_size",
+        "label": "Button font size",
+        "min": 14,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "default": 14
+      },
+      {
+        "type": "range",
+        "id": "btn_font_weight",
+        "label": "Button font weight",
+        "min": 500,
+        "max": 900,
+        "step": 100,
+        "default": 600
+      },
+      {
+        "type": "range",
+        "id": "mobilebtn_font_size",
+        "label": "Mobile font size",
+        "min": 14,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "default": 14
+      },
+      {
+        "type": "color",
+        "id": "button-background-color",
+        "label": "Button background color",
+        "default": "#000000"
+      }, {
+        "type": "color",
+        "id": "gummies-text-color",
+        "label": "Button text color",
+        "default": "#FFFFFF"
+      }, {
+        "type": "color",
+        "id": "gummies-border-color",
+        "label": "Button border color"
+      
+      }
     ],
     "presets": [
-        {
-            "name": "Product Image With Text",
-            "settings": {}     
-        }
+      {
+        "name": "Product Image With Text",
+        "settings": {}
+      }
     ]
   }
 {% endschema %}
