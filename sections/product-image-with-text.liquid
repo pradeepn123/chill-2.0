@@ -7,13 +7,13 @@
   font-size:{{section.settings.btn_font_size}}px;
   font-weight:{{section.settings.btn_font_weight}};
   border-radius:29px;
+} 
 
-}
-<!-- @media(max-width:768px){
+@media screen and (max-width:768px){
     .gummies-button{
-    font-size: {{section.settings.mobilebtn_font_size}}px; 
+        font-size:{{ section.settings.mobilebtn_font_size }}px !important;
     }
-} -->
+}
 
 {% endstyle %}
 
@@ -45,7 +45,7 @@
 {% endif %}
 
 
-<div class="metafielf-gummies-img-mobile">
+<div class="metafield-gummies-img-mobile">
 
     {% assign image_url = product.metafields.custom.mobile_recycle_banner %}
     {% if image_url != blank %}
@@ -56,7 +56,8 @@
 </div>
 
 
-<div class="metafielf-gummies-img">
+
+<div class="metafield-gummies-img">
 
   {% assign image_url = product.metafields.custom.gummies_recycle_banner %}
   {% if image_url != blank %}
@@ -109,11 +110,11 @@
         "type": "range",
         "id": "mobilebtn_font_size",
         "label": "Mobile font size",
-        "min": 14,
+        "min": 2,
         "max": 50,
         "step": 2,
         "unit": "px",
-        "default": 14
+        "default": 10
       },
       {
         "type": "color",

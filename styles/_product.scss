@@ -503,14 +503,14 @@
     }
 }
 
-.metafielf-gummies-img-mobile{
+.metafield-gummies-img-mobile{
     display: none;
     @media screen and (max-width:768px){
         display:block;
     }
 }
 
-.metafielf-gummies-img{
+.metafield-gummies-img{
     margin-bottom: 80px;
     position: relative;
     left: 0%;
@@ -527,7 +527,7 @@
             left:10%;
 
             @media screen and (max-width:920px){
-                font-size:12px !important;
+                font-size:12px;
             }
             @media screen and (max-width:768px){
                 position: relative;
