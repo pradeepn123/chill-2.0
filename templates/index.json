@@ -504,6 +504,7 @@
     },
     "829c3c02-065e-4087-a6c0-f8a0cb3d5f6e": {
       "type": "image-with-text-overlay",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/Recycle_Banner_-_DESKTOP_1.jpg",
         "mobile_image": "shopify:\/\/shop_images\/RECYCLE_Banner_MOBILE.jpg",
@@ -520,7 +521,7 @@
         "title_size_mobile": 46,
         "title_weight_mobile": 800,
         "use_h1": false,
-        "text": "<p><\/p>",
+        "text": "",
         "enlarge_text": true,
         "button_label_1": "Shop Gummies",
         "button_url_1": "shopify:\/\/collections\/cbd-gummies",
