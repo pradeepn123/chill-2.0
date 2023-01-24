@@ -4,7 +4,11 @@
   else
     assign product_limit = section.settings.grid | times: section.settings.rows
   endif
-  assign collection = collections[section.settings.collection]
+  if article.metafields.custom.product_recommendation != blank
+    assign collection = article.metafields.custom.product_recommendation.value
+  else
+    assign collection = collections[section.settings.collection]
+  endif
 -%}
 
 <div class="section-id-{{ section.id }} collection-slider-row {% if section.settings.use_alt_bg %}use-alt-bg{% endif %}" data-section-type="featured-collection" data-components="accordion,modal,price-range">
