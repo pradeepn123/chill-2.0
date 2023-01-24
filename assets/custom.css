@@ -3179,44 +3179,34 @@ body {
 .metafield-gummies-img {
   margin-bottom: 80px;
   position: relative;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
+}
+@media screen and (max-width: 768px) {
+  .metafield-gummies-img {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 768px) {
   .metafield-gummies-img .desktop-recycle-img {
     display: none;
   }
 }
-.metafield-gummies-img .gummies-button {
-  position: absolute;
-  top: 74%;
-  left: 10%;
-}
 @media screen and (max-width: 920px) {
   .metafield-gummies-img .gummies-button {
     font-size: 12px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
+  .metafield-gummies-img .gummies-button {
+    position: absolute;
+    top: 74%;
+    left: 10%;
+  }
+}
+@media screen and (max-width: 769px) {
   .metafield-gummies-img .gummies-button {
     position: relative;
-    margin-top: 36px !important;
-    width: 147px !important;
-    left: 37%;
     font-weight: 700;
-    margin: 16px 0px;
-  }
-}
-@media screen and (max-width: 520px) {
-  .metafield-gummies-img .gummies-button {
-    left: 35%;
-  }
-}
-@media screen and (max-width: 376px) {
-  .metafield-gummies-img .gummies-button {
-    left: 30% !important;
+    margin: 36px auto 0px;
   }
 }
 
