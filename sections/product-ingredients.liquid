@@ -3,14 +3,14 @@
     <div class="tab-content">
       <div class="tab-heading">
         <ul class='product-tabs'>
-          {%- for block in product.metafields.settings.product_ingredients.value['ingredients_tab']  -%}
+          {%- for block in product.metafields.settings.product_ingredients.value['ingredients_tab'] -%}
             {% if block.tab_id != blank %}
               <a href="#{{block.tab_id}}" class="{% if forloop.first %}active{% endif %}">
               {% endif %}
               {% if block.tab_id == blank %}
                 <li class='{% if forloop.first %}active{% endif %}' data-tab-id='tab{{ forloop.index }}'>
                 {% endif %}
-                {{ block.tab_title}}
+                {{ block.tab_title }}
                 {% if block.tab_id == blank %}
                 </li>
               {% endif %}
@@ -20,27 +20,30 @@
           {% endfor %}
         </ul>
       </div>
+
+
       <div class='content-section'>
         {%- for block in product.metafields.settings.product_ingredients_tabs.value['tab_main'] -%}
-          {% assign tab_id = tab_id | plus:1 %}
+          {% assign tab_id = tab_id | plus: 1 %}
           <div id='tab{{tab_id}}' class='content {% if tab_id == 1 %}active{% endif %}'>
             {% if block.heading != blank or section.settings.heading %}
               <div class="heading_text align-center">
                 <h2>{{ block.heading }}</h2>
-                <p>{{ block.description}}</p>
+                <p>{{ block.description }}</p>
               </div>
             {% endif %}
-            {% assign sub_block_value = block['tab_content']%}
+            {% assign sub_block_value = block['tab_content'] %}
             <div class="tab-content-list">
-              {%- for sub_block in block['tab_content']  -%}
+              {%- for sub_block in block['tab_content'] -%}
                 {% if sub_block.image != blank or sub_block.subtitle != blank or sub_block.subdescription != blank %}
                   <div class="tab-content-item">
                     {% if sub_block.image %}<img src="{{ sub_block.image }}" alt="">
                     {% endif %}
 
-                    <h3>{{sub_block.subtitle}}</h3>
-                    <p>{{sub_block.subdescription}}</p>
+                    <h3>{{ sub_block.subtitle }}</h3>
+                    <p>{{ sub_block.subdescription }}</p>
                   </div>
+
 
                 {% endif %}
               {%- endfor -%}
@@ -56,7 +59,7 @@
             {% endif %}
 
 
-            {% if block.para1 != blank or block.para2 != blank or block.para3 != blank or block.para4 != blank or block.direction_heading != blank or block.para5 != blank  %}
+            {% if block.para1 != blank or block.para2 != blank or block.para3 != blank or block.para4 != blank or block.direction_heading != blank or block.para5 != blank %}
               <div class="direction_to_use">
                 <h3 class="align-center">{{ block.direction_heading }}</h3>
                 <p>{{ block.para1 }}</p>

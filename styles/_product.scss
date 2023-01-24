@@ -495,11 +495,47 @@
                     text-transform: uppercase;
                     text-shadow: 2px 2px 4px #000000;
                     z-index: 9;
+                   
                 }
+
             }
         }
     }
 }
+
+.metafield-gummies-img-mobile{
+    display: none;
+    @media screen and (max-width:768px){
+        display:block;
+    }
+}
+
+.metafield-gummies-img{
+    margin-bottom: 80px;
+    position: relative;
+    @media screen and (max-width:768px){
+        text-align: center;
+    }
+        .desktop-recycle-img{
+        @media screen and (max-width:768px){
+            display:none;
+        }}
+            .gummies-button{
+                @media screen and (max-width:920px){
+                    font-size:12px;    
+                }
+                @media screen and (min-width:768px){
+                    position: absolute;
+                    top: 74%;
+                    left:10%;
+                }
+                @media screen and (max-width:769px){
+                    position: relative;
+                    font-weight: 700;   
+                    margin: 36px auto 0px ;   
+                }
+        }
+    }
 
 .product_ingredients_section{
     padding-bottom: 20px;
