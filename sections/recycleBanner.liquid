@@ -7,6 +7,7 @@
     font-weight: {{ section.settings.btn_font_weight}}
     ;
     border-radius: 29px;
+    padding:9px 26px;
   }
 
   @media screen and (max-width:768px) {
@@ -48,7 +49,7 @@
         alt="recycle-img">
 
     </div>
-    <button class="gummies-button">{{ section.settings.gummies-img-button }}</button>
+    <a href="{{section.settings.btn-link}}" class="gummies-button">{{ section.settings.gummies-img-button }}</a>
   {% endif %}
 
 </div>
@@ -106,6 +107,11 @@
         "id": "gummies-border-colors",
         "label": "Button border color",
         "default":"#000000"
+      },
+      {
+        "type":"url",
+        "id":"btn-link",
+        "label":"Button link"
       }
     ],
     "presets": [

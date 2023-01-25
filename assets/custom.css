@@ -3207,6 +3207,7 @@ body {
     position: relative;
     font-weight: 700;
     margin: 36px auto 0px;
+    display: inline-block;
   }
 }
 
