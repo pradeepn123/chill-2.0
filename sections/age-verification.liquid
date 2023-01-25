@@ -92,6 +92,7 @@
       let ageVerificationModal = document.querySelector('.age_verification')
       var isModalShown = sessionStorage.getItem('alreadyShown');
       let urlString = window.location.href;
+      console.log(urlString);
       let isResetPage = urlString.indexOf('/account/reset') > 0 ? true : false ;
       if(isResetPage){
         ageVerificationModal.style.display = 'none'
