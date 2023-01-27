@@ -1119,6 +1119,9 @@ body.overflow-hidden {
 .subcollection_section .subcollection_slider .slider-wrapper .slider-wrap-image .image-parent-wrapper img {
   border-radius: 50%;
 }
+.subcollection_section .subcollection_slider .slider-wrapper .main-font {
+  font-size: 16px;
+}
 .subcollection_section .subcollection_slider .slider-wrapper h4 {
   font-size: 16px;
   color: #000000;
