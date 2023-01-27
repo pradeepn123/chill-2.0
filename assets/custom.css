@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --solid-black: #000000;
 }
@@ -2673,7 +2674,7 @@ body {
 }
 @media (max-width: 767px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     top: 16px;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -2681,33 +2682,33 @@ body {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     font-size: 10px;
     top: 16px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     top: 0px;
   }
 }
 @media (min-width: 1680px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     top: -30px;
   }
 }
 @media (min-width: 1920px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     top: -50px;
     left: 7%;
   }
 }
 @media (max-width: 767px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text__button-row,
-  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text__button-row {
+#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text__button-row {
     margin: 0;
   }
 }
@@ -7631,4 +7632,82 @@ body.cart-drawer-open {
 
 #shopify-section-template--16050208407710__main .utility-bar {
   padding: 38px 0;
+}
+
+.claim_drawer_container {
+  z-index: 999999;
+  width: 40%;
+  overflow: auto;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+@media (max-width: 1024px) {
+  .claim_drawer_container {
+    width: 60%;
+  }
+}
+@media (max-width: 560px) {
+  .claim_drawer_container {
+    width: 95%;
+  }
+}
+.claim_drawer_container.claim-drawer-open {
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+  visibility: visible;
+  opacity: 1;
+}
+.claim_drawer_container .how_it_works_wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 86px 36px;
+}
+.claim_drawer_container .how_it_works_wrapper .how_it_works_image {
+  border-radius: 15px;
+}
+.claim_drawer_container .how_it_works_wrapper .how_it_works_title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-top: 26px;
+}
+.claim_drawer_container .how_it_works_wrapper .how_it_works_description ul {
+  list-style-type: none;
+}
+.claim_drawer_container .how_it_works_wrapper .how_it_works_description ul li {
+  list-style: none;
+  color: #000;
+  font-weight: 600;
+}
+.claim_drawer_container .how_it_works_wrapper .how_it_works_description ul li::before {
+  content: "•";
+  color: #FFAC9A;
+  font-weight: bold;
+  font-size: 200%;
+  display: inline-block;
+  width: 13px;
+  margin-left: -1em;
+  margin-right: 16px;
+  transform: translateY(15%);
+}
+.claim_drawer_container .how_it_works_wrapper .login_signup_button {
+  margin: auto;
+  width: 100%;
+  border-radius: 40px;
+  margin-top: 45px;
+  font-size: 23px;
+  font-weight: 800;
+}
+.claim_drawer_container .account_login {
+  height: 100%;
+}
+.claim_drawer_container .account_login .smail-form {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }

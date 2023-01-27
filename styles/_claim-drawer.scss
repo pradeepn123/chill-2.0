@@ -1,0 +1,84 @@
+// .claim_drawer_background{
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: red;
+
+// }
+.claim_drawer_container{
+    z-index: 999999;
+    width: 40%;
+    overflow: auto;
+    @media (max-width: 1024px) {
+        width: 60%;
+    }
+    @media (max-width: 560px) {
+        width: 95%;
+    }
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    height: 100%; 
+    opacity: 0;
+    visibility: hidden;
+    &.claim-drawer-open {
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+        visibility: visible;
+        opacity: 1;
+    }
+    .how_it_works_wrapper{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 86px 36px;
+        .how_it_works_image{
+            border-radius: 15px;
+        }
+        .how_it_works_title{
+            font-size: 42px;
+            font-weight: 800;
+            margin-top: 26px;
+        }
+        .how_it_works_description{
+            ul{
+                list-style-type: none;
+            }
+            ul li{
+                list-style: none;
+                color: #000;
+                font-weight: 600;
+            }
+            ul li::before {
+                content: "\2022";
+                color: #FFAC9A;
+                font-weight: bold;
+                font-size: 200%;
+                display: inline-block; 
+                width: 13px;
+                margin-left: -1em;
+                margin-right: 16px;
+                transform: translateY(15%);
+              }
+        }
+        .login_signup_button{
+            margin: auto;
+            width: 100%;
+            border-radius: 40px;
+            margin-top: 45px;
+            font-size: 23px;
+            font-weight: 800;
+        }
+    }
+
+    .account_login {
+        height: 100%;
+        .smail-form{
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

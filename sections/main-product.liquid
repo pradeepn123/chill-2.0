@@ -33,7 +33,7 @@
     endfor
   endif
 -%}
-
+<div class="claim_drawer_background" id="claimDrawerBackground" style="display:none;"></div>
   <div data-section-type="main-product" data-components="accordion,custom-select,modal">
   {% if section.settings.show_breadcrumbs %}
     <div
@@ -45,9 +45,17 @@
       </div>
     </div>
   {% endif %}
-
+  
   <div class="product-detail quickbuy-content spaced-row">
     <div class="gallery gallery--layout-{{ section.settings.gallery_layout }} gallery-size-{{ section.settings.gallery_size }} product-column-left {% if product.media.size > 1 %}has-thumbnails{% endif %}"data-cc-animatedata-cc-animate-delay="0.2s"data-variant-image-grouping="{{ section.settings.enable_var_img_grouping }}"data-variant-image-grouping-option="{{ section.settings.var_img_grouping_option | escape }}"data-variant-image-grouping-option-index="{{ variant_image_grouping_option_index }}">
+    <div
+      class="gallery gallery--layout-{{ section.settings.gallery_layout }} gallery-size-{{ section.settings.gallery_size }} product-column-left {% if product.media.size > 1 %}has-thumbnails{% endif %}"
+      data-cc-animate
+      data-cc-animate-delay="0.2s"
+      data-variant-image-grouping="{{ section.settings.enable_var_img_grouping }}"
+      data-variant-image-grouping-option="{{ section.settings.var_img_grouping_option | escape }}"
+      data-variant-image-grouping-option-index="{{ variant_image_grouping_option_index }}">
+      
       <div class="gallery__inner{% if section.settings.enable_sticky_columns %} sticky-content-container{% endif %}">
         <div class="main-image">
           {%- liquid
@@ -126,6 +134,7 @@
       class="detail product-column-right"
       data-cc-animate
       data-cc-animate-delay="0.2s">
+      
       <div
         class="product-form{% if section.settings.enable_sticky_columns %} sticky-content-container{% endif %}"
         data-ajax-add-to-cart="true"
@@ -142,7 +151,24 @@
               <option value="">{{ 'products.product.no_selection' | t }}</option>
             {% endif %}
             {% for variant in product.variants %}
-              <option value="{{ variant.id }}"{% if variant == current_variant %}selected="selected"{% endif %}{% if section.settings.inventory_transfers_enable and variant.incoming %}{%- if variant.next_incoming_date -%}{%- assign date = variant.next_incoming_date | date: format: 'date' -%}{%- if variant.available -%}data-inventory-transfer="{{ 'products.transfers.will_not_ship_until' | t: date: date | escape }}"{%- else -%}data-inventory-transfer="{{ 'products.transfers.will_be_in_stock_after' | t: date: date | escape }}"{%- endif -%}{%- else -%}data-inventory-transfer="{{ 'products.transfers.waiting_for_stock' | t | escape }}"{%- endif -%}{% endif %}data-stock="{% if variant.inventory_management != blank and variant.inventory_quantity <= 0 %}out{% endif %}">{{ variant.title | escape }}</option>
+              <option
+                value="{{ variant.id }}"
+                {% if variant == current_variant %}
+                selected="selected"
+                {% endif %}
+                {% if section.settings.inventory_transfers_enable and variant.incoming %}
+                {%- if variant.next_incoming_date -%}
+                {%- assign date = variant.next_incoming_date | date: format: 'date' -%}
+                {%- if variant.available -%}
+                data-inventory-transfer="{{ 'products.transfers.will_not_ship_until' | t: date: date | escape }}"
+                {%- else -%}
+                data-inventory-transfer="{{ 'products.transfers.will_be_in_stock_after' | t: date: date | escape }}"
+                {%- endif -%}
+                {%- else -%}
+                data-inventory-transfer="{{ 'products.transfers.waiting_for_stock' | t | escape }}"
+                {%- endif -%}
+                {% endif %}
+                data-stock="{% if variant.inventory_management != blank and variant.inventory_quantity <= 0 %}out{% endif %}">{{ variant.title | escape }}</option>
             {% endfor %}
           </select>
         {%- endcapture -%}
@@ -157,7 +183,6 @@
             {% when 'title' %}
             <div class="title-row" {{ block.shopify_attributes }}>
               <h1 class="title">{{ product.title }}</h1>
-
             </div>
 
             {% when 'description' %}
@@ -203,19 +228,206 @@
             </div>
 
             {% when 'vendor' %}
-            {% comment %} {%- liquid
-            assign product_vendor_handle = product.vendor | handle
-            if collections[product_vendor_handle].handle == product_vendor_handle
-            assign vendor_url = collections[product_vendor_handle].url
-            else
-            assign vendor_url = product.vendor | url_for_vendor
-            endif
-            -%}
-            <div class="vendor lightly-spaced-row" {{ block.shopify_attributes }}>
-            <!-- <span class="product-detail-label">{{ 'products.product.vendor' | t }}</span> -->
-            {{ product.vendor | link_to: vendor_url, class: 'underline' }}
-            </div> {% endcomment %}
-            <p>{{ product.metafields.custom.product_varient_pack }}</p>
+            {%- liquid
+                assign product_vendor_handle = product.vendor | handle
+                if collections[product_vendor_handle].handle == product_vendor_handle
+                  assign vendor_url = collections[product_vendor_handle].url
+                else
+                  assign vendor_url = product.vendor | url_for_vendor
+                endif
+              -%}
+              <div class="vendor lightly-spaced-row" {{ block.shopify_attributes }}>
+              <!-- <span class="product-detail-label">{{ 'products.product.vendor' | t }}</span> -->
+              {{ product.vendor | link_to: vendor_url, class: 'underline' }}
+            </div>
+
+            {% when 'free_pouch' %}
+              <div>
+                <button id="claimDrawerButton" onclick="document.getElementById('claimDrawerContainer').style.display='block'; document.getElementById('claimDrawerBackground').style.display='block';">Claim</button>
+                
+                <div class="claim_drawer_container" id="claimDrawerContainer" style="display:block;">
+                  <div class="claim_drawer"></div>
+                  {% if customer %}
+                    {% for order in customer.orders %}
+                      {% for item in order.line_items %}
+                        {% if item.product.handle contains 'pouches' %}
+                        {{ item.product.handle | json }}
+                        {% endif %}
+                      {% endfor %}
+                    {% endfor %}
+                 Signed in 
+                {% else %}
+                  <div class="how_it_works_wrapper">
+                    <img class="how_it_works_image" src="{{ block.settings.how_it_works_image | img_url: 'master' }}" alt="How-it-works">
+                    <h1 class="how_it_works_title">{{ block.settings.how_it_works_title}}</h1>
+                    <div class="how_it_works_description">{{ block.settings.how_it_works_description }}</div>
+                    <button class="login_signup_button" onclick="document.getElementById('accountLogin').style.display = 'block';document.querySelector('.how_it_works_wrapper').style.display = 'none'">{{ block.settings.how_it_works_login_text }}</button>
+                  </div>
+                  <div class="account_login" id="accountLogin" style="display: none;">
+                    <div class="small-form">
+                      <div class="claim-drawer-summary__header toggle-cart-drawer-summary cart-drawer-summary__section"></div>
+                      <div id="claim-drawer-backdrop" class="claim-drawer-backdrop"></div>
+                      <a class="cart-drawer-summary__close toggle-cart-summary">
+                        {% render 'svg-close' %}
+                      </a>
+                      <div id="claim-template" class="{% if shop.checkout.guest_login %} flexible-layout{% endif %}" data-cc-animate>
+                        
+                        <!-- <div class="{% if shop.checkout.guest_login %}column column--half{% else %}small-form{% endif %}"> -->
+                          <div id="customer">
+                            <div class="template_header">
+                              <h2 class="title account_login_title">{{ 'customer.login.title' | t }}</h2>
+                              <!-- <p class="account_login_sub-title" style="color: #000">{{ section.settings.account_subtitle }}</p> -->
+                            </div>
+                            {{ product.url }}
+                            {% form 'customer_login' %}
+                            {{ form.errors | default_errors }}
+                  
+                            <div id="login_email" class="input-row">
+                              <label for="customer_email" class="login" >{{ 'customer.login.email' | t }}</label>
+                              <input type="email" value="" name="customer[email]" id="customer_email" class="large" size="30" />
+                            </div>
+                  
+                            {% if form.password_needed %}
+                  
+                            {% comment %}
+                            Customer Account Login
+                            {% endcomment %}
+                  
+                            <div id="login_password" class="input-row">
+                              <label for="customer_password" class="login">{{ 'customer.login.password' | t }}</label>
+                              <div class="text-over-input">
+                                <input type="password" value="" name="customer[password]" id="customer_password" class="large password" size="16" />
+                                <div id="forgot_password" class="text-over-input__text">
+                                  <a href="#" onclick="showRecoverPasswordForm();return false;" style="text-decoration: underline; color: #000;">{{ 'customer.login.forgot_password' | t }}</a>
+                                </div>
+                              </div>
+                            </div>
+                  
+                            {% endif %}
+                  
+                            <div class="action_bottom">
+                              <div class="opposing-items">
+                                  <button class="login_btn btn" type="submit" style="font-size: {{ block.settings.login_btn_font_size }}px; background: {{ block.settings.login_button_color}};" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'customer.login.title' | t | upcase }}<input type='hidden' name='return_to' value='{{ product.url }}'></button>
+                                  
+                                <div>Don't have an account?<a href="#create-customer" onclick="showRegistrationForm();return false;"> {{ 'customer.login.register' | t }}</a></div>
+                              </div>
+                            </div>
+                            
+                            {% endform %}
+                          </div>
+                  
+                          {% comment %}
+                            Recover Password Form
+                          {% endcomment %}
+                  
+                          <div id="recover-password" style='display:none'>
+                            {% form 'recover_customer_password' %}
+                            {% if form.posted_successfully? %}
+                            {% assign reset_success = true %}
+                            {% endif %}
+                            
+                  
+                  
+                            {{ form.errors | default_errors }}
+                  
+                            {% if reset_success %}
+                  
+                            <div class="action_bottom">
+                              <p style="font-size: 20px;">{{ 'customer.recover_password.success' | t }}</p>
+                              <span class="note"><a href="#" onclick="hideRecoverPasswordForm();return false;">{{ 'customer.login.sign_in' | t }}</a></span>
+                            </div>
+                  
+                            {% else %}
+                            <div class="template_header">
+                              <h2 class="title account_recoverPassword_title">{{ 'customer.recover_password.title' | t }}</h2>
+                              <p class="account_recoverPassword_sub-title" style="color: #000">{{ section.settings.account_recoverPassword_subtitle }}</p>
+                              
+                            </div>
+                            <div id="recover_email" class="input-row">
+                              <label for="email" class="large">{{ 'customer.recover_password.email' | t }}</label>
+                              <input type="email" value="" size="30" name="email" id="recover-email" class="large" />
+                            </div>
+                            <div class="action_bottom">
+                                <button class="recover_password_btn btn" type="submit" style="font-size: {{ block.settings.login_btn_font_size }}px; background: {{ block.settings.login_button_color}};" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'customer.recover_password.submit' | t | upcase }}</button>
+                                {% unless reset_success %}
+                                  <!-- <p>{{ 'customer.recover_password.subtext' | t }}</p> -->
+                                  <p class="note">An email with a link to reset your password will be sent to you.</p>
+                                {% endunless %}
+                              <span class="note">Remember your password? <a href="#" onclick="hideRecoverPasswordForm();return false;">{{ 'customer.recover_password.cancel' | t }}</a></span>
+                            </div>
+                  
+                            {% endif %}
+                  
+                            {% endform %}
+                          </div>
+                        <!-- </div>/layout-column-half-left" -->
+                          {% comment %}
+                            Create customer
+                          {% endcomment %}
+
+                          <div id="create-customer" style="display:none">
+                            <div class="template_header">
+                              <h2 class="title register_title">{{ 'customer.register.title' | t }}</h2>
+                              {{ section.settings.register_subtitle }}
+                            </div>
+                    
+                            {% form 'create_customer' %}
+                              {{ form.errors | default_errors }}
+                    
+                              <!-- <div class="input-row">
+                                <label for="first_name" class="login">{{ 'customer.register.first_name' | t }}</label>
+                                <input type="text" value="" name="customer[first_name]" id="first_name" class="large" size="30" />
+                              </div>
+                    
+                              <div class="input-row">
+                                <label for="last_name" class="login">{{ 'customer.register.last_name' | t }}</label>
+                                <input type="text" value="" name="customer[last_name]" id="last_name" class="large" size="30" />
+                              </div> -->
+                    
+                              <div class="input-row" id="register_email">
+                                <label for="email" class="login">{{ 'customer.register.email' | t }}</label>
+                                <input type="email" value="" name="customer[email]" id="email" class="large" size="30" />
+                              </div>
+                    
+                              <div class="input-row" id="register_password">
+                                <label for="password" class="login">{{ 'customer.register.password' | t }}</label>
+                                <input type="password" value="" name="customer[password]" id="password" class="large password" size="30" />
+                              </div>
+                    
+                              <div class="action_bottom">
+                                  <a href="{{ product.url }}"><button class="register_btn btn" type="submit" style="font-size: {{ block.settings.login_btn_font_size}}px; background: {{ block.settings.login_button_color}}" onclick="$('#login_email').style.display='block';">{{ 'customer.register.submit' | t | upcase }}<input type='hidden' name='return_to' value='{{ product.url }}'></button></a>
+                                <span class="note">Already have an account? <a href="#customer" onclick="document.getElementById('create-customer').style.display = 'none';
+                                  document.getElementById('customer').style.display = 'block';">{{ 'customer.register.log_in' | t }}</a>
+                                  <!-- {{ 'customer.general.or' | t }}
+                                  <a href="{{ routes.root_url }}">{{ 'customer.register.cancel' | t }}</a> -->
+                                </span>
+                              </div>
+                            {% endform %}
+                          </div>
+                        {% comment %}
+                        Guest Login form for shops with optional customer accounts. This form is displayed only when users click on the checkout link
+                        on the cart page.
+                        {% endcomment %}
+                  
+                        {% if shop.checkout.guest_login %}
+                        <div id="guest" class="column column--half">
+                          <div class="template_header">
+                            <h3 class="title">{{ 'customer.login.guest_title' | t }}</h3>
+                          </div>
+                          {% form 'guest_login' %}
+                            <button class="btn" type="submit" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'customer.login.guest_continue' | t }}</button>
+                          {% endform %}
+                        </div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+                </div>
+                
+              </div>
+
+
 
             {% when 'pro_custom_icon' %}
             {% if product.metafields.settings.product_icons.value != blank %}
@@ -645,7 +857,8 @@
                       type="text"
                       id="{{ custom_option_input_id }}"
                       form="{{ product_form_id }}"
-                      name="{{ custom_input_name }}">
+                      name="{{ custom_input_name }}"
+                      {% if block.settings.text_required %}required{% endif %}>
                   </div>
 
                   {% when 'textarea' %}
@@ -681,7 +894,7 @@
 
                   {% if block.settings.multiple_style == 'dropdown' %}
                     <div class="option-selector" data-selector-type="dropdown">
-                      {% render 'custom-select' 
+                      {% render 'custom-select'
                        , id: custom_option_input_id,
                        label: block.settings.label,
                        option_values: custom_options,
@@ -805,6 +1018,34 @@
       mut.observe(document.querySelector(".rc_block__type__autodeliver"), {'attributes': true});
     }
   })
+  function showRecoverPasswordForm() {
+    document.getElementById('recover-password').style.display = 'block';
+    document.getElementById('customer').style.display='none';
+  }
+
+  function hideRecoverPasswordForm() {
+    document.getElementById('recover-password').style.display = 'none';
+    document.getElementById('customer').style.display = 'block';
+  }
+  function showRegistrationForm() {
+    document.getElementById('create-customer').style.display = 'block';
+    document.getElementById('customer').style.display='none';
+  }
+
+  function hideRegistrationForm() {
+    document.getElementById('create-customer').style.display = 'none';
+    document.getElementById('customer').style.display = 'block';
+  }
+  document.addEventListener("DOMContentLoaded", function(event) {
+    $('#coverScreen').hide();
+  })
+  var claimDrawer = document.getElementById('claimDrawerContainer')
+  document.getElementById('claimDrawerButton').addEventListener('click', () => {
+    claimDrawer.classList.add('claim-drawer-open');
+  })
+  
+  {% if reset_success %}showRecoverPasswordForm();{% endif %}
+  if (window.location.hash == '#recover') { showRecoverPasswordForm() }
 </script>
 
 {% schema %}
@@ -1210,6 +1451,162 @@
             "label": "Show for a single variant",
             "default": false
           }, {
+      }, 
+      {
+        "type": "free_pouch",
+        "name": "Free variety pouch",
+        "settings": [
+          {
+            "type": "color",
+            "id": "login_button_color",
+            "label": "Login/Signup button color",
+            "default": "#6EC59F"
+          },
+          {
+            "type": "range",
+            "id": "login_btn_font_size",
+            "label": "login/Signup button font size",
+            "min": 2,
+            "max": 50,
+            "step":2,
+            "default":20
+          },
+          {
+            "type": "image_picker",
+            "id": "how_it_works_image",
+            "label": "How-it-works image"
+          },
+          {
+            "type": "text",
+            "id": "how_it_works_title",
+            "label": "How-it-works title"
+          },
+          {
+            "type": "richtext",
+            "id": "how_it_works_description",
+            "label": "How-it-works description",
+            "default": "<p>Description</p>"
+          },
+          {
+            "type": "text",
+            "id": "how_it_works_login_text",
+            "label": "How-it-works login/Signup text"
+          }
+        ],
+        "limit": 1
+      },
+      {
+        "type": "pro_custom_icon",
+        "name": "Product Custom Icon",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_icon",
+            "label": "Show/Hide Icons",
+            "default": false
+          }
+        ]
+      }, {
+        "type": "variant_picker",
+        "name": "Variant picker",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_single",
+            "label": "Show for a single variant",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "select_first_variant",
+            "label": "Select first available variant",
+            "default": true
+<<<<<<< HEAD
+          }, {
+=======
+          },
+          {
+>>>>>>> 96bd91f (feat-[chill-5130181]-Free variety pouch)
+            "type": "radio",
+            "id": "variant_style",
+            "label": "Variant style",
+            "options": [
+              {
+                "value": "listed",
+                "label": "Box with label"
+              }, {
+                "value": "dropdown",
+                "label": "Dropdown"
+              }
+            ],
+            "default": "listed"
+<<<<<<< HEAD
+=======
+          },
+          {
+            "type": "checkbox",
+            "id": "disable_unavailable_variants",
+            "label": "Show availability in selectors",
+            "info": "When an option is selected, options below it are updated to show their availability",
+            "default": true
+          }, {
+            "type": "header",
+            "content": "Size chart"
+          }, {
+            "type": "checkbox",
+            "id": "show_size_chart",
+            "label": "Enable size chart",
+            "default": false
+          }, {
+            "type": "text",
+            "id": "size_chart_variant",
+            "label": "Option name",
+            "info": "The label to show the link beside",
+            "default": "Size"
+          }, {
+            "type": "page",
+            "id": "size_chart_page",
+            "label": "Page containing size chart"
+          }
+        ],
+        "limit": 1
+      }, {
+        "type": "buy_buttons",
+        "name": "Buy buttons",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_quantity_selector",
+            "label": "Show quantity selector",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_payment_button",
+            "label": "Show dynamic checkout button",
+            "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "show_backorder_text",
+            "label": "Show backorder text",
+            "default": true,
+            "info": "Only shows for products which use Shopify inventory tracking and are available to purchase when out of stock."
+          },
+          {
+            "type": "checkbox",
+            "id": "show_pickup_availability",
+            "label": "Show pickup availability",
+            "default": true,
+            "info": "Show customers where they can pick up the product. [Learn more](https://help.shopify.com/en/manual/shipping/setting-up-and-managing-your-shipping/local-methods/local-pickup)"
+          }, {
+            "type": "checkbox",
+            "id": "show_single",
+            "label": "Show for a single variant",
+            "default": false
+          }, {
             "type": "checkbox",
             "id": "select_first_variant",
             "label": "Select first available variant",
@@ -1228,6 +1625,7 @@
               }
             ],
             "default": "listed"
+>>>>>>> 96bd91f (feat-[chill-5130181]-Free variety pouch)
           }, {
             "type": "checkbox",
             "id": "disable_unavailable_variants",
