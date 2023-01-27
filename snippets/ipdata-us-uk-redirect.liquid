@@ -3,16 +3,16 @@
 
 
 const webRedirectUtil = (function() {
-
+    const arr = window.location.href.split(window.location.host)
+    const redirection_url = arr[1];
     const _helperVar =  {
-        apiUrl: "https://ipapi.co/country",
-        // apiUrl: 'https://api.ipdata.co/?api-key=c67faaddcd3d2ce24bc8307631f45cfd2e92fd764a9e54659e753459',
+        apiUrl: "https://api.ipdata.co/?api-key=c67faaddcd3d2ce24bc8307631f45cfd2e92fd764a9e54659e753459",
         storedLocationKey: 'location',
         storedUserRedirectionKey: 'userAlreadyRedirected',
         urlLocationKey: 'location',
         storeUrl : {
-                'GB': window.location.href,
-                'US': window.location.href
+                'GB': "https://uk.chill.com",
+                'US': "https://chill.com"
             }
     }
 
@@ -55,10 +55,10 @@ const webRedirectUtil = (function() {
         if(!ifDomainIsSame){
             switch(updatedLocation){
                 case 'UK':
-                    window.location.href =  _helperVar.storeUrl[updatedLocation];
+                    window.location.href =  _helperVar.storeUrl[updatedLocation] + redirection_url;
                     break;
                 default:
-                    window.location.href = _helperVar.storeUrl[updatedLocation];
+                    window.location.href = _helperVar.storeUrl[updatedLocation] + redirection_url;
             }
         }
     }
