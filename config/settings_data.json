@@ -1046,6 +1046,7 @@
     "free_shipping_limit": "50",
     "product_currency_code_enabled": false,
     "enable_domain_redirect": true,
+    "enable_free_variety_pouch_offer": true,
     "sections": {
       "header": {
         "type": "header",

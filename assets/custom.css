@@ -7634,8 +7634,19 @@ body.cart-drawer-open {
   padding: 38px 0;
 }
 
+.claim_drawer_background {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  z-index: 5000;
+}
+
 .claim_drawer_container {
-  z-index: 999999;
+  z-index: 5001;
+  opacity: 1;
   width: 40%;
   overflow: auto;
   background: #ffffff;
@@ -7662,11 +7673,17 @@ body.cart-drawer-open {
   visibility: visible;
   opacity: 1;
 }
+.claim_drawer_container .claim-drawer-summary__close {
+  position: absolute;
+  right: 0;
+  margin: 21px;
+  cursor: pointer;
+}
 .claim_drawer_container .how_it_works_wrapper {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  margin: 86px 36px;
+  margin: 86px 65px;
 }
 .claim_drawer_container .how_it_works_wrapper .how_it_works_image {
   border-radius: 15px;
@@ -7700,14 +7717,128 @@ body.cart-drawer-open {
   width: 100%;
   border-radius: 40px;
   margin-top: 45px;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 800;
 }
 .claim_drawer_container .account_login {
   height: 100%;
+  margin: 86px auto;
 }
-.claim_drawer_container .account_login .smail-form {
+.claim_drawer_container .account_login .claim-small-form {
   position: relative;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
+  max-width: 80% !important;
+}
+.claim_drawer_container .account_login .claim-small-form #claim-template .template_header {
+  margin-bottom: 40px;
+}
+.claim_drawer_container .account_login .claim-small-form #claim-template #customer_login input, .claim_drawer_container .account_login .claim-small-form #claim-template #create-customer input {
+  margin-top: 10px;
+}
+
+.claim_info_container {
+  display: flex;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  background: #FFFBFA;
+  padding: 13px 20px;
+  width: 38vw;
+  box-shadow: 5px 5px #FFAC9A;
+}
+.claim_info_container .offer_content_container {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.claim_info_container .offer_content_container .offer_content {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+.claim_info_container .offer_content_container .offer_content span {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffac9a;
+}
+.claim_info_container .button_container {
+  flex-basis: 40%;
+  margin: auto;
+}
+.claim_info_container .button_container .claim_drawer_button {
+  width: 100%;
+  background: #FFAC9A;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #000;
+  padding: 12px 19px;
+}
+
+.claim_success_message {
+  margin-top: 10px;
+  color: #6EC59F;
+  font-size: 16px;
+  font-weight: 600;
+}
+.claim_success_message svg {
+  margin-right: 5px;
+}
+
+.claim_fail_message {
+  margin-top: 10px;
+  color: red;
+  font-size: 16px;
+  font-weight: 600;
+}
+.claim_fail_message svg {
+  margin-right: 5px;
+}
+
+.claim_banner_product_page_container .claim_banner_product_page {
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 95%;
+  margin: 17px auto;
+}
+.claim_banner_product_page_container .claim_banner_product_page .claim_banner_text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0;
+  flex-basis: 80%;
+}
+.claim_banner_product_page_container .claim_banner_product_page .claim_banner_text span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffac9a;
+}
+.claim_banner_product_page_container .claim_banner_product_page .claim_banner_button {
+  width: 100%;
+  background: #FFAC9A;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #000;
+  padding: 12px 19px;
+  flex-basis: 20%;
+}
+
+.claim_banner_home_page {
+  display: flex;
+  justify-content: space-between;
+}
+.claim_banner_home_page .claim_banner_product_page_container {
+  flex-basis: 100%;
+}
+.claim_banner_home_page .close_banner_button {
+  margin: auto 20px auto 0;
 }
