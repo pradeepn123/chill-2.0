@@ -12,17 +12,16 @@
     <div class="{% if section.settings.enable_carousel %}collection-slider {% endif %}">
 
       <div class="main_heading_collection">
-        <h2 class="hometitle h4-style align-center has-paging" data-cc-animate data-cc-animate-delay="0.3s">
+        <span class="hometitle align-center has-paging" data-cc-animate data-cc-animate-delay="0.3s">
           {% if section.settings.enable_carousel %}
             <a class="prev ltr-icon" href="#">{% render 'svg-chevron-left' %}</a>
-          {% endif %}
-          <a class="has-paging__title" href="{{ collection.url }}">
-            <span>{{ section.settings.title }}</span>
-          </a>
+        {% endif %}
+          {{ section.settings.title }}
+          
           {% if section.settings.enable_carousel %}
             <a class="next ltr-icon" href="#">{% render 'svg-chevron-right' %}</a>
           {% endif %}
-        </h2>
+        </span>
 
         {%- if section.settings.show_view_all -%}
           <div class="view-all align-center" data-cc-animate data-cc-animate-delay="0.3s">
@@ -90,10 +89,10 @@
     "class": "section-featured-collection",
     "settings": [
       {
-        "type": "html",
+        "type": "richtext",
         "id": "title",
-        "label": "Heading",
-        "default": "Featured collection"
+        "label": "Title",
+        "default": "<p>Featured collection</p>"
       },
       {
         "type": "collection",
@@ -148,9 +147,7 @@
     "presets": [
       {
         "name": "Featured collection",
-        "settings": {
-          "title": "Featured collection"
-        }
+        "settings": {}
       }
     ]
   }
