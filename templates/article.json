@@ -17,8 +17,8 @@
     "516e781a-88f8-4e88-9547-e2c17ea33467": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
-        "collection": "shop-all",
+        "title": "<p><strong>Featured<\/strong> collection<\/p>",
+        "collection": "cbd-gummies",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
