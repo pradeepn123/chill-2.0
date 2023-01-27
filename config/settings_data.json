@@ -1045,7 +1045,7 @@
     "cart_show_free_shipping_threshold": true,
     "free_shipping_limit": "50",
     "product_currency_code_enabled": false,
-    "enable_domain_redirect": false,
+    "enable_domain_redirect": true,
     "sections": {
       "header": {
         "type": "header",
