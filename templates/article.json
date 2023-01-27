@@ -20,7 +20,7 @@
         "title": "<p><strong>Featured<\/strong> collection<\/p>",
         "collection": "cbd-gummies",
         "show_vendor": false,
-        "enable_carousel": true,
+        "enable_carousel": false,
         "grid": 4,
         "rows": 1,
         "use_alt_bg": true,
