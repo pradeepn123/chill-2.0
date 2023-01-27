@@ -52,24 +52,21 @@ function hideVideo(index, e) {
 }
 
 $(document).ready(function () {
-  AOS.init({
-    duration: 1200,
-  })
+    AOS.init({duration: 1200})
     let items = document.querySelectorAll('.menu-mega-nav li');
-    items.forEach( item => item.addEventListener('mouseenter', function() {
-        handleHover(this, items)
-    }))
+
+    items.forEach( item => item.addEventListener('mouseenter', handleHover))
 
     document.addEventListener("TikShop:cart:updated", function(e) {
         document.documentElement.dispatchEvent(new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false }))
     })
 
-  function handleHover(el, objects) {
-    items.forEach(item => {
-      item.classList.remove('active')      
-    })
-    el.classList.add('active')
+  function handleHover() {
+    const items = this.parentElement.querySelectorAll(".menu-item")
+    items.forEach(item => item.classList.remove('active'))
+    this.classList.add('active')
   }
+  
   $('.custom_sub_button').click(function(){
     $(this).closest('.block-inner').find('.block-inner-card-info').addClass('add_info_sub');
   });

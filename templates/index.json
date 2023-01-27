@@ -16,7 +16,7 @@
         "button_url_1": "shopify:\/\/collections\/shop-all",
         "button_label_2": "",
         "button_url_2": "",
-        "botton_bg": "#ffac9a",
+        "botton_bg": "#9792e4",
         "botton_text_color": "#ffffff",
         "text_alignment": "center left",
         "height_desktop": 700,
@@ -75,28 +75,32 @@
     },
     "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d": {
       "type": "slideshow",
-      "disabled": true,
       "blocks": {
         "template--16038250872990__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d-166911842947303ba6-0": {
           "type": "image",
+          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mask_Group_122_2x_f388a7fa-f8cc-4eec-b220-ca1c618929d9.png",
+            "image": "shopify:\/\/shop_images\/Zoetic_Homepage_Banner_Mobile_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Zoetic_Homepage_Banner_Mobile_1.jpg",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "shopify:\/\/collections\/zoetic",
             "subheading": "",
-            "title": "Welcome<br> <strong>Mad Tasty<\/strong>",
+            "title": "Welcome<br> <strong>Zoetic<\/strong>",
             "title_size": 52,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>Recreational supplements brand that uses natural functional ingredients to encourage authentic relaxation<\/p>",
+            "text": "<p>Our choice for premium CBD tinctures and cosmetics.<\/p>",
             "heading_color": "#000000",
             "text_color": "#000000",
             "enlarge_text": true,
-            "button_label_1": "Shop mad tasty",
-            "button_url_1": "",
+            "button_label_1": "Shop now",
+            "button_url_1": "shopify:\/\/collections\/zoetic",
             "button_label_2": "",
             "button_url_2": "",
+            "button_background_color": "#f3b09f",
+            "button_text_color": "#ffffff",
+            "button_text_font_size": 20,
             "text_alignment": "center left"
           }
         },
@@ -125,8 +129,7 @@
         }
       },
       "block_order": [
-        "template--16038250872990__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d-166911842947303ba6-0",
-        "template--16038250872990__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d-166911842947303ba6-1"
+        "template--16038250872990__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d-166911842947303ba6-0"
       ],
       "settings": {
         "height": "fixed",
@@ -524,6 +527,7 @@
     },
     "829c3c02-065e-4087-a6c0-f8a0cb3d5f6e": {
       "type": "image-with-text-overlay",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/Recycle_Banner_-_DESKTOP_1.jpg",
         "mobile_image": "shopify:\/\/shop_images\/RECYCLE_Banner_MOBILE.jpg",
@@ -540,7 +544,7 @@
         "title_size_mobile": 46,
         "title_weight_mobile": 800,
         "use_h1": false,
-        "text": "<p><\/p>",
+        "text": "",
         "enlarge_text": true,
         "button_label_1": "Shop Gummies",
         "button_url_1": "shopify:\/\/collections\/cbd-gummies",
@@ -620,7 +624,7 @@
         "97b2dc03-0af6-4b4a-8d86-1b97f4fca109"
       ],
       "settings": {
-        "bg_color": "#ffac9a",
+        "bg_color": "",
         "title": "",
         "image_opacity": 100,
         "use_alt_bg": false

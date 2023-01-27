@@ -14,23 +14,23 @@
         "overlay_style": "no_background"
       }
     },
-    "771892a6-23ea-4629-888c-91a24f77206a": {
+    "516e781a-88f8-4e88-9547-e2c17ea33467": {
       "type": "featured-collection",
       "settings": {
-        "title": "Related Products",
-        "collection": "shop-all",
+        "title": "Featured collection",
+        "collection": "cbd-gummies",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 3,
+        "grid": 4,
         "rows": 1,
-        "use_alt_bg": false,
-        "show_view_all": false,
-        "full_width": false
+        "use_alt_bg": true,
+        "show_view_all": true,
+        "full_width": true
       }
     }
   },
   "order": [
     "main",
-    "771892a6-23ea-4629-888c-91a24f77206a"
+    "516e781a-88f8-4e88-9547-e2c17ea33467"
   ]
 }
