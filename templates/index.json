@@ -147,7 +147,7 @@
     "16359278676808bea5": {
       "type": "featured-collection",
       "settings": {
-        "title": "Our <strong> Trending Products <\/strong>",
+        "title": "<p>Our <strong> Trending Products <\/strong></p>",
         "collection": "shop-all",
         "show_vendor": true,
         "enable_carousel": false,
