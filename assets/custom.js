@@ -707,6 +707,7 @@ theme.customAddToCart = function(e) {
     .fail(function (data) {
         $form.find('button[type="submit"]').removeAttr('disabled')
     })
+
     return false
 }
 
