@@ -1,0 +1,368 @@
+{%- liquid
+    assign contains_pouches = false
+    for order in customer.orders
+        for item in order.line_items
+            if item.product.handle contains 'pouches'
+                assign contains_pouches = true
+            endif
+        endfor 
+    endfor 
+-%}
+{% assign free_variety_pack_found_in_cart = false %}
+{% for lineItem in cart.items %}
+  {% if lineItem.properties['_variety_pack'] %}
+    {% assign free_variety_pack_found_in_cart = true %}
+  {% endif %}
+{% endfor %}
+{% if customer %}
+    {% if contains_pouches == false and request.page_type == 'product' or request.page_type == 'index' and product.handle != 'chill-cbd-isolate-chew-pouches' %}
+      {% if free_variety_pack_found_in_cart == false %}
+          <div class="claim_banner_product_page_container" id="claimBannerProductPage">
+          <div class="claim_banner_product_page">
+              <p class="claim_banner_text">{{ settings.claim_banner_text_desktop }}</p>
+              <!-- <button class="claim_banner_button">{{ settings.add_button_text | upcase }}</button>
+              -->
+              <div class="button_container">
+                {% for product in collections.all.products %}
+                  {% if product.handle == 'chill-cbd-isolate-chew-pouches' %}
+                      {% assign product_form_id = 'custom-product-form' %}
+                      {%- assign product_form_present = true -%}
+                      <div class="buy-buttons-row" {{ block.shopify_attributes }}>
+
+                        {% form 'product', product, id: product_form_id, class: 'form product-purchase-form', data-product-handle: product.handle, data-product-id: product.id, data-productid: product.id %}
+                          {{- original_select -}}
+
+                            {% if product.available %}
+                            <div class="input-row" {{ block.shopify_attributes }}>
+                              {% render 'variant-picker', section: section, product: product, block: block %}
+                            </div>
+                            <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
+                              
+                              <div class="quantity-submit-row__submit input-row">
+
+                                {% capture add_to_cart_price %}
+                                  <div class="price-container" {{ block.shopify_attributes }}>
+                                    <div class="variant-visibility-area">
+                                      
+                                      <script type="text/template" data-variant-id="">
+                                        {%- capture price_html -%}
+                                          <div class="price-area">
+                                            {%- assign cheapest_variant = product.variants | sort: 'price' | first -%}
+                                            <div class="price h4-style {% if cheapest_variant.compare_at_price > cheapest_variant.price %}on-sale{% endif %}">
+                                              {% render 'unit-price', variant: cheapest_variant %}
+                                            </div>
+                                          </div>
+                                        {%- endcapture -%}
+                                        {{- price_html -}}
+                                      </script>
+
+                                      {% if current_variant == false %}
+                                        {{- price_html -}}
+                                      {% endif %}
+                                    </div>
+
+                                    <div class="price-descriptors">
+                                      {%- form 'product', product, id: product_form_installments_id -%}
+                                        <input
+                                          type="hidden"
+                                          name="id"
+                                          value="{% if current_variant %}{{ current_variant.id }}{% endif %}">
+                                        {{ form | payment_terms }}
+                                      {%- endform -%}
+
+                                      {%- if block.settings.show_tax_and_shipping -%}
+                                        {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+                                          <div class="product-policies">
+                                            {%- if cart.taxes_included -%}
+                                              {{ 'products.product.include_taxes' | t }}
+                                            {%- endif -%}
+                                            {%- if shop.shipping_policy.body != blank -%}
+                                              {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                                            {%- endif -%}
+                                          </div>
+                                        {%- endif -%}
+                                      {%- endif -%}
+
+                                      {% if section.settings.inventory_transfers_enable %}
+                                        <div class="product-inventory-transfer {% unless current_variant.incoming %}product-inventory-transfer--none{% endunless %}">
+                                          {%- if current_variant.incoming -%}
+                                            {%- if current_variant.next_incoming_date -%}
+                                              {%- assign date = current_variant.next_incoming_date | date: format: 'date' -%}
+                                              {%- if current_variant.available -%}
+                                                {{ 'products.transfers.will_not_ship_until' | t: date: date }}
+                                              {%- else -%}
+                                                {{ 'products.transfers.will_be_in_stock_after' | t: date: date }}
+                                              {%- endif -%}
+                                            {%- else -%}
+                                              {{ 'products.transfers.waiting_for_stock' | t }}
+                                            {%- endif -%}
+                                          {%- endif -%}
+                                        </div>
+                                      {% endif %}
+                                    </div>
+                                    {%- if block.settings.enable_product_reviews_by_price and product.metafields.reviews.rating_count != blank -%}
+                                      {%- assign rating_count = product.metafields.reviews.rating_count | plus: 0 -%}
+                                      {%- if rating_count > 0 -%}
+                                        <div class="theme-product-reviews">
+                                          <a href="{{ product.url }}#shopify-product-reviews">
+                                            {% render 'rating', rating_value: product.metafields.reviews.rating.value %}
+                                            <span class="cc-rating-custom-caption">
+                                              {{ rating_count }} {{ 'products.product.reviews_link' | t: count: rating_count | downcase }}
+                                            </span>
+                                          </a>
+                                        </div>
+                                      {%- endif -%}
+                                    {%- endif -%}
+                                  </div>
+                                {%- endcapture -%}
+                                
+                                <!-- <button
+                                  class="claim_drawer_button"
+                                  type="submit"
+                                  data-add-to-cart-text="{{ add_to_cart_text | escape }}">
+                                  {{ add_to_cart_text | t }}
+                                </button> -->
+                                  <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                                  <input type="hidden" name=properties[_variety_pack] value="{{ product.variants.first.id }}" />
+                                  <button class="claim_drawer_button" type='submit' data-add-to-cart-text="{{ add_to_cart_text | escape }}" id="claimDrawerButtonAdd">{{ settings.add_button_text | upcase }}</button>
+                              </div>
+                            </div>
+
+                          {% else %}
+                            <div class="product-unavailable">{{ 'products.product.product_unavailable' | t }}</div>
+                          {% endif %}
+                        {% endform %}
+                      </div>
+
+                  {% endif %}
+                {% endfor %}
+
+                
+              </div>
+          </div>
+          {% if settings.enable_free_variety_pouch_offer and request.page_type == 'index' %}
+            <div class="claim_banner_home_page">
+              <span class="close_banner_button" onclick="document.querySelector('.claim_banner_product_page_container').style.display='none'">{% render 'svg-close' %}</span>
+            </div> 
+          {% endif %}
+          </div>
+      {% endif %}
+  {% endif %}
+{% elsif product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'product' or request.page_type == 'index' %}
+  {% if free_variety_pack_found_in_cart == false %}
+    <div class="claim_banner_product_page_container" id="claimBannerProductPage">
+      <div class="claim_banner_product_page">
+        <p class="claim_banner_text">{{ settings.claim_banner_text_desktop }}</p>
+        <button class="claim_banner_button" id="claimDrawerButton" onclick="document.getElementById('claimDrawerContainer').style.display='block'; document.getElementById('claimDrawerBackground').style.display='block';">{{ settings.claim_button_text | upcase }}</button>
+      </div>
+      {% if settings.enable_free_variety_pouch_offer and request.page_type == 'index' %}
+        <div class="claim_banner_home_page">
+          <span class="close_banner_button" onclick="document.querySelector('.claim_banner_product_page_container').style.display='none'">{% render 'svg-close' %}</span>
+        </div> 
+      {% endif %}
+    </div>
+  {% endif %}
+{% endif %}
+<!-- {% if product.handle == 'chill-cbd-isolate-chew-pouches' %}
+    <div class="claim_info_container">
+        <div class="offer_content_container">
+        <p class="offer_content">New to chill pouches?<br><span>FREE VARIETY PACK</span>
+            today
+        </p>
+        <button class="claim_banner_button" id="claimDrawerButton" onclick="document.getElementById('claimDrawerContainer').style.display='block'; document.getElementById('claimDrawerBackground').style.display='block';">{{ settings.claim_button_text | upcase }}</button>
+        </div>
+    </div>
+{% endif %} -->
+
+        <div class="claim_drawer_background" id="claimDrawerBackground" style="display:none;"></div>
+        <div class="claim_drawer_container" id="claimDrawerContainer" style="display:block;">
+          <a class="claim-drawer-summary__close toggle-cart-summary" onclick="document.getElementById('claimDrawerContainer').classList.remove('claim-drawer-open'); document.getElementById('claimDrawerBackground').style.display = 'none';">
+            {% render 'svg-close' %}
+          </a>
+          <div class="how_it_works_wrapper">
+            <img class="how_it_works_image" src="{{ settings.how_it_works_image | img_url: 'master' }}" alt="How-it-works">
+            <h1 class="how_it_works_title">{{ settings.how_it_works_title}}</h1>
+            <div class="how_it_works_description">{{ settings.how_it_works_description }}</div>
+            <button class="login_signup_button" onclick="document.getElementById('accountLogin').style.display = 'block';document.querySelector('.how_it_works_wrapper').style.display = 'none'">{{ settings.how_it_works_login_text }}</button>
+          </div>
+          <div class="account_login" id="accountLogin" style="display: none;">
+            <div class="small-form claim-small-form">
+              
+              <div id="claim-template" class="{% if shop.checkout.guest_login %} flexible-layout{% endif %}" data-cc-animate>
+                
+                <!-- <div class="{% if shop.checkout.guest_login %}column column--half{% else %}small-form{% endif %}"> -->
+                  <div id="customer">
+                    <div class="template_header">
+                      <h2 class="title account_login_title">{{ 'customer.login.title' | t }}</h2>
+                      <p class="account_login_sub-title" style="color: #000">{{ settings.account_subtitle }}</p>
+                    </div>
+
+                    {% form 'customer_login' %}
+                    {{ form.errors | default_errors }}
+          
+                    <div id="login_email" class="input-row">
+                      <label for="customer_email" class="login" >{{ 'customer.login.email' | t }}</label>
+                      <input type="email" value="" name="customer[email]" id="customer_email" class="large" size="30" />
+                    </div>
+          
+                    {% if form.password_needed %}
+          
+                    {% comment %}
+                    Customer Account Login
+                    {% endcomment %}
+          
+                    <div id="login_password" class="input-row">
+                      <label for="customer_password" class="login">{{ 'customer.login.password' | t }}</label>
+                      <div class="text-over-input">
+                        <input type="password" value="" name="customer[password]" id="customer_password" class="large password" size="16" />
+                        <div id="forgot_password" class="text-over-input__text">
+                          <a href="#" onclick="showRecoverPasswordForm();return false;" style="text-decoration: underline; color: #000;">{{ 'customer.login.forgot_password' | t }}</a>
+                        </div>
+                      </div>
+                    </div>
+          
+                    {% endif %}
+          
+                    <div class="action_bottom">
+                      <div class="opposing-items">
+                          <button class="login_btn btn" type="submit" style="font-size: {{ block.settings.login_btn_font_size }}px; background: {{ block.settings.login_button_color}};" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'customer.login.title' | t | upcase }}<input type='hidden' name='return_to' value='#'></button>
+                          
+                        <div>Don't have an account?<a href="#create-customer" onclick="showRegistrationForm();return false;"> {{ 'customer.login.register' | t }}</a></div>
+                      </div>
+                    </div>
+                    
+                    {% endform %}
+                  </div>
+          
+                  {% comment %}
+                    Recover Password Form
+                  {% endcomment %}
+          
+                  <div id="recover-password" style='display:none'>
+                    {% form 'recover_customer_password' %}
+                    {% if form.posted_successfully? %}
+                    {% assign reset_success = true %}
+                    {% endif %}
+                    
+          
+          
+                    {{ form.errors | default_errors }}
+          
+                    {% if reset_success %}
+          
+                    <div class="action_bottom">
+                      <p style="font-size: 20px;">{{ 'customer.recover_password.success' | t }}</p>
+                      <span class="note"><a href="#" onclick="hideRecoverPasswordForm();return false;">{{ 'customer.login.sign_in' | t }}</a></span>
+                    </div>
+          
+                    {% else %}
+                    <div class="template_header">
+                      <h2 class="title account_recoverPassword_title">{{ 'customer.recover_password.title' | t }}</h2>
+                      <p class="account_recoverPassword_sub-title" style="color: #000">{{ settings.account_recoverPassword_subtitle }}</p>
+                      
+                    </div>
+                    <div id="recover_email" class="input-row">
+                      <label for="email" class="large">{{ 'customer.recover_password.email' | t }}</label>
+                      <input type="email" value="" size="30" name="email" id="recover-email" class="large" />
+                    </div>
+                    <div class="action_bottom">
+                        <button class="recover_password_btn btn" type="submit" style="font-size: {{ block.settings.login_btn_font_size }}px; background: {{ block.settings.login_button_color}};" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'customer.recover_password.submit' | t | upcase }}</button>
+                        {% unless reset_success %}
+                          <!-- <p>{{ 'customer.recover_password.subtext' | t }}</p> -->
+                          <p class="note">{{ settings.reset_password_note }}</p>
+                        {% endunless %}
+                      <span class="note">Remember your password? <a href="#" onclick="hideRecoverPasswordForm();return false;">{{ 'customer.recover_password.cancel' | t }}</a></span>
+                    </div>
+          
+                    {% endif %}
+          
+                    {% endform %}
+                  </div>
+                <!-- </div>/layout-column-half-left" -->
+                  {% comment %}
+                    Create customer
+                  {% endcomment %}
+
+                  <div id="create-customer" style="display:none">
+                    <div class="template_header">
+                      <h2 class="title register_title">{{ 'customer.register.title' | t }}</h2>
+                      {{ block.settings.register_subtitle }}
+                    </div>
+            
+                    {% form 'create_customer' %}
+                      {{ form.errors | default_errors }}
+            
+                      <!-- <div class="input-row">
+                        <label for="first_name" class="login">{{ 'customer.register.first_name' | t }}</label>
+                        <input type="text" value="" name="customer[first_name]" id="first_name" class="large" size="30" />
+                      </div>
+            
+                      <div class="input-row">
+                        <label for="last_name" class="login">{{ 'customer.register.last_name' | t }}</label>
+                        <input type="text" value="" name="customer[last_name]" id="last_name" class="large" size="30" />
+                      </div> -->
+            
+                      <div class="input-row" id="register_email">
+                        <label for="email" class="login">{{ 'customer.register.email' | t }}</label>
+                        <input type="email" value="" name="customer[email]" id="email" class="large" size="30" />
+                      </div>
+            
+                      <div class="input-row" id="register_password">
+                        <label for="password" class="login">{{ 'customer.register.password' | t }}</label>
+                        <input type="password" value="" name="customer[password]" id="password" class="large password" size="30" />
+                      </div>
+            
+                      <div class="action_bottom">
+                          <a href="{{ product.url }}"><button class="register_btn btn" type="submit" style="font-size: {{ block.settings.login_btn_font_size}}px; background: {{ block.settings.login_button_color}}" onclick="$('#login_email').style.display='block';">{{ 'customer.register.submit' | t | upcase }}<input type='hidden' name='return_to' value='{{ product.url }}'></button></a>
+                        <span class="note">Already have an account? <a href="#customer" onclick="document.getElementById('create-customer').style.display = 'none';
+                          document.getElementById('customer').style.display = 'block';">{{ 'customer.register.log_in' | t }}</a>
+                          <!-- {{ 'customer.general.or' | t }}
+                          <a href="{{ routes.root_url }}">{{ 'customer.register.cancel' | t }}</a> -->
+                        </span>
+                      </div>
+                    {% endform %}
+                  </div>
+                {% comment %}
+                Guest Login form for shops with optional customer accounts. This form is displayed only when users click on the checkout link
+                on the cart page.
+                {% endcomment %}
+          
+                {% if shop.checkout.guest_login %}
+                <div id="guest" class="column column--half">
+                  <div class="template_header">
+                    <h3 class="title">{{ 'customer.login.guest_title' | t }}</h3>
+                  </div>
+                  {% form 'guest_login' %}
+                    <button class="btn" type="submit" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'customer.login.guest_continue' | t }}</button>
+                  {% endform %}
+                </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+<script>
+  function showRecoverPasswordForm() {
+    document.getElementById('recover-password').style.display = 'block';
+    document.getElementById('customer').style.display='none';
+  }
+
+  function hideRecoverPasswordForm() {
+    document.getElementById('recover-password').style.display = 'none';
+    document.getElementById('customer').style.display = 'block';
+  }
+  function showRegistrationForm() {
+    document.getElementById('create-customer').style.display = 'block';
+    document.getElementById('customer').style.display='none';
+  }
+
+  function hideRegistrationForm() {
+    document.getElementById('create-customer').style.display = 'none';
+    document.getElementById('customer').style.display = 'block';
+  }
+  var claimDrawer = document.getElementById('claimDrawerContainer')
+  document.getElementById('claimDrawerButton').addEventListener('click', () => {
+    claimDrawer.classList.add('claim-drawer-open');
+  })
+</script>   

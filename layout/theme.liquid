@@ -126,7 +126,9 @@
   {% section 'age-verification' %}
   {% section 'announcement-bar' %}
   {% section 'header' %}
-  {% section 'free-variety-pouch' %}
+  {% if product.handle != 'chill-cbd-isolate-chew-pouches' %}
+    {% render 'free-variety-pack' %}
+  {% endif %}
   {% section 'store-messages' %}
 
   <main id="content" role="main">

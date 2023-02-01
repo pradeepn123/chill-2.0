@@ -102,6 +102,25 @@
         }
     }
 }
+.button_container{
+    flex-basis: 20%;
+    .buy-buttons-row{
+        margin: 0;
+        .input-row{
+            margin-bottom: 0;
+            .claim_drawer_button{
+                width: 100%;
+                background: #FFAC9A;
+                border: 2px solid #000000;
+                border-radius: 5px;
+                font-size: 18px;
+                font-weight: 800;
+                color: #000;
+                padding: 12px 19px;
+            }
+        }
+    }
+}
 .claim_info_container{
     display: flex;
     border: 2px solid #000000;
@@ -128,20 +147,6 @@
             }
         }
     }
-    .button_container{
-        flex-basis: 40%;
-        margin: auto;
-        .claim_drawer_button{
-            width: 100%;
-            background: #FFAC9A;
-            border: 2px solid #000000;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: 800;
-            color: #000;
-            padding: 12px 19px;
-        }
-    }
 }
 .claim_success_message{
     margin-top: 10px;
@@ -162,6 +167,14 @@
     }
 }
 .claim_banner_product_page_container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 91.313rem;
+    margin: auto;
+    .close_banner_button{
+        margin: auto 20px auto 0;
+        cursor: pointer;
+    }
     .claim_banner_product_page{
         border: 2px solid #000;
         border-radius: 10px;
@@ -169,10 +182,10 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        width: 95%;
+        width: 90%;
         margin: 17px auto;
         .claim_banner_text{
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             color: #000;
             margin-bottom: 0;
