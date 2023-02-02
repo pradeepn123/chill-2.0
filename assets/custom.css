@@ -6818,11 +6818,18 @@ body.cart-drawer-open {
   display: block;
   font-weight: 600;
   line-height: 1.2;
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 1200px) {
   .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__detail .cart-drawer-summary-item__title {
     width: 70%;
   }
+}
+.cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__detail .cart-drawer-summary-item__title .cart-drawer-summary-item__varient_pack {
+  font-size: 12px !important;
+  font-weight: normal;
+  padding-top: 10px;
 }
 .cart-drawer-summary .cart-drawer-summary__inner .cart-drawer-summary-item .cart-drawer-summary-item__detail .variant {
   font-size: 14px;
