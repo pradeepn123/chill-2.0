@@ -410,6 +410,7 @@
     }
   {% else %}
     localStorage.removeItem("visited")
+    theme.handleCustomerLogout()
   {% endif %}
 
   function handleClaimDrawerClose() {
