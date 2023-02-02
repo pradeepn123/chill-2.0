@@ -1,14 +1,23 @@
 <div class="claim_drawer_background" id="claimDrawerBackground" style="display:none;"></div>
 <div class="claim_drawer_container" id="claimDrawerContainer" style="display:block;">
-  <a class="claim-drawer-summary__close toggle-cart-summary" onclick="document.getElementById('claimDrawerContainer').classList.remove('claim-drawer-open'); document.getElementById('claimDrawerBackground').style.display = 'none';">
+  <a class="claim-drawer-summary__close toggle-cart-summary" onclick="document.getElementById('claimDrawerContainer').classList.remove('claim-drawer-open'); document.getElementById('claimDrawerBackground').style.display = 'none';document.querySelector('body').classList.remove('cart-drawer-open');">
     {% render 'svg-close' %}
   </a>
   <div class="how_it_works_wrapper">
     <!-- <img class="how_it_works_image" src="{{ settings.how_it_works_image | img_url: 'master' }}" alt="How-it-works"> -->
     {% render 'responsive-image', image: settings.how_it_works_image %}
-    <h1 class="how_it_works_title">{{ settings.how_it_works_title}}</h1>
-    <div class="how_it_works_description">{{ settings.how_it_works_description }}</div>
-    <button class="login_signup_button" onclick="document.getElementById('accountLogin').style.display = 'block';document.querySelector('.how_it_works_wrapper').style.display = 'none'">{{ settings.how_it_works_login_text }}</button>
+    <h1 class="how_it_works_title">
+      {{ settings.how_it_works_title}}
+    </h1>
+    <div class="how_it_works_description">
+      {{ settings.how_it_works_description }}
+    </div>
+    <button
+      class="login_signup_button"
+      onclick="document.getElementById('accountLogin').style.display = '';document.querySelector('.how_it_works_wrapper').style.display = 'none'"
+    >
+      {{ settings.how_it_works_login_text }}
+    </button>
   </div>
   <div class="account_login" id="accountLogin" style="display: none;">
     <div class="small-form claim-small-form">
@@ -50,7 +59,7 @@
   
             <div class="action_bottom">
               <div class="opposing-items">
-                  <button class="login_btn btn" type="submit" style="font-size: {{ settings.login_btn_font_size }}px; background: {{ settings.login_button_color}};" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'customer.login.title' | t | upcase }}<input type='hidden' name='return_to' value='{{ request.path }}'></button>
+                  <button class="login_btn btn" type="submit" style="font-size: {{ settings.login_btn_font_size }}px; background: {{ settings.login_button_color}};" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';document.querySelector('.claim-drawer-summary__close').click()">{{ 'customer.login.title' | t | upcase }}<input type='hidden' name='return_to' value='{{ request.path }}'></button>
                   
                 <div>Don't have an account?<a href="#create-customer" onclick="showRegistrationForm();return false;"> {{ 'customer.login.register' | t }}</a></div>
               </div>
@@ -91,7 +100,7 @@
               <input type="email" value="" size="30" name="email" id="recover-email" class="large" />
             </div>
             <div class="action_bottom">
-                <button class="recover_password_btn btn" type="submit" style="font-size: {{ block.settings.login_btn_font_size }}px; background: {{ block.settings.login_button_color}};" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'customer.recover_password.submit' | t | upcase }}</button>
+                <button class="recover_password_btn btn" type="submit" style="font-size: {{ settings.login_btn_font_size }}px; background: {{ settings.login_button_color}};" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';document.querySelector('.claim-drawer-summary__close').click()">{{ 'customer.recover_password.submit' | t | upcase }}</button>
                 {% unless reset_success %}
                   <!-- <p>{{ 'customer.recover_password.subtext' | t }}</p> -->
                   <p class="note">{{ settings.reset_password_note }}</p>
@@ -111,7 +120,7 @@
           <div id="create-customer" style="display:none">
             <div class="template_header">
               <h2 class="title register_title">{{ 'customer.register.title' | t }}</h2>
-              {{ block.settings.register_subtitle }}
+              {{ settings.register_subtitle }}
             </div>
     
             {% form 'create_customer' %}
@@ -138,7 +147,7 @@
               </div>
     
               <div class="action_bottom">
-                  <a href="{{ product.url }}"><button class="register_btn btn" type="submit" style="font-size: {{ block.settings.login_btn_font_size}}px; background: {{ block.settings.login_button_color}}" onclick="$('#login_email').style.display='block';">{{ 'customer.register.submit' | t | upcase }}<input type='hidden' name='return_to' value='{{ product.url }}'></button></a>
+                  <a href="{{ product.url }}"><button class="register_btn btn" type="submit" style="font-size: {{ settings.login_btn_font_size}}px; background: {{ settings.login_button_color}}" onclick="$('#login_email').style.display='block';document.querySelector('.claim-drawer-summary__close').click()">{{ 'customer.register.submit' | t | upcase }}<input type='hidden' name='return_to' value='{{ product.url }}'></button></a>
                 <span class="note">Already have an account? <a href="#customer" onclick="document.getElementById('create-customer').style.display = 'none';
                   document.getElementById('customer').style.display = 'block';">{{ 'customer.register.log_in' | t }}</a>
                   <!-- {{ 'customer.general.or' | t }}
@@ -168,21 +177,25 @@
 </div>
 <script>
     function showRecoverPasswordForm() {
-      document.getElementById('recover-password').style.display = 'block';
+      document.getElementById('recover-password').style.display = '';
       document.getElementById('customer').style.display='none';
+      $("#claimDrawerContainer").animate({ scrollTop: 0 }, "fast");
     }
   
     function hideRecoverPasswordForm() {
       document.getElementById('recover-password').style.display = 'none';
-      document.getElementById('customer').style.display = 'block';
+      document.getElementById('customer').style.display = '';
+      $("#claimDrawerContainer").animate({ scrollTop: 0 }, "fast");
     }
     function showRegistrationForm() {
-      document.getElementById('create-customer').style.display = 'block';
+      document.getElementById('create-customer').style.display = '';
       document.getElementById('customer').style.display='none';
+      $("#claimDrawerContainer").animate({ scrollTop: 0 }, "fast");
     }
   
     function hideRegistrationForm() {
       document.getElementById('create-customer').style.display = 'none';
-      document.getElementById('customer').style.display = 'block';
+      document.getElementById('customer').style.display = '';
+      $("#claimDrawerContainer").animate({ scrollTop: 0 }, "fast");
     }
   </script> 

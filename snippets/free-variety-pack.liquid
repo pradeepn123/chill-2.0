@@ -18,7 +18,7 @@
 {% if customer %}
     {% if contains_pouches == false and request.page_type == 'index' or request.page_type == 'product' and product.handle != 'chill-cbd-isolate-chew-pouches' %}
       {% if free_variety_pack_found_in_cart == false %}
-          <div class="claim_banner_product_page_container" id="claimBannerProductPage">
+          <div class="claim_banner_product_page_container container container--no-max" id="claimBannerProductPage">
           <div class="claim_banner_product_page">
               <p class="claim_banner_text claim_banner_text_desktop" >
                 {{ settings.claim_banner_text_desktop }}
@@ -149,7 +149,9 @@
           </div>
           {% if settings.enable_free_variety_pouch_offer and request.page_type == 'index' %}
             <div class="claim_banner_home_page">
-              <span class="close_banner_button" onclick="document.querySelector('.claim_banner_product_page_container').style.display='none'">{% render 'svg-close' %}</span>
+              <span class="close_banner_button" onclick="handleCloseBanner()">
+                {% render 'svg-close' %}
+              </span>
             </div> 
           {% endif %}
           </div>
@@ -286,7 +288,7 @@
   {% endif %}
 {% elsif product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'product' or request.page_type == 'index' %}
   {% if free_variety_pack_found_in_cart == false %}
-    <div class="claim_banner_product_page_container" id="claimBannerProductPage">
+    <div class="claim_banner_product_page_container container container--no-max" id="claimBannerProductPage">
       <div class="claim_banner_product_page">
         <p class="claim_banner_text claim_banner_text_desktop">
           {{ settings.claim_banner_text_desktop }}
@@ -294,11 +296,13 @@
         <p class="claim_banner_text claim_banner_text_mobile" >
           {{ settings.claim_banner_text_mobile }}
         </p>
-        <button class="claim_banner_button" id="claimDrawerButton" onclick="document.getElementById('claimDrawerContainer').style.display='block'; document.getElementById('claimDrawerBackground').style.display='block';">{{ settings.claim_button_text | upcase }}</button>
+        <button class="claim_banner_button" id="claimDrawerButton" onclick="document.getElementById('claimDrawerContainer').style.display='block'; document.getElementById('claimDrawerBackground').style.display='block';">
+          {{ settings.claim_button_text | upcase }}
+        </button>
       </div>
-      {% if settings.enable_free_variety_pouch_offer and request.page_type == 'index' %}
+      {% if request.page_type == 'index' %}
         <div class="claim_banner_home_page">
-          <span class="close_banner_button" onclick="document.querySelector('.claim_banner_product_page_container').style.display='none'">{% render 'svg-close' %}</span>
+          <span class="close_banner_button" onclick="handleCloseBanner()">{% render 'svg-close' %}</span>
         </div> 
       {% endif %}
     </div>
@@ -316,7 +320,7 @@
 
 {% if customer and contains_pouches == false %}
   {% if free_variety_pack_found_in_cart == false %}
-    <p class="claim_success_message" {% if product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'index' or request.page_type == 'product' %}style="text-align: center;"{% endif %}>
+    <p class="claim_success_message" {% if product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'index' or request.page_type == 'product' %}style="text-align: center;"{% else %}padding-top: 10px;{% endif %}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.0"
@@ -382,15 +386,17 @@
   if (claimBtn) {
     claimBtn.addEventListener('click', () => {
       claimDrawer.classList.add('claim-drawer-open');
+      document.querySelector("body").classList.add("cart-drawer-open")
       if(claimDrawer.classList.contains('claim-drawer-close')){
         claimDrawer.classList.add('claim-drawer-close');
       }
     })
   }
   var claimDrawerBackgroundClick = document.getElementById('claimDrawerBackground');
-    claimDrawerBackgroundClick.addEventListener('click', function(){
-      document.querySelector('.claim-drawer-summary__close').click()
-    })
+  claimDrawerBackgroundClick.addEventListener('click', function() {
+    document.querySelector('.claim-drawer-summary__close').click()
+    document.querySelector("body").classList.remove("cart-drawer-open")
+  })
   {% if customer %}
     const failMessageBox = document.querySelector("#failMessage");
     if (failMessageBox) {
@@ -405,4 +411,14 @@
   {% else %}
     localStorage.removeItem("visited")
   {% endif %}
+
+  function handleClaimDrawerClose() {
+    document.querySelector("body").classList.remove("cart-drawer-open")
+    document.querySelector('.claim_banner_product_page_container').style.display='none'
+  }
+  function handleCloseBanner() {
+    document.querySelector('.claim_banner_product_page_container').style.display='none';  
+    document.querySelector('.claim_success_message').style.display = 'none';
+  }
+  
 </script>   

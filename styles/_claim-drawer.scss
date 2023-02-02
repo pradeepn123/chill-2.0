@@ -11,7 +11,7 @@
     }
 }
 .claim_drawer_container{
-    z-index: 5001;
+    z-index: 60000;
     opacity: 1;
     width: 40%;
     overflow: auto;
@@ -44,10 +44,7 @@
         cursor: pointer;
     }
     .how_it_works_wrapper{
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        margin: 22% 65px;
+        margin: 12% 65px;
         @media (max-width: 416px){
             margin: 30% 10% 10% 10%;
         }
@@ -55,7 +52,7 @@
             border-radius: 15px;
         }
         .how_it_works_title{
-            font-size: 42px;
+            font-size: 38px;
             font-weight: 800;
             margin-top: 26px;
             @media (max-width: 767px){
@@ -65,6 +62,7 @@
         .how_it_works_description{
             ul{
                 list-style-type: none; 
+                margin: 0 1em;
             }
             ul li{
                 list-style: none;
@@ -75,7 +73,7 @@
                 content: "\2022";
                 color: #FFAC9A;
                 font-weight: bold;
-                font-size: 200%;
+                font-size: 175%;
                 display: inline-block; 
                 width: 13px;
                 margin-left: -1em;
@@ -87,7 +85,7 @@
             margin: auto;
             width: 100%;
             border-radius: 40px;
-            margin-top: 45px;
+            margin-top: 35px;
             font-size: 20px;
             font-weight: 800;
             @media (max-width: 767px){
@@ -98,12 +96,8 @@
 
     .account_login {
         height: 100%;
-        margin: 86px auto;
+
         .claim-small-form{
-            position: relative;
-            top: 30%;
-            transform: translateY(-50%);
-            max-width: 80% !important;
             #claim-template{
                 .template_header{
                     margin-bottom: 40px;
@@ -136,6 +130,9 @@
                 font-weight: 800;
                 color: #000;
                 padding: 12px 19px;
+                @media (max-width: 374px){
+                    font-size: 8px !important;
+                }
                 @media (max-width: 767px){
                     font-size: 10px;
                     padding: 9px 7px;
@@ -251,6 +248,9 @@
     color: #6EC59F;
     font-size: 16px;
     font-weight: 600;
+    @media (max-width: 374px){
+        font-size: 9px !important;
+    }
     @media (max-width: 767px){
         font-size: 10px;
     }
@@ -263,9 +263,10 @@
 }
 .claim_fail_message{
     margin-top: 10px;
-    color: red;
+    color: #FFAC9A;
     font-size: 16px;
     font-weight: 600;
+    padding: 10px 0;
     svg{
         margin-right: 5px;
     }
@@ -276,28 +277,35 @@
 .claim_banner_product_page_container{
     display: flex;
     justify-content: space-between;
-    max-width: 91.313rem;
-    margin: auto;
+    padding-left: 40px !important;
+
     @media (max-width: 767px){
         flex-direction: row-reverse;
-        padding: 0 10px;
+        padding: 0 10px !important;
+
     }
+
     .close_banner_button{
-        margin: auto 20px auto 0;
+        margin: auto 0 auto 20px;
         cursor: pointer;
+        @media (max-width: 767px){
+            margin: auto 20px auto 0 !important;
+        }
     }
+
     .claim_banner_product_page{
+        background-color: #FFFBFA;
         border: 2px solid #000;
         border-radius: 10px;
         padding: 11px;
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        width: 90%;
-        margin: 17px auto;
+        width: 100%;
+        margin: 17px 0;
         @media (max-width: 767px){
             width: 100%;
-            box-shadow: 5px 5px #FFAC9A;
+            box-shadow: 3px 3px #FFAC9A;
         }
         .claim_banner_text{
             font-size: 16px;
@@ -305,6 +313,9 @@
             color: #000;
             margin-bottom: 0;
             flex-basis: 80%;
+            @media (max-width: 374px){
+                font-size: 8px !important;
+            }
             @media (max-width: 767px){
                 font-size: 10px;
             }
@@ -315,6 +326,9 @@
                 font-size: 18px;
                 font-weight: bold;
                 color: #ffac9a;
+                @media (max-width: 374px){
+                    font-size: 12px !important;
+                }
                 @media (max-width: 767px){
                     font-size: 15px;
                 }
@@ -330,6 +344,9 @@
             color: #000;
             padding: 12px 19px;
             flex-basis: 20%;
+            @media (max-width: 374px){
+                font-size: 8px !important;
+            }
             @media (max-width: 767px){
                 font-size: 10px;
                 flex-basis: 40%;
@@ -350,6 +367,6 @@
         flex-basis: 100%;
     }
     .close_banner_button{
-        margin: auto 20px auto 0;
+        margin: auto 0 auto 20px;
     }
 }
