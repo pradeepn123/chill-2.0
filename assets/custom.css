@@ -7643,6 +7643,11 @@ body.cart-drawer-open {
   opacity: 0.5;
   z-index: 5000;
 }
+@media (max-width: 1023px) {
+  .claim_drawer_background {
+    z-index: 60000;
+  }
+}
 
 .claim_drawer_container {
   z-index: 5001;
@@ -7667,6 +7672,11 @@ body.cart-drawer-open {
     width: 95%;
   }
 }
+@media (max-width: 1023px) {
+  .claim_drawer_container {
+    z-index: 60000;
+  }
+}
 .claim_drawer_container.claim-drawer-open {
   transform: translateX(-100%);
   transition: transform 0.5s;
@@ -7683,7 +7693,12 @@ body.cart-drawer-open {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  margin: 86px 65px;
+  margin: 22% 65px;
+}
+@media (max-width: 416px) {
+  .claim_drawer_container .how_it_works_wrapper {
+    margin: 30% 10% 10% 10%;
+  }
 }
 .claim_drawer_container .how_it_works_wrapper .how_it_works_image {
   border-radius: 15px;
@@ -7692,6 +7707,11 @@ body.cart-drawer-open {
   font-size: 42px;
   font-weight: 800;
   margin-top: 26px;
+}
+@media (max-width: 767px) {
+  .claim_drawer_container .how_it_works_wrapper .how_it_works_title {
+    font-size: 32px;
+  }
 }
 .claim_drawer_container .how_it_works_wrapper .how_it_works_description ul {
   list-style-type: none;
@@ -7720,6 +7740,11 @@ body.cart-drawer-open {
   font-size: 20px;
   font-weight: 800;
 }
+@media (max-width: 767px) {
+  .claim_drawer_container .how_it_works_wrapper .login_signup_button {
+    font-size: 12px;
+  }
+}
 .claim_drawer_container .account_login {
   height: 100%;
   margin: 86px auto;
@@ -7740,6 +7765,12 @@ body.cart-drawer-open {
 .button_container {
   flex-basis: 20%;
 }
+@media (max-width: 767px) {
+  .button_container {
+    flex-basis: 40%;
+    margin: auto;
+  }
+}
 .button_container .buy-buttons-row {
   margin: 0;
 }
@@ -7756,6 +7787,18 @@ body.cart-drawer-open {
   color: #000;
   padding: 12px 19px;
 }
+@media (max-width: 767px) {
+  .button_container .buy-buttons-row .input-row .claim_drawer_button {
+    font-size: 10px;
+    padding: 9px 7px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .button_container .buy-buttons-row .input-row .claim_drawer_button {
+    font-size: 12px !important;
+    margin: auto;
+  }
+}
 
 .claim_info_container {
   display: flex;
@@ -7766,10 +7809,21 @@ body.cart-drawer-open {
   width: 38vw;
   box-shadow: 5px 5px #FFAC9A;
 }
+@media (max-width: 767px) {
+  .claim_info_container {
+    width: 90vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .claim_info_container {
+    width: 100%;
+  }
+}
 .claim_info_container .offer_content_container {
-  flex-basis: 60%;
+  flex-basis: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .claim_info_container .offer_content_container .offer_content {
   color: #000;
@@ -7778,10 +7832,91 @@ body.cart-drawer-open {
   margin-bottom: 0;
   line-height: 1.2;
 }
+@media (max-width: 767px) {
+  .claim_info_container .offer_content_container .offer_content {
+    font-size: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .claim_info_container .offer_content_container .offer_content {
+    font-size: 14px !important;
+    flex-basis: 60%;
+  }
+}
 .claim_info_container .offer_content_container .offer_content span {
   font-size: 24px;
   font-weight: 800;
   color: #ffac9a;
+}
+@media (max-width: 1023px) {
+  .claim_info_container .offer_content_container .offer_content span {
+    font-size: 15px;
+  }
+}
+.claim_info_container .offer_content_container .claim_banner_button {
+  width: 100%;
+  background: #FFAC9A;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #000;
+  padding: 12px 19px;
+  flex-basis: 40%;
+}
+@media (max-width: 767px) {
+  .claim_info_container .offer_content_container .claim_banner_button {
+    font-size: 10px;
+    padding: 9px 7px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .claim_info_container .offer_content_container .claim_banner_button {
+    font-size: 12px !important;
+    padding: 9px 5px !important;
+  }
+}
+.claim_info_container .offer_content_container .button_container {
+  flex-basis: 40%;
+  height: fit-content;
+}
+@media (max-width: 767px) {
+  .claim_info_container .offer_content_container .button_container {
+    margin: auto;
+  }
+}
+.claim_info_container .offer_content_container .button_container .buy-buttons-row {
+  margin: 0;
+}
+.claim_info_container .offer_content_container .button_container .buy-buttons-row .input-row {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.claim_info_container .offer_content_container .button_container .buy-buttons-row .input-row .quantity-submit-row__submit {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.claim_info_container .offer_content_container .button_container .buy-buttons-row .input-row .claim_drawer_button {
+  width: 100%;
+  background: #FFAC9A;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #000;
+  padding: 12px 19px;
+}
+@media (max-width: 767px) {
+  .claim_info_container .offer_content_container .button_container .buy-buttons-row .input-row .claim_drawer_button {
+    font-size: 10px;
+    padding: 9px 7px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .claim_info_container .offer_content_container .button_container .buy-buttons-row .input-row .claim_drawer_button {
+    font-size: 12px !important;
+    margin: auto;
+  }
 }
 
 .claim_success_message {
@@ -7789,6 +7924,16 @@ body.cart-drawer-open {
   color: #6EC59F;
   font-size: 16px;
   font-weight: 600;
+}
+@media (max-width: 767px) {
+  .claim_success_message {
+    font-size: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .claim_success_message {
+    font-size: 14px;
+  }
 }
 .claim_success_message svg {
   margin-right: 5px;
@@ -7803,12 +7948,21 @@ body.cart-drawer-open {
 .claim_fail_message svg {
   margin-right: 5px;
 }
+.claim_fail_message.hideFailMessage {
+  display: none;
+}
 
 .claim_banner_product_page_container {
   display: flex;
   justify-content: space-between;
   max-width: 91.313rem;
   margin: auto;
+}
+@media (max-width: 767px) {
+  .claim_banner_product_page_container {
+    flex-direction: row-reverse;
+    padding: 0 10px;
+  }
 }
 .claim_banner_product_page_container .close_banner_button {
   margin: auto 20px auto 0;
@@ -7824,6 +7978,12 @@ body.cart-drawer-open {
   width: 90%;
   margin: 17px auto;
 }
+@media (max-width: 767px) {
+  .claim_banner_product_page_container .claim_banner_product_page {
+    width: 100%;
+    box-shadow: 5px 5px #FFAC9A;
+  }
+}
 .claim_banner_product_page_container .claim_banner_product_page .claim_banner_text {
   font-size: 16px;
   font-weight: 600;
@@ -7831,10 +7991,25 @@ body.cart-drawer-open {
   margin-bottom: 0;
   flex-basis: 80%;
 }
+@media (max-width: 767px) {
+  .claim_banner_product_page_container .claim_banner_product_page .claim_banner_text {
+    font-size: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .claim_banner_product_page_container .claim_banner_product_page .claim_banner_text {
+    font-size: 14px !important;
+  }
+}
 .claim_banner_product_page_container .claim_banner_product_page .claim_banner_text span {
   font-size: 18px;
   font-weight: bold;
   color: #ffac9a;
+}
+@media (max-width: 767px) {
+  .claim_banner_product_page_container .claim_banner_product_page .claim_banner_text span {
+    font-size: 15px;
+  }
 }
 .claim_banner_product_page_container .claim_banner_product_page .claim_banner_button {
   width: 100%;
@@ -7846,6 +8021,20 @@ body.cart-drawer-open {
   color: #000;
   padding: 12px 19px;
   flex-basis: 20%;
+}
+@media (max-width: 767px) {
+  .claim_banner_product_page_container .claim_banner_product_page .claim_banner_button {
+    font-size: 10px;
+    flex-basis: 40%;
+    padding: 9px 7px;
+    margin: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .claim_banner_product_page_container .claim_banner_product_page .claim_banner_button {
+    font-size: 12px !important;
+    margin: auto;
+  }
 }
 
 .claim_banner_home_page {

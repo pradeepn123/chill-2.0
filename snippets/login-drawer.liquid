@@ -1,0 +1,188 @@
+<div class="claim_drawer_background" id="claimDrawerBackground" style="display:none;"></div>
+<div class="claim_drawer_container" id="claimDrawerContainer" style="display:block;">
+  <a class="claim-drawer-summary__close toggle-cart-summary" onclick="document.getElementById('claimDrawerContainer').classList.remove('claim-drawer-open'); document.getElementById('claimDrawerBackground').style.display = 'none';">
+    {% render 'svg-close' %}
+  </a>
+  <div class="how_it_works_wrapper">
+    <!-- <img class="how_it_works_image" src="{{ settings.how_it_works_image | img_url: 'master' }}" alt="How-it-works"> -->
+    {% render 'responsive-image', image: settings.how_it_works_image %}
+    <h1 class="how_it_works_title">{{ settings.how_it_works_title}}</h1>
+    <div class="how_it_works_description">{{ settings.how_it_works_description }}</div>
+    <button class="login_signup_button" onclick="document.getElementById('accountLogin').style.display = 'block';document.querySelector('.how_it_works_wrapper').style.display = 'none'">{{ settings.how_it_works_login_text }}</button>
+  </div>
+  <div class="account_login" id="accountLogin" style="display: none;">
+    <div class="small-form claim-small-form">
+      
+      <div id="claim-template" class="{% if shop.checkout.guest_login %} flexible-layout{% endif %}" data-cc-animate>
+        
+        <!-- <div class="{% if shop.checkout.guest_login %}column column--half{% else %}small-form{% endif %}"> -->
+          <div id="customer">
+            <div class="template_header">
+              <h2 class="title account_login_title">{{ 'customer.login.title' | t }}</h2>
+              <p class="account_login_sub-title" style="color: #000">{{ settings.account_subtitle }}</p>
+            </div>
+
+            {% form 'customer_login' %}
+            {{ form.errors | default_errors }}
+  
+            <div id="login_email" class="input-row">
+              <label for="customer_email" class="login" >{{ 'customer.login.email' | t }}</label>
+              <input type="email" value="" name="customer[email]" id="customer_email" class="large" size="30" />
+            </div>
+  
+            {% if form.password_needed %}
+  
+            {% comment %}
+            Customer Account Login
+            {% endcomment %}
+  
+            <div id="login_password" class="input-row">
+              <label for="customer_password" class="login">{{ 'customer.login.password' | t }}</label>
+              <div class="text-over-input">
+                <input type="password" value="" name="customer[password]" id="customer_password" class="large password" size="16" />
+                <div id="forgot_password" class="text-over-input__text">
+                  <a href="#" onclick="showRecoverPasswordForm();return false;" style="text-decoration: underline; color: #000;">{{ 'customer.login.forgot_password' | t }}</a>
+                </div>
+              </div>
+            </div>
+  
+            {% endif %}
+  
+            <div class="action_bottom">
+              <div class="opposing-items">
+                  <button class="login_btn btn" type="submit" style="font-size: {{ settings.login_btn_font_size }}px; background: {{ settings.login_button_color}};" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'customer.login.title' | t | upcase }}<input type='hidden' name='return_to' value='{{ request.path }}'></button>
+                  
+                <div>Don't have an account?<a href="#create-customer" onclick="showRegistrationForm();return false;"> {{ 'customer.login.register' | t }}</a></div>
+              </div>
+            </div>
+            
+            {% endform %}
+          </div>
+  
+          {% comment %}
+            Recover Password Form
+          {% endcomment %}
+  
+          <div id="recover-password" style='display:none'>
+            {% form 'recover_customer_password' %}
+            {% if form.posted_successfully? %}
+            {% assign reset_success = true %}
+            {% endif %}
+            
+  
+  
+            {{ form.errors | default_errors }}
+  
+            {% if reset_success %}
+  
+            <div class="action_bottom">
+              <p style="font-size: 20px;">{{ 'customer.recover_password.success' | t }}</p>
+              <span class="note"><a href="#" onclick="hideRecoverPasswordForm();return false;">{{ 'customer.login.sign_in' | t }}</a></span>
+            </div>
+  
+            {% else %}
+            <div class="template_header">
+              <h2 class="title account_recoverPassword_title">{{ 'customer.recover_password.title' | t }}</h2>
+              <p class="account_recoverPassword_sub-title" style="color: #000">{{ settings.account_recoverPassword_subtitle }}</p>
+              
+            </div>
+            <div id="recover_email" class="input-row">
+              <label for="email" class="large">{{ 'customer.recover_password.email' | t }}</label>
+              <input type="email" value="" size="30" name="email" id="recover-email" class="large" />
+            </div>
+            <div class="action_bottom">
+                <button class="recover_password_btn btn" type="submit" style="font-size: {{ block.settings.login_btn_font_size }}px; background: {{ block.settings.login_button_color}};" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'customer.recover_password.submit' | t | upcase }}</button>
+                {% unless reset_success %}
+                  <!-- <p>{{ 'customer.recover_password.subtext' | t }}</p> -->
+                  <p class="note">{{ settings.reset_password_note }}</p>
+                {% endunless %}
+              <span class="note">Remember your password? <a href="#" onclick="hideRecoverPasswordForm();return false;">{{ 'customer.recover_password.cancel' | t }}</a></span>
+            </div>
+  
+            {% endif %}
+  
+            {% endform %}
+          </div>
+        <!-- </div>/layout-column-half-left" -->
+          {% comment %}
+            Create customer
+          {% endcomment %}
+
+          <div id="create-customer" style="display:none">
+            <div class="template_header">
+              <h2 class="title register_title">{{ 'customer.register.title' | t }}</h2>
+              {{ block.settings.register_subtitle }}
+            </div>
+    
+            {% form 'create_customer' %}
+              {{ form.errors | default_errors }}
+    
+              <!-- <div class="input-row">
+                <label for="first_name" class="login">{{ 'customer.register.first_name' | t }}</label>
+                <input type="text" value="" name="customer[first_name]" id="first_name" class="large" size="30" />
+              </div>
+    
+              <div class="input-row">
+                <label for="last_name" class="login">{{ 'customer.register.last_name' | t }}</label>
+                <input type="text" value="" name="customer[last_name]" id="last_name" class="large" size="30" />
+              </div> -->
+    
+              <div class="input-row" id="register_email">
+                <label for="email" class="login">{{ 'customer.register.email' | t }}</label>
+                <input type="email" value="" name="customer[email]" id="email" class="large" size="30" />
+              </div>
+    
+              <div class="input-row" id="register_password">
+                <label for="password" class="login">{{ 'customer.register.password' | t }}</label>
+                <input type="password" value="" name="customer[password]" id="password" class="large password" size="30" />
+              </div>
+    
+              <div class="action_bottom">
+                  <a href="{{ product.url }}"><button class="register_btn btn" type="submit" style="font-size: {{ block.settings.login_btn_font_size}}px; background: {{ block.settings.login_button_color}}" onclick="$('#login_email').style.display='block';">{{ 'customer.register.submit' | t | upcase }}<input type='hidden' name='return_to' value='{{ product.url }}'></button></a>
+                <span class="note">Already have an account? <a href="#customer" onclick="document.getElementById('create-customer').style.display = 'none';
+                  document.getElementById('customer').style.display = 'block';">{{ 'customer.register.log_in' | t }}</a>
+                  <!-- {{ 'customer.general.or' | t }}
+                  <a href="{{ routes.root_url }}">{{ 'customer.register.cancel' | t }}</a> -->
+                </span>
+              </div>
+            {% endform %}
+          </div>
+        {% comment %}
+        Guest Login form for shops with optional customer accounts. This form is displayed only when users click on the checkout link
+        on the cart page.
+        {% endcomment %}
+  
+        {% if shop.checkout.guest_login %}
+        <div id="guest" class="column column--half">
+          <div class="template_header">
+            <h3 class="title">{{ 'customer.login.guest_title' | t }}</h3>
+          </div>
+          {% form 'guest_login' %}
+            <button class="btn" type="submit" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'customer.login.guest_continue' | t }}</button>
+          {% endform %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    function showRecoverPasswordForm() {
+      document.getElementById('recover-password').style.display = 'block';
+      document.getElementById('customer').style.display='none';
+    }
+  
+    function hideRecoverPasswordForm() {
+      document.getElementById('recover-password').style.display = 'none';
+      document.getElementById('customer').style.display = 'block';
+    }
+    function showRegistrationForm() {
+      document.getElementById('create-customer').style.display = 'block';
+      document.getElementById('customer').style.display='none';
+    }
+  
+    function hideRegistrationForm() {
+      document.getElementById('create-customer').style.display = 'none';
+      document.getElementById('customer').style.display = 'block';
+    }
+  </script> 

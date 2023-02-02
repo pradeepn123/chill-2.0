@@ -123,10 +123,11 @@
 
   <a class="skip-link visually-hidden" href="#content">{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
   {% section 'cart-drawer' %}
+  {% render 'login-drawer' %}
   {% section 'age-verification' %}
   {% section 'announcement-bar' %}
   {% section 'header' %}
-  {% if product.handle != 'chill-cbd-isolate-chew-pouches' %}
+  {% if product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'index' or request.page_type == 'product' %}
     {% render 'free-variety-pack' %}
   {% endif %}
   {% section 'store-messages' %}

@@ -223,6 +223,7 @@
                               aria-label="{{ 'cart.general.quantity' | t | escape }}"/>
                             <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% if promotionalLine == true or free_variety_pack_in_cart == true %}visibility-hidden{%endif%} {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}</a>
                           </div>
+                          
                           {% unless promotionalLine %}
                             <a class="remove" data-line="{{ forloop.index }}" href="#">
                               {{ 'cart.general.remove' | t }}

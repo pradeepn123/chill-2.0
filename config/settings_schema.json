@@ -1509,6 +1509,18 @@
         "id": "register_subtitle",
         "label": "Register subtitle",
         "default": "<p>Please enter your <strong>email</strong> and <strong>password</strong>:</p>"
+      },
+      {
+        "type": "text",
+        "id": "claim_success_message",
+        "label":"Claim eligibility success message",
+        "default": "Yey! You are eligible for Free variety pack, Click Add to cart!"
+      },
+      {
+        "type": "text",
+        "id": "claim_fail_message",
+        "label":"Claim eligibility failure message",
+        "default": "You are not eligible for Free variety pack!"
       }
     ]
   }

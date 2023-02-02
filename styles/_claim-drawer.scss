@@ -6,6 +6,9 @@
     background: #000;
     opacity: 0.5;
     z-index: 5000;
+    @media (max-width: 1023px){
+        z-index: 60000;
+    }
 }
 .claim_drawer_container{
     z-index: 5001;
@@ -17,6 +20,9 @@
     }
     @media (max-width: 560px) {
         width: 95%;
+    }
+    @media (max-width: 1023px){
+        z-index: 60000;
     }
     background: #ffffff;
     position: fixed;
@@ -41,7 +47,10 @@
         position: relative;
         top: 50%;
         transform: translateY(-50%);
-        margin: 86px 65px;
+        margin: 22% 65px;
+        @media (max-width: 416px){
+            margin: 30% 10% 10% 10%;
+        }
         .how_it_works_image{
             border-radius: 15px;
         }
@@ -49,6 +58,9 @@
             font-size: 42px;
             font-weight: 800;
             margin-top: 26px;
+            @media (max-width: 767px){
+                font-size: 32px;
+            }
         }
         .how_it_works_description{
             ul{
@@ -78,6 +90,9 @@
             margin-top: 45px;
             font-size: 20px;
             font-weight: 800;
+            @media (max-width: 767px){
+                font-size: 12px;
+            }
         }
     }
 
@@ -104,6 +119,10 @@
 }
 .button_container{
     flex-basis: 20%;
+    @media (max-width: 767px){
+        flex-basis: 40%;
+        margin: auto;
+    }
     .buy-buttons-row{
         margin: 0;
         .input-row{
@@ -117,6 +136,14 @@
                 font-weight: 800;
                 color: #000;
                 padding: 12px 19px;
+                @media (max-width: 767px){
+                    font-size: 10px;
+                    padding: 9px 7px;
+                }
+                @media (min-width: 768px) and (max-width: 1023px){
+                    font-size: 12px !important;
+                    margin: auto;
+                }
             }
         }
     }
@@ -129,21 +156,92 @@
     padding: 13px 20px;
     width: 38vw;
     box-shadow: 5px 5px #FFAC9A;
+    @media (max-width: 767px){
+        width: 90vw
+    }
+    @media (min-width: 768px) and (max-width: 1023px){
+        width: 100%;
+    }
     .offer_content_container{
-        flex-basis: 60%;
+        flex-basis: 100%;
         display: flex;
-        flex-direction: column;
-        
+        justify-content: space-between;  
+        align-items: center;
         .offer_content{
             color: #000;
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 0;
             line-height: 1.2;
+            @media (max-width: 767px){
+                font-size: 10px;
+            }
+            @media (min-width: 768px) and (max-width: 1023px){
+                font-size: 14px !important;
+                flex-basis: 60%;
+            }
             span{
                 font-size: 24px;
                 font-weight: 800;
                 color: #ffac9a;
+                @media (max-width: 1023px){
+                    font-size: 15px;
+                }
+            }
+        }
+        .claim_banner_button{
+            width: 100%;
+            background: #FFAC9A;
+            border: 2px solid #000000; 
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 800;
+            color: #000;
+            padding: 12px 19px;
+            flex-basis: 40%;
+            @media (max-width: 767px){
+                font-size: 10px;
+                padding: 9px 7px;
+            }
+            @media (min-width: 768px) and (max-width: 1023px){
+                font-size: 12px !important;
+                padding: 9px 5px !important;
+            }
+        }
+        .button_container{
+            flex-basis: 40%;
+            height: fit-content;
+            @media (max-width: 767px){
+                margin: auto;
+            }
+            .buy-buttons-row{
+                margin: 0;
+                .input-row{
+                    margin-bottom: 0;
+                    margin-top: 0;
+                    .quantity-submit-row__submit{
+                        margin-bottom: 0;
+                        margin-top: 0;
+                    }
+                    .claim_drawer_button{
+                        width: 100%;
+                        background: #FFAC9A;
+                        border: 2px solid #000000;
+                        border-radius: 5px;
+                        font-size: 18px;
+                        font-weight: 800;
+                        color: #000;
+                        padding: 12px 19px;
+                        @media (max-width: 767px){
+                            font-size: 10px;
+                            padding: 9px 7px;
+                        }
+                        @media (min-width: 768px) and (max-width: 1023px){
+                            font-size: 12px !important;
+                            margin: auto;
+                        }
+                    }
+                }
             }
         }
     }
@@ -153,6 +251,12 @@
     color: #6EC59F;
     font-size: 16px;
     font-weight: 600;
+    @media (max-width: 767px){
+        font-size: 10px;
+    }
+    @media (min-width: 768px) and (max-width: 1023px){
+        font-size: 14px;
+    }
     svg{
         margin-right: 5px;
     }
@@ -165,12 +269,19 @@
     svg{
         margin-right: 5px;
     }
+    &.hideFailMessage{
+        display: none;
+    }
 }
 .claim_banner_product_page_container{
     display: flex;
     justify-content: space-between;
     max-width: 91.313rem;
     margin: auto;
+    @media (max-width: 767px){
+        flex-direction: row-reverse;
+        padding: 0 10px;
+    }
     .close_banner_button{
         margin: auto 20px auto 0;
         cursor: pointer;
@@ -184,16 +295,29 @@
         align-items: baseline;
         width: 90%;
         margin: 17px auto;
+        @media (max-width: 767px){
+            width: 100%;
+            box-shadow: 5px 5px #FFAC9A;
+        }
         .claim_banner_text{
             font-size: 16px;
             font-weight: 600;
             color: #000;
             margin-bottom: 0;
             flex-basis: 80%;
+            @media (max-width: 767px){
+                font-size: 10px;
+            }
+            @media (min-width: 768px) and (max-width: 1023px){
+                font-size: 14px !important;
+            }
             span{
                 font-size: 18px;
                 font-weight: bold;
                 color: #ffac9a;
+                @media (max-width: 767px){
+                    font-size: 15px;
+                }
             }
         }
         .claim_banner_button{
@@ -206,6 +330,16 @@
             color: #000;
             padding: 12px 19px;
             flex-basis: 20%;
+            @media (max-width: 767px){
+                font-size: 10px;
+                flex-basis: 40%;
+                padding: 9px 7px;
+                margin: auto;
+            }
+            @media (min-width: 768px) and (max-width: 1023px){
+                font-size: 12px !important;
+                margin: auto;
+            }
         }
     }
 }
