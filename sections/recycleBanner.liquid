@@ -2,24 +2,19 @@
   .gummies-button {
     background: {{ section.settings.button-background-color}};
     color: {{ section.settings.gummies-text-color}};
-    border:1px solid {{section.settings.gummies-border-colors}};
+    border: 1px solid{{ section.settings.gummies-border-color}};
     font-size: {{ section.settings.btn_font_size}}px;
-    font-weight: {{ section.settings.btn_font_weight}}
-    ;
+    font-weight: {{ section.settings.btn_font_weight}};
     border-radius: 29px;
-    padding:9px 26px;
+    padding: 9px 26px;
   }
-
   @media screen and (max-width:768px) {
     .gummies-button {
       font-size: {{ section.settings.mobilebtn_font_size }}px !important;
     }
   }
 {% endstyle %}
-
-
 <div class="metafield-gummies-img-mobile">
-
   {% assign image_url = product.metafields.custom.mobile_recycle_banner %}
   {% if image_url != blank %}
     <div class="desktop-recycle-img">
@@ -32,11 +27,8 @@
         alt="recycle-img">
     </div>
   {% endif %}
-
 </div>
-
 <div class="metafield-gummies-img">
-
   {% assign image_recycle = product.metafields.custom.gummies_recycle_banner %}
   {% if image_recycle != blank %}
     <div class="desktop-recycle-img">
@@ -47,13 +39,10 @@
         data-aspectratio="{{ image_recycle.aspect_ratio }}"
         data-sizes="auto"
         alt="recycle-img">
-
     </div>
     <a href="{{section.settings.btn-link}}" class="gummies-button">{{ section.settings.gummies-img-button }}</a>
   {% endif %}
-
 </div>
-
 {% schema %}
   {
     "name": "Recycle Banner",
@@ -104,14 +93,12 @@
         "default": "#FFFFFF"
       }, {
         "type": "color",
-        "id": "gummies-border-colors",
-        "label": "Button border color",
-        "default":"#000000"
-      },
-      {
-        "type":"url",
-        "id":"btn-link",
-        "label":"Button link"
+        "id": "gummies-border-color",
+        "label": "Button border color"
+      }, {
+        "type": "url",
+        "id": "btn-link",
+        "label": "Button link"
       }
     ],
     "presets": [
