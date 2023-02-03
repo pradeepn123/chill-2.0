@@ -191,7 +191,7 @@
         "mobilebtn_font_size": 12,
         "button-background-color": "#9792e4",
         "gummies-text-color": "#ffffff",
-        "gummies-border-color": "",
+        "gummies-border-color": "#9792e4",
         "btn-link": "shopify:\/\/collections\/cbd-gummies"
       }
     },
