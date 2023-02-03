@@ -197,6 +197,12 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
+                .vendor{
+                    font-size: 12px !important;
+                    font-weight: normal;
+                    padding-top: 10px;
+                    display: block;
+                }
             }
             .small-text{
                 .variant, .line-item-property{

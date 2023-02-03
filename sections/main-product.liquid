@@ -46,6 +46,8 @@
     </div>
   {% endif %}
 
+ 
+
   <div class="product-detail quickbuy-content spaced-row">
     <div class="gallery gallery--layout-{{ section.settings.gallery_layout }} gallery-size-{{ section.settings.gallery_size }} product-column-left {% if product.media.size > 1 %}has-thumbnails{% endif %}"data-cc-animatedata-cc-animate-delay="0.2s"data-variant-image-grouping="{{ section.settings.enable_var_img_grouping }}"data-variant-image-grouping-option="{{ section.settings.var_img_grouping_option | escape }}"data-variant-image-grouping-option-index="{{ variant_image_grouping_option_index }}">
       <div class="gallery__inner{% if section.settings.enable_sticky_columns %} sticky-content-container{% endif %}">
@@ -58,6 +60,9 @@
               endif
             endfor
           -%}
+
+          
+
 
           <div class="slideshow product-slideshow slideshow--custom-initial" data-slick='{"adaptiveHeight":true,"initialSlide":{{initial_slide}}}'>
             {%- for media in product.media -%}
@@ -756,6 +761,11 @@
               </div>
             {% endif %}
 
+            {% when 'free_pouch' %}
+              {% if product.handle == 'chill-cbd-isolate-chew-pouches' %}
+                {% render 'free-variety-pack' %}
+               {% endif %}     
+
           {% endcase %}
         {% endfor %}
 
@@ -805,6 +815,7 @@
       mut.observe(document.querySelector(".rc_block__type__autodeliver"), {'attributes': true});
     }
   })
+  
 </script>
 
 {% schema %}
@@ -2034,7 +2045,15 @@
             "label": "Products"
           }
         ]
-      }, {
+      }, 
+      {
+        "type": "free_pouch",
+        "name": "Free variety pack",
+        "settings": [
+          
+        ]
+      },
+      {
         "type": "sharing",
         "name": "Sharing",
         "settings": [

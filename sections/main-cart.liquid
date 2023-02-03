@@ -119,12 +119,20 @@
           </div>
         </div>
         <div class="cart-item-list__body">
+          {% assign free_variety_pack_in_cart = blank %}
+          
           {% for item in cart.items %}
             {% assign has_subscriptions = false %}
             {% assign promotionalLine = false %}
+            {% assign selected_shipping_interval_frequency = blank %}
+            {% assign free_variety_pack_in_cart = blank %}
+            
             {% for p in item.properties %}
               {% if p.first == 'shipping_interval_frequency' %}
                 {% assign has_subscriptions = true %}
+                {% assign selected_shipping_interval_frequency = p.last %}
+              {% elsif p.first == '_variety_pack' %}
+                {% assign free_variety_pack_in_cart = true %}
               {% endif %}
               {% if p.first == 'Product Type' and p.last == 'FREE' %}
                 {% assign promotionalLine = true %}
@@ -156,6 +164,7 @@
                 <div class="cart-item__column cart-item__description">
                   <div class="cart_item_description_container">
                     <a class="name cart_item_title" href="{{ item.url }}">{{ item.product.title }}
+                      <span class="vendor">{{ item.product.metafields.custom.product_varient_pack }}</span>
                     </a>
                     <div class="small-text">
                       {% if item.product.variants.size > 1 %}
@@ -243,9 +252,8 @@
                     </div>
                     {% endunless %}
                   {% endif %}
+                    {% render 'unit-price', variant: item %}
 
-                  {% render 'unit-price', variant: item %}
-                  
                 </div>
 
                 {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' and item.variant.inventory_quantity <= item.quantity %}
@@ -254,14 +262,17 @@
                   {% assign can_increase = true %}
                 {% endif %}
                 <div class="cart-item__column cart-item__quantity">
+                  {% unless free_variety_pack_in_cart == true %}
                   <div class="quantity buttoned-input">
                     <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down {% if promotionalLine == true %}visibility-hidden{%endif%}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 1 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}
                     </a>
                     <input class="cart-item__quantity-input" type="text" size="2" id="updates_{{ forloop.index }}" name="updates[]" value="{{ item.quantity }}" data-initial-value="{{ item.quantity }}" data-line="{{ forloop.index }}" {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' %}data-max="{{ item.variant.inventory_quantity }}"{% endif %}
                     disabled="disabled" aria-label="{{ 'cart.general.quantity' | t | escape }}"/>
-                    <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% if promotionalLine == true %}visibility-hidden{%endif%} {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}
+                    <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% if promotionalLine == true or free_variety_pack_in_cart == true %}visibility-hidden{%endif%} {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}
                     </a>
                   </div>
+                  {% endunless %}
+
                   {% unless promotionalLine %}
                   <a class="remove" data-line="{{ forloop.index }}" href="#">
                     {{ 'cart.general.remove' | t }}
@@ -279,9 +290,9 @@
                       assign finalDiscountedPrice = item.final_line_price | minus: discountedPrice
                     -%}
                     {% assign subtotal = subtotal | plus : finalDiscountedPrice %}
-                    <span class="item__price-current theme-money">
-                      {% render 'price', price: finalDiscountedPrice, disable_currency_code: true %}
-                    </span>
+                      <span class="item__price-current theme-money">
+                        {% render 'price', price: finalDiscountedPrice, disable_currency_code: true %}
+                      </span>
                   {% else %}
                     {% if item.final_line_price == 0 %}
                       <span class="theme-money">FREE</span>
@@ -292,7 +303,7 @@
                       <div class="theme-money struck-out-price">{{ item.original_line_price | money }}
                       </div>
                     {% endif %}
-                    {% unless promotionalLine %}
+                    {% unless promotionalLine or free_variety_pack_in_cart == true %}
                       <span class="theme-money">{{ item.final_line_price | money }}
                       </span>
                     {% endunless %}
