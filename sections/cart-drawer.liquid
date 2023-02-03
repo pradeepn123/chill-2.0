@@ -117,12 +117,16 @@
                 {% endif %}
 
                 {% assign has_subscriptions = false %}
-                {% assign selected_shipping_interval_frequency = blank %}
                 {% assign promotionalLine = false %}
+                {% assign selected_shipping_interval_frequency = blank %}
+                {% assign free_variety_pack_in_cart = blank %}
+                
                 {% for p in item.properties %}
                   {% if p.first == 'shipping_interval_frequency' %}
                     {% assign has_subscriptions = true %}
                     {% assign selected_shipping_interval_frequency = p.last %}
+                  {% elsif p.first == '_variety_pack' %}
+                    {% assign free_variety_pack_in_cart = true %}
                   {% endif %}
                   {% if p.first == 'Product Type' and p.last == 'FREE' %}
                     {% assign promotionalLine = true %}
@@ -141,6 +145,7 @@
                           <div class="cart-drawer-summary-item_title_price_total">
                             <a class="cart-drawer-summary-item__title" href="{{ original_product.url }}">
                               {{ original_product.title }}
+                              <span class="cart-drawer-summary-item__varient_pack">{{ original_product.metafields.custom.product_varient_pack }}</span>
                             </a>
                             <div class="cart-drawer-summary-item__price">
                               {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}
@@ -155,7 +160,14 @@
                                 </span>
                               {% else %}
                                 {% if item.final_line_price == 0 %}
-                                  <span class="cart-drawer-summary-item__price-current theme-money">FREE</span>
+                                  {% if free_variety_pack_in_cart == true %}
+                                    <span class="theme-money struck-out-price">
+                                      {% render 'price', price: item.original_line_price, disable_currency_code: true %}
+                                    </span>
+                                  {% endif %}
+                                  <span class="cart-drawer-summary-item__price-current theme-money {% if free_variety_pack_in_cart == true%}color-red{% endif %}">
+                                    FREE
+                                  </span>
                                 {% elsif item.original_line_price != item.final_line_price %}
                                   <span class="reduced-price cart-drawer-summary-item__price-current theme-money">{% render 'price', price: item.final_line_price, disable_currency_code: true %}</span>
                                   <span class="theme-money struck-out-price">{% render 'price', price: item.original_line_price, disable_currency_code: true %}</span>
@@ -185,7 +197,7 @@
                             {% endif %}
 
                             {% if item.line_level_discount_allocations.size > 0 %}
-                              {% unless promotionalLine %}
+                              {% unless promotionalLine or free_variety_pack_in_cart == true %}
                                 <ul class="cart-drawer-discount-list align-right">
                                   {% for discount_allocation in item.line_level_discount_allocations %}
                                     <li class="cart-drawer-discount cart-drawer-discount--inline cart-drawer-discount--flex">
@@ -207,14 +219,17 @@
                           {% assign can_increase = true %}
                         {% endif %}
                         <div class="cart-item__column cart-item__quantity cart-drawer-summary-item__quantity">
+                          {% unless free_variety_pack_in_cart == true %}
                           <div class="quantity buttoned-input">
                             <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down {% if promotionalLine == true %}visibility-hidden{%endif%} {% if item.quantity == 1 %}pointer-evt-none{% endif %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 1 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}</a>
                             <input class="cart-item__quantity-input {% if promotionalLine %}promotional-quantity{% endif %}" type="text" size="2" id="updates_{{ forloop.index }}" name="updates[]" value="{{ item.quantity }}" data-initial-value="{{ item.quantity }}" data-line="{{ forloop.index }}" disabled="disabled" {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' %}data-max="{{ item.variant.inventory_quantity }}"{% endif %}
                               aria-label="{{ 'cart.general.quantity' | t | escape }}"/>
-                            <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% if promotionalLine == true %}visibility-hidden{%endif%} {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}</a>
+                            <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% if promotionalLine == true or free_variety_pack_in_cart == true %}visibility-hidden{%endif%} {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}</a>
                           </div>
+                          {% endunless %}
+                          
                           {% unless promotionalLine %}
-                            <a class="remove" data-line="{{ forloop.index }}" href="#">
+                            <a class="remove {% if free_variety_pack_in_cart == true%}p-0{% endif %}" data-line="{{ forloop.index }}" href="#">
                               {{ 'cart.general.remove' | t }}
                             </a>
                           {% endunless %}
@@ -246,7 +261,7 @@
                           </div>
                         {% endif %}
                       </div>
-                    {% elsif original_product.metafields.subscriptions.shipping_interval_frequency and original_product.metafields.subscriptions.discount_percentage %}
+                    {% elsif free_variety_pack_in_cart != true and original_product.metafields.subscriptions.shipping_interval_frequency and original_product.metafields.subscriptions.discount_percentage %}
                       {%- assign actual_varaint_id = item.variant_id | escape -%}
                       <button type="button" class="upgrade-to-subscription" data-shipping_interval_frequency="{{shipping_interval_frequencies[0]}}" data-shipping_interval_unit_type="{{shipping_interval_unit_type}}" data-line="{{ forloop.index }}" data-product_quantity="{{ item.quantity }}" data-first_scription_id="{{ original_product.metafields.subscriptions.original_to_hidden_variant_map[actual_varaint_id].discount_variant_id}}">
                         {%- comment -%}

@@ -209,9 +209,27 @@ $(document).ready(function () {
   });
   updateContainer();
   scrollAbout();
+  handleResizeBannerText();
+
+  function handleResizeBannerText () {
+    const claimBannerTextDesktop = document.querySelectorAll(".claim_banner_text_desktop")
+    const claimBannerTextMobile = document.querySelectorAll(".claim_banner_text_mobile")
+
+    if (claimBannerTextDesktop && claimBannerTextMobile) {
+        if (window.innerWidth < 768) {
+            claimBannerTextDesktop.forEach(elem => elem.style.display = "none")
+            claimBannerTextMobile.forEach(elem => elem.style.display = "")
+        } else {
+            claimBannerTextDesktop.forEach(elem => elem.style.display = "")
+            claimBannerTextMobile.forEach(elem => elem.style.display = "none")
+        }
+    }
+  }
+
   $(window).resize(function() {
       updateContainer();
       scrollAbout();
+      handleResizeBannerText()
   });
   // const animation_items = [...document.getElementsByClassName('list__item')];
 //   const containerElem = document.getElementById('containerElem');
@@ -682,7 +700,45 @@ const featureProductSubscriptionUtil = (function () {
 
 document.addEventListener('DOMContentLoaded', () => {
     featureProductSubscriptionUtil.EventHandler();
+    let customProductForm = document.querySelector("#custom-product-form")
+    if (customProductForm) {
+        customProductForm.addEventListener("submit", theme.customAddToCart)
+    }
 })
+
+theme.customAddToCart = function(e) {
+    e.preventDefault()
+    const $form = $(this)
+
+    $form.find('button[type="submit"]')
+    .attr('disabled', 'disabled')
+    .val(theme.strings.products_product_adding_to_cart);
+
+    var formData = new FormData(this);
+    formData.append('sections', 'cart-drawer');
+
+    $.post(theme.routes.cart_add_url, new URLSearchParams(formData).toString(), function() {
+        theme.addedToCartHandler.call(this)
+        let customProductForm = document.querySelector("#custom-product-form")
+        const bannerProductFrom = customProductForm.closest(".claim_banner_product_page_container")
+        const successMessageContainer = document.querySelector('.claim_success_message')
+        const claimInfoContainer = document.querySelector(".claim_info_container")
+        if (bannerProductFrom) {
+            bannerProductFrom.remove()
+        }
+        if (successMessageContainer) {
+            successMessageContainer.remove()
+        }
+        if (claimInfoContainer) {
+            claimInfoContainer.remove()
+        }
+    }.bind(this), 'json')
+    .fail(function (data) {
+        $form.find('button[type="submit"]').removeAttr('disabled')
+    })
+
+    return false
+}
 
 // theme.openDrawerCartQuickView = function () {
 //     var cartSummary = document.querySelector("#quick-view-product-drawer")

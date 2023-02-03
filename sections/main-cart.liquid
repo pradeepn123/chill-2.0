@@ -119,9 +119,14 @@
           </div>
         </div>
         <div class="cart-item-list__body">
+          {% assign free_variety_pack_in_cart = false %}
+          {% for lineItem in cart.items %}
+            {% if lineItem.properties['_variety_pack'] %}
+              {% assign free_variety_pack_in_cart = true %}
+            {% endif %}
+          {% endfor %}
           {% for item in cart.items %}
             {% assign has_subscriptions = false %}
-            {% assign promotionalLine = false %}
             {% for p in item.properties %}
               {% if p.first == 'shipping_interval_frequency' %}
                 {% assign has_subscriptions = true %}
@@ -255,11 +260,11 @@
                 {% endif %}
                 <div class="cart-item__column cart-item__quantity">
                   <div class="quantity buttoned-input">
-                    <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down {% if promotionalLine == true %}visibility-hidden{%endif%}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 1 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}
+                    <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down {% if promotionalLine == true or free_variety_pack_in_cart == true %}visibility-hidden{%endif%}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 1 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}
                     </a>
                     <input class="cart-item__quantity-input" type="text" size="2" id="updates_{{ forloop.index }}" name="updates[]" value="{{ item.quantity }}" data-initial-value="{{ item.quantity }}" data-line="{{ forloop.index }}" {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' %}data-max="{{ item.variant.inventory_quantity }}"{% endif %}
                     disabled="disabled" aria-label="{{ 'cart.general.quantity' | t | escape }}"/>
-                    <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% if promotionalLine == true %}visibility-hidden{%endif%} {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}
+                    <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% if promotionalLine == true or free_variety_pack_in_cart == true %}visibility-hidden{%endif%} {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}
                     </a>
                   </div>
                   {% unless promotionalLine %}

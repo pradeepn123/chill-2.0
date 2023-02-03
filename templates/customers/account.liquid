@@ -2,7 +2,13 @@
   <div class="account_banner">
     <div class="account_banner_text">
       <h5 class="customer_name">Hello, {{ customer.first_name | capitalize }}</h5>
-      <a href="{{ routes.account_logout_url }}" class="logout_btn" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';">{{ 'layout.customer.log_out' | t }}</a>
+      <a
+        href="{{ routes.account_logout_url }}"
+        class="logout_btn"
+        onclick="return theme.handleCustomerLogout(this)"
+      >
+        {{ 'layout.customer.log_out' | t }}
+      </a>
     </div>
   </div>
   <div class="account_content">

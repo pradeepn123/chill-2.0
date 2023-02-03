@@ -3120,6 +3120,36 @@
     $cont.find('.lazyload--manual:not(.lazyload)').addClass('lazyload');
   };
 
+  theme.handleCustomerLogout = function(e) {
+    const logoutUrl = e.href
+    $('#coverScreen').show();
+    document.body.style.overflow = 'hidden';
+
+    localStorage.removeItem("visited")
+
+    $.getJSON(theme.routes.cart_url, function(cart) {
+      const item = cart.items.find(item => item.properties._variety_pack)
+      if (!item) {
+        window.location.href = logoutUrl
+        return false
+      }
+      const params = {
+        id: item.id,
+        quantity: 0
+      }
+      $.ajax({
+        type: 'POST',
+        url: theme.routes.cart_change_url + '.js',
+        data: params,
+        dataType: 'json',
+        complete: function () {
+          window.location.href = logoutUrl
+        }
+      })
+    })
+    return false;
+  }
+
   theme.measureTextInsideElement = function (text, element) {
     theme.measureTextInsideElementCanvas = theme.measureTextInsideElementCanvas || document.createElement("canvas");
     var context = theme.measureTextInsideElementCanvas.getContext("2d");
