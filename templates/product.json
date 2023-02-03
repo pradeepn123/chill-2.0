@@ -45,16 +45,6 @@
         "e2a81677-05f8-4453-98cb-6fe81460e705": {
           "type": "free_pouch",
           "settings": {
-            "how_it_works_image": "shopify:\/\/shop_images\/Banner_chill.png",
-            "login_button_color": "#6ec59f",
-            "login_btn_font_size": 20,
-            "how_it_works_title": "How It Works?",
-            "how_it_works_description": "<ul><li>Login \/ Sign up to claim this offer<\/li><li>Once you login \/ Sign up you will get to know you’re eligible for this offer or not.<\/li><li>Offer only applicable for the first time order at Chill.com<\/li><li>Pouch is completely free of cost, You will only pay for the Shipping $3.99.<\/li><li>Along with this Free Variety pouch if you add on worth $50 or more The Shipping will be on us.<\/li><\/ul>",
-            "how_it_works_login_text": "SIGN UP \/ LOGIN TO CLAIM THE OFFER",
-            "account_subtitle": "<p>Please enter your <strong>email<\/strong> and <strong>password<\/strong>:<\/p>",
-            "account_recoverPassword_subtitle": "<p>Enter your registered e-mail ID<\/p>",
-            "reset_password_note": "<p>An email with a link to reset your password will be sent to you.<\/p>",
-            "register_subtitle": "<p>Please enter your <strong>email<\/strong> and <strong>password<\/strong>:<\/p>"
           }
         },
         "26d0afe5-d620-457e-89e4-f23bf6f1e94d": {
@@ -192,12 +182,6 @@
         "ingrediant_heading": ""
       }
     },
-    "16639198461c244067": {
-      "type": "product-image-with-text",
-      "settings": {
-        "enable": true
-      }
-    },
     "cefbcd29-2c2e-4998-b350-f40b1bb22b68": {
       "type": "recycleBanner",
       "settings": {
@@ -207,8 +191,14 @@
         "mobilebtn_font_size": 12,
         "button-background-color": "#9792e4",
         "gummies-text-color": "#ffffff",
-        "gummies-border-colors": "#9792e4",
+        "gummies-border-color": "",
         "btn-link": "shopify:\/\/collections\/cbd-gummies"
+      }
+    },
+    "16639198461c244067": {
+      "type": "product-image-with-text",
+      "settings": {
+        "enable": true
       }
     },
     "16645486535bae9f49": {
@@ -275,8 +265,8 @@
   "order": [
     "main",
     "16639327190d7e5cec",
-    "16639198461c244067",
     "cefbcd29-2c2e-4998-b350-f40b1bb22b68",
+    "16639198461c244067",
     "16645486535bae9f49",
     "1664344743b1e4a5f5",
     "recommendations",
