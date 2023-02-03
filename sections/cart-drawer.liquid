@@ -145,7 +145,7 @@
                           <div class="cart-drawer-summary-item_title_price_total">
                             <a class="cart-drawer-summary-item__title" href="{{ original_product.url }}">
                               {{ original_product.title }}
-                              <span class="cart-drawer-summary-item__varient_pack">{{ original_product.metafields.custom.product_varient_pack }}</span>
+                              {% comment %}<span class="cart-drawer-summary-item__varient_pack">{{ original_product.metafields.custom.product_varient_pack }}</span>{% endcomment %}
                             </a>
                             <div class="cart-drawer-summary-item__price">
                               {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}

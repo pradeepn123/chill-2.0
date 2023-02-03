@@ -6676,7 +6676,7 @@ body.cart-drawer-open {
 }
 .cart-drawer-summary .cart-drawer-summary__inner #quick-view-product-drawer .drawer__content {
   width: 75%;
-  margin: 60px auto;
+  margin: 10px auto;
 }
 @media (min-width: 768px) {
   .cart-drawer-summary .cart-drawer-summary__inner #quick-view-product-drawer .drawer__content {
