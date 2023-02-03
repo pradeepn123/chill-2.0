@@ -164,6 +164,7 @@
                 <div class="cart-item__column cart-item__description">
                   <div class="cart_item_description_container">
                     <a class="name cart_item_title" href="{{ item.url }}">{{ item.product.title }}
+                      <span class="vendor">{{ item.product.metafields.custom.product_varient_pack }}</span>
                     </a>
                     <div class="small-text">
                       {% if item.product.variants.size > 1 %}

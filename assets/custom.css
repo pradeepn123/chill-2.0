@@ -6128,6 +6128,12 @@ body {
     text-overflow: ellipsis;
   }
 }
+.cart_container .cart-item__description .cart_item_description_container .cart_item_title .vendor {
+  font-size: 12px !important;
+  font-weight: normal;
+  padding-top: 10px;
+  display: block;
+}
 .cart_container .cart-item__description .cart_item_description_container .small-text .variant, .cart_container .cart-item__description .cart_item_description_container .small-text .line-item-property {
   font-size: 14px !important;
   color: #000;
