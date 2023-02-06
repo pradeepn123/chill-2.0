@@ -25,7 +25,7 @@
       <div id="claim-template" class="{% if shop.checkout.guest_login %} flexible-layout{% endif %}" data-cc-animate>
         
         <!-- <div class="{% if shop.checkout.guest_login %}column column--half{% else %}small-form{% endif %}"> -->
-          <div id="customer">
+          <div id="customer_drawer">
             <div class="template_header">
               <h2 class="title account_login_title">{{ 'customer.login.title' | t }}</h2>
               <p class="account_login_sub-title" style="color: #000">{{ settings.account_subtitle }}</p>
@@ -50,7 +50,7 @@
               <div class="text-over-input">
                 <input type="password" value="" name="customer[password]" id="customer_password" class="large password" size="16" />
                 <div id="forgot_password" class="text-over-input__text">
-                  <a href="#" onclick="showRecoverPasswordForm();return false;" style="text-decoration: underline; color: #000;">{{ 'customer.login.forgot_password' | t }}</a>
+                  <a href="#recover-password_drawer" onclick="showRecoverPasswordFormDrawer();return false;" style="text-decoration: underline; color: #000;">{{ 'customer.login.forgot_password' | t }}</a>
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@
               <div class="opposing-items">
                   <button class="login_btn btn" type="submit" style="font-size: {{ settings.login_btn_font_size }}px; background: {{ settings.login_button_color}};" onclick="$('#coverScreen').show(); document.body.style.overflow='hidden';document.querySelector('.claim-drawer-summary__close').click()">{{ 'customer.login.title' | t | upcase }}<input type='hidden' name='return_to' value='{{ request.path }}'></button>
                   
-                <div>Don't have an account?<a href="#create-customer" onclick="showRegistrationForm();return false;"> {{ 'customer.login.register' | t }}</a></div>
+                <div>Don't have an account?<a href="#create-customer" onclick="showRegistrationFormDrawer();return false;"> {{ 'customer.login.register' | t }}</a></div>
               </div>
             </div>
             
@@ -72,7 +72,7 @@
             Recover Password Form
           {% endcomment %}
   
-          <div id="recover-password" style='display:none'>
+          <div id="recover-password_drawer" style='display:none'>
             {% form 'recover_customer_password' %}
             {% if form.posted_successfully? %}
             {% assign reset_success = true %}
@@ -86,7 +86,7 @@
   
             <div class="action_bottom">
               <p style="font-size: 20px;">{{ 'customer.recover_password.success' | t }}</p>
-              <span class="note"><a href="#" onclick="hideRecoverPasswordForm();return false;">{{ 'customer.login.sign_in' | t }}</a></span>
+              <span class="note"><a href="#" onclick="hideRecoverPasswordFormDrawer();return false;">{{ 'customer.login.sign_in' | t }}</a></span>
             </div>
   
             {% else %}
@@ -105,7 +105,7 @@
                   <!-- <p>{{ 'customer.recover_password.subtext' | t }}</p> -->
                   <p class="note">{{ settings.reset_password_note }}</p>
                 {% endunless %}
-              <span class="note">Remember your password? <a href="#" onclick="hideRecoverPasswordForm();return false;">{{ 'customer.recover_password.cancel' | t }}</a></span>
+              <span class="note">Remember your password? <a href="#" onclick="hideRecoverPasswordFormDrawer();return false;">{{ 'customer.recover_password.cancel' | t }}</a></span>
             </div>
   
             {% endif %}
@@ -148,8 +148,8 @@
     
               <div class="action_bottom">
                   <a href="{{ product.url }}"><button class="register_btn btn" type="submit" style="font-size: {{ settings.login_btn_font_size}}px; background: {{ settings.login_button_color}}" onclick="$('#login_email').style.display='block';document.querySelector('.claim-drawer-summary__close').click()">{{ 'customer.register.submit' | t | upcase }}<input type='hidden' name='return_to' value='{{ product.url }}'></button></a>
-                <span class="note">Already have an account? <a href="#customer" onclick="document.getElementById('create-customer').style.display = 'none';
-                  document.getElementById('customer').style.display = 'block';">{{ 'customer.register.log_in' | t }}</a>
+                <span class="note">Already have an account? <a href="#customer_drawer" onclick="document.getElementById('create-customer').style.display = 'none';
+                  document.getElementById('customer_drawer').style.display = 'block';">{{ 'customer.register.log_in' | t }}</a>
                   <!-- {{ 'customer.general.or' | t }}
                   <a href="{{ routes.root_url }}">{{ 'customer.register.cancel' | t }}</a> -->
                 </span>
@@ -176,26 +176,26 @@
   </div>
 </div>
 <script>
-    function showRecoverPasswordForm() {
-      document.getElementById('recover-password').style.display = '';
-      document.getElementById('customer').style.display='none';
+    function showRecoverPasswordFormDrawer() {
+      document.getElementById('recover-password_drawer').style.display = '';
+      document.getElementById('customer_drawer').style.display='none';
       $("#claimDrawerContainer").animate({ scrollTop: 0 }, "fast");
     }
   
-    function hideRecoverPasswordForm() {
-      document.getElementById('recover-password').style.display = 'none';
-      document.getElementById('customer').style.display = '';
+    function hideRecoverPasswordFormDrawer() {
+      document.getElementById('recover-password_drawer').style.display = 'none';
+      document.getElementById('customer_drawer').style.display = '';
       $("#claimDrawerContainer").animate({ scrollTop: 0 }, "fast");
     }
-    function showRegistrationForm() {
+    function showRegistrationFormDrawer() {
       document.getElementById('create-customer').style.display = '';
-      document.getElementById('customer').style.display='none';
+      document.getElementById('customer_drawer').style.display='none';
       $("#claimDrawerContainer").animate({ scrollTop: 0 }, "fast");
     }
   
     function hideRegistrationForm() {
       document.getElementById('create-customer').style.display = 'none';
-      document.getElementById('customer').style.display = '';
+      document.getElementById('customer_drawer').style.display = '';
       $("#claimDrawerContainer").animate({ scrollTop: 0 }, "fast");
     }
   </script> 
