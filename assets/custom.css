@@ -3417,6 +3417,7 @@ body {
   .product_ingredients_section .product_ingredients_sec_wrapper .content-section {
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 80px;
   }
 }
 .product_ingredients_section .product_ingredients_sec_wrapper .content-section #tab2 .tab-content-list {
