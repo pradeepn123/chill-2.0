@@ -131,7 +131,7 @@
               {% if p.first == 'shipping_interval_frequency' %}
                 {% assign has_subscriptions = true %}
                 {% assign selected_shipping_interval_frequency = p.last %}
-              {% elsif p.first == '_variety_pack' %}
+              {% elsif p.first == '_variety_pack' and item.final_line_price == 0 %}
                 {% assign free_variety_pack_in_cart = true %}
               {% endif %}
               {% if p.first == 'Product Type' and p.last == 'FREE' %}
