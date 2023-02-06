@@ -3231,8 +3231,18 @@ body {
     padding-bottom: 50px;
   }
 }
+@media (min-width: 1200px) {
+  .product_ingredients_section .tab-content {
+    padding-bottom: 60px !important;
+  }
+}
 .product_ingredients_section.remove_space {
   padding-bottom: 0;
+}
+@media (min-width: 1200px) {
+  .product_ingredients_section.remove_space .tab-content {
+    padding-bottom: 60px !important;
+  }
 }
 .product_ingredients_section.remove_space .tab-content .tab-heading .product-tabs {
   margin: 0 !important;
@@ -3417,7 +3427,6 @@ body {
   .product_ingredients_section .product_ingredients_sec_wrapper .content-section {
     width: 80%;
     margin: 0 auto;
-    margin-bottom: 80px;
   }
 }
 .product_ingredients_section .product_ingredients_sec_wrapper .content-section #tab2 .tab-content-list {
