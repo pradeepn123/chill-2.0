@@ -15,20 +15,155 @@
   {% endif %}
 {% endfor %}
 
-{% if customer %}
-    {% if contains_pouches == false and request.page_type == 'index' or request.page_type == 'product' and product.handle != 'chill-cbd-isolate-chew-pouches' %}
-      {% if free_variety_pack_found_in_cart == false %}
-          <div class="claim_banner_product_page_container container container--no-max" id="claimBannerProductPage">
-          <div class="claim_banner_product_page">
-              <p class="claim_banner_text claim_banner_text_desktop" >
-                {{ settings.claim_banner_text_desktop }}
-              </p>
-              <p class="claim_banner_text claim_banner_text_mobile" >
+{% if settings.enable_free_variety_pouch_offer %}
+  {% if customer %}
+      {% if contains_pouches == false and request.page_type == 'index' or request.page_type == 'product' and product.handle != 'chill-cbd-isolate-chew-pouches' %}
+        {% if free_variety_pack_found_in_cart == false %}
+            <div class="claim_banner_product_page_container container container--no-max" id="claimBannerProductPage">
+            <div class="claim_banner_product_page">
+                <p class="claim_banner_text claim_banner_text_desktop" >
+                  {{ settings.claim_banner_text_desktop }}
+                </p>
+                <p class="claim_banner_text claim_banner_text_mobile" >
+                  {{ settings.claim_banner_text_mobile }}
+                </p>
+                <!-- <button class="claim_banner_button">{{ settings.add_button_text | upcase }}</button>
+                -->
+
+                <div class="button_container">
+                  {% for product in collections.all.products %}
+                    {% if product.handle == 'chill-cbd-isolate-chew-pouches' %}
+                        {% assign product_form_id = 'custom-product-form' %}
+                        {%- assign product_form_present = true -%}
+                        <div class="buy-buttons-row" {{ block.shopify_attributes }}>
+
+                          {% form 'product', product, id: product_form_id, class: 'form product-purchase-form', data-product-handle: product.handle, data-product-id: product.id, data-productid: product.id %}
+                            {{- original_select -}}
+
+                              {% if product.available %}
+                              <div class="input-row" {{ block.shopify_attributes }}>
+                                {% render 'variant-picker', section: section, product: product, block: block %}
+                              </div>
+                              <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
+                                
+                                <div class="quantity-submit-row__submit input-row">
+
+                                  {% capture add_to_cart_price %}
+                                    <div class="price-container" {{ block.shopify_attributes }}>
+                                      <div class="variant-visibility-area">
+                                        
+                                        <script type="text/template" data-variant-id="">
+                                          {%- capture price_html -%}
+                                            <div class="price-area">
+                                              {%- assign cheapest_variant = product.variants | sort: 'price' | first -%}
+                                              <div class="price h4-style {% if cheapest_variant.compare_at_price > cheapest_variant.price %}on-sale{% endif %}">
+                                                {% render 'unit-price', variant: cheapest_variant %}
+                                              </div>
+                                            </div>
+                                          {%- endcapture -%}
+                                          {{- price_html -}}
+                                        </script>
+
+                                        {% if current_variant == false %}
+                                          {{- price_html -}}
+                                        {% endif %}
+                                      </div>
+
+                                      <div class="price-descriptors">
+                                        {%- form 'product', product, id: product_form_installments_id -%}
+                                          <input
+                                            type="hidden"
+                                            name="id"
+                                            value="{% if current_variant %}{{ current_variant.id }}{% endif %}">
+                                          {{ form | payment_terms }}
+                                        {%- endform -%}
+
+                                        {%- if block.settings.show_tax_and_shipping -%}
+                                          {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+                                            <div class="product-policies">
+                                              {%- if cart.taxes_included -%}
+                                                {{ 'products.product.include_taxes' | t }}
+                                              {%- endif -%}
+                                              {%- if shop.shipping_policy.body != blank -%}
+                                                {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                                              {%- endif -%}
+                                            </div>
+                                          {%- endif -%}
+                                        {%- endif -%}
+
+                                        {% if section.settings.inventory_transfers_enable %}
+                                          <div class="product-inventory-transfer {% unless current_variant.incoming %}product-inventory-transfer--none{% endunless %}">
+                                            {%- if current_variant.incoming -%}
+                                              {%- if current_variant.next_incoming_date -%}
+                                                {%- assign date = current_variant.next_incoming_date | date: format: 'date' -%}
+                                                {%- if current_variant.available -%}
+                                                  {{ 'products.transfers.will_not_ship_until' | t: date: date }}
+                                                {%- else -%}
+                                                  {{ 'products.transfers.will_be_in_stock_after' | t: date: date }}
+                                                {%- endif -%}
+                                              {%- else -%}
+                                                {{ 'products.transfers.waiting_for_stock' | t }}
+                                              {%- endif -%}
+                                            {%- endif -%}
+                                          </div>
+                                        {% endif %}
+                                      </div>
+                                      {%- if block.settings.enable_product_reviews_by_price and product.metafields.reviews.rating_count != blank -%}
+                                        {%- assign rating_count = product.metafields.reviews.rating_count | plus: 0 -%}
+                                        {%- if rating_count > 0 -%}
+                                          <div class="theme-product-reviews">
+                                            <a href="{{ product.url }}#shopify-product-reviews">
+                                              {% render 'rating', rating_value: product.metafields.reviews.rating.value %}
+                                              <span class="cc-rating-custom-caption">
+                                                {{ rating_count }} {{ 'products.product.reviews_link' | t: count: rating_count | downcase }}
+                                              </span>
+                                            </a>
+                                          </div>
+                                        {%- endif -%}
+                                      {%- endif -%}
+                                    </div>
+                                  {%- endcapture -%}
+                                  
+                                  <!-- <button
+                                    class="claim_drawer_button"
+                                    type="submit"
+                                    data-add-to-cart-text="{{ add_to_cart_text | escape }}">
+                                    {{ add_to_cart_text | t }}
+                                  </button> -->
+                                    <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                                    <input type="hidden" name=properties[_variety_pack] value="{{ product.variants.first.id }}" />
+                                    <button class="claim_drawer_button" type='submit' data-add-to-cart-text="{{ add_to_cart_text | escape }}" id="claimDrawerButtonAdd">{{ settings.add_button_text | upcase }}</button>
+                                </div>
+                              </div>
+
+                            {% else %}
+                              <div class="product-unavailable">{{ 'products.product.product_unavailable' | t }}</div>
+                            {% endif %}
+                          {% endform %}
+                        </div>
+
+                    {% endif %}
+                  {% endfor %}
+
+                  
+                </div>
+            </div>
+            {% if settings.enable_free_variety_pouch_offer and request.page_type == 'index' %}
+              <div class="claim_banner_home_page">
+                <span class="close_banner_button" onclick="handleCloseBanner()">
+                  {% render 'svg-close' %}
+                </span>
+              </div> 
+            {% endif %}
+            </div>
+        {% endif %}
+      {% elsif product.handle == 'chill-cbd-isolate-chew-pouches' and free_variety_pack_found_in_cart == false %}
+        {% if contains_pouches == false %}
+          <div class="claim_info_container">
+            <div class="offer_content_container">
+              <p class="offer_content">
                 {{ settings.claim_banner_text_mobile }}
               </p>
-              <!-- <button class="claim_banner_button">{{ settings.add_button_text | upcase }}</button>
-              -->
-
               <div class="button_container">
                 {% for product in collections.all.products %}
                   {% if product.handle == 'chill-cbd-isolate-chew-pouches' %}
@@ -131,7 +266,9 @@
                                 </button> -->
                                   <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
                                   <input type="hidden" name=properties[_variety_pack] value="{{ product.variants.first.id }}" />
-                                  <button class="claim_drawer_button" type='submit' data-add-to-cart-text="{{ add_to_cart_text | escape }}" id="claimDrawerButtonAdd">{{ settings.add_button_text | upcase }}</button>
+                                  <button class="claim_drawer_button" type='submit' data-add-to-cart-text="{{ settings.add_button_text | upcase }}" id="claimDrawerButtonAdd">
+                                    {{ settings.add_button_text | upcase }}
+                                  </button>
                               </div>
                             </div>
 
@@ -146,221 +283,86 @@
 
                 
               </div>
-          </div>
-          {% if settings.enable_free_variety_pouch_offer and request.page_type == 'index' %}
-            <div class="claim_banner_home_page">
-              <span class="close_banner_button" onclick="handleCloseBanner()">
-                {% render 'svg-close' %}
-              </span>
-            </div> 
-          {% endif %}
-          </div>
-      {% endif %}
-    {% elsif product.handle == 'chill-cbd-isolate-chew-pouches' and free_variety_pack_found_in_cart == false %}
-      {% if contains_pouches == false %}
-        <div class="claim_info_container">
-          <div class="offer_content_container">
-            <p class="offer_content">
-              {{ settings.claim_banner_text_mobile }}
-            </p>
-            <div class="button_container">
-              {% for product in collections.all.products %}
-                {% if product.handle == 'chill-cbd-isolate-chew-pouches' %}
-                    {% assign product_form_id = 'custom-product-form' %}
-                    {%- assign product_form_present = true -%}
-                    <div class="buy-buttons-row" {{ block.shopify_attributes }}>
-
-                      {% form 'product', product, id: product_form_id, class: 'form product-purchase-form', data-product-handle: product.handle, data-product-id: product.id, data-productid: product.id %}
-                        {{- original_select -}}
-
-                          {% if product.available %}
-                          <div class="input-row" {{ block.shopify_attributes }}>
-                            {% render 'variant-picker', section: section, product: product, block: block %}
-                          </div>
-                          <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
-                            
-                            <div class="quantity-submit-row__submit input-row">
-
-                              {% capture add_to_cart_price %}
-                                <div class="price-container" {{ block.shopify_attributes }}>
-                                  <div class="variant-visibility-area">
-                                    
-                                    <script type="text/template" data-variant-id="">
-                                      {%- capture price_html -%}
-                                        <div class="price-area">
-                                          {%- assign cheapest_variant = product.variants | sort: 'price' | first -%}
-                                          <div class="price h4-style {% if cheapest_variant.compare_at_price > cheapest_variant.price %}on-sale{% endif %}">
-                                            {% render 'unit-price', variant: cheapest_variant %}
-                                          </div>
-                                        </div>
-                                      {%- endcapture -%}
-                                      {{- price_html -}}
-                                    </script>
-
-                                    {% if current_variant == false %}
-                                      {{- price_html -}}
-                                    {% endif %}
-                                  </div>
-
-                                  <div class="price-descriptors">
-                                    {%- form 'product', product, id: product_form_installments_id -%}
-                                      <input
-                                        type="hidden"
-                                        name="id"
-                                        value="{% if current_variant %}{{ current_variant.id }}{% endif %}">
-                                      {{ form | payment_terms }}
-                                    {%- endform -%}
-
-                                    {%- if block.settings.show_tax_and_shipping -%}
-                                      {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
-                                        <div class="product-policies">
-                                          {%- if cart.taxes_included -%}
-                                            {{ 'products.product.include_taxes' | t }}
-                                          {%- endif -%}
-                                          {%- if shop.shipping_policy.body != blank -%}
-                                            {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                                          {%- endif -%}
-                                        </div>
-                                      {%- endif -%}
-                                    {%- endif -%}
-
-                                    {% if section.settings.inventory_transfers_enable %}
-                                      <div class="product-inventory-transfer {% unless current_variant.incoming %}product-inventory-transfer--none{% endunless %}">
-                                        {%- if current_variant.incoming -%}
-                                          {%- if current_variant.next_incoming_date -%}
-                                            {%- assign date = current_variant.next_incoming_date | date: format: 'date' -%}
-                                            {%- if current_variant.available -%}
-                                              {{ 'products.transfers.will_not_ship_until' | t: date: date }}
-                                            {%- else -%}
-                                              {{ 'products.transfers.will_be_in_stock_after' | t: date: date }}
-                                            {%- endif -%}
-                                          {%- else -%}
-                                            {{ 'products.transfers.waiting_for_stock' | t }}
-                                          {%- endif -%}
-                                        {%- endif -%}
-                                      </div>
-                                    {% endif %}
-                                  </div>
-                                  {%- if block.settings.enable_product_reviews_by_price and product.metafields.reviews.rating_count != blank -%}
-                                    {%- assign rating_count = product.metafields.reviews.rating_count | plus: 0 -%}
-                                    {%- if rating_count > 0 -%}
-                                      <div class="theme-product-reviews">
-                                        <a href="{{ product.url }}#shopify-product-reviews">
-                                          {% render 'rating', rating_value: product.metafields.reviews.rating.value %}
-                                          <span class="cc-rating-custom-caption">
-                                            {{ rating_count }} {{ 'products.product.reviews_link' | t: count: rating_count | downcase }}
-                                          </span>
-                                        </a>
-                                      </div>
-                                    {%- endif -%}
-                                  {%- endif -%}
-                                </div>
-                              {%- endcapture -%}
-                              
-                              <!-- <button
-                                class="claim_drawer_button"
-                                type="submit"
-                                data-add-to-cart-text="{{ add_to_cart_text | escape }}">
-                                {{ add_to_cart_text | t }}
-                              </button> -->
-                                <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-                                <input type="hidden" name=properties[_variety_pack] value="{{ product.variants.first.id }}" />
-                                <button class="claim_drawer_button" type='submit' data-add-to-cart-text="{{ settings.add_button_text | upcase }}" id="claimDrawerButtonAdd">
-                                  {{ settings.add_button_text | upcase }}
-                                </button>
-                            </div>
-                          </div>
-
-                        {% else %}
-                          <div class="product-unavailable">{{ 'products.product.product_unavailable' | t }}</div>
-                        {% endif %}
-                      {% endform %}
-                    </div>
-
-                {% endif %}
-              {% endfor %}
-
-              
             </div>
           </div>
+        {% endif %}
+    {% endif %}
+  {% elsif product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'product' or request.page_type == 'index' %}
+    {% if free_variety_pack_found_in_cart == false %}
+      <div class="claim_banner_product_page_container container container--no-max" id="claimBannerProductPage">
+        <div class="claim_banner_product_page">
+          <p class="claim_banner_text claim_banner_text_desktop">
+            {{ settings.claim_banner_text_desktop }}
+          </p>
+          <p class="claim_banner_text claim_banner_text_mobile" >
+            {{ settings.claim_banner_text_mobile }}
+          </p>
+          <button class="claim_banner_button" id="claimDrawerButton" onclick="document.getElementById('claimDrawerContainer').style.display='block'; document.getElementById('claimDrawerBackground').style.display='block';">
+            {{ settings.claim_button_text | upcase }}
+          </button>
         </div>
-      {% endif %}
-  {% endif %}
-{% elsif product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'product' or request.page_type == 'index' %}
-  {% if free_variety_pack_found_in_cart == false %}
-    <div class="claim_banner_product_page_container container container--no-max" id="claimBannerProductPage">
-      <div class="claim_banner_product_page">
-        <p class="claim_banner_text claim_banner_text_desktop">
-          {{ settings.claim_banner_text_desktop }}
-        </p>
-        <p class="claim_banner_text claim_banner_text_mobile" >
+        {% if request.page_type == 'index' %}
+          <div class="claim_banner_home_page">
+            <span class="close_banner_button" onclick="handleCloseBanner()">{% render 'svg-close' %}</span>
+          </div> 
+        {% endif %}
+      </div>
+    {% endif %}
+  {% elsif product.handle == 'chill-cbd-isolate-chew-pouches' and free_variety_pack_found_in_cart == false %}
+    <div class="claim_info_container">
+      <div class="offer_content_container">
+        <p class="offer_content">
           {{ settings.claim_banner_text_mobile }}
         </p>
-        <button class="claim_banner_button" id="claimDrawerButton" onclick="document.getElementById('claimDrawerContainer').style.display='block'; document.getElementById('claimDrawerBackground').style.display='block';">
-          {{ settings.claim_button_text | upcase }}
-        </button>
+        <button class="claim_banner_button" id="claimDrawerButton" onclick="document.getElementById('claimDrawerContainer').style.display='block'; document.getElementById('claimDrawerBackground').style.display='block';">{{ settings.claim_button_text | upcase }}</button>
       </div>
-      {% if request.page_type == 'index' %}
-        <div class="claim_banner_home_page">
-          <span class="close_banner_button" onclick="handleCloseBanner()">{% render 'svg-close' %}</span>
-        </div> 
-      {% endif %}
     </div>
   {% endif %}
-{% elsif product.handle == 'chill-cbd-isolate-chew-pouches' and free_variety_pack_found_in_cart == false %}
-  <div class="claim_info_container">
-    <div class="offer_content_container">
-      <p class="offer_content">
-        {{ settings.claim_banner_text_mobile }}
-      </p>
-      <button class="claim_banner_button" id="claimDrawerButton" onclick="document.getElementById('claimDrawerContainer').style.display='block'; document.getElementById('claimDrawerBackground').style.display='block';">{{ settings.claim_button_text | upcase }}</button>
-    </div>
-  </div>
-{% endif %}
 
-{% if customer and contains_pouches == false %}
-  {% if free_variety_pack_found_in_cart == false %}
-    <p class="claim_success_message" {% if product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'index' or request.page_type == 'product' %}style="text-align: center;"{% else %}padding-top: 10px;{% endif %}>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        version="1.0"
-        width="62.000000pt"
-        height="60.000000pt"
-        viewBox="0 0 62.000000 60.000000"
-        preserveAspectRatio="xMidYMid meet">
-        <g
-            transform="translate(0.000000,62.000000) scale(0.100000,-0.100000)"
-            fill="#6ec59f"
-            stroke="none">
-            <path d="M279 554 c-23 -25 -53 -27 -103 -8 -10 4 -16 -9 -20 -39 -7 -44 -8 -45 -52 -52 -36 -5 -44 -10 -40 -23 19 -65 19 -73 -10 -103 l-28 -29 28 -29 c29 -30 29 -38 10 -103 -4 -13 4 -18 40 -23 44 -7 45 -8 52 -51 3 -24 9 -44 11 -44 3 0 23 5 45 12 36 11 40 10 66 -15 l28 -27 25 26 c23 25 53 27 103 8 9 -3 16 10 22 38 8 39 12 43 49 51 22 6 41 11 43 12 2 2 -2 22 -9 46 -13 42 -13 42 21 70 l34 29 -34 29 c-34 28 -34 28 -21 70 7 24 11 44 9 46 -2 1 -21 6 -43 12 -37 8 -41 12 -49 51 -7 32 -13 41 -25 38 -64 -19 -72 -18 -100 8 l-27 26 -25 -26z m3 -131 c24 -21 23 -68 -2 -93 -35 -35 -84 -20 -95 30 -14 63 51 105 97 63z m98 -22 c0 -3 -16 -31 -35 -61 -19 -30 -35 -58 -35 -62 0 -4 -12 -28 -28 -53 -19 -31 -31 -42 -41 -36 -10 7 -6 20 21 62 18 30 47 80 62 111 19 37 33 55 42 51 8 -3 14 -8 14 -12z m30 -131 c39 -39 14 -110 -40 -110 -33 0 -60 31 -60 67 0 28 33 63 60 63 11 0 29 -9 40 -20z" />
-            <path d="M224 396 c-9 -23 0 -51 16 -51 10 0 16 12 18 33 2 24 -1 32 -13 32 -8 0 -18 -6 -21 -14z" />
-            <path d="M357 254 c-4 -4 -7 -20 -7 -36 0 -22 5 -28 21 -28 17 0 20 5 17 32 -3 31 -17 45 -31 32z" />
-        </g>
-      </svg>
-      <span>{{ settings.claim_success_message }}</span>
-    </p>
-  {% endif %}  
-{% elsif customer and contains_pouches == true %}
-    <div class="claim_fail_message" id="failMessage" {% if product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'index' or request.page_type == 'product' %}style="text-align: center;"{% endif %}>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        version="1.0"
-        width="62.000000pt"
-        height="60.000000pt"
-        viewBox="0 0 62.000000 60.000000"
-        preserveAspectRatio="xMidYMid meet">
-        <g
-            transform="translate(0.000000,62.000000) scale(0.100000,-0.100000)"
-            fill="#ffac9a"
-            stroke="none">
-            <path d="M279 554 c-23 -25 -53 -27 -103 -8 -10 4 -16 -9 -20 -39 -7 -44 -8 -45 -52 -52 -36 -5 -44 -10 -40 -23 19 -65 19 -73 -10 -103 l-28 -29 28 -29 c29 -30 29 -38 10 -103 -4 -13 4 -18 40 -23 44 -7 45 -8 52 -51 3 -24 9 -44 11 -44 3 0 23 5 45 12 36 11 40 10 66 -15 l28 -27 25 26 c23 25 53 27 103 8 9 -3 16 10 22 38 8 39 12 43 49 51 22 6 41 11 43 12 2 2 -2 22 -9 46 -13 42 -13 42 21 70 l34 29 -34 29 c-34 28 -34 28 -21 70 7 24 11 44 9 46 -2 1 -21 6 -43 12 -37 8 -41 12 -49 51 -7 32 -13 41 -25 38 -64 -19 -72 -18 -100 8 l-27 26 -25 -26z m3 -131 c24 -21 23 -68 -2 -93 -35 -35 -84 -20 -95 30 -14 63 51 105 97 63z m98 -22 c0 -3 -16 -31 -35 -61 -19 -30 -35 -58 -35 -62 0 -4 -12 -28 -28 -53 -19 -31 -31 -42 -41 -36 -10 7 -6 20 21 62 18 30 47 80 62 111 19 37 33 55 42 51 8 -3 14 -8 14 -12z m30 -131 c39 -39 14 -110 -40 -110 -33 0 -60 31 -60 67 0 28 33 63 60 63 11 0 29 -9 40 -20z" />
-            <path d="M224 396 c-9 -23 0 -51 16 -51 10 0 16 12 18 33 2 24 -1 32 -13 32 -8 0 -18 -6 -21 -14z" />
-            <path d="M357 254 c-4 -4 -7 -20 -7 -36 0 -22 5 -28 21 -28 17 0 20 5 17 32 -3 31 -17 45 -31 32z" />
-        </g>
-      </svg>
-      <span>{{ settings.claim_fail_message }}</span>
-    </div>
-{% endif %}      
+  {% if customer and contains_pouches == false %}
+    {% if free_variety_pack_found_in_cart == false %}
+      <p class="claim_success_message" {% if product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'index' or request.page_type == 'product' %}style="text-align: center;"{% else %}padding-top: 10px;{% endif %}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.0"
+          width="62.000000pt"
+          height="60.000000pt"
+          viewBox="0 0 62.000000 60.000000"
+          preserveAspectRatio="xMidYMid meet">
+          <g
+              transform="translate(0.000000,62.000000) scale(0.100000,-0.100000)"
+              fill="#6ec59f"
+              stroke="none">
+              <path d="M279 554 c-23 -25 -53 -27 -103 -8 -10 4 -16 -9 -20 -39 -7 -44 -8 -45 -52 -52 -36 -5 -44 -10 -40 -23 19 -65 19 -73 -10 -103 l-28 -29 28 -29 c29 -30 29 -38 10 -103 -4 -13 4 -18 40 -23 44 -7 45 -8 52 -51 3 -24 9 -44 11 -44 3 0 23 5 45 12 36 11 40 10 66 -15 l28 -27 25 26 c23 25 53 27 103 8 9 -3 16 10 22 38 8 39 12 43 49 51 22 6 41 11 43 12 2 2 -2 22 -9 46 -13 42 -13 42 21 70 l34 29 -34 29 c-34 28 -34 28 -21 70 7 24 11 44 9 46 -2 1 -21 6 -43 12 -37 8 -41 12 -49 51 -7 32 -13 41 -25 38 -64 -19 -72 -18 -100 8 l-27 26 -25 -26z m3 -131 c24 -21 23 -68 -2 -93 -35 -35 -84 -20 -95 30 -14 63 51 105 97 63z m98 -22 c0 -3 -16 -31 -35 -61 -19 -30 -35 -58 -35 -62 0 -4 -12 -28 -28 -53 -19 -31 -31 -42 -41 -36 -10 7 -6 20 21 62 18 30 47 80 62 111 19 37 33 55 42 51 8 -3 14 -8 14 -12z m30 -131 c39 -39 14 -110 -40 -110 -33 0 -60 31 -60 67 0 28 33 63 60 63 11 0 29 -9 40 -20z" />
+              <path d="M224 396 c-9 -23 0 -51 16 -51 10 0 16 12 18 33 2 24 -1 32 -13 32 -8 0 -18 -6 -21 -14z" />
+              <path d="M357 254 c-4 -4 -7 -20 -7 -36 0 -22 5 -28 21 -28 17 0 20 5 17 32 -3 31 -17 45 -31 32z" />
+          </g>
+        </svg>
+        <span>{{ settings.claim_success_message }}</span>
+      </p>
+    {% endif %}  
+  {% elsif customer and contains_pouches == true %}
+      <div class="claim_fail_message" id="failMessage" {% if product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'index' or request.page_type == 'product' %}style="text-align: center;"{% endif %}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.0"
+          width="62.000000pt"
+          height="60.000000pt"
+          viewBox="0 0 62.000000 60.000000"
+          preserveAspectRatio="xMidYMid meet">
+          <g
+              transform="translate(0.000000,62.000000) scale(0.100000,-0.100000)"
+              fill="#ffac9a"
+              stroke="none">
+              <path d="M279 554 c-23 -25 -53 -27 -103 -8 -10 4 -16 -9 -20 -39 -7 -44 -8 -45 -52 -52 -36 -5 -44 -10 -40 -23 19 -65 19 -73 -10 -103 l-28 -29 28 -29 c29 -30 29 -38 10 -103 -4 -13 4 -18 40 -23 44 -7 45 -8 52 -51 3 -24 9 -44 11 -44 3 0 23 5 45 12 36 11 40 10 66 -15 l28 -27 25 26 c23 25 53 27 103 8 9 -3 16 10 22 38 8 39 12 43 49 51 22 6 41 11 43 12 2 2 -2 22 -9 46 -13 42 -13 42 21 70 l34 29 -34 29 c-34 28 -34 28 -21 70 7 24 11 44 9 46 -2 1 -21 6 -43 12 -37 8 -41 12 -49 51 -7 32 -13 41 -25 38 -64 -19 -72 -18 -100 8 l-27 26 -25 -26z m3 -131 c24 -21 23 -68 -2 -93 -35 -35 -84 -20 -95 30 -14 63 51 105 97 63z m98 -22 c0 -3 -16 -31 -35 -61 -19 -30 -35 -58 -35 -62 0 -4 -12 -28 -28 -53 -19 -31 -31 -42 -41 -36 -10 7 -6 20 21 62 18 30 47 80 62 111 19 37 33 55 42 51 8 -3 14 -8 14 -12z m30 -131 c39 -39 14 -110 -40 -110 -33 0 -60 31 -60 67 0 28 33 63 60 63 11 0 29 -9 40 -20z" />
+              <path d="M224 396 c-9 -23 0 -51 16 -51 10 0 16 12 18 33 2 24 -1 32 -13 32 -8 0 -18 -6 -21 -14z" />
+              <path d="M357 254 c-4 -4 -7 -20 -7 -36 0 -22 5 -28 21 -28 17 0 20 5 17 32 -3 31 -17 45 -31 32z" />
+          </g>
+        </svg>
+        <span>{{ settings.claim_fail_message }}</span>
+      </div>
+  {% endif %}      
+{% endif %}
 
 <script>
   function showRecoverPasswordForm() {
