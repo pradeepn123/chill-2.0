@@ -119,7 +119,6 @@
           </div>
         </div>
         <div class="cart-item-list__body">
-          {% assign free_variety_pack_in_cart = blank %}
           
           {% for item in cart.items %}
             {% assign has_subscriptions = false %}
@@ -131,7 +130,7 @@
               {% if p.first == 'shipping_interval_frequency' %}
                 {% assign has_subscriptions = true %}
                 {% assign selected_shipping_interval_frequency = p.last %}
-              {% elsif p.first == '_variety_pack' %}
+              {% elsif p.first == '_variety_pack' and item.final_line_price == 0 %}
                 {% assign free_variety_pack_in_cart = true %}
               {% endif %}
               {% if p.first == 'Product Type' and p.last == 'FREE' %}
@@ -171,21 +170,21 @@
                         <div class="variant">{{ item.variant.title | replace: '/', '|'}}
                         </div>
                       {% endif %}
-
-                      {%- for p in item.properties -%}
-                        {% unless p.last == blank %}
-                          <div class="line-item-property">{{ p.first }}
-                            :
-                            {% if p.last contains '/uploads/' %}
-                              <a href="{{ p.last }}">{{ p.last | split: '/' | last }}
-                              </a>
-                            {% else %}
-                              {{ p.last }}
-                            {% endif %}
-                          </div>
-                        {% endunless %}
-                      {%- endfor -%}
-
+                      {% unless free_variety_pack_in_cart %}
+                        {%- for p in item.properties -%}
+                          {% unless p.last == blank %}
+                            <div class="line-item-property">{{ p.first }}
+                              :
+                              {% if p.last contains '/uploads/' %}
+                                <a href="{{ p.last }}">{{ p.last | split: '/' | last }}
+                                </a>
+                              {% else %}
+                                {{ p.last }}
+                              {% endif %}
+                            </div>
+                          {% endunless %}
+                        {%- endfor -%}
+                      {% endunless %}
                       {% if item.selling_plan_allocation %}
                         <div class="subscription-description">{{ item.selling_plan_allocation.selling_plan.name }}
                         </div>
