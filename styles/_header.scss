@@ -368,11 +368,11 @@
 .default_search{
     .search-suggestions__item{
         width: 20%;
-        .product-block{
-            .image-page-button--previous, .image-page-button--next{
-                display: none;
-            }
-        }
+        // .product-block{
+        //     // .image-page-button--previous, .image-page-button--next{
+        //     //     display: none;
+        //     // }
+        // }
         .image-cont--with-secondary-image{
             .product-block__image--active{
                 opacity: 1;
