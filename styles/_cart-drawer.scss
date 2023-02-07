@@ -716,6 +716,12 @@ body.cart-drawer-open {
                 @media(max-width:768px){
                     grid-auto-columns: minmax(40vw,1fr);
                 }
+                @media (max-width: 701px){
+                    grid-auto-columns: minmax(45vw,1fr);
+                }
+                @media(max-width:545px){
+                    grid-auto-columns: minmax(60vw,1fr);
+                }
                 @media(max-width:425px){
                     grid-auto-columns: minmax(74vw,1fr);
                 }
@@ -787,7 +793,7 @@ body.cart-drawer-open {
                                 white-space: nowrap;
                                 margin-bottom: 8px;
                                 width: calc(90% - 10px);  
-                                @media (max-width: 374px){
+                                @media (max-width: 701px){
                                     margin-bottom: 5px;
                                 }                              
                             }
@@ -795,7 +801,7 @@ body.cart-drawer-open {
                         .product-item-price-info{
                             display: flex;
                             justify-content: space-between;
-                            @media (max-width: 374px){
+                            @media (max-width: 701px){
                                 flex-direction: column;
                             }
                             .main-product-price{
@@ -804,7 +810,7 @@ body.cart-drawer-open {
                                     font-size: 16px;
                                     color: #000;
                                     font-weight: 600;
-                                    @media (max-width: 374px){
+                                    @media (max-width: 701px){
                                         margin-bottom: 8px;
                                     }
                                 }
@@ -823,7 +829,7 @@ body.cart-drawer-open {
                                 padding: 10px 25px;
                                 font-size: 12px;
                                 height: 40px;
-                                @media (max-width: 374px){
+                                @media (max-width: 701px){
                                     height: 0;
                                     width: 75%;
                                     padding: 7px 0 !important;
