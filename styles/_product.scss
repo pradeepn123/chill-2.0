@@ -547,9 +547,17 @@
     @media(min-width:1200px){
         padding-bottom: 50px;
     }
+    .tab-content{
+        @media(min-width:1200px){
+            padding-bottom: 60px !important;
+        }
+    }
     &.remove_space{
         padding-bottom: 0;
         .tab-content{
+            @media(min-width:1200px){
+                padding-bottom: 60px !important;
+            }
             .tab-heading{
                 .product-tabs{
                     margin: 0 !important;
