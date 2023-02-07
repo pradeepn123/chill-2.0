@@ -412,7 +412,7 @@
     }
   {% else %}
     localStorage.removeItem("visited")
-    theme.handleCustomerLogout()
+    setTimeout(theme.handleCustomerLogout, 100)
   {% endif %}
 
   function handleClaimDrawerClose() {
