@@ -7705,9 +7705,19 @@ body.cart-drawer-open {
   margin-bottom: 8px;
   width: calc(90% - 10px);
 }
+@media (max-width: 374px) {
+  .cart-drawer-recommendations .mini-cart__recommendations-inner .scroller .mini-cart__recommendations-list .cart-product-item .product-item__info .product-item-info-header .product-item__vendor {
+    margin-bottom: 5px;
+  }
+}
 .cart-drawer-recommendations .mini-cart__recommendations-inner .scroller .mini-cart__recommendations-list .cart-product-item .product-item__info .product-item-price-info {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 374px) {
+  .cart-drawer-recommendations .mini-cart__recommendations-inner .scroller .mini-cart__recommendations-list .cart-product-item .product-item__info .product-item-price-info {
+    flex-direction: column;
+  }
 }
 .cart-drawer-recommendations .mini-cart__recommendations-inner .scroller .mini-cart__recommendations-list .cart-product-item .product-item__info .product-item-price-info .main-product-price {
   line-height: 1.2;
@@ -7716,6 +7726,11 @@ body.cart-drawer-open {
   font-size: 16px;
   color: #000;
   font-weight: 600;
+}
+@media (max-width: 374px) {
+  .cart-drawer-recommendations .mini-cart__recommendations-inner .scroller .mini-cart__recommendations-list .cart-product-item .product-item__info .product-item-price-info .main-product-price .item-price {
+    margin-bottom: 8px;
+  }
 }
 .cart-drawer-recommendations .mini-cart__recommendations-inner .scroller .mini-cart__recommendations-list .cart-product-item .product-item__info .product-item-price-info .main-product-price .compare-price {
   font-size: 14px;
@@ -7731,6 +7746,15 @@ body.cart-drawer-open {
   padding: 10px 25px;
   font-size: 12px;
   height: 40px;
+}
+@media (max-width: 374px) {
+  .cart-drawer-recommendations .mini-cart__recommendations-inner .scroller .mini-cart__recommendations-list .cart-product-item .product-item__info .product-item-price-info .btn_add_to_cart {
+    height: 0;
+    width: 75%;
+    padding: 7px 0 !important;
+    height: 25px;
+    font-size: 10px;
+  }
 }
 @media (min-width: 1200px) {
   .cart-drawer-recommendations .mini-cart__recommendations-inner .scroller .mini-cart__recommendations-list .cart-product-item .product-item__info .product-item-price-info .btn_add_to_cart {

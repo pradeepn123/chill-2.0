@@ -786,18 +786,27 @@ body.cart-drawer-open {
                                 overflow: hidden;
                                 white-space: nowrap;
                                 margin-bottom: 8px;
-                                width: calc(90% - 10px);                                
+                                width: calc(90% - 10px);  
+                                @media (max-width: 374px){
+                                    margin-bottom: 5px;
+                                }                              
                             }
                         }
                         .product-item-price-info{
                             display: flex;
                             justify-content: space-between;
+                            @media (max-width: 374px){
+                                flex-direction: column;
+                            }
                             .main-product-price{
                                 line-height: 1.2;
                                 .item-price{
                                     font-size: 16px;
                                     color: #000;
                                     font-weight: 600;
+                                    @media (max-width: 374px){
+                                        margin-bottom: 8px;
+                                    }
                                 }
                                 .compare-price{
                                     font-size: 14px;
@@ -814,6 +823,13 @@ body.cart-drawer-open {
                                 padding: 10px 25px;
                                 font-size: 12px;
                                 height: 40px;
+                                @media (max-width: 374px){
+                                    height: 0;
+                                    width: 75%;
+                                    padding: 7px 0 !important;
+                                    height: 25px;
+                                    font-size: 10px;
+                                }
                                 @media(min-width:1200px){
                                     padding: 1em 25px;
                                     height: auto;
