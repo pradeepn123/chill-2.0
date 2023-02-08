@@ -939,6 +939,9 @@ body.overflow-hidden {
 .default_search .search-suggestions__item {
   width: 20%;
 }
+.default_search .search-suggestions__item .product-block .image-page-button--previous, .default_search .search-suggestions__item .product-block .image-page-button--next {
+  display: block;
+}
 .default_search .search-suggestions__item .image-cont--with-secondary-image .product-block__image--active {
   opacity: 1;
 }
