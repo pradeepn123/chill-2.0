@@ -70,7 +70,7 @@
                   {%- for media in product_images offset: 1 -%}
                         {%- liquid
                           assign image_state_class = ''
-                          if media.preview_image.id == product.featured_media.id
+                          if media.id == product.featured_media.id
                             assign active_media_found = true
                             assign image_state_class = 'product-block__image--active'
                           else
