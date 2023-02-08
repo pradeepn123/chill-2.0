@@ -2658,6 +2658,16 @@ body {
   }
 }
 
+.ql-align-center {
+  font-size: 36px;
+  text-align: left !important;
+}
+@media (min-width: 1200px) {
+  .ql-align-center {
+    font-size: 52px;
+  }
+}
+
 #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
 #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
   border-radius: 30px;
