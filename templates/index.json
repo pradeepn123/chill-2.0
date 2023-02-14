@@ -166,12 +166,12 @@
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
-            "subheading": "Claim your FREE variety pack!",
-            "title": "New to Chill Pouches? Get your free variety pack today.",
+            "subheading": "",
+            "title": "Claim your FREE variety pack!",
             "title_size": 84,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>And optional subtext<\/p>",
+            "text": "<p>New to Chill Pouches? Get your free variety pack today.<\/p>",
             "heading_color": "#000000",
             "text_color": "#000000",
             "enlarge_text": true,
@@ -182,7 +182,7 @@
             "button_background_color": "#f3b09f",
             "button_text_color": "#ffffff",
             "button_text_font_size": 20,
-            "text_alignment": "center center"
+            "text_alignment": "center left"
           }
         }
       },
