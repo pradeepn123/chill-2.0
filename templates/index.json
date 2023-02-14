@@ -114,12 +114,12 @@
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
-            "subheading": "Welcome Mad Tasty",
-            "title": "Shop al all-natural functional beverage brand that's taking the world by storm!",
+            "subheading": "",
+            "title": "Welcome Mad Tasty",
             "title_size": 84,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>And optional subtext<\/p>",
+            "text": "<p>Shop al all-natural functional beverage brand that's taking the world by storm!<\/p>",
             "heading_color": "#000000",
             "text_color": "#000000",
             "enlarge_text": true,
@@ -130,7 +130,7 @@
             "button_background_color": "#f3b09f",
             "button_text_color": "#ffffff",
             "button_text_font_size": 20,
-            "text_alignment": "center center"
+            "text_alignment": "center left"
           }
         },
         "66002548-b60b-4786-8e10-a024be1f10e1": {
