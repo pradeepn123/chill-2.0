@@ -75,7 +75,6 @@
     },
     "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d": {
       "type": "slideshow",
-      "disabled": true,
       "blocks": {
         "template--16038250872990__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d-166911842947303ba6-0": {
           "type": "image",
@@ -170,19 +169,19 @@
             "mobile_image_position": "center center",
             "slide_link": "shopify:\/\/products\/chill-cbd-isolate-chew-pouches",
             "subheading": "",
-            "title": "Claim your FREE variety pack!",
+            "title": "Claim your \n<strong>FREE <\/strong>\nvariety pack! ",
             "title_size": 84,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>New to Chill Pouches? Get your free variety pack today.<\/p>",
-            "heading_color": "#f7f7f8",
-            "text_color": "#000000",
+            "text": "<p>New to Chill Pouches? <br\/>Get your free variety pack today.<\/p>",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
             "enlarge_text": true,
             "button_label_1": "Claim Now",
             "button_url_1": "shopify:\/\/products\/chill-cbd-isolate-chew-pouches",
             "button_label_2": "",
             "button_url_2": "",
-            "button_background_color": "#f3b09f",
+            "button_background_color": "#6ec59f",
             "button_text_color": "#171717",
             "button_text_font_size": 20,
             "text_alignment": "center left"
