@@ -1118,15 +1118,6 @@
               "collection": "shop-all",
               "text_alignment": "center"
             }
-          },
-          "3ea25eed-3b9c-440e-aa1a-ab4cf66b8655": {
-            "type": "menu-promotion-large",
-            "settings": {
-              "dropdown_link_title": "Brands",
-              "collection_title": "Vape",
-              "collection": "vape",
-              "text_alignment": "center"
-            }
           }
         },
         "block_order": [
@@ -1136,8 +1127,7 @@
           "60e60139-618d-4044-8f92-55d5ef5f105e",
           "d9f2181a-e85f-4cc4-abfe-0bc9558d774d",
           "5afc47b5-67ab-4d68-bb57-e6eb433da658",
-          "9c575c71-0296-4c71-9fa4-22420e39e142",
-          "3ea25eed-3b9c-440e-aa1a-ab4cf66b8655"
+          "9c575c71-0296-4c71-9fa4-22420e39e142"
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/Screen_Shot_2022-08-17_at_3.04.20_PM.png",
