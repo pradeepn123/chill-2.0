@@ -136,8 +136,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/MT_Blog_homepage_banner.jpg",
             "mobile_image": "shopify:\/\/shop_images\/Mad_Tasty_Landing_Page_Mobile.jpg",
-            "image_position": "center left",
-            "mobile_image_position": "left center",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
             "slide_link": "",
             "subheading": "",
             "title": "Who is Mad Tasty?",
