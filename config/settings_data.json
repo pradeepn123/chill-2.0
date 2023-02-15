@@ -1119,15 +1119,6 @@
               "text_alignment": "center"
             }
           },
-          "f093ab24-0ddd-4d68-919a-934bac7a9d14": {
-            "type": "menu-promotion-large",
-            "settings": {
-              "dropdown_link_title": "shop",
-              "collection_title": "",
-              "collection": "vape",
-              "text_alignment": "center"
-            }
-          },
           "462d1ed8-7f97-47f8-9e74-db23e4211021": {
             "type": "menu-promotion-large",
             "settings": {
@@ -1146,7 +1137,6 @@
           "d9f2181a-e85f-4cc4-abfe-0bc9558d774d",
           "5afc47b5-67ab-4d68-bb57-e6eb433da658",
           "9c575c71-0296-4c71-9fa4-22420e39e142",
-          "f093ab24-0ddd-4d68-919a-934bac7a9d14",
           "462d1ed8-7f97-47f8-9e74-db23e4211021"
         ],
         "settings": {
