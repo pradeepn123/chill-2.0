@@ -1103,6 +1103,7 @@
           },
           "5afc47b5-67ab-4d68-bb57-e6eb433da658": {
             "type": "menu-promotion-large",
+            "disabled": true,
             "settings": {
               "dropdown_link_title": "Brands",
               "collection_title": "",
