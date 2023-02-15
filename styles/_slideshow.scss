@@ -1,26 +1,29 @@
 .section-slideshow{
-    .slick-prev, .slick-next{
+    .slick-arrow{
         border: 0px;
-        background: #fff;
         width: 80px;
         height: 80px;
         border-radius: 50%;
+        background: #fff !important;
         svg{
             display: none;
         }
         &::before{
             content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAALxJREFUSEu1lIENRVAMRdmMSRjhb4RN2MAo3wZ6eaQRtPRq8iLivnMSaZtnz6qVeC8HT1flrtQaArRK+TKJzOtegYZ3Qq1Ncgp4BK/hcFiCENwShOF3Agr8SkCDnwmo8KOADtcCDR/lw8/b50ZuQptqOIm7YwYIMJUNm5x4iwClJfhF2DV/hlRP8ieS46qgS852EVVytexokrttSpFY6zossQThFvYIQhKvQEsmeSnkYCDNeiLYJAC74LgwA6FhOslu7JaYAAAAAElFTkSuQmCC') !important;
         }
-        &:hover{
-            background: #FFAC9A;
-        }
     }
     .slick-prev{
         margin-left: 1%;
+        &:hover{
+            background: #FFAC9A !important;
+        }
     }
     .slick-next{
         transform: translateY(-50%) rotate(180deg);
         margin-right: 1%;
+        &:hover{
+            background: #FFAC9A !important;
+        }
     }
     .overlay-text{
         width: 45%;
@@ -30,6 +33,9 @@
             font-size: 52px;
         }
         .overlay-text__rte {
+            @media (min-width: 1200px){
+                width: 35vw;
+            }
             p{
             font-size: 20px;
             font-weight: 600;

@@ -120,6 +120,9 @@ body{
                     color: #000000;
                 }
                 .overlay-text__text{
+                    @media (max-width: 767px){
+                        text-align: left;
+                    }
                     .overlay-text__title{
                         font-weight: 600;
                         font-family: 'Open Sans', sans-serif;

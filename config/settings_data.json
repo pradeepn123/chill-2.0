@@ -1048,9 +1048,9 @@
     "enable_domain_redirect": true,
     "enable_free_variety_pouch_offer": true,
     "how_it_works_image": "shopify:\/\/shop_images\/Banner_chill.png",
-    "how_it_works_title": "How It Works?",
-    "how_it_works_description": "<ul><li>Login \/ Sign up to claim this offer<\/li><li>Once you login \/ Sign up you will get to know you’re eligible for this offer or not.<\/li><li>Offer only applicable for the first time order at Chill.com<\/li><li>Pouch is completely free of cost, You will only pay for the Shipping $3.99<\/li><li>Along with this Free Variety pouch if you add on worth $50 or more The Shipping will be on us.<\/li><\/ul>",
-    "how_it_works_login_text": "SIGN UP \/ LOGIN TO CLAIM THE OFFER",
+    "how_it_works_title": "How It Works",
+    "how_it_works_description": "<ul><li>Login or Sign up to join the <a href=\"http:\/\/chill.com\/\" target=\"_blank\"><em><strong>Chill.com<\/strong><\/em><\/a> community<\/li><li>Get a free variety pack (worth $19.99) when you try our CBD pouches for the first time<\/li><li>You only pay for shipping - the pouches are on us!<\/li><\/ul>",
+    "how_it_works_login_text": "LOGIN TO CLAIM YOUR POUCH STARTER PACK",
     "sections": {
       "header": {
         "type": "header",

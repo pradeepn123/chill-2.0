@@ -156,13 +156,19 @@
                         }
                     }
                 }
-                .vendor{
-                    a.underline{
-                        text-transform: uppercase;
+                .product_variant{
+                    font-size: 14px;
+                    color: #676869;
+                    font-family: 'Open Sans', sans-serif;
+                    text-decoration:none;
+                    cursor: none ;
+                    &.underline{
                         font-size: 16px;
+                        text-decoration: underline !important;
+                        cursor: pointer;
+                        text-transform: uppercase;
+                        color: #000000;
                         font-weight: 600;
-                        font-family: 'Open Sans', sans-serif;
-                        text-decoration: none;
                     }
                 }
                 .product_custom_icons{
@@ -182,6 +188,7 @@
                     }
                 }
                 .not-in-quickbuy{
+                    margin-top: 1em;
                     .product-description{
                         font-size: 16px;
                         font-weight: 400;
@@ -911,8 +918,8 @@
 }
 
 @media (min-width: 1200px){
-    #shopify-section-template--16013749911710__main, #shopify-section-template--16038250250398__main{
-        #FeaturedMedia-template--16038250250398__main-27425367228574-wrapper, #FeaturedMedia-template--16013749911710__main-27425367228574-wrapper{
+    #shopify-section-template--16013749911710__main, #shopify-section-template--16038250250398__main, #shopify-section-template--16115202785438__main{
+        #FeaturedMedia-template--16038250250398__main-27425367228574-wrapper, #FeaturedMedia-template--16013749911710__main-27425367228574-wrapper, #FeaturedMedia-template--16115202785438__main-27865143607454-wrapper, #FeaturedMedia-template--16115202785438__main-27863994499230-wrapper{
             .product-media {
                 .rimage-outer-wrapper{
                     .rimage-wrapper{
