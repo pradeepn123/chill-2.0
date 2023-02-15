@@ -188,8 +188,8 @@
                     }
                 }
                 .not-in-quickbuy{
-                    margin-top: 1em;
                     .product-description{
+                        margin-top: 1em !important;
                         font-size: 16px;
                         font-weight: 400;
                         margin: 0;
@@ -209,7 +209,7 @@
                     &:last-child{
                         .cc-accordion{ 
                             @media(min-width:1440px){
-                                padding-bottom: 50px;
+                                padding-bottom: 50px !important;
                             }
                         }
                     }

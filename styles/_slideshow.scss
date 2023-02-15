@@ -1,4 +1,9 @@
 .section-slideshow{
+    @media (max-width: 767px){
+        .slick-list, .slick-dots{
+            background: #F2F2F3 !important;
+        }
+    }
     .slick-arrow{
         border: 0px;
         width: 80px;
@@ -23,6 +28,17 @@
         margin-right: 1%;
         &:hover{
             background: #FFAC9A !important;
+        }
+    }
+    .overlay-text-parent--mobile-stack {
+        .overlay-text{
+            .overlay-text__inner{
+                .overlay-text__text{
+                    @media (max-width: 767px){
+                        text-align: left !important;
+                    }
+                }
+            }
         }
     }
     .overlay-text{
