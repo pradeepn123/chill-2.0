@@ -33,7 +33,9 @@
             font-size: 52px;
         }
         .overlay-text__rte {
-            width: 35vw;
+            @media (min-width: 1200px){
+                width: 35vw;
+            }
             p{
             font-size: 20px;
             font-weight: 600;

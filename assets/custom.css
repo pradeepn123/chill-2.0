@@ -7979,8 +7979,10 @@ body.cart-drawer-open {
 .section-slideshow .overlay-text h2 {
   font-size: 52px;
 }
-.section-slideshow .overlay-text .overlay-text__rte {
-  width: 35vw;
+@media (min-width: 1200px) {
+  .section-slideshow .overlay-text .overlay-text__rte {
+    width: 35vw;
+  }
 }
 .section-slideshow .overlay-text .overlay-text__rte p {
   font-size: 20px;
