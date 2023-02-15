@@ -11742,11 +11742,11 @@ model-viewer .container {
   .overlay-text-parent--mobile-stack .overlay-text .overlay-text__text {
     padding: 0;
   }
-  .overlay-text-parent--mobile-stack .overlay-text .overlay-text__title {
-    color: {{ font_col_heads }};
+  .overlay-text-parent--mobile-stack .overlay-text .overlay-text__title, .overlay-text-parent--mobile-stack .overlay-text .overlay-text__rte {
+    color: {{ font_col_heads }} !important;
   }
   .overlay-text-parent--mobile-stack .overlay-text .overlay-text__rte a {
-    text-decoration-color: {{ font_col_base }};
+    text-decoration-color: {{ font_col_base }} !important;
   }
   .overlay-text-parent--mobile-stack .overlay-text .button {
     margin-bottom: 10px;

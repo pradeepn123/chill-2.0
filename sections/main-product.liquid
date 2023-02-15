@@ -210,19 +210,22 @@
             </div>
 
             {% when 'vendor' %}
-            {% comment %} {%- liquid
-            assign product_vendor_handle = product.vendor | handle
-            if collections[product_vendor_handle].handle == product_vendor_handle
-            assign vendor_url = collections[product_vendor_handle].url
-            else
-            assign vendor_url = product.vendor | url_for_vendor
-            endif
-            -%}
-            <div class="vendor lightly-spaced-row" {{ block.shopify_attributes }}>
-            <!-- <span class="product-detail-label">{{ 'products.product.vendor' | t }}</span> -->
-            {{ product.vendor | link_to: vendor_url, class: 'underline' }}
-            </div> {% endcomment %}
-            <p>{{ product.metafields.custom.product_varient_pack }}</p>
+              {% comment %} {%- liquid
+                assign product_vendor_handle = product.vendor | handle
+                if collections[product_vendor_handle].handle == product_vendor_handle
+                  assign vendor_url = collections[product_vendor_handle].url
+                else
+                  assign vendor_url = product.vendor | url_for_vendor
+                endif
+                -%}
+                <div class="vendor lightly-spaced-row" {{ block.shopify_attributes }}>
+                <!-- <span class="product-detail-label">{{ 'products.product.vendor' | t }}</span> -->
+                {{ product.vendor | link_to: vendor_url, class: 'underline' }}
+                </div> 
+                <p>{{ product.metafields.custom.product_varient_pack }}</p>
+              {% endcomment %}
+            
+            <a class="product_variant {% if product.metafields.custom.product_varient_pack.value == 'Mad Tasty' %} underline{% endif %}" {% if product.metafields.custom.product_varient_pack.value == 'Mad Tasty' %} href="{{ collections.mad-tasty-sample-pack-wellness-boost.url }}" {% else %} href="#"{% endif %}><span>{{ product.metafields.custom.product_varient_pack }}</span></a>
 
             {% when 'pro_custom_icon' %}
             {% if product.metafields.settings.product_icons.value != blank %}
