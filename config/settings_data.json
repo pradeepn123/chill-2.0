@@ -1082,6 +1082,15 @@
               "text_alignment": "center"
             }
           },
+          "23c0306f-1487-4db5-aa13-d1d45daf6490": {
+            "type": "menu-promotion-large",
+            "settings": {
+              "dropdown_link_title": "Shop",
+              "collection_title": "Mad Tasty",
+              "collection": "mad-tasty-sample-pack-wellness-boost",
+              "text_alignment": "center"
+            }
+          },
           "60e60139-618d-4044-8f92-55d5ef5f105e": {
             "type": "menu-promotion-large",
             "settings": {
@@ -1134,6 +1143,7 @@
           "721b392b-54e3-4cd9-ae56-3cddef5b2b48",
           "1b792ef3-cee8-4951-be61-e8cc8c94491c",
           "55dfc561-5ebf-4ef6-8975-0757fbd445b6",
+          "23c0306f-1487-4db5-aa13-d1d45daf6490",
           "60e60139-618d-4044-8f92-55d5ef5f105e",
           "d9f2181a-e85f-4cc4-abfe-0bc9558d774d",
           "5afc47b5-67ab-4d68-bb57-e6eb433da658",
