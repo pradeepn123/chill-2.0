@@ -769,7 +769,37 @@
             {% when 'free_pouch' %}
               {% if product.handle == 'chill-cbd-isolate-chew-pouches' %}
                 {% render 'free-variety-pack' %}
-               {% endif %}     
+              {% endif %}     
+
+
+            {% when 'gummies_offer' %}
+                {% if settings.show_gummies_offer %}
+                  {% if product.tags contains 'gummies_single_pack' %}
+                    <div class="gummies_offer_wrapper" style="padding: 0;margin: 25px 0;">
+                        <div class="gummies_offer_container">
+                            <span class="gummies_offer_text">{{ block.settings.gummies_offer_text }}</span>
+                        </div>
+                    </div>
+                  {% endif %}
+                  {% if product.type == 'CBD Beverage' or product.type == 'CBD Wellness Shot' or product.type == 'Wellness Boost Shot' %}
+                    <div class="gummies_offer_wrapper" style="padding: 0;margin: 25px 0;">
+                        <div class="gummies_offer_container">
+                            <span class="gummies_offer_text">{{ block.settings.gummies_offer_text_for_madtasty }}</span>
+                            {% comment %} 
+                              <div class="gummies_offer_button_wrapper">
+                                {% if block.settings.madtasty_button_text != blank %}
+                                  <a href="{{ block.settings.madtasty_button_url }}" class="gummies_offer_button">
+                                      <button class="gummies_offer_cart_button" style="background: {{ block.settings.madtasty_button_color }};">{{ block.settings.madtasty_button_text }}</button>
+                                  </a>
+                                {% endif %}
+                              </div> 
+                            {% endcomment %}
+                        </div>
+                    </div>
+                  {% endif %}
+                {% endif %}
+
+
 
           {% endcase %}
         {% endfor %}
@@ -2057,6 +2087,24 @@
         "settings": [
           
         ]
+      },
+      {
+        "type": "gummies_offer",
+        "name": "50% off on gummies offer",
+        "settings": [
+            {
+              "type": "richtext",
+              "id": "gummies_offer_text",
+              "label": "Offer text",
+              "default": "<p><\/p>"
+            },
+            {
+              "type": "richtext",
+              "id": "gummies_offer_text_for_madtasty",
+              "label": "Offer text",
+              "default": "<p><\/p>"
+            }
+          ]
       },
       {
         "type": "sharing",
