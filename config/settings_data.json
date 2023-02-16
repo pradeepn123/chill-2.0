@@ -1292,11 +1292,18 @@
             "settings": {
               "text": "<p>For subscription products USE CODE: <strong>CHILLHOLIDAY20 <\/strong>at the checkout<\/p>"
             }
+          },
+          "e6f384bd-f593-4a17-86da-d6d127ed03fe": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>50% off Tropical and Berry gummies with every Mad Tasty Purchase<\/p>"
+            }
           }
         },
         "block_order": [
           "2e9b0b00-d8fb-4143-be2d-eefe5fb293f5",
-          "ba09120b-5b07-4fe0-95ef-bf983d98ac02"
+          "ba09120b-5b07-4fe0-95ef-bf983d98ac02",
+          "e6f384bd-f593-4a17-86da-d6d127ed03fe"
         ],
         "settings": {
           "announcement_bar_col": "#000000",
