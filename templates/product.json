@@ -85,10 +85,7 @@
           "type": "gummies_offer",
           "settings": {
             "gummies_offer_text": "<p>☝️ Get these Tropical and Berry CBD Gummies for a whopping 50% discount when you purchase any 👉  <a href=\"\/collections\/mad-tasty-sample-pack-wellness-boost\" title=\"Mad Tasty\">Mad Tasty<\/a> Products.<\/p>",
-            "gummies_offer_text_for_madtasty": "<p>Buy this product and Get 👉 <strong>50% Discount<\/strong> on the Tropical and Berry CBD gummies. <a href=\"\/collections\/gummies-offer\" title=\"Gummies offer\">GET IT NOW<\/a>.<\/p>",
-            "madtasty_button_text": "Get it now",
-            "madtasty_button_color": "#9792e4",
-            "madtasty_button_url": "shopify:\/\/collections\/gummies-offer"
+            "gummies_offer_text_for_madtasty": "<p>Buy this product and Get 👉 <strong>50% Discount<\/strong> on the Tropical and Berry CBD gummies. <a href=\"\/collections\/gummies-offer\" title=\"Gummies offer\">GET IT NOW<\/a>.<\/p>"
           }
         },
         "57631e90-1baf-4e41-9691-499be1451989": {
