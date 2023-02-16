@@ -113,12 +113,17 @@
 
             {% assign gummies_in_cart = false %}
             {% for item in cart.items %}
-              {% if item.product.type == 'CBD Gummies' and  item.product.handle != 'cbd-gummy-variety-pack' %}
+              {% if item.product.tags contains 'gummies_single_pack' %}
                 {% assign gummies_in_cart = true %}
               {% endif %}
             {% endfor %}
+            {% assign show_gummies_offer = false %}
             {% for item in cart.items %}
               {% if item.product.type == 'CBD Beverage' or item.product.type == 'CBD Wellness Shot' or product.type == 'Wellness Boost Shot' %}
+                {% assign show_gummies_offer = true %}
+              {% endif %}
+            {% endfor %}
+            {% if show_gummies_offer == true %}
                 {% if settings.show_gummies_offer %}
                     <div class="gummies_offer_wrapper">
                         <div class="gummies_offer_container">
@@ -135,7 +140,6 @@
                     </div>
                 {% endif %}
               {% endif %}
-            {% endfor %}
             
             <form class="cart-drawer-form cart-drawer-summary__section" action="{{ routes.cart_url }}" method="post">
               {% for item in cart.items %}
