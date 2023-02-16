@@ -8659,6 +8659,12 @@ body.cart-drawer-open {
   margin: 10px 0 auto;
   justify-content: center;
 }
+@media (max-width: 767px) {
+  .gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
 .gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper .gummies_offer_cart_button {
   width: 170px;
   text-transform: uppercase;
