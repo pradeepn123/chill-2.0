@@ -108,6 +108,35 @@
                 {%- endunless -%}
               </p>
             {%- endif -%}
+
+            {% comment %} 50% off on gummies offer {% endcomment %}
+
+            {% assign gummies_in_cart = false %}
+            {% for item in cart.items %}
+              {% if item.product.type == 'CBD Gummies' and  item.product.handle != 'cbd-gummy-variety-pack' %}
+                {% assign gummies_in_cart = true %}
+              {% endif %}
+            {% endfor %}
+            {% for item in cart.items %}
+              {% if item.product.type == 'CBD Beverage' or item.product.type == 'CBD Wellness Shot' or product.type == 'Wellness Boost Shot' %}
+                {% if settings.show_gummies_offer %}
+                    <div class="gummies_offer_wrapper">
+                        <div class="gummies_offer_container">
+                            <span class="gummies_offer_text">{{ settings.gummies_offer_text }}</span>
+                            <div class="gummies_offer_button_wrapper">
+                                {% if settings.cart_button_text != blank %}
+                                    <a href="{{ settings.cart_button_url }}" class="gummies_offer_button">
+                                        <button class="gummies_offer_cart_button" style="background: {{ settings.cart_button_color }};">{% if gummies_in_cart == true %}Get more{% else %}{{ settings.cart_button_text }}{% endif %}</button>
+                                    </a>
+                                {% endif %}
+                                <span class="gummies_offer_terms_and_conditions">{{ settings.terms_and_conditions }}</span>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            
             <form class="cart-drawer-form cart-drawer-summary__section" action="{{ routes.cart_url }}" method="post">
               {% for item in cart.items %}
                 {% if item.product.metafields.subscriptions.original_handle != blank %}
@@ -115,7 +144,6 @@
                 {% else %}
                   {% assign original_product = item.product %}
                 {% endif %}
-
                 {% assign has_subscriptions = false %}
                 {% assign promotionalLine = false %}
                 {% assign selected_shipping_interval_frequency = blank %}
