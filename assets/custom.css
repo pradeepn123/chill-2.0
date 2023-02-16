@@ -8622,3 +8622,66 @@ body.cart-drawer-open {
 .claim_banner_home_page .close_banner_button {
   margin: auto 0 auto 20px;
 }
+
+.gummies_offer_wrapper {
+  padding: 1em 25px;
+}
+.gummies_offer_wrapper .gummies_offer_container {
+  border: 3px solid #FFAC9A;
+  border-radius: 4px;
+  padding: 21px 25px;
+}
+@media (max-width: 767px) {
+  .gummies_offer_wrapper .gummies_offer_container {
+    padding: 10px 15px;
+  }
+}
+.gummies_offer_wrapper .gummies_offer_container .gummies_offer_text {
+  text-align: center;
+  font-size: 15px;
+  color: #000;
+}
+@media (max-width: 767px) {
+  .gummies_offer_wrapper .gummies_offer_container .gummies_offer_text {
+    font-size: 14px;
+  }
+}
+.gummies_offer_wrapper .gummies_offer_container .gummies_offer_text a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.gummies_offer_wrapper .gummies_offer_container .gummies_offer_text p {
+  margin-bottom: 0;
+}
+.gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper {
+  display: flex;
+  text-align: center;
+  margin: 10px 0 auto;
+  justify-content: center;
+}
+.gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper .gummies_offer_cart_button {
+  width: 170px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50px;
+  border: 0;
+}
+@media (max-width: 767px) {
+  .gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper .gummies_offer_cart_button {
+    width: 140px;
+    font-size: 14px;
+  }
+}
+.gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper .gummies_offer_cart_button:hover {
+  background: #FFAC9A;
+}
+.gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper .gummies_offer_terms_and_conditions {
+  font-size: 14px;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper .gummies_offer_terms_and_conditions {
+    font-size: 10px;
+  }
+}

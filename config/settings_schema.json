@@ -1523,5 +1523,43 @@
         "default": "You are not eligible for Free variety pack!"
       }
     ]
+  },
+  {
+    "name": "Gummies offer",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_gummies_offer",
+        "label": "Show gummies offer",
+        "default": true
+      },
+      {
+        "type": "richtext",
+        "id": "gummies_offer_text",
+        "label": "Offer text",
+        "default": "<p><\/p>"
+      },
+      {
+        "type": "text",
+        "id": "cart_button_text",
+        "label": "Cart button text",
+        "default": "Get it now"
+      },
+      {
+        "type": "color",
+        "id": "cart_button_color",
+        "label": "Cart button color"
+      },
+      {
+        "type": "url",
+        "id": "cart_button_url",
+        "label": "URL for cart button"
+      },
+      {
+        "type": "text",
+        "id": "terms_and_conditions",
+        "label": "Terms and Conditions text"
+      }
+    ]
   }
 ]
