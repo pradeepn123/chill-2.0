@@ -161,13 +161,13 @@
         "190b68b3-e888-4fbb-82b4-bdb9c97c144f": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Variety_Pack_Banner_Homepage.jpg",
+            "image": "shopify:\/\/shop_images\/Variety_Pack_Homepage_banner_ef50fe52-6e99-4d7a-9c13-d77a02b889e6.jpg",
             "mobile_image": "shopify:\/\/shop_images\/Variety_Pack_Banner_Homepage_Mobile.jpg",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "shopify:\/\/products\/chill-cbd-isolate-chew-pouches",
             "subheading": "",
-            "title": "Claim your \n<strong>FREE <\/strong>\nvariety pack!",
+            "title": "<strong>FREE <\/strong> variety\n pack <strong>on us! <\/strong>",
             "title_size": 84,
             "title_size_mobile": 46,
             "use_h1": false,
