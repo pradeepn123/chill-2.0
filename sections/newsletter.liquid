@@ -1,9 +1,9 @@
 {% style %}
   .section-newsletter #section-id-{{ section.id }} {
-    
+     background: url("{{section.settings.bg_image | img_url: '1920x' }}")
   }
 {% endstyle %}
-<div id="section-id-{{ section.id }}" class="section-signup lazyload fade-in" data-bgset="{% render 'bgset', image: section.settings.bg_image %}" data-sizes="auto" data-parent-fit="cover">
+<div id="section-id-{{ section.id }}" class="section-signup">
   {%- assign brightness = section.settings.color_bg | color_brightness -%}
   {%- assign alpha = section.settings.color_bg | color_extract: 'alpha' -%}
   <style type="text/css">
