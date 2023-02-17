@@ -232,10 +232,14 @@
                               {% unless promotionalLine or free_variety_pack_in_cart == true %}
                                 <ul class="cart-drawer-discount-list align-right">
                                   {% for discount_allocation in item.line_level_discount_allocations %}
-                                    <li class="cart-drawer-discount cart-drawer-discount--inline cart-drawer-discount--flex">
-                                      <span class="cart-drawer-discount__label">{{ discount_allocation.discount_application.title }}</span>
-                                      <span class="cart-drawer-discount__amount theme-money">{% render 'price', price: discount_allocation.amount, disable_currency_code: true %}</span>
-                                    </li>
+                                    {% if settings.show_gummies_offer == false %}
+                                      <li class="cart-drawer-discount cart-drawer-discount--inline cart-drawer-discount--flex">
+                                        <span class="cart-drawer-discount__label">{{ discount_allocation.discount_application.title }}</span>
+                                        <span class="cart-drawer-discount__amount theme-money">{% render 'price', price: discount_allocation.amount, disable_currency_code: true %}</span>
+                                      </li>
+                                    {% else %}
+                                      <span class="color-red" style="font-weight: bold;">FLAT 50% OFF</span>
+                                    {% endif %}
                                   {% endfor %}
                                 </ul>
                               {% endunless %}
