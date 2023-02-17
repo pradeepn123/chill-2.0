@@ -1411,7 +1411,7 @@
   },
   {
     "name": "Free variety pouch",
-    "settings":[
+    "settings": [
       {
         "type": "checkbox",
         "id": "enable_free_variety_pouch_offer",
@@ -1426,13 +1426,13 @@
         "type": "text",
         "id": "claim_banner_text_desktop",
         "label": "Claim banner text for desktop",
-        "default": "If you’re new to Chill pouches, Try our <span>FREE VARIETY</span> pack today and find your favorite flavor. Just pay $3.99 for shipping"
+        "default": "If you’re new to Chill pouches, Try our <span>FREE VARIETY<\/span> pack today and find your favorite flavor. Just pay $3.99 for shipping"
       },
       {
         "type": "text",
         "id": "claim_banner_text_mobile",
         "label": "Claim banner text for mobile",
-        "default": "New to Chill pouches? Get your <br><span>FREE VARIETY PACK</span> Today!"
+        "default": "New to Chill pouches? Get your <br><span>FREE VARIETY PACK<\/span> Today!"
       },
       {
         "type": "text",
@@ -1458,17 +1458,17 @@
       {
         "type": "color",
         "id": "login_button_color",
-        "label": "Login/Signup button color",
+        "label": "Login\/Signup button color",
         "default": "#6EC59F"
       },
       {
         "type": "range",
         "id": "login_btn_font_size",
-        "label": "login/Signup button font size",
+        "label": "login\/Signup button font size",
         "min": 2,
         "max": 50,
-        "step":2,
-        "default":20
+        "step": 2,
+        "default": 20
       },
       {
         "type": "text",
@@ -1479,47 +1479,47 @@
         "type": "richtext",
         "id": "how_it_works_description",
         "label": "How-it-works description",
-        "default": "<p>Description</p>"
+        "default": "<p>Description<\/p>"
       },
       {
         "type": "text",
         "id": "how_it_works_login_text",
-        "label": "How-it-works login/Signup text"
+        "label": "How-it-works login\/Signup text"
       },
       {
         "type": "richtext",
         "id": "account_subtitle",
         "label": "Login subtitle",
-        "default": "<p>Please enter your <strong>email</strong> and <strong>password</strong>:</p>"
+        "default": "<p>Please enter your <strong>email<\/strong> and <strong>password<\/strong>:<\/p>"
       },
       {
         "type": "richtext",
         "id": "account_recoverPassword_subtitle",
         "label": "Recover password subtitle",
-        "default": "<p>Enter your registered e-mail ID</p>"
+        "default": "<p>Enter your registered e-mail ID<\/p>"
       },
       {
         "type": "richtext",
         "id": "reset_password_note",
         "label": "Reset password note",
-        "default": "<p>An email with a link to reset your password will be sent to you.</p>"
+        "default": "<p>An email with a link to reset your password will be sent to you.<\/p>"
       },
       {
         "type": "richtext",
         "id": "register_subtitle",
         "label": "Register subtitle",
-        "default": "<p>Please enter your <strong>email</strong> and <strong>password</strong>:</p>"
+        "default": "<p>Please enter your <strong>email<\/strong> and <strong>password<\/strong>:<\/p>"
       },
       {
         "type": "text",
         "id": "claim_success_message",
-        "label":"Claim eligibility success message",
+        "label": "Claim eligibility success message",
         "default": "Yey! You are eligible for Free variety pack, Click Add to cart!"
       },
       {
         "type": "text",
         "id": "claim_fail_message",
-        "label":"Claim eligibility failure message",
+        "label": "Claim eligibility failure message",
         "default": "You are not eligible for Free variety pack!"
       }
     ]
