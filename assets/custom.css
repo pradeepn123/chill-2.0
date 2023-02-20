@@ -8780,6 +8780,16 @@ body.cart-drawer-open {
   font-size: 14px;
   margin: auto;
 }
+@media (max-width: 1980px) {
+  .gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper .gummies_offer_terms_and_conditions {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 1050px) {
+  .gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper .gummies_offer_terms_and_conditions {
+    margin-left: 5px;
+  }
+}
 @media (max-width: 767px) {
   .gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper .gummies_offer_terms_and_conditions {
     font-size: 10px;
