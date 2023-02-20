@@ -134,7 +134,7 @@
         "66002548-b60b-4786-8e10-a024be1f10e1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MT_Blog_homepage_banner.jpg",
+            "image": "shopify:\/\/shop_images\/Mad_Tasty_Homepage_Banner_e18773e0-e0d1-4b54-a759-86aceb546189.jpg",
             "mobile_image": "shopify:\/\/shop_images\/Mad_Tasty_Landing_Page_Mobile.jpg",
             "image_position": "center center",
             "mobile_image_position": "center center",
@@ -144,16 +144,16 @@
             "title_size": 84,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>Founded by OneRepublic’s lead singer Ryan Tedder, Mad Tasty is the all-natural functional beverage brand that’s been taking the world by storm.<\/p>",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
+            "text": "<p>Founded by OneRepublic’s, Ryan Tedder, Mad Tasty is the all-natural functional beverage brand that’s taking the world by storm.<\/p>",
+            "heading_color": "#171717",
+            "text_color": "#171717",
             "enlarge_text": true,
             "button_label_1": "Shop Mad Tasty",
             "button_url_1": "shopify:\/\/blogs\/chill-blog\/introducing-mad-tasty",
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#f3b09f",
-            "button_text_color": "#ffffff",
+            "button_text_color": "#171717",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
@@ -161,13 +161,13 @@
         "190b68b3-e888-4fbb-82b4-bdb9c97c144f": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Variety_Pack_Banner_Homepage.jpg",
+            "image": "shopify:\/\/shop_images\/Variety_Pack_Homepage_banner_ef50fe52-6e99-4d7a-9c13-d77a02b889e6.jpg",
             "mobile_image": "shopify:\/\/shop_images\/Variety_Pack_Banner_Homepage_Mobile.jpg",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "shopify:\/\/products\/chill-cbd-isolate-chew-pouches",
             "subheading": "",
-            "title": "Claim your \n<strong>FREE <\/strong>\nvariety pack!",
+            "title": "<strong>FREE <\/strong> variety\n pack <strong>on us! <\/strong>",
             "title_size": 84,
             "title_size_mobile": 46,
             "use_h1": false,
