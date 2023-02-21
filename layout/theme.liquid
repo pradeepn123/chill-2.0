@@ -28,7 +28,7 @@
 
 {% if template contains 'product' %}
 	<title>{{ product.title }} | {{ collection.title }} | Chill</title>
-      <meta name="description" content="Chill offers CBD products to de-stress your routine. Visit our website to purchase our {{product}} online from our {{category}} collection.	" />
+      <meta name="description" content="Chill offers CBD products to de-stress your routine. Visit our website to purchase our {{ product.title }} online from our {{ collection.title }} collection.	" />
 {% else %}
     <title>
       {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} {% endunless %}
