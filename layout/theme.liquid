@@ -19,11 +19,27 @@
   {% if settings.enable_domain_redirect == true %}
     {% render 'ipdata-us-uk-redirect' %}
   {% endif %}
-  
 
-  <title>
-    {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} {% endunless %}
-  </title>
+  {% comment %}
+   ====================================================================
+    Custom metadata for Product and Collection pages -- Added by NPA
+   ====================================================================
+{% endcomment %}
+
+{% if template contains 'product' %}
+	<title>{product} | {category} | Chill</title>
+      <meta name="description" content="Chill offers CBD products to de-stress your routine. Visit our website to purchase our {{product}} online from our {{category}} collection.	" />
+{% else %}
+    <title>
+      {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} {% endunless %}
+    </title>	
+{% endif %}  
+
+{% comment %}
+   ====================================================================
+     Custom metadata for Product and Collection pages end.
+   ====================================================================
+{% endcomment %} 
 
   {% render 'social-meta-tags' %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
