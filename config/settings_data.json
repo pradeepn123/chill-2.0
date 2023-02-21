@@ -1232,8 +1232,8 @@
           "1601372812538": {
             "type": "text",
             "settings": {
-              "title": "Zoetic Corp",
-              "text": "<p><\/p>",
+              "title": "",
+              "text": "<p><strong>Zoetic Corp<\/strong><\/p>",
               "image": "shopify:\/\/shop_images\/Chill_black.png",
               "image_width": 160,
               "show_social_icons": true,
