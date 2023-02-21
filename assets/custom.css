@@ -900,7 +900,7 @@ body.overflow-hidden {
   width: 100%;
   max-width: 100%;
 }
-.mega_menu .mega_menu_title .menu-mega-nav li .ruby-grid .ruby-row .ruby-col-3 .product_title h4 {
+.mega_menu .mega_menu_title .menu-mega-nav li .ruby-grid .ruby-row .ruby-col-3 .product_title h4, .pth4 {
   font-size: 16px;
   font-weight: bold;
   color: #000000;
