@@ -29,10 +29,10 @@
     <div id="cart-drawer-summary" class="cart-drawer-summary cart_container {% if cart.item_count == 0 %}cart-drawer-summary--empty{% endif%} cart-drawer-summary--{{ settings.cart_type }} {{ cart_class }}">
       <div class="cart-drawer-summary__inner" aria-live="polite">
         <div class="cart-drawer-summary__header toggle-cart-drawer-summary cart-drawer-summary__section">
-          <h1 class="cart-drawer-summary__title">
+          <div class="cart-drawer-summary__title">
             {{ 'cart.general.title' | t }}
             <span class="cart_item_count">({{cart.item_count}} items)</span>
-          </h1>
+          </div>
           <a class="cart-drawer-summary__close toggle-cart-summary">
             {% render 'svg-close' %}
           </a>
