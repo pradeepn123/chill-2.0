@@ -191,7 +191,7 @@
         <div class="overlay-text overlay-text--inline overlay--v-center overlay--h-center image-overlay__over" data-cc-animate data-cc-animate-delay="0.2s">
           <div class="overlay-text__inner">
             <div class="overlay-text__text">
-              <h1 class="overlay-text__title super-large-text">{{ collection.title | escape }}</h1>
+              <h2 class="overlay-text__title super-large-text">{{ collection.title | escape }}</h2>
 
               {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
                 <div class="overlay-text__rte rte cf align-center reading-width large-text">{{ collection.description }}</div>
