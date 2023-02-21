@@ -2,7 +2,7 @@
 <div class="filters{% if section.settings.enable_filtering == false or filter_context.filters == empty %} mobile-only{% endif %}">
   <div class="filters__inner{% if section.settings.enable_sticky_filter %} sticky-content-container{% endif %}">
     <div class="filters__heading">
-      <h4 class="filters__heading-text">{{ 'collections.filtering.heading' | t }}</h4>
+      <p class="filters__heading-text">{{ 'collections.filtering.heading' | t }}</p>
       <a class="filters__close" href="#" data-toggle-filters>{% render 'svg-x', stroke_width: 1.3 %}</a>
     </div>
 
