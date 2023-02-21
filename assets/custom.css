@@ -1158,7 +1158,7 @@ body.overflow-hidden {
   font-weight: 500;
   font-family: "Open Sans", sans-serif;
 }
-.subcollection_section .subcollection_slider .slider-wrapper h2 {
+.subcollection_section .subcollection_slider .slider-wrapper h2, .sh2 {
   font-size: 16px;
   color: #000000;
   font-weight: 500;
