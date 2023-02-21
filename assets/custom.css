@@ -719,12 +719,6 @@ body.overflow-hidden {
 .section-header .navigation .navigation__item .navigation__child-tier .navigation__wide-promotion {
   padding-top: 60px;
 }
-@media (min-width: 1024px) {
-  .section-header .navigation .navigation__item .navigation__child-tier .navigation__wide-promotion {
-    padding-bottom: 120px;
-  }
-}
-
 .mega_menu {
   position: relative;
 }
@@ -773,6 +767,17 @@ body.overflow-hidden {
 @media (min-width: 1024px) {
   .mega_menu .mega_menu_title .menu-mega-nav {
     width: 20%;
+    min-height: 309px;
+  }
+}
+@media (min-width: 1440px) {
+  .mega_menu .mega_menu_title .menu-mega-nav {
+    min-height: 365px;
+  }
+}
+@media (min-width: 1680px) {
+  .mega_menu .mega_menu_title .menu-mega-nav {
+    min-height: 400px;
   }
 }
 .mega_menu .mega_menu_title .menu-mega-nav::after {
@@ -863,6 +868,11 @@ body.overflow-hidden {
 @media (min-width: 1024px) {
   .mega_menu .mega_menu_title .menu-mega-nav li .ruby-grid.ruby-grid-lined {
     width: 50rem;
+  }
+}
+@media (min-width: 1360px) {
+  .mega_menu .mega_menu_title .menu-mega-nav li .ruby-grid.ruby-grid-lined {
+    padding-left: 60px;
   }
 }
 @media (min-width: 1440px) {
@@ -2680,6 +2690,16 @@ body {
   }
 }
 
+.ql-align-center {
+  font-size: 36px;
+  text-align: left !important;
+}
+@media (min-width: 1200px) {
+  .ql-align-center {
+    font-size: 52px;
+  }
+}
+
 #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
 #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
   border-radius: 30px;
@@ -2697,7 +2717,7 @@ body {
 }
 @media (max-width: 767px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     top: 16px;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -2705,33 +2725,33 @@ body {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     font-size: 10px;
     top: 16px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     top: 0px;
   }
 }
 @media (min-width: 1680px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     top: -30px;
   }
 }
 @media (min-width: 1920px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     top: -50px;
     left: 7%;
   }
 }
 @media (max-width: 767px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text__button-row,
-#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text__button-row {
+  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text__button-row {
     margin: 0;
   }
 }
@@ -3597,7 +3617,81 @@ body {
 }
 
 @media (min-width: 1200px) {
-  #shopify-section-template--16013749911710__main #FeaturedMedia-template--16038250250398__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper, #shopify-section-template--16013749911710__main #FeaturedMedia-template--16013749911710__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper, #shopify-section-template--16013749911710__main #FeaturedMedia-template--16115202785438__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper, #shopify-section-template--16013749911710__main #FeaturedMedia-template--16115202785438__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper, #shopify-section-template--16038250250398__main #FeaturedMedia-template--16038250250398__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper, #shopify-section-template--16038250250398__main #FeaturedMedia-template--16013749911710__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper, #shopify-section-template--16038250250398__main #FeaturedMedia-template--16115202785438__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper, #shopify-section-template--16038250250398__main #FeaturedMedia-template--16115202785438__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper, #shopify-section-template--16115202785438__main #FeaturedMedia-template--16038250250398__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper, #shopify-section-template--16115202785438__main #FeaturedMedia-template--16013749911710__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper, #shopify-section-template--16115202785438__main #FeaturedMedia-template--16115202785438__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper, #shopify-section-template--16115202785438__main #FeaturedMedia-template--16115202785438__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper {
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--16038250250398__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--16013749911710__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--16115202785438__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--16013749911710__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--16118178906270__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--16115202785438__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--15860249165982__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--16118178906270__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--16118178906270__main-27859860193438-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--16013749911710__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--15860249165982__main-27865091571870-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16013749911710__main #FeaturedMedia-template--15860249165982__main-27859860193438-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--16038250250398__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--16013749911710__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--16115202785438__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--16013749911710__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--16118178906270__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--16115202785438__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--15860249165982__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--16118178906270__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--16118178906270__main-27859860193438-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--16013749911710__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--15860249165982__main-27865091571870-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16038250250398__main #FeaturedMedia-template--15860249165982__main-27859860193438-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--16038250250398__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--16013749911710__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--16115202785438__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--16013749911710__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--16118178906270__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--16115202785438__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--15860249165982__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--16118178906270__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--16118178906270__main-27859860193438-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--16013749911710__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--15860249165982__main-27865091571870-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16115202785438__main #FeaturedMedia-template--15860249165982__main-27859860193438-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--16038250250398__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--16013749911710__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--16115202785438__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--16013749911710__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--16118178906270__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--16115202785438__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--15860249165982__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--16118178906270__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--16118178906270__main-27859860193438-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--16013749911710__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--15860249165982__main-27865091571870-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--16118178906270__main #FeaturedMedia-template--15860249165982__main-27859860193438-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--16038250250398__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--16013749911710__main-27425367228574-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--16115202785438__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--16013749911710__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--16118178906270__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--16115202785438__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--15860249165982__main-27863994499230-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--16118178906270__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--16118178906270__main-27859860193438-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--16013749911710__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--15860249165982__main-27865091571870-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--15860249165982__main-27865143607454-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper,
+  #shopify-section-template--15860249165982__main #FeaturedMedia-template--15860249165982__main-27859860193438-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper {
     padding-top: 100% !important;
   }
 }
@@ -8637,7 +8731,7 @@ body.cart-drawer-open {
   }
 }
 .gummies_offer_wrapper .gummies_offer_container .gummies_offer_text {
-  text-align: center;
+  text-align: left;
   font-size: 15px;
   color: #000;
 }
@@ -8685,6 +8779,16 @@ body.cart-drawer-open {
 .gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper .gummies_offer_terms_and_conditions {
   font-size: 14px;
   margin: auto;
+}
+@media (max-width: 1980px) {
+  .gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper .gummies_offer_terms_and_conditions {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 1050px) {
+  .gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper .gummies_offer_terms_and_conditions {
+    margin-left: 5px;
+  }
 }
 @media (max-width: 767px) {
   .gummies_offer_wrapper .gummies_offer_container .gummies_offer_button_wrapper .gummies_offer_terms_and_conditions {
