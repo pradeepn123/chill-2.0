@@ -25,8 +25,7 @@
               <img class="rimage__image lazyload{% if manual_image_load %}--manual{% endif %} fade-in {% if local_cover %}cover{% endif %}" data-src="{{ img_url }}" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ image.aspect_ratio }}" data-sizes="auto" alt="{{ collection_image.alt | escape }}">
               <div class="image_title">
                 {%- assign collection_title = block.settings.title | default: collection_block.title -%}
-                <h4>{{ collection_title }}
-                </h4>
+                <div class="h4">{{ collection_title }}</div>
                 <h5 class="small-feature-link shop_all">{{ block.settings.coming_soon_link }}</h5>
                 {% if block.settings.shop_all_link != blank %}
                   <a class="small-feature-link shop_all" href="{{ block.settings.shop_all_link }}">{{ 'collections.general.view_all' | t }}
