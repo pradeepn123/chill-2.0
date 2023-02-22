@@ -2209,7 +2209,8 @@ body {
 }
 
 /*section-home-ingredients css here*/
-.section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3 {
+.section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3, 
+  .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h2 {
   font-size: 36px;
   font-family: "Open Sans", sans-serif;
   text-transform: inherit;
