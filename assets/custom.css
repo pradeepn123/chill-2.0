@@ -2216,7 +2216,8 @@ body {
   margin-bottom: 22px;
 }
 @media (min-width: 1200px) {
-  .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3 {
+  .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3, 
+  .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h2 {
     font-size: 52px;
   }
 }
