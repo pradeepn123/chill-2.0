@@ -6,9 +6,9 @@
   <div class="how_it_works_wrapper">
     <!-- <img class="how_it_works_image" src="{{ settings.how_it_works_image | img_url: 'master' }}" alt="How-it-works"> -->
     {% render 'responsive-image', image: settings.how_it_works_image %}
-    <h1 class="how_it_works_title">
+    <div class="how_it_works_title">
       {{ settings.how_it_works_title}}
-    </h1>
+    </div>
     <div class="how_it_works_description">
       {{ settings.how_it_works_description }}
     </div>
@@ -27,7 +27,7 @@
         <!-- <div class="{% if shop.checkout.guest_login %}column column--half{% else %}small-form{% endif %}"> -->
           <div id="customer_drawer">
             <div class="template_header">
-              <h2 class="title account_login_title">{{ 'customer.login.title' | t }}</h2>
+              <p class="title account_login_title sh2">{{ 'customer.login.title' | t }}</p>
               <p class="account_login_sub-title" style="color: #000">{{ settings.account_subtitle }}</p>
             </div>
 
@@ -91,7 +91,7 @@
   
             {% else %}
             <div class="template_header">
-              <h2 class="title account_recoverPassword_title">{{ 'customer.recover_password.title' | t }}</h2>
+              <p class="title account_recoverPassword_title sh2">{{ 'customer.recover_password.title' | t }}</p>
               <p class="account_recoverPassword_sub-title" style="color: #000">{{ settings.account_recoverPassword_subtitle }}</p>
               
             </div>
@@ -119,7 +119,7 @@
 
           <div id="create-customer" style="display:none">
             <div class="template_header">
-              <h2 class="title register_title">{{ 'customer.register.title' | t }}</h2>
+              <p class="title register_title sh2">{{ 'customer.register.title' | t }}</p>
               {{ settings.register_subtitle }}
             </div>
     
