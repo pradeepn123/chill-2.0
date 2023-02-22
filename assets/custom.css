@@ -2222,7 +2222,8 @@ body {
     font-size: 52px;
   }
 }
-.section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3 p {
+.section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3 p,
+.section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h2 p {
   font-size: 36px;
   margin-bottom: 0;
   line-height: 46px;
