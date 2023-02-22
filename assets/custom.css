@@ -2229,7 +2229,8 @@ body {
   line-height: 46px;
 }
 @media (min-width: 1200px) {
-  .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3 p {
+  .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3 p,
+  .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h2 p {
     font-size: 52px;
     line-height: 68px;
   }
