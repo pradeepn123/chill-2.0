@@ -1994,18 +1994,18 @@ body {
   justify-content: space-between;
   margin-bottom: 42px;
 }
-.section-home-collections .home_collection_section .collection_section_wrapper .collection_heading h3 {
+.section-home-collections .home_collection_section .collection_section_wrapper .collection_heading h2 {
   margin-bottom: 0;
   font-size: 36px;
   font-family: "Open Sans", sans-serif;
   text-transform: inherit;
 }
 @media (min-width: 1200px) {
-  .section-home-collections .home_collection_section .collection_section_wrapper .collection_heading h3 {
+  .section-home-collections .home_collection_section .collection_section_wrapper .collection_heading h2 {
     font-size: 52px;
   }
 }
-.section-home-collections .home_collection_section .collection_section_wrapper .collection_heading h3 p {
+.section-home-collections .home_collection_section .collection_section_wrapper .collection_heading h2 p {
   margin-bottom: 0;
 }
 .section-home-collections .home_collection_section .collection_section_wrapper .collection_heading .view-all {
