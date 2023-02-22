@@ -2259,7 +2259,7 @@ body {
 }
 @media (min-width: 768px) {
   .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper ul {
-    justify-content: center;
+    justify-content: center; overflow:hidden; width:100%; max-width:1200;
   }
 }
 .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper ul li {
