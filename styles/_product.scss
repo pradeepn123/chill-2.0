@@ -38,7 +38,7 @@
                                     max-width:100% !important;
                                     .rimage-wrapper{
                                         @media(min-width:1200px){
-                                            padding-top: 80% !important;
+                                            padding-top: 100% !important;
                                         }
                                         .rimage__image{
                                             object-fit: cover;
@@ -917,27 +917,6 @@
     }    
 }
 
-@media (min-width: 1200px){
-    #shopify-section-template--16013749911710__main, 
-    #shopify-section-template--16121400426654__main{
-        #FeaturedMedia-template--16013749911710__main-27865143607454-wrapper,
-        #FeaturedMedia-template--16013749911710__main-27863994499230-wrapper,
-        #FeaturedMedia-template--16013749911710__main-27859860193438-wrapper,
-        #FeaturedMedia-template--16121400426654__main-27865143607454-wrapper,
-        #FeaturedMedia-template--16121400426654__main-27865091571870-wrapper,
-        #FeaturedMedia-template--16121400426654__main-27863994499230-wrapper,
-        #FeaturedMedia-template--16121400426654__main-27859860193438-wrapper,
-        #FeaturedMedia-template--16013749911710__main-27865091571870-wrapper{
-            .product-media {
-                .rimage-outer-wrapper{
-                    .rimage-wrapper {
-                        padding-top: 100% !important;
-                    }
-                }
-            }
-        }      
-    }
-}
 .metafield-gummies-img-mobile{
     display: none;
     @media screen and (max-width:768px){
