@@ -184,25 +184,11 @@
             .navigation__child-tier{
                 .navigation__wide-promotion{
                     padding-top: 40px;
-                    @media(min-width:1200px){
-                        padding-bottom: 8.75rem;
-                    }
                 }
             }
         }
     }
 }
-
-#NavigationTier2-1{
-    .navigation__wide-promotion{
-        // @media(min-width:1200px){
-        //     padding-bottom: 12rem;
-        // }
-        // @media(min-width:1200px){
-        //     padding-bottom: 18rem;
-        // }
-    }
-} 
 
 
 .mega_menu{
@@ -358,6 +344,15 @@
                         display: grid;
                         grid-template-columns: repeat(4, 25%);
                         grid-column-gap: 24px;
+                        @media (min-width: 1300px){
+                            margin-left: 32px;
+                        }
+                        @media (min-width: 1930px){
+                            margin-left: 5%;
+                        }
+                        @media (min-width: 2125px){
+                            margin-left: 8%;
+                        }
                         .ruby-col-3{
                             flex: 0 1 25%;
                             .product_image_wrapper{
