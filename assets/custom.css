@@ -794,11 +794,6 @@ body.overflow-hidden {
 .section-header .navigation .navigation__item .navigation__child-tier .navigation__wide-promotion {
   padding-top: 40px;
 }
-@media (min-width: 1200px) {
-  .section-header .navigation .navigation__item .navigation__child-tier .navigation__wide-promotion {
-    padding-bottom: 8.75rem;
-  }
-}
 
 .mega_menu {
   position: relative;
@@ -960,6 +955,21 @@ body.overflow-hidden {
   display: grid;
   grid-template-columns: repeat(4, 25%);
   grid-column-gap: 24px;
+}
+@media (min-width: 1300px) {
+  .mega_menu .mega_menu_title .menu-mega-nav li .ruby-grid .ruby-row {
+    margin-left: 32px;
+  }
+}
+@media (min-width: 1930px) {
+  .mega_menu .mega_menu_title .menu-mega-nav li .ruby-grid .ruby-row {
+    margin-left: 5%;
+  }
+}
+@media (min-width: 2125px) {
+  .mega_menu .mega_menu_title .menu-mega-nav li .ruby-grid .ruby-row {
+    margin-left: 8%;
+  }
 }
 .mega_menu .mega_menu_title .menu-mega-nav li .ruby-grid .ruby-row .ruby-col-3 {
   flex: 0 1 25%;
