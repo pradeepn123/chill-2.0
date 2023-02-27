@@ -19,7 +19,7 @@
                   <a class="filter-group__applied-item" href="{{ value.url_to_remove }}">
                     <span class="filter-group__applied-item__text">
                       {% if filter.type == 'boolean' %}
-                        {{ filter.label | escape  }}:
+                        {{ filter.label | escape }}:
                       {% endif %}
                       {{ value.label | escape }}
                     </span>
@@ -178,7 +178,7 @@
         {%- endfor -%}
       {%- endif -%}
 
-      {% if section.settings.coll_show_sort %}
+      {% comment %} {% if section.settings.coll_show_sort %}
         <div class="filter-group mobile-only">
           <a href="#" class="filter-group__heading" data-toggle-target=".filter-group--sort">
             <div class="filter-group__heading__text">{{ 'collections.sorting.title' | t }}</div>
@@ -203,7 +203,7 @@
             </div>
           </div>
         </div>
-      {% endif %}
+      {% endif %} {% endcomment %}
 
       <noscript>
         <button type="submit" class="btn">{{ 'collections.filtering.submit' | t }}</button>

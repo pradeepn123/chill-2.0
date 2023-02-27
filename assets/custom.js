@@ -758,3 +758,10 @@ theme.customAddToCart = function(e) {
 //     .fadeOut(100)
 //     .off("click", theme.closeDrawerCart.bind(theme))
 // };
+var sortByButton = document.getElementById('sort-dropdown-heading').addEventListener('click', 
+    function(){
+        document.querySelector('.link-dropdown__button').toggleAttribute('disabled');
+        document.querySelector('.link-dropdown__button-icon').toggleAttribute('active')
+    }
+)
+
