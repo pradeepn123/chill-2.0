@@ -1386,23 +1386,25 @@ body.overflow-hidden {
   padding: 10px 0;
   transform: translateY(15px);
 }
-@media (max-width: 767px) {
+@media (min-width: 378px) and (max-width: 767px) {
   .filter_coll .utility-bar-main .utility-bar__right .utility-bar__item .link-dropdown .link-dropdown__button-text {
     width: 230px;
     position: absolute;
     right: calc(100% - 15vw);
   }
 }
-@media (max-width: 999px) {
+@media (min-width: 768px) and (max-width: 999px) {
   .filter_coll .utility-bar-main .utility-bar__right .utility-bar__item .link-dropdown .link-dropdown__button-text {
     position: absolute;
     width: 350px;
     right: calc(100% - 10vw);
   }
 }
-@media (max-width: 374px) {
+@media (max-width: 375px) {
   .filter_coll .utility-bar-main .utility-bar__right .utility-bar__item .link-dropdown .link-dropdown__button-text {
     width: 200px;
+    position: absolute;
+    right: calc(100% - 25vw);
   }
 }
 .filter_coll .utility-bar-main .utility-bar__right .utility-bar__item .link-dropdown .link-dropdown__button-text .link-dropdown__link {
@@ -1513,6 +1515,7 @@ body.overflow-hidden {
 }
 .custom_collection_block .filter-container .container .applied_filters .filter-group__clear-row .filter-group__clear-link {
   padding: 10px 15px;
+  font-weight: 700;
 }
 .custom_collection_block .filter-container .container .applied_filters .filter-group__applied-item, .custom_collection_block .filter-container .container .applied_filters .filter-group__clear-link {
   background: #fff;
@@ -1552,6 +1555,7 @@ body.overflow-hidden {
   font-weight: 900;
 }
 .custom_collection_block .filter-container .filters .filters__inner .filter-group--applied {
+  width: fit-content;
   text-align: center;
   border: 1px solid #707070;
   border-radius: 25px;
@@ -1586,6 +1590,15 @@ body.overflow-hidden {
 .custom_collection_block .filter-container .filters .filters__inner #CollectionFilterForm .filter-group__item__text::after {
   border-radius: 4px;
   background-color: #83C3A1;
+}
+
+.filter-group__items .toggle-target-container .filter_limited .loadmore {
+  color: #9692DE;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
 }
 
 bugherd-sidebar {

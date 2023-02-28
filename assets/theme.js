@@ -3825,12 +3825,23 @@
     $(document).on('click' + this.namespace, function () {
       $('.link-dropdown__button[aria-expanded="true"]').trigger('click');
     });
+    
+    // $(document).on('click', function (e) {
+    //   if(!e.target.matches('.link-dropdown__sort_text')){
+    //     $('#sort-dropdown-heading').trigger('click');
+    //   }
+    //   // $('.link-dropdown__button[aria-expanded="true"]').trigger('click');
+    // });
 
     if (document.querySelector('.utility-bar')) {
       // duplicate utility bar for mobile
       var $utilBarClone = $('.utility-bar').clone().addClass('utility-bar--sticky-mobile-copy').removeAttr('data-ajax-container').insertAfter('.utility-bar');
       // ensure unique ids
-      theme.suffixIds($utilBarClone[0], 'dupe');
+      $utilBarClone.click(() => {
+        document.querySelector('.utility-bar--sticky-mobile-copy .link-dropdown__button').toggleAttribute('disabled');
+        document.querySelector('.utility-bar--sticky-mobile-copy .link-dropdown__button-icon').toggleAttribute('active');
+      })
+      // theme.suffixIds($utilBarClone[0], 'dupe');
 
       this.previousScrollTop = window.scrollY;
       $(window).on('throttled-scroll' + this.namespace, this.functions.checkStickyScroll.bind(this));
@@ -3862,7 +3873,7 @@
       $(document).off(this.namespace);
     }.bind(this);
   };
-
+  
   theme.buildGalleryViewer = function (config) {
     // create viewer
     var $allContainer = $('<div class="gallery-viewer gallery-viewer--pre-reveal">'),

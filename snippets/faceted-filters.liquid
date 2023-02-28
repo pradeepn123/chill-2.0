@@ -147,25 +147,50 @@
                   <div class="toggle-target-container">
                     {% case filter.type %}
                     {% when 'boolean' or 'list' %}
-                      {%- for value in filter.values -%}
-                        {%- if section.settings.show_disabled_filters or value.count > 0 or value.active -%}
-                          <label class="filter-group__item{% if value.active %} filter-group__item--active{% endif %}{% if value.count == 0 and value.active == false %} filter-group__item--disabled{% endif %}" data-tag="{{ value.label | handle }}"{% if filter_group_is_swatch %} data-swatch="{{ value.label | replace: '"', '' | downcase }}"{% endif %}>
-                            <input class="filter-group__checkbox"
-                              id="Filter-{{ value.param_name }}-{{ value.value | handle }}"
-                              type="checkbox"
-                              name="{{ value.param_name }}"
-                              value="{{ value.value | escape }}"
-                              {% if value.active %}checked{% endif %}
-                              {% if value.count == 0 and value.active == false %}disabled{% endif %}>
-
-                            <span class="filter-group__item__text">{{ value.label }}</span>
-                            {% if section.settings.show_filter_counts and filter_group_is_swatch == false %}
-                              <span class="filter-group__item__count">{{ value.count }}</span>
-                            {% endif %}
-                          </label>
-                        {%- endif -%}
-                      {%- endfor -%}
-
+                      <div class="filter_limited" style="display: block">
+                        {%- for value in filter.values limit: 7 -%}
+                          {%- if section.settings.show_disabled_filters or value.count > 0 or value.active -%}
+                            <label class="filter-group__item{% if value.active %} filter-group__item--active{% endif %}{% if value.count == 0 and value.active == false %} filter-group__item--disabled{% endif %}" data-tag="{{ value.label | handle }}"{% if filter_group_is_swatch %} data-swatch="{{ value.label | replace: '"', '' | downcase }}"{% endif %}>
+                              <input class="filter-group__checkbox"
+                                id="Filter-{{ value.param_name }}-{{ value.value | handle }}"
+                                type="checkbox"
+                                name="{{ value.param_name }}"
+                                value="{{ value.value | escape }}"
+                                {% if value.active %}checked{% endif %}
+                                {% if value.count == 0 and value.active == false %}disabled{% endif %}>
+                              
+                              <span class="filter-group__item__text">{{ value.label }}</span>
+                              {% if section.settings.show_filter_counts and filter_group_is_swatch == false %}
+                                <span class="filter-group__item__count">{{ value.count }}</span>
+                              {% endif %}
+                            </label>
+                          {%- endif -%}
+                        {%- endfor -%}
+                        {% if filter.values.size > 7 %}
+                          <div class="loadmore" data-forloop="{{ forloop.index | plus: 1 }}">+{{ filter.values.size | minus: 7 }} more </div>
+                        {% endif %}
+                      </div>
+                      
+                      <div class="filter_full" style="display: none">
+                        {%- for value in filter.values -%}
+                          {%- if section.settings.show_disabled_filters or value.count > 0 or value.active -%}
+                            <label class="filter-group__item{% if value.active %} filter-group__item--active{% endif %}{% if value.count == 0 and value.active == false %} filter-group__item--disabled{% endif %}" data-tag="{{ value.label | handle }}"{% if filter_group_is_swatch %} data-swatch="{{ value.label | replace: '"', '' | downcase }}"{% endif %}>
+                              <input class="filter-group__checkbox"
+                                id="Filter-{{ value.param_name }}-{{ value.value | handle }}"
+                                type="checkbox"
+                                name="{{ value.param_name }}"
+                                value="{{ value.value | escape }}"
+                                {% if value.active %}checked{% endif %}
+                                {% if value.count == 0 and value.active == false %}disabled{% endif %}>
+                              
+                              <span class="filter-group__item__text">{{ value.label }}</span>
+                              {% if section.settings.show_filter_counts and filter_group_is_swatch == false %}
+                                <span class="filter-group__item__count">{{ value.count }}</span>
+                              {% endif %}
+                            </label>
+                          {%- endif -%}
+                        {%- endfor -%}
+                      </div>
                     {% when 'price_range' %}
                       {% render 'price-range', filter: filter %}
 
