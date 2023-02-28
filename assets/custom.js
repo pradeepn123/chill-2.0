@@ -333,7 +333,7 @@ function customFeatureProductSubcriptionEvents (){
         sortDropdownHeading.addEventListener('click',  function() {
             if (document.querySelector('.utility-bar .link-dropdown__button').hasAttribute('disabled')) {
                 document.querySelector('.utility-bar .link-dropdown__button').removeAttribute('disabled');
-                document.addEventListener('click', handleDocumentClick)
+                document.addEventListener('click', handleDocumentClick);
             } else {
                 document.querySelector('.utility-bar .link-dropdown__button').setAttribute('disabled', 'disabled');
                 document.removeEventListener('click', handleDocumentClick);
@@ -341,6 +341,15 @@ function customFeatureProductSubcriptionEvents (){
 
             document.querySelector('.utility-bar .link-dropdown__button-icon').toggleAttribute('active');
         })
+    }
+
+    var loadMoreFilters = document.querySelectorAll('.loadmore');
+    if (loadMoreFilters.length) {
+        loadMoreFilters.forEach(el => el.addEventListener('click', function() {
+            var forloopIndex = this.dataset.forloop;
+            document.querySelectorAll('.filter-group--' + forloopIndex + ' .filter_full').forEach(el => el.style.display = 'block');
+            document.querySelectorAll('.filter-group--' + forloopIndex + ' .filter_limited').forEach(el => el.style.display = 'none');
+        }))
     }
 }
 
@@ -732,13 +741,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
-var loadMoreFilter = document.querySelectorAll('.loadmore');
-    loadMoreFilter.forEach(el => el.addEventListener('click', function(){
-        var forloopIndex = this.dataset.forloop;
-        document.querySelectorAll('.filter-group--' + forloopIndex + ' .filter_full').forEach(el => el.style.display = 'block');
-        document.querySelectorAll('.filter-group--' + forloopIndex + ' .filter_limited').forEach(el => el.style.display = 'none');
-    })
-    )
 theme.customAddToCart = function(e) {
     e.preventDefault()
     const $form = $(this)
