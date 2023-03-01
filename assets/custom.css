@@ -8550,6 +8550,18 @@ body.cart-drawer-open {
   padding: 38px 0;
 }
 
+.custom_collection_main {
+  background: #F2F2F3;
+}
+.custom_collection_main .filter-container .filters .filters__inner {
+  top: 0;
+}
+@media (max-width: 999px) {
+  .custom_collection_main .utility-bar-main {
+    margin-bottom: 0 !important;
+  }
+}
+
 .claim_drawer_background {
   position: fixed;
   top: 0;
