@@ -1275,7 +1275,7 @@ body.overflow-hidden {
 }
 @media (min-width: 768px) {
   .filter_coll .utility-bar-main .utility-bar {
-    padding: 12px;
+    padding: 12px 0;
     align-items: center;
   }
 }
@@ -1309,8 +1309,18 @@ body.overflow-hidden {
 }
 @media (max-width: 457px) {
   .filter_coll .utility-bar-main .utility-bar__right {
-    flex-direction: column;
     align-items: end;
+  }
+  .filter_coll .utility-bar-main .utility-bar__right .filter_text {
+    display: none;
+  }
+  .filter_coll .utility-bar-main .utility-bar__right .utility-bar__item:first-child {
+    border-right: 2px solid #676869;
+    height: 30px;
+  }
+  .filter_coll .utility-bar-main .utility-bar__right .utility-bar__item:nth-child(2) {
+    margin-inline-start: unset;
+    margin: auto 0;
   }
 }
 @media (max-width: 767px) {

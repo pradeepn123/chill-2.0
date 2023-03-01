@@ -3662,7 +3662,7 @@
 
         // append query vars onto sort urls (e.g. filters, vendor collection)
         if (location.href.indexOf('?') >= 0) {
-          $('#sort-dropdown-options .link-dropdown__link', this.$container).each(function () {
+          $('.link-dropdown__button .link-dropdown__link', this.$container).each(function () {
             var queryTerms = location.href.split('?')[1].split('&');
             var newHref = $(this).attr('href');
             queryTerms.forEach(term => {
@@ -3707,21 +3707,23 @@
         if (evt.type === 'submit') {
           evt.preventDefault();
         }
-        var queryVals = [];
+
+        var sort_by = new URLSearchParams(window.location.search).get("sort_by")
+        var queryVals = queryVals = new URLSearchParams();
+        if (sort_by) {
+          queryVals.append("sort_by", sort_by)
+        }
+
         evt.currentTarget.querySelectorAll('input, select').forEach(input => {
           if (
           (input.type !== 'checkbox' && input.type !== 'radio' || input.checked) && // is an active input value
           input.value !== '' // has a value
           ) {
-              queryVals.push([input.name, encodeURIComponent(input.value)]);
+              queryVals.append(input.name, input.value);
             }
         });
         // new url
-        var newUrl = location.pathname;
-        queryVals.forEach(value => {
-          newUrl += "&".concat(value[0], "=").concat(value[1]);
-        });
-        newUrl = newUrl.replace('&', '?');
+        newUrl = location.pathname + "?" + queryVals.toString();
         // load
         this.functions.ajaxLoadUrl.call(this, newUrl);
       },

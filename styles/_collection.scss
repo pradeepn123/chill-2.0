@@ -86,7 +86,7 @@
             align-items: flex-start;
             margin-bottom: 0;
             @media(min-width:768px){
-                padding: 12px;
+                padding: 12px 0;
                 align-items: center;
                 // flex-direction: row;
             }
@@ -119,8 +119,21 @@
         }
         .utility-bar__right{
             @media (max-width: 457px){
-                flex-direction: column;
+                // flex-direction: column;
                 align-items: end;
+                .filter_text{
+                    display: none;
+                }
+                .utility-bar__item{
+                    &:first-child{
+                        border-right: 2px solid #676869;
+                        height: 30px;
+                    }
+                    &:nth-child(2){
+                        margin-inline-start: unset;
+                        margin: auto 0;
+                    }
+                }
             }
             @media (max-width: 767px){
                 justify-content: space-between !important;
