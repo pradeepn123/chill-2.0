@@ -164,3 +164,18 @@
 #shopify-section-template--16050208407710__main .utility-bar{
     padding: 38px 0;
 }
+.custom_collection_main{
+    background: #F2F2F3;
+    .filter-container{
+        .filters{
+            .filters__inner{
+                top: 0;
+            }
+        }
+    } 
+    @media (max-width: 999px){
+        .utility-bar-main{
+            margin-bottom: 0 !important;
+        }
+    }
+}
