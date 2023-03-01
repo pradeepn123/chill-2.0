@@ -116,6 +116,7 @@
             }
         }
         .utility-bar__right{
+            margin: auto 0;
             @media (max-width: 457px){
                 align-items: end;
                 .filter_text{
@@ -177,6 +178,9 @@
                             text-transform: uppercase;
                             font-family: 'Open Sans', sans-serif;
                             cursor: pointer;
+                            @media (max-width: 465px){
+                                font-size: 14px;
+                            }
                             &:hover{
                                 border-bottom: 2px solid #000000;
                             }
@@ -186,6 +190,8 @@
                             position: unset !important;
                             cursor: pointer;
                             transform: translateY(25%) rotate(0deg);
+                            margin-inline-end: unset;
+                            
                             svg{
                                 color: #000;
                             }
