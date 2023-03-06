@@ -1061,6 +1061,7 @@
         "blocks": {
           "721b392b-54e3-4cd9-ae56-3cddef5b2b48": {
             "type": "menu-promotion-large",
+            "disabled": true,
             "settings": {
               "dropdown_link_title": "shop",
               "collection_title": "",
@@ -1070,6 +1071,7 @@
           },
           "1b792ef3-cee8-4951-be61-e8cc8c94491c": {
             "type": "menu-promotion-large",
+            "disabled": true,
             "settings": {
               "dropdown_link_title": "shop",
               "collection_title": "",
@@ -1079,6 +1081,7 @@
           },
           "55dfc561-5ebf-4ef6-8975-0757fbd445b6": {
             "type": "menu-promotion-large",
+            "disabled": true,
             "settings": {
               "dropdown_link_title": "shop",
               "collection_title": "",
@@ -1088,6 +1091,7 @@
           },
           "23c0306f-1487-4db5-aa13-d1d45daf6490": {
             "type": "menu-promotion-large",
+            "disabled": true,
             "settings": {
               "dropdown_link_title": "Shop",
               "collection_title": "Mad Tasty",
@@ -1097,6 +1101,7 @@
           },
           "60e60139-618d-4044-8f92-55d5ef5f105e": {
             "type": "menu-promotion-large",
+            "disabled": true,
             "settings": {
               "dropdown_link_title": "shop",
               "collection_title": "",
@@ -1126,6 +1131,7 @@
           },
           "462d1ed8-7f97-47f8-9e74-db23e4211021": {
             "type": "menu-promotion-large",
+            "disabled": true,
             "settings": {
               "dropdown_link_title": "Brands",
               "collection_title": "Mad Tasty",
@@ -1135,6 +1141,7 @@
           },
           "9c575c71-0296-4c71-9fa4-22420e39e142": {
             "type": "menu-promotion-large",
+            "disabled": true,
             "settings": {
               "dropdown_link_title": "Brands",
               "collection_title": "Chill",
@@ -1165,7 +1172,7 @@
           "mega_collection_heading": "By Collection",
           "shop_text": "Shop All",
           "shop_link": "shopify:\/\/collections\/shop-all",
-          "menu_linklist": "new-main-menu",
+          "menu_linklist": "new-mega-menu",
           "menu_linklist_mobile": "",
           "menu_layout": "inline-menu-left",
           "nav_featured_link": "Sale",

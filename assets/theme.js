@@ -4253,6 +4253,7 @@
         } else {
           $(this).parent().removeClass('navigation__item--open');
           $(this).siblings('.navigation__tier-3-container').css('height', '');
+          $(this).siblings('.navigation__tier-3-container').css('transition', 'height 350ms cubic-bezier(.55,.03,.37,.96)');
         }
       });
 

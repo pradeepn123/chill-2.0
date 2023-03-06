@@ -1561,5 +1561,25 @@
         "label": "Terms and Conditions text"
       }
     ]
+  },
+  {
+    "name": "Navbar promotion block",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "new_in_image",
+        "label": "New-in promotion image"
+      },
+      {
+        "type": "image_picker",
+        "id": "sale_image",
+        "label": "Sale Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "promotion_banner",
+        "label": "Promotion Banner"
+      }
+    ]
   }
 ]
