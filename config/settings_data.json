@@ -1014,7 +1014,7 @@
     "prod_thumb_mob_per_row": "1",
     "prod_thumb_text_align": "left",
     "prod_thumb_hover_image": true,
-    "prod_thumb_show_subtitle": false,
+    "prod_thumb_show_subtitle": true,
     "quickbuy_style": "off",
     "prod_block_label_loc": "top left",
     "prod_reduction_show": false,
