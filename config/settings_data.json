@@ -985,7 +985,7 @@
     "prod_over_new_text": "#808284",
     "prod_over_new_bg": "#ffffff",
     "prod_over_meta_text": "#ffffff",
-    "prod_over_meta_bg": "#09728c",
+    "prod_over_meta_bg": "#92a6e4",
     "prod_label_sale_text": "#df5641",
     "prod_label_sold_text": "#171717",
     "prod_label_pre_text": "#60a57e",
@@ -1055,6 +1055,14 @@
     "gummies_offer_text": "<p>🎉 Yey! You are now eligible for a 👉  <strong>50% Discount<\/strong> on the Tropical and Berry CBD gummies. Add as many quantity as you’d like  😍  for <strong>Flat 50% Off<\/strong>.<\/p>",
     "cart_button_url": "shopify:\/\/collections\/gummies-offer",
     "terms_and_conditions": "Limited period offer only, T&C Apply.",
+    "new_in_gif": "<iframe src=\"https:\/\/giphy.com\/embed\/sBOuxu0YKcGFQZXYmt\" width=\"480\" height=\"301\" frameborder=\"0\" class=\"giphy-embed\" allowfullscreen=\"\"><\/iframe>",
+    "new_in_link": "shopify:\/\/collections\/new-in",
+    "sale_gif": "<iframe src=\"https:\/\/giphy.com\/embed\/LiZa2iGWbYe9aCfIiG\" width=\"480\" height=\"301\" frameborder=\"0\" class=\"giphy-embed\" allowfullscreen><\/iframe>",
+    "sale_link": "shopify:\/\/collections\/sales",
+    "promotion_banner": "shopify:\/\/shop_images\/CHILL_BANNER.jpg",
+    "promotion_banner_text": "<p>FLAT 20% OFF <\/p><p>ON ALL GUMMIES<\/p>",
+    "promotion_banner_text_mobile": "<p>FLAT 20%<\/p><p><strong>OFF<\/strong> <\/p>",
+    "promotion_banner_link": "shopify:\/\/collections\/gummies-offer",
     "sections": {
       "header": {
         "type": "header",
