@@ -72,3 +72,9 @@
 }
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+jQuery(document).ready(function(){
+	jQuery(".utility-bar--sticky-mobile-copy h1").each(function() {
+		jQuery("<p class='pagetitle h3-style'>" + jQuery(this).html() + "</p>").replaceAll(this);
+	});
+});
