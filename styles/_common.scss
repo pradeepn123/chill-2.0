@@ -421,6 +421,9 @@ body.overflow-hidden {
                         font-weight: 600;
                         padding: 20px;
                         font-family: 'Open Sans', sans-serif;
+                        @media (max-width: 320px){
+                            font-size: 14px;
+                        }
                     }
                     #NavigationTier2-1-mob{
                         .navigation__wide-promotion{
