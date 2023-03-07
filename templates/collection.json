@@ -64,7 +64,7 @@
         "grid": 3,
         "show_vendor": true,
         "show_total": false,
-        "coll_desc_pos": "above",
+        "coll_desc_pos": "below",
         "enable_filtering": true,
         "collapse_tag_sidebar_by_default": false,
         "collapse_filters_method": "over-12",
