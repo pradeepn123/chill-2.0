@@ -226,7 +226,7 @@
                 <h1 class="pagetitle h3-style">{{ collection.title | escape }}</h1>
                   {% if collection.handle == 'shop-all' %}
                     <script>
-                      jQuery(".utility-bar--sticky-mobile-copy h1").remove();
+                      $(".utility-bar--sticky-mobile-copy h1").remove();
                     </script>
                   {% endif %}
                 {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
