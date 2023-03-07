@@ -116,6 +116,14 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5B4X79G');</script>
   <!-- End Google Tag Manager -->
+
+{% if collection.handle == 'shop-all' %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+jQuery(".utility-bar--sticky-mobile-copy h1").remove();
+</script>
+{% endif %}
+
 </head>
 
 <body class="template-{{ template | split: '.' | first | handle }}
