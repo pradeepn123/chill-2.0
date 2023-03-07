@@ -222,9 +222,8 @@
           <div class="utility-bar" style="flex-direction: {% if section.settings.coll_show_sort_as_scroll == true %} column {% else %} row {% endif %};" data-ajax-container data-ajax-scroll-to>
             <div class="utility-bar__left">
               <!-- <div class="page-header page-header--with-upper-spacing"></div> -->
-  <h1 class="pagetitle h3-style">{{ collection.title | escape }}</h1>
               <div class="page-header">
-                
+                <h1 class="pagetitle h3-style">{{ collection.title | escape }}</h1>
                 {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
                   <div class="rte cf align-center reading-width">{{ collection.description }}</div>
                 {% endif %}
