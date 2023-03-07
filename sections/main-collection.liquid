@@ -223,11 +223,7 @@
             <div class="utility-bar__left">
               <!-- <div class="page-header page-header--with-upper-spacing"></div> -->
               <div class="page-header">
-               {% if collection.handle == 'shop-all' %}
-                   <h1 class="">{{ collection.title | escape }}</h1>
-                {% else %}
-                   <h1 class="pagetitle h3-style">{{ collection.title | escape }}</h1>
-                {% endif %}
+                <h1 class="pagetitle h3-style">{{ collection.title | escape }}</h1>
                 {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
                   <div class="rte cf align-center reading-width">{{ collection.description }}</div>
                 {% endif %}
