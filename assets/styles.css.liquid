@@ -2208,16 +2208,19 @@ table {
   .pageheader--layout-inline-permitted + #main-nav .navigation--main .navigation__tier-1 {
     height: 0;
   }
-  .pageheader--layout-inline-permitted + #main-nav .navigation--main .navigation__tier-1 > .navigation__item > .navigation__link,
-  .pageheader--layout-inline-permitted + #main-nav .navigation--main .navigation__tier-1 > .navigation__item > .navigation__children-toggle {
-    display: none;
-  }
+  
   .pageheader--layout-inline-permitted + #main-nav .navigation--main .navigation__tier-2-container {
     border-top: 0;
   }
 
   .logo-area__middle--logo-image {
     line-height: 0;
+  }
+}
+@media (min-width: 1200px){
+  .pageheader--layout-inline-permitted + #main-nav .navigation--main .navigation__tier-1 > .navigation__item > .navigation__link,
+  .pageheader--layout-inline-permitted + #main-nav .navigation--main .navigation__tier-1 > .navigation__item > .navigation__children-toggle {
+    display: none !important;
   }
 }
 .header-disclosures {
@@ -2568,9 +2571,10 @@ table {
   .navigation .navigation__item--with-small-menu > .navigation__tier-2-container {
     display: block;
     left: 0;
-    width: max-content;
+    width: 100%;
+    /* width: max-content;
     min-width: 170px;
-    max-width: 280px;
+    max-width: 280px; */
     border-left: 1px solid{{ head_nav_div_col }};
     border-right: 1px solid{{ head_nav_div_col }};
   }
@@ -2645,9 +2649,9 @@ table {
     text-transform: uppercase;
     opacity: 0.7;
   }
-  .navigation .navigation__columns .navigation__column:not(.navigation__column--promotion) .navigation__children-toggle {
+  /* .navigation .navigation__columns .navigation__column:not(.navigation__column--promotion) .navigation__children-toggle {
     display: none;
-  }
+  } */
   .navigation .navigation__columns .navigation__column:not(.navigation__column--promotion) .navigation__tier-3 {
     display: block;
   }
@@ -2726,7 +2730,7 @@ table {
 }
 @media(min-width:1200px) {
   .navigation .navigation__children-toggle {
-    display: none;
+    display: none !important;
   }
 }
 @media(min-width: 1000px) {
