@@ -1573,7 +1573,7 @@
       {
         "type": "html",
         "id": "new_in_gif",
-        "info": "Upload .gif file to GIPHY and add the embedded code here. NOTE: Add code from <iframe> to </iframe> only.",
+        "info": "Upload .gif file to GIPHY and add the embedded code here. NOTE: Add code from <iframe> to <\/iframe> only.",
         "label": "New-in promotion GIF"
       },
       {
@@ -1588,7 +1588,7 @@
       },
       {
         "type": "html",
-        "info": "Upload .gif file to GIPHY and add the embedded code here. NOTE: Add code from <iframe> to </iframe> only.",
+        "info": "Upload .gif file to GIPHY and add the embedded code here. NOTE: Add code from <iframe> to <\/iframe> only.",
         "id": "sale_gif",
         "label": "Sale GIF"
       },
