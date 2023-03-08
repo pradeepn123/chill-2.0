@@ -2295,7 +2295,7 @@ table {
   opacity: 0;
   transition: opacity 500ms cubic-bezier(0.55, 0.03, 0.37, 0.96);
 }
-@media(max-width: 767.98px) {
+@media(max-width: 1199px) {
   .page-shade,
   .header-shade {
     z-index: 7000;
@@ -3101,9 +3101,10 @@ body:not(.reveal-mobile-nav) .mobile-navigation-drawer .mobile-navigation-drawer
   transition-delay: 0s;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1199px) {
   .reveal-mobile-nav .page-shade,
-  .reveal-mobile-nav .header-shade {
+  .reveal-mobile-nav .header-shade,
+  .page-shade {
     height: 100%;
     opacity: 1;
     pointer-events: auto;
