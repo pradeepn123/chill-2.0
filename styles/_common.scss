@@ -78,8 +78,15 @@ body.overflow-hidden {
                                     overflow: hidden;
                                 }
                                 .product-price{
-
+ 
                                 }                                        
+                            }
+                            .vendor_redirection{
+                                font-size: 18px;
+                                span{
+                                    color: #000;
+                                    font-weight: 600;
+                                }
                             }
                             .product-block__rating{
                                 font-size: 16px;

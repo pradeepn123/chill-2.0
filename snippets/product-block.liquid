@@ -154,7 +154,7 @@
               <div class="product-block__title">{{ product.title }}
               </div>
               <div class="vendor">{{ product.metafields.custom.product_varient_pack }}</div>
-
+              
 
               {%- if settings.prod_thumb_show_subtitle and product.metafields.descriptors.subtitle != blank -%}
                 <div class="product-block__subtitle">{{ product.metafields.descriptors.subtitle }}
@@ -188,6 +188,7 @@
 
               {% render 'unit-price', variant: cheapest_variant %}
             </a>
+            <a href="/collections/{% if product.vendor == 'CHILL' %}shop {% else %}{{product.vendor }}{% endif %}" class="vendor_redirection">By <span>{{ product.vendor | camelcase }}</span></a>
             {%- if settings.enable_product_reviews_collection and product.metafields.reviews.rating_count != blank -%}
               {%- assign rating_count = product.metafields.reviews.rating_count | plus: 0 -%}
               {%- if rating_count > 0 -%}
