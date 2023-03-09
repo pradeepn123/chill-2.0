@@ -7409,7 +7409,6 @@
       return false;
     }).appendTo('body');
 
-
     if (theme.settings.quickbuy_style != 'off') {
       theme.loadQuickbuy();
     }
