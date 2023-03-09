@@ -1731,6 +1731,9 @@ body.overflow-hidden {
     padding: 12px 0 20px 0;
   }
 }
+.filter_coll .utility-bar-main .utility-bar--sticky-mobile-copy {
+  padding: 12px 12px 20px 12px;
+}
 @media (max-width: 320px) {
   .filter_coll .utility-bar-main .utility-bar--sticky-mobile-copy {
     padding: 12px 12px 20px 12px;
