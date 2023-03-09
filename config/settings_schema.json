@@ -1577,7 +1577,7 @@
         "label": "New-in promotion GIF"
       },
       {
-        "type": "url",
+        "type": "collection",
         "id": "new_in_link",
         "label": "New-in link"
       },
@@ -1593,7 +1593,7 @@
         "label": "Sale GIF"
       },
       {
-        "type": "url",
+        "type": "collection",
         "id": "sale_link",
         "label": "Sale link"
       },
