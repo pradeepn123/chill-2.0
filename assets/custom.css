@@ -3727,6 +3727,8 @@ body {
 .section-main-product .product-detail .detail .product-form .vendor_redirection {
   font-size: 18px;
   color: #BBBBBB;
+  display: block;
+  margin: 15px 0;
 }
 .section-main-product .product-detail .detail .product-form .vendor_redirection span {
   color: #000;
@@ -3734,10 +3736,11 @@ body {
 }
 .section-main-product .product-detail .detail .product-form .product_variant {
   font-size: 14px;
-  color: #676869;
+  color: #000;
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
-  cursor: none;
+  font-weight: 600;
+  font-size: 16px;
 }
 .section-main-product .product-detail .detail .product-form .product_variant.underline {
   font-size: 16px;
