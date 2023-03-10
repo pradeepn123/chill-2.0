@@ -189,6 +189,7 @@
               {% render 'unit-price', variant: cheapest_variant %}
             </a>
             <a href="/collections/{% if product.vendor == 'CHILL' %}shop {% else %}{{product.vendor }}{% endif %}" class="vendor_redirection">By <span>{{ product.vendor | camelcase }}</span></a>
+           
             {%- if settings.enable_product_reviews_collection and product.metafields.reviews.rating_count != blank -%}
               {%- assign rating_count = product.metafields.reviews.rating_count | plus: 0 -%}
               {%- if rating_count > 0 -%}
