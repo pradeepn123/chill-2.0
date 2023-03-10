@@ -165,6 +165,9 @@
 
             </div>
 
+            {% when 'vendor_redirection' %}
+              <a href="/collections/{% if product.vendor == 'CHILL' %}shop {% else %}{{product.vendor }}{% endif %}" class="vendor_redirection">By <span>{{ product.vendor | camelcase }}</span></a>
+
             {% when 'description' %}
             <div class="{% unless block.settings.show_in_quickbuy %}not-in-quickbuy{% endunless %}{% if block.settings.show_in_tab %} product-detail-accordion{% endif %}" {{ block.shopify_attributes }}>
               {% if block.settings.show_in_tab %}
@@ -983,6 +986,11 @@
       {
         "type": "title",
         "name": "Title",
+        "limit": 1
+      },
+      {
+        "type": "vendor_redirection",
+        "name": "Vendor redirection",
         "limit": 1
       },
       {
