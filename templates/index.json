@@ -699,7 +699,7 @@
           "type": "heading",
           "settings": {
             "title": "<p>Discover <strong>@choosechill<\/strong><\/p>",
-            "use_h1": false
+            "use_h1": true
           }
         }
       },
