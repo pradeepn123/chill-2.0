@@ -18,7 +18,7 @@
       "type": "blog-featured-collection",
       "settings": {
         "title": "<p>Related <strong>Products<\/strong><\/p>",
-        "collection": "",
+        "collection": "mad-tasty-sample-pack-wellness-boost",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 3,
