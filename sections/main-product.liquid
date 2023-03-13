@@ -166,8 +166,16 @@
             </div>
 
             {% when 'vendor_redirection' %}
-              {{ request.page_type }}
-              <a href="/collections/{% if product.vendor == 'CHILL' %}shop {% else %}{{product.vendor }}{% endif %}" class="vendor_redirection">By <span>{{ product.vendor | camelcase }}</span></a>
+                <a href="/collections/
+                  {%- if product.vendor == 'CHILL' -%}
+                    shop-all 
+                  {%- elsif product.vendor == 'MAD TASTY' -%}
+                    mad-tasty-sample-pack-wellness-boost
+                  {%- else -%}
+                    {{ product.vendor | replace: ' ', '-' }}
+                  {%- endif -%}" 
+                  class="vendor_redirection">By <span>{{ product.vendor | camelcase }}</span>
+                </a>
 
             {% when 'description' %}
             <div class="{% unless block.settings.show_in_quickbuy %}not-in-quickbuy{% endunless %}{% if block.settings.show_in_tab %} product-detail-accordion{% endif %}" {{ block.shopify_attributes }}>
@@ -229,7 +237,7 @@
                 <p>{{ product.metafields.custom.product_varient_pack }}</p>
               {% endcomment %}
             
-            <a class="product_variant {% if product.metafields.custom.product_varient_pack.value == 'Mad Tasty' %} underline{% endif %}" {% if product.metafields.custom.product_varient_pack.value == 'Mad Tasty' %} href="{{ collections.mad-tasty-sample-pack-wellness-boost.url }}" {% else %} href="#"{% endif %}><span>{{ product.metafields.custom.product_varient_pack }}</span></a>
+            <a class="product_variant " href="#"><span>{{ product.metafields.custom.product_varient_pack }}</span></a>
 
             {% when 'pro_custom_icon' %}
             {% if product.metafields.settings.product_icons.value != blank %}
