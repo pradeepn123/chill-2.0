@@ -14,21 +14,16 @@
           "settings": {
           }
         },
-        "vendor": {
-          "type": "vendor",
-          "settings": {
-          }
-        },
-        "6b345a01-57af-4406-9f67-64b26daa1a5c": {
-          "type": "vendor_redirection",
-          "settings": {
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
             "show_tax_and_shipping": false,
             "enable_product_reviews_by_price": true
+          }
+        },
+        "vendor": {
+          "type": "vendor",
+          "settings": {
           }
         },
         "description": {
@@ -90,7 +85,7 @@
           "type": "gummies_offer",
           "settings": {
             "gummies_offer_text": "<p>☝️ Get these Tropical and Berry CBD Gummies for a whopping 50% discount when you purchase any 👉  <a href=\"\/collections\/mad-tasty-sample-pack-wellness-boost\" title=\"Mad Tasty\">Mad Tasty<\/a> Products.<\/p>",
-            "gummies_offer_text_for_madtasty": "<p>Buy this product and Get 👉 <strong>50% Discount<\/strong> on the Tropical and Berry CBD gummies. <a href=\"\/collections\/gummies-offer\" title=\"Gummies offer\">GET IT NOW<\/a>.<\/p>"
+            "gummies_offer_text_for_madtasty": "<p>Buy this product and Get 👉 <strong>50% Discount<\/strong> on the Tropical and Berry CBD gummies.<\/p>"
           }
         },
         "57631e90-1baf-4e41-9691-499be1451989": {
@@ -158,9 +153,8 @@
       "block_order": [
         "04ea0ec9-7068-4678-a85a-c3170bb2d27e",
         "title",
-        "vendor",
-        "6b345a01-57af-4406-9f67-64b26daa1a5c",
         "price",
+        "vendor",
         "description",
         "divider",
         "e2a81677-05f8-4453-98cb-6fe81460e705",

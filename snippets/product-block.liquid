@@ -76,9 +76,9 @@
                           else
                             if active_media_found
                               assign active_media_found = false
-                              assign image_state_class = 'product-block__image--show-on-hover'
-                            else
                               assign image_state_class = 'product-block__image--show-on-hover product-block__image--inactivated'
+                            else
+                              assign image_state_class = 'product-block__image--show-on-hover'
                             endif
                           endif
                         -%}
