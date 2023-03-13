@@ -13,9 +13,9 @@
               <div class="section-footer__row__col section-footer__menu-block" role="navigation" aria-label="{{ 'layout.footer.navigation_aria_label' | t | escape }}" {{ block.shopify_attributes }}>
                 {% if block.settings.title != blank %}
                   {%- assign title_word_count = block.settings.title | split: ' ' | size -%}
-                  <h3 class="section-footer__title{% if title_word_count < 4 %} no-wrap{% endif %}">
+                  <p class="section-footer__title{% if title_word_count < 4 %} no-wrap{% endif %}">
                     {{- block.settings.title | escape -}}
-                  </h3>
+                  </p>
                 {% endif %}
 
                 {% if block.settings.menu != blank %}

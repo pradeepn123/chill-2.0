@@ -50,6 +50,24 @@
   <link rel="shortcut icon" href="{{ settings.favicon | img_url: 'master' }}" type="image/x-icon" />
 {%- endif -%}
 
-{%- if page_description -%}
+{% if template contains 'product' %}
+  <meta name="description" content="Chill offers CBD products to de-stress your routine. Visit our website to purchase our {{ product.title }} online from our {{ collection.title }} collection.	" />
+{%- elsif page_description -%}
   <meta name="description" content="{{ page_description | escape }}">
 {%- endif -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Chill",
+  "url": "https://chill.com/",
+  "logo": "https://cdn.shopify.com/s/files/1/0536/9115/4590/files/Chill_black_small.png?v=1661250445",
+  "sameAs": [
+    "https://www.facebook.com/chillstateofmind",
+    "https://twitter.com/ChillCBD",
+    "https://www.linkedin.com/company/chill-brands/",
+    "https://www.instagram.com/chill_cbd/"
+  ]
+}
+</script>

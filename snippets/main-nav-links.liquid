@@ -57,13 +57,13 @@
       <div class="mega_menu_wrapper">
         <div class="mega_menu_title">
           <ul class="menu-mega-nav">
-            <h1 class="main_coll_title">
+            <div class="main_coll_title">
               {% if link.title != "Shop" %}
                 By {{ link.title }}
               {% else %}
                 {{ section.settings.mega_collection_heading }}
               {% endif %}
-            </h1>
+            </div>
             {% assign BlockFirstLoop = true %}
             {%- for block in section.blocks -%}
               {%- assign dropdown_link_title_sanitised = block.settings.dropdown_link_title | downcase | strip -%}
@@ -83,14 +83,14 @@
                         <div class="ruby-col-3">
                           {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
                           <div class="product_image_wrapper">
-                            <a href="{{ product.url }}">
+                            <a href="{{ collection.url }}{{ product.url }}">
                               {%- assign img_url = featured_image | img_url: '2x2' | replace: '_2x2.', '_{width}x.' -%}
                               <img class="lazyload" data-src="{{ img_url }}" data-widths="[360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ featured_image.aspect_ratio }}" data-sizes="auto" alt="{{ featured_image.alt | escape }}">
                             </a>
                           </div>
 
                           <div class="product_title">
-                            <h4>{{ product.title }}</h4>
+                            <div class="pth4">{{ product.title }}</div>
                           </div>
 
                           {%- liquid

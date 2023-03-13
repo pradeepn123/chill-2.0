@@ -6,11 +6,11 @@
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4997f11a16bf4871b6e691543abcbd29.mp4",
         "placeholder_image": "shopify:\/\/shop_images\/home_banner_placeholder.png",
         "subheading": "",
-        "title": "Cool <br> <span>Calm<\/span> &amp; <br>Carefree",
+        "title": "Cool<br> <span>Calm &amp;<\/span>  <br>Carefree",
         "title_size": 112,
         "title_size_mobile": 50,
         "use_h1": true,
-        "text": "<p>Find peace with functional products made from all-natural ingredients.<\/p>",
+        "text": "<p>Natural Products to Help You Relax<\/p>",
         "enlarge_text": true,
         "button_label_1": "SHOP NOW",
         "button_url_1": "shopify:\/\/collections\/shop-all",
@@ -698,7 +698,7 @@
         "template--15968033865886__3dee64a8-71bf-4655-926f-2db509dcd6a5-1664953474fa2ec11e-0": {
           "type": "heading",
           "settings": {
-            "title": "<p>Discover <a><strong>@chill_cbd<\/strong><\/a><\/p>",
+            "title": "<p>Discover <strong>@choosechill<\/strong><\/p>",
             "use_h1": false
           }
         }
