@@ -1006,7 +1006,7 @@ body.overflow-hidden {
   height: 80%;
   object-fit: cover;
 }
-.mega_menu .mega_menu_title .menu-mega-nav li .ruby-grid .ruby-row .ruby-col-3 .product_title h4, .pth4 {
+.mega_menu .mega_menu_title .menu-mega-nav li .ruby-grid .ruby-row .ruby-col-3 .product_title h4 {
   font-size: 16px;
   font-weight: bold;
   color: #000000;
@@ -1713,7 +1713,7 @@ body.overflow-hidden {
   font-weight: 500;
   font-family: "Open Sans", sans-serif;
 }
-.subcollection_section .subcollection_slider .slider-wrapper h2, .sh2 {
+.subcollection_section .subcollection_slider .slider-wrapper h2 {
   font-size: 16px;
   color: #000000;
   font-weight: 500;
@@ -2808,18 +2808,18 @@ body {
   justify-content: space-between;
   margin-bottom: 42px;
 }
-.section-home-collections .home_collection_section .collection_section_wrapper .collection_heading h2 {
+.section-home-collections .home_collection_section .collection_section_wrapper .collection_heading h3 {
   margin-bottom: 0;
   font-size: 36px;
   font-family: "Open Sans", sans-serif;
   text-transform: inherit;
 }
 @media (min-width: 1200px) {
-  .section-home-collections .home_collection_section .collection_section_wrapper .collection_heading h2 {
+  .section-home-collections .home_collection_section .collection_section_wrapper .collection_heading h3 {
     font-size: 52px;
   }
 }
-.section-home-collections .home_collection_section .collection_section_wrapper .collection_heading h2 p {
+.section-home-collections .home_collection_section .collection_section_wrapper .collection_heading h3 p {
   margin-bottom: 0;
 }
 .section-home-collections .home_collection_section .collection_section_wrapper .collection_heading .view-all {
@@ -2926,7 +2926,7 @@ body {
   padding: 30px;
   z-index: 9;
 }
-.flexbox-images .image-wrapper .image_title .h4 {
+.flexbox-images .image-wrapper .image_title h4 {
   color: #fff;
   font-family: "Open Sans", sans-serif;
   font-size: 30px;
@@ -2936,7 +2936,7 @@ body {
   line-height: 1;
 }
 @media (min-width: 1200px) {
-  .flexbox-images .image-wrapper .image_title .h4 {
+  .flexbox-images .image-wrapper .image_title h4 {
     font-size: 32px;
   }
 }
@@ -3023,28 +3023,24 @@ body {
 }
 
 /*section-home-ingredients css here*/
-.section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3, 
-  .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h2 {
+.section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3 {
   font-size: 36px;
   font-family: "Open Sans", sans-serif;
   text-transform: inherit;
   margin-bottom: 22px;
 }
 @media (min-width: 1200px) {
-  .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3, 
-  .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h2 {
+  .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3 {
     font-size: 52px;
   }
 }
-.section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3 p,
-.section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h2 p {
+.section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3 p {
   font-size: 36px;
   margin-bottom: 0;
   line-height: 46px;
 }
 @media (min-width: 1200px) {
-  .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3 p,
-  .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h2 p {
+  .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .heading_text h3 p {
     font-size: 52px;
     line-height: 68px;
   }
@@ -3073,7 +3069,7 @@ body {
 }
 @media (min-width: 768px) {
   .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper ul {
-    justify-content: center; overflow:hidden; width:100%; max-width:1200;
+    justify-content: center;
   }
 }
 .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper ul li {
