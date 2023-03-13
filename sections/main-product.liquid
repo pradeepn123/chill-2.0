@@ -165,7 +165,7 @@
 
             </div>
 
-            {% when 'vendor_redirection' %}
+            {% when 'vendor_redirection_text' %}
                 <a href="/collections/
                   {%- if product.vendor == 'CHILL' -%}
                     shop-all 
@@ -998,7 +998,7 @@
         "limit": 1
       },
       {
-        "type": "vendor_redirection",
+        "type": "vendor_redirection_text",
         "name": "Vendor redirection",
         "limit": 1
       },
