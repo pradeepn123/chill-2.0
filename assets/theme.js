@@ -3513,6 +3513,9 @@
           }
 
           let url = "/collections/";
+          let product_vendor = product.vendor.split(' ')
+          .map(a => a[0].toUpperCase() + a.substring(1).toLowerCase())
+          .join("")
           if (product.vendor == "CHILL") {
             url += "shop-all"
           } 
@@ -3531,7 +3534,7 @@
           <div class="product-item__info">
             <div class="product-item-info-header">
               <a href="${product.url}" class="product-item-meta__title">${product.title}</a>
-              <a href="${url}" class="vendor_redirection">By <span>${product.vendor}<span></a>
+              <a href="${url}" class="vendor_redirection">By <span>${product_vendor}<span></a>
             </div>
             <input type="hidden" name="id" value="${product.variants[0].id}" class="original-selector">
             <input type="hidden" name="quantity" value="1" >
