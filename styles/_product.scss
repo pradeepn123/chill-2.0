@@ -159,11 +159,17 @@
                 .vendor_redirection{
                     font-size: 18px;
                     color: #BBBBBB;
+                    padding-bottom: 3px;
                     display: block;
                     margin: 15px 0;
+                    width: fit-content;
+                    transition: border 130ms;
                     span{
-                        color: #000;
+                        color: #9792e4;
                         font-weight: 600;
+                    }
+                    &:hover{
+                        border-bottom: 2px solid #000;
                     }
                 }
                 .product_variant{

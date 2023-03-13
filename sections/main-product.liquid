@@ -166,6 +166,7 @@
             </div>
 
             {% when 'vendor_redirection' %}
+              {{ request.page_type }}
               <a href="/collections/{% if product.vendor == 'CHILL' %}shop {% else %}{{product.vendor }}{% endif %}" class="vendor_redirection">By <span>{{ product.vendor | camelcase }}</span></a>
 
             {% when 'description' %}
@@ -761,7 +762,7 @@
 
                       for related_product in block.settings.product_list
                         echo '<div class="column column--half">'
-                        render 'product-block', product: related_product, no_quick_buy: true, custom_aspect_ratio: chosen_aspect_ratio
+                        render 'product-block', product: related_product, no_quick_buy: true, custom_aspect_ratio: chosen_aspect_ratio, show_vendor: true
                         echo '</div>'
                       endfor
                     -%}

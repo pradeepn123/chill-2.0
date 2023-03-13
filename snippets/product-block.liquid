@@ -153,7 +153,11 @@
 
               <div class="product-block__title">{{ product.title }}
               </div>
-              <div class="vendor">{{ product.metafields.custom.product_varient_pack }}</div>
+              {% if product.metafields.custom.product_varient_pack != blank %}
+                <div class="vendor">{{ product.metafields.custom.product_varient_pack }}</div>
+              {% else %}
+                <div class="vendor" style="color: transparent ">{{ product.vendor }}</div>
+              {% endif %}
               
 
               {%- if settings.prod_thumb_show_subtitle and product.metafields.descriptors.subtitle != blank -%}
@@ -188,7 +192,19 @@
 
               {% render 'unit-price', variant: cheapest_variant %}
             </a>
-            <a href="/collections/{% if product.vendor == 'CHILL' %}shop {% else %}{{product.vendor }}{% endif %}" class="vendor_redirection">By <span>{{ product.vendor | camelcase }}</span></a>
+            {% if show_vendor %}
+              <a href="/collections/
+                {%- if product.vendor == 'CHILL' -%}
+                  shop-all 
+                {%- elsif product.vendor == 'MAD TASTY' -%}
+                  mad-tasty-sample-pack-wellness-boost
+                {%- else -%}
+                  {{ product.vendor | replace: ' ', '-' }}
+                {%- endif -%}" 
+                class="vendor_redirection">
+                By <span>{{ product.vendor | camelcase }}</span>
+              </a>
+          {% endif %}
            
             {%- if settings.enable_product_reviews_collection and product.metafields.reviews.rating_count != blank -%}
               {%- assign rating_count = product.metafields.reviews.rating_count | plus: 0 -%}

@@ -26,6 +26,11 @@
           "settings": {
           }
         },
+        "ca3be82d-2b9b-4190-8fdc-afd44a4f3d7e": {
+          "type": "vendor_redirection",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -155,6 +160,7 @@
         "title",
         "price",
         "vendor",
+        "ca3be82d-2b9b-4190-8fdc-afd44a4f3d7e",
         "description",
         "divider",
         "e2a81677-05f8-4453-98cb-6fe81460e705",
