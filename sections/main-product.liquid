@@ -165,6 +165,18 @@
 
             </div>
 
+            {% when 'vendor_redirection' %}
+                <a href="/collections/
+                  {%- if product.vendor == 'CHILL' -%}
+                    shop-all 
+                  {%- elsif product.vendor == 'MAD TASTY' -%}
+                    mad-tasty-sample-pack-wellness-boost
+                  {%- else -%}
+                    {{ product.vendor | replace: ' ', '-' }}
+                  {%- endif -%}" 
+                  class="vendor_redirection">By <span>{{ product.vendor | camelcase }}</span>
+                </a>
+
             {% when 'description' %}
             <div class="{% unless block.settings.show_in_quickbuy %}not-in-quickbuy{% endunless %}{% if block.settings.show_in_tab %} product-detail-accordion{% endif %}" {{ block.shopify_attributes }}>
               {% if block.settings.show_in_tab %}
@@ -225,7 +237,7 @@
                 <p>{{ product.metafields.custom.product_varient_pack }}</p>
               {% endcomment %}
             
-            <a class="product_variant {% if product.metafields.custom.product_varient_pack.value == 'Mad Tasty' %} underline{% endif %}" {% if product.metafields.custom.product_varient_pack.value == 'Mad Tasty' %} href="{{ collections.mad-tasty-sample-pack-wellness-boost.url }}" {% else %} href="#"{% endif %}><span>{{ product.metafields.custom.product_varient_pack }}</span></a>
+            <a class="product_variant " href="#"><span>{{ product.metafields.custom.product_varient_pack }}</span></a>
 
             {% when 'pro_custom_icon' %}
             {% if product.metafields.settings.product_icons.value != blank %}
@@ -758,7 +770,7 @@
 
                       for related_product in block.settings.product_list
                         echo '<div class="column column--half">'
-                        render 'product-block', product: related_product, no_quick_buy: true, custom_aspect_ratio: chosen_aspect_ratio
+                        render 'product-block', product: related_product, no_quick_buy: true, custom_aspect_ratio: chosen_aspect_ratio, show_vendor: true
                         echo '</div>'
                       endfor
                     -%}
@@ -983,6 +995,11 @@
       {
         "type": "title",
         "name": "Title",
+        "limit": 1
+      },
+      {
+        "type": "vendor_redirection",
+        "name": "Vendor redirection",
         "limit": 1
       },
       {
