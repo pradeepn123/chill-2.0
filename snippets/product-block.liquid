@@ -204,7 +204,7 @@
                 class="vendor_redirection">
                 By <span>{{ product.vendor | camelcase }}</span>
               </a>
-          {% endif %}
+            {% endif %}
            
             {%- if settings.enable_product_reviews_collection and product.metafields.reviews.rating_count != blank -%}
               {%- assign rating_count = product.metafields.reviews.rating_count | plus: 0 -%}
