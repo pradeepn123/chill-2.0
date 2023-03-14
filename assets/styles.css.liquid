@@ -1876,11 +1876,6 @@ table {
   background: var(--announcement-background);
   color: var(--announcement-text);
 }
-@media (min-width: 1024px) and (max-width: 1199px){
-  .announcement-bar{
-    padding: 15px 0;
-  }
-}
 .announcement-bar a {
   color: inherit;
   text-decoration: none;
@@ -1894,7 +1889,7 @@ table {
   align-items: center;
   justify-content: space-between;
 }
-@media(max-width: 1023px) {
+@media(max-width: 1199px) {
   .announcement-bar .container {
     /* display: block; */
     flex-direction: column;
@@ -1916,7 +1911,7 @@ table {
 }
 
 .announcement-bar__left {
-  flex: 2 0 0;
+  flex: 3 0 0;
 }
 
 .announcement-bar__middle {
@@ -2766,12 +2761,12 @@ table {
   text-align: start;
   background: {{ panel_nav_bg }};
   border-right: 1px solid{{ head_nav_div_col }};
-  left: -1px;
+  right: -1px;
   width: 88%;
   top: 0;
   height: 100%;
   padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 60px);
-  transform: translateX(-100%);
+  transform: translateX(100%);
   will-change: transform;
   z-index: 8001;
   overflow-x: hidden;
@@ -11527,6 +11522,11 @@ model-viewer .container {
     display: none !important;
   }
 }
+@media (min-width: 1200px){
+  .mobile-and-tab-only{
+    display: none;
+  }
+}
 /* Roughly tablet size */
 @media only screen and (max-width: 959px) {
   .layout .col-third {
@@ -11567,6 +11567,11 @@ model-viewer .container {
   #template textarea {
     max-width: 100%;
     box-sizing: border-box;
+  }
+}
+@media (max-width: 1199px){
+  .show_on_desktop_only{
+      display: none;
   }
 }
 /* Phone sizes typically start here */

@@ -4,6 +4,7 @@
 <div class="icon-with-text-sec">
     <div class="container">
         <div class="icon-with-text-wrapper">
+            <span class="home_icons_title">{{ section.settings.home_icons_title }}</span>
             <div class="icon-list">
                 {%- for block in section.blocks -%}
                     {% case block.type %}
@@ -36,7 +37,11 @@
         "name": "Home Icons",
         "class": "section-home-icons",
         "settings": [
-            
+            {
+                "type": "richtext",
+                "id": "home_icons_title",
+                "label": "Title"
+            }
         ],
         "blocks": [
             {
