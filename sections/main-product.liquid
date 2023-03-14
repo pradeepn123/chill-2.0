@@ -172,7 +172,7 @@
                   {%- elsif product.vendor == 'MAD TASTY' -%}
                     mad-tasty-sample-pack-wellness-boost
                   {%- else -%}
-                    {{ product.vendor | replace: ' ', '-' }}
+                    {{ product.vendor | replace: ' ', '-' | downcase }}
                   {%- endif -%}" 
                   class="vendor_redirection">By <span>{{ product.vendor | camelcase }}</span>
                 </a>
