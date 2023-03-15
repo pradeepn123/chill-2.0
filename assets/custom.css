@@ -2597,6 +2597,18 @@ body {
 .section-home-icons .icon-with-text-sec .icon-with-text-wrapper .icon-list .icon-item {
   flex: 0 0 calc(50% - 22px);
   margin: 0;
+  cursor: pointer;
+}
+.section-home-icons .icon-with-text-sec .icon-with-text-wrapper .icon-list .icon-item .icon_title {
+  position: relative;
+}
+.section-home-icons .icon-with-text-sec .icon-with-text-wrapper .icon-list .icon-item .icon_title .icon_arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  top: 5%;
+  margin-left: 5px;
 }
 @media (min-width: 768px) {
   .section-home-icons .icon-with-text-sec .icon-with-text-wrapper .icon-list .icon-item {
@@ -2611,15 +2623,24 @@ body {
   }
 }
 .section-home-icons .icon-with-text-sec .icon-with-text-wrapper .icon-list .icon-item svg, .section-home-icons .icon-with-text-sec .icon-with-text-wrapper .icon-list .icon-item img {
+  cursor: pointer;
   width: 80px;
   height: 80px;
   margin-bottom: 13px;
+  transition: all 400ms ease-out;
 }
 @media (min-width: 1200px) {
   .section-home-icons .icon-with-text-sec .icon-with-text-wrapper .icon-list .icon-item svg, .section-home-icons .icon-with-text-sec .icon-with-text-wrapper .icon-list .icon-item img {
     width: 128px;
     height: 128px;
   }
+}
+.section-home-icons .icon-with-text-sec .icon-with-text-wrapper .icon-list .icon-item:hover svg {
+  transform: scale(1.1);
+  transition: all 400ms ease-in-out;
+}
+.section-home-icons .icon-with-text-sec .icon-with-text-wrapper .icon-list .icon-item:hover .icon_arrow {
+  opacity: 1 !important;
 }
 .section-home-icons .icon-with-text-sec .icon-with-text-wrapper .icon-list .icon-item h3 {
   margin-top: 13px;
