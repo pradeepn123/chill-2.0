@@ -2588,7 +2588,7 @@ body {
     margin: 0 20px 30px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .section-home-icons .icon-with-text-sec .icon-with-text-wrapper .icon-list a {
     flex: 0 0 calc(16% - 24px);
     margin: 0 16px 10px;
