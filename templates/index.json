@@ -203,7 +203,7 @@
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#9792e4",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
@@ -223,15 +223,15 @@
             "title_size_mobile": 46,
             "use_h1": false,
             "text": "<p>The post-rave wellness pack backed by leading nutritionists and packed with 26 scientifcally proven ingredients!<\/p>",
-            "heading_color": "#000",
-            "text_color": "#000",
+            "heading_color": "#000000",
+            "text_color": "#000000",
             "enlarge_text": true,
             "button_label_1": "Shop Happy Tuesdays",
             "button_url_1": "",
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#9792e4",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
@@ -285,8 +285,8 @@
             "button_url_1": "",
             "button_label_2": "",
             "button_url_2": "",
-            "button_background_color": "#F3B09F",
-            "button_text_color": "#FFFFFF",
+            "button_background_color": "#f3b09f",
+            "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
@@ -784,7 +784,6 @@
     },
     "3dee64a8-71bf-4655-926f-2db509dcd6a5": {
       "type": "rich-text",
-      "disabled": true,
       "blocks": {
         "template--15968033865886__3dee64a8-71bf-4655-926f-2db509dcd6a5-1664953474fa2ec11e-0": {
           "type": "heading",
