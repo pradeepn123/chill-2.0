@@ -180,6 +180,34 @@
             "text_alignment": "center left"
           }
         },
+        "159042e8-d790-4168-b7cf-81a9a54547e5": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Foria_-_Homepage_Banner.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Foria_-_Homepage_Banner-_Mobile.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "left center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Self love story \nwith <strong>Foria <\/strong>",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Natural products to encourage<br\/>the healing power of sexual pleasure<\/p>",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "enlarge_text": true,
+            "button_label_1": "Shop Foria",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#9792e4",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
         "f212ae5d-7cef-47d3-bf0c-78fa15669a7f": {
           "type": "image",
           "settings": {
@@ -203,6 +231,34 @@
             "button_url_2": "",
             "button_background_color": "#f3b09f",
             "button_text_color": "#ffffff",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
+        "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Gamechanger_-_Homepage_Banner_98129755-f7d5-4774-9e62-5362da6efa33.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Gamechanger_homepage_banner_mobile_1ecafeab-caf0-4080-83bb-313906adc5aa.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "left center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "This is a\n<strong>Gamechanger <\/strong>",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>The gamechanging patch for a<br\/>a fun night out and  a guilt free morning<\/p>",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "enlarge_text": true,
+            "button_label_1": "Shop Now",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#F3B09F",
+            "button_text_color": "#FFFFFF",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
@@ -261,25 +317,24 @@
             "text_alignment": "center left"
           }
         },
-        "159042e8-d790-4168-b7cf-81a9a54547e5": {
+        "2866e88b-20e1-4338-91ae-cca51f74dfb1": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/Foria_-_Homepage_Banner.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Foria_-_Homepage_Banner-_Mobile.jpg",
+            "image": "shopify:\/\/shop_images\/Happy_Tuesdays_-_Homepage_Banner_58df85b5-c53a-4ce3-a9c7-49ca2ed19c19.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Happy_Tuesdays_-_Homepage_Banner_Mobile_4965412e-cb4b-4ed6-96ed-2b9b91662b30.jpg",
             "image_position": "center center",
             "mobile_image_position": "left center",
             "slide_link": "",
             "subheading": "",
-            "title": "Self love story \nwith <strong>Foria <\/strong>",
+            "title": "Introducing <strong> Happy Tuesdays <\/strong>",
             "title_size": 84,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>Natural products to encourage<br\/>the healing power of sexual pleasure<\/p>",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
+            "text": "<p>The post-rave wellness pack backed by leading nutritionists and packed with 26 scientifcally proven ingredients!<\/p>",
+            "heading_color": "#000",
+            "text_color": "#000",
             "enlarge_text": true,
-            "button_label_1": "Shop Foria",
+            "button_label_1": "Shop Happy Tuesdays",
             "button_url_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -288,43 +343,16 @@
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
-        },
-        "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Gamechanger_-_Homepage_Banner_98129755-f7d5-4774-9e62-5362da6efa33.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Gamechanger_homepage_banner_mobile_1ecafeab-caf0-4080-83bb-313906adc5aa.jpg",
-            "image_position": "center center",
-            "mobile_image_position": "left center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "This is a\n<strong>Gamechanger <\/strong>",
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>The gamechanging patch for a<br\/>a fun night out and  a guilt free morning<\/p>",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
-            "enlarge_text": true,
-            "button_label_1": "Shop Now",
-            "button_url_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_background_color": "#F3B09F",
-            "button_text_color": "#FFFFFF",
-            "button_text_font_size": 20,
-            "text_alignment": "center left"
-          }
         }
       },
       "block_order": [
         "template--16038250872990__4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d-166911842947303ba6-0",
+        "159042e8-d790-4168-b7cf-81a9a54547e5",
         "f212ae5d-7cef-47d3-bf0c-78fa15669a7f",
+        "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8",
         "66002548-b60b-4786-8e10-a024be1f10e1",
         "190b68b3-e888-4fbb-82b4-bdb9c97c144f",
-        "159042e8-d790-4168-b7cf-81a9a54547e5",
-        "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8"
+        "2866e88b-20e1-4338-91ae-cca51f74dfb1"
       ],
       "settings": {
         "height": "fixed",
