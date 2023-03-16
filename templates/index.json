@@ -319,7 +319,6 @@
         },
         "2866e88b-20e1-4338-91ae-cca51f74dfb1": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Happy_Tuesdays_-_Homepage_Banner_58df85b5-c53a-4ce3-a9c7-49ca2ed19c19.jpg",
             "mobile_image": "shopify:\/\/shop_images\/Happy_Tuesdays_-_Homepage_Banner_Mobile_4965412e-cb4b-4ed6-96ed-2b9b91662b30.jpg",
