@@ -24,7 +24,7 @@
         "coll_show_sort_as_scroll": false,
         "coll_show_feat": false,
         "enable_subcoll": true,
-        "subcoll_menu": "main-menu",
+        "subcoll_menu": "footer",
         "subcoll_style": "buttons",
         "subcoll_gall_shape": "sq",
         "image_position": "center center",
