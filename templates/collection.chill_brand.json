@@ -1,0 +1,203 @@
+{
+  "sections": {
+    "main": {
+      "type": "chill_brand",
+      "settings": {
+        "logo_image_bg_color": "#f2f2f3",
+        "learn_more_button_text_color": "#9792e4",
+        "overlay_style": "shadow",
+        "coll_num_per_page_int": 24,
+        "grid": 3,
+        "show_vendor": false,
+        "show_total": false,
+        "coll_desc_pos": "above",
+        "enable_filtering": true,
+        "collapse_tag_sidebar_by_default": false,
+        "collapse_filters_method": "over-12",
+        "show_filter_counts": false,
+        "show_disabled_filters": true,
+        "ajax_products": true,
+        "enable_sticky_filter": true,
+        "filter_two_columns": false,
+        "coll_show_sort": true,
+        "coll_show_sort_as_dropdown": true,
+        "coll_show_sort_as_scroll": false,
+        "coll_show_feat": false,
+        "enable_subcoll": true,
+        "subcoll_menu": "main-menu",
+        "subcoll_style": "buttons",
+        "subcoll_gall_shape": "sq",
+        "image_position": "center center",
+        "subcoll_gall_enable_margin": true,
+        "subcoll_gall_full_width": false,
+        "subcoll_gall_overlay_style": "shadow",
+        "subcoll_gall_text_alignment": "center center",
+        "subcoll_gall_mobile_layout": "2"
+      }
+    },
+    "b96a799d-c27a-4eb4-bb54-509cc8c84eff": {
+      "type": "home-ingredients",
+      "blocks": {
+        "16655c74-9338-40b1-83cd-2a1ea5654a84": {
+          "type": "tabs-heading",
+          "settings": {
+            "title": "Gummies"
+          }
+        },
+        "0aba637a-878d-4159-9c89-0ccdec9d4f37": {
+          "type": "tabs-heading",
+          "settings": {
+            "title": "Smokes"
+          }
+        },
+        "568f0b1c-a163-4c25-bf69-3b582cb82fa4": {
+          "type": "tabs-heading",
+          "settings": {
+            "title": "Pouches"
+          }
+        },
+        "9a74c00d-2367-42ed-80e8-937377b5c998": {
+          "type": "tabs-content",
+          "settings": {
+            "image_one": "shopify:\/\/shop_images\/Tapioca-min.png",
+            "heading_one": "01. Tapioca Syrup",
+            "text_one": "<p>Organic Tapioca Syrup is what makes our gummies so special. It’s this natural, vegan-friendly binding agent that gives that signature chewy texture.<\/p>",
+            "image_two": "shopify:\/\/shop_images\/Pineapple-min.png",
+            "heading_two": "02. Natural Pineapple",
+            "text_two": "<p>This delicious and nutrient-rich tropical fruit is the sweet sensation that lends its fresh, juicy flavor to our vegan friendly CBD gummies.<\/p>",
+            "image_three": "shopify:\/\/shop_images\/CBD-min.png",
+            "heading_three": "03. CBD Isolate",
+            "text_three": "<p>Our premium CBD isolate is sourced from natural hemp to provide all the benefits of cannabidiol with zero THC and no psychoactive effects. <\/p>",
+            "button_label": "Explore Products",
+            "button_link": "shopify:\/\/collections\/cbd-gummies",
+            "button_bg_color": "#6ec59f",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "ab8d082d-f2e8-4e62-bd65-93f879e1e025": {
+          "type": "tabs-content",
+          "settings": {
+            "image_one": "shopify:\/\/shop_images\/Lavender-min.png",
+            "heading_one": "01. Lavender",
+            "text_one": "<p>Our fragrant lavender burns smoothly and produces a sweet floral scent for a perfectly relaxing moment of aromatherapy.<\/p>",
+            "image_two": "shopify:\/\/shop_images\/Lobelia-min.png",
+            "heading_two": "02. Lobelia",
+            "text_two": "<p>Native to the luscious valleys of North America, Lobelia is also known as Indian Tobacco and is sometimes used as an alternative to nicotine. <\/p>",
+            "image_three": "shopify:\/\/shop_images\/CBD-min.png",
+            "heading_three": "03. CBD Isolate",
+            "text_three": "<p>Our premium CBD isolate is sourced from natural hemp to provide all the benefits of cannabidiol with zero THC and no psychoactive effects. <\/p>",
+            "button_label": "Explore Products",
+            "button_link": "shopify:\/\/collections\/cbd-smokes",
+            "button_bg_color": "",
+            "button_text_color": ""
+          }
+        },
+        "37aeded1-91ac-4ae6-8457-1d2e70b46124": {
+          "type": "tabs-content",
+          "settings": {
+            "image_one": "shopify:\/\/shop_images\/Monk-min.png",
+            "heading_one": "01. Monk fruit",
+            "text_one": "<p>This subtly sweet exotic fruit extract contains natural sugars and a unique antioxidant profile that elevates the delicious flavors of our chew pouches. <\/p>",
+            "image_two": "shopify:\/\/shop_images\/Coconut_fiber-min.png",
+            "heading_two": "02. Coconut Fiber",
+            "text_two": "<p>Often known as coconut coir, this CBD-infused filler provides an unbeatable smooth flavor for a satisfying chew like no other.<\/p>",
+            "image_three": "shopify:\/\/shop_images\/CBD-min.png",
+            "heading_three": "03. CBD Isolate",
+            "text_three": "<p>Our premium CBD isolate is sourced from natural hemp to provide all the benefits of cannabidiol with zero THC and no psychoactive effects.<\/p>",
+            "button_label": "Explore Products",
+            "button_link": "shopify:\/\/collections\/cbd-pouches",
+            "button_bg_color": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "16655c74-9338-40b1-83cd-2a1ea5654a84",
+        "0aba637a-878d-4159-9c89-0ccdec9d4f37",
+        "568f0b1c-a163-4c25-bf69-3b582cb82fa4",
+        "9a74c00d-2367-42ed-80e8-937377b5c998",
+        "ab8d082d-f2e8-4e62-bd65-93f879e1e025",
+        "37aeded1-91ac-4ae6-8457-1d2e70b46124"
+      ],
+      "settings": {
+        "heading_text": "<p><strong>Naturally <\/strong>Sourced,<br\/><strong>Functional <\/strong>Ingredients<\/p>",
+        "subheading_text": "<p>Soothe your soul with naturally-sourced products that are oh so Chill. <\/p>",
+        "text_alignment": "center"
+      }
+    },
+    "d15d7798-3d4a-425d-9c6a-898163f36c18": {
+      "type": "featured-background-video",
+      "settings": {
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6b93734907174f5488731bbe7e2968f6.mp4",
+        "autoplay": false,
+        "placeholder_image": "shopify:\/\/shop_images\/Homepage_second_video.jpg",
+        "video_position": "left",
+        "use_alt_bg": false,
+        "height_desktop": 44,
+        "height_mobile": 100
+      }
+    },
+    "2e196d1c-4e76-42e6-8b58-0bc603a2f139": {
+      "type": "home_collections",
+      "blocks": {
+        "96d633b9-5c0e-4119-82ef-81b367a6624c": {
+          "type": "collection-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Collections-Gummies.jpg",
+            "collection": "cbd-gummies",
+            "title": "",
+            "coming_soon_link": "",
+            "shop_all_link": "shopify:\/\/collections\/cbd-gummies"
+          }
+        },
+        "02bf6e2f-08fe-4536-b7ac-411552a01266": {
+          "type": "collection-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Collections-Pouch.jpg",
+            "collection": "cbd-pouches",
+            "title": "",
+            "coming_soon_link": "",
+            "shop_all_link": "shopify:\/\/collections\/cbd-pouches"
+          }
+        },
+        "1df74ab6-47d9-46ad-ba94-176cdd8658a7": {
+          "type": "collection-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Collections-Smokes.jpg",
+            "collection": "cbd-smokes",
+            "title": "",
+            "coming_soon_link": "",
+            "shop_all_link": "shopify:\/\/collections\/cbd-smokes"
+          }
+        },
+        "bf9be943-de03-4b81-adfa-97919f76905d": {
+          "type": "collection-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/US_-Collections_-_Coming_Soon.jpg",
+            "collection": "shop-all",
+            "title": "Coming soon",
+            "coming_soon_link": "",
+            "shop_all_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "96d633b9-5c0e-4119-82ef-81b367a6624c",
+        "02bf6e2f-08fe-4536-b7ac-411552a01266",
+        "1df74ab6-47d9-46ad-ba94-176cdd8658a7",
+        "bf9be943-de03-4b81-adfa-97919f76905d"
+      ],
+      "settings": {
+        "text": "<p>Our <strong>Collections<\/strong><\/p>",
+        "show_shop_all": true,
+        "shop_all_link": "shopify:\/\/collections\/shop-all"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b96a799d-c27a-4eb4-bb54-509cc8c84eff",
+    "d15d7798-3d4a-425d-9c6a-898163f36c18",
+    "2e196d1c-4e76-42e6-8b58-0bc603a2f139"
+  ]
+}
