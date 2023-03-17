@@ -1338,6 +1338,7 @@
         "blocks": {
           "342470a5-8bb4-4c58-b93d-c1066f0749cd": {
             "type": "message",
+            "disabled": true,
             "settings": {
               "heading": "Store message",
               "subheading": "Add important information here",
