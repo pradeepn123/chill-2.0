@@ -1,3 +1,62 @@
+{% style %}
+  @media (max-width: 457px){
+    .filter_coll .utility-bar-main .utility-bar__right .filter_text {
+      display: block !important;
+    }
+  }
+  @media screen and (min-width: 481px){
+    .mobile_only_collectionsTitle{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 480px){
+    .filter_coll .utility-bar-main .utility-bar__left{
+      display: none;
+    }
+
+    {% comment %} Titles Filters and Srot {% endcomment %}
+    .utility-bar__right .utility-bar__item{
+      flex: 1 0 50%;
+    }
+    .filter_coll .utility-bar-main .utility-bar{
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .utility-bar__right .utility-bar__item{
+      margin-inline-start: 0;
+    }
+    .utility-bar__right .utility-bar__item:first-child{
+      border-right: 1px solid #909090;
+      justify-content: center;
+      flex-direction: row-reverse;
+      padding-inline-end: 0;
+    }
+    .utility-bar__right .utility-bar__item:first-child .button-icon:first-child{
+      margin-inline-start: 8px;
+    }
+    .custom_collection_block .filter-container .container{
+      padding-top: 30px;
+    }
+    .mobile_only_collectionsTitle{
+      margin-top: 20px;
+    }
+   .mobile_only_collectionsTitle .mobile_only_collectionsTitle__text{
+      padding-left: 12px;
+      font-size: 30px;
+      font-weight: 800;
+      color: #000000;
+    }
+    .filter_coll .utility-bar-main .utility-bar__right .utility-bar__item:first-child{
+      height: 50px !important;
+    }
+    .filter_coll .utility-bar-main .utility-bar__right .utility-bar__item .link-dropdown #sort-dropdown-heading .sort-dropdown-heading-parent{
+      text-align:center;
+      width: 100%;
+      display: inline-block;
+    }
+  }
+{% endstyle %}
+
 <div data-section-id="{{ section.id }}" data-section-type="collection-template" data-ajax-filtering="{{ section.settings.ajax_products }}" data-components="accordion,modal,price-range" data-cc-animate>
     {% paginate collection.products by section.settings.coll_num_per_page_int %}
   
@@ -230,8 +289,10 @@
                     <div class="link-dropdown link-dropdown--right-aligned">
                       {% if section.settings.coll_show_sort_as_dropdown == true %}
                         <div id="sort-dropdown-heading">
-                          <span class="link-dropdown__sort_text">{{ 'collections.sorting.title' | t | escape }} </span>
-                          <span class="link-dropdown__button-icon">{% render 'svg-chevron-down', stroke_width: 2 %}</span>
+                          <span class="sort-dropdown-heading-parent">
+                            <span class="link-dropdown__sort_text">{{ 'collections.sorting.title' | t | escape }} </span>
+                            <span class="link-dropdown__button-icon">{% render 'svg-chevron-down', stroke_width: 2 %}</span>
+                          </span>
                         </div>
                         <button class="link-dropdown__button notabutton" aria-expanded="false" aria-controls="sort-dropdown-options" aria-describedby="sort-dropdown-heading" disabled>
                           <div class="link-dropdown__button-text">
@@ -274,6 +335,12 @@
           </div>
         </div>
   
+        <div class="mobile_only_collectionsTitle container{% if settings.use_fullwidth_layout %} container--no-max{% endif %}">
+          <span class="mobile_only_collectionsTitle__text">
+            {{ collection.title | escape }}
+          </span>
+        </div>
+        
         <div class="custom_collection_block">
           <div class="container{% if settings.use_fullwidth_layout %} container--no-max{% endif %}"></div>
             <div class="filter-container filter-container--side{% if section.settings.collapse_tag_sidebar_by_default == false %} filter-container--show-filters-desktop{% endif %}" data-ajax-container>
