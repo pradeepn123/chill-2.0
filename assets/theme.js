@@ -3517,7 +3517,7 @@
           .map(a => a[0].toUpperCase() + a.substring(1).toLowerCase())
           .join("")
           if (product.vendor == "CHILL") {
-            url += "shop-all"
+            url += "chill"
           } 
           else if(product.vendor == 'MAD TASTY') {
             url = "mad-tasty-sample-pack-wellness-boost"
