@@ -237,8 +237,10 @@
                                         <span class="cart-drawer-discount__label">{{ discount_allocation.discount_application.title }}</span>
                                         <span class="cart-drawer-discount__amount theme-money">{% render 'price', price: discount_allocation.amount, disable_currency_code: true %}</span>
                                       </li>
-                                    {% else %}
+                                    {% elsif discount_allocation.discount_application.title == 'Gummies Offer Pack' %}
                                       <span class="color-red" style="font-weight: bold;">FLAT 50% OFF</span>
+                                    {% elsif discount_allocation.discount_application.value_type == 'percentage' %}
+                                      <span class="color-red" style="font-weight: bold;">FLAT {{ discount_allocation.discount_application.value | round }}% OFF</span>
                                     {% endif %}
                                   {% endfor %}
                                 </ul>
