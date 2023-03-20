@@ -1240,6 +1240,9 @@
           "1478526645605",
           "1478526647261"
         ],
+        "custom_css": [
+
+        ],
         "settings": {
           "visibility": ""
         }
@@ -1288,7 +1291,7 @@
         ],
         "settings": {
           "lower_menu": "",
-          "text_bottom": "<p>These statements have not been evaluated or approved by the Food and Drug Administration or any other regulatory body. The products shown on this website are lifestyle products and are not intended to diagnose, treat, cure, or prevent any disease. The information contained on this website is not intended to replace information from medical professionals. Please consult your doctor if you are concerned about using any product. <\/p><p><\/p><p>All CBD products on this website contain .03% THC or less. Chill products are made using premium CBD isolate only. <\/p>",
+          "text_bottom": "<p>These statements have not been evaluated or approved by the Food and Drug Administration or any other regulatory body. The products shown on this website are lifestyle products and are not intended to diagnose, treat, cure, or prevent any disease. The information contained on this website is not intended to replace information from medical professionals. Please consult your doctor if you are concerned about using any product. <\/p><p><\/p><p>All CBD products on this website contain .03% THC or less. <\/p>",
           "wide_container": true,
           "show_payment_icons": true,
           "show_country_selector": true,
@@ -1301,7 +1304,7 @@
           "2e9b0b00-d8fb-4143-be2d-eefe5fb293f5": {
             "type": "announcement",
             "settings": {
-              "text": "<p>Get<strong> 20% off<\/strong> on your first order  <a href=\"\/collections\/shop-all\" title=\"SHOP\"><strong>GET IT NOW<\/strong><\/a><\/p>"
+              "text": "<p>Use LIVINGCHILL20 code and get<strong> 20% off<\/strong> on your first Chill order  <a href=\"\/collections\/shop-all\" title=\"SHOP\"><strong>GET IT NOW<\/strong><\/a><\/p>"
             }
           },
           "ba09120b-5b07-4fe0-95ef-bf983d98ac02": {
@@ -1335,6 +1338,20 @@
       },
       "store-messages": {
         "type": "store-messages",
+        "blocks": {
+          "342470a5-8bb4-4c58-b93d-c1066f0749cd": {
+            "type": "message",
+            "disabled": true,
+            "settings": {
+              "heading": "Store message",
+              "subheading": "Add important information here",
+              "link_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "342470a5-8bb4-4c58-b93d-c1066f0749cd"
+        ],
         "settings": {
           "head_not_home_only": false,
           "head_not_col_bg": "#f4f6f8",
@@ -1551,7 +1568,7 @@
         "settings": {
           "continue_shopping_url": "shopify:\/\/collections\/shop-all",
           "shipping_policy_title": "Shipping Hours",
-          "shipping_policy_content": "<p>The Chill CBD Fulfillment Center operates 9-4pm Monday through Friday and 8-12pm on Saturday. Closed Sundays<strong>.<\/strong>  All orders processed prior to 12pm will be shipped same day.<\/p><p>Orders originating outside the United States and all other inquiries email <a href=\"mailto:%20info@chill.com\" target=\"_blank\">info@chill.com<\/a>. We do not currently ship to Canada.<\/p><p>You will receive an email containing a tracking number once your package has been shipped from our Distribution Center.<\/p>",
+          "shipping_policy_content": "<p><span style=\"text-decoration:underline\"><strong>Chill Products<\/strong><\/span><br\/><br\/>The Chill Fulfillment Center operates 9-4pm Monday through Friday and 8-12pm on Saturday and is closed on Sundays<strong>.<\/strong> Orders processed prior to 12pm will be shipped same day. Shipping times may vary.<br\/><br\/><span style=\"text-decoration:underline\"><strong>All Other Products<\/strong><\/span><\/p><p>Some products are fulfilled by their own independent vendors. Shipping times and costs may vary as disclosed on individual product pages and at checkout. <\/p><p>Orders originating outside the United States and all other inquiries email <a href=\"mailto:%20info@chill.com\" target=\"_blank\">info@chill.com<\/a>. We do not currently ship to Canada.<\/p><p>You will receive an email containing a tracking number once your package has been shipped. All pertinent order information will be communicated via tracking emails.<\/p>",
           "enable_promotion": false
         }
       },
