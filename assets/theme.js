@@ -3851,7 +3851,7 @@
 
     if (document.querySelector('.utility-bar')) {
       // duplicate utility bar for mobile
-      var $utilBarClone = $('.utility-bar').clone().addClass('utility-bar--sticky-mobile-copy').removeAttr('data-ajax-container').insertAfter('.utility-bar');
+     // var $utilBarClone = $('.utility-bar').clone().addClass('utility-bar--sticky-mobile-copy').removeAttr('data-ajax-container').insertAfter('.utility-bar');
       // ensure unique ids
       var $utilBarCloneSort = $('.utility-bar--sticky-mobile-copy .link-dropdown');
       $utilBarCloneSort.click(() => {
