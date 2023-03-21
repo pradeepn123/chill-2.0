@@ -89,6 +89,18 @@ $(document).ready(function () {
     descriptionShort.style.display = 'block';
   });  
   
+  if(window.screen.width < 1200){
+    $('.stress-effect-block-list .fixed-layout').slick({
+        draggable:true,    
+        arrows:false,    
+        autoplay:true,
+        autoplaySpeed:2500,     
+        slidesToShow:1,     
+        slidesToScroll:1,   
+        dots:true
+      });
+  }
+
   //sub collection image
   $('.subcollection_slider').slick({
     dots: false,
