@@ -1,0 +1,19 @@
+@media (max-width: 767px){
+    .shopify-section.pouch_offer_mobile{
+        border-top: 1px solid #D6D6D6;
+        .claim_banner_product_page_container{
+            display: flex !important;
+        }
+    }
+    .claim_banner_product_page_container{
+        display: none !important;
+    }
+}
+.shopify-section.pouch_offer_mobile{
+    .claim_banner_product_page_container{
+        display: none;
+    }
+}
+.claim_banner_product_page_container{
+    display: flex;
+}
