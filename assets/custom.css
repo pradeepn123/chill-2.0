@@ -10004,3 +10004,19 @@ body.cart-drawer-open {
     margin-bottom: 0 !important;
   }
 }
+
+@media (max-width: 767px) {
+  .shopify-section.pouch_offer_mobile .claim_banner_product_page_container {
+    display: flex !important;
+  }
+  .claim_banner_product_page_container {
+    display: none !important;
+  }
+}
+.shopify-section.pouch_offer_mobile .claim_banner_product_page_container {
+  display: none;
+}
+
+.claim_banner_product_page_container {
+  display: flex;
+}
