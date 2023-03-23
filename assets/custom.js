@@ -89,6 +89,32 @@ $(document).ready(function () {
     descriptionShort.style.display = 'block';
   });  
   
+  if(window.screen.width < 1200){
+    $('.stress-effect-block-list .fixed-layout').slick({
+        draggable:true,    
+        arrows:false,    
+        autoplay:true,
+        autoplaySpeed:2500,     
+        slidesToShow:1,     
+        slidesToScroll:1,   
+        dots:true
+      });
+    
+    var tabContentParent = $('.section-home-ingredients .content-section .content.active')
+    for(i = 0; i< tabContentParent.length; i++){
+        var tabContentList = tabContentParent[i].querySelector('.tab-content-list');
+        $(tabContentList).slick({
+            draggable:true,    
+            arrows:false,    
+            autoplay:true,
+            autoplaySpeed:3500,     
+            slidesToShow:1,     
+            slidesToScroll:1,   
+            dots:true
+        })
+    }
+  }
+
   //sub collection image
   $('.subcollection_slider').slick({
     dots: false,
@@ -311,8 +337,27 @@ $(document).ready(function () {
         }
         
         var tabId = '#' + e.target.dataset.tabId;
-        d.querySelector(tabId).classList.toggle('active');
-      }  
+        const contentTab = d.querySelector(tabId)
+        contentTab.classList.toggle('active');
+
+        if(window.screen.width < 1200){
+            const tabContentList = contentTab.querySelector(".tab-content-list")
+            if (tabContentList && tabContentList.classList.contains("slick-initialized")) {
+                $(tabContentList).slick('unslick')
+            }
+            if (tabContentList) {
+                $(tabContentList).slick({
+                    draggable: true,    
+                    arrows: false,    
+                    autoplay: true,
+                    autoplaySpeed: 3500,     
+                    slidesToShow: 1,     
+                    slidesToScroll: 1,   
+                    dots: true
+                })
+            }
+        }
+      }
   });
 })();
 
@@ -735,9 +780,11 @@ const featureProductSubscriptionUtil = (function () {
 
 document.addEventListener('DOMContentLoaded', () => {
     featureProductSubscriptionUtil.EventHandler();
-    let customProductForm = document.querySelector("#custom-product-form")
-    if (customProductForm) {
-        customProductForm.addEventListener("submit", theme.customAddToCart)
+    let customProductForms = document.querySelectorAll("#custom-product-form")
+    if (customProductForms.length) {
+        customProductForms.forEach((customProductForm) => {
+            customProductForm.addEventListener("submit", theme.customAddToCart)
+        })
     }
 })
 
@@ -754,19 +801,19 @@ theme.customAddToCart = function(e) {
 
     $.post(theme.routes.cart_add_url, new URLSearchParams(formData).toString(), function() {
         theme.addedToCartHandler.call(this)
-        let customProductForm = document.querySelector("#custom-product-form")
-        const bannerProductFrom = customProductForm.closest(".claim_banner_product_page_container")
-        const successMessageContainer = document.querySelector('.claim_success_message')
-        const claimInfoContainer = document.querySelector(".claim_info_container")
-        if (bannerProductFrom) {
-            bannerProductFrom.remove()
-        }
-        if (successMessageContainer) {
-            successMessageContainer.remove()
-        }
-        if (claimInfoContainer) {
-            claimInfoContainer.remove()
-        }
+        let customProductForms = document.querySelectorAll("#custom-product-form")
+        customProductForms.forEach((customProductForm) => {
+            const bannerProductFrom = customProductForm.closest(".claim_banner_product_page_container")
+            if (bannerProductFrom) {
+                bannerProductFrom.remove()
+            }
+        })
+        const claimInfoContainers = document.querySelectorAll(".claim_info_container")
+        claimInfoContainers.forEach((claimInfoContainer) => claimInfoContainer.remove())
+
+        const successMessageContainers = document.querySelectorAll('.claim_success_message')
+        successMessageContainers.forEach((successMessageContainer)=> successMessageContainer.remove())
+
     }.bind(this), 'json')
     .fail(function (data) {
         $form.find('button[type="submit"]').removeAttr('disabled')

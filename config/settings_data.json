@@ -945,7 +945,7 @@
   },
   "current": {
     "use_fullwidth_layout": true,
-    "font_col_base": "#676869",
+    "font_col_base": "#000000",
     "font_col_link": "#171717",
     "font_col_heads": "#171717",
     "font_col_shoptitle": "#171717",
