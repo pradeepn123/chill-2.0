@@ -1566,7 +1566,7 @@
           "56e5df1e-27f3-480e-84c3-72288b009432"
         ],
         "settings": {
-          "continue_shopping_url": "shopify:\/\/collections\/shop",
+          "continue_shopping_url": "shopify:\/\/collections\/shop-all",
           "shipping_policy_title": "Shipping Hours",
           "shipping_policy_content": "<p><span style=\"text-decoration:underline\"><strong>Chill Products<\/strong><\/span><br\/><br\/>The Chill Fulfillment Center operates 9-4pm Monday through Friday and 8-12pm on Saturday and is closed on Sundays<strong>.<\/strong> Orders processed prior to 12pm will be shipped same day. Shipping times may vary.<br\/><br\/><span style=\"text-decoration:underline\"><strong>All Other Products<\/strong><\/span><\/p><p>Some products are fulfilled by their own independent vendors. Shipping times and costs may vary as disclosed on individual product pages and at checkout. <\/p><p>Orders originating outside the United States and all other inquiries email <a href=\"mailto:%20info@chill.com\" target=\"_blank\">info@chill.com<\/a>. We do not currently ship to Canada.<\/p><p>You will receive an email containing a tracking number once your package has been shipped. All pertinent order information will be communicated via tracking emails.<\/p>",
           "enable_promotion": false
