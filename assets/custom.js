@@ -780,9 +780,11 @@ const featureProductSubscriptionUtil = (function () {
 
 document.addEventListener('DOMContentLoaded', () => {
     featureProductSubscriptionUtil.EventHandler();
-    let customProductForm = document.querySelector("#custom-product-form")
-    if (customProductForm) {
-        customProductForm.addEventListener("submit", theme.customAddToCart)
+    let customProductForms = document.querySelectorAll("#custom-product-form")
+    if (customProductForms.length) {
+        customProductForms.forEach((customProductForm) => {
+            customProductForm.addEventListener("submit", theme.customAddToCart)
+        })
     }
 })
 
@@ -799,19 +801,19 @@ theme.customAddToCart = function(e) {
 
     $.post(theme.routes.cart_add_url, new URLSearchParams(formData).toString(), function() {
         theme.addedToCartHandler.call(this)
-        let customProductForm = document.querySelector("#custom-product-form")
-        const bannerProductFrom = customProductForm.closest(".claim_banner_product_page_container")
-        const successMessageContainer = document.querySelector('.claim_success_message')
-        const claimInfoContainer = document.querySelector(".claim_info_container")
-        if (bannerProductFrom) {
-            bannerProductFrom.remove()
-        }
-        if (successMessageContainer) {
-            successMessageContainer.remove()
-        }
-        if (claimInfoContainer) {
-            claimInfoContainer.remove()
-        }
+        let customProductForms = document.querySelectorAll("#custom-product-form")
+        customProductForms.forEach((customProductForm) => {
+            const bannerProductFrom = customProductForm.closest(".claim_banner_product_page_container")
+            if (bannerProductFrom) {
+                bannerProductFrom.remove()
+            }
+        })
+        const claimInfoContainers = document.querySelectorAll(".claim_info_container")
+        claimInfoContainers.forEach((claimInfoContainer) => claimInfoContainer.remove())
+
+        const successMessageContainers = document.querySelectorAll('.claim_success_message')
+        successMessageContainers.forEach((successMessageContainer)=> successMessageContainer.remove())
+
     }.bind(this), 'json')
     .fail(function (data) {
         $form.find('button[type="submit"]').removeAttr('disabled')
