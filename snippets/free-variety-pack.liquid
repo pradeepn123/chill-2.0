@@ -364,6 +364,7 @@
   {% endif %}      
 {% endif %}
 
+{% unless excludeScript %}
 <script>
   function showRecoverPasswordForm() {
     document.getElementById('recover-password').style.display = 'block';
@@ -384,15 +385,15 @@
     document.getElementById('customer').style.display = 'block';
   }
   var claimDrawer = document.getElementById('claimDrawerContainer')
-  const claimBtn = document.querySelector('#claimDrawerButton')
-  if (claimBtn) {
-    claimBtn.addEventListener('click', () => {
+  var claimBtn = document.querySelectorAll('#claimDrawerButton')
+  if (claimBtn.length) {
+    claimBtn.forEach((btn) => btn.addEventListener('click', () => {
       claimDrawer.classList.add('claim-drawer-open');
       document.querySelector("body").classList.add("cart-drawer-open")
       if(claimDrawer.classList.contains('claim-drawer-close')){
         claimDrawer.classList.add('claim-drawer-close');
       }
-    })
+    }))
   }
   var claimDrawerBackgroundClick = document.getElementById('claimDrawerBackground');
   claimDrawerBackgroundClick.addEventListener('click', function() {
@@ -400,13 +401,17 @@
     document.querySelector("body").classList.remove("cart-drawer-open")
   })
   {% if customer %}
-    const failMessageBox = document.querySelector("#failMessage");
-    if (failMessageBox) {
+    var failMessageBoxes = document.querySelectorAll("#failMessage");
+    if (failMessageBoxes.length) {
       if (localStorage.getItem('visited')) {
-        failMessageBox.style.display = "none"
+        failMessageBoxes.forEach((box) => {
+          box.style.display = "none"
+        })
       }
       setTimeout(function() {
-        failMessageBox.remove();
+        failMessageBoxes.forEach((failMessageBox) => {
+          failMessageBox.remove();
+        })
         localStorage.setItem('visited', true);
       }, 5000)
     }
@@ -420,8 +425,14 @@
     document.querySelector('.claim_banner_product_page_container').style.display='none'
   }
   function handleCloseBanner() {
-    document.querySelector('.claim_banner_product_page_container').style.display='none';  
-    document.querySelector('.claim_success_message').style.display = 'none';
+    document.querySelectorAll('.claim_banner_product_page_container').forEach((element) => {
+      element.remove()
+    })
+
+    const claimSuccessMessage = document.querySelector('.claim_success_message')
+    if (claimSuccessMessage) {
+      claimSuccessMessage.remove()
+    }
   }
-  
-</script>   
+</script>  
+{% endunless %} 
