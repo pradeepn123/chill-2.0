@@ -1056,7 +1056,7 @@
     "gummies_offer_text": "<p>🎉 Yey! You are now eligible for a 👉  <strong>50% Discount<\/strong> on the Tropical and Berry CBD gummies. Add as many quantity as you’d like  😍  for <strong>Flat 50% Off<\/strong>.<\/p>",
     "cart_button_url": "shopify:\/\/collections\/gummies-offer",
     "terms_and_conditions": "Limited period offer only, T&C Apply.",
-    "nav_shop_all_link": "shopify:\/\/collections\/shop-all",
+    "nav_shop_all_link": "shopify:\/\/collections\/shop",
     "new_in_gif": "<iframe src=\"https:\/\/giphy.com\/embed\/mXy6UdxvWwnkBLiulI\" width=\"480\" height=\"480\" frameborder=\"0\" class=\"giphy-embed\" allowfullscreen=\"\"><\/iframe>",
     "new_in_link": "new-in",
     "sale_gif": "<iframe src=\"https:\/\/giphy.com\/embed\/LiZa2iGWbYe9aCfIiG\" width=\"480\" height=\"301\" frameborder=\"0\" class=\"giphy-embed\" allowfullscreen=\"\"><\/iframe>",
@@ -1304,7 +1304,7 @@
           "2e9b0b00-d8fb-4143-be2d-eefe5fb293f5": {
             "type": "announcement",
             "settings": {
-              "text": "<p>Use LIVINGCHILL20 code and get<strong> 20% off<\/strong> on your first Chill order  <a href=\"\/collections\/shop-all\" title=\"SHOP\"><strong>GET IT NOW<\/strong><\/a><\/p>"
+              "text": "<p>Use LIVINGCHILL20 code and get<strong> 20% off<\/strong> on your first Chill order  <a href=\"\/collections\/shop\" title=\"Our Hemp Products\"><strong>GET IT NOW<\/strong><\/a><\/p>"
             }
           },
           "ba09120b-5b07-4fe0-95ef-bf983d98ac02": {
@@ -1566,7 +1566,7 @@
           "56e5df1e-27f3-480e-84c3-72288b009432"
         ],
         "settings": {
-          "continue_shopping_url": "shopify:\/\/collections\/shop-all",
+          "continue_shopping_url": "shopify:\/\/collections\/shop",
           "shipping_policy_title": "Shipping Hours",
           "shipping_policy_content": "<p><span style=\"text-decoration:underline\"><strong>Chill Products<\/strong><\/span><br\/><br\/>The Chill Fulfillment Center operates 9-4pm Monday through Friday and 8-12pm on Saturday and is closed on Sundays<strong>.<\/strong> Orders processed prior to 12pm will be shipped same day. Shipping times may vary.<br\/><br\/><span style=\"text-decoration:underline\"><strong>All Other Products<\/strong><\/span><\/p><p>Some products are fulfilled by their own independent vendors. Shipping times and costs may vary as disclosed on individual product pages and at checkout. <\/p><p>Orders originating outside the United States and all other inquiries email <a href=\"mailto:%20info@chill.com\" target=\"_blank\">info@chill.com<\/a>. We do not currently ship to Canada.<\/p><p>You will receive an email containing a tracking number once your package has been shipped. All pertinent order information will be communicated via tracking emails.<\/p>",
           "enable_promotion": false
