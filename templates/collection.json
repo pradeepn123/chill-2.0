@@ -71,7 +71,7 @@
         "show_filter_counts": false,
         "show_disabled_filters": true,
         "ajax_products": true,
-        "enable_sticky_filter": true,
+        "enable_sticky_filter": false,
         "filter_two_columns": false,
         "coll_show_sort": true,
         "coll_show_sort_as_dropdown": true,
