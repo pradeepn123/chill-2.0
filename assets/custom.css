@@ -1330,7 +1330,7 @@ body.overflow-hidden {
 }
 .navbar_collection_link svg {
   transform: translateY(13%);
-  margin-left: 10px;
+  margin-left: 5px;
 }
 @media (min-width: 1200px) and (max-width: 1413px) {
   .navbar_collection_link {
