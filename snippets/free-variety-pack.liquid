@@ -429,9 +429,12 @@
       element.remove()
     })
 
-    const claimSuccessMessage = document.querySelector('.claim_success_message')
-    if (claimSuccessMessage) {
-      claimSuccessMessage.remove()
+    const claimSuccessMessages = document.querySelectorAll('.claim_success_message');
+    if (claimSuccessMessages.length) {
+      claimSuccessMessages.forEach(claimSuccessMessage => {
+        claimSuccessMessage.remove()
+      })
+      
     }
   }
 </script>  
