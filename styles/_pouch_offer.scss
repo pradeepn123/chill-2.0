@@ -20,3 +20,6 @@
 .claim_banner_product_page_container, .claim_success_message, .claim_fail_message{
     display: flex;
 }
+.claim_success_message, .claim_fail_message{
+    justify-content: center;
+}
