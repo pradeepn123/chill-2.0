@@ -50,7 +50,7 @@
   <link rel="shortcut icon" href="{{ settings.favicon | img_url: 'master' }}" type="image/x-icon" />
 {%- endif -%}
 
-{% if template contains 'product' %}
+{% if template contains 'product' and product.id != 6579183354014 %}
   <meta name="description" content="Chill offers CBD products to de-stress your routine. Visit our website to purchase our {{ product.title }} online from our {{ collection.title }} collection.	" />
 {%- elsif page_description -%}
   <meta name="description" content="{{ page_description | escape }}">
