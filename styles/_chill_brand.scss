@@ -106,9 +106,11 @@
                     align-items: center;
                     padding: 20px;
                     &:hover{
-                        background: #000;
-                        color: #fff !important;
-                        border: #000 !important;
+                        background: #9792e4 !important;
+                        border: #9792e4;
+                        a{
+                            color: #fff;
+                        }
                     }
                 }
             }

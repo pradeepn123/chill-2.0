@@ -703,13 +703,16 @@
 }
 .navbar_collection_link{
     color: #6EC59F;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     margin: 20px 0;
     svg{
         transform: translateY(13%);
-        margin-left: 15px;
+        margin-left: 10px;
+    }
+    @media (min-width: 1200px) and (max-width: 1413px){
+        font-size: 12px;
     }
 }
 .mobile-navigation-drawer{
@@ -719,9 +722,16 @@
             .navigation__tier-2{
                 display: flex;
                 flex-direction: column;
+                @media (min-width: 768px) and (max-width: 1199px){
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
                 .navigation__item{
                     flex-basis: 100%;
                     padding: 20px;
+                    @media (min-width: 768px) and (max-width: 1199px){
+                        border-bottom: none !important;
+                    }
                     .navigation__link{
                         display: flex;
                         flex-direction: column !important;
