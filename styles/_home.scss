@@ -206,6 +206,11 @@ body{
         }
     }
     .article{
+        .spaced-column{
+            @media (max-width: 767px){
+                text-align: left !important;
+            }
+        }
         .align-center{
             text-align: center;
             @media(min-width:1200px){
@@ -1199,6 +1204,8 @@ body{
                                 padding: 0;
                                 background: #222222;
                                 border: 1px solid #222222;
+                                width: 10px;
+                                height: 10px;
                                 button{
                                     width: 10px;
                                     height: 10px;
