@@ -2325,6 +2325,11 @@ body {
 .section-rich-text .majortitle p {
   margin-bottom: 0;
 }
+@media (max-width: 767px) {
+  .section-rich-text .article .spaced-column {
+    text-align: left !important;
+  }
+}
 .section-rich-text .article .align-center {
   text-align: center;
 }
@@ -3366,6 +3371,8 @@ body {
     padding: 0;
     background: #222222;
     border: 1px solid #222222;
+    width: 10px;
+    height: 10px;
   }
   .section-home-ingredients .home-ingredients-section .ingredients-section-wrapper .content-section .tab-content-list .slick-dots li button {
     width: 10px;

@@ -25,6 +25,11 @@
         "overlay_style": "shadow"
       }
     },
+    "6b832c65-5adf-4dab-ace7-58907ccaed9d": {
+      "type": "pouches_offer_home_page",
+      "settings": {
+      }
+    },
     "d02b80e5-b8ee-41d5-9512-71af9b2c25c7": {
       "type": "marquee",
       "settings": {
@@ -33,11 +38,6 @@
         "marquee_text_color": "#ffffff",
         "marquee_text_font_size": 24,
         "marquee_text_font_size_mobile": 16
-      }
-    },
-    "6b832c65-5adf-4dab-ace7-58907ccaed9d": {
-      "type": "pouches_offer_home_page",
-      "settings": {
       }
     },
     "166149763181cc2acb": {
@@ -840,8 +840,8 @@
   },
   "order": [
     "1660761564dddf193c",
-    "d02b80e5-b8ee-41d5-9512-71af9b2c25c7",
     "6b832c65-5adf-4dab-ace7-58907ccaed9d",
+    "d02b80e5-b8ee-41d5-9512-71af9b2c25c7",
     "166149763181cc2acb",
     "1635927863703110df",
     "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d",
