@@ -56,6 +56,7 @@
   <meta name="description" content="{{ page_description | escape }}">
 {%- endif -%}
 
+{% if template.name == 'index' %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,3 +72,4 @@
   ]
 }
 </script>
+{%- endif -%}
