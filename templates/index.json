@@ -230,7 +230,7 @@
             "text_color": "#ffffff",
             "enlarge_text": true,
             "button_label_1": "Shop Foria",
-            "button_url_1": "",
+            "button_url_1": "shopify:\/\/collections\/foria",
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#9792e4",
