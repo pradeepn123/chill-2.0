@@ -285,7 +285,7 @@
             "text_color": "#ffffff",
             "enlarge_text": true,
             "button_label_1": "Shop Now",
-            "button_url_1": "",
+            "button_url_1": "shopify:\/\/collections\/game-changer",
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#f3b09f",
