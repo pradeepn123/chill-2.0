@@ -18,7 +18,7 @@
           {% if section.settings.use_h1 %}
             <h1 id="{{ section.id }}" style="font-weight: {{ section.settings.title_weight }};">{{ section.settings.title | escape }}</h1>
           {% else %}
-            <h2 id="{{ section.id }}" class="h1-style" style="font-weight: {{ section.settings.title_weight }};">{{ section.settings.title | escape }}</h2>
+            <h1 id="{{ section.id }}" class="h1-style" style="font-weight: {{ section.settings.title_weight }};">{{ section.settings.title | escape }}</h1>
             {% style %}
             @media (max-width: 768px){
               .h1-style{
