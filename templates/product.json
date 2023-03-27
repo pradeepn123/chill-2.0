@@ -142,6 +142,18 @@
             "show_in_quickbuy": false
           }
         },
+        "b25a3dd3-8a24-4334-9108-800532ba36f0": {
+          "type": "accordion",
+          "settings": {
+            "title": "Directions to use",
+            "icon": "",
+            "content": "<p>{{ product.metafields.custom.direction_to_use | metafield_tag }}<\/p>",
+            "test_result_link": "",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
         "c06c3291-f178-4504-8a2d-023f97b00808": {
           "type": "richtext",
           "settings": {
@@ -172,6 +184,7 @@
         "630f2a51-da4e-4dbf-93d6-325c3ee1e383",
         "1fb67a9d-a0c3-48e7-b413-30ffa96c7b41",
         "a7013d3f-0653-4f9c-8d1b-aabe369293b7",
+        "b25a3dd3-8a24-4334-9108-800532ba36f0",
         "c06c3291-f178-4504-8a2d-023f97b00808"
       ],
       "settings": {
