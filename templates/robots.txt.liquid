@@ -2,6 +2,26 @@
 {%- comment -%}
 # Caution! Please read https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt before proceeding to make changes to this file.
 {% endcomment %}
+
+Disallow: /collections/vendors?q=*
+Disallow: /collections/under-15*
+Disallow: /collections/over-25*
+Disallow: /collections/chill-nicotine-pouches*
+Disallow: /collections/*pack_*
+Disallow: /collections/cool-mint*
+Disallow: /collections/*lip-balm*
+Disallow: /collections/all-smokes*
+Disallow: /collections/mint*
+Disallow: /collections/chill-apparel*
+Disallow: /collections/berry-*
+Disallow: /collections/*.atom
+Disallow: /collections/15*
+Disallow: /collections/hemp*
+Disallow: /collections/cbd-infused*
+Disallow: /collections/cbd-*/collections*
+Disallow: /products/*?pr_prod_strat=*
+Disallow: /products/*?tfn*
+Disallow: /stores/*
 {% for group in robots.default_groups %}
   {{- group.user_agent -}}
 
