@@ -1052,6 +1052,7 @@
     "how_it_works_title": "How It Works",
     "how_it_works_description": "<ul><li>Login or Sign up to join the <a href=\"http:\/\/chill.com\/\" target=\"_blank\"><em><strong>Chill.com<\/strong><\/em><\/a> community<\/li><li>Get a free variety pack (worth $19.99) when you try our CBD pouches for the first time<\/li><li>You only pay for shipping - the pouches are on us!<\/li><\/ul>",
     "how_it_works_login_text": "LOGIN TO CLAIM YOUR POUCH STARTER PACK",
+    "enable_gummies_offer_on_announcement_bar": false,
     "announce_gummies_offer_text_desktop": "Get your 25mg gummies for just <span>$5 a pack<\/span> for the April month. Save $12.99 per pack! Plus <span>one FREE 10mg gummies<\/span> with each order",
     "announce_gummies_button_url": "shopify:\/\/collections\/gummies-offer",
     "show_gummies_offer": true,
