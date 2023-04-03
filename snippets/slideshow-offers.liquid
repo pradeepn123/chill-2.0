@@ -6,10 +6,14 @@
 {% endfor %}
 <div class="slider" id="main-slider">    
     <div class="slider_wrapper">
-        {% if free_variety_pack_found_in_cart == false %}
+        {% assign renderSlide = true %}
+        {% if product and product.handle == 'chill-cbd-isolate-chew-pouches' %}
+            {% assign renderSlide = false %}
+        {% endif %}
+        {% if free_variety_pack_found_in_cart == false and renderSlide %}
             <div class="slide" id="variety_pack" >
                 {% if product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'index' or request.page_type == 'product' %}
-                    {% render 'free-variety-pack' %}
+                    {% render 'free-variety-pack' free_variety_pack_found_in_cart: free_variety_pack_found_in_cart %}
                 {% endif %}
             </div>
         {% endif %}
