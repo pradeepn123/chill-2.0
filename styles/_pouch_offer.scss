@@ -1,25 +1,38 @@
-@media (max-width: 767px){
-    .shopify-section.pouch_offer_mobile{
-        border-top: 1px solid #D6D6D6;
-        .claim_banner_product_page_container, .claim_success_message, .claim_fail_message{
-            display: flex !important;
-        }
-    }
-    .claim_banner_product_page_container, .claim_success_message, .claim_fail_message{
+// @media (max-width: 767px){
+//     .shopify-section.pouch_offer_mobile{
+//         border-top: 1px solid #D6D6D6;
+//         .claim_banner_product_page_container, .claim_success_message, .claim_fail_message{
+//             display: flex !important;
+//         }
+//     }
+//     .claim_banner_product_page_container, .claim_success_message, .claim_fail_message{
+//         display: none !important;
+//     }
+// }
+// .shopify-section.pouch_offer_mobile{
+//     .claim_banner_product_page_container, .claim_success_message, .claim_fail_message{
+//         display: none !important;
+//     }
+//     .claim_success_message, .claim_fail_message{
+//         justify-content: center !important;
+//     }
+// }
+// .claim_banner_product_page_container, .claim_success_message, .claim_fail_message{
+//     display: flex !important;
+// }
+// .claim_success_message, .claim_fail_message{
+//     justify-content: center;
+// }
+.slideshow_offer_mobile{
+    border-top: 2px solid #f7f7f8;
+}
+@media(min-width: 768px){
+    .shopify-section.slideshow_offer_mobile{
         display: none !important;
     }
 }
-.shopify-section.pouch_offer_mobile{
-    .claim_banner_product_page_container, .claim_success_message, .claim_fail_message{
-        display: none;
+@media (max-width: 767px){
+    .slider-section.slider-section_home_page{
+        display: none !important;
     }
-    .claim_success_message, .claim_fail_message{
-        justify-content: center;
-    }
-}
-.claim_banner_product_page_container, .claim_success_message, .claim_fail_message{
-    display: flex;
-}
-.claim_success_message, .claim_fail_message{
-    justify-content: center;
 }

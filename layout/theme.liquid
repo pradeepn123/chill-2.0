@@ -145,9 +145,11 @@
   {% section 'age-verification' %}
   {% section 'announcement-bar' %}
   {% section 'header' %}
-  {% if product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'index' or request.page_type == 'product' %}
-    {% render 'free-variety-pack' %}
-  {% endif %}
+  <div class="slider-section {% if request.page_type == 'index' %}slider-section_home_page{% endif %}" >
+    {% if request.page_type != 'collection' %}
+      {% render 'slideshow-offers' %}
+    {% endif %}
+  </div>
   {% section 'store-messages' %}
 
   <main id="content" role="main">
@@ -172,7 +174,7 @@
   {{ 'custom.js'  | asset_url | script_tag }}
 
   <script src="https://player.vimeo.com/api/player.js"></script>
-  <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+  <script src="https://a.vimeocdn.com/js/froogaloop2.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Begin ReCharge code -->

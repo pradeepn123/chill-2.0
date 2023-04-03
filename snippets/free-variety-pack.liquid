@@ -8,6 +8,9 @@
         endfor 
     endfor 
 -%}
+{% style %}
+  
+{% endstyle %}
 {% assign free_variety_pack_found_in_cart = false %}
 {% for lineItem in cart.items %}
   {% if lineItem.properties['_variety_pack'] %}
@@ -277,11 +280,8 @@
                           {% endif %}
                         {% endform %}
                       </div>
-
                   {% endif %}
                 {% endfor %}
-
-                
               </div>
             </div>
           </div>
@@ -422,11 +422,22 @@
 
   function handleClaimDrawerClose() {
     document.querySelector("body").classList.remove("cart-drawer-open")
-    document.querySelector('.claim_banner_product_page_container').style.display='none'
+    const claimBannerProductContainer = document.querySelector('.claim_banner_product_page_container')
+    if (claimBannerProductContainer.closest("#variety_pack")) {
+      claimBannerProductContainer.closest("#variety_pack").remove()
+    } else {
+      claimBannerProductContainer.style.display='none'
+    }
   }
+
+
   function handleCloseBanner() {
-    document.querySelectorAll('.claim_banner_product_page_container').forEach((element) => {
-      element.remove()
+    claimBannerProductContainers.forEach((claimBannerProductContainer) => {
+      if (claimBannerProductContainer.closest("#variety_pack")) {
+        claimBannerProductContainer.closest("#variety_pack").remove()
+      } else {
+        claimBannerProductContainer.remove()
+      }
     })
 
     const claimSuccessMessages = document.querySelectorAll('.claim_success_message');
@@ -434,8 +445,10 @@
       claimSuccessMessages.forEach(claimSuccessMessage => {
         claimSuccessMessage.remove()
       })
-      
     }
   }
+  
+  
+
 </script>  
 {% endunless %} 

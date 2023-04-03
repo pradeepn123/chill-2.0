@@ -1052,6 +1052,8 @@
     "how_it_works_title": "How It Works",
     "how_it_works_description": "<ul><li>Login or Sign up to join the <a href=\"http:\/\/chill.com\/\" target=\"_blank\"><em><strong>Chill.com<\/strong><\/em><\/a> community<\/li><li>Get a free variety pack (worth $19.99) when you try our CBD pouches for the first time<\/li><li>You only pay for shipping - the pouches are on us!<\/li><\/ul>",
     "how_it_works_login_text": "LOGIN TO CLAIM YOUR POUCH STARTER PACK",
+    "announce_gummies_offer_text_desktop": "Get your 25mg gummies for just <span>$5 a pack<\/span> for the April month. Save $12.99 per pack! Plus <span>one FREE 10mg gummies<\/span> with each order",
+    "announce_gummies_button_url": "shopify:\/\/collections\/gummies-offer",
     "show_gummies_offer": true,
     "gummies_offer_text": "<p>🎉 Yey! You are now eligible for a 👉  <strong>50% Discount<\/strong> on the Tropical and Berry CBD gummies. Add as many quantity as you’d like  😍  for <strong>Flat 50% Off<\/strong>.<\/p>",
     "cart_button_url": "shopify:\/\/collections\/gummies-offer",
@@ -1304,7 +1306,7 @@
           "2e9b0b00-d8fb-4143-be2d-eefe5fb293f5": {
             "type": "announcement",
             "settings": {
-              "text": "<p>Use LIVINGCHILL20 code and get<strong> 20% off<\/strong> on your first Chill order  <a href=\"\/collections\/shop\" title=\"Our Hemp Products\"><strong>GET IT NOW<\/strong><\/a><\/p>"
+              "text": "<p>Get<strong> 20% off<\/strong> on your first Chill order  <a href=\"\/collections\/shop\" title=\"Our Hemp Products\"><strong>GET IT NOW<\/strong><\/a><\/p>"
             }
           },
           "ba09120b-5b07-4fe0-95ef-bf983d98ac02": {

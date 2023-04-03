@@ -1,15 +1,12 @@
-{% if product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'index' or request.page_type == 'product' %}
-    {% render 'free-variety-pack' %}
-{% endif %}
-
+{% render 'slideshow-offers' %}
 {% schema %}
     {
-        "name": "Pouches offer",
-        "class": "pouch_offer_mobile",
+        "name": "Slideshow Offer mobile",
+        "class": "slideshow_offer_mobile",
         "settings": [],
         "presets": [
             {
-                "name": "Pouches offer",
+                "name": "Slideshow Offer mobile",
                 "settings": {}
             }
         ]

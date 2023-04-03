@@ -18,7 +18,7 @@
           {% if section.settings.use_h1 %}
             <h1 id="{{ section.id }}" style="font-weight: {{ section.settings.title_weight }};">{{ section.settings.title | escape }}</h1>
           {% else %}
-            <h2 id="{{ section.id }}" class="h1-style" style="font-weight: {{ section.settings.title_weight }};">{{ section.settings.title | escape }}</h2>
+            <h1 id="{{ section.id }}" class="h1-style" style="font-weight: {{ section.settings.title_weight }};">{{ section.settings.title | escape }}</h1>
             {% style %}
             @media (max-width: 768px){
               .h1-style{
@@ -47,6 +47,87 @@
     </div>
   </div>
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What is CBD?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CBD (cannabidiol) is the most abundant cannabinoid present in the hemp plant. The plants contain over 100 other cannabinoids but all in far lower amounts."
+    }
+  },{
+    "@type": "Question",
+    "name": "What are the benefits of CBD?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We don’t make health claims in respect of the products we sell and only recommend them for general wellness. 
+
+Some people suggest that CBD could lead to better sleep, reduced stress and anxiety, or even pain relief. While we aren’t supporting any of these claims, we are glad that so many people seem to have had a good experience with CBD products. 
+
+Many people do take CBD to aid their body’s recovery, alleviate particular symptoms, or as a daily supplement to support their well-being. There is at least one pharmaceutical product that has been approved by the authorities for medical use."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is the difference between CBD and Hemp?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hemp, cannabis and marijuana are all part of the same family of plants. Hemp is a strain of cannabis sativa whereas marijuana – colloquially called cannabis - may be cannabis sativa, cannabis indica or cannabis ruderalis. Generally, marijuana will contain a high amount of THC but a low amount of CBD. However, hemp has a very high level of CBD and only a very small amount of THC.
+
+The plants look different too. Although there are a number of different strains of hemp, the plants tend to be taller and more fibrous than marijuana which is a smaller, bushier plant and often with more flowering buds. In addition to being a source of CBD, the strength of the hemp plant makes it suitable for a wide range of uses, including building materials and paper, whereas marijuana’s uses are normally limited to the extraction of cannabinoids for recreational and medicinal purposes."
+    }
+  },{
+    "@type": "Question",
+    "name": "Will CBD make me high?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Our CBD-infused products are entirely free of THC (0.0%). THC is the compound in marijuana and cannabis that produces the psychoactive effect. We use CBD isolate which means no other cannabinoid compounds are found in most of our products."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is CBD isolate?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CBD Isolate is 99% pure cannabidiol offering CBD in its purest and most concentrated form."
+    }
+  },{
+    "@type": "Question",
+    "name": "Can I take CBD if I am using other medicines?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "If you are taking other medication, then we always recommend that you speak with your GP first before including CBD in your wellness routine. We also advise that you should not take CBD if you are pregnant or breastfeeding."
+    }
+  },{
+    "@type": "Question",
+    "name": "Is CBD safe for children?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CBD should not be taken by, or given to, anyone under the age of 18. Please consult a qualified medical professional if you have questions or concerns."
+    }
+  },{
+    "@type": "Question",
+    "name": "What does CBD stand for?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CBD stands for cannabidiol. It’s one of the many compounds found in marijuana and hemp. There are more than 80 other naturally occurring compounds found within the Cannabis Sativa plant."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is your online returns policy?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Eligible returns of products may be made by mail. Items must be returned in accordance with our policy requirements, within 10 days from the date of delivery to the Chill return address listed on the return shipping label. Please email info@chill.com and put Chill Returns in the subject line.
+
+Returned merchandise must meet the below requirements in order to be accepted for a refund:
+
+All items must be in original condition. Merchandise that has been used, altered or damaged will not be accepted.  Damaged or faulty merchandise will be replaced with like-kind items."
+    }
+  }]
+}
+</script>
 
 
 {% schema %}

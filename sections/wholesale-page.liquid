@@ -8,9 +8,8 @@
           {% endif %}
         </div>
         <div class="wholesale-item wholesale-item-text">
-          <h3>{{ section.settings.title }}
-          </h3>
-          {{ section.settings.subheading }}
+          <h1 class="h3">{{ section.settings.title }}</h1>
+          <p>{{ section.settings.subheading }}</p>
           <div class="wholesale-button">
             {% if section.settings.button_url_1 != blank %}
               <a href="{{ section.settings.button_url_1 }}" target="_blank">

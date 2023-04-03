@@ -84,7 +84,20 @@
       </p>
     {%- endif -%}
   {%- endif -%}
-  
+  {% comment %} Free 10mg gummies single pack on each order containing 25mg Gummies single pack {% endcomment %}
+  {% assign free10mgGummies = false %}
+  {% for item in cart.items %}
+    {% if item.id == 39578497613982 or item.id == 39578484670622 %}
+        {% assign free10mgGummies = true %}
+    {% endif %}
+  {% endfor %}
+  {% if free10mgGummies == true %}
+    <div class="gummies_offer_wrapper" style="margin:20px 0;">
+      <div class="gummies_offer_container">
+        <span class="free10mgGummiesOffer">Get one FREE 10mg gummies with this order</span>
+      </div>
+    </div>
+  {% endif %}
 
   {% if cart.items == empty %}
     <div class="fully-spaced-row align-centre empty_cart" data-cc-animate>
@@ -199,6 +212,10 @@
                         </div>
                       {% endif %}
                     </div>
+                    {% if item.id == 39578497613982 or item.id == 9578484670622 %}
+                      <span>Get one FREE 10mg gummies with this product</span> 
+                    {% endif %}
+                    
                   </div>
                   {% if item.line_level_discount_allocations.size > 0 %}
                     {% unless promotionalLine %}
