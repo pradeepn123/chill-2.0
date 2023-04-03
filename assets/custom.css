@@ -9720,6 +9720,7 @@ body.cart-drawer-open {
   color: #000;
   padding: 12px 19px;
   flex-basis: 20%;
+  margin: auto;
 }
 @media (max-width: 374px) {
   .claim_banner_product_page_container .claim_banner_product_page .claim_banner_button {
