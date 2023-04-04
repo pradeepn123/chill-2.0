@@ -216,26 +216,26 @@
         "2866e88b-20e1-4338-91ae-cca51f74dfb1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Happy_Tuesdays_-_Homepage_Banner_58df85b5-c53a-4ce3-a9c7-49ca2ed19c19.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Happy_Tuesdays_-_Homepage_Banner_Mobile_4965412e-cb4b-4ed6-96ed-2b9b91662b30.jpg",
+            "image": "shopify:\/\/shop_images\/Chill_Homepage_Banner.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Chill_Homepage_Banner_Mobile.jpg",
             "image_position": "center center",
-            "mobile_image_position": "left center",
+            "mobile_image_position": "center center",
             "slide_link": "",
             "subheading": "",
-            "title": "Introducing \n<strong> Happy \nTuesdays <\/strong>",
+            "title": "<strong>$5 Gummies<\/strong>\nall April",
             "title_size": 84,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>The post-rave wellness pack backed by leading nutritionists and packed with 26 scientifcally proven ingredients!<\/p>",
-            "heading_color": "#000000",
-            "text_color": "#000000",
+            "text": "<p>Celebrating stress awareness month! Get all single packs of Chill Gummies for only $5!!<\/p>",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
             "enlarge_text": true,
-            "button_label_1": "Shop Happy Tuesdays",
-            "button_url_1": "shopify:\/\/collections\/happy-tuesdays",
+            "button_label_1": "stay mellow sale",
+            "button_url_1": "",
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#6ec59f",
-            "button_text_color": "#ffffff",
+            "button_text_color": "#FFFFFF",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
@@ -262,6 +262,60 @@
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#9792e4",
+            "button_text_color": "#ffffff",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
+        "66002548-b60b-4786-8e10-a024be1f10e1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mad_Tasty_Homepage_Banner_e18773e0-e0d1-4b54-a759-86aceb546189.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Mad_Tasty_Landing_Page_Mobile.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Who is \n<strong> Mad Tasty? <strong><\/strong><\/strong>",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Founded by OneRepublic’s, Ryan Tedder, Mad Tasty is the all-natural functional beverage brand that’s taking the world by storm.<\/p>",
+            "heading_color": "#171717",
+            "text_color": "#171717",
+            "enlarge_text": true,
+            "button_label_1": "Shop Mad Tasty",
+            "button_url_1": "shopify:\/\/blogs\/chill-blog\/introducing-mad-tasty",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#f3b09f",
+            "button_text_color": "#171717",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
+        "2866e88b-20e1-4338-91ae-cca51f74dfb1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Happy_Tuesdays_-_Homepage_Banner_58df85b5-c53a-4ce3-a9c7-49ca2ed19c19.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Happy_Tuesdays_-_Homepage_Banner_Mobile_4965412e-cb4b-4ed6-96ed-2b9b91662b30.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "left center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Introducing \n<strong> Happy \nTuesdays <\/strong>",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>The post-rave wellness pack backed by leading nutritionists and packed with 26 scientifcally proven ingredients!<\/p>",
+            "heading_color": "#000000",
+            "text_color": "#000000",
+            "enlarge_text": true,
+            "button_label_1": "Shop Happy Tuesdays",
+            "button_url_1": "shopify:\/\/collections\/happy-tuesdays",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#6ec59f",
             "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "center left"
@@ -322,35 +376,9 @@
             "text_alignment": "center left"
           }
         },
-        "66002548-b60b-4786-8e10-a024be1f10e1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Mad_Tasty_Homepage_Banner_e18773e0-e0d1-4b54-a759-86aceb546189.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Mad_Tasty_Landing_Page_Mobile.jpg",
-            "image_position": "center center",
-            "mobile_image_position": "center center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "Who is \n<strong> Mad Tasty? <strong><\/strong><\/strong>",
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>Founded by OneRepublic’s, Ryan Tedder, Mad Tasty is the all-natural functional beverage brand that’s taking the world by storm.<\/p>",
-            "heading_color": "#171717",
-            "text_color": "#171717",
-            "enlarge_text": true,
-            "button_label_1": "Shop Mad Tasty",
-            "button_url_1": "shopify:\/\/blogs\/chill-blog\/introducing-mad-tasty",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_background_color": "#f3b09f",
-            "button_text_color": "#171717",
-            "button_text_font_size": 20,
-            "text_alignment": "center left"
-          }
-        },
         "190b68b3-e888-4fbb-82b4-bdb9c97c144f": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Variety_Pack_Homepage_banner_ef50fe52-6e99-4d7a-9c13-d77a02b889e6.jpg",
             "mobile_image": "shopify:\/\/shop_images\/Variety_Pack_Banner_Homepage_Mobile.jpg",
@@ -375,33 +403,6 @@
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
-        },
-        "d67f8e53-2f63-4ee7-a595-2144d56760ad": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Chill_Homepage_Banner.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Chill_Homepage_Banner_Mobile.jpg",
-            "image_position": "center center",
-            "mobile_image_position": "center center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "<strong>$5 Gummies<\/strong>\nall April",
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>Celebrating stress awareness month! Get all single packs of Chill Gummies for only $5!!<\/p>",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
-            "enlarge_text": true,
-            "button_label_1": "stay mellow sale",
-            "button_url_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_background_color": "#6ec59f",
-            "button_text_color": "#FFFFFF",
-            "button_text_font_size": 20,
-            "text_alignment": "center left"
-          }
         }
       },
       "block_order": [
@@ -409,11 +410,11 @@
         "48d42c8a-cadf-4c4b-a935-19acecc0acf1",
         "2866e88b-20e1-4338-91ae-cca51f74dfb1",
         "159042e8-d790-4168-b7cf-81a9a54547e5",
+        "66002548-b60b-4786-8e10-a024be1f10e1",
+        "2866e88b-20e1-4338-91ae-cca51f74dfb1",
         "f212ae5d-7cef-47d3-bf0c-78fa15669a7f",
         "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8",
-        "66002548-b60b-4786-8e10-a024be1f10e1",
-        "190b68b3-e888-4fbb-82b4-bdb9c97c144f",
-        "d67f8e53-2f63-4ee7-a595-2144d56760ad"
+        "190b68b3-e888-4fbb-82b4-bdb9c97c144f"
       ],
       "settings": {
         "height": "fixed",
