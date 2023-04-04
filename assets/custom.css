@@ -8914,10 +8914,33 @@ body.cart-drawer-open {
   text-align: center;
 }
 .gummies_offer_container .free10mgGummiesOffer {
-  color: #FFAC9A;
+  color: #000;
   margin: auto;
+  font-weight: normal;
+  font-size: 15px;
+}
+.gummies_offer_container .free10mgGummiesOffer span {
   font-weight: 700;
-  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .gummies_offer_container .free10mgGummiesOffer {
+    font-size: 14px;
+  }
+}
+.gummies_offer_container .free10mgGummiesOffer_subtext {
+  color: #000;
+  margin: auto;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: left;
+}
+.gummies_offer_container .free10mgGummiesOffer_subtext span {
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .gummies_offer_container .free10mgGummiesOffer_subtext {
+    font-size: 10px;
+  }
 }
 
 .page-section-spacing .majortitle {
