@@ -1569,8 +1569,14 @@
       {
         "type": "text",
         "id": "offer_text_on_cart",
-        "label": "Offer text on cart",
-        "default": "Get one FREE 10mg gummies with this order"
+        "label": "Offer text on cart - maintext",
+        "default": "Yay! You are eligible to get a complimentary pack of 10mg gummies with every purchase of 25mg gummies"
+      },
+      {
+        "type": "text",
+        "id": "offer_text_on_cart_subtext",
+        "label": "Offer text on cart - subtext",
+        "default": "No need to add them to your cart, we will deliver straight to your door!"
       }
     ]
   },

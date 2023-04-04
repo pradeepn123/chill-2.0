@@ -95,6 +95,10 @@
     <div class="gummies_offer_wrapper" style="margin:20px 0;">
       <div class="gummies_offer_container">
         <span class="free10mgGummiesOffer">{{ settings.offer_text_on_cart }}</span>
+        <br>
+        {% if settings.offer_text_on_cart_subtext != blank %}
+          <span class="free10mgGummiesOffer_subtext">* {{ settings.offer_text_on_cart_subtext }} *</span>
+        {% endif %}
       </div>
     </div>
   {% endif %}
