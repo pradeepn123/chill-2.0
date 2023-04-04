@@ -4,6 +4,7 @@
     "50": [],
     "100": []
   }
+  
   {% if section.settings.enable_promotion %}
     {% for block in section.blocks %}
       {% for blockSetting in block.settings %}
@@ -109,6 +110,20 @@
               </p>
             {%- endif -%}
 
+            {% comment %} Free 10mg gummies single pack on each order containing 25mg Gummies single pack {% endcomment %}
+            {% assign free10mgGummies = false %}
+            {% for item in cart.items %}
+              {% if item.id == 39578497613982 or item.id == 39578484670622 %}
+                  {% assign free10mgGummies = true %}
+              {% endif %}
+            {% endfor %}
+            {% if settings.enable_gummies_offer_on_announcement_bar and free10mgGummies == true and settings.offer_text_on_cart != blank %}
+              <div class="gummies_offer_wrapper">
+                <div class="gummies_offer_container">
+                  <span class="free10mgGummiesOffer">{{ settings.offer_text_on_cart }}</span>
+                </div>
+              </div>
+            {% endif %}
             {% comment %} 50% off on gummies offer {% endcomment %}
 
             {% assign gummies_in_cart = false %}
@@ -214,6 +229,7 @@
                                 {% assign subtotal = subtotal | plus : item.final_line_price %}
                               {% endif %}
                             </div>
+                            
                           </div>
 
                           <div class="variant_discount_block_sec">
@@ -272,7 +288,6 @@
                             </a>
                           {% endunless %}
                         </div>
-
                       </div>
 
                     </div>

@@ -25,6 +25,7 @@
         z-index: 60000;
     }
     background: #ffffff;
+   
     position: fixed;
     top: 0;
     left: 100%;
@@ -152,7 +153,6 @@
     background: #FFFBFA;
     padding: 13px 20px;
     width: 38vw;
-    box-shadow: 5px 5px #FFAC9A;
     @media (max-width: 767px){
         width: 90vw
     }
@@ -303,6 +303,7 @@
         align-items: baseline;
         width: 100%;
         margin: 17px 0;
+        box-shadow: 5px 5px #FFAC9A;
         @media (max-width: 767px){
             width: 100%;
             box-shadow: 3px 3px #FFAC9A;
@@ -311,8 +312,8 @@
             font-size: 16px;
             font-weight: 600;
             color: #000;
-            margin-bottom: 0;
             flex-basis: 80%;
+            margin: auto;
             @media (max-width: 374px){
                 font-size: 8px !important;
             }
@@ -344,6 +345,7 @@
             color: #000;
             padding: 12px 19px;
             flex-basis: 20%;
+            margin: auto;
             @media (max-width: 374px){
                 font-size: 8px !important;
             }
@@ -361,6 +363,7 @@
     }
 }
 .claim_banner_home_page{
+    display: none !important;
     display: flex;
     justify-content: space-between;
     .claim_banner_product_page_container{
