@@ -5999,16 +5999,26 @@
           this.cartRefreshXhr.abort();
         }
         this.cartRefreshXhr = $.getJSON(theme.routes.cart_url, function(cart) {
-          let promotionalProducts;
+          let promotionalProducts = []
+          const paidProducts = cart.items.filter(lineItem => !lineItem.properties || lineItem.properties["Product Type"] != "FREE")
           const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties && lineItem.properties["Product Type"] == "FREE")          
 
-          if (cart.items_subtotal_price > 10000) {
-            promotionalProducts = theme.promotionalProducts[100]
-          } else if (cart.items_subtotal_price > 5000) {
-            promotionalProducts = theme.promotionalProducts[50]
-          } else if (cart.items_subtotal_price > 2500) {
-            promotionalProducts = theme.promotionalProducts[25]
-          }
+          // if (cart.items_subtotal_price > 10000) {
+          //   promotionalProducts = theme.promotionalProducts[100]
+          // } else if (cart.items_subtotal_price > 5000) {
+          //   promotionalProducts = theme.promotionalProducts[50]
+          // } else if (cart.items_subtotal_price > 2500) {
+          //   promotionalProducts = theme.promotionalProducts[25]
+          // }
+
+          paidProducts.forEach((lineItem) => {
+            if (theme.promotionalProducts[lineItem.variant_id]) {
+              promotionalProducts = promotionalProducts.concat(theme.promotionalProducts[lineItem.variant_id].map((product) => {
+                product.quantity = lineItem.quantity
+                return product
+              }))
+            }
+          })
 
           let updateParams = {}
           if (this.cartXhr) {
@@ -6317,17 +6327,26 @@
         }
 
         $.getJSON(theme.routes.cart_url + ".js", function(cart) {
-          let promotionalProducts;
+          let promotionalProducts = [];
           const paidProducts = cart.items.filter(lineItem => !lineItem.properties || lineItem.properties["Product Type"] != "FREE")
-          const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties && lineItem.properties["Product Type"] == "FREE")          
+          const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties && lineItem.properties["Product Type"] == "FREE")
 
-          if (cart.items_subtotal_price > 10000) {
-            promotionalProducts = theme.promotionalProducts[100]
-          } else if (cart.items_subtotal_price > 5000) {
-            promotionalProducts = theme.promotionalProducts[50]
-          } else if (cart.items_subtotal_price > 2500) {
-            promotionalProducts = theme.promotionalProducts[25]
-          }
+          // if (cart.items_subtotal_price > 10000) {
+          //   promotionalProducts = theme.promotionalProducts[100]
+          // } else if (cart.items_subtotal_price > 5000) {
+          //   promotionalProducts = theme.promotionalProducts[50]
+          // } else if (cart.items_subtotal_price > 2500) {
+          //   promotionalProducts = theme.promotionalProducts[25]
+          // }
+
+          paidProducts.forEach((lineItem) => {
+            if (theme.promotionalProducts[lineItem.variant_id]) {
+              promotionalProducts = promotionalProducts.concat(theme.promotionalProducts[lineItem.variant_id].map((product) => {
+                product.quantity = lineItem.quantity
+                return product
+              }))
+            }
+          })
 
           let updateParams = {}
           if (this.cartXhr) {
