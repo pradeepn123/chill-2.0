@@ -375,33 +375,6 @@
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
-        },
-        "48d42c8a-cadf-4c4b-a935-19acecc0acf1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Chill_Homepage_Banner.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Chill_Homepage_Banner_Mobile.jpg",
-            "image_position": "center center",
-            "mobile_image_position": "center center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "<strong>$5 Gummies<\/strong>\nall April",
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>In the spirit of stress awareness month. All single packs of 25mg CBD gummies are now only $5!<\/p>",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
-            "enlarge_text": true,
-            "button_label_1": "mellow gummies sale",
-            "button_url_1": "shopify:\/\/collections\/cbd-gummies",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_background_color": "#6ec59f",
-            "button_text_color": "#FFFFFF",
-            "button_text_font_size": 20,
-            "text_alignment": "center left"
-          }
         }
       },
       "block_order": [
@@ -412,6 +385,7 @@
         "2866e88b-20e1-4338-91ae-cca51f74dfb1",
         "f212ae5d-7cef-47d3-bf0c-78fa15669a7f",
         "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8",
+        "66002548-b60b-4786-8e10-a024be1f10e1",
         "190b68b3-e888-4fbb-82b4-bdb9c97c144f"
       ],
       "settings": {
