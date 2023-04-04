@@ -212,6 +212,33 @@
             "text_alignment": "center left"
           }
         },
+        "2866e88b-20e1-4338-91ae-cca51f74dfb1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Chill_Homepage_Banner.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Chill_Homepage_Banner_Mobile.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong>$5 Gummies<\/strong>\nall April",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Celebrating stress awareness month! Get all single packs of Chill Gummies for only $5!!<\/p>",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "enlarge_text": true,
+            "button_label_1": "stay mellow sale",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#6ec59f",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
         "159042e8-d790-4168-b7cf-81a9a54547e5": {
           "type": "image",
           "settings": {
@@ -372,6 +399,33 @@
             "button_url_2": "",
             "button_background_color": "#6ec59f",
             "button_text_color": "#171717",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
+        "d67f8e53-2f63-4ee7-a595-2144d56760ad": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Chill_Homepage_Banner.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Chill_Homepage_Banner_Mobile.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<stroke>$5 Gummies<stroke><\/stroke>\nall April<\/stroke>",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Celebrating stress awareness month! Get all single packs of Chill Gummies for only $5!!<\/p>",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "enlarge_text": true,
+            "button_label_1": "stay mellow sale",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#6ec59f",
+            "button_text_color": "#FFFFFF",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
