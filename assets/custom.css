@@ -9680,8 +9680,8 @@ body.cart-drawer-open {
   font-size: 16px;
   font-weight: 600;
   color: #000;
-  margin-bottom: 0;
   flex-basis: 80%;
+  margin: auto;
 }
 @media (max-width: 374px) {
   .claim_banner_product_page_container .claim_banner_product_page .claim_banner_text {
