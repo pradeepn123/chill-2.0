@@ -890,9 +890,12 @@ body.cart-drawer-open {
 .color-red {
     color: red !important;
 }
-.free10mgGummiesOffer{
-    color: #FFAC9A;
-    margin: auto;
-    font-weight: 700;
-    font-size: 18px;
+.gummies_offer_container{
+    text-align: center;
+    .free10mgGummiesOffer{
+        color: #FFAC9A;
+        margin: auto;
+        font-weight: 700;
+        font-size: 18px;
+    }
 }

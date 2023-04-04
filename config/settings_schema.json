@@ -1565,6 +1565,12 @@
         "type": "url",
         "id": "announce_gummies_button_url",
         "label": "URL for Gummies offer button"
+      },
+      {
+        "type": "text",
+        "id": "offer_text_on_cart",
+        "label": "Offer text on cart",
+        "default": "Get one FREE 10mg gummies with this order"
       }
     ]
   },
