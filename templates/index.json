@@ -185,8 +185,9 @@
             "text_alignment": "center left"
           }
         },
-        "d67f8e53-2f63-4ee7-a595-2144d56760ad": {
+        "48d42c8a-cadf-4c4b-a935-19acecc0acf1": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Chill_Homepage_Banner.jpg",
             "mobile_image": "shopify:\/\/shop_images\/Chill_Homepage_Banner_Mobile.jpg",
@@ -198,12 +199,12 @@
             "title_size": 84,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>In the spirit of stress awareness month! Get all single packs of Chill Gummies for only $5!!<\/p>",
+            "text": "<p>In the spirit of stress awareness month. All single packs of 25mg CBD gummies are now only $5!<\/p>",
             "heading_color": "#ffffff",
             "text_color": "#ffffff",
             "enlarge_text": true,
-            "button_label_1": "stay mellow sale",
-            "button_url_1": "",
+            "button_label_1": "mellow gummies sale",
+            "button_url_1": "shopify:\/\/collections\/cbd-gummies",
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#6ec59f",
