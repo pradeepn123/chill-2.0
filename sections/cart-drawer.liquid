@@ -117,10 +117,10 @@
                   {% assign free10mgGummies = true %}
               {% endif %}
             {% endfor %}
-            {% if free10mgGummies == true %}
+            {% if free10mgGummies == true and settings.offer_text_on_cart != blank %}
               <div class="gummies_offer_wrapper">
                 <div class="gummies_offer_container">
-                  <span class="free10mgGummiesOffer">Get one FREE 10mg gummies with this order</span>
+                  <span class="free10mgGummiesOffer">{{ settings.offer_text_on_cart }}</span>
                 </div>
               </div>
             {% endif %}

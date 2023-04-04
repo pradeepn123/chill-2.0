@@ -17,9 +17,11 @@
                 {% endif %}
             </div>
         {% endif %}
-        <div class="slide" id="offer_gummies">
-            {% render 'announce-gummies-offer' %}
-        </div>
+        {% if settings.enable_gummies_offer_on_announcement_bar %}
+            <div class="slide" id="offer_gummies">
+                {% render 'announce-gummies-offer' %}
+            </div>
+        {% endif %}
     </div>
 </div>
 <script>
