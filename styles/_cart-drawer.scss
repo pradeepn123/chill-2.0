@@ -893,9 +893,28 @@ body.cart-drawer-open {
 .gummies_offer_container{
     text-align: center;
     .free10mgGummiesOffer{
-        color: #FFAC9A;
+        color: #000;
         margin: auto;
-        font-weight: 700;
-        font-size: 18px;
+        font-weight: normal;
+        font-size: 15px;
+        span{
+            font-weight: 700;
+        }
+        @media (max-width: 767px){
+            font-size: 14px;
+        }
+    }
+    .free10mgGummiesOffer_subtext{
+        color: #000;
+        margin: auto;
+        font-weight: normal;
+        font-size: 12px;
+        text-align: left;
+        span{
+            font-weight: 700;
+        }
+        @media (max-width: 767px){
+            font-size: 10px;
+        }
     }
 }
