@@ -99,7 +99,29 @@ $(document).ready(function () {
         slidesToScroll:1,   
         dots:true
       });
-    
+    $('.slider_image_wrapper_mobile').slick({
+        draggable:true,    
+        arrows:false,  
+        autoplay:true,
+        autoplaySpeed:2500,     
+        slidesToShow:1,     
+        slidesToScroll:1,   
+        dots:true,
+        initialSlide: 1
+    })
+    var tabContentParentProduct = $('.product_ingredients_sec .content-section .content.active')
+    for(i = 0; i< tabContentParentProduct.length; i++){
+        var tabContentList = tabContentParentProduct[i].querySelector('.tab-content-list ');
+        $(tabContentList).slick({
+            draggable:true,    
+            arrows:false,    
+            autoplay:true,
+            autoplaySpeed:3500,     
+            slidesToShow:1,     
+            slidesToScroll:1,   
+            dots:true
+        })
+    }
     var tabContentParent = $('.section-home-ingredients .content-section .content.active')
     for(i = 0; i< tabContentParent.length; i++){
         var tabContentList = tabContentParent[i].querySelector('.tab-content-list');
@@ -341,21 +363,25 @@ $(document).ready(function () {
         contentTab.classList.toggle('active');
 
         if(window.screen.width < 1200){
-            const tabContentList = contentTab.querySelector(".tab-content-list")
-            if (tabContentList && tabContentList.classList.contains("slick-initialized")) {
-                $(tabContentList).slick('unslick')
-            }
-            if (tabContentList) {
-                $(tabContentList).slick({
-                    draggable: true,    
-                    arrows: false,    
-                    autoplay: true,
-                    autoplaySpeed: 3500,     
-                    slidesToShow: 1,     
-                    slidesToScroll: 1,   
-                    dots: true
-                })
-            }
+            const tabContentList = contentTab.querySelectorAll(".tab-content-list");
+            tabContentList.forEach((elem) => {
+                if (elem && elem.classList.contains("slick-initialized")) {
+                    $(elem).slick('unslick')
+                }
+                if (elem) {
+                    $(elem).slick({
+                        draggable: true,    
+                        arrows: false,    
+                        autoplay: true,
+                        autoplaySpeed: 3500,     
+                        slidesToShow: 1,     
+                        slidesToScroll: 1,   
+                        dots: true
+                    })
+                }
+
+            })
+            
         }
       }
   });
@@ -829,7 +855,11 @@ theme.customAddToCart = function(e) {
 }
 class AutoSlider {
     constructor(element) {
-        this.el = document.querySelector(element);
+        this.element = element
+        this.el = document.querySelector(this.element);
+        if (!this.el) {
+            return
+        }
         this.init();
     }
 
@@ -837,11 +867,15 @@ class AutoSlider {
         if (this.timer) {
             clearInterval(this.timer)
         }
+        this.el = document.querySelector(this.element);
+        if (!this.el) {
+            return
+        }
         this.init()
     }
   
     init() {
-        this.slides = this.el.querySelectorAll(".slide");
+        this.slides = this.el.querySelectorAll('.slide');
         if (this.slides.length) {
             const selectedSlide = this.slides[0]
             selectedSlide.style.opacity = 1;
