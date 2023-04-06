@@ -8,6 +8,11 @@
     border-radius: 29px;
     padding: 9px 26px;
   }
+  @media screen and (min-width: 700px) and (max-width: 767px){
+    .gummies-button{
+      padding: 5px 26px !important;
+    }
+  }
   @media screen and (max-width:768px) {
     .gummies-button {
       font-size: {{ section.settings.mobilebtn_font_size }}px !important;
@@ -42,7 +47,7 @@
         alt="recycle-img">
     </div>
   {% endif %}
-  <a href="{{section.settings.btn-link}}" class="gummies-button">{{ section.settings.gummies-img-button }}</a>
+  <a href="{{section.settings.btn-link}}" class="gummies-button container">{{ section.settings.gummies-img-button }}</a>
 </div>
 {% endif %}
 {% schema %}
