@@ -532,11 +532,42 @@
 }
 
 .metafield-gummies-img-mobile{
-    display: none;
+    display: none !important;
     @media screen and (max-width:768px){
-        display:block;
+        display:block !important;
         .slider_image_wrapper_mobile{
             display: flex;
+            .slick-dots{
+                display: none;
+            }
+            @media (max-width: 1199px){
+                .slick-list{
+                    margin-bottom: 50px;
+                }
+                .slick-dots{
+                    position: absolute;
+                    bottom: 0;
+                    margin-bottom: 0 !important;
+                    justify-content: center;
+                    li{
+                        padding: 0;
+                        background: #222222;
+                        border: 1px solid #222222;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        margin: 0 11px !important;
+                        button{
+                            width: 10px;
+                            height: 10px;
+                        }
+                        &.slick-active{
+                            border: 1px solid #222222;
+                            background: transparent;
+                        }
+                    }
+                }
+            }
         }
     }
 }
