@@ -3918,6 +3918,13 @@ body {
 .section-main-product .product-detail .detail .product-form .not-in-quickbuy .shopify-app-block .okeReviews {
   margin: 16px 0 10px 0;
 }
+.section-main-product .product-detail .detail .product-form .not-in-quickbuy .product-info-block {
+  margin-top: -22px;
+  color: #676869;
+}
+.section-main-product .product-detail .detail .product-form .not-in-quickbuy .product-info-block a {
+  text-decoration: none;
+}
 .section-main-product .product-detail .detail .product-form .chill_holiday_sale_text {
   border-radius: 4rem;
   font-size: 16px;
@@ -4281,7 +4288,7 @@ body {
 .metafield-gummies-img-mobile {
   display: none !important;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 699px) {
   .metafield-gummies-img-mobile {
     display: block !important;
   }
@@ -4292,7 +4299,7 @@ body {
     display: none;
   }
 }
-@media screen and (max-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 699px) and (max-width: 1199px) {
   .metafield-gummies-img-mobile .slider_image_wrapper_mobile .slick-list {
     margin-bottom: 50px;
   }
@@ -4330,7 +4337,7 @@ body {
     text-align: center;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 699px) {
   .metafield-gummies-img .desktop-recycle-img {
     display: none;
   }
@@ -4340,14 +4347,22 @@ body {
     font-size: 12px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
   .metafield-gummies-img .gummies-button {
     position: absolute;
     top: 74%;
     left: 10%;
   }
 }
-@media screen and (max-width: 769px) {
+@media (max-width: 699px) {
+  .metafield-gummies-img .gummies-button {
+    width: 90%;
+    font-size: 16px !important;
+    font-weight: 700;
+    margin-top: 0 !important;
+  }
+}
+@media screen and (max-width: 699px) {
   .metafield-gummies-img .gummies-button {
     position: relative;
     font-weight: 700;
@@ -4458,7 +4473,7 @@ body {
   }
 }
 .product_ingredients_section .product_ingredients_sec_wrapper ul {
-  margin: 35px 0 !important;
+  margin: 30px 0 !important;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -4750,7 +4765,7 @@ body {
 .metafield-gummies-img-mobile {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 699px) {
   .metafield-gummies-img-mobile {
     display: block;
   }
@@ -4760,12 +4775,12 @@ body {
   margin-bottom: -6px;
   position: relative;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 699px) {
   .metafield-gummies-img {
     text-align: center;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 699px) {
   .metafield-gummies-img .desktop-recycle-img {
     display: none;
   }
@@ -4782,7 +4797,7 @@ body {
     left: 10%;
   }
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 699px) {
   .metafield-gummies-img .gummies-button {
     position: relative;
     font-weight: 700;

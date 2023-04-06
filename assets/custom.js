@@ -107,7 +107,6 @@ $(document).ready(function () {
         slidesToShow:1,     
         slidesToScroll:1,   
         dots:true,
-        initialSlide: 1,
         infinite: false
     })
     var tabContentParentProduct = $('.product_ingredients_sec .content-section .content.active')
