@@ -102,12 +102,13 @@ $(document).ready(function () {
     $('.slider_image_wrapper_mobile').slick({
         draggable:true,    
         arrows:false,  
-        autoplay:true,
+        autoplay:false,
         autoplaySpeed:2500,     
         slidesToShow:1,     
         slidesToScroll:1,   
         dots:true,
-        initialSlide: 1
+        initialSlide: 1,
+        infinite: false
     })
     var tabContentParentProduct = $('.product_ingredients_sec .content-section .content.active')
     for(i = 0; i< tabContentParentProduct.length; i++){
