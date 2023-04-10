@@ -44,20 +44,10 @@
                     <h3>{{ sub_block.subtitle }}</h3>
                     <p>{{ sub_block.subdescription }}</p>
                   </div>
-
-
                 {% endif %}
               {%- endfor -%}
-              {% if block['tab_content'].size == 1 %}
-                {% style %}
-                  @media(min-width: 1200px) {
-                    .tab-content-item {
-                      flex: 0 0 100% !important;
-                    }
-                  }
-                {% endstyle %}
               </div>
-            {% endif %}
+            
 
 
             {% if block.para1 != blank or block.para2 != blank or block.para3 != blank or block.para4 != blank or block.direction_heading != blank or block.para5 != blank %}
