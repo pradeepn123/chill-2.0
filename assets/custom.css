@@ -3918,10 +3918,14 @@ body {
 .section-main-product .product-detail .detail .product-form .not-in-quickbuy .shopify-app-block .okeReviews {
   margin: 16px 0 10px 0;
 }
-.section-main-product .product-detail .detail .product-form .not-in-quickbuy .product-info-block {
+.section-main-product .product-detail .detail .product-form .product-info-block {
   color: #676869;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: -30px;
+  padding-bottom: 2em;
 }
-.section-main-product .product-detail .detail .product-form .not-in-quickbuy .product-info-block a {
+.section-main-product .product-detail .detail .product-form .product-info-block a {
   text-decoration: none;
 }
 .section-main-product .product-detail .detail .product-form .chill_holiday_sale_text {
