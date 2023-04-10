@@ -1,3 +1,4 @@
+{% if product.metafields.settings.product_ingredients.value['ingredients_tab'] != blank %}
 <div class="product_ingredients_section {% if product.metafields.settings.product_ingredients.value['ingredients_tab'] == blank %} remove_space {%endif %}">
   <div class="product_ingredients_sec_wrapper">
     <div class="tab-content">
@@ -75,6 +76,7 @@
     </div>
   </div>
 </div>
+{% endif %}
 
 
 {% schema %}

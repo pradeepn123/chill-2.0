@@ -49,6 +49,9 @@
                         }
                     }
                     .slideshow-controls{
+                        @media (max-width: 1199px){
+                            display: none !important;
+                        }
                         .slideshow-controls__arrows{
                             .slick-product-prev{
                                 left: unset;
@@ -116,7 +119,6 @@
                 padding: inherit;
             }
             &.detail.product-column-right{
-                margin-top: 20px;
                 @media(min-width:1200px){
                     margin-top: 0px;
                 }
@@ -396,9 +398,17 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                            @media (min-width: 768px) and (max-width: 845px){
+                                font-size: 15px !important;
+                            }
                             .price-container{
                                 margin-bottom: 0;
                                 .price-area{
+                                    @media (min-width: 768px) and (max-width: 845px){
+                                        .h4-style{
+                                            font-size: 15px !important;
+                                        }
+                                    }
                                     .price{
                                         @media(max-width: 767.98px){                                        
                                             font-size: 20px;
@@ -542,43 +552,6 @@
     }
 }
 
-.metafield-gummies-img-mobile{
-    display: none !important;
-    @media screen and (max-width: 699px){
-        display:block !important;
-        .slider_image_wrapper_mobile{
-            display: flex;
-            .slick-dots{
-                display: none;
-            }
-            @media (max-width: 1199px){
-                .slick-dots{
-                    position: absolute;
-                    bottom: 0;
-                    margin-bottom: 0 !important;
-                    justify-content: center;
-                    li{
-                        padding: 0;
-                        background: #222222;
-                        border: 1px solid #222222;
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 50%;
-                        margin: 0 11px !important;
-                        button{
-                            width: 10px;
-                            height: 10px;
-                        }
-                        &.slick-active{
-                            border: 1px solid #222222;
-                            background: transparent;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 
 .metafield-gummies-img{
     margin-bottom: 80px;
@@ -843,9 +816,6 @@
                     display: none;
                 }
                 @media (max-width: 1199px){
-                    .slick-list{
-                        margin-bottom: 30px;
-                    }
                     .slick-dots{
                         position: absolute;
                         bottom: 0;
@@ -857,6 +827,7 @@
                             border: 1px solid #222222;
                             width: 10px;
                             height: 10px;
+                            transform: translateY(50%);
                             button{
                                 width: 10px;
                                 height: 10px;
@@ -870,14 +841,14 @@
                 }
                 .tab-content-item{
                     flex: 0 0 100%;
-                    padding: 0 15px;
+                    padding: 0 18px;
                     text-align: center;
-                    margin-bottom: 60px;
+                    margin-bottom: 50px;
                     @media(min-width:768px){
-                        margin-bottom: 35px;
+                        margin-bottom: 50px;
                     }
                     @media(min-width:1200px){
-                        padding: 0 15px;
+                        padding: 0 50px;
                         flex: 0 0 33.33%;
                         margin-bottom: 0px;
                     }
@@ -897,14 +868,11 @@
                         margin-bottom: 24px;
                     }
                     p{
-                        font-size: 18px;
+                        font-size: 16px;
                         font-family: 'Open Sans', sans-serif;
                         margin-bottom: 0;
                         line-height: 28px;
                         color: #000000;
-                        @media (max-width: 1023px){
-                            font-size: 16px;
-                        }
                     }
                 }
             }
@@ -1034,13 +1002,54 @@
     }    
 }
 
+// .metafield-gummies-img-mobile{
+//     display: none;
+//     @media screen and (max-width:699px){
+//         display:block;
+//     }
+// }
+
 .metafield-gummies-img-mobile{
-    display: none;
-    @media screen and (max-width:699px){
-        display:block;
+    display: none !important;
+    @media (max-width: 699px){
+        display: block !important;
+        .slider_image_wrapper_mobile{
+            display: flex;
+            .slick-dots{
+                display: none;
+            }
+            @media (max-width: 1199px){
+                .slick-list{
+                    margin-bottom: 45px;
+                }
+                .slick-dots{
+                    position: absolute;
+                    bottom: 0;
+                    margin-bottom: 0 !important;
+                    justify-content: center;
+                    li{
+                        padding: 0;
+                        background: #222222;
+                        border: 1px solid #222222;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        margin: 0 11px !important;
+                        transform: translateY(50%);
+                        button{
+                            width: 10px;
+                            height: 10px;
+                        }
+                        &.slick-active{
+                            border: 1px solid #222222;
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
-
 .metafield-gummies-img{
     margin-bottom: -6px;
     position: relative;
