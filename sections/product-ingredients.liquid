@@ -1,3 +1,4 @@
+{% if product.metafields.settings.product_ingredients.value['ingredients_tab'] != blank %}
 <div class="product_ingredients_section {% if product.metafields.settings.product_ingredients.value['ingredients_tab'] == blank %} remove_space {%endif %}">
   <div class="product_ingredients_sec_wrapper">
     <div class="tab-content">
@@ -60,7 +61,7 @@
 
 
             {% if block.para1 != blank or block.para2 != blank or block.para3 != blank or block.para4 != blank or block.direction_heading != blank or block.para5 != blank %}
-              <div class="direction_to_use">
+              <div class="direction_to_use container">
                 <h3 class="align-center">{{ block.direction_heading }}</h3>
                 <p>{{ block.para1 }}</p>
                 <p>{{ block.para2 }}</p>
@@ -75,6 +76,7 @@
     </div>
   </div>
 </div>
+{% endif %}
 
 
 {% schema %}
