@@ -3836,6 +3836,11 @@ body {
 .section-main-product .product-detail .gallery .gallery__inner .main-image .product-slideshow .product-media-wrapper .product-media .rimage-outer-wrapper .rimage-wrapper .rimage__image {
   object-fit: cover;
 }
+@media (max-width: 1199px) {
+  .section-main-product .product-detail .gallery .gallery__inner .main-image .slideshow-controls {
+    display: none !important;
+  }
+}
 .section-main-product .product-detail .gallery .gallery__inner .main-image .slideshow-controls .slideshow-controls__arrows .slick-product-prev {
   left: unset;
   top: unset;
@@ -3906,9 +3911,6 @@ body {
   .section-main-product .product-detail .detail {
     padding: inherit;
   }
-}
-.section-main-product .product-detail .detail.detail.product-column-right {
-  margin-top: 20px;
 }
 @media (min-width: 1200px) {
   .section-main-product .product-detail .detail.detail.product-column-right {
@@ -4163,8 +4165,18 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 768px) and (max-width: 845px) {
+  .section-main-product .product-detail .detail .product-form .quantity-submit-row .quantity-submit-row__submit .button {
+    font-size: 15px !important;
+  }
+}
 .section-main-product .product-detail .detail .product-form .quantity-submit-row .quantity-submit-row__submit .button .price-container {
   margin-bottom: 0;
+}
+@media (min-width: 768px) and (max-width: 845px) {
+  .section-main-product .product-detail .detail .product-form .quantity-submit-row .quantity-submit-row__submit .button .price-container .price-area .h4-style {
+    font-size: 15px !important;
+  }
 }
 @media (max-width: 767.98px) {
   .section-main-product .product-detail .detail .product-form .quantity-submit-row .quantity-submit-row__submit .button .price-container .price-area .price {
@@ -4286,46 +4298,6 @@ body {
   text-transform: uppercase;
   text-shadow: 2px 2px 4px #000000;
   z-index: 9;
-}
-
-.metafield-gummies-img-mobile {
-  display: none !important;
-}
-@media screen and (max-width: 699px) {
-  .metafield-gummies-img-mobile {
-    display: block !important;
-  }
-  .metafield-gummies-img-mobile .slider_image_wrapper_mobile {
-    display: flex;
-  }
-  .metafield-gummies-img-mobile .slider_image_wrapper_mobile .slick-dots {
-    display: none;
-  }
-}
-@media screen and (max-width: 699px) and (max-width: 1199px) {
-  .metafield-gummies-img-mobile .slider_image_wrapper_mobile .slick-dots {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 0 !important;
-    justify-content: center;
-  }
-  .metafield-gummies-img-mobile .slider_image_wrapper_mobile .slick-dots li {
-    padding: 0;
-    background: #222222;
-    border: 1px solid #222222;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 0 11px !important;
-  }
-  .metafield-gummies-img-mobile .slider_image_wrapper_mobile .slick-dots li button {
-    width: 10px;
-    height: 10px;
-  }
-  .metafield-gummies-img-mobile .slider_image_wrapper_mobile .slick-dots li.slick-active {
-    border: 1px solid #222222;
-    background: transparent;
-  }
 }
 
 .metafield-gummies-img {
@@ -4632,9 +4604,6 @@ body {
   display: none;
 }
 @media (max-width: 1199px) {
-  .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .slick-list {
-    margin-bottom: 30px;
-  }
   .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .slick-dots {
     position: absolute;
     bottom: 0;
@@ -4647,6 +4616,7 @@ body {
     border: 1px solid #222222;
     width: 10px;
     height: 10px;
+    transform: translateY(50%);
   }
   .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .slick-dots li button {
     width: 10px;
@@ -4659,18 +4629,18 @@ body {
 }
 .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item {
   flex: 0 0 100%;
-  padding: 0 15px;
+  padding: 0 18px;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 @media (min-width: 768px) {
   .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item {
-    margin-bottom: 35px;
+    margin-bottom: 50px;
   }
 }
 @media (min-width: 1200px) {
   .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item {
-    padding: 0 15px;
+    padding: 0 50px;
     flex: 0 0 33.33%;
     margin-bottom: 0px;
   }
@@ -4693,16 +4663,11 @@ body {
   margin-bottom: 24px;
 }
 .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item p {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 0;
   line-height: 28px;
   color: #000000;
-}
-@media (max-width: 1023px) {
-  .product_ingredients_section .product_ingredients_sec_wrapper .content-section .tab-content-list .tab-content-item p {
-    font-size: 16px;
-  }
 }
 .product_ingredients_section .product_ingredients_sec_wrapper .content-section .direction_to_use {
   padding: 0 16px;
@@ -4767,11 +4732,46 @@ body {
 }
 
 .metafield-gummies-img-mobile {
-  display: none;
+  display: none !important;
 }
-@media screen and (max-width: 699px) {
+@media (max-width: 699px) {
   .metafield-gummies-img-mobile {
-    display: block;
+    display: block !important;
+  }
+  .metafield-gummies-img-mobile .slider_image_wrapper_mobile {
+    display: flex;
+  }
+  .metafield-gummies-img-mobile .slider_image_wrapper_mobile .slick-dots {
+    display: none;
+  }
+}
+@media (max-width: 699px) and (max-width: 1199px) {
+  .metafield-gummies-img-mobile .slider_image_wrapper_mobile .slick-list {
+    margin-bottom: 45px;
+  }
+  .metafield-gummies-img-mobile .slider_image_wrapper_mobile .slick-dots {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0 !important;
+    justify-content: center;
+  }
+  .metafield-gummies-img-mobile .slider_image_wrapper_mobile .slick-dots li {
+    padding: 0;
+    background: #222222;
+    border: 1px solid #222222;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 11px !important;
+    transform: translateY(50%);
+  }
+  .metafield-gummies-img-mobile .slider_image_wrapper_mobile .slick-dots li button {
+    width: 10px;
+    height: 10px;
+  }
+  .metafield-gummies-img-mobile .slider_image_wrapper_mobile .slick-dots li.slick-active {
+    border: 1px solid #222222;
+    background: transparent;
   }
 }
 
