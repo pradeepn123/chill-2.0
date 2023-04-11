@@ -456,7 +456,11 @@ const featureProductSubscriptionUtil = (function () {
         buttonAddtocart: '[feature-addto-cart]',
         buttonDirectAddToCart: '[direct-addToCart-btn]',
         productInfoWrapper: '[product-main-block]',
-        featureProductPopup: '[featureProduct-subscription-popup]'
+        featureProductPopup: '[featureProduct-subscription-popup]',
+        sellingPlanGroup: 'input[name="selling-plan-group"]',
+        active: "active",
+        hide: 'hide',
+        sellingPlan: 'select[name="selling_plan"]'
     };
 
     const classUtil = {
@@ -522,65 +526,32 @@ const featureProductSubscriptionUtil = (function () {
     // Handle View for input elements
 
     const ViewHandler = function () {
-        const updateInputId = function (currInstance, id) {
-            const originalNameIdElement = currInstance
-                .closest(elUtil.form)
-                .querySelector(elUtil.originalProductIdInputEl);
-            const subscriptionNameIdElement = currInstance
-                .closest(elUtil.form)
-                .querySelector(elUtil.subscriptionProductInputEl);
-            let { discount_variant_id } = _helperFunc.getDuplicateVaraintId(
-                id,
-                currInstance
-            );
-            // Default varaint id should be updated
-            originalNameIdElement.setAttribute('value', id);
-            if (subscriptionNameIdElement) {
-                // Subscription varaint id should be updated
-                subscriptionNameIdElement.setAttribute(
-                    'value',
-                    discount_variant_id
-                );
-            }
-            // Update input based on varaint selector
-            // if (refNameIdElement.getAttribute('subscription-varaintId-input')) {
-            //     // Subscription varaint id should be updated
-            //     let { discount_variant_id } = _helperFunc.getDuplicateVaraintId(
-            //         id,
-            //         currInstance
-            //     );
-            //     // Update duplicate variant input id
-            //     refNameIdElement.setAttribute('value', discount_variant_id);
-            // } else {
-            //     // Default varaint id should be updated
-            //     refNameIdElement.setAttribute('value', id);
-            // }
-        };
-
         const updateVariantPrice = (currentInstance, variantObj) =>{
-            let getSubscriptionVaraintData =  _helperFunc.getDuplicateVaraintId(variantObj.id, currentInstance);
+            // let getSubscriptionVaraintData =  _helperFunc.getDuplicateVaraintId(variantObj.id, currentInstance);
             let getActualVaraintPrice = variantObj.varaintData.price;
             let formatPrice = theme.Shopify.formatMoney(getActualVaraintPrice, theme.money_format)
             let currFormEl = currentInstance.closest(elUtil.form);
 
 
             // Update subscription price
-            currFormEl.querySelector(elUtil.subscriptionPriceEl).innerHTML = getSubscriptionVaraintData.discount_variant_price
+            const sellingPlan = currFormEl.querySelector(elUtil.sellingPlan)
+            const sellingPlanObj = variantObj.varaintData.selling_plan_allocations.find((sp) => sp.selling_plan_id == sellingPlan.value)
+
+            currFormEl.querySelector(elUtil.subscriptionPriceEl).innerHTML = theme.Shopify.formatMoney(sellingPlanObj.price, theme.money_format)
+            //currFormEl.querySelector(elUtil.subscriptionPriceEl).innerHTML = getSubscriptionVaraintData.discount_variant_price
 
             // Update actual product price
             currFormEl.querySelector(elUtil.onetimepriceEl).innerHTML = formatPrice
             console.log({
                 currentInstance,
-                variantObj,
-                getSubscriptionVaraintData
+                variantObj
             })
         }
 
         const updateVariantRelatedData = (currentEl, variantObj) => {
             const { id } = variantObj;
-            updateInputId(currentEl, id);
             // *** Update varaint price.. will be done later
-            updateVariantPrice(currentEl,variantObj);
+            updateVariantPrice(currentEl, variantObj);
         };
 
         const updateAddToCartButton = (currentInstance) => {
@@ -639,6 +610,33 @@ const featureProductSubscriptionUtil = (function () {
 
         if (featureProductFormEl) {
             featureProductFormEl.forEach((_formEl) => {
+
+                _formEl.querySelectorAll(elUtil.sellingPlanGroup).forEach((_sellingPlanInput) => {
+                    _sellingPlanInput.addEventListener("click", function (e) {
+                        if (!e.target.checked) {
+                            return
+                        }
+                        _formEl.querySelectorAll(elUtil.sellingPlanGroup).forEach((_el) => {
+                            _el.labels.forEach((_label) => {
+                                _label.classList.remove(elUtil.active)
+                            })
+                        })
+
+                        e.currentTarget.labels.forEach((_label) => {
+                            _label.classList.add(elUtil.active)
+                        })
+                        const sellingPlanSelect = _formEl.querySelector(elUtil.sellingPlan)
+
+                        if (e.target.value) {
+                            sellingPlanSelect.classList.remove(elUtil.hide)
+                            sellingPlanSelect.value = sellingPlanSelect.options[0].value
+                        } else {
+                            sellingPlanSelect.value = ''
+                            sellingPlanSelect.classList.add(elUtil.hide)
+                        }
+                    })
+                })
+
                 _formEl.addEventListener('submit', function (e) {
                     e.preventDefault();
                     let serializeFormData = new URLSearchParams(

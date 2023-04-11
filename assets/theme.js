@@ -5217,7 +5217,6 @@
 
       $container.find('.subscription-price').html(theme.Shopify.formatMoney(variant.selling_plan_allocations[0].price, theme.money_format))
       $container.find('.one-time-price').html(theme.Shopify.formatMoney(variant.price, theme.money_format))
-      console.log(variant, $container)
     };
 
     _.updateTransferNotice = function (variant, $container) {
@@ -6305,65 +6304,37 @@
       $(document).on('theme:cartDrawer:open', theme.openDrawerCart.bind(this))
       $(document).on('theme:cartDrawer:close', theme.closeDrawerCart.bind(this))
       $(container).on('submit.cartDrawerTemplateSection', '.cart-drawer-form--checkout', theme.handleCheckoutSubmission)
+
       $(container).on('click.cartDrawerTemplateSection', '.upgrade-to-subscription', function(evt) {
         if (this.replacingContent) {
           return;
         }
 
-        //remove existing product and add subscription product 
-        var shippingIntervalFrequency = evt.currentTarget.dataset.shipping_interval_frequency.split(",");
-
-         let formData = {
-          'items': [{
-           id: $(evt.currentTarget).data('first_scription_id'),
-           quantity: $(evt.currentTarget).data('product_quantity'),
-           properties: {
-            shipping_interval_unit_type: evt.currentTarget.dataset.shipping_interval_unit_type,
-            shipping_interval_frequency: shippingIntervalFrequency[0]
-          }
-           }]
-         };
-         
-         fetch(window.Shopify.routes.root + 'cart/add.js', {
-           method: 'POST',
-           headers: {
-             'Content-Type': 'application/json'
-           },
-           body: JSON.stringify(formData)
-         })
-         .then(response => {
-           return response.json();
-         }).then(data => {
-          
-              this.functions.updateCart.call(this, {
-                line: $(evt.currentTarget).data('line') + 1,
-                quantity: 0,
-                properties: {},
-      
-              }, function () {
-
-                  document.documentElement.dispatchEvent(
-                  new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false }));
-              });
-         })
-         .catch((error) => {
-           console.error('Error:', error);
-         });
-      
+        return this.functions.updateCart.call(this, {
+          line: $(evt.currentTarget).data('line'),
+          quantity: evt.currentTarget.dataset.quantity,
+          selling_plan: evt.currentTarget.dataset.sellingPlanId
+        }, function () {
+            document.documentElement.dispatchEvent(
+              new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false })
+            )
+        });
       }.bind(this))
 
       $(container).on('change.cartDrawerTemplateSection', '.drawer-shipping-interval', function(evt) {
         if (this.replacingContent) {
           return;
         }
-        this.functions.updateCart.call(this, {
+
+        return this.functions.updateCart.call(this, {
           line: $(evt.currentTarget).data('line'),
           quantity: evt.currentTarget.dataset.quantity,
-          properties: {
-            shipping_interval_unit_type: evt.currentTarget.dataset.shipping_interval_unit_type,
-            shipping_interval_frequency: evt.target.value
-          }
-        }, function () {});
+          selling_plan: evt.currentTarget.value
+        }, function () {
+          document.documentElement.dispatchEvent(
+            new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false })
+          )
+        });
       }.bind(this))
 
       $('.cart-link').on('click', function (e) {
@@ -6561,7 +6532,6 @@
           data: params,
           dataType: 'json',
           success: function success(response) {
-            console.log(response.items)
             document.documentElement.dispatchEvent(
             new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false }));
 
@@ -6570,7 +6540,6 @@
           error: function error(data) {
             if (data.statusText != 'abort') {
               console.log('Error processing update');
-              console.log(data);
             }
           },
           complete: function () {

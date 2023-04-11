@@ -3,21 +3,20 @@
         {% comment %} The input with name="selling_plan" submits to cart 
         <input type="hidden" name="selling_plan" value="{{ product.selected_selling_plan.id }}" />
         {% endcomment %} 
-        <legend class="visually-hidden">{{ 'products.product.subscription' | t }}</legend>
 
         {% unless product.requires_selling_plan %}
             <div class="product__subs__group">
-                <label class="product__subs__option active" for="{{product}}-one-time-product">
-                    <input 
-                        type="radio" 
-                        name="selling-plan-group"
-                        id="{{product}}-one-time-product"
-                        value=""
-                        data-toggles-group
-                        {% unless product.selected_selling_plan %}
-                            checked
-                        {% endunless %}
-                    />
+                <input 
+                    type="radio" 
+                    name="selling-plan-group"
+                    id="{{product.id}}-one-time-product-{{section.id}}"
+                    value=""
+                    data-toggles-group
+                    {% unless product.selected_selling_plan %}
+                        checked
+                    {% endunless %}
+                />
+                <label class="product__subs__option active" for="{{product.id}}-one-time-product-{{section.id}}">
                     <div class="radio-flex-wrapper">
                         <div class="flex-container">
                             <span class="radio_icon"></span>
@@ -25,7 +24,7 @@
                         </div>
                         <div class="flex-container margin-r-auto">
                             <span>-</span>
-                            <span class="theme-money one-time-price">
+                            <span class="theme-money one-time-price" onetime-price>
                                 {{ product.selected_or_first_available_variant.price | money }}
                             </span>
                         </div>
@@ -36,16 +35,16 @@
 
         {% for selling_plan_group in product.selling_plan_groups %}
             <div class="product__subs__group">
-                <label class="product__subs__option" for="{{product}}-{{selling_plan_group.id}}">
-                    <input type="radio"
-                        id="{{product}}-{{selling_plan_group.id}}"
-                        data-toggles-group
-                        name="selling-plan-group" 
-                        value="{{ selling_plan_group.id }}" 
-                        {% if selling_plan_group.selling_plan_selected %}
-                            checked
-                        {% endif %}
-                    />
+                <input type="radio"
+                    id="{{product.id}}-{{selling_plan_group.id}}-{{section.id}}"
+                    data-toggles-group
+                    name="selling-plan-group" 
+                    value="{{ selling_plan_group.id }}" 
+                    {% if selling_plan_group.selling_plan_selected %}
+                        checked
+                    {% endif %}
+                />
+                <label class="product__subs__option" for="{{product.id}}-{{selling_plan_group.id}}-{{section.id}}">
                     <div class="radio-flex-wrapper">
                         <div class="flex-container">
                             <span class="radio_icon"></span>
@@ -53,8 +52,8 @@
                         </div>
                         <div class="flex-container margin-r-auto">
                             <span>-</span>
-                            <span class="current-price theme-money subscription-price">
-                                {{ product.selected_or_first_available_variant.selling_plan_allocations.price | money }}
+                            <span class="current-price theme-money subscription-price" subscription-price>
+                                {{ product.selected_or_first_available_selling_plan_allocation.price | money }}
                             </span>
                         </div>
                     </div>
