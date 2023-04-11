@@ -1,0 +1,82 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "999780a2-f24c-4a67-8727-3383acb8113a": {
+      "type": "marquee-with-cta-text-image",
+      "blocks": {
+        "65822f18-f753-4070-bfb0-a5b72ec1e22f": {
+          "type": "select",
+          "settings": {
+            "marquee_text": "Passion fruit grapefruit",
+            "marquee_text_color": "#000000",
+            "marquee_cta_text": "Try passion grapefruit",
+            "marquee_button_color": "#ffac9a",
+            "marquee_image": "shopify:\/\/shop_images\/vape-grape.jpg",
+            "marquee_direction": "scrollRightToLeft"
+          }
+        },
+        "b740753c-3c72-4295-b35d-7bf80da9e76c": {
+          "type": "select",
+          "settings": {
+            "marquee_text": "Lemon",
+            "marquee_text_color": "#000000",
+            "marquee_cta_text": "Try lemon",
+            "marquee_button_color": "#f2cc0d",
+            "marquee_image": "shopify:\/\/shop_images\/vape-lemon1.jpg",
+            "marquee_direction": "scrollLeftToRight"
+          }
+        },
+        "7b82911f-078d-4c1d-b55a-8a914ef9393f": {
+          "type": "select",
+          "settings": {
+            "marquee_text": "Mint Ice",
+            "marquee_text_color": "#000000",
+            "marquee_cta_text": "Try Mint ice",
+            "marquee_button_color": "#6ec59f",
+            "marquee_image": "shopify:\/\/shop_images\/vape-mint_3ffc3523-fe69-4ae6-8b51-c17a4c01d881.jpg",
+            "marquee_direction": "scrollRightToLeft"
+          }
+        }
+      },
+      "block_order": [
+        "65822f18-f753-4070-bfb0-a5b72ec1e22f",
+        "b740753c-3c72-4295-b35d-7bf80da9e76c",
+        "7b82911f-078d-4c1d-b55a-8a914ef9393f"
+      ],
+      "settings": {
+      }
+    },
+    "731d1f1d-9206-4d4a-9087-61b254616e53": {
+      "type": "marquee-with-cta-text-image",
+      "blocks": {
+        "40fbab64-9217-4248-a557-ef17497fc2af": {
+          "type": "select",
+          "settings": {
+            "marquee_text": "Coming soon",
+            "marquee_text_color": "#000000",
+            "marquee_cta_text": "",
+            "marquee_button_color": "",
+            "marquee_image": "shopify:\/\/shop_images\/Group_636.jpg",
+            "marquee_direction": "scrollLeftToRight"
+          }
+        }
+      },
+      "block_order": [
+        "40fbab64-9217-4248-a557-ef17497fc2af"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "999780a2-f24c-4a67-8727-3383acb8113a",
+    "731d1f1d-9206-4d4a-9087-61b254616e53"
+  ]
+}

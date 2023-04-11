@@ -10423,3 +10423,67 @@ body.cart-drawer-open {
     margin: auto;
   }
 }
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+.marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container {
+  display: flex;
+  flex-direction: row !important;
+  width: 100%;
+  margin: 20px 0;
+}
+.marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container .marquee_content {
+  display: inline-flex;
+  justify-content: space-between;
+}
+.marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container .marquee_content p, .marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container .marquee_content button, .marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container .marquee_content img {
+  margin: auto 25px;
+}
+.marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container .marquee_content_text {
+  color: red;
+  width: auto;
+  white-space: nowrap;
+  font-size: 79px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container .marquee_content_button {
+  background-color: transparent;
+  color: #000;
+  white-space: nowrap;
+  border-radius: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 16px 30px;
+}
+.marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container .marquee_content_image {
+  max-width: unset;
+  height: fit-content;
+}
+.marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container.scrollLeftToRight .marquee_content {
+  animation-name: scroll;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+.marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container.scrollRightToLeft .marquee_content {
+  animation-name: scroll;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__content_ {
+    animation-play-state: paused !important;
+  }
+}

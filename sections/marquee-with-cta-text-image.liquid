@@ -1,0 +1,88 @@
+<div class="marquee marquee-with-cta-text-image marquee--hover-pause enable-animation">
+    <div class="marquee__content_" aria-hidden="true">
+        <div class="marquee-tag">
+            <div class="marquee_wrap">
+            {% for block in section.blocks %}
+                <div class="marquee_container {{ block.settings.marquee_direction }}">
+                    {% for i in (1..5) %}
+                        <div class="marquee_content">
+
+                            {% if block.settings.marquee_text != blank %}
+                                <p class="marquee_content_text" style="color: {{ block.settings.marquee_text_color }}">{{ block.settings.marquee_text }}</p>
+                            {% endif %}
+                            {% if block.settings.marquee_cta_text != blank %}
+                                <button class="marquee_content_button" style="border: 2px solid {{ block.settings.marquee_button_color }}; color: {{ block.settings.marquee_button_color }}">{{ block.settings.marquee_cta_text }}</button>
+                            {% endif %}
+                            {% if block.settings.marquee_image != blank %}
+                                <img class="marquee_content_image" src="{{ block.settings.marquee_image | img_url: 'master' }}" alt="marquee_image" loading='lazy'>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% schema %}
+    {
+       "name": "Marquee-cta-text-image",
+       "settings": [
+            
+       ],
+       "blocks": [
+            {
+                "name": "Add marquee block",
+                "type": "select",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "marquee_text",
+                        "label": "Marquee text"
+                    },
+                    {
+                        "type": "color",
+                        "id": "marquee_text_color",
+                        "label": "Marque text color",
+                        "default": "#000"
+                    }, 
+                    {
+                        "type": "text",
+                        "id": "marquee_cta_text",
+                        "label": "Marquee CTA text"
+                    },
+                    {
+                        "type": "color",
+                        "id": "marquee_button_color",
+                        "label": "Marque button color"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "marquee_image",
+                        "label": "Marquee image"
+                    },
+                    {
+                        "type": "select",
+                        "id": "marquee_direction",
+                        "label": "Marquee direction",
+                        "default": "scrollRightToLeft",
+                        "options": [
+                            {
+                                "value": "scrollLeftToRight",
+                                "label": "Scroll left to right"
+                            },
+                            {
+                                "value": "scrollRightToLeft",
+                                "label": "Scroll right to left"
+                            }
+                        ]
+                    }
+                ]
+            }
+       ],
+       "presets": [
+            {
+                "name": "Marquee-cta-text-image"
+            }
+       ]
+    }
+{% endschema %}
