@@ -13,13 +13,10 @@
         font-weight: {{ section.settings.font_weight_head }} !important;
     }
     .section-background-video .video-container .overlay-text .overlay-text__inner .overlay-text__text .overlay-text__button-row .overlay-text__button.button{
-      font-size: {{ section.settings.btn_font_mobile }}px;
+      font-size: {{ section.settings.btn_font }}px;
     }
     
     @media (min-width: 768px) {
-      .section-background-video .video-container .overlay-text .overlay-text__inner .overlay-text__rte{ 
-        max-width: {{ section.settings.max_width_text }}ch;
-      }
       #section-id-{{ section.id }} .video-container {
         height: {{ section.settings.height_desktop }}px;
       }
@@ -49,7 +46,7 @@
         font-size:{{ section.settings.sub_font_size }}px !important;
    }
     .section-background-video .video-container .overlay-text .overlay-text__inner .overlay-text__text .overlay-text__button-row .overlay-text__button.button{
-        font-size: {{ section.settings.btn_font_mobile_m }}px;
+        font-size: {{ section.settings.btn_font_mobile }}px;
     }
     .section-background-video .video-container .overlay-text .overlay-text__inner{
         background: {{ section.settings.sec_bg_color }}; 
@@ -225,16 +222,6 @@
         "default": 20
       },
       {
-        "type": "range",
-        "id": "max_width_text",
-        "min": 1,
-        "max": 100,
-        "step": 1,
-        "unit": "ch",
-        "label": "Max Width Text",
-        "default": 65
-      },
-      {
         "type": "checkbox",
         "id": "enlarge_text",
         "label": "Enlarge text",
@@ -247,17 +234,17 @@
       },
       {
         "type": "range",
-        "id": "btn_font_mobile",
+        "id": "btn_font",
         "min": 12,
         "max": 40,
         "step": 1,
         "unit": "px",
-        "label": "Button  Font size",
+        "label": "Button Font size Desktop",
         "default": 16
       },
       {
         "type": "range",
-        "id": "btn_font_mobile_m",
+        "id": "btn_font_mobile",
         "min": 1,
         "max": 30,
         "step": 1,
