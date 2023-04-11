@@ -148,7 +148,7 @@
       {%- assign product_form_present = false -%}
       {%- capture original_select -%}
         <select
-          name="id"
+          name="id" data-productid="{{ product.id }}"
           class="original-selector{% if product.variants.size == 1 %} hidden{% endif %}"
           aria-label="{{ 'products.product.selector_label' | t | escape }}">
           {% if product.variants.size > 1 %}
@@ -236,10 +236,10 @@
 
             <div class="price-descriptors">
               {%- if product != blank -%}
-                {%- form 'product', product, id: product_form_installments_id -%}
+                {%- form 'product', product, data-productid: product.id, id: product_form_installments_id -%}
                   <input
                     type="hidden"
-                    name="id"
+                    name="id" data-productid="{{ product.id }}"
                     value="{% if current_variant %}{{ current_variant.id }}{% endif %}">
                   {{ form | payment_terms }}
                 {%- endform -%}
@@ -360,7 +360,7 @@
           {%- assign product_form_present = false -%}
           <div class="buy-buttons-row" {{ block.shopify_attributes }}>
             {%- if product != blank -%}
-              {% form 'product', product, id: product_form_id, class: 'form product-purchase-form', data-product-id: product.id %}
+              {% form 'product', product, data-productid: product.id, id: product_form_id, class: 'form product-purchase-form', data-product-id: product.id %}
                 {{- original_select -}}
 
                 {% if product.available %}

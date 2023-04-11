@@ -140,7 +140,7 @@
         {%- capture original_select -%}
 
           <select
-            name="id"
+            name="id" data-productid="{{ product.id }}"
             class="original-selector{% if product.variants.size == 1 %} hidden{% endif %}"
             aria-label="{{ 'products.product.selector_label' | t | escape }}">
             {% if product.variants.size > 1 %}
@@ -270,7 +270,7 @@
             {% when 'buy_buttons' %}
             {%- assign product_form_present = true -%}
             <div class="buy-buttons-row" {{ block.shopify_attributes }}>
-              {% form 'product', product, id: product_form_id, class: 'form product-purchase-form', data-product-handle: product.handle, data-product-id: product.id, data-productid: product.id %}
+              {% form 'product', product, data-productid: product.id, id: product_form_id, class: 'form product-purchase-form', data-product-handle: product.handle, data-product-id: product.id, data-productid: product.id %}
                 {{- original_select -}}
 
                   {% if product.available %}
@@ -278,7 +278,7 @@
                   {% if widget_settings != blank %}
                     <h4 class="subscription_main_title">CHOOSE YOUR OPTION</h4>
                   {% endif %}
-                  {% render 'subscription-product' with product as product %}
+                  
                   <!-- recharge Subscription -->
                   <div class="input-row" {{ block.shopify_attributes }}>
                     {% render 'variant-picker', section: section, product: product, block: block %}
@@ -368,10 +368,10 @@
                           </div>
 
                           <div class="price-descriptors">
-                            {%- form 'product', product, id: product_form_installments_id -%}
+                            {%- form 'product', product, data-productid: product.id, id: product_form_installments_id -%}
                               <input
                                 type="hidden"
-                                name="id"
+                                name="id" data-productid="{{ product.id }}"
                                 value="{% if current_variant %}{{ current_variant.id }}{% endif %}">
                               {{ form | payment_terms }}
                             {%- endform -%}
