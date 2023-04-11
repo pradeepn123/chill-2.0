@@ -383,10 +383,10 @@
       <div class="block-inner-card-info-wrapper">
         <div class="close_card_info">{% render 'svg-close' %}
         </div>
-        {% form 'product', product, id: product_form_id, class: 'form feature-product-purchase-form', data-product-handle: product.handle, data-product-id: product.id, data-productid: product.id %}
+        {% form 'product', product, data-productid: product.id, id: product_form_id, class: 'form feature-product-purchase-form', data-product-handle: product.handle, data-product-id: product.id, data-productid: product.id %}
           <input
             type="hidden"
-            name="id"
+            name="id" data-productid="{{ product.id }}"
             value="{{current_variant.id}}"
             original-productId-input>
           <input type="hidden"
