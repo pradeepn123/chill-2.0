@@ -120,6 +120,34 @@
         "64e6525d-282b-4836-8f33-dcf966cb303b"
       ],
       "settings": {
+    "6eff7f6a-26cb-429f-a83e-c752b87d8e4a": {
+      "type": "background-video",
+      "settings": {
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/800120dc78d64e4cb6c88c3ef4d8c244.mp4",
+        "sec_bg_color": "#f7f7f7",
+        "subheading": "",
+        "title": "<span>CHILL<\/span>ZERO",
+        "font_weight_head": "lighter",
+        "title_size": 88,
+        "title_size_mobile": 44,
+        "use_h1": false,
+        "text": "<p>Find peace with functional products made from all natural ingredients<\/p>",
+        "sub_font_size": 18,
+        "max_width_text": 61,
+        "enlarge_text": true,
+        "button_label_1": "JOIN THE WAITLIST",
+        "btn_font_mobile": 20,
+        "btn_font_mobile_m": 18,
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "botton_bg": "#9792e4",
+        "botton_text_color": "#ffffff",
+        "text_alignment": "bottom left",
+        "height_desktop": 660,
+        "height_mobile": 500,
+        "full_width": true,
+        "overlay_style": "shadow"
       }
     }
   },
@@ -127,6 +155,7 @@
     "main",
     "4f15e0b6-f42e-46ef-a0d7-bbe012e936af",
     "f6b2e9db-2e99-4a4a-9438-b83f5be67d94",
-    "80e688ad-c6b3-4ac1-bb96-adc2ec27f7d8"
+    "80e688ad-c6b3-4ac1-bb96-adc2ec27f7d8",
+    "6eff7f6a-26cb-429f-a83e-c752b87d8e4a"
   ]
 }

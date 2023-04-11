@@ -9,7 +9,17 @@
       line-height: 1em;
       {%- endif %}
     }
+    .overlay-text__inner .overlay-text__text .overlay-text__title{
+        font-weight: {{ section.settings.font_weight_head }} !important;
+    }
+    .section-background-video .video-container .overlay-text .overlay-text__inner .overlay-text__text .overlay-text__button-row .overlay-text__button.button{
+      font-size: {{ section.settings.btn_font_mobile }}px;
+    }
+    
     @media (min-width: 768px) {
+      .section-background-video .video-container .overlay-text .overlay-text__inner .overlay-text__rte{ 
+        max-width: {{ section.settings.max_width_text }}ch;
+      }
       #section-id-{{ section.id }} .video-container {
         height: {{ section.settings.height_desktop }}px;
       }
@@ -32,6 +42,18 @@
     .video-container .overlay-text .overlay-text__inner .overlay-text__text .overlay-text__button-row .overlay-text__button.button{
       background-color: {{ section.settings.botton_bg }};
       color: {{ section.settings.botton_text_color }};
+    }
+    @media (max-width:767px){
+      
+    .section-background-video .video-container .overlay-text .overlay-text__inner .overlay-text__rte.rte.large-text p{
+        font-size:{{ section.settings.sub_font_size }}px !important;
+   }
+    .section-background-video .video-container .overlay-text .overlay-text__inner .overlay-text__text .overlay-text__button-row .overlay-text__button.button{
+        font-size: {{ section.settings.btn_font_mobile_m }}px;
+    }
+    .section-background-video .video-container .overlay-text .overlay-text__inner{
+        background: {{ section.settings.sec_bg_color }}; 
+      }
     }
   {% endstyle %}
 
@@ -121,6 +143,12 @@
         "info": "Required. Shows while the video is loading, or if it cannot autoplay."
       },
       {
+        "type": "color",
+        "id": "sec_bg_color",
+        "label": "Section BG color",
+        "default": "#fff"
+      },
+      {
         "type": "text",
         "id": "subheading",
         "label": "Subheading",
@@ -132,6 +160,27 @@
         "label": "Heading",
         "default": "Background video"
       },
+      {
+        "type": "select",
+        "id": "font_weight_head",
+        "label": "Font weight",
+        "options": [
+          {
+            "value": "normal",
+            "label": "normal"
+          },
+          {
+            "value": "bold",
+            "label": "bold"
+          },
+          {
+            "value": "lighter",
+            "label": "lighter"
+          }
+        ],
+        "default": "normal"
+      },
+      
       {
         "type": "range",
         "id": "title_size",
@@ -166,6 +215,26 @@
         "default": "<p>Use a video to get a customer's attention<\/p>"
       },
       {
+        "type": "range",
+        "id": "sub_font_size",
+        "min": 1,
+        "max": 40,
+        "step": 1,
+        "unit": "px",
+        "label": "Font size Mobile",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "max_width_text",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "unit": "ch",
+        "label": "Max Width Text",
+        "default": 65
+      },
+      {
         "type": "checkbox",
         "id": "enlarge_text",
         "label": "Enlarge text",
@@ -176,6 +245,26 @@
         "id": "button_label_1",
         "label": "Button 1 label"
       },
+      {
+        "type": "range",
+        "id": "btn_font_mobile",
+        "min": 12,
+        "max": 40,
+        "step": 1,
+        "unit": "px",
+        "label": "Button  Font size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "btn_font_mobile_m",
+        "min": 1,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Button  Font size Mobile",
+        "default": 16
+      },            
       {
         "type": "url",
         "id": "button_url_1",
