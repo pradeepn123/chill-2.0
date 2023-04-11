@@ -5197,6 +5197,29 @@
       $container.find('.barcode').toggleClass('barcode--no-barcode', !variant || !variant.barcode);
     };
 
+    _.updateSubscriptionFormPrice = function (variant, $container) {
+      $container.find('.product__subs__option').removeClass("active")
+      const sellingPlanGroup = $container.find('input[name="selling-plan-group"]:checked')
+      const sellingPlan = $container.find('select[name="selling_plan"]')
+
+      sellingPlanGroup.parent().addClass("active")
+
+      if (sellingPlanGroup.val()) {
+        sellingPlan.val(sellingPlan.find("option").val())
+        sellingPlan.removeClass("hide")
+
+        const sellingPlanObj = variant.selling_plan_allocations.find((plan) => plan.selling_plan_id == sellingPlan.val())
+        $container.find('.current-price').html(theme.Shopify.formatMoney(sellingPlanObj.price, theme.money_format))
+      } else {
+        sellingPlan.val("")
+        sellingPlan.addClass("hide")
+      }
+
+      $container.find('.subscription-price').html(theme.Shopify.formatMoney(variant.selling_plan_allocations[0].price, theme.money_format))
+      $container.find('.one-time-price').html(theme.Shopify.formatMoney(variant.price, theme.money_format))
+      console.log(variant, $container)
+    };
+
     _.updateTransferNotice = function (variant, $container) {
       var transferData = _._getVariantOptionElement(variant, $container).data('inventory-transfer');
       if (transferData) {
@@ -5325,6 +5348,44 @@
         });
       });
 
+      $productForm.find('input[name="selling-plan-group"]').on('change.themeProductOptions', function (e) {
+        var selectedOptions = [];
+        $(this).find('.option-selector').each(function () {
+          if ($(this).data('selector-type') === 'listed') {
+            selectedOptions.push($(this).find('.js-option:checked').val());
+          } else {
+            selectedOptions.push($(this).find('.js-option[aria-selected="true"]').data('value'));
+          }
+        });
+
+        // find variant
+        var variant = false;
+        for (var i = 0; i < productData.variants.length; i++) {
+          var v = productData.variants[i];
+          var matchCount = 0;
+          for (var j = 0; j < selectedOptions.length; j++) {
+            if (v.options[j] == selectedOptions[j]) {
+              matchCount++;
+            }
+          }
+          if (matchCount == selectedOptions.length) {
+            variant = v;
+            break;
+          }
+        }
+
+        // trigger change
+        $productForm.find(_.selectors.variantIdInputs).val(variant.id);
+
+        // a jQuery event may not be picked up by all listeners
+        $productForm.find(_.selectors.variantIdInputs).each(function () {
+          this.dispatchEvent(
+          new CustomEvent('change', { bubbles: true, cancelable: false, detail: { variant: variant, selectedOptions: selectedOptions } }));
+
+        });
+      });
+
+
       // init custom options (mirror in purchase form for Buy Now button)
       $productForm.find(_.selectors.customOption).each(function () {
         var $input = $(this).find('input:first, textarea, select');
@@ -5390,7 +5451,8 @@
           // emit an event to broadcast the variant update
           $(window).trigger('cc-variant-updated', {
             variant: variant,
-            product: productData });
+            product: productData
+          });
 
 
           // variant images
@@ -5424,6 +5486,7 @@
           _.updateVariantDeterminedVisibilityAreas(variant, $container);
           _.updateBackorder(variant, $container);
           _.updateContainerStatusClasses(variant, $container);
+          _.updateSubscriptionFormPrice(variant, $container);
 
           // variant urls
           if ($productForm.data('enable-history-state') && e.type == 'change') {
