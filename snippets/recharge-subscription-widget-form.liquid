@@ -1,3 +1,4 @@
+{% if product.selling_plan_groups.size > 0 %}
 <div class="recharge-subscription-form-widget ">
     <fieldset class="product__subs" data-subscription-selectors>
         {% comment %} The input with name="selling_plan" submits to cart 
@@ -75,3 +76,4 @@
         {% endfor %}
     </fieldset>
 </div>
+{% endif %}
