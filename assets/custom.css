@@ -10542,11 +10542,15 @@ body.cart-drawer-open {
 .vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .vape-page-headeing h3 {
   font-weight: 600;
 }
+.vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .vape-page-headeing h3 p {
+  margin-bottom: 0;
+}
 .vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .content-vapepage-block {
   padding-bottom: 30px;
 }
 .vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .content-vapepage-block p {
   font-weight: 400;
+  margin-bottom: 0;
 }
 .vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .vape-page-btn-block {
   max-width: fit-content;

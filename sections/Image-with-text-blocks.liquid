@@ -20,7 +20,7 @@
                     {% endif %}
                     <div class="vape_page_text_section">
                       <div class="vape-page-headeing">
-                        <h3 style="font-size:{{ block.settings.font_size_heading }}px; ">{{ block.settings.main_heading }}</h3>
+                        <h3 style="font-size:{{ block.settings.font_size_heading }}px; font-weight:{{ block.settings.font_weight_heading }};">{{ block.settings.main_heading }}</h3>
                       </div>
                       {% if block.settings.content %}
                         <div class="content-vapepage-block">
@@ -37,8 +37,7 @@
                 </div>
               </div>
             {% endfor %}
-          </div>
-                 
+          </div>        
     </div>
 </div>
 
@@ -114,7 +113,27 @@
             "unit": "px",
             "label": "Font size",
             "default": 52
-          },                   
+          },
+          {
+            "type": "select",
+            "id": "font_weight_heading",
+            "label": "Font weight",
+            "options": [
+              {
+                "value": "600",
+                "label": "Semi-Bold"
+              },
+              {
+                "value": "400",
+                "label": "Normal"
+              },
+              {
+                "value": "700",
+                "label": "Bold"
+              }
+            ],
+            "default": "600"
+          },                             
         {
             "type": "text",
             "id": "content",

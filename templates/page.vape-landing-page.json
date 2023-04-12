@@ -9,6 +9,67 @@
     },
     "4f15e0b6-f42e-46ef-a0d7-bbe012e936af": {
       "type": "marquee-with-cta-text-image",
+    "6eff7f6a-26cb-429f-a83e-c752b87d8e4a": {
+      "type": "background-video",
+      "settings": {
+        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/800120dc78d64e4cb6c88c3ef4d8c244.mp4",
+        "use_alt_bg": true,
+        "subheading": "",
+        "title": "<span>CHILL<\/span>ZERO",
+        "font_weight_head": "lighter",
+        "title_size": 88,
+        "title_size_mobile": 44,
+        "use_h1": false,
+        "text": "<p>Find peace with functional products made from all natural ingredients<\/p>",
+        "sub_font_size": 18,
+        "enlarge_text": true,
+        "button_label_1": "JOIN THE WAITLIST",
+        "btn_font": 16,
+        "btn_font_mobile": 20,
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "botton_bg": "#9792e4",
+        "botton_text_color": "#ffffff",
+        "text_alignment": "bottom left",
+        "height_desktop": 660,
+        "height_mobile": 500,
+        "full_width": true,
+        "overlay_style": "shadow"
+      }
+    },
+    "73cbf83c-c88c-4253-8cbe-42932ecbf1dd": {
+      "type": "Image-with-text-blocks",
+      "blocks": {
+        "0b8baad8-05a8-40b3-8561-52994e36ae79": {
+          "type": "blocks",
+          "settings": {
+            "use_alt_bg": true,
+            "flex_direction": "row-reverse",
+            "image": "shopify:\/\/shop_images\/Group_8143.png",
+            "main_heading": "<p>Our <strong>Mission<\/strong><\/p>",
+            "font_size_heading": 52,
+            "font_weight_heading": "400",
+            "content": "Our mission is to offer a safer alternative to smoking by providing high-quality vaping products. We aim to promote a healthier lifestyle by encouraging smokers to switch to vaping.",
+            "font_size_content": 20,
+            "btn_text": "",
+            "btn_url": "",
+            "font_size_btn": 24,
+            "btn-bg": "#000000",
+            "btn-color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "0b8baad8-05a8-40b3-8561-52994e36ae79"
+      ],
+      "settings": {
+        "sec_padding": 1,
+        "sec_padding_btm": 1
+      }
+    },
+    "5ba339a9-2f99-490c-b56e-b34a909953df": {
+      "type": "Image-with-text-blocks",
       "blocks": {
         "0ec6895e-c19d-4e97-97d3-866aec1805f7": {
           "type": "select",
@@ -20,7 +81,20 @@
             "marquee_cta_text": "Try Passion Grapefruit",
             "marquee_button_color": "#f3b09f",
             "marquee_image-1": "shopify:\/\/shop_images\/vape-grape.jpg",
-            "marquee_direction": "scrollRightToLeft"
+            "marquee_direction": "scrollRightToLeft",
+            "use_alt_bg": true,
+            "flex_direction": "row",
+            "image": "shopify:\/\/shop_images\/Group_8210.png",
+            "main_heading": "<p>Passion Fruit Grapefruit<\/p>",
+            "font_size_heading": 52,
+            "font_weight_heading": "600",
+            "content": "Grapefruit flavor vape offers a distinctive taste that is both sweet and slightly bitter, with hints of tanginess.",
+            "font_size_content": 20,
+            "btn_text": "JOIN WAITLIST",
+            "btn_url": "https:\/\/www.figma.com\/file\/eesPkOGRXmpNRueav0z4Dv\/Chill-Client-Review-%2F-Development?node-id=888-2405&t=OgXCxKCS2qQRoi5r-0",
+            "font_size_btn": 24,
+            "btn-bg": "#ffac9a",
+            "btn-color": "#ffffff"
           }
         },
         "8a9ffd65-3b7c-4fa2-b031-3b4698812d53": {
@@ -33,7 +107,20 @@
             "marquee_cta_text": "Try Lemon",
             "marquee_button_color": "#f2cc0d",
             "marquee_image-1": "shopify:\/\/shop_images\/vape-lemon1.jpg",
-            "marquee_direction": "scrollLeftToRight"
+            "marquee_direction": "scrollLeftToRight",
+            "use_alt_bg": true,
+            "flex_direction": "row-reverse",
+            "image": "shopify:\/\/shop_images\/Group_8209.png",
+            "main_heading": "<p>Lemon<\/p>",
+            "font_size_heading": 52,
+            "font_weight_heading": "600",
+            "content": "Lemon flavor vape provides a zesty and refreshing taste that is perfect for vapers who enjoy tangy citrus flavors.",
+            "font_size_content": 20,
+            "btn_text": "JOIN WAITLIST",
+            "btn_url": "https:\/\/www.figma.com\/file\/eesPkOGRXmpNRueav0z4Dv\/Chill-Client-Review-%2F-Development?node-id=888-2405&t=OgXCxKCS2qQRoi5r-0",
+            "font_size_btn": 24,
+            "btn-bg": "#f2cc0d",
+            "btn-color": "#ffffff"
           }
         },
         "e704ebd2-76fa-40ff-8b6c-c6b8de42ae40": {
@@ -46,7 +133,20 @@
             "marquee_cta_text": "Try Mint Ice",
             "marquee_button_color": "#6ec59f",
             "marquee_image-1": "shopify:\/\/shop_images\/vape-mint_3ffc3523-fe69-4ae6-8b51-c17a4c01d881.jpg",
-            "marquee_direction": "scrollRightToLeft"
+            "marquee_direction": "scrollRightToLeft",
+            "use_alt_bg": true,
+            "flex_direction": "row",
+            "image": "shopify:\/\/shop_images\/Group_8148.png",
+            "main_heading": "<p>Mint Ice<\/p>",
+            "font_size_heading": 52,
+            "font_weight_heading": "600",
+            "content": "Mint flavor vape delivers a cool and refreshing sensation that is perfect for vapers who enjoy a fresh and invigorating vaping experience",
+            "font_size_content": 20,
+            "btn_text": "JOIN WAITLIST",
+            "btn_url": "https:\/\/shopify.dev\/docs\/api\/liquid\/objects\/image",
+            "font_size_btn": 24,
+            "btn-bg": "#6ec59f",
+            "btn-color": "#ffffff"
           }
         }
       },
@@ -222,7 +322,9 @@
     "f6b2e9db-2e99-4a4a-9438-b83f5be67d94",
     "80e688ad-c6b3-4ac1-bb96-adc2ec27f7d8",
     "6eff7f6a-26cb-429f-a83e-c752b87d8e4a",
+    "73cbf83c-c88c-4253-8cbe-42932ecbf1dd",
     "5ba339a9-2f99-490c-b56e-b34a909953df"
   ]
 }
+  }
 }
