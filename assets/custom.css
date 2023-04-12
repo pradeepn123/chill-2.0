@@ -10504,3 +10504,63 @@ body.cart-drawer-open {
     transform: translateX(0.2%) !important;
   }
 }
+
+.vape-img-block-contanier {
+  padding: 5% 5.2% 5% 9%;
+  border: 1px solid #D9D9D9;
+  border-radius: 20px;
+  margin-bottom: 3%;
+}
+.vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block > * {
+  margin-left: 5.55%;
+  margin-right: 5.55%;
+}
+.vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block > :first-child {
+  margin-left: 0;
+}
+.vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape-page-image-block .vape-text-block-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: initial;
+}
+.vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape-page-image-block .vape-text-block-img img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+.vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .vape-page-headeing {
+  padding-bottom: 10px;
+}
+.vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .vape-page-headeing h3 {
+  font-weight: 600;
+}
+.vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .content-vapepage-block {
+  padding-bottom: 30px;
+}
+.vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .content-vapepage-block p {
+  font-weight: 400;
+}
+.vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .vape-page-btn-block {
+  max-width: fit-content;
+}
+.vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .vape-page-btn-block a {
+  padding: 15px 60px;
+  border-radius: 40px;
+  font-weight: 600;
+}
+.vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .no-margin {
+  margin: 0 auto;
+}
+
+.vape-page-no-content {
+  text-align: center;
+  padding: 5%;
+}
