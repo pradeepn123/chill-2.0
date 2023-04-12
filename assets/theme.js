@@ -5200,23 +5200,29 @@
     _.updateSubscriptionFormPrice = function (variant, $container) {
       $container.find('.product__subs__option').removeClass("active")
       const sellingPlanGroup = $container.find('input[name="selling-plan-group"]:checked')
-      const sellingPlan = $container.find('select[name="selling_plan"]')
 
-      sellingPlanGroup.parent().addClass("active")
+      if (sellingPlanGroup.length) {
+        const sellingPlan = $container.find('select[name="selling_plan"]')
 
-      if (sellingPlanGroup.val()) {
-        sellingPlan.val(sellingPlan.find("option").val())
-        sellingPlan.removeClass("hide")
+        sellingPlanGroup[0].labels.forEach((_label) => {
+          _label.classList.add("active")
+        })
 
-        const sellingPlanObj = variant.selling_plan_allocations.find((plan) => plan.selling_plan_id == sellingPlan.val())
-        $container.find('.current-price').html(theme.Shopify.formatMoney(sellingPlanObj.price, theme.money_format))
-      } else {
-        sellingPlan.val("")
-        sellingPlan.addClass("hide")
+        if (sellingPlanGroup.val()) {
+          sellingPlan.val(sellingPlan.find("option").val())
+          sellingPlan.removeClass("hide")
+
+          const sellingPlanObj = variant.selling_plan_allocations.find((plan) => plan.selling_plan_id == sellingPlan.val())
+          $container.find('.current-price').html(theme.Shopify.formatMoney(sellingPlanObj.price, theme.money_format))
+
+        } else {
+          sellingPlan.val("")
+          sellingPlan.addClass("hide")
+        }
+
+        $container.find('.subscription-price').html(theme.Shopify.formatMoney(variant.selling_plan_allocations[0].price, theme.money_format))
+        $container.find('.one-time-price').html(theme.Shopify.formatMoney(variant.price, theme.money_format))
       }
-
-      $container.find('.subscription-price').html(theme.Shopify.formatMoney(variant.selling_plan_allocations[0].price, theme.money_format))
-      $container.find('.one-time-price').html(theme.Shopify.formatMoney(variant.price, theme.money_format))
     };
 
     _.updateTransferNotice = function (variant, $container) {
