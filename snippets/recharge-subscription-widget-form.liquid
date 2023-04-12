@@ -66,12 +66,7 @@
                     {% endunless %}
                 >
                     {% for plan in selling_plan_group.selling_plans %}
-                        <option
-                            value="{{ plan.id }}"
-                            {% if plan.selected %}
-                                checked
-                            {% endif %}
-                        >
+                        <option value="{{ plan.id }}">
                             {{ plan.name }}
                         </option>
                     {% endfor %}

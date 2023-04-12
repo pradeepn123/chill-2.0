@@ -532,24 +532,32 @@ const featureProductSubscriptionUtil = (function () {
             let formatPrice = theme.Shopify.formatMoney(getActualVaraintPrice, theme.money_format)
             let currFormEl = currentInstance.closest(elUtil.form);
 
-
             // Update subscription price
-            const sellingPlan = currFormEl.querySelector(elUtil.sellingPlan)
-            const sellingPlanObj = variantObj.varaintData.selling_plan_allocations.find((sp) => sp.selling_plan_id == sellingPlan.value)
-
-            currFormEl.querySelector(elUtil.subscriptionPriceEl).innerHTML = theme.Shopify.formatMoney(sellingPlanObj.price, theme.money_format)
-            //currFormEl.querySelector(elUtil.subscriptionPriceEl).innerHTML = getSubscriptionVaraintData.discount_variant_price
+            const sellingPlan = variantObj.varaintData.selling_plan_allocations.find((sp) => sp.selling_plan_id == getSelectedOrFirstSellingPlanId(currFormEl))
+            if (sellingPlan) {
+                currFormEl.querySelector(elUtil.subscriptionPriceEl).innerHTML = theme.Shopify.formatMoney(sellingPlan.price, theme.money_format)
+            }
 
             // Update actual product price
             currFormEl.querySelector(elUtil.onetimepriceEl).innerHTML = formatPrice
-            console.log({
-                currentInstance,
-                variantObj
-            })
+        }
+
+        const getSelectedOrFirstSellingPlanId = (currFormEl) => {
+            const sellingPlan = currFormEl.querySelector(elUtil.sellingPlan)
+            if (!sellingPlan) {
+                return 0
+            }
+            if (sellingPlan.value) {
+                return sellingPlan.value
+            }
+
+            return sellingPlan.options[0].value
         }
 
         const updateVariantRelatedData = (currentEl, variantObj) => {
             const { id } = variantObj;
+            const currFormEl = currentEl.closest(elUtil.form);
+            currFormEl.querySelector('input[name="id"]').value = id
             // *** Update varaint price.. will be done later
             updateVariantPrice(currentEl, variantObj);
         };
@@ -588,20 +596,14 @@ const featureProductSubscriptionUtil = (function () {
         return {
             updateVariantRelatedData,
             updateAddToCartButton,
-            hideSubscriptionPopup
+            hideSubscriptionPopup,
+            getSelectedOrFirstSellingPlanId
         };
     };
 
     const EventHandler = function () {
         const featureProductVariantSelectorEl = document.querySelectorAll(
             elUtil.variantDropDownSelector
-        );
-
-        const featureProductRadioOneTimeSubEl = document.querySelectorAll(
-            elUtil.oneTimeRadioSelector
-        );
-        const featureProductRadioSubscriptionEl = document.querySelectorAll(
-            elUtil.subscriptionRadioSelector
         );
 
         const featureProductFormEl = document.querySelectorAll(elUtil.form);
@@ -612,10 +614,16 @@ const featureProductSubscriptionUtil = (function () {
             featureProductFormEl.forEach((_formEl) => {
 
                 _formEl.querySelectorAll(elUtil.sellingPlanGroup).forEach((_sellingPlanInput) => {
+                    const sellingPlanSelect = _formEl.querySelector(elUtil.sellingPlan)
+                    if (sellingPlanSelect) {
+                        sellingPlanSelect.value = ''
+                    }
+
                     _sellingPlanInput.addEventListener("click", function (e) {
                         if (!e.target.checked) {
                             return
                         }
+
                         _formEl.querySelectorAll(elUtil.sellingPlanGroup).forEach((_el) => {
                             _el.labels.forEach((_label) => {
                                 _label.classList.remove(elUtil.active)
@@ -625,6 +633,7 @@ const featureProductSubscriptionUtil = (function () {
                         e.currentTarget.labels.forEach((_label) => {
                             _label.classList.add(elUtil.active)
                         })
+
                         const sellingPlanSelect = _formEl.querySelector(elUtil.sellingPlan)
 
                         if (e.target.value) {
@@ -705,93 +714,6 @@ const featureProductSubscriptionUtil = (function () {
             });
         }
 
-        // Handle Subscription Selector
-        // 1) One time selection
-        if (featureProductRadioOneTimeSubEl) {
-            featureProductRadioOneTimeSubEl.forEach((_el) => {
-                _el.addEventListener('change', function (e) {
-                    let formEl = this.closest(elUtil.form);
-                    formEl
-                        .querySelector(elUtil.originalProductIdInputEl)
-                        .setAttribute('name', 'id');
-                    formEl
-                        .querySelector(elUtil.subscriptionProductInputEl)
-                        .setAttribute('name', '');
-
-                    // Remove properties to subscription input
-                    formEl
-                        .querySelector(elUtil.subscriptionFrequencyInputEl)
-                        .setAttribute('name', '');
-                    formEl
-                        .querySelector(elUtil.subscriptionUnitInputEl)
-                        .setAttribute('name', '');
-
-                    formEl.querySelector(
-                        elUtil.subscriptionIntervalSelector
-                    ).style.display = 'none';
-
-                    // Remove child active selector from form
-                    _helperFunc.removeInputActiveClassfromEl(formEl);
-
-                    _el.parentElement
-                        .querySelector(elUtil.oneTimeRadioSelector)
-                        .parentElement.classList.add(classUtil.activeSubRadio);
-                });
-            });
-        }
-
-        // Subscription selector
-        if (featureProductRadioSubscriptionEl) {
-            featureProductRadioSubscriptionEl.forEach((_el) => {
-                _el.addEventListener('change', function (e) {
-                    let formEl = this.closest(elUtil.form);
-                    formEl
-                        .querySelector(elUtil.originalProductIdInputEl)
-                        .setAttribute('name', '');
-                    formEl
-                        .querySelector(elUtil.subscriptionProductInputEl)
-                        .setAttribute('name', 'id');
-
-                    // Add properties to subscription input
-                    formEl
-                        .querySelector(elUtil.subscriptionFrequencyInputEl)
-                        .setAttribute(
-                            'name',
-                            'properties[shipping_interval_frequency]'
-                        );
-                    formEl
-
-                        .querySelector(elUtil.subscriptionUnitInputEl)
-                        .setAttribute(
-                            'name',
-                            'properties[shipping_interval_unit_type]'
-                        );
-
-                    formEl.querySelector(
-                        elUtil.subscriptionIntervalSelector
-                    ).style.display = 'block';
-
-                    _helperFunc.removeInputActiveClassfromEl(formEl);
-
-                    _el.parentElement
-                        .querySelector(elUtil.subscriptionRadioSelector)
-                        .parentElement.classList.add(classUtil.activeSubRadio);
-                });
-            });
-        }
-
-        // Subscription interval frequency Selector
-        if(intervalFrequencySelectorEl){
-            intervalFrequencySelectorEl.forEach(_el => {
-                _el.addEventListener('change', function(){
-                    let getValue = this.value;
-                    let formEl = this.closest(elUtil.form);
-                    formEl
-                        .querySelector(elUtil.subscriptionFrequencyInputEl)
-                        .setAttribute('value', getValue);
-                })
-            })
-        }
         if (window.ReCharge && ReCharge.showAddToCartButton) {
             ReCharge.showAddToCartButton()
         }
