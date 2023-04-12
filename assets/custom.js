@@ -868,3 +868,24 @@ class AutoSlider {
 //     .off("click", theme.closeDrawerCart.bind(theme))
 // };
 // document.querySelector('.utility-bar .link-dropdown__button').removeAttribute('disabled');
+var marqueeAnimations = document.querySelectorAll('.marquee_container')
+if(location.pathname == '/pages/vape'){
+    window.addEventListener('wheel', evt => {
+        evt.preventDefault();
+        marqueeAnimations.forEach(marqueeAnimation => {
+            evt.preventDefault();
+            if(evt.deltaY > 0){
+                marqueeAnimation.classList.remove('scroll_up');
+                marqueeAnimation.classList.add('scroll_down');
+            }
+            else if(evt.deltaY <= 0){
+                marqueeAnimation.classList.remove('scroll_down');
+                marqueeAnimation.classList.add('scroll_up');
+            }
+            else{
+                marqueeAnimation.classList.remove('scroll_down');
+                marqueeAnimation.classList.remove('scroll_up');
+            }
+        })
+    })
+}

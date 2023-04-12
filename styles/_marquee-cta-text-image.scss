@@ -1,11 +1,12 @@
-@keyframes scroll {
+@keyframes scroll-l {
     from {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
     to {
-        transform: translateX(calc(-100% - var(--gap)));
+        transform: translate3d(-100%, 0, 0);
     }
   }
+
 .marquee-with-cta-text-image{
     .marquee__content_{
         .marquee-tag{
@@ -27,7 +28,6 @@
                             white-space: nowrap;
                             font-size: 79px;
                             font-weight: 700;
-                            text-transform: capitalize;
                         }
                         &_button{
                             background-color: transparent;
@@ -46,55 +46,27 @@
                     }
                     &.scrollLeftToRight .marquee_content{
                         animation-name: scroll;
-                        animation-duration: 40s;
+                        animation-duration: 100s;
                         animation-timing-function: linear;
                         animation-iteration-count: infinite;
-                        animation-direction: normal;
                     }
                     &.scrollRightToLeft .marquee_content{
                         animation-name: scroll;
-                        animation-duration: 40s;
+                        animation-duration: 100s;
                         animation-timing-function: linear;
                         animation-iteration-count: infinite;
                         animation-direction: reverse;
+                    }
+                    &.scroll_up{
+                        transform: translateX(-0.4%) !important;
+                        transition: transform 400ms linear;
+                    }
+                    &.scroll_down{ 
+                        transform: translateX(0.4%) !important;
+                        transition: transform 400ms linear;
                     }
                 }
             }
         }
     }
 }
-
-//   @keyframes scroll-v {
-//     from {
-//         transform: translateY(0);
-//     }
-//     to {
-//         transform: translateY(-50%);
-//     }
-//   }
-//   /* Pause animation when reduced-motion is set */
-  @media (prefers-reduced-motion: reduce) {
-    .marquee__content_ {
-        animation-play-state: paused !important;
-    }
-  }
-//   /* Enable animation */
-//   .enable-animation.marquee-with-cta-text-image .marquee__content_ .marquee_container.scrollLeftToRight{
-//     // animation-name: scroll;
-//     // animation-duration: 10s;
-//     // animation-timing-function: linear;
-//     // animation-direction: normal;
-//     transform: translateX(10px);
-//   }
-//   .enable-animation.marquee-with-cta-text-image .marquee__content_ .marquee_container.scrollRightToleft{
-//     animation-name: scroll;
-//     animation-duration: 10s;
-//     animation-timing-function: linear;
-//     animation-direction: reverse;
-//   }
-// //   .enable-animation-v .marquee__content {
-// //     animation: scroll 10s linear infinite;
-// //     @media (min-width:767px) {
-// //         animation: scroll-v 5s linear infinite;
-// //     }
-// //   }

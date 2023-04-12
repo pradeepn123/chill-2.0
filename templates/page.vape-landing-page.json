@@ -7,37 +7,37 @@
         "full_width": false
       }
     },
-    "999780a2-f24c-4a67-8727-3383acb8113a": {
+    "4f15e0b6-f42e-46ef-a0d7-bbe012e936af": {
       "type": "marquee-with-cta-text-image",
       "blocks": {
-        "65822f18-f753-4070-bfb0-a5b72ec1e22f": {
+        "0ec6895e-c19d-4e97-97d3-866aec1805f7": {
           "type": "select",
           "settings": {
-            "marquee_text": "Passion fruit grapefruit",
-            "marquee_text_color": "#000000",
-            "marquee_cta_text": "Try passion grapefruit",
-            "marquee_button_color": "#ffac9a",
+            "marquee_text": "Passion Fruit Grapefruit",
+            "marquee_text_color": "#000",
+            "marquee_cta_text": "Try Passion Grapefruit",
+            "marquee_button_color": "#f3b09f",
             "marquee_image": "shopify:\/\/shop_images\/vape-grape.jpg",
             "marquee_direction": "scrollRightToLeft"
           }
         },
-        "b740753c-3c72-4295-b35d-7bf80da9e76c": {
+        "8a9ffd65-3b7c-4fa2-b031-3b4698812d53": {
           "type": "select",
           "settings": {
             "marquee_text": "Lemon",
-            "marquee_text_color": "#000000",
-            "marquee_cta_text": "Try lemon",
+            "marquee_text_color": "#000",
+            "marquee_cta_text": "Try Lemon",
             "marquee_button_color": "#f2cc0d",
             "marquee_image": "shopify:\/\/shop_images\/vape-lemon1.jpg",
             "marquee_direction": "scrollLeftToRight"
           }
         },
-        "7b82911f-078d-4c1d-b55a-8a914ef9393f": {
+        "e704ebd2-76fa-40ff-8b6c-c6b8de42ae40": {
           "type": "select",
           "settings": {
             "marquee_text": "Mint Ice",
-            "marquee_text_color": "#000000",
-            "marquee_cta_text": "Try Mint ice",
+            "marquee_text_color": "#000",
+            "marquee_cta_text": "Try Mint Ice",
             "marquee_button_color": "#6ec59f",
             "marquee_image": "shopify:\/\/shop_images\/vape-mint_3ffc3523-fe69-4ae6-8b51-c17a4c01d881.jpg",
             "marquee_direction": "scrollRightToLeft"
@@ -45,30 +45,30 @@
         }
       },
       "block_order": [
-        "65822f18-f753-4070-bfb0-a5b72ec1e22f",
-        "b740753c-3c72-4295-b35d-7bf80da9e76c",
-        "7b82911f-078d-4c1d-b55a-8a914ef9393f"
+        "0ec6895e-c19d-4e97-97d3-866aec1805f7",
+        "8a9ffd65-3b7c-4fa2-b031-3b4698812d53",
+        "e704ebd2-76fa-40ff-8b6c-c6b8de42ae40"
       ],
       "settings": {
       }
     },
-    "731d1f1d-9206-4d4a-9087-61b254616e53": {
+    "f6b2e9db-2e99-4a4a-9438-b83f5be67d94": {
       "type": "marquee-with-cta-text-image",
       "blocks": {
-        "40fbab64-9217-4248-a557-ef17497fc2af": {
+        "9c3f97e2-f5ee-4962-93c5-01a471b8d7cb": {
           "type": "select",
           "settings": {
-            "marquee_text": "Coming soon",
-            "marquee_text_color": "#000000",
+            "marquee_text": "coming soon",
+            "marquee_text_color": "#000",
             "marquee_cta_text": "",
             "marquee_button_color": "",
             "marquee_image": "shopify:\/\/shop_images\/Group_636.jpg",
-            "marquee_direction": "scrollLeftToRight"
+            "marquee_direction": "scrollRightToLeft"
           }
         }
       },
       "block_order": [
-        "40fbab64-9217-4248-a557-ef17497fc2af"
+        "9c3f97e2-f5ee-4962-93c5-01a471b8d7cb"
       ],
       "settings": {
       }
@@ -76,7 +76,7 @@
   },
   "order": [
     "main",
-    "999780a2-f24c-4a67-8727-3383acb8113a",
-    "731d1f1d-9206-4d4a-9087-61b254616e53"
+    "4f15e0b6-f42e-46ef-a0d7-bbe012e936af",
+    "f6b2e9db-2e99-4a4a-9438-b83f5be67d94"
   ]
 }

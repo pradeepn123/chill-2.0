@@ -4,9 +4,8 @@
             <div class="marquee_wrap">
             {% for block in section.blocks %}
                 <div class="marquee_container {{ block.settings.marquee_direction }}">
-                    {% for i in (1..5) %}
+                    {% for i in (1..10) %}
                         <div class="marquee_content">
-
                             {% if block.settings.marquee_text != blank %}
                                 <p class="marquee_content_text" style="color: {{ block.settings.marquee_text_color }}">{{ block.settings.marquee_text }}</p>
                             {% endif %}
