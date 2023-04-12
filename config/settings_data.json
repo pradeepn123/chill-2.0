@@ -79,7 +79,7 @@
       "live_search_show_vendor": false,
       "live_search_show_price": false,
       "live_search_search_meta": false,
-      "cart_type": "drawer",
+      "cart_type": "page",
       "sections": {
         "announcement-bar": {
           "type": "announcement-bar",
@@ -296,7 +296,7 @@
       "live_search_show_vendor": false,
       "live_search_show_price": false,
       "live_search_search_meta": false,
-      "cart_type": "drawer",
+      "cart_type": "page",
       "sections": {
         "announcement-bar": {
           "type": "announcement-bar",
@@ -549,7 +549,7 @@
       "live_search_show_vendor": false,
       "live_search_show_price": false,
       "live_search_search_meta": false,
-      "cart_type": "drawer",
+      "cart_type": "page",
       "sections": {
         "header": {
           "type": "header",
@@ -771,7 +771,7 @@
       "live_search_show_vendor": false,
       "live_search_show_price": false,
       "live_search_search_meta": false,
-      "cart_type": "drawer",
+      "cart_type": "page",
       "sections": {
         "announcement-bar": {
           "type": "announcement-bar",
@@ -1735,6 +1735,22 @@
         "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
+        }
+      },
+      "17151115064775110295": {
+        "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/recharge-theme\/371eed76-0b44-4869-9813-730372ea378e",
+        "disabled": true,
+        "settings": {
+          "color_brand": "#467C99",
+          "contrast_color": "#FFFFFF",
+          "color_brand_secondary": "#467C99",
+          "corners": "8px",
+          "app_background": "#f9f8f4",
+          "app_container": 1200,
+          "app_vertical_padding": 32,
+          "images_aspect_ratio": "1",
+          "cards_background": "#FFFFFF",
+          "cards_border_color": "rgba(0,0,0,0)"
         }
       }
     }

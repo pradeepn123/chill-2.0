@@ -5197,6 +5197,34 @@
       $container.find('.barcode').toggleClass('barcode--no-barcode', !variant || !variant.barcode);
     };
 
+    _.updateSubscriptionFormPrice = function (variant, $container) {
+      $container.find('.product__subs__option').removeClass("active")
+      const sellingPlanGroup = $container.find('input[name="selling-plan-group"]:checked')
+
+      if (sellingPlanGroup.length) {
+        const sellingPlan = $container.find('select[name="selling_plan"]')
+
+        sellingPlanGroup[0].labels.forEach((_label) => {
+          _label.classList.add("active")
+        })
+
+        if (sellingPlanGroup.val()) {
+          sellingPlan.val(sellingPlan.find("option").val())
+          sellingPlan.removeClass("hide")
+
+          const sellingPlanObj = variant.selling_plan_allocations.find((plan) => plan.selling_plan_id == sellingPlan.val())
+          $container.find('.current-price').html(theme.Shopify.formatMoney(sellingPlanObj.price, theme.money_format))
+
+        } else {
+          sellingPlan.val("")
+          sellingPlan.addClass("hide")
+        }
+
+        $container.find('.subscription-price').html(theme.Shopify.formatMoney(variant.selling_plan_allocations[0].price, theme.money_format))
+        $container.find('.one-time-price').html(theme.Shopify.formatMoney(variant.price, theme.money_format))
+      }
+    };
+
     _.updateTransferNotice = function (variant, $container) {
       var transferData = _._getVariantOptionElement(variant, $container).data('inventory-transfer');
       if (transferData) {
@@ -5325,6 +5353,44 @@
         });
       });
 
+      $productForm.find('input[name="selling-plan-group"]').on('change.themeProductOptions', function (e) {
+        var selectedOptions = [];
+        $(this).find('.option-selector').each(function () {
+          if ($(this).data('selector-type') === 'listed') {
+            selectedOptions.push($(this).find('.js-option:checked').val());
+          } else {
+            selectedOptions.push($(this).find('.js-option[aria-selected="true"]').data('value'));
+          }
+        });
+
+        // find variant
+        var variant = false;
+        for (var i = 0; i < productData.variants.length; i++) {
+          var v = productData.variants[i];
+          var matchCount = 0;
+          for (var j = 0; j < selectedOptions.length; j++) {
+            if (v.options[j] == selectedOptions[j]) {
+              matchCount++;
+            }
+          }
+          if (matchCount == selectedOptions.length) {
+            variant = v;
+            break;
+          }
+        }
+
+        // trigger change
+        $productForm.find(_.selectors.variantIdInputs).val(variant.id);
+
+        // a jQuery event may not be picked up by all listeners
+        $productForm.find(_.selectors.variantIdInputs).each(function () {
+          this.dispatchEvent(
+          new CustomEvent('change', { bubbles: true, cancelable: false, detail: { variant: variant, selectedOptions: selectedOptions } }));
+
+        });
+      });
+
+
       // init custom options (mirror in purchase form for Buy Now button)
       $productForm.find(_.selectors.customOption).each(function () {
         var $input = $(this).find('input:first, textarea, select');
@@ -5390,7 +5456,8 @@
           // emit an event to broadcast the variant update
           $(window).trigger('cc-variant-updated', {
             variant: variant,
-            product: productData });
+            product: productData
+          });
 
 
           // variant images
@@ -5424,6 +5491,7 @@
           _.updateVariantDeterminedVisibilityAreas(variant, $container);
           _.updateBackorder(variant, $container);
           _.updateContainerStatusClasses(variant, $container);
+          _.updateSubscriptionFormPrice(variant, $container);
 
           // variant urls
           if ($productForm.data('enable-history-state') && e.type == 'change') {
@@ -6242,65 +6310,37 @@
       $(document).on('theme:cartDrawer:open', theme.openDrawerCart.bind(this))
       $(document).on('theme:cartDrawer:close', theme.closeDrawerCart.bind(this))
       $(container).on('submit.cartDrawerTemplateSection', '.cart-drawer-form--checkout', theme.handleCheckoutSubmission)
+
       $(container).on('click.cartDrawerTemplateSection', '.upgrade-to-subscription', function(evt) {
         if (this.replacingContent) {
           return;
         }
 
-        //remove existing product and add subscription product 
-        var shippingIntervalFrequency = evt.currentTarget.dataset.shipping_interval_frequency.split(",");
-
-         let formData = {
-          'items': [{
-           id: $(evt.currentTarget).data('first_scription_id'),
-           quantity: $(evt.currentTarget).data('product_quantity'),
-           properties: {
-            shipping_interval_unit_type: evt.currentTarget.dataset.shipping_interval_unit_type,
-            shipping_interval_frequency: shippingIntervalFrequency[0]
-          }
-           }]
-         };
-         
-         fetch(window.Shopify.routes.root + 'cart/add.js', {
-           method: 'POST',
-           headers: {
-             'Content-Type': 'application/json'
-           },
-           body: JSON.stringify(formData)
-         })
-         .then(response => {
-           return response.json();
-         }).then(data => {
-          
-              this.functions.updateCart.call(this, {
-                line: $(evt.currentTarget).data('line') + 1,
-                quantity: 0,
-                properties: {},
-      
-              }, function () {
-
-                  document.documentElement.dispatchEvent(
-                  new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false }));
-              });
-         })
-         .catch((error) => {
-           console.error('Error:', error);
-         });
-      
+        return this.functions.updateCart.call(this, {
+          line: $(evt.currentTarget).data('line'),
+          quantity: evt.currentTarget.dataset.quantity,
+          selling_plan: evt.currentTarget.dataset.sellingPlanId
+        }, function () {
+            document.documentElement.dispatchEvent(
+              new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false })
+            )
+        });
       }.bind(this))
 
       $(container).on('change.cartDrawerTemplateSection', '.drawer-shipping-interval', function(evt) {
         if (this.replacingContent) {
           return;
         }
-        this.functions.updateCart.call(this, {
+
+        return this.functions.updateCart.call(this, {
           line: $(evt.currentTarget).data('line'),
           quantity: evt.currentTarget.dataset.quantity,
-          properties: {
-            shipping_interval_unit_type: evt.currentTarget.dataset.shipping_interval_unit_type,
-            shipping_interval_frequency: evt.target.value
-          }
-        }, function () {});
+          selling_plan: evt.currentTarget.value
+        }, function () {
+          document.documentElement.dispatchEvent(
+            new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false })
+          )
+        });
       }.bind(this))
 
       $('.cart-link').on('click', function (e) {
@@ -6498,7 +6538,6 @@
           data: params,
           dataType: 'json',
           success: function success(response) {
-            console.log(response.items)
             document.documentElement.dispatchEvent(
             new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false }));
 
@@ -6507,7 +6546,6 @@
           error: function error(data) {
             if (data.statusText != 'abort') {
               console.log('Error processing update');
-              console.log(data);
             }
           },
           complete: function () {

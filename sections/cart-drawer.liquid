@@ -169,16 +169,12 @@
                 {% else %}
                   {% assign original_product = item.product %}
                 {% endif %}
-                {% assign has_subscriptions = false %}
                 {% assign promotionalLine = false %}
                 {% assign selected_shipping_interval_frequency = blank %}
                 {% assign free_variety_pack_in_cart = blank %}
                 
                 {% for p in item.properties %}
-                  {% if p.first == 'shipping_interval_frequency' %}
-                    {% assign has_subscriptions = true %}
-                    {% assign selected_shipping_interval_frequency = p.last %}
-                  {% elsif p.first == '_variety_pack' %}
+                  {% if p.first == '_variety_pack' %}
                     {% assign free_variety_pack_in_cart = true %}
                   {% endif %}
                   {% if p.first == 'Product Type' and p.last == 'FREE' %}
@@ -201,17 +197,6 @@
                               {% comment %}<span class="cart-drawer-summary-item__varient_pack">{{ original_product.metafields.custom.product_varient_pack }}</span>{% endcomment %}
                             </a>
                             <div class="cart-drawer-summary-item__price">
-                              {% if has_subscriptions and item.product.metafields.subscriptions.discount_percentage %}
-                                {%- liquid
-                                  assign percentage = item.product.metafields.subscriptions.discount_percentage | divided_by: 100
-                                  assign discountedPrice = item.final_line_price | times: percentage
-                                  assign finalDiscountedPrice = item.final_line_price | minus: discountedPrice
-                                -%}
-                                {% assign subtotal = subtotal | plus : finalDiscountedPrice %}
-                                <span class="cart-drawer-summary-item__price-current theme-money">
-                                  {% render 'price', price: finalDiscountedPrice, disable_currency_code: true %}
-                                </span>
-                              {% else %}
                                 {% if item.final_line_price == 0 %}
                                   {% if free_variety_pack_in_cart == true %}
                                     <span class="theme-money struck-out-price">
@@ -233,11 +218,8 @@
                                 {% endif %}
                                 {% render 'unit-price', variant: item %}
                                 {% assign subtotal = subtotal | plus : item.final_line_price %}
-                              {% endif %}
                             </div>
-                            
                           </div>
-
                           <div class="variant_discount_block_sec">
                             {% if item.product.variants.size > 1 %}
                               <span class="variant">{{ item.variant.title }}</span>
@@ -295,38 +277,37 @@
                           {% endunless %}
                         </div>
                       </div>
-
                     </div>
-                    {% assign shipping_interval_frequencies = original_product.metafields.subscriptions.shipping_interval_frequency | split: ',' | default: 30 %}
-                    {% assign shipping_interval_unit_type = original_product.metafields.subscriptions.shipping_interval_unit_type | default: 'Days' %}
-                    {% if shipping_interval_unit_type == 'day' %}
-                      {% assign shipping_interval_unit_type = 'Days' %}
-                    {% elsif shipping_interval_unit_type == 'week' %}
-                      {% assign shipping_interval_unit_type = 'Weeks' %}
-                    {% elsif shipping_interval_unit_type == 'month' %}
-                      {% assign shipping_interval_unit_type = 'Months' %}
-                    {% endif %}
-                    {% if has_subscriptions %}
+
+                    {% if item.selling_plan_allocation %}
+                      {% assign itemLineIndex = forloop.index %}
                       <div class="upgraded-sub-selection">
-                        {% if shipping_interval_frequencies.size > 1 %}
-                          <select id="drawer-shipping-interval-selector-{{forloop.index}}" class="drawer-shipping-interval" data-shipping_interval_unit_type="{{shipping_interval_unit_type}}" data-line="{{ forloop.index }}" data-quantity="{{item.quantity}}">
-                            {% for shipping_interval_frequency in shipping_interval_frequencies %}
-                              <option value="{{shipping_interval_frequency}}" {% if selected_shipping_interval_frequency == shipping_interval_frequency %}selected{% endif %}>Delivery every {{shipping_interval_frequency}} {{shipping_interval_unit_type}}</option>
-                            {% endfor %}
-                          </select>
-                        {% else %}
-                          <div class="drawer-shipping-interval-{{shipping_interval_frequencies.size}}">
-                            Delivery every {{original_product.metafields.subscriptions.shipping_interval_frequency}} {{shipping_interval_unit_type}}
-                          </div>
-                        {% endif %}
+                        {% for selling_plan_group in item.product.selling_plan_groups %}
+                          {% if selling_plan_group.selling_plans.size > 1 %}
+                            <select
+                              id="drawer-shipping-interval-selector-{{itemLineIndex}}-{{forloop.index}}"
+                              class="drawer-shipping-interval"
+                              data-line="{{itemLineIndex}}"
+                              data-quantity="{{item.quantity}}"
+                            >
+                              {% for selling_plan in selling_plan_group.selling_plans %}
+                                <option
+                                  value="{{selling_plan.id}}" {% if item.selling_plan_allocation.selling_plan.id == selling_plan.id %}selected{% endif %}
+                                >
+                                  {{ selling_plan.name }}
+                                </option>
+                              {% endfor %}
+                            </select>
+                          {% else %}
+                            <div class="drawer-shipping-interval-1">
+                              {{tem.selling_plan_allocation.name}}
+                            </div>
+                          {% endif %}
+                        {% endfor %}
                       </div>
-                    {% elsif free_variety_pack_in_cart != true and original_product.metafields.subscriptions.shipping_interval_frequency and original_product.metafields.subscriptions.discount_percentage %}
-                      {%- assign actual_varaint_id = item.variant_id | escape -%}
-                      <button type="button" class="upgrade-to-subscription" data-shipping_interval_frequency="{{shipping_interval_frequencies[0]}}" data-shipping_interval_unit_type="{{shipping_interval_unit_type}}" data-line="{{ forloop.index }}" data-product_quantity="{{ item.quantity }}" data-first_scription_id="{{ original_product.metafields.subscriptions.original_to_hidden_variant_map[actual_varaint_id].discount_variant_id}}">
-                        {%- comment -%}
-                          {{ item.product.metafields.subscriptions.original_to_hidden_variant_map}}
-                        {%- endcomment -%}
-                        UPGRADE TO SUBSCRIPTION AND SAVE {{ original_product.metafields.subscriptions.discount_percentage }}%
+                    {% elsif free_variety_pack_in_cart != true and item.product.selling_plan_groups.size > 0 %}
+                      <button type="button" class="upgrade-to-subscription" data-selling-plan-id="{{ item.product.selected_or_first_available_selling_plan_allocation.selling_plan.id }}" data-line="{{ forloop.index }}" data-quantity="{{ item.quantity }}">
+                        UPGRADE TO SUBSCRIPTION AND SAVE 20%
                       </button>
                     {% endif %}
                   </div>
