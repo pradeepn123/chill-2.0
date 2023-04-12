@@ -48,9 +48,6 @@
     .section-background-video .video-container .overlay-text .overlay-text__inner .overlay-text__text .overlay-text__button-row .overlay-text__button.button{
         font-size: {{ section.settings.btn_font_mobile }}px;
     }
-    .section-background-video .video-container .overlay-text .overlay-text__inner{
-        background: {{ section.settings.sec_bg_color }}; 
-      }
     }
   {% endstyle %}
 
@@ -81,7 +78,7 @@
 
       {%- if show_overlay_text -%}
         <div class="overlay-text overlay-text--for-banner overlay--v-{{ section.settings.text_alignment | split: ' ' | first }} overlay--h-{{ section.settings.text_alignment | split: ' ' | last }} image-overlay__over">
-          <div class="overlay-text__inner">
+          <div class="overlay-text__inner {% if section.settings.use_alt_bg %} use-alt-bg-color{% endif %}">
             <div class="overlay-text__text" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.5s">
               {%- if section.settings.subheading != blank -%}
                 <div class="overlay-text__subheading subheading subheading--over">{{ section.settings.subheading | escape }}</div>
@@ -140,10 +137,10 @@
         "info": "Required. Shows while the video is loading, or if it cannot autoplay."
       },
       {
-        "type": "color",
-        "id": "sec_bg_color",
-        "label": "Section BG color",
-        "default": "#fff"
+        "type": "checkbox",
+        "id": "use_alt_bg",
+        "label": "Use alternate section color",
+        "default": true
       },
       {
         "type": "text",
