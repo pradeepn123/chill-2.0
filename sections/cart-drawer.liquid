@@ -197,7 +197,6 @@
                               {% comment %}<span class="cart-drawer-summary-item__varient_pack">{{ original_product.metafields.custom.product_varient_pack }}</span>{% endcomment %}
                             </a>
                             <div class="cart-drawer-summary-item__price">
-                              {% unless item.selling_plan_allocation %}
                                 {% if item.final_line_price == 0 %}
                                   {% if free_variety_pack_in_cart == true %}
                                     <span class="theme-money struck-out-price">
@@ -219,7 +218,6 @@
                                 {% endif %}
                                 {% render 'unit-price', variant: item %}
                                 {% assign subtotal = subtotal | plus : item.final_line_price %}
-                              {% endunless %}
                             </div>
                           </div>
                           <div class="variant_discount_block_sec">
