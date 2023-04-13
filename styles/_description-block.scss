@@ -9,6 +9,7 @@
         width: 85%;
         display: flex;
         margin: 0 auto;
+
         .media_image_text_block {
             display: flex;
             align-items: center;
@@ -48,20 +49,30 @@
 
                     h3 {
                         font-weight: 600;
-                        p{
+
+                        p {
                             margin-bottom: 0;
                         }
                     }
                 }
+                .media-page-headeings {
+                    padding-bottom: 1%;
+                }
+                
+
                 .content-mediapage-block {
-                   
-                    p{
+
+                    p {
                         font-weight: 400;
                         margin-bottom: 0;
                         margin-bottom: 10%;
                     }
                 }
-
+                .content-mediapage-blocks{
+                    p{
+                        margin-bottom: 4%;
+                    }
+                }
                 .media-page-btn-block {
                     max-width: fit-content;
 
@@ -79,14 +90,20 @@
         }
     }
 }
+
 .media-page-no-content {
     text-align: center;
-    padding: 5%;
+
     .media-image_text_block_main {
         .media_image_text_block {
             >* {
                 margin-left: 0;
                 margin-right: 0;
+            //     .media_page_text_section {
+            //     .content-mediapage-block-p{
+            //         margin-bottom: 2%;
+            //     }
+            // }
             }
         }
     }
