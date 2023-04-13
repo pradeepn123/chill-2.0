@@ -38,10 +38,10 @@
         "overlay_style": "shadow"
       }
     },
-    "7e2ad782-38c1-430d-8cbe-79145d407f21": {
-      "type": "Media-description",
+    "15b2b383-a8d1-4eae-96fa-104f7bebe25b": {
+      "type": "description-block",
       "blocks": {
-        "c6bb2999-9ba0-4e2a-af16-76255acd05c6": {
+        "a23ed764-3a26-4dfc-81ae-55a5f581c9de": {
           "type": "blocks",
           "settings": {
             "flex_direction": "row-reverse",
@@ -60,13 +60,13 @@
         }
       },
       "block_order": [
-        "c6bb2999-9ba0-4e2a-af16-76255acd05c6"
+        "a23ed764-3a26-4dfc-81ae-55a5f581c9de"
       ],
       "settings": {
       }
     },
-    "548d1a45-bbc9-4f74-9706-b48b6b31b049": {
-      "type": "Media-description",
+    "5f255f82-dd49-4564-825e-59f8d4d94d2c": {
+      "type": "description-block",
       "blocks": {
         "0ec6895e-c19d-4e97-97d3-866aec1805f7": {
           "type": "select",
@@ -84,6 +84,7 @@
         }
       },
         "985ba684-d59e-466b-8887-84975c0645fc": {
+        "5f80f194-216f-4504-8860-c3f8fffc773e": {
           "type": "blocks",
           "settings": {
             "flex_direction": "row",
@@ -94,7 +95,7 @@
             "content": "Grapefruit flavor vape offers a distinctive taste that is both sweet and slightly bitter, with hints of tanginess.",
             "font_size_content": 20,
             "btn_text": "JOIN WAITLIST",
-            "btn_url": "https:\/\/www.figma.com\/file\/eesPkOGRXmpNRueav0z4Dv\/Chill-Client-Review-%2F-Development?node-id=888-2405&t=scggg9rrmmGWYtFV-0",
+            "btn_url": "https:\/\/www.google.com\/",
             "font_size_btn": 24,
             "btn-bg": "#ffac9a",
             "btn-color": "#fff"
@@ -113,6 +114,7 @@
             "marquee_direction": "scrollLeftToRight",
             "use_alt_bg": true,
         "4bc9c255-f8b8-414a-a185-3bab0c1e42d9": {
+        "da6ac2b1-9670-49f1-913e-34c14884470c": {
           "type": "blocks",
           "settings": {
             "flex_direction": "row-reverse",
@@ -142,6 +144,7 @@
             "marquee_direction": "scrollRightToLeft",
             "use_alt_bg": true,
         "2ade0965-25b2-40f5-8a82-13830f744b64": {
+        "31b9b779-c1f8-41db-b685-7891536642a0": {
           "type": "blocks",
           "settings": {
             "flex_direction": "row",
@@ -165,7 +168,10 @@
         "e704ebd2-76fa-40ff-8b6c-c6b8de42ae40",
         "985ba684-d59e-466b-8887-84975c0645fc",
         "4bc9c255-f8b8-414a-a185-3bab0c1e42d9",
-        "2ade0965-25b2-40f5-8a82-13830f744b64"
+        "2ade0965-25b2-40f5-8a82-13830f744b64",
+        "5f80f194-216f-4504-8860-c3f8fffc773e",
+        "da6ac2b1-9670-49f1-913e-34c14884470c",
+        "31b9b779-c1f8-41db-b685-7891536642a0"
       ],
       "settings": {
       }
@@ -334,8 +340,8 @@
     "f6b2e9db-2e99-4a4a-9438-b83f5be67d94",
     "80e688ad-c6b3-4ac1-bb96-adc2ec27f7d8",
     "6eff7f6a-26cb-429f-a83e-c752b87d8e4a",
-    "7e2ad782-38c1-430d-8cbe-79145d407f21",
-    "548d1a45-bbc9-4f74-9706-b48b6b31b049"
+    "15b2b383-a8d1-4eae-96fa-104f7bebe25b",
+    "5f255f82-dd49-4564-825e-59f8d4d94d2c"
   ]
 }
         }
