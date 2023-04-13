@@ -1,7 +1,7 @@
 <div class="container">
   <div class="media-adjust-section">
     {% for block in section.blocks %}
-      <div class="media-img-block-contanier  {% if block.settings.image == null or block.settings.content == null %} media-page-no-content {% endif %}" id="block-{{- block.settings.image | strip_html | replace: ' ', '' -}}">
+      <div class="media-img-block-contanier  {% if block.settings.image == null or block.settings.content == null %} media-page-no-content {% endif %}" id="block-{{- block.settings.main_heading | strip_html | replace: ' ', '' -}}">
         <div class="media-image_text_block_main">
           <div class="media_image_text_block" style="flex-direction: {{ block.settings.flex_direction }};">
             {% if block.settings.image %}
@@ -12,7 +12,7 @@
               </div>
             {% endif %}
             <div class="media_page_text_section">
-              <div class="media-page-headeing{% if block.settings.image == null %} media-page-headeings{% endif %}" id="block-{{- block.settings.main_heading | strip_html | replace: ' ', '' -}}">
+              <div class="media-page-headeing{% if block.settings.image == null %} media-page-headeings{% endif %}">
                 <h3  style="font-size:{{ block.settings.font_size_heading }}px; font-weight:{{ block.settings.font_weight_heading }};">
                   {{ block.settings.main_heading }}
                 </h3>
