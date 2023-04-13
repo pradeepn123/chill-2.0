@@ -55,7 +55,7 @@
             "btn_url": "",
             "font_size_btn": 24,
             "btn-bg": "#000000",
-            "btn-color": "#fff"
+            "btn-color": "#ffffff"
           }
         }
       },
@@ -98,7 +98,7 @@
             "btn_url": "https:\/\/www.google.com\/",
             "font_size_btn": 24,
             "btn-bg": "#ffac9a",
-            "btn-color": "#fff"
+            "btn-color": "#ffffff"
           }
         },
         "8a9ffd65-3b7c-4fa2-b031-3b4698812d53": {
@@ -128,7 +128,7 @@
             "btn_url": "https:\/\/www.google.com\/",
             "font_size_btn": 24,
             "btn-bg": "#f2cc0d",
-            "btn-color": "#fff"
+            "btn-color": "#ffffff"
           }
         },
         "e704ebd2-76fa-40ff-8b6c-c6b8de42ae40": {
@@ -158,7 +158,7 @@
             "btn_url": "https:\/\/www.google.com\/",
             "font_size_btn": 24,
             "btn-bg": "#6ec59f",
-            "btn-color": "#fff"
+            "btn-color": "#ffffff"
           }
         }
       },
