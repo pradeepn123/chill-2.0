@@ -18,7 +18,7 @@
                 </h3>
               </div>
               {% if block.settings.content %}
-                <div class="content-mediapage-block{% if block.settings.image == null %} content-mediapage-blocks{% endif %}" id="block-{{- block.settings.content | strip_html | replace: ' ', '' -}}">
+                <div class="content-mediapage-block{% if block.settings.image == null %} content-mediapage-blocks{% endif %}">
                   <p style="font-size:{{ block.settings.font_size_content }}px;">{{ block.settings.content }}</p>
                 </div>
               {% endif %}
@@ -26,7 +26,7 @@
                 and block.settings.btn_url != '#'
                 and block.settings.btn_text != ''
               %}
-                <div class="media-page-btn-block{% if block.settings.image == null or block.settings.content == null %} media-block-margin{% endif %}" id="block-{{- block.settings.btn_text | strip_html | replace: ' ', '' -}}">
+                <div class="media-page-btn-block{% if block.settings.image == null or block.settings.content == null %} media-block-margin{% endif %}">
                   <a
                     style="font-size:{{ block.settings.font_size_btn }}px; background: {{ block.settings.btn-bg }}; color: {{ block.settings.btn-color }};"
                     href="{{ block.settings.btn_url }}"
