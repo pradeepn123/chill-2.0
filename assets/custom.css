@@ -10506,16 +10506,24 @@ body.cart-drawer-open {
 }
 
 .media-img-block-contanier {
-  padding: 5% 5.2% 5% 9%;
+  width: 100%;
   border: 1px solid #D9D9D9;
   border-radius: 20px;
   margin-bottom: 3%;
+  display: flex;
+}
+.media-img-block-contanier .media-image_text_block_main {
+  width: 85%;
+  display: flex;
+  margin: 0 auto;
 }
 .media-img-block-contanier .media-image_text_block_main .media_image_text_block {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding-top: 6%;
+  padding-bottom: 6%;
 }
 .media-img-block-contanier .media-image_text_block_main .media_image_text_block > * {
   margin-left: 5.55%;
