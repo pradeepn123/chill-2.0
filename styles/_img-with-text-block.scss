@@ -1,11 +1,11 @@
-.vape-img-block-contanier {
+.media-img-block-contanier {
     padding: 5% 5.2% 5% 9%;
     border: 1px solid #D9D9D9;
     border-radius: 20px;
     margin-bottom: 3%;
 
-    .vape-image_text_block_main {
-        .vape_image_text_block {
+    .media-image_text_block_main {
+        .media_image_text_block {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -20,8 +20,8 @@
                 margin-left: 0;
             }
 
-            .vape-page-image-block {
-                .vape-text-block-img {
+            .media-page-image-block {
+                .media-text-block-img {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -36,8 +36,8 @@
                 }
             }
 
-            .vape_page_text_section {
-                .vape-page-headeing {
+            .media_page_text_section {
+                .media-page-headeing {
                     padding-bottom: 2%;
 
                     h3 {
@@ -47,7 +47,7 @@
                         }
                     }
                 }
-                .content-vapepage-block {
+                .content-mediapage-block {
                    
                     p{
                         font-weight: 400;
@@ -56,7 +56,7 @@
                     }
                 }
 
-                .vape-page-btn-block {
+                .media-page-btn-block {
                     max-width: fit-content;
 
                     a {
@@ -66,18 +66,18 @@
                     }
                 }
 
-                .no-margin {
+                .media-block-margin {
                     margin: 0 auto;
                 }
             }
         }
     }
 }
-.vape-page-no-content {
+.media-page-no-content {
     text-align: center;
     padding: 5%;
-    .vape-image_text_block_main {
-        .vape_image_text_block {
+    .media-image_text_block_main {
+        .media_image_text_block {
             >* {
                 margin-left: 0;
                 margin-right: 0;
