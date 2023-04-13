@@ -13,33 +13,39 @@
         "0ec6895e-c19d-4e97-97d3-866aec1805f7": {
           "type": "select",
           "settings": {
-            "marquee_text": "Passion Fruit Grapefruit",
-            "marquee_text_color": "#000",
+            "marquee_text": "<p><strong>Passion Fruit Grapefruit<\/strong><\/p>",
+            "marquee_text_color": "#000000",
+            "marquee_text_font_size": 79,
+            "marquee_text_font_size_mobile": 59,
             "marquee_cta_text": "Try Passion Grapefruit",
             "marquee_button_color": "#f3b09f",
-            "marquee_image": "shopify:\/\/shop_images\/vape-grape.jpg",
+            "marquee_image-1": "shopify:\/\/shop_images\/vape-grape.jpg",
             "marquee_direction": "scrollRightToLeft"
           }
         },
         "8a9ffd65-3b7c-4fa2-b031-3b4698812d53": {
           "type": "select",
           "settings": {
-            "marquee_text": "Lemon",
-            "marquee_text_color": "#000",
+            "marquee_text": "<p><strong>Lemon<\/strong><\/p>",
+            "marquee_text_color": "#000000",
+            "marquee_text_font_size": 79,
+            "marquee_text_font_size_mobile": 59,
             "marquee_cta_text": "Try Lemon",
             "marquee_button_color": "#f2cc0d",
-            "marquee_image": "shopify:\/\/shop_images\/vape-lemon1.jpg",
+            "marquee_image-1": "shopify:\/\/shop_images\/vape-lemon1.jpg",
             "marquee_direction": "scrollLeftToRight"
           }
         },
         "e704ebd2-76fa-40ff-8b6c-c6b8de42ae40": {
           "type": "select",
           "settings": {
-            "marquee_text": "Mint Ice",
-            "marquee_text_color": "#000",
+            "marquee_text": "<p><strong>Mint Ice<\/strong><\/p>",
+            "marquee_text_color": "#000000",
+            "marquee_text_font_size": 79,
+            "marquee_text_font_size_mobile": 59,
             "marquee_cta_text": "Try Mint Ice",
             "marquee_button_color": "#6ec59f",
-            "marquee_image": "shopify:\/\/shop_images\/vape-mint_3ffc3523-fe69-4ae6-8b51-c17a4c01d881.jpg",
+            "marquee_image-1": "shopify:\/\/shop_images\/vape-mint_3ffc3523-fe69-4ae6-8b51-c17a4c01d881.jpg",
             "marquee_direction": "scrollRightToLeft"
           }
         }
@@ -58,11 +64,13 @@
         "9c3f97e2-f5ee-4962-93c5-01a471b8d7cb": {
           "type": "select",
           "settings": {
-            "marquee_text": "coming soon",
-            "marquee_text_color": "#000",
+            "marquee_text": "<p><strong>coming soon<\/strong><\/p>",
+            "marquee_text_color": "#000000",
+            "marquee_text_font_size": 79,
+            "marquee_text_font_size_mobile": 59,
             "marquee_cta_text": "",
             "marquee_button_color": "",
-            "marquee_image": "shopify:\/\/shop_images\/Group_636.jpg",
+            "marquee_image-1": "shopify:\/\/shop_images\/Group_636.jpg",
             "marquee_direction": "scrollRightToLeft"
           }
         }
@@ -72,11 +80,53 @@
       ],
       "settings": {
       }
+    },
+    "80e688ad-c6b3-4ac1-bb96-adc2ec27f7d8": {
+      "type": "marquee-with-cta-text-image",
+      "blocks": {
+        "93442782-a05c-4712-b928-485eba4e76ed": {
+          "type": "select",
+          "settings": {
+            "marquee_text": "<p>Join <strong>The Movement<\/strong><\/p>",
+            "marquee_text_color": "#000000",
+            "marquee_text_font_size": 48,
+            "marquee_text_font_size_mobile": 59,
+            "marquee_cta_text": "",
+            "marquee_button_color": "",
+            "marquee_image-1": "shopify:\/\/shop_images\/vape-lemon1.jpg",
+            "marquee_image-2": "shopify:\/\/shop_images\/vape-mint.jpg",
+            "marquee_image-3": "shopify:\/\/shop_images\/vape-grape.jpg",
+            "marquee_direction": "scrollRightToLeft"
+          }
+        },
+        "64e6525d-282b-4836-8f33-dcf966cb303b": {
+          "type": "select",
+          "settings": {
+            "marquee_text": "<p><strong>@chillzer0<\/strong><\/p>",
+            "marquee_text_color": "#000000",
+            "marquee_text_font_size": 48,
+            "marquee_text_font_size_mobile": 59,
+            "marquee_cta_text": "",
+            "marquee_button_color": "",
+            "marquee_image-1": "shopify:\/\/shop_images\/vape-grape.jpg",
+            "marquee_image-2": "shopify:\/\/shop_images\/vape-lemon1.jpg",
+            "marquee_image-3": "shopify:\/\/shop_images\/vape-mint.jpg",
+            "marquee_direction": "scrollLeftToRight"
+          }
+        }
+      },
+      "block_order": [
+        "93442782-a05c-4712-b928-485eba4e76ed",
+        "64e6525d-282b-4836-8f33-dcf966cb303b"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "4f15e0b6-f42e-46ef-a0d7-bbe012e936af",
-    "f6b2e9db-2e99-4a4a-9438-b83f5be67d94"
+    "f6b2e9db-2e99-4a4a-9438-b83f5be67d94",
+    "80e688ad-c6b3-4ac1-bb96-adc2ec27f7d8"
   ]
 }
