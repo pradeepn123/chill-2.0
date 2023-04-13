@@ -10537,7 +10537,7 @@ body.cart-drawer-open {
   object-fit: cover;
 }
 .vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .vape-page-headeing {
-  padding-bottom: 10px;
+  padding-bottom: 2%;
 }
 .vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .vape-page-headeing h3 {
   font-weight: 600;
@@ -10545,12 +10545,10 @@ body.cart-drawer-open {
 .vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .vape-page-headeing h3 p {
   margin-bottom: 0;
 }
-.vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .content-vapepage-block {
-  padding-bottom: 30px;
-}
 .vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .content-vapepage-block p {
   font-weight: 400;
   margin-bottom: 0;
+  margin-bottom: 10%;
 }
 .vape-img-block-contanier .vape-image_text_block_main .vape_image_text_block .vape_page_text_section .vape-page-btn-block {
   max-width: fit-content;
@@ -10567,4 +10565,8 @@ body.cart-drawer-open {
 .vape-page-no-content {
   text-align: center;
   padding: 5%;
+}
+.vape-page-no-content .vape-image_text_block_main .vape_image_text_block > * {
+  margin-left: 0;
+  margin-right: 0;
 }

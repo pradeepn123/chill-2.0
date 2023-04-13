@@ -38,13 +38,12 @@
         "overlay_style": "shadow"
       }
     },
-    "73cbf83c-c88c-4253-8cbe-42932ecbf1dd": {
-      "type": "Image-with-text-blocks",
+    "7e2ad782-38c1-430d-8cbe-79145d407f21": {
+      "type": "Media-description",
       "blocks": {
-        "0b8baad8-05a8-40b3-8561-52994e36ae79": {
+        "c6bb2999-9ba0-4e2a-af16-76255acd05c6": {
           "type": "blocks",
           "settings": {
-            "use_alt_bg": true,
             "flex_direction": "row-reverse",
             "image": "shopify:\/\/shop_images\/Group_8143.png",
             "main_heading": "<p>Our <strong>Mission<\/strong><\/p>",
@@ -52,24 +51,22 @@
             "font_weight_heading": "400",
             "content": "Our mission is to offer a safer alternative to smoking by providing high-quality vaping products. We aim to promote a healthier lifestyle by encouraging smokers to switch to vaping.",
             "font_size_content": 20,
-            "btn_text": "",
+            "btn_text": "JOIN WAITLIST",
             "btn_url": "",
             "font_size_btn": 24,
             "btn-bg": "#000000",
-            "btn-color": "#ffffff"
+            "btn-color": "#fff"
           }
         }
       },
       "block_order": [
-        "0b8baad8-05a8-40b3-8561-52994e36ae79"
+        "c6bb2999-9ba0-4e2a-af16-76255acd05c6"
       ],
       "settings": {
-        "sec_padding": 1,
-        "sec_padding_btm": 1
       }
     },
-    "5ba339a9-2f99-490c-b56e-b34a909953df": {
-      "type": "Image-with-text-blocks",
+    "548d1a45-bbc9-4f74-9706-b48b6b31b049": {
+      "type": "Media-description",
       "blocks": {
         "0ec6895e-c19d-4e97-97d3-866aec1805f7": {
           "type": "select",
@@ -82,7 +79,13 @@
             "marquee_button_color": "#f3b09f",
             "marquee_image-1": "shopify:\/\/shop_images\/vape-grape.jpg",
             "marquee_direction": "scrollRightToLeft",
-            "use_alt_bg": true,
+            "use_alt_bg": true
+          }
+        }
+      },
+        "985ba684-d59e-466b-8887-84975c0645fc": {
+          "type": "blocks",
+          "settings": {
             "flex_direction": "row",
             "image": "shopify:\/\/shop_images\/Group_8210.png",
             "main_heading": "<p>Passion Fruit Grapefruit<\/p>",
@@ -91,10 +94,10 @@
             "content": "Grapefruit flavor vape offers a distinctive taste that is both sweet and slightly bitter, with hints of tanginess.",
             "font_size_content": 20,
             "btn_text": "JOIN WAITLIST",
-            "btn_url": "https:\/\/www.figma.com\/file\/eesPkOGRXmpNRueav0z4Dv\/Chill-Client-Review-%2F-Development?node-id=888-2405&t=OgXCxKCS2qQRoi5r-0",
+            "btn_url": "https:\/\/www.figma.com\/file\/eesPkOGRXmpNRueav0z4Dv\/Chill-Client-Review-%2F-Development?node-id=888-2405&t=scggg9rrmmGWYtFV-0",
             "font_size_btn": 24,
             "btn-bg": "#ffac9a",
-            "btn-color": "#ffffff"
+            "btn-color": "#fff"
           }
         },
         "8a9ffd65-3b7c-4fa2-b031-3b4698812d53": {
@@ -109,6 +112,9 @@
             "marquee_image-1": "shopify:\/\/shop_images\/vape-lemon1.jpg",
             "marquee_direction": "scrollLeftToRight",
             "use_alt_bg": true,
+        "4bc9c255-f8b8-414a-a185-3bab0c1e42d9": {
+          "type": "blocks",
+          "settings": {
             "flex_direction": "row-reverse",
             "image": "shopify:\/\/shop_images\/Group_8209.png",
             "main_heading": "<p>Lemon<\/p>",
@@ -117,10 +123,10 @@
             "content": "Lemon flavor vape provides a zesty and refreshing taste that is perfect for vapers who enjoy tangy citrus flavors.",
             "font_size_content": 20,
             "btn_text": "JOIN WAITLIST",
-            "btn_url": "https:\/\/www.figma.com\/file\/eesPkOGRXmpNRueav0z4Dv\/Chill-Client-Review-%2F-Development?node-id=888-2405&t=OgXCxKCS2qQRoi5r-0",
+            "btn_url": "https:\/\/www.google.com\/",
             "font_size_btn": 24,
             "btn-bg": "#f2cc0d",
-            "btn-color": "#ffffff"
+            "btn-color": "#fff"
           }
         },
         "e704ebd2-76fa-40ff-8b6c-c6b8de42ae40": {
@@ -135,6 +141,9 @@
             "marquee_image-1": "shopify:\/\/shop_images\/vape-mint_3ffc3523-fe69-4ae6-8b51-c17a4c01d881.jpg",
             "marquee_direction": "scrollRightToLeft",
             "use_alt_bg": true,
+        "2ade0965-25b2-40f5-8a82-13830f744b64": {
+          "type": "blocks",
+          "settings": {
             "flex_direction": "row",
             "image": "shopify:\/\/shop_images\/Group_8148.png",
             "main_heading": "<p>Mint Ice<\/p>",
@@ -143,17 +152,20 @@
             "content": "Mint flavor vape delivers a cool and refreshing sensation that is perfect for vapers who enjoy a fresh and invigorating vaping experience",
             "font_size_content": 20,
             "btn_text": "JOIN WAITLIST",
-            "btn_url": "https:\/\/shopify.dev\/docs\/api\/liquid\/objects\/image",
+            "btn_url": "https:\/\/www.google.com\/",
             "font_size_btn": 24,
             "btn-bg": "#6ec59f",
-            "btn-color": "#ffffff"
+            "btn-color": "#fff"
           }
         }
       },
       "block_order": [
         "0ec6895e-c19d-4e97-97d3-866aec1805f7",
         "8a9ffd65-3b7c-4fa2-b031-3b4698812d53",
-        "e704ebd2-76fa-40ff-8b6c-c6b8de42ae40"
+        "e704ebd2-76fa-40ff-8b6c-c6b8de42ae40",
+        "985ba684-d59e-466b-8887-84975c0645fc",
+        "4bc9c255-f8b8-414a-a185-3bab0c1e42d9",
+        "2ade0965-25b2-40f5-8a82-13830f744b64"
       ],
       "settings": {
       }
@@ -322,9 +334,9 @@
     "f6b2e9db-2e99-4a4a-9438-b83f5be67d94",
     "80e688ad-c6b3-4ac1-bb96-adc2ec27f7d8",
     "6eff7f6a-26cb-429f-a83e-c752b87d8e4a",
-    "73cbf83c-c88c-4253-8cbe-42932ecbf1dd",
-    "5ba339a9-2f99-490c-b56e-b34a909953df"
+    "7e2ad782-38c1-430d-8cbe-79145d407f21",
+    "548d1a45-bbc9-4f74-9706-b48b6b31b049"
   ]
 }
-  }
-}
+        }
+      }

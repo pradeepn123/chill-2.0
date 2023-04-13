@@ -10,20 +10,23 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-                > * {
-                    margin-left: 5.55%;
-                    margin-right: 5.55%;
-                }
 
-                > :first-child {
-                    margin-left: 0;
-                }
+            >* {
+                margin-left: 5.55%;
+                margin-right: 5.55%;
+            }
+
+            > :first-child {
+                margin-left: 0;
+            }
+
             .vape-page-image-block {
                 .vape-text-block-img {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     flex-basis: initial;
+
                     img {
                         width: 100%;
                         height: auto;
@@ -34,33 +37,36 @@
             }
 
             .vape_page_text_section {
-                .vape-page-headeing{
-                    padding-bottom: 10px;
-                    h3{
+                .vape-page-headeing {
+                    padding-bottom: 2%;
+
+                    h3 {
                         font-weight: 600;
                         p{
-                            margin-bottom: 0 ;
+                            margin-bottom: 0;
                         }
                     }
                 }
                 .content-vapepage-block {
-                    padding-bottom: 30px;
+                   
                     p{
                         font-weight: 400;
                         margin-bottom: 0;
+                        margin-bottom: 10%;
                     }
                 }
 
                 .vape-page-btn-block {
                     max-width: fit-content;
-               
+
                     a {
                         padding: 15px 60px;
                         border-radius: 40px;
                         font-weight: 600;
                     }
                 }
-                .no-margin{
+
+                .no-margin {
                     margin: 0 auto;
                 }
             }
@@ -70,4 +76,12 @@
 .vape-page-no-content {
     text-align: center;
     padding: 5%;
+    .vape-image_text_block_main {
+        .vape_image_text_block {
+            >* {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
 }

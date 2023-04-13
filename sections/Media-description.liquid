@@ -1,0 +1,169 @@
+<div class="container">
+  <div class="vape-adjust-section">
+    {% for block in section.blocks %}
+      <div class="vape-img-block-contanier {% if block.settings.image == null or block.settings.content == null %} vape-page-no-content {% endif %}">
+        <div class="vape-image_text_block_main">
+          <div class="vape_image_text_block" style="flex-direction: {{ block.settings.flex_direction }};">
+            {% if block.settings.image %}
+              <div class="vape-page-image-block">
+                <div class="vape-text-block-img">
+                  <img src="{{ block.settings.image | img_url: 'master' }}" alt="">
+                </div>
+              </div>
+            {% endif %}
+            <div class="vape_page_text_section">
+              <div class="vape-page-headeing">
+                <h3 style="font-size:{{ block.settings.font_size_heading }}px; font-weight:{{ block.settings.font_weight_heading }};">
+                  {{ block.settings.main_heading }}
+                </h3>
+              </div>
+              {% if block.settings.content %}
+                <div class="content-vapepage-block">
+                  <p style="font-size:{{ block.settings.font_size_content }}px;">{{ block.settings.content }}</p>
+                </div>
+              {% endif %}
+              {% if block.settings.btn_url != null
+                and block.settings.btn_url != '#'
+                and block.settings.btn_text != ''
+              %}
+                <div class="vape-page-btn-block{% if block.settings.image == null or block.settings.content == null %} no-margin{% endif %}">
+                  <a
+                    style="font-size:{{ block.settings.font_size_btn }}px; background: {{ block.settings.btn-bg }}; color: {{ block.settings.btn-color }};"
+                    href="{{ block.settings.btn_url }}"
+                  >
+                    {{- block.settings.btn_text -}}
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Media-description Block",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Image With Text",
+      "type": "blocks",
+      "settings": [
+        {
+          "type": "select",
+          "id": "flex_direction",
+          "label": "Adjust Image And Text",
+          "options": [
+            {
+              "value": "row",
+              "label": "Image First"
+            },
+            {
+              "value": "row-reverse",
+              "label": "Text First"
+            }
+          ],
+          "default": "row"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "main_heading",
+          "label": "Heading"
+        },
+        {
+          "type": "range",
+          "id": "font_size_heading",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size Heading",
+          "default": 52
+        },
+        {
+          "type": "select",
+          "id": "font_weight_heading",
+          "label": "Font weight Heading",
+          "options": [
+            {
+              "value": "600",
+              "label": "Semi-Bold"
+            },
+            {
+              "value": "400",
+              "label": "Normal"
+            },
+            {
+              "value": "700",
+              "label": "Bold"
+            }
+          ],
+          "default": "600"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "Content para",
+          "default": "Grapefruit flavor vape offers a distinctive taste that is both sweet and slightly bitter, with hints of tanginess."
+        },
+        {
+          "type": "range",
+          "id": "font_size_content",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Font size Para",
+          "default": 20
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Button",
+          "default": "JOIN WAITLIST"
+        },
+        {
+          "type": "url",
+          "id": "btn_url",
+          "label": "Button Link"
+        },
+        {
+          "type": "range",
+          "id": "font_size_btn",
+          "min": 12,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "Font size Button",
+          "default": 24
+        },
+        {
+          "type": "color",
+          "id": "btn-bg",
+          "label": "Button Background",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "btn-color",
+          "label": "BUtton Color",
+          "default": "#fff"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Media-description Block"
+    }
+  ]
+}
+{% endschema %}
