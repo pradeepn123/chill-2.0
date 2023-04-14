@@ -11,7 +11,7 @@
       "type": "background-video",
       "settings": {
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/800120dc78d64e4cb6c88c3ef4d8c244.mp4",
-        "sec_bg_color": "#fff",
+        "use_alt_bg": true,
         "subheading": "",
         "title": "<span>CHILL<\/span>ZERO",
         "font_weight_head": "normal",
@@ -19,12 +19,11 @@
         "title_size_mobile": 44,
         "use_h1": false,
         "text": "<p>Find peace with functional products made from all natural ingredients<\/p>",
-        "sub_font_size": 18,
-        "max_width_text": 65,
+        "sub_font_size": 20,
         "enlarge_text": true,
         "button_label_1": "JOIN THE WAITLIST",
-        "btn_font_mobile": 20,
-        "btn_font_mobile_m": 18,
+        "btn_font": 16,
+        "btn_font_mobile": 16,
         "button_url_1": "",
         "button_label_2": "",
         "button_url_2": "",
@@ -48,7 +47,7 @@
             "marquee_text_font_size": 79,
             "marquee_text_font_size_mobile": 59,
             "marquee_cta_text": "Try Passion Grapefruit",
-            "button_redirection_link": "",
+            "button_redirection_link": "#block-PassionFruitGrapefruit",
             "marquee_button_color": "#f3b09f",
             "marquee_image-1": "shopify:\/\/shop_images\/vape-grape.jpg",
             "marquee_direction": "scrollRightToLeft"
@@ -62,7 +61,7 @@
             "marquee_text_font_size": 79,
             "marquee_text_font_size_mobile": 59,
             "marquee_cta_text": "Try Lemon",
-            "button_redirection_link": "",
+            "button_redirection_link": "#block-Lemon",
             "marquee_button_color": "#f2cc0d",
             "marquee_image-1": "shopify:\/\/shop_images\/vape-lemon1.jpg",
             "marquee_direction": "scrollLeftToRight"
@@ -76,7 +75,7 @@
             "marquee_text_font_size": 79,
             "marquee_text_font_size_mobile": 59,
             "marquee_cta_text": "Try Mint Ice",
-            "button_redirection_link": "",
+            "button_redirection_link": "#block-MintIce",
             "marquee_button_color": "#6ec59f",
             "marquee_image-1": "shopify:\/\/shop_images\/vape-mint_3ffc3523-fe69-4ae6-8b51-c17a4c01d881.jpg",
             "marquee_direction": "scrollRightToLeft"
@@ -89,6 +88,7 @@
         "e704ebd2-76fa-40ff-8b6c-c6b8de42ae40"
       ],
       "settings": {
+        "animate_marquee_on_scroll": true
       }
     },
     "062d34d0-1fa0-4e79-9521-8f657526de0d": {
@@ -108,7 +108,7 @@
             "btn_url": "https:\/\/www.google.com\/",
             "font_size_btn": 24,
             "btn-bg": "#000000",
-            "btn-color": "#fff"
+            "btn-color": "#ffffff"
           }
         }
       },
@@ -140,6 +140,7 @@
         "9c3f97e2-f5ee-4962-93c5-01a471b8d7cb"
       ],
       "settings": {
+        "animate_marquee_on_scroll": true
       }
     },
     "e23f5f35-39a2-4153-b650-9d11ba10cfad": {
@@ -159,7 +160,7 @@
             "btn_url": "https:\/\/www.google.com\/",
             "font_size_btn": 24,
             "btn-bg": "#ffac9a",
-            "btn-color": "#fff"
+            "btn-color": "#ffffff"
           }
         },
         "e1e1d10c-6b2d-4b7a-9b42-404be67bd81a": {
@@ -176,7 +177,7 @@
             "btn_url": "https:\/\/www.google.com\/",
             "font_size_btn": 24,
             "btn-bg": "#f2cc0d",
-            "btn-color": "#fff"
+            "btn-color": "#ffffff"
           }
         },
         "7b32c863-e00c-4867-b036-e8051e6e6a6b": {
@@ -193,7 +194,7 @@
             "btn_url": "https:\/\/www.google.com\/",
             "font_size_btn": 24,
             "btn-bg": "#6ec59f",
-            "btn-color": "#fff"
+            "btn-color": "#ffffff"
           }
         }
       },
@@ -246,6 +247,76 @@
         "64e6525d-282b-4836-8f33-dcf966cb303b"
       ],
       "settings": {
+        "animate_marquee_on_scroll": false
+      }
+    },
+    "0c4876f4-598e-4506-8060-369bed4be4ad": {
+      "type": "image-carousel",
+      "blocks": {
+        "8197442d-f305-42c7-b416-4e5668c356c4": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Chill.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "5d21d081-92e8-46eb-930a-05fe3b3937f4": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Gamechanger_Profile_Image.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "57e950de-f3b5-4b7c-8848-7b248c6b9e53": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Shop_-_Happy_Tuesdays_5.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "c204fe17-1286-4cf7-a95b-11125d8b4b88": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Brand_banner_desktop.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "6f1c818b-44bb-451f-bdf0-0475a88eb5d9": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Group_8209.png",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "46f9f262-8173-4088-a5de-44af0cb91a4c": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Happy_Tuesdays_-_Homepage_Banner_58df85b5-c53a-4ce3-a9c7-49ca2ed19c19.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        }
+      },
+      "block_order": [
+        "8197442d-f305-42c7-b416-4e5668c356c4",
+        "5d21d081-92e8-46eb-930a-05fe3b3937f4",
+        "57e950de-f3b5-4b7c-8848-7b248c6b9e53",
+        "c204fe17-1286-4cf7-a95b-11125d8b4b88",
+        "6f1c818b-44bb-451f-bdf0-0475a88eb5d9",
+        "46f9f262-8173-4088-a5de-44af0cb91a4c"
+      ],
+      "settings": {
+        "section_redirection_link": "",
+        "carousel_image_width": 400,
+        "carousel_image_height": 400,
+        "carousel_image_border_radius": 30,
+        "carousel_image_width_mobile": 250,
+        "carousel_image_height_mobile": 250
       }
     }
   },
@@ -256,6 +327,7 @@
     "062d34d0-1fa0-4e79-9521-8f657526de0d",
     "f6b2e9db-2e99-4a4a-9438-b83f5be67d94",
     "e23f5f35-39a2-4153-b650-9d11ba10cfad",
-    "80e688ad-c6b3-4ac1-bb96-adc2ec27f7d8"
+    "80e688ad-c6b3-4ac1-bb96-adc2ec27f7d8",
+    "0c4876f4-598e-4506-8060-369bed4be4ad"
   ]
 }

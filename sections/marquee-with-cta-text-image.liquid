@@ -3,7 +3,7 @@
         <div class="marquee-tag">
             <div class="marquee_wrap">
                 {% for block in section.blocks %}
-                    <div class="marquee_container {{ block.settings.marquee_direction }}">
+                    <div class="marquee_container {{ block.settings.marquee_direction }} {% if section.settings.animate_marquee_on_scroll %}animate-with-scroll{% endif %}">
                         {% for i in (1..10) %}
                             <div class="marquee_content">
                                 {% if block.settings.marquee_text != blank %}
@@ -46,7 +46,12 @@
     {
        "name": "Marquee-cta-text-image",
        "settings": [
-            
+            {
+                "type": "checkbox",
+                "id": "animate_marquee_on_scroll",
+                "label": "Animate marquee on scroll",
+                "default": true
+            }
        ],
        "blocks": [
             {

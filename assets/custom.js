@@ -89,6 +89,39 @@ $(document).ready(function () {
     descriptionShort.style.display = 'block';
   });  
   
+  $('#imageCarouselContainer .image_carousel_div').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 8000,
+    pauseOnHover: false,
+    cssEase: 'linear',
+    responsive: [
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+            }
+        }
+    ]
+    
+});
   if(window.screen.width < 1200){
     $('.stress-effect-block-list .fixed-layout').slick({
         draggable:true,    
@@ -868,24 +901,18 @@ class AutoSlider {
 //     .off("click", theme.closeDrawerCart.bind(theme))
 // };
 // document.querySelector('.utility-bar .link-dropdown__button').removeAttribute('disabled');
-var marqueeAnimations = document.querySelectorAll('.marquee_container')
-if(location.pathname == '/pages/vape'){
-    window.addEventListener('wheel', evt => {
+var marqueeAnimations = document.querySelectorAll('.marquee_container.animate-with-scroll');
+window.addEventListener('wheel', evt => {
+    evt.preventDefault();
+    marqueeAnimations.forEach(marqueeAnimation => {
         evt.preventDefault();
-        marqueeAnimations.forEach(marqueeAnimation => {
-            evt.preventDefault();
-            if(evt.deltaY > 0){
-                marqueeAnimation.classList.remove('scroll_up');
-                marqueeAnimation.classList.add('scroll_down');
-            }
-            else if(evt.deltaY <= 0){
-                marqueeAnimation.classList.remove('scroll_down');
-                marqueeAnimation.classList.add('scroll_up');
-            }
-            else{
-                marqueeAnimation.classList.remove('scroll_down');
-                marqueeAnimation.classList.remove('scroll_up');
-            }
-        })
+        if(evt.deltaY > 0){
+            marqueeAnimation.classList.remove('scroll_up');
+            marqueeAnimation.classList.add('scroll_down');
+        }
+        else if(evt.deltaY <= 0){
+            marqueeAnimation.classList.remove('scroll_down');
+            marqueeAnimation.classList.add('scroll_up');
+        }
     })
-}
+})
