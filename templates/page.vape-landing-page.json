@@ -91,8 +91,38 @@
         "animate_marquee_on_scroll": true
       }
     },
+    "ad0f13dd-44d9-4333-ab05-f558d63963c9": {
+      "type": "flavour-block",
+      "blocks": {
+        "c187c088-d111-4b2a-accf-804249fc7591": {
+          "type": "select",
+          "settings": {
+            "flavour_image": "shopify:\/\/shop_images\/Group_8143.png",
+            "image_position": "row-reverse",
+            "flavour_title": "<p>Our <strong>Mission<\/strong><\/p>",
+            "flavour_title_font_size": 52,
+            "flavour_title_font_size_mobile": 32,
+            "flavour_description": "Our mission is to offer a safer alternative to smoking by providing high-quality vaping products. We aim to promote a healthier lifestyle by encouraging smokers to switch to vaping.",
+            "flavour_description_font_size": 20,
+            "flavour_description_font_size_mobile": 16,
+            "button_text": "Join waitlist",
+            "button_url": "",
+            "flavour_button_font_size": 24,
+            "flavour_button_font_size_mobile": 20,
+            "button_text_color": "",
+            "button_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "c187c088-d111-4b2a-accf-804249fc7591"
+      ],
+      "settings": {
+      }
+    },
     "062d34d0-1fa0-4e79-9521-8f657526de0d": {
       "type": "description-block",
+      "disabled": true,
       "blocks": {
         "41dd4860-79db-4c0f-9b0e-f27e62dcf5c7": {
           "type": "blocks",
@@ -150,6 +180,7 @@
           "type": "select",
           "settings": {
             "flavour_image": "shopify:\/\/shop_images\/Group_8210.png",
+            "image_position": "row",
             "flavour_title": "<p>Passion Fruit <\/p><p>Grapefruit<\/p>",
             "flavour_title_font_size": 52,
             "flavour_title_font_size_mobile": 32,
@@ -168,6 +199,7 @@
           "type": "select",
           "settings": {
             "flavour_image": "shopify:\/\/shop_images\/Group_8209.png",
+            "image_position": "row-reverse",
             "flavour_title": "<p>Lemon<\/p>",
             "flavour_title_font_size": 52,
             "flavour_title_font_size_mobile": 32,
@@ -186,6 +218,7 @@
           "type": "select",
           "settings": {
             "flavour_image": "shopify:\/\/shop_images\/Group_8148.png",
+            "image_position": "row",
             "flavour_title": "<p>Mint Ice<\/p>",
             "flavour_title_font_size": 52,
             "flavour_title_font_size_mobile": 32,
@@ -391,6 +424,7 @@
     "main",
     "b3240cad-90db-4994-8903-9c592ccf8e9a",
     "4f15e0b6-f42e-46ef-a0d7-bbe012e936af",
+    "ad0f13dd-44d9-4333-ab05-f558d63963c9",
     "062d34d0-1fa0-4e79-9521-8f657526de0d",
     "f6b2e9db-2e99-4a4a-9438-b83f5be67d94",
     "71ed98bd-cdda-472a-a286-f3aa7b6d8e8b",
