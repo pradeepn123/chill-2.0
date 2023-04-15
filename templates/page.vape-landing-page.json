@@ -143,8 +143,75 @@
         "animate_marquee_on_scroll": true
       }
     },
+    "71ed98bd-cdda-472a-a286-f3aa7b6d8e8b": {
+      "type": "flavour-block",
+      "blocks": {
+        "d7d4300c-fe08-40e9-a4f9-e95b2d2c4d40": {
+          "type": "select",
+          "settings": {
+            "flavour_image": "shopify:\/\/shop_images\/Group_8210.png",
+            "flavour_title": "<p>Passion Fruit <\/p><p>Grapefruit<\/p>",
+            "flavour_title_font_size": 52,
+            "flavour_title_font_size_mobile": 32,
+            "flavour_description": "Grapefruit flavour vape offers a distinctive taste that is both sweet and slightly bitter, with hints of tanginess.",
+            "flavour_description_font_size": 20,
+            "flavour_description_font_size_mobile": 16,
+            "button_text": "Join Wishlist",
+            "button_url": "",
+            "flavour_button_font_size": 24,
+            "flavour_button_font_size_mobile": 20,
+            "button_text_color": "#ffffff",
+            "button_color": "#ffac9a"
+          }
+        },
+        "b28e2b52-49dc-43b0-a67a-c883d9d89f8d": {
+          "type": "select",
+          "settings": {
+            "flavour_image": "shopify:\/\/shop_images\/Group_8209.png",
+            "flavour_title": "<p>Lemon<\/p>",
+            "flavour_title_font_size": 52,
+            "flavour_title_font_size_mobile": 32,
+            "flavour_description": "Lemon flavor vape provides a zesty and refreshing taste that is perfect for vapers who enjoy tangy citrus flavors.",
+            "flavour_description_font_size": 20,
+            "flavour_description_font_size_mobile": 16,
+            "button_text": "Join waitlist",
+            "button_url": "",
+            "flavour_button_font_size": 24,
+            "flavour_button_font_size_mobile": 20,
+            "button_text_color": "#ffffff",
+            "button_color": "#f2cc0d"
+          }
+        },
+        "dd07e483-ae4b-45b3-8057-09d6ce9dc5f2": {
+          "type": "select",
+          "settings": {
+            "flavour_image": "shopify:\/\/shop_images\/Group_8148.png",
+            "flavour_title": "<p>Mint Ice<\/p>",
+            "flavour_title_font_size": 52,
+            "flavour_title_font_size_mobile": 32,
+            "flavour_description": "Mint flavor vape delivers a cool and refreshing sensation that is perfect for vapers who enjoy a fresh and invigorating vaping experience",
+            "flavour_description_font_size": 20,
+            "flavour_description_font_size_mobile": 16,
+            "button_text": "Join waitlist",
+            "button_url": "",
+            "flavour_button_font_size": 24,
+            "flavour_button_font_size_mobile": 20,
+            "button_text_color": "#ffffff",
+            "button_color": "#6ec59f"
+          }
+        }
+      },
+      "block_order": [
+        "d7d4300c-fe08-40e9-a4f9-e95b2d2c4d40",
+        "b28e2b52-49dc-43b0-a67a-c883d9d89f8d",
+        "dd07e483-ae4b-45b3-8057-09d6ce9dc5f2"
+      ],
+      "settings": {
+      }
+    },
     "e23f5f35-39a2-4153-b650-9d11ba10cfad": {
       "type": "description-block",
+      "disabled": true,
       "blocks": {
         "454111df-20f1-4edf-a173-01d444287d4e": {
           "type": "blocks",
@@ -326,6 +393,7 @@
     "4f15e0b6-f42e-46ef-a0d7-bbe012e936af",
     "062d34d0-1fa0-4e79-9521-8f657526de0d",
     "f6b2e9db-2e99-4a4a-9438-b83f5be67d94",
+    "71ed98bd-cdda-472a-a286-f3aa7b6d8e8b",
     "e23f5f35-39a2-4153-b650-9d11ba10cfad",
     "80e688ad-c6b3-4ac1-bb96-adc2ec27f7d8",
     "0c4876f4-598e-4506-8060-369bed4be4ad"

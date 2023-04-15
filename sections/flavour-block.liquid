@@ -1,0 +1,165 @@
+<div class="flavour-block-section container">
+    <div class="flavour_block_wrapper">
+        <div class="flavour_block_container">
+            {% for block in section.blocks %}
+                {% style %}
+                    .flavour_text_title{
+                        font-size: {{ block.settings.flavour_title_font_size }}px;
+                    }
+                    .flavour_text_description{
+                        font-size: {{ block.settings.flavour_description_font_size }}px;
+                    }
+                    .flavour_button{
+                        font-size: {{ block.settings.flavour_button_font_size}}px;
+                    }
+                    @media (max-width: 767px){
+                        .flavour_text_title{
+                            font-size: {{ block.settings.flavour_title_font_size_mobile }}px;
+                        }
+                        .flavour_text_description{
+                            font-size: {{ block.settings.flavour_description_font_size_mobile }}px;
+                        }
+                        .flavour_button{
+                            font-size: {{ block.settings.flavour_button_font_size_mobile }}px;
+                        }
+                    }
+                {% endstyle %}
+                <div class="flavour_block" id="block-{{- block.settings.flavour_title | strip_html | replace: ' ', '' -}}" style="flex-direction: {{ block.settings.image_position }};">
+                    <img class="flavour_image" src="{{ block.settings.flavour_image | img_url: 'master' }}" alt="flavour_image" width="100" height="100">
+                    <div class="flavour_text_block">
+                        <span class="flavour_text_title">{{ block.settings.flavour_title }}</span>
+                        <p class="flavour_text_description">{{ block.settings.flavour_description }}</p>
+                        <button class="flavour_button" style="background: {{ block.settings.button_color }};">{{ block.settings.button_text | upcase }}</button>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% schema %}
+    {
+        "name": "Flavour blocks",
+        "settings": [
+
+        ],
+        "blocks": [
+            {
+                "name": "Flavour",
+                "type": "select",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "flavour_image",
+                        "label": "Flavour image"
+                    },
+                    {
+                        "type": "select",
+                        "id": "image_position",
+                        "label": "Image position",
+                        "default": "row",
+                        "options": [
+                            {
+                                "value": "row-reverse",
+                                "label": "Image position - right"
+                            },
+                            {
+                                "value": "row",
+                                "label": "Image position - left"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "flavour_title",
+                        "label": "Flavour title"
+                    },
+                    {
+                        "type": "range",
+                        "id": "flavour_title_font_size",
+                        "label": "Flavour title font size",
+                        "default": 52,
+                        "min": 10,
+                        "max": 100,
+                        "step": 1
+                    },
+                    {
+                        "type": "range",
+                        "id": "flavour_title_font_size_mobile",
+                        "label": "Flavour title font size for mobile",
+                        "default": 32,
+                        "min": 10,
+                        "max": 100,
+                        "step": 1
+                    },
+                    {
+                        "type": "text",
+                        "id": "flavour_description",
+                        "label": "Flavour description"
+                    },
+                    {
+                        "type": "range",
+                        "id": "flavour_description_font_size",
+                        "label": "Flavour description font size",
+                        "default": 20,
+                        "min": 10,
+                        "max": 70,
+                        "step": 1
+                    },
+                    {
+                        "type": "range",
+                        "id": "flavour_description_font_size_mobile",
+                        "label": "Flavour description font size for mobile",
+                        "default": 16,
+                        "min": 10,
+                        "max": 50,
+                        "step": 1
+                    },
+                    {
+                        "type": "text",
+                        "id": "button_text",
+                        "label": "Button text",
+                        "default": "Join waitlist"
+                    },
+                    {
+                        "type": "url",
+                        "id": "button_url",
+                        "label": "Button link"
+                    },
+                    {
+                        "type": "range",
+                        "id": "flavour_button_font_size",
+                        "label": "Flavour button font size",
+                        "default": 24,
+                        "min": 10,
+                        "max": 70,
+                        "step": 1
+                    },
+                    {
+                        "type": "range",
+                        "id": "flavour_button_font_size_mobile",
+                        "label": "Flavour button font size for mobile",
+                        "default": 20,
+                        "min": 10,
+                        "max": 50,
+                        "step": 1
+                    },
+                    {
+                        "type": "color",
+                        "id": "button_text_color",
+                        "label": "Button text color"
+                    },
+                    {
+                        "type": "color",
+                        "id": "button_color",
+                        "label": "Button color"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Flavour blocks"
+            }
+        ]
+    }
+{% endschema %}
