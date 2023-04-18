@@ -1,5 +1,10 @@
 <div id="section-id-{{ section.id }}" class="{% unless section.settings.full_width %}container fully-spaced-row{% endunless %}" data-section-type="background-video" data-cc-animate>
   {% style %}
+    {% if request.path == '/pages/vape' %}
+      #section-id-{{ section.id }} .video-container{
+        margin-top: 100px;
+      }
+    {% endif %}
     #section-id-{{ section.id }} .video-container {
       height: {{ section.settings.height_mobile }}px;
     }
@@ -91,7 +96,7 @@
                 {% endif %}
               {%- endif -%}
               {%- if section.settings.text != blank -%}
-                <div class="overlay-text__rte rte {% if section.settings.enlarge_text %}large-text{% endif %}">{{ section.settings.text }}</div>
+                <div class="overlay-text__rte rte {% if request.path == '/pages/vape' %}overlay_text_for_vape_page{% endif %} {% if section.settings.enlarge_text %}large-text{% endif %}">{{ section.settings.text }}</div>
               {%- endif -%}
               {%- if section.settings.button_label_1 != blank or section.settings.button_label_2 != blank -%}
                 <div class="overlay-text__button-row">

@@ -1,41 +1,60 @@
+{% for block in section.blocks %}
+    {% style %}
+        .flavour_text_title{
+            font-size: {{ block.settings.flavour_title_font_size }}px;
+        }
+        .flavour_text_description{
+            font-size: {{ block.settings.flavour_description_font_size }}px;
+        }
+        .flavour_button{
+            font-size: {{ block.settings.flavour_button_font_size}}px;
+        }
+        @media (max-width: 767px){
+            .flavour_text_title{
+                font-size: {{ block.settings.flavour_title_font_size_mobile }}px;
+            }
+            .flavour_text_description{
+                font-size: {{ block.settings.flavour_description_font_size_mobile }}px;
+            }
+            .flavour_button{
+                font-size: {{ block.settings.flavour_button_font_size_mobile }}px;
+            }
+        }
+    {% endstyle %}
+{% endfor %}
 <div class="flavour-block-section container">
     <div class="flavour_block_wrapper">
         <div class="flavour_block_container">
             {% for block in section.blocks %}
-                {% style %}
-                    .flavour_text_title{
-                        font-size: {{ block.settings.flavour_title_font_size }}px;
-                    }
-                    .flavour_text_description{
-                        font-size: {{ block.settings.flavour_description_font_size }}px;
-                    }
-                    .flavour_button{
-                        font-size: {{ block.settings.flavour_button_font_size}}px;
-                    }
-                    @media (max-width: 767px){
-                        .flavour_text_title{
-                            font-size: {{ block.settings.flavour_title_font_size_mobile }}px;
-                        }
-                        .flavour_text_description{
-                            font-size: {{ block.settings.flavour_description_font_size_mobile }}px;
-                        }
-                        .flavour_button{
-                            font-size: {{ block.settings.flavour_button_font_size_mobile }}px;
-                        }
-                    }
-                {% endstyle %}
                 <div class="flavour_block" id="block-{{- block.settings.flavour_title | strip_html | replace: ' ', '' -}}" style="flex-direction: {{ block.settings.image_position }};">
-                    <img class="flavour_image" src="{{ block.settings.flavour_image | img_url: 'master' }}" alt="flavour_image" width="100" height="100">
+                    <img class="flavour_image" src="{{ block.settings.flavour_image | img_url: 'master' }}" alt="flavour_image" width='100' height='100'>
                     <div class="flavour_text_block">
-                        <span class="flavour_text_title">{{ block.settings.flavour_title }}</span>
-                        <p class="flavour_text_description">{{ block.settings.flavour_description }}</p>
-                        <button class="flavour_button" style="background: {{ block.settings.button_color }};">{{ block.settings.button_text | upcase }}</button>
+                        {% if block.settings.flavour_title != blank %}
+                            <span class="flavour_text_title">{{ block.settings.flavour_title }}</span>
+                        {% endif %}
+                        {% if block.settings.flavour_description != blank %}
+                            <p class="flavour_text_description">{{ block.settings.flavour_description }}</p>
+                        {% endif %}
+                        {% if block.settings.button_url != blank or block.settings.button_text != blank %}
+                            <a href="{{ block.settings.button_url }}"><button class="flavour_button" style="background: {{ block.settings.button_color }};">{{ block.settings.button_text | upcase }}</button></a>
+                        {% endif %}
                     </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="progressBar spin circle">
+            {% for block in section.blocks %}
+                <div>
+                    {% if block.settings.custom_slick_dot_image != blank %}
+                    <img class="customSlickDots image-{{ forloop.index }}" src="{{ block.settings.custom_slick_dot_image | img_url: 'master' }}" width='100' height='100' data-color="{{ block.settings.button_color }}">
+                    <span data-slick-index='{{ forloop.index0 }}' class="progressBar"></span>
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>
     </div>
 </div>
+
 {% schema %}
     {
         "name": "Flavour blocks",
@@ -117,8 +136,7 @@
                     {
                         "type": "text",
                         "id": "button_text",
-                        "label": "Button text",
-                        "default": "Join waitlist"
+                        "label": "Button text"
                     },
                     {
                         "type": "url",
@@ -152,6 +170,15 @@
                         "type": "color",
                         "id": "button_color",
                         "label": "Button color"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Custom slideshow dots"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "custom_slick_dot_image",
+                        "label": "Custom image for slideshow indicator"
                     }
                 ]
             }

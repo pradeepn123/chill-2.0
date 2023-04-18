@@ -143,8 +143,12 @@
   {% section 'cart-drawer' %}
   {% render 'login-drawer' %}
   {% section 'age-verification' %}
-  {% section 'announcement-bar' %}
-  {% section 'header' %}
+  {% if request.path == '/pages/vape' %}
+    {% section 'vape-header' %}
+  {% else %}
+    {% section 'announcement-bar' %}
+    {% section 'header' %}
+  {% endif %}
   <div class="slider-section {% if request.page_type == 'index' %}slider-section_home_page{% endif %}" >
     {% if request.page_type == 'index' or request.page_type == 'product' %}
       {% render 'slideshow-offers' %}

@@ -10478,13 +10478,13 @@ body.cart-drawer-open {
   animation-duration: 100s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  animation-direction: reverse;
 }
 .marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container.scrollRightToLeft .marquee_content {
   animation-name: scroll;
   animation-duration: 100s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-direction: reverse;
 }
 .marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container.scroll_up {
   transform: translateX(-0.4%) !important;
@@ -10585,7 +10585,7 @@ body.cart-drawer-open {
 }
 
 .image_carousel_section .image_carousel_container {
-  margin: 60px 0;
+  margin: 60px 0 110px 0;
 }
 .image_carousel_section .image_carousel_container .image_carousel_div {
   display: flex !important;
@@ -10601,6 +10601,16 @@ body.cart-drawer-open {
 
 .flavour-block-section .flavour_block_wrapper .flavour_block_container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1199px) {
+  .flavour-block-section .flavour_block_wrapper .flavour_block_container {
+    flex-direction: row;
+    overflow: auto;
+    position: relative;
+    padding-bottom: 0 !important;
+  }
 }
 .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block {
   display: flex;
@@ -10608,28 +10618,167 @@ body.cart-drawer-open {
   border: 1px solid #D9D9D9;
   border-radius: 20px;
   padding: 0 80px;
-  margin: 60px 0;
+  margin: 30px 0;
+}
+@media (max-width: 1199px) {
+  .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block {
+    flex-direction: column !important;
+    padding: 0 20px;
+    margin: 60px 1px;
+  }
 }
 .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_image {
-  flex-basis: 30%;
-  margin: 70px;
+  flex-basis: 35%;
+  margin: 70px 0;
+}
+@media (max-width: 767px) {
+  .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_image {
+    margin: 50px auto 0 auto;
+    width: 90%;
+    max-width: 270px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_image {
+    margin: 50px auto 0 auto;
+    width: 45%;
+    max-width: 350px;
+  }
 }
 .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_text_block {
   display: flex;
   flex-basis: 40%;
   flex-direction: column;
-  justify-content: space-evenly;
-  flex-basis: 50%;
+  justify-content: center;
+  flex-basis: 55%;
   margin: 7% 0;
 }
-.flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_text_block .flavour_text_title p {
-  line-height: 1.2;
-  margin-bottom: 0 !important;
+@media (max-width: 767px) {
+  .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_text_block {
+    margin: 30px 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_text_block {
+    text-align: center;
+  }
+}
+.flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_text_block .flavour_text_title {
   text-transform: capitalize;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_text_block .flavour_text_title p {
+  line-height: 0.8;
+  margin-bottom: 20px !important;
 }
 .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_text_block .flavour_button {
   width: fit-content;
   border-radius: 40px;
   padding: 15px 60px;
   border: 0;
+  margin-top: 20px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_text_block .flavour_button {
+    margin: auto;
+  }
+}
+.flavour-block-section .flavour_block_wrapper .flavour_block_container .slick-dots {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.flavour-block-section .flavour_block_wrapper .flavour_block_container .slick-dots li {
+  width: 100px;
+  height: 100px;
+}
+.flavour-block-section .flavour_block_wrapper .flavour_block_container .slick-dots li .custom-dot {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border-width: 4px;
+  border-style: solid;
+}
+.flavour-block-section .flavour_block_wrapper .flavour_block_container .slick-dots li .custom-dot .customSlickDots {
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.progressBar img {
+  border: 1px solid red;
+  background: black;
+  border-radius: 50%;
+  padding: 5px;
+  transform-origin: left center;
+  animation: cliprotate 16s steps(2) infinite;
+}
+
+@keyframes cliprotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.vape_header_wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  background: #fff;
+}
+.vape_header_wrapper .vape_header_container {
+  display: flex;
+  justify-content: space-between;
+  height: 6.25rem;
+  padding: 0 70px;
+  align-items: center;
+}
+@media (max-width: 330px) {
+  .vape_header_wrapper .vape_header_container {
+    padding: 0 13px !important;
+  }
+}
+@media (max-width: 767px) {
+  .vape_header_wrapper .vape_header_container {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .vape_header_wrapper .vape_header_container {
+    padding: 0 40px;
+  }
+}
+.vape_header_wrapper .vape_header_container .main_header {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .vape_header_wrapper .vape_header_container .main_header {
+    width: 10.5rem;
+  }
+}
+@media (max-width: 374px) {
+  .vape_header_wrapper .vape_header_container .main_header {
+    width: 8.5rem !important;
+  }
+}
+.vape_header_wrapper .vape_header_container .header_button button {
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 40px;
+  padding: 15px 50px;
+  border: none;
+}
+@media (max-width: 767px) {
+  .vape_header_wrapper .vape_header_container .header_button button {
+    font-size: 13px;
+    padding: 14px 23px;
+  }
+}
+.vape_header_wrapper .vape_header_container .header_button button:hover {
+  border: none;
 }

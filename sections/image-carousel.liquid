@@ -5,14 +5,20 @@
     }
     @media (min-width: 768px) and (max-width: 1199px){
         .carousel_image_slide{
-            width: 300px;
-            height: 300px;
+            width: 300px !important;
+            height: 300px !important;
         }
     }
     @media screen and (max-width: 767px){
         .carousel_image_slide{
             width: {{ section.settings.carousel_image_width_mobile }}px !important; 
             height: {{ section.settings.carousel_image_height_mobile }}px !important;
+        }
+    }
+    @media screen and (max-width: 346px){
+        .carousel_image_slide{
+            width: 226px !important; 
+            height: 226px !important;
         }
     }
 {% endstyle %}

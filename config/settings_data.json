@@ -1712,6 +1712,16 @@
         ],
         "settings": {
         }
+      },
+      "vape-header": {
+        "type": "vape-header",
+        "settings": {
+          "header_icon": "shopify:\/\/shop_images\/CHILLZERO.jpg",
+          "header_link": "https:\/\/chill.com",
+          "header_button_text": "Join Waitlist",
+          "header_button_link": "",
+          "header_button_color": "#9792e4"
+        }
       }
     },
     "content_for_index": [

@@ -96,12 +96,13 @@ $(document).ready(function () {
     autoplaySpeed: 0,
     speed: 8000,
     pauseOnHover: false,
+    infinite: true,
     cssEase: 'linear',
     responsive: [
         {
             breakpoint: 767,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: 2,
                 slidesToScroll: 1
             }
         },
@@ -109,19 +110,138 @@ $(document).ready(function () {
             breakpoint: 1024,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                infinite: true
             }
         },
         {
             breakpoint: 1200,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                infinite: true
             }
         }
     ]
     
 });
+
+if(window.screen.width < 1200){
+    var $carousel = $('.flavour_block_container');
+    $carousel.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        autoplay:true,
+        autoplaySpeed:3000,
+        adaptiveHeight: true,
+        asNavFor: '.progressBar'
+    })
+    
+    $('.progressBar ').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.flavour_block_container',
+        dots: false,
+        autoplay:true,
+        autoplaySpeed:3000,
+        centerMode: false,
+        focusOnSelect: true
+    });
+// //remove active class from all thumbnail slides
+$('.flavour_block_container .slick-slide').removeClass('slick-active');
+
+// //set active class to first thumbnail slides
+$('.flavour_block_container .slick-slide').eq(0).addClass('slick-active');
+
+// // On before slide change match active thumbnail to current slide
+$('.flavour_block_container').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    var mySlideNumber = nextSlide;
+    $('.flavour_block_container .slick-slide').removeClass('slick-active');
+    $('.flavour_block_container .slick-slide').eq(mySlideNumber).addClass('slick-active');
+});
+    // $('.flavour_block_container.slider').slick({
+    //     draggable:true,    
+    //     arrows:false,    
+    //     autoplay:false,
+    //     autoplaySpeed:800,     
+    //     slidesToShow:1,     
+    //     slidesToScroll:1,   
+    //     dots: false
+    // });
+    // $('.flavour_block_container.slider').css({
+    //     'padding-bottom': '80px'
+    // })
+    // var percentTime;
+    // var tick;
+    // var time = 1;
+    // var progressBarIndex = 0;
+    // $('.progressBarContainer .progressBar').each(function(index) {        
+    //     console.log(this.parentElement)
+    //     var progress = "<div class='inProgress inProgress" + index + "'></div>";
+    //     $(this).html(progress);
+    //     function startProgressbar() {
+    //         resetProgressbar();
+    //         percentTime = 0;
+    //         tick = setInterval(interval, 10);
+    //     }
+    
+    //     function interval() {
+    //         if (($('.flavour_block_container.slider .slick-track div[data-slick-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
+    //             progressBarIndex = $('.flavour_block_container.slider .slick-track div[aria-hidden="false"]').data("slickIndex");
+    //             startProgressbar();
+    //         } else {
+    //             percentTime += 1 / (time + 5);
+    //             $('.inProgress' + progressBarIndex).css({
+    //                 width: percentTime + "%"
+    //             });
+                
+    //             if (percentTime >= 100) {
+    //                 $('.single-item').slick('slickNext');
+    //                 progressBarIndex++;
+    //                 if (progressBarIndex > 2) {
+    //                     progressBarIndex = 0;
+    //                 }
+    //                 startProgressbar();
+    //             }
+    //         }
+    //     }
+    
+    //     function resetProgressbar() {
+    //         $('.inProgress').css({
+    //             width: 0 + '%'
+    //         });
+    //         $('#activeThumbnail').removeClass('active')
+    //         clearInterval(tick);
+    //     }
+    //     startProgressbar();
+    //     // End ticking machine
+    
+    //     $('.progressBarContainer div').click(function () {
+    //         clearInterval(tick);
+    //         var goToThisIndex = $(this).find("span").data("slickIndex");
+    //         $('.single-item').slick('slickGoTo', goToThisIndex, false);
+    //         startProgressbar();
+    //     });
+    // });
+
+
+    // document.querySelectorAll('.flavour_block_container .custom-dot').forEach(e => {
+    //     let customImages = document.querySelectorAll('.customSlickDots');
+    //     var customimage;
+    //     customImages.forEach((customImage) => {
+    //         customimage = customImage;
+    //     })
+    //     e.appendChild(customimage);
+    //     if(e.parentNode.classList.contains('slick-active')){
+    //         e.style.borderColor = customimage.dataset.color;
+    //     }else{
+    //         e.style.borderColor = 'transparent';
+    //     }
+        
+    // })
+}
   if(window.screen.width < 1200){
     $('.stress-effect-block-list .fixed-layout').slick({
         draggable:true,    
@@ -170,6 +290,7 @@ $(document).ready(function () {
     }
   }
 
+  
   //sub collection image
   $('.subcollection_slider').slick({
     dots: false,

@@ -55,13 +55,13 @@
                         animation-duration: 100s;
                         animation-timing-function: linear;
                         animation-iteration-count: infinite;
+                        animation-direction: reverse;
                     }
                     &.scrollRightToLeft .marquee_content{
                         animation-name: scroll;
                         animation-duration: 100s;
                         animation-timing-function: linear;
                         animation-iteration-count: infinite;
-                        animation-direction: reverse;
                     }
                     &.scroll_up{
                         transform: translateX(-0.4%) !important;

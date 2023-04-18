@@ -1,0 +1,43 @@
+<div class="vape_header_wrapper">
+    <div class="vape_header_container">
+        <a class="main_header" href="{{ section.settings.header_link }}"><img src="{{ section.settings.header_icon | img_url: 'master' }}" alt="header icon"></a>
+        <a class="header_button" href="{{ section.settings.header_button_link }}"><button style="background:{{ section.settings.header_button_color }};">{{ section.settings.header_button_text | upcase }}</button></a>
+    </div>
+</div>
+{% schema %}
+    {
+        "name": "Vape - Header",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "header_icon",
+                "label": "Header icon"
+            },
+            {
+                "type": "url",
+                "id": "header_link",
+                "label": "Header link"
+            },
+            {
+                "type": "text",
+                "id": "header_button_text",
+                "label": "Header button text"
+            },
+            {
+                "type": "url",
+                "id": "header_button_link",
+                "label": "Header button link"
+            },
+            {
+                "type": "color",
+                "id": "header_button_color",
+                "label": "Header button color"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Vape - Header"
+            }
+        ]
+    }
+{% endschema %}

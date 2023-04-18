@@ -18,20 +18,20 @@
         "title_size": 88,
         "title_size_mobile": 44,
         "use_h1": false,
-        "text": "<p>Find peace with functional products made from all natural ingredients<\/p>",
+        "text": "<p>Find peace with functional products made from all natural  ingredients.<\/p>",
         "sub_font_size": 20,
         "enlarge_text": true,
         "button_label_1": "JOIN THE WAITLIST",
         "btn_font": 16,
-        "btn_font_mobile": 16,
+        "btn_font_mobile": 18,
         "button_url_1": "",
         "button_label_2": "",
         "button_url_2": "",
         "botton_bg": "#9792e4",
         "botton_text_color": "#ffffff",
         "text_alignment": "bottom left",
-        "height_desktop": 600,
-        "height_mobile": 500,
+        "height_desktop": 800,
+        "height_mobile": 400,
         "full_width": true,
         "overlay_style": "shadow"
       }
@@ -105,7 +105,7 @@
             "flavour_description": "Our mission is to offer a safer alternative to smoking by providing high-quality vaping products. We aim to promote a healthier lifestyle by encouraging smokers to switch to vaping.",
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
-            "button_text": "Join waitlist",
+            "button_text": "",
             "button_url": "",
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
@@ -192,7 +192,8 @@
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
             "button_text_color": "#ffffff",
-            "button_color": "#ffac9a"
+            "button_color": "#ffac9a",
+            "custom_slick_dot_image": "shopify:\/\/shop_images\/image_8.jpg"
           }
         },
         "b28e2b52-49dc-43b0-a67a-c883d9d89f8d": {
@@ -211,7 +212,8 @@
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
             "button_text_color": "#ffffff",
-            "button_color": "#f2cc0d"
+            "button_color": "#f2cc0d",
+            "custom_slick_dot_image": "shopify:\/\/shop_images\/image_6_a143a6a2-8d43-495f-9c81-59ddf260f2b2.jpg"
           }
         },
         "dd07e483-ae4b-45b3-8057-09d6ce9dc5f2": {
@@ -230,7 +232,8 @@
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
             "button_text_color": "#ffffff",
-            "button_color": "#6ec59f"
+            "button_color": "#6ec59f",
+            "custom_slick_dot_image": "shopify:\/\/shop_images\/image_6.jpg"
           }
         }
       },
@@ -315,7 +318,7 @@
             "marquee_text": "<p>Join <strong>The Movement<\/strong><\/p>",
             "marquee_text_color": "#000000",
             "marquee_text_font_size": 48,
-            "marquee_text_font_size_mobile": 59,
+            "marquee_text_font_size_mobile": 36,
             "marquee_cta_text": "",
             "button_redirection_link": "",
             "marquee_button_color": "",
@@ -331,7 +334,7 @@
             "marquee_text": "<p><strong>@chillzer0<\/strong><\/p>",
             "marquee_text_color": "#000000",
             "marquee_text_font_size": 48,
-            "marquee_text_font_size_mobile": 59,
+            "marquee_text_font_size_mobile": 40,
             "marquee_cta_text": "",
             "button_redirection_link": "",
             "marquee_button_color": "",
@@ -347,7 +350,7 @@
         "64e6525d-282b-4836-8f33-dcf966cb303b"
       ],
       "settings": {
-        "animate_marquee_on_scroll": false
+        "animate_marquee_on_scroll": true
       }
     },
     "0c4876f4-598e-4506-8060-369bed4be4ad": {
@@ -355,6 +358,7 @@
       "blocks": {
         "8197442d-f305-42c7-b416-4e5668c356c4": {
           "type": "select",
+          "disabled": true,
           "settings": {
             "image_block": "shopify:\/\/shop_images\/Chill.jpg",
             "image_redirection_link": "",
@@ -363,6 +367,7 @@
         },
         "5d21d081-92e8-46eb-930a-05fe3b3937f4": {
           "type": "select",
+          "disabled": true,
           "settings": {
             "image_block": "shopify:\/\/shop_images\/Gamechanger_Profile_Image.jpg",
             "image_redirection_link": "",
@@ -371,6 +376,7 @@
         },
         "57e950de-f3b5-4b7c-8848-7b248c6b9e53": {
           "type": "select",
+          "disabled": true,
           "settings": {
             "image_block": "shopify:\/\/shop_images\/Shop_-_Happy_Tuesdays_5.jpg",
             "image_redirection_link": "",
@@ -379,6 +385,7 @@
         },
         "c204fe17-1286-4cf7-a95b-11125d8b4b88": {
           "type": "select",
+          "disabled": true,
           "settings": {
             "image_block": "shopify:\/\/shop_images\/Brand_banner_desktop.jpg",
             "image_redirection_link": "",
@@ -387,6 +394,7 @@
         },
         "6f1c818b-44bb-451f-bdf0-0475a88eb5d9": {
           "type": "select",
+          "disabled": true,
           "settings": {
             "image_block": "shopify:\/\/shop_images\/Group_8209.png",
             "image_redirection_link": "",
@@ -395,8 +403,105 @@
         },
         "46f9f262-8173-4088-a5de-44af0cb91a4c": {
           "type": "select",
+          "disabled": true,
           "settings": {
             "image_block": "shopify:\/\/shop_images\/Happy_Tuesdays_-_Homepage_Banner_58df85b5-c53a-4ce3-a9c7-49ca2ed19c19.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "129b1851-75a8-4fd9-8854-b353f50894e9": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/IMG_0459.heic",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "c094c838-d6b3-437c-b88d-f0472e6d96eb": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/IMG_2572.heic",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "ac1182aa-e64f-4485-8e75-e23a04e64aef": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Meme1.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "689e889e-8a13-4973-91de-c8c31e6d4963": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Meme3.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "740e7536-1a8d-4833-95dd-ddf4bb71554c": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/E63B5188-2D3C-442B-A568-11BAB8A96056.heic",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "9ea27c5e-e597-45d6-9747-be574778c66b": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Colorful_Noise_Gradient_Motivational_Quote_Instagram_Post_4.png",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "7bcfc36a-cb02-45fb-a61a-f3a3c99e5980": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Mint_Cover1.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "96e9ddee-1ada-4084-b8ca-dc18b4849425": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Colorful_Noise_Gradient_Motivational_Quote_Instagram_Post_3.png",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "8e3e6371-c7ac-4f2d-b936-8c541300b6d9": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Flavor_Cover_-_Mint.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "54c8ea01-83f5-4b45-ac3c-2e38b3c762c7": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Flavor_Cover_-_Grapefruit.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "95b1c273-e9ad-4fc2-a3fe-b193182dfa66": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Flavor_Cover_-_Lemon.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "bfe7b905-cc61-4b44-adfe-4cbf82993c8a": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Passion_Cover1.jpg",
             "image_redirection_link": "",
             "carousel_image_background": ""
           }
@@ -408,7 +513,19 @@
         "57e950de-f3b5-4b7c-8848-7b248c6b9e53",
         "c204fe17-1286-4cf7-a95b-11125d8b4b88",
         "6f1c818b-44bb-451f-bdf0-0475a88eb5d9",
-        "46f9f262-8173-4088-a5de-44af0cb91a4c"
+        "46f9f262-8173-4088-a5de-44af0cb91a4c",
+        "129b1851-75a8-4fd9-8854-b353f50894e9",
+        "c094c838-d6b3-437c-b88d-f0472e6d96eb",
+        "ac1182aa-e64f-4485-8e75-e23a04e64aef",
+        "689e889e-8a13-4973-91de-c8c31e6d4963",
+        "740e7536-1a8d-4833-95dd-ddf4bb71554c",
+        "9ea27c5e-e597-45d6-9747-be574778c66b",
+        "7bcfc36a-cb02-45fb-a61a-f3a3c99e5980",
+        "96e9ddee-1ada-4084-b8ca-dc18b4849425",
+        "8e3e6371-c7ac-4f2d-b936-8c541300b6d9",
+        "54c8ea01-83f5-4b45-ac3c-2e38b3c762c7",
+        "95b1c273-e9ad-4fc2-a3fe-b193182dfa66",
+        "bfe7b905-cc61-4b44-adfe-4cbf82993c8a"
       ],
       "settings": {
         "section_redirection_link": "",
@@ -417,6 +534,17 @@
         "carousel_image_border_radius": 30,
         "carousel_image_width_mobile": 250,
         "carousel_image_height_mobile": 250
+      }
+    },
+    "e8ac987b-e99a-4fc4-b850-e77dff648840": {
+      "type": "newsletter",
+      "settings": {
+        "newsletter_logo": "<svg id=\"Group_6347\" data-name=\"Group 6347\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"136.516\" height=\"136.512\" viewbox=\"0 0 136.516 136.512\">\n  <g id=\"Group_637\" data-name=\"Group 637\" transform=\"translate(0 0)\">\n    <g id=\"Group_636\" data-name=\"Group 636\" transform=\"translate(0 0)\">\n      <g id=\"Group_631\" data-name=\"Group 631\" transform=\"translate(4.578)\">\n        <path id=\"Path_8791\" data-name=\"Path 8791\" d=\"M64.571,191.328a1.477,1.477,0,0,1-1.33-2.08l1.6-3.757a67.074,67.074,0,0,1,123.391-.067l1.53,3.489a1.688,1.688,0,0,1-1.463,2.348h-5.188a1.651,1.651,0,0,1-1.463-.872l-3.725-7.38a58.864,58.864,0,0,0-102.7.067l-3.858,7.447a1.489,1.489,0,0,1-1.264.805Z\" transform=\"translate(-63.124 -144.7)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n      <g id=\"Group_632\" data-name=\"Group 632\" transform=\"translate(5.03 89.884)\">\n        <path id=\"Path_8792\" data-name=\"Path 8792\" d=\"M65.462,280.367l122.924-.067a2,2,0,0,1,1.8,2.818l-1.33,3.019a67.072,67.072,0,0,1-123.389.067l-1.53-3.422A1.712,1.712,0,0,1,65.462,280.367Zm110.551,8.185-97.248.067a1.686,1.686,0,0,0-1.4,2.617,58.841,58.841,0,0,0,99.776-.4A1.436,1.436,0,0,0,176.013,288.552Z\" transform=\"translate(-63.798 -280.3)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n      <g id=\"Group_633\" data-name=\"Group 633\" transform=\"translate(0 48.762)\">\n        <path id=\"Path_8793\" data-name=\"Path 8793\" d=\"M56.3,237.053c0-9.661,2.063-15.766,2.2-16.1l.532-1.476a10.347,10.347,0,0,0,.6-1.275H182.162c8.453,0,7.987.6,8.187,1.476l.466,1.476a65.242,65.242,0,0,1-.2,32.874l-.333,1.275a2.11,2.11,0,0,1-1.6,1.476l-1.265.2c-15.308,2.549-51.383,1.409-62.9-17.846-16.507,24.354-60.169,18.182-62.632,17.913l-1.464-.2a1.85,1.85,0,0,1-1.6-1.409l-.333-1.476A66.641,66.641,0,0,1,56.3,237.053Zm8.852-8.923a58.863,58.863,0,0,0,.2,19.389,1.984,1.984,0,0,0,1.8,1.677c13.711,1.006,47.656,2.08,53.447-21.4l.333-1.342H67.149A2.016,2.016,0,0,0,65.152,228.13Zm118.741,0a1.947,1.947,0,0,0-1.93-1.677H128.117l.333,1.342c5.591,22.744,42.6,22.408,53.447,21.469a1.989,1.989,0,0,0,1.731-1.543A57.14,57.14,0,0,0,183.893,228.13Z\" transform=\"translate(-56.3 -218.2)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n      <g id=\"Group_634\" data-name=\"Group 634\" transform=\"translate(90.018 37.65)\">\n        <path id=\"Path_8794\" data-name=\"Path 8794\" d=\"M192.1,203.244v4.227a2.018,2.018,0,0,0,2.013,2.013h25.226a1.971,1.971,0,0,0,1.744-2.885L219,202.372a1.934,1.934,0,0,0-1.744-1.073H194.18A1.9,1.9,0,0,0,192.1,203.244Z\" transform=\"translate(-192.1 -201.295)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n      <g id=\"Group_635\" data-name=\"Group 635\" transform=\"translate(17.693 38.052)\">\n        <path id=\"Path_8795\" data-name=\"Path 8795\" d=\"M111.875,203.913v4.227a2.018,2.018,0,0,1-2.013,2.013H84.636a1.971,1.971,0,0,1-1.744-2.885l2.08-4.227a2,2,0,0,1,1.744-1.141H109.8A1.993,1.993,0,0,1,111.875,203.913Z\" transform=\"translate(-82.671 -201.9)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n    <\/g>\n  <\/g>\n<\/svg>",
+        "title": "Keep Chilling",
+        "subheading": "<p>Stay in the loop + get <a href=\"#\" title=\"#\"><strong>20% off<\/strong><\/a><strong> <\/strong>your first order<\/p>",
+        "terms_cond": "<p>By signing up via email, you expressly consent to receive marketing communications from Chill Corp. See <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">privacy policy<\/a> and <a href=\"\/policies\/terms-of-service\" title=\"Terms of Service\">terms of service<\/a> for details.<\/p>",
+        "bg_image": "shopify:\/\/shop_images\/footer_background_op.jpg",
+        "color_bg": "#ffffff"
       }
     }
   },
@@ -430,6 +558,7 @@
     "71ed98bd-cdda-472a-a286-f3aa7b6d8e8b",
     "e23f5f35-39a2-4153-b650-9d11ba10cfad",
     "80e688ad-c6b3-4ac1-bb96-adc2ec27f7d8",
-    "0c4876f4-598e-4506-8060-369bed4be4ad"
+    "0c4876f4-598e-4506-8060-369bed4be4ad",
+    "e8ac987b-e99a-4fc4-b850-e77dff648840"
   ]
 }
