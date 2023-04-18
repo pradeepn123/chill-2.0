@@ -100,6 +100,13 @@ $(document).ready(function () {
     cssEase: 'linear',
     responsive: [
         {
+            breakpoint: 578,
+            settings: {
+                slidesToShow: 1.2,
+                slidesToScroll: 1
+            }
+        },
+        {
             breakpoint: 767,
             settings: {
                 slidesToShow: 2,
