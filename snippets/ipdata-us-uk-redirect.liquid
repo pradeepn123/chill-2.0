@@ -5,12 +5,7 @@
 const webRedirectUtil = (function() {
     const arr = window.location.href.split(window.location.host)
     const redirection_url = arr[1];
-  // RANDY DEBUG 2023-04-18
-            console.log("RANDY OUTPUT: webRedirectUtil-array");
-            console.log(arr[0]);
-  console.log(arr[1]);
-  console.log(arr[2]);
-  console.log(arr[3]);
+  
     const _helperVar =  {
         apiUrl: "https://api.ipdata.co/?api-key=c67faaddcd3d2ce24bc8307631f45cfd2e92fd764a9e54659e753459",
         storedLocationKey: 'location',
