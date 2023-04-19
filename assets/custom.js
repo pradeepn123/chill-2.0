@@ -139,115 +139,27 @@ if(window.screen.width < 1200){
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
+        dots: true,
         fade: true,
         autoplay:true,
         autoplaySpeed:3000,
-        adaptiveHeight: true,
-        asNavFor: '.progressBar'
+        adaptiveHeight: false,
+        focusOnSelect: true,
+        customPaging: function customPaging(slider, i) {
+            return "<button class=\"custom-dot" + "\" type=\"button\" data-role=\"none\" role=\"button\" tabindex=\"0\">" + "</button>";
+          }
+
     })
-    
-    $('.progressBar ').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.flavour_block_container',
-        dots: false,
-        autoplay:true,
-        autoplaySpeed:3000,
-        centerMode: false,
-        focusOnSelect: true
-    });
-// //remove active class from all thumbnail slides
-$('.flavour_block_container .slick-slide').removeClass('slick-active');
-
-// //set active class to first thumbnail slides
-$('.flavour_block_container .slick-slide').eq(0).addClass('slick-active');
-
-// // On before slide change match active thumbnail to current slide
-$('.flavour_block_container').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-    var mySlideNumber = nextSlide;
-    $('.flavour_block_container .slick-slide').removeClass('slick-active');
-    $('.flavour_block_container .slick-slide').eq(mySlideNumber).addClass('slick-active');
-});
-    // $('.flavour_block_container.slider').slick({
-    //     draggable:true,    
-    //     arrows:false,    
-    //     autoplay:false,
-    //     autoplaySpeed:800,     
-    //     slidesToShow:1,     
-    //     slidesToScroll:1,   
-    //     dots: false
-    // });
-    // $('.flavour_block_container.slider').css({
-    //     'padding-bottom': '80px'
-    // })
-    // var percentTime;
-    // var tick;
-    // var time = 1;
-    // var progressBarIndex = 0;
-    // $('.progressBarContainer .progressBar').each(function(index) {        
-    //     console.log(this.parentElement)
-    //     var progress = "<div class='inProgress inProgress" + index + "'></div>";
-    //     $(this).html(progress);
-    //     function startProgressbar() {
-    //         resetProgressbar();
-    //         percentTime = 0;
-    //         tick = setInterval(interval, 10);
-    //     }
-    
-    //     function interval() {
-    //         if (($('.flavour_block_container.slider .slick-track div[data-slick-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
-    //             progressBarIndex = $('.flavour_block_container.slider .slick-track div[aria-hidden="false"]').data("slickIndex");
-    //             startProgressbar();
-    //         } else {
-    //             percentTime += 1 / (time + 5);
-    //             $('.inProgress' + progressBarIndex).css({
-    //                 width: percentTime + "%"
-    //             });
-                
-    //             if (percentTime >= 100) {
-    //                 $('.single-item').slick('slickNext');
-    //                 progressBarIndex++;
-    //                 if (progressBarIndex > 2) {
-    //                     progressBarIndex = 0;
-    //                 }
-    //                 startProgressbar();
-    //             }
-    //         }
-    //     }
-    
-    //     function resetProgressbar() {
-    //         $('.inProgress').css({
-    //             width: 0 + '%'
-    //         });
-    //         $('#activeThumbnail').removeClass('active')
-    //         clearInterval(tick);
-    //     }
-    //     startProgressbar();
-    //     // End ticking machine
-    
-    //     $('.progressBarContainer div').click(function () {
-    //         clearInterval(tick);
-    //         var goToThisIndex = $(this).find("span").data("slickIndex");
-    //         $('.single-item').slick('slickGoTo', goToThisIndex, false);
-    //         startProgressbar();
-    //     });
-    // });
-
-
-    // document.querySelectorAll('.flavour_block_container .custom-dot').forEach(e => {
-    //     let customImages = document.querySelectorAll('.customSlickDots');
-    //     var customimage;
-    //     customImages.forEach((customImage) => {
-    //         customimage = customImage;
-    //     })
-    //     e.appendChild(customimage);
-    //     if(e.parentNode.classList.contains('slick-active')){
-    //         e.style.borderColor = customimage.dataset.color;
-    //     }else{
-    //         e.style.borderColor = 'transparent';
-    //     }
-        
-    // })
+    let customImages = document.querySelectorAll('.customSlickDots');
+    let custom_dots = document.querySelectorAll('.flavour_block_container .custom-dot');
+    for(let i=0; i<customImages.length; i++) {
+        for(let j=0; j<custom_dots.length; j++) {
+            if(i==j) {
+                custom_dots[j].appendChild(customImages[i]);
+                custom_dots[j].style.borderColor = customImages[i].dataset.color;
+            }
+        }
+    }
 }
   if(window.screen.width < 1200){
     $('.stress-effect-block-list .fixed-layout').slick({
@@ -1044,3 +956,33 @@ window.addEventListener('wheel', evt => {
         }
     })
 })
+
+
+function openWaitlistDrawer(){
+    document.getElementById('waitlistDrawerContainer').style.display='block'; 
+    document.getElementById('waitlistDrawerBackground').style.display='block';
+    document.getElementById('waitlistDrawerContainer').classList.add('claim-drawer-open');
+      document.querySelector("body").classList.add("cart-drawer-open")
+      if(document.getElementById('waitlistDrawerContainer').classList.contains('claim-drawer-close')){
+        document.getElementById('waitlistDrawerContainer').classList.add('claim-drawer-close');
+      }
+}
+    document.querySelector('.header_button').addEventListener('click', () => {
+        openWaitlistDrawer()
+    })
+// document.querySelectorAll('.flavour_image.primary').forEach(elem => {
+//     console.log(elem)
+// })
+// document.querySelectorAll('.flavour_image.primary').forEach(elem => {
+//     console.log('>>>>>>>>>>>',elem, "........", elem.nextElementSibling)
+//     elem.addEventListener('mouseenter', () => {
+//         elem.style.display = 'none';
+//         elem.nextElementSibling.style.display = 'block';
+//         // document.querySelector('.flavour_image.secondary').classList.remove('secondary');
+//     })
+//     elem.addEventListener('mouseleave', () => {
+//         elem.nextElementSibling.style.display = 'none';
+//         elem.style.display = 'block';
+//         // document.querySelector('.flavour_image.secondary').classList.remove('secondary');
+//     })
+// })

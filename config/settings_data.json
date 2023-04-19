@@ -1719,8 +1719,16 @@
           "header_icon": "shopify:\/\/shop_images\/CHILLZERO.jpg",
           "header_link": "https:\/\/chill.com",
           "header_button_text": "Join Waitlist",
-          "header_button_link": "",
+          "header_button_link": "#claimDrawerContainer",
           "header_button_color": "#9792e4"
+        }
+      },
+      "waitlist-drawer": {
+        "type": "waitlist-drawer",
+        "settings": {
+          "waitlist_message": "Vape is invite-only at the moment. Join the waitlist to get early access.",
+          "join_text": "Join waitlist",
+          "join_button_color": "#9792e4"
         }
       }
     },

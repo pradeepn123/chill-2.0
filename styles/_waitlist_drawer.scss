@@ -1,0 +1,16 @@
+#waitlistDrawerContainer{
+    .waitlist_signup_container{
+        height: 100%;
+        .waitlist_signup{
+            height: 100%;
+            margin: auto;
+            display: flex;
+            .klaviyo-form{
+                margin: auto;
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+}

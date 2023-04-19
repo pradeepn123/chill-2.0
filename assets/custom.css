@@ -10627,19 +10627,39 @@ body.cart-drawer-open {
     margin: 43px 1px;
   }
 }
-.flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_image {
+.flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_image.primary {
   flex-basis: 35%;
   margin: 70px 0;
+  border-radius: 50%;
 }
 @media (max-width: 767px) {
-  .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_image {
+  .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_image.primary {
     margin: 50px auto 0 auto;
     width: 90%;
     max-width: 270px;
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
-  .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_image {
+  .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_image.primary {
+    margin: 50px auto 0 auto;
+    width: 45%;
+    max-width: 350px;
+  }
+}
+.flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_image.secondary {
+  flex-basis: 35%;
+  margin: 70px 0;
+  border-radius: 50%;
+}
+@media (max-width: 767px) {
+  .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_image.secondary {
+    margin: 50px auto 0 auto;
+    width: 90%;
+    max-width: 270px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block .flavour_image.secondary {
     margin: 50px auto 0 auto;
     width: 45%;
     max-width: 350px;
@@ -10701,13 +10721,15 @@ body.cart-drawer-open {
   border-width: 4px;
   border-style: solid;
 }
-.flavour-block-section .flavour_block_wrapper .flavour_block_container .slick-dots li .custom-dot .customSlickDots {
-  border-radius: 50%;
-  padding: 5px;
+@media (max-width: 1199px) {
+  .flavour-block-section .flavour_block_wrapper .flavour_block_container .slick-dots li .custom-dot .customSlickDots {
+    display: block !important;
+    border-radius: 50%;
+    padding: 5px;
+  }
 }
 
 .progressBar img {
-  border: 1px solid red;
   background: black;
   border-radius: 50%;
   padding: 5px;
@@ -10781,4 +10803,19 @@ body.cart-drawer-open {
 }
 .vape_header_wrapper .vape_header_container .header_button button:hover {
   border: none;
+}
+
+#waitlistDrawerContainer .waitlist_signup_container {
+  height: 100%;
+}
+#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup {
+  height: 100%;
+  margin: auto;
+  display: flex;
+}
+#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup .klaviyo-form {
+  margin: auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
