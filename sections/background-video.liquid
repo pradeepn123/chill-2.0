@@ -17,6 +17,9 @@
     .overlay-text__inner .overlay-text__text .overlay-text__title{
         font-weight: {{ section.settings.font_weight_head }} !important;
     }
+    .overlay-text__inner .overlay-text__text .overlay-text__title.overlay-text__title_vape{
+      font-weight: 300 !important;
+    }
     .section-background-video .video-container .overlay-text .overlay-text__inner .overlay-text__text .overlay-text__button-row .overlay-text__button.button{
       font-size: {{ section.settings.btn_font }}px;
     }
@@ -92,7 +95,7 @@
                 {% if section.settings.use_h1 %}
                   <h1 class="overlay-text__title">{{ section.settings.title | newline_to_br }}</h1>
                 {% else %}
-                  <h2 class="overlay-text__title h1-style">{{ section.settings.title | newline_to_br}}</h2>
+                  <h2 class="overlay-text__title h1-style {% if request.path == '/pages/vape' %}overlay-text__title_vape{% endif %}">{{ section.settings.title | newline_to_br}}</h2>
                 {% endif %}
               {%- endif -%}
               {%- if section.settings.text != blank -%}
