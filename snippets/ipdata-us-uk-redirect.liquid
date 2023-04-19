@@ -72,8 +72,10 @@ const webRedirectUtil = (function() {
 
         request.onreadystatechange = function () {
         if (this.readyState === 4) {
-            // console.log(this.responseText);
             cb(this.response)
+          // RANDY DEBUG 2023-04-18
+            console.log("RANDY OUTPUT: fetchUserLocationDate-onreadystatechange");
+            console.log(this.responseText);
         }
         };
 
