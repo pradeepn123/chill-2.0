@@ -15,23 +15,26 @@
             </div>
         </form> {% endcomment %}
         <div class="klaviyo-form-UDc6Gn"></div>
-        {% form 'customer' %}
+        {% comment %} {% form 'customer', class: "vape-waitlist-form", id: "vape-waitlist-form" %}
           {{ form.errors | default_errors }}
           {% if form.posted_successfully? %}
-            <p>newsletter</p>
+            <p>Thank you successfully submitted</p>
           {% else %}
-            <input type="hidden" name="contact[tags]" value="newsletter">
+            <input type="hidden" name="contact[tags]" value="">
             <input type="email"
               name="contact[email]"
               id="Email"
               value="{% if customer.email != blank %}{{ customer.email }}{% endif %}"
               autocorrect="off"
               autocapitalize="off">
+            <input type="checkbox" value="a">
+            <input type="checkbox" value="b">
+            <input type="checkbox" value="c">
             <button type="submit" name="commit" id="Subscribe">
               <span>Submit</span>
             </button>
           {% endif %}
-        {% endform %}
+        {% endform %} {% endcomment %}
     </div>
   </div>
 </div>

@@ -117,6 +117,9 @@
       "block_order": [
         "c187c088-d111-4b2a-accf-804249fc7591"
       ],
+      "custom_css": [
+        ".flavour_block_container {padding-bottom: 0px !important; }"
+      ],
       "settings": {
       }
     },
@@ -182,9 +185,9 @@
             "flavour_image": "shopify:\/\/shop_images\/Group_8210.png",
             "flavour_image_secondary": "shopify:\/\/shop_images\/passion-hover.jpg",
             "image_position": "row",
-            "flavour_title": "<p>Passion Fruit <\/p><p>Grapefruit<\/p>",
+            "flavour_title": "<p>Passion Fruit Grapefruit<\/p>",
             "flavour_title_font_size": 52,
-            "flavour_title_font_size_mobile": 32,
+            "flavour_title_font_size_mobile": 26,
             "flavour_description": "Grapefruit flavour vape offers a distinctive taste that is both sweet and slightly bitter, with hints of tanginess.",
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
@@ -353,7 +356,7 @@
         "64e6525d-282b-4836-8f33-dcf966cb303b"
       ],
       "custom_css": [
-        "@media (max-width: 1199px){.marquee-with-cta-text-image {margin-top: 50px;}}"
+        "@media (max-width: 1199px) {.marquee-with-cta-text-image {margin-top: 50px; }}"
       ],
       "settings": {
         "animate_marquee_on_scroll": true

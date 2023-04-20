@@ -1,6 +1,6 @@
 {% for block in section.blocks %}
     {% style %}
-        .flavour_text_title{
+        .flavour_text_title p{
             font-size: {{ block.settings.flavour_title_font_size }}px;
         }
         .flavour_text_description{
@@ -10,7 +10,7 @@
             font-size: {{ block.settings.flavour_button_font_size}}px;
         }
         @media (max-width: 767px){
-            .flavour_text_title{
+            .flavour_text_title p{
                 font-size: {{ block.settings.flavour_title_font_size_mobile }}px;
             }
             .flavour_text_description{

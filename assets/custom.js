@@ -52,6 +52,21 @@ function hideVideo(index, e) {
 }
 
 $(document).ready(function () {
+    // if (document.querySelector("#vape-waitlist-form")) {
+    //     const vapeForm = document.querySelector("#vape-waitlist-form")
+    //     vapeForm.addEventListener("submit", function(e) {
+    //         const checkboxes = this.querySelectorAll('input[type="checkbox"]')
+    //         const tags = []
+    //         checkboxes.forEach((checkbox) => {
+    //             if (checkbox.checked) {
+    //                 tags.push(checkbox.value)
+    //             }
+    //         })
+    //         const tagInput = this.querySelector('input[name="contact[tags]"]')
+    //         tagInput.value = tags.join(",")
+    //     })
+    // }
+
     AOS.init({duration: 1200})
     let items = document.querySelectorAll('.menu-mega-nav li');
 

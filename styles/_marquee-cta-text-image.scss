@@ -52,27 +52,27 @@
                     }
                     &.scrollLeftToRight .marquee_content{
                         animation-name: scroll;
-                        animation-duration: 100s;
+                        animation-duration: 80s;
                         animation-timing-function: linear;
                         animation-iteration-count: infinite;
                         animation-direction: reverse;
                     }
                     &.scrollRightToLeft .marquee_content{
                         animation-name: scroll;
-                        animation-duration: 100s;
+                        animation-duration: 80s;
                         animation-timing-function: linear;
                         animation-iteration-count: infinite;
                     }
                     &.scroll_up{
-                        transform: translateX(-0.4%) !important;
-                        transition: transform 400ms linear;
+                        transform: translateX(-0.6%) !important;
+                        transition: transform 800ms linear;
                         @media (max-width: 767px){
                             transform: translateX(-0.2%) !important;
                         }
                     }
                     &.scroll_down{ 
-                        transform: translateX(0.4%) !important;
-                        transition: transform 400ms linear;
+                        transform: translateX(0.6%) !important;
+                        transition: transform 800ms linear;
                         @media (max-width: 767px){
                             transform: translateX(0.2%) !important;
                         }
