@@ -10609,7 +10609,6 @@ body.cart-drawer-open {
     flex-direction: row;
     overflow: auto;
     position: relative;
-    padding-bottom: 0 !important;
   }
 }
 .flavour-block-section .flavour_block_wrapper .flavour_block_container .flavour_block {

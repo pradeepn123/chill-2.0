@@ -24,7 +24,7 @@
 {% endstyle %}
 
 <div class="image_carousel_section" id="section-{{ section.id }}">
-    {% if section.settings.section_redirection_link != blank %}<a href="{{ section.settings.section_redirection_link }}">{% endif %}
+    {% if section.settings.section_redirection_link != blank %}<a href="{{ section.settings.section_redirection_link }}" target="_blank">{% endif %}
         <div class="image_carousel_container" id="imageCarouselContainer">
             <div class="image_carousel_div">
                 {% for block in section.blocks %}

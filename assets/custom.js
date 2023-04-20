@@ -142,7 +142,7 @@ if(window.screen.width < 1200){
         dots: true,
         fade: true,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 4800,
         adaptiveHeight: false,
         focusOnSelect: true,
         customPaging: function customPaging(slider, i) {

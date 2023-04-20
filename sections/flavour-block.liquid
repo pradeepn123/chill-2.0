@@ -42,11 +42,25 @@
         }        
     {% endstyle %}
 {% endfor %}
+{% style %}
+    .flavour-block-section .flavour_block_container{
+        {% if section.blocks.size > 1 %}
+            padding-bottom: 10em !important;
+        {% endif %}
+    }
+    @media(min-width:1200px){
+        .flavour-block-section .flavour_block_container{
+            {% if section.blocks.size > 1 %}
+                padding-bottom: 50px !important;
+            {% endif %}
+        }
+    }
+{% endstyle %}
 <div class="flavour-block-section container">
     <div class="flavour_block_wrapper">
-        <div class="flavour_block_container" {% if section.blocks.size > 1 %}style="padding-bottom: 10em !important;"{% endif %}>
+        <div class="flavour_block_container">
             {% for block in section.blocks %}
-                <div class="flavour_block" id="block-{{- block.settings.flavour_title | strip_html | replace: ' ', '' -}}" style="flex-direction: {{ block.settings.image_position }};">
+                <div class="flavour_block" id="block-{{- block.settings.flavour_title | strip_html | replace: ' ', '' -}}" style="flex-direction: {{ block.settings.image_position }};scroll-margin-top:130px;">
                     <div class="block_img block_img_wrapper_{{ block.id }}">
                         <div class="primary-image-wrapper">
                             <img class="flavour_image" src="{{ block.settings.flavour_image | img_url: 'master' }}" alt="flavour_image" width='100' height='100'>

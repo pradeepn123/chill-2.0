@@ -15,6 +15,23 @@
             </div>
         </form> {% endcomment %}
         <div class="klaviyo-form-UDc6Gn"></div>
+        {% form 'customer' %}
+          {{ form.errors | default_errors }}
+          {% if form.posted_successfully? %}
+            <p>newsletter</p>
+          {% else %}
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            <input type="email"
+              name="contact[email]"
+              id="Email"
+              value="{% if customer.email != blank %}{{ customer.email }}{% endif %}"
+              autocorrect="off"
+              autocapitalize="off">
+            <button type="submit" name="commit" id="Subscribe">
+              <span>Submit</span>
+            </button>
+          {% endif %}
+        {% endform %}
     </div>
   </div>
 </div>
