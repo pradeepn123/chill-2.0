@@ -141,22 +141,33 @@ if(window.screen.width < 1200){
         arrows: false,
         dots: true,
         fade: true,
-        autoplay:true,
-        autoplaySpeed:3000,
+        autoplay: true,
+        autoplaySpeed: 5000,
         adaptiveHeight: false,
         focusOnSelect: true,
         customPaging: function customPaging(slider, i) {
-            return "<button class=\"custom-dot" + "\" type=\"button\" data-role=\"none\" role=\"button\" tabindex=\"0\">" + "</button>";
-          }
+            return "<div class=\"custom-dot-wrapper" + "\" type=\"button\" data-role=\"none\" role=\"button\" tabindex=\"0\">" + "</div>";
+        }
 
     })
-    let customImages = document.querySelectorAll('.customSlickDots');
-    let custom_dots = document.querySelectorAll('.flavour_block_container .custom-dot');
+    let customImages = document.querySelectorAll('.custom-dot-common');
+    let custom_dots = document.querySelectorAll('.flavour_block_container .custom-dot-wrapper');
+
     for(let i=0; i<customImages.length; i++) {
         for(let j=0; j<custom_dots.length; j++) {
             if(i==j) {
-                custom_dots[j].appendChild(customImages[i]);
-                custom_dots[j].style.borderColor = customImages[i].dataset.color;
+                const customDotWapper = custom_dots[j]
+                customDotWapper.innerHTML = `<div class=\"custom-dot" + "\" type=\"button\" data-role=\"none\" role=\"button\" tabindex=\"0\"></div>`
+
+                const flavourTitle = document.createElement("div");
+                flavourTitle.classList.add('custom_dot_title')
+                console.log(customImages[i].dataset.flavourTitle)
+                flavourTitle.innerHTML = customImages[i].dataset.flavourTitle
+                customDotWapper.appendChild(flavourTitle)
+
+                const customDot = customDotWapper.querySelector(".custom-dot")
+                customDot.classList.add(`custom-color-${customImages[i].dataset.color.replace("#", "")}`)
+                customDot.appendChild(customImages[i]);
             }
         }
     }

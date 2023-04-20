@@ -352,6 +352,9 @@
         "93442782-a05c-4712-b928-485eba4e76ed",
         "64e6525d-282b-4836-8f33-dcf966cb303b"
       ],
+      "custom_css": [
+        "@media (max-width: 1199px){.marquee-with-cta-text-image {margin-top: 50px;}}"
+      ],
       "settings": {
         "animate_marquee_on_scroll": true
       }

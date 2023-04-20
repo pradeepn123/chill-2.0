@@ -20,35 +20,42 @@
                 font-size: {{ block.settings.flavour_button_font_size_mobile }}px;
             }
         }
-        .flavour_block .block_img_wrapper_{{ block.id }} .secondary-image-wrapper {
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.5s ease;
-        }
-        .flavour_block .block_img_wrapper_{{ block.id }}:hover .primary-image-wrapper{
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.5s ease;     
-        }
-        .flavour_block .block_img_wrapper_{{ block.id }}:hover .secondary-image-wrapper{
-            opacity: 1;
-            visibility: visible;
-            transition: all 0.5s ease;
-        }
+        {% if block.settings.flavour_image_secondary != blank %}
+            .flavour_block .block_img_wrapper_{{ block.id }} .secondary-image-wrapper {
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.5s ease;
+            }
+            .flavour_block .block_img_wrapper_{{ block.id }}:hover .primary-image-wrapper{
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.5s ease;     
+            }
+            .flavour_block .block_img_wrapper_{{ block.id }}:hover .secondary-image-wrapper{
+                opacity: 1;
+                visibility: visible;
+                transition: all 0.5s ease;
+            }
+        {% endif %}
+        .custom-dot-{{ block.id }}:after{
+            background: {{ block.settings.button_color }} !important;            
+        }        
     {% endstyle %}
 {% endfor %}
 <div class="flavour-block-section container">
     <div class="flavour_block_wrapper">
-        <div class="flavour_block_container" {% if section.blocks.size > 1 %}style="padding-bottom: 80px !important;"{% endif %}>
+        <div class="flavour_block_container" {% if section.blocks.size > 1 %}style="padding-bottom: 10em !important;"{% endif %}>
             {% for block in section.blocks %}
                 <div class="flavour_block" id="block-{{- block.settings.flavour_title | strip_html | replace: ' ', '' -}}" style="flex-direction: {{ block.settings.image_position }};">
                     <div class="block_img block_img_wrapper_{{ block.id }}">
                         <div class="primary-image-wrapper">
                             <img class="flavour_image" src="{{ block.settings.flavour_image | img_url: 'master' }}" alt="flavour_image" width='100' height='100'>
                         </div>
-                        <div class="secondary-image-wrapper">
-                            <img class="flavour_image" src="{{ block.settings.flavour_image_secondary | img_url: 'master' }}" alt="flavour_image" width='100' height='100'>
-                        </div>
+                        {% if block.settings.flavour_image_secondary != blank %}
+                            <div class="secondary-image-wrapper">
+                                <img class="flavour_image" src="{{ block.settings.flavour_image_secondary | img_url: 'master' }}" alt="flavour_image" width='100' height='100'>
+                            </div>
+                        {% endif %}
                     </div>
                     <div class="flavour_text_block">
                         {% if block.settings.flavour_title != blank %}
@@ -66,7 +73,9 @@
         </div>
         {% for block in section.blocks %}
             {% if block.settings.custom_slick_dot_image != blank %}
-                <img class="customSlickDots image-{{ forloop.index }}" src="{{ block.settings.custom_slick_dot_image | img_url: 'master' }}" width='100' height='100' data-color="{{ block.settings.button_color }}" style="display: none;">
+                <div class="custom-dot-{{ block.id }} custom-dot-common" data-color="{{ block.settings.button_color }}" data-flavour-title="{{ block.settings.flavour_title }}">
+                    <img class="customSlickDots image-{{ forloop.index }}" src="{{ block.settings.custom_slick_dot_image | img_url: 'master' }}" width='100' height='100' style="display: none;">
+                </div>
             {% endif %}
         {% endfor %}
     </div>
