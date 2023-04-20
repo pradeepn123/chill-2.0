@@ -180,6 +180,7 @@
           "type": "select",
           "settings": {
             "flavour_image": "shopify:\/\/shop_images\/Group_8210.png",
+            "flavour_image_secondary": "shopify:\/\/shop_images\/passion-hover.jpg",
             "image_position": "row",
             "flavour_title": "<p>Passion Fruit <\/p><p>Grapefruit<\/p>",
             "flavour_title_font_size": 52,
@@ -187,7 +188,7 @@
             "flavour_description": "Grapefruit flavour vape offers a distinctive taste that is both sweet and slightly bitter, with hints of tanginess.",
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
-            "button_text": "Join Wishlist",
+            "button_text": "Join Waitlist",
             "button_url": "",
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
@@ -200,6 +201,7 @@
           "type": "select",
           "settings": {
             "flavour_image": "shopify:\/\/shop_images\/Group_8209.png",
+            "flavour_image_secondary": "shopify:\/\/shop_images\/lemon-hover.jpg",
             "image_position": "row-reverse",
             "flavour_title": "<p>Lemon<\/p>",
             "flavour_title_font_size": 52,
@@ -220,6 +222,7 @@
           "type": "select",
           "settings": {
             "flavour_image": "shopify:\/\/shop_images\/Group_8148.png",
+            "flavour_image_secondary": "shopify:\/\/shop_images\/mint-hover.jpg",
             "image_position": "row",
             "flavour_title": "<p>Mint Ice<\/p>",
             "flavour_title_font_size": 52,
@@ -528,7 +531,7 @@
         "bfe7b905-cc61-4b44-adfe-4cbf82993c8a"
       ],
       "settings": {
-        "section_redirection_link": "https:\/\/google.com",
+        "section_redirection_link": "https:\/\/www.instagram.com\/chillzer0\/",
         "carousel_image_width": 400,
         "carousel_image_height": 400,
         "carousel_image_border_radius": 30,

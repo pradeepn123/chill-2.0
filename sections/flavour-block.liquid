@@ -20,20 +20,20 @@
                 font-size: {{ block.settings.flavour_button_font_size_mobile }}px;
             }
         }
-        .flavour_block .block_img_wrapper_{{ block.id }} img:last-child{
+        .flavour_block .block_img_wrapper_{{ block.id }} .secondary-image-wrapper {
             opacity: 0;
             visibility: hidden;
-            trasition: all 2s ease-in-out;
+            transition: all 0.5s ease;
         }
-        .flavour_block .block_img_wrapper_{{ block.id }}:hover img:first-child{
+        .flavour_block .block_img_wrapper_{{ block.id }}:hover .primary-image-wrapper{
             opacity: 0;
             visibility: hidden;
-            trasition: all 2s ease-in-out;
+            transition: all 0.5s ease;     
         }
-        .flavour_block .block_img_wrapper_{{ block.id }}:hover img:last-child{
+        .flavour_block .block_img_wrapper_{{ block.id }}:hover .secondary-image-wrapper{
             opacity: 1;
             visibility: visible;
-            trasition: all 2s ease-in-out;
+            transition: all 0.5s ease;
         }
     {% endstyle %}
 {% endfor %}
@@ -42,10 +42,14 @@
         <div class="flavour_block_container" {% if section.blocks.size > 1 %}style="padding-bottom: 80px !important;"{% endif %}>
             {% for block in section.blocks %}
                 <div class="flavour_block" id="block-{{- block.settings.flavour_title | strip_html | replace: ' ', '' -}}" style="flex-direction: {{ block.settings.image_position }};">
-                    {% comment %} <div class="block_img_wrapper_{{ block.id }}"> {% endcomment %}
-                        <img class="flavour_image primary" src="{{ block.settings.flavour_image | img_url: 'master' }}" alt="flavour_image" width='100' height='100'>
-                        {% comment %} <img class="flavour_image secondary" src="{{ block.settings.flavour_image_secondary | img_url: 'master' }}" alt="flavour_image" width='100' height='100' style=""> {% endcomment %}
-                    {% comment %} </div> {% endcomment %}
+                    <div class="block_img block_img_wrapper_{{ block.id }}">
+                        <div class="primary-image-wrapper">
+                            <img class="flavour_image" src="{{ block.settings.flavour_image | img_url: 'master' }}" alt="flavour_image" width='100' height='100'>
+                        </div>
+                        <div class="secondary-image-wrapper">
+                            <img class="flavour_image" src="{{ block.settings.flavour_image_secondary | img_url: 'master' }}" alt="flavour_image" width='100' height='100'>
+                        </div>
+                    </div>
                     <div class="flavour_text_block">
                         {% if block.settings.flavour_title != blank %}
                             <span class="flavour_text_title">{{ block.settings.flavour_title }}</span>

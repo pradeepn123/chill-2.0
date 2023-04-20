@@ -1726,7 +1726,7 @@
       "waitlist-drawer": {
         "type": "waitlist-drawer",
         "settings": {
-          "waitlist_message": "Vape is invite-only at the moment. Join the waitlist to get early access.",
+          "waitlist_message": "<p>Vape is invite-only at the moment. Join the waitlist to get early access.<\/p>",
           "join_text": "Join waitlist",
           "join_button_color": "#9792e4"
         }

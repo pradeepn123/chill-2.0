@@ -976,13 +976,11 @@ function openWaitlistDrawer(){
 // document.querySelectorAll('.flavour_image.primary').forEach(elem => {
 //     console.log('>>>>>>>>>>>',elem, "........", elem.nextElementSibling)
 //     elem.addEventListener('mouseenter', () => {
-//         elem.style.display = 'none';
 //         elem.nextElementSibling.style.display = 'block';
 //         // document.querySelector('.flavour_image.secondary').classList.remove('secondary');
 //     })
 //     elem.addEventListener('mouseleave', () => {
 //         elem.nextElementSibling.style.display = 'none';
-//         elem.style.display = 'block';
 //         // document.querySelector('.flavour_image.secondary').classList.remove('secondary');
 //     })
 // })
