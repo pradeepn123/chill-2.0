@@ -5,16 +5,32 @@
   </a>
   <div class="waitlist_signup_container">
     <div class="waitlist_signup">
-        {% comment %} <form id="email-form" name="email-form" method="post" class="email_form">
+        <form id="email-form" name="email-form" method="post" class="email_form">
             <div class="form-body">
                 <span class="signup-form-headline">{{ section.settings.waitlist_message }}</span>
                 <input type="email" class="form-input" name="email" placeholder="Email Address" id="email">
-                <div class="form-actions" style="background: {{ section.settings.join_button_color }}">
-                    <input type="submit" value="{{ section.settings.join_text }}" class="join_waitlist_button">
+                <div class="form_checkbox">
+                  <div>
+                    <input type="checkbox" value="Passion Fruit GrapeFruit" label="Passion Fruit GrapeFruit">
+                    <label for="Passion Fruit GrapeFruit"> Passion Fruit GrapeFruit </label>
+                  </div>
+                  
+                  <div>
+                    <input type="checkbox" value="Lemon">
+                    <label for="Lemon"> Lemon </label>
+                  </div>
+                  
+                  <div>
+                    <input type="checkbox" value="Mint Ice">
+                    <label for="Mint Ice"> Mint Ice </label>
+                  </div>
+                </div>
+                <div class="form-actions" style="background: {{ section.settings.join_button_color }};">
+                    <input type="submit" value="{{ section.settings.join_text | upcase }}" class="join_waitlist_button">
                 </div>
             </div>
-        </form> {% endcomment %}
-        <div class="klaviyo-form-UDc6Gn"></div>
+        </form>
+        {% comment %} <div class="klaviyo-form-UDc6Gn"></div> {% endcomment %}
         {% comment %} {% form 'customer', class: "vape-waitlist-form", id: "vape-waitlist-form" %}
           {{ form.errors | default_errors }}
           {% if form.posted_successfully? %}

@@ -2,14 +2,52 @@
     .waitlist_signup_container{
         height: 100%;
         .waitlist_signup{
-            height: 100%;
+            width: 100%;
             margin: auto;
             display: flex;
-            .klaviyo-form{
-                margin: auto;
-                display: flex;
-                width: 100%;
-                justify-content: center;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            #email-form{
+                .form-body{
+                    .signup-form-headline{
+                        font-size: 22px;
+                        font-weight: 400;
+                        p{
+                            margin-bottom: 0 !important;
+                        }
+                    }
+                    .form-input{
+                        width: 100%;
+                        border-radius: 40px;
+                        margin: 20px 0;
+                    }
+                    .form_checkbox{
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 20px;
+                        div{
+                            margin: 5px 20px;
+                        }
+                        label{
+                            font-size: 16px;
+                        }
+                    }
+                    .form-actions{
+                        width: 100%;
+                        text-align: center;
+                        justify-content: center;
+                        border-radius: 40px;
+                        .join_waitlist_button{
+                            font-size: 20px;
+                            font-weight: 700;
+                            &:hover{
+                                background: unset;
+                                border: none;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

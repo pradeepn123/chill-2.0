@@ -10967,13 +10967,47 @@ body.cart-drawer-open {
   height: 100%;
 }
 #waitlistDrawerContainer .waitlist_signup_container .waitlist_signup {
-  height: 100%;
-  margin: auto;
-  display: flex;
-}
-#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup .klaviyo-form {
-  margin: auto;
-  display: flex;
   width: 100%;
+  margin: auto;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup #email-form .form-body .signup-form-headline {
+  font-size: 22px;
+  font-weight: 400;
+}
+#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup #email-form .form-body .signup-form-headline p {
+  margin-bottom: 0 !important;
+}
+#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup #email-form .form-body .form-input {
+  width: 100%;
+  border-radius: 40px;
+  margin: 20px 0;
+}
+#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup #email-form .form-body .form_checkbox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup #email-form .form-body .form_checkbox div {
+  margin: 5px 20px;
+}
+#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup #email-form .form-body .form_checkbox label {
+  font-size: 16px;
+}
+#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup #email-form .form-body .form-actions {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  border-radius: 40px;
+}
+#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup #email-form .form-body .form-actions .join_waitlist_button {
+  font-size: 20px;
+  font-weight: 700;
+}
+#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup #email-form .form-body .form-actions .join_waitlist_button:hover {
+  background: unset;
+  border: none;
 }
