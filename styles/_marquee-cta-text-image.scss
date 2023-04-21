@@ -64,15 +64,15 @@
                         animation-iteration-count: infinite;
                     }
                     &.scroll_up{
-                        transform: translateX(-0.6%) !important;
-                        transition: transform 800ms linear;
+                        transform: translateX(-0.2%) !important;
+                        transition: transform 400ms linear;
                         @media (max-width: 767px){
                             transform: translateX(-0.2%) !important;
                         }
                     }
                     &.scroll_down{ 
-                        transform: translateX(0.6%) !important;
-                        transition: transform 800ms linear;
+                        transform: translateX(0.2%) !important;
+                        transition: transform 400ms linear;
                         @media (max-width: 767px){
                             transform: translateX(0.2%) !important;
                         }
