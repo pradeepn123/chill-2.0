@@ -1325,12 +1325,19 @@
             "settings": {
               "text": "<p>50% off Tropical and Berry gummies with every Mad Tasty Purchase<\/p>"
             }
+          },
+          "88a41dd8-73d9-4d98-b3bb-49304c96bde6": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>🌍 It's EARTH WEEK! Donating 20% of all sales to OneTreePlanted.org 🌎 👀<\/p>"
+            }
           }
         },
         "block_order": [
           "2e9b0b00-d8fb-4143-be2d-eefe5fb293f5",
           "ba09120b-5b07-4fe0-95ef-bf983d98ac02",
-          "e6f384bd-f593-4a17-86da-d6d127ed03fe"
+          "e6f384bd-f593-4a17-86da-d6d127ed03fe",
+          "88a41dd8-73d9-4d98-b3bb-49304c96bde6"
         ],
         "settings": {
           "announcement_bar_col": "#000000",
