@@ -5,10 +5,10 @@
   </a>
   <div class="waitlist_signup_container">
     <div class="waitlist_signup">
-        <form id="email-form" name="email-form" method="post" class="email_form">
+        {% comment %} <form id="email-form" name="email-form" method="post" class="email_form" onsubmit=submitWaitlistForm()>
             <div class="form-body">
                 <span class="signup-form-headline">{{ section.settings.waitlist_message }}</span>
-                <input type="email" class="form-input" name="email" placeholder="Email Address" id="email">
+                <input type="email" class="form-input-email" name="email" placeholder="Email Address" id="email">
                 <div class="form_checkbox">
                   <div>
                     <input type="checkbox" value="Passion Fruit GrapeFruit" label="Passion Fruit GrapeFruit">
@@ -29,14 +29,50 @@
                     <input type="submit" value="{{ section.settings.join_text | upcase }}" class="join_waitlist_button">
                 </div>
             </div>
-        </form>
+        </form> {% endcomment %}
+        {% form 'customer', class: "vape-waitlist-form", id: "vape-waitlist-form" %}
+          {{ form.errors | default_errors }}
+          {% if form.posted_successfully? %}
+            <p>Thank you successfully submitted</p>
+            <script>console.log('......')</script>
+          {% else %}
+              <div id="email-form" name="email-form" method="post" class="email_form">
+                <div class="form-body">
+                    <span class="signup-form-headline">{{ section.settings.waitlist_message }}</span>
+                    <input type="email" class="form-input-email" name="email" placeholder="Email Address" id="waitlist-email">
+                    <div class="form_checkbox">
+                      <div>
+                        <input type="checkbox" value="Passion Fruit GrapeFruit" label="Passion Fruit GrapeFruit">
+                        <label for="Passion Fruit GrapeFruit"> Passion Fruit GrapeFruit </label>
+                      </div>
+                      
+                      <div>
+                        <input type="checkbox" value="Lemon">
+                        <label for="Lemon"> Lemon </label>
+                      </div>
+                      
+                      <div>
+                        <input type="checkbox" value="Mint Ice">
+                        <label for="Mint Ice"> Mint Ice </label>
+                      </div>
+                    </div>
+                    <div class="form-actions" style="background: {{ section.settings.join_button_color }};">
+                        <button type="submit" class="join_waitlist_button">{{ section.settings.join_text | upcase }}</button>
+                    </div>
+                    {{ form.email }}
+                </div>
+              </div>
+          {% endif %}
+        {% endform %}
+
+
         {% comment %} <div class="klaviyo-form-UDc6Gn"></div> {% endcomment %}
-        {% comment %} {% form 'customer', class: "vape-waitlist-form", id: "vape-waitlist-form" %}
+        {% comment %} {% form 'customer' %}
           {{ form.errors | default_errors }}
           {% if form.posted_successfully? %}
             <p>Thank you successfully submitted</p>
           {% else %}
-            <input type="hidden" name="contact[tags]" value="">
+            <input type="hidden" name="contact[tags]" value="news">
             <input type="email"
               name="contact[email]"
               id="Email"
