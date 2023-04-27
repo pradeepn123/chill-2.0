@@ -40,12 +40,15 @@
                         justify-content: center;
                         border-radius: 40px;
                         margin: 20px 0;
+                        cursor: pointer;
                         .join_waitlist_button{
                             font-size: 20px;
                             font-weight: 700;
+                            width: 100%;
+                            border-radius: 40px;
                             &:hover{
                                 background: unset;
-                                border: none;
+                                border: 1px solid #9792e4;
                             }
                         }
                     }
@@ -67,6 +70,9 @@
                         background-repeat: no-repeat;
                         background-position-x: 95%;
                         background-position-y: 50%;
+                        option:first-child{
+                            color: #ccc;
+                        }
                     }
                 }
             }

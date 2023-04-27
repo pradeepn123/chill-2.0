@@ -11004,14 +11004,17 @@ body.cart-drawer-open {
   justify-content: center;
   border-radius: 40px;
   margin: 20px 0;
+  cursor: pointer;
 }
 #waitlistDrawerContainer .waitlist_signup_container .waitlist_signup form .form-body .form-actions .join_waitlist_button {
   font-size: 20px;
   font-weight: 700;
+  width: 100%;
+  border-radius: 40px;
 }
 #waitlistDrawerContainer .waitlist_signup_container .waitlist_signup form .form-body .form-actions .join_waitlist_button:hover {
   background: unset;
-  border: none;
+  border: 1px solid #9792e4;
 }
 #waitlistDrawerContainer .waitlist_signup_container .waitlist_signup form .form-body label {
   font-size: 18px;
@@ -11031,4 +11034,7 @@ body.cart-drawer-open {
   background-repeat: no-repeat;
   background-position-x: 95%;
   background-position-y: 50%;
+}
+#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup form .form-body select option:first-child {
+  color: #ccc;
 }

@@ -1005,7 +1005,11 @@ function openWaitlistDrawer(){
             openWaitlistDrawer();
         })
     })
-
+    var waitlistDrawerBackgroundClick = document.getElementById('waitlistDrawerBackground');
+    waitlistDrawerBackgroundClick.addEventListener('click', function() {
+        document.querySelector('.waitlist-drawer-summary__close').click()
+        document.querySelector("body").classList.remove("cart-drawer-open")
+    })
 function validateForm(e){
     document.querySelector('.waitlist_success_message').style.display = 'block';
     document.querySelector('.form-body').style.display = 'none';
