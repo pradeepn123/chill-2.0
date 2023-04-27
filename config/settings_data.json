@@ -1719,6 +1719,24 @@
         ],
         "settings": {
         }
+      },
+      "vape-header": {
+        "type": "vape-header",
+        "settings": {
+          "header_icon": "shopify:\/\/shop_images\/CHILLZERO.jpg",
+          "header_link": "https:\/\/chill.com",
+          "header_button_text": "Join Waitlist",
+          "header_button_link": "#claimDrawerContainer",
+          "header_button_color": "#9792e4"
+        }
+      },
+      "waitlist-drawer": {
+        "type": "waitlist-drawer",
+        "settings": {
+          "waitlist_message": "<p>Interested in trying <strong>CHILLZERO<\/strong>? <\/p><p>We'll let you know when we're shipping in your area and send you 20% off your favourite flavor!<\/p>",
+          "join_text": "Join waitlist",
+          "join_button_color": "#9792e4"
+        }
       }
     },
     "content_for_index": [

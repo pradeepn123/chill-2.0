@@ -52,6 +52,7 @@ function hideVideo(index, e) {
 }
 
 $(document).ready(function () {
+
     AOS.init({duration: 1200})
     let items = document.querySelectorAll('.menu-mega-nav li');
 
@@ -89,6 +90,89 @@ $(document).ready(function () {
     descriptionShort.style.display = 'block';
   });  
   
+  $('#imageCarouselContainer .image_carousel_div').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 8000,
+    pauseOnHover: false,
+    infinite: true,
+    cssEase: 'linear',
+    responsive: [
+        {
+            breakpoint: 578,
+            settings: {
+                slidesToShow: 1.2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true
+            }
+        },
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true
+            }
+        }
+    ]
+    
+});
+
+if(window.screen.width < 1200){
+    var $carousel = $('.flavour_block_container');
+    $carousel.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 4800,
+        adaptiveHeight: false,
+        focusOnSelect: true,
+        customPaging: function customPaging(slider, i) {
+            return "<div class=\"custom-dot-wrapper" + "\" type=\"button\" data-role=\"none\" role=\"button\" tabindex=\"0\">" + "</div>";
+        }
+
+    })
+    let customImages = document.querySelectorAll('.custom-dot-common');
+    let custom_dots = document.querySelectorAll('.flavour_block_container .custom-dot-wrapper');
+
+    for(let i=0; i<customImages.length; i++) {
+        for(let j=0; j<custom_dots.length; j++) {
+            if(i==j) {
+                const customDotWapper = custom_dots[j]
+                customDotWapper.innerHTML = `<div class=\"custom-dot" + "\" type=\"button\" data-role=\"none\" role=\"button\" tabindex=\"0\"></div>`
+
+                const flavourTitle = document.createElement("div");
+                flavourTitle.classList.add('custom_dot_title')
+                console.log(customImages[i].dataset.flavourTitle)
+                flavourTitle.innerHTML = customImages[i].dataset.flavourTitle
+                customDotWapper.appendChild(flavourTitle)
+
+                const customDot = customDotWapper.querySelector(".custom-dot")
+                customDot.classList.add(`custom-color-${customImages[i].dataset.color.replace("#", "")}`)
+                customDot.appendChild(customImages[i]);
+            }
+        }
+    }
+}
   if(window.screen.width < 1200){
     $('.stress-effect-block-list .fixed-layout').slick({
         draggable:true,    
@@ -137,6 +221,7 @@ $(document).ready(function () {
     }
   }
 
+  
   //sub collection image
   $('.subcollection_slider').slick({
     dots: false,
@@ -868,3 +953,86 @@ class AutoSlider {
 //     .off("click", theme.closeDrawerCart.bind(theme))
 // };
 // document.querySelector('.utility-bar .link-dropdown__button').removeAttribute('disabled');
+var marqueeAnimations = document.querySelectorAll('.marquee_container.animate-with-scroll');
+window.addEventListener('wheel', evt => {
+    evt.preventDefault();
+    marqueeAnimations.forEach(marqueeAnimation => {
+        evt.preventDefault();
+        if(evt.deltaY > 0){
+            marqueeAnimation.classList.remove('scroll_up');
+            marqueeAnimation.classList.add('scroll_down');
+        }
+        else if(evt.deltaY <= 0){
+            marqueeAnimation.classList.remove('scroll_down');
+            marqueeAnimation.classList.add('scroll_up');
+        }
+    })
+})
+
+
+function openWaitlistDrawer(){
+    document.getElementById('waitlistDrawerContainer').style.display='block'; 
+    document.getElementById('waitlistDrawerBackground').style.display='block';
+    document.getElementById('waitlistDrawerContainer').classList.add('claim-drawer-open');
+      document.querySelector("body").classList.add("cart-drawer-open")
+      if(document.getElementById('waitlistDrawerContainer').classList.contains('claim-drawer-close')){
+        document.getElementById('waitlistDrawerContainer').classList.add('claim-drawer-close');
+      }
+}
+    document.querySelector('.header_button').addEventListener('click', () => {
+        openWaitlistDrawer();
+    })
+
+    document.querySelector('.video-container .overlay-text__button').addEventListener('click', () => {
+        openWaitlistDrawer();
+    })
+    document.querySelectorAll('.flavour_button').forEach(flavour => {
+        flavour.addEventListener('click', () => {
+            openWaitlistDrawer();
+        })
+    })
+    var waitlistDrawerBackgroundClick = document.getElementById('waitlistDrawerBackground');
+    waitlistDrawerBackgroundClick.addEventListener('click', function() {
+        document.querySelector('.waitlist-drawer-summary__close').click()
+        document.querySelector("body").classList.remove("cart-drawer-open")
+    })
+function validateForm(e){
+    document.querySelector('.waitlist_success_message').style.display = 'block';
+    document.querySelector('.form-body').style.display = 'none';
+    let customer_email = document.forms['email-form']['email'].value;
+    let customer_state = document.forms['email-form']['address[province]'].value;
+    console.log('Email: ', customer_email);
+    console.log("State:", customer_state);
+    addItemToAPI(customer_email, customer_state);
+    function addItemToAPI(customer_email, customer_state) {
+            data = {
+              "email": customer_email,
+              "state": customer_state
+            }
+            jQuery.ajax({
+              type: 'POST',
+              url: 'https://chill-klaviyo.herokuapp.com/api/customer-update/',
+              data: data,
+              dataType: 'json'
+            });
+        }
+}
+
+// document.querySelector('.email-form').addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     console.log(',.,.,.,.,.,.')
+// })
+// document.querySelectorAll('.flavour_image.primary').forEach(elem => {
+//     console.log(elem)
+// })
+// document.querySelectorAll('.flavour_image.primary').forEach(elem => {
+//     console.log('>>>>>>>>>>>',elem, "........", elem.nextElementSibling)
+//     elem.addEventListener('mouseenter', () => {
+//         elem.nextElementSibling.style.display = 'block';
+//         // document.querySelector('.flavour_image.secondary').classList.remove('secondary');
+//     })
+//     elem.addEventListener('mouseleave', () => {
+//         elem.nextElementSibling.style.display = 'none';
+//         // document.querySelector('.flavour_image.secondary').classList.remove('secondary');
+//     })
+// })
