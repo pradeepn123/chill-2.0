@@ -1726,7 +1726,7 @@
       "waitlist-drawer": {
         "type": "waitlist-drawer",
         "settings": {
-          "waitlist_message": "<p>Vape is invite-only at the moment.<\/p><p>Join the waitlist to get early access.<\/p>",
+          "waitlist_message": "<p>Interested in trying <strong>CHILLZERO<\/strong>? <\/p><p>We'll let you know when we're shipping in your area and send you 20% off your favourite flavor!<\/p>",
           "join_text": "Join waitlist",
           "join_button_color": "#9792e4"
         }

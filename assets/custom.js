@@ -994,8 +994,44 @@ function openWaitlistDrawer(){
       }
 }
     document.querySelector('.header_button').addEventListener('click', () => {
-        openWaitlistDrawer()
+        openWaitlistDrawer();
     })
+
+    document.querySelector('.video-container .overlay-text__button').addEventListener('click', () => {
+        openWaitlistDrawer();
+    })
+    document.querySelectorAll('.flavour_button').forEach(flavour => {
+        flavour.addEventListener('click', () => {
+            openWaitlistDrawer();
+        })
+    })
+
+function validateForm(e){
+    document.querySelector('.waitlist_success_message').style.display = 'block';
+    document.querySelector('.form-body').style.display = 'none';
+    let customer_email = document.forms['email-form']['email'].value;
+    let customer_state = document.forms['email-form']['address[province]'].value;
+    console.log('Email: ', customer_email);
+    console.log("State:", customer_state);
+    addItemToAPI(customer_email, customer_state);
+    function addItemToAPI(customer_email, customer_state) {
+            data = {
+              "email": customer_email,
+              "state": customer_state
+            }
+            jQuery.ajax({
+              type: 'POST',
+              url: 'https://chill-klaviyo.herokuapp.com/api/customer-update/',
+              data: data,
+              dataType: 'json'
+            });
+        }
+}
+
+// document.querySelector('.email-form').addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     console.log(',.,.,.,.,.,.')
+// })
 // document.querySelectorAll('.flavour_image.primary').forEach(elem => {
 //     console.log(elem)
 // })

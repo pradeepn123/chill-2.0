@@ -2,7 +2,7 @@
     .waitlist_signup_container{
         height: 100%;
         .waitlist_signup{
-            width: 100%;
+            width: 80%;
             margin: auto;
             display: flex;
             justify-content: center;
@@ -21,6 +21,7 @@
                         width: 100%;
                         border-radius: 40px;
                         margin: 20px 0;
+                        padding: 1em;
                     }
                     .form_checkbox{
                         display: flex;
@@ -38,6 +39,7 @@
                         text-align: center;
                         justify-content: center;
                         border-radius: 40px;
+                        margin: 20px 0;
                         .join_waitlist_button{
                             font-size: 20px;
                             font-weight: 700;
@@ -46,6 +48,16 @@
                                 border: none;
                             }
                         }
+                    }
+                    label{
+                        font-size: 18px;
+                        margin-left: 5px;
+                    }
+                    select{
+                        width: 100%;
+                        padding: 1em;
+                        border-radius: 40px;
+                        font-size: 16px;
                     }
                 }
             }

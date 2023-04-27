@@ -10967,7 +10967,7 @@ body.cart-drawer-open {
   height: 100%;
 }
 #waitlistDrawerContainer .waitlist_signup_container .waitlist_signup {
-  width: 100%;
+  width: 80%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -10985,6 +10985,7 @@ body.cart-drawer-open {
   width: 100%;
   border-radius: 40px;
   margin: 20px 0;
+  padding: 1em;
 }
 #waitlistDrawerContainer .waitlist_signup_container .waitlist_signup form .form-body .form_checkbox {
   display: flex;
@@ -11002,6 +11003,7 @@ body.cart-drawer-open {
   text-align: center;
   justify-content: center;
   border-radius: 40px;
+  margin: 20px 0;
 }
 #waitlistDrawerContainer .waitlist_signup_container .waitlist_signup form .form-body .form-actions .join_waitlist_button {
   font-size: 20px;
@@ -11010,4 +11012,14 @@ body.cart-drawer-open {
 #waitlistDrawerContainer .waitlist_signup_container .waitlist_signup form .form-body .form-actions .join_waitlist_button:hover {
   background: unset;
   border: none;
+}
+#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup form .form-body label {
+  font-size: 18px;
+  margin-left: 5px;
+}
+#waitlistDrawerContainer .waitlist_signup_container .waitlist_signup form .form-body select {
+  width: 100%;
+  padding: 1em;
+  border-radius: 40px;
+  font-size: 16px;
 }
