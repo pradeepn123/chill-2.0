@@ -123,34 +123,6 @@
       "settings": {
       }
     },
-    "062d34d0-1fa0-4e79-9521-8f657526de0d": {
-      "type": "description-block",
-      "disabled": true,
-      "blocks": {
-        "41dd4860-79db-4c0f-9b0e-f27e62dcf5c7": {
-          "type": "blocks",
-          "settings": {
-            "flex_direction": "row-reverse",
-            "image": "shopify:\/\/shop_images\/Group_8143.png",
-            "main_heading": "<p>Our <strong>Mission<\/strong><\/p>",
-            "font_size_heading": 52,
-            "font_weight_heading": "400",
-            "content": "Our mission is to offer a safer alternative to smoking by providing high-quality vaping products. We aim to promote a healthier lifestyle by encouraging smokers to switch to vaping.",
-            "font_size_content": 20,
-            "btn_text": "",
-            "btn_url": "https:\/\/www.google.com\/",
-            "font_size_btn": 24,
-            "btn-bg": "#000000",
-            "btn-color": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "41dd4860-79db-4c0f-9b0e-f27e62dcf5c7"
-      ],
-      "settings": {
-      }
-    },
     "f6b2e9db-2e99-4a4a-9438-b83f5be67d94": {
       "type": "marquee-with-cta-text-image",
       "blocks": {
@@ -251,70 +223,6 @@
       "settings": {
       }
     },
-    "e23f5f35-39a2-4153-b650-9d11ba10cfad": {
-      "type": "description-block",
-      "disabled": true,
-      "blocks": {
-        "454111df-20f1-4edf-a173-01d444287d4e": {
-          "type": "blocks",
-          "settings": {
-            "flex_direction": "row",
-            "image": "shopify:\/\/shop_images\/Group_8210.png",
-            "main_heading": "<p>Passion Fruit Grapefruit<\/p>",
-            "font_size_heading": 52,
-            "font_weight_heading": "600",
-            "content": "Grapefruit flavor vape offers a distinctive taste that is both sweet and slightly bitter, with hints of tanginess.",
-            "font_size_content": 20,
-            "btn_text": "JOIN WAITLIST",
-            "btn_url": "https:\/\/www.google.com\/",
-            "font_size_btn": 24,
-            "btn-bg": "#ffac9a",
-            "btn-color": "#ffffff"
-          }
-        },
-        "e1e1d10c-6b2d-4b7a-9b42-404be67bd81a": {
-          "type": "blocks",
-          "settings": {
-            "flex_direction": "row-reverse",
-            "image": "shopify:\/\/shop_images\/Group_8209.png",
-            "main_heading": "<p>Lemon<\/p>",
-            "font_size_heading": 52,
-            "font_weight_heading": "600",
-            "content": "Lemon flavor vape provides a zesty and refreshing taste that is perfect for vapers who enjoy tangy citrus flavors.",
-            "font_size_content": 20,
-            "btn_text": "JOIN WAITLIST",
-            "btn_url": "https:\/\/www.google.com\/",
-            "font_size_btn": 24,
-            "btn-bg": "#f2cc0d",
-            "btn-color": "#ffffff"
-          }
-        },
-        "7b32c863-e00c-4867-b036-e8051e6e6a6b": {
-          "type": "blocks",
-          "settings": {
-            "flex_direction": "row",
-            "image": "shopify:\/\/shop_images\/Group_8148.png",
-            "main_heading": "<p>Mint Ice<\/p>",
-            "font_size_heading": 52,
-            "font_weight_heading": "600",
-            "content": "Mint flavor vape delivers a cool and refreshing sensation that is perfect for vapers who enjoy a fresh and invigorating vaping experience",
-            "font_size_content": 20,
-            "btn_text": "JOIN WAITLIST",
-            "btn_url": "https:\/\/www.google.com\/",
-            "font_size_btn": 24,
-            "btn-bg": "#6ec59f",
-            "btn-color": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "454111df-20f1-4edf-a173-01d444287d4e",
-        "e1e1d10c-6b2d-4b7a-9b42-404be67bd81a",
-        "7b32c863-e00c-4867-b036-e8051e6e6a6b"
-      ],
-      "settings": {
-      }
-    },
     "80e688ad-c6b3-4ac1-bb96-adc2ec27f7d8": {
       "type": "marquee-with-cta-text-image",
       "blocks": {
@@ -365,60 +273,6 @@
     "0c4876f4-598e-4506-8060-369bed4be4ad": {
       "type": "image-carousel",
       "blocks": {
-        "8197442d-f305-42c7-b416-4e5668c356c4": {
-          "type": "select",
-          "disabled": true,
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/Chill.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
-        "5d21d081-92e8-46eb-930a-05fe3b3937f4": {
-          "type": "select",
-          "disabled": true,
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/Gamechanger_Profile_Image.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
-        "57e950de-f3b5-4b7c-8848-7b248c6b9e53": {
-          "type": "select",
-          "disabled": true,
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/Shop_-_Happy_Tuesdays_5.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
-        "c204fe17-1286-4cf7-a95b-11125d8b4b88": {
-          "type": "select",
-          "disabled": true,
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/Brand_banner_desktop.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
-        "6f1c818b-44bb-451f-bdf0-0475a88eb5d9": {
-          "type": "select",
-          "disabled": true,
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/Group_8209.png",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
-        "46f9f262-8173-4088-a5de-44af0cb91a4c": {
-          "type": "select",
-          "disabled": true,
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/Happy_Tuesdays_-_Homepage_Banner_58df85b5-c53a-4ce3-a9c7-49ca2ed19c19.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
         "129b1851-75a8-4fd9-8854-b353f50894e9": {
           "type": "select",
           "settings": {
@@ -517,12 +371,6 @@
         }
       },
       "block_order": [
-        "8197442d-f305-42c7-b416-4e5668c356c4",
-        "5d21d081-92e8-46eb-930a-05fe3b3937f4",
-        "57e950de-f3b5-4b7c-8848-7b248c6b9e53",
-        "c204fe17-1286-4cf7-a95b-11125d8b4b88",
-        "6f1c818b-44bb-451f-bdf0-0475a88eb5d9",
-        "46f9f262-8173-4088-a5de-44af0cb91a4c",
         "129b1851-75a8-4fd9-8854-b353f50894e9",
         "c094c838-d6b3-437c-b88d-f0472e6d96eb",
         "ac1182aa-e64f-4485-8e75-e23a04e64aef",
@@ -562,10 +410,8 @@
     "b3240cad-90db-4994-8903-9c592ccf8e9a",
     "4f15e0b6-f42e-46ef-a0d7-bbe012e936af",
     "ad0f13dd-44d9-4333-ab05-f558d63963c9",
-    "062d34d0-1fa0-4e79-9521-8f657526de0d",
     "f6b2e9db-2e99-4a4a-9438-b83f5be67d94",
     "71ed98bd-cdda-472a-a286-f3aa7b6d8e8b",
-    "e23f5f35-39a2-4153-b650-9d11ba10cfad",
     "80e688ad-c6b3-4ac1-bb96-adc2ec27f7d8",
     "0c4876f4-598e-4506-8060-369bed4be4ad",
     "e8ac987b-e99a-4fc4-b850-e77dff648840"
