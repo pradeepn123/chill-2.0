@@ -24,7 +24,7 @@
         "button_label_1": "JOIN THE WAITLIST",
         "btn_font": 16,
         "btn_font_mobile": 18,
-        "button_url_1": "",
+        "button_url_1": "#claimDrawerContainer",
         "button_label_2": "",
         "button_url_2": "",
         "botton_bg": "#9792e4",
@@ -118,7 +118,7 @@
         "c187c088-d111-4b2a-accf-804249fc7591"
       ],
       "custom_css": [
-        ".flavour_block_container {padding-bottom: 0px !important; }"
+        ".flavour_block_container {padding-bottom: 0px !important;}"
       ],
       "settings": {
       }
@@ -192,7 +192,7 @@
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
             "button_text": "Join Waitlist",
-            "button_url": "",
+            "button_url": "#claimDrawerContainer",
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
             "button_text_color": "#ffffff",
@@ -213,7 +213,7 @@
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
             "button_text": "Join waitlist",
-            "button_url": "",
+            "button_url": "#claimDrawerContainer",
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
             "button_text_color": "#ffffff",
@@ -234,7 +234,7 @@
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
             "button_text": "Join waitlist",
-            "button_url": "",
+            "button_url": "#claimDrawerContainer",
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
             "button_text_color": "#ffffff",
