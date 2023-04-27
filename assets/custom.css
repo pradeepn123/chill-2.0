@@ -11022,4 +11022,13 @@ body.cart-drawer-open {
   padding: 1em;
   border-radius: 40px;
   font-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  content: "";
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMy45ODEiIGhlaWdodD0iNy45OSIgdmlld0JveD0iMCAwIDEzLjk4MSA3Ljk5Ij4KICA8cGF0aCBpZD0iUGF0aF8xMDAzMyIgZGF0YS1uYW1lPSJQYXRoIDEwMDMzIiBkPSJNMTM1Ljc3OSw5My4wMDZhMSwxLDAsMCwxLS43MDctLjI5M2wtNS45OS01Ljk5YTEsMSwwLDAsMSwxLjQxNC0xLjQxNGw1LjI4Myw1LjI4Myw1LjI4My01LjI4M2ExLDEsMCwxLDEsMS40MTQsMS40MTRsLTUuOTksNS45OUExLDEsMCwwLDEsMTM1Ljc3OSw5My4wMDZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDIuNzcgOTMuMDA2KSByb3RhdGUoMTgwKSIvPgo8L3N2Zz4K);
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
 }
