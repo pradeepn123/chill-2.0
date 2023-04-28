@@ -178,9 +178,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/US_-Collections_-_Coming_Soon.jpg",
             "collection": "chill",
-            "title": "Vape",
-            "link_text": "Learn More",
-            "link_url": "\/pages\/vape",
+            "title": "Coming Soon",
+            "link_text": "",
+            "link_url": "",
             "shop_all_link": ""
           }
         }
