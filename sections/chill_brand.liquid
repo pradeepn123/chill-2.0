@@ -180,7 +180,9 @@
                                                 {% endif %}
                                             {% endif %}
                                     {% endfor %}
-                                    <li class="tag-filters__item">{{ collection.metafields.page.vape_page_title | link_to : collection.metafields.page.vape_page_link }}</li>
+                                    {% if collection.metafields.page.vape_page_title != blank %}
+                                      <li class="tag-filters__item">{{ collection.metafields.page.vape_page_title | link_to : collection.metafields.page.vape_page_link }}</li>
+                                    {% endif %}
                                     <li class="tag-filters__item  {% if request.path == '/collections/chill' %} active{% endif %}">
                                         <a href="/collections/chill" class='chill_collection_button'>{{ 'View all' | upcase }}</a>
                                     </li>
