@@ -271,7 +271,10 @@
             {%- assign product_form_present = true -%}
             <div class="buy-buttons-row" {{ block.shopify_attributes }}>
               {% assign add_to_cart_price_final = 0 %}
-              <div>
+              <div class="buy-buttons-row_container">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none" class="close_buy_container" style="display: none;">
+                    <path opacity="0.5" d="M1.55604 0L0.000487804 1.55555L5.44468 6.99975L0 12.4444L1.55555 14L7.00024 8.5553L12.4449 14L14.0005 12.4444L8.55579 6.99975L14 1.55556L12.4444 7.45276e-06L7.00024 5.4442L1.55604 0Z" fill="#707070"/>
+                  </svg>
                 {% form 'product', product, data-productid: product.id, id: product_form_id, class: 'form product-purchase-form', data-product-handle: product.handle, data-product-id: product.id, data-productid: product.id %}
                   {{- original_select -}}
   
@@ -458,8 +461,6 @@
                   {% endif %}
                 {% endform %}
               </div>
-              
-
               <div class="mobile_popup_buy_button" style="display: none;">
                   {%- capture add_to_cart_text -%}
                         {%- if product.template_suffix contains 'preorder' -%}

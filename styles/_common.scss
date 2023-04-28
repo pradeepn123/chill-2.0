@@ -207,17 +207,43 @@ body.overflow-hidden {
                     box-shadow: rgb(50, 50, 93, 25%) 0px 6px 12px -2px, rgb(0, 0, 0, 30%) 0px 3px 7px -3px;
                 }
                 .close_card_info{
+                    display: block;
                     position: absolute;
                     top:10px;
                     right: 10px;
                     cursor: pointer;
                 }
+                @media (max-width: 767px){
+                    .close_card_info{
+                        display: none;
+                    }
+                    .close_card_info_mobile{
+                        display: block !important;
+                        svg{
+                            position: absolute;
+                            background: #fff;
+                            top: -8%;
+                            bottom: 0;
+                            left: calc(50% - 20px);
+                            border-radius: 50%;
+                            padding: 12px;
+                            width: 40px;
+                            height: 40px;
+                            box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.12);
+                        }
+                    }
+                }
+                
                 &.add_info_sub{
                     opacity: 1;
                     transform: translateY(0px);
                     transition-delay: 0s;
-                    z-index: 1;
+                    z-index: 4;
                     visibility: visible;
+                    @media (max-width: 767px){
+                        position: fixed;
+                        left: 0;
+                    }
                 }
                 .product_options_info{
                     margin-bottom: 16px;

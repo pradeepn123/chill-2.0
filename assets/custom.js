@@ -74,6 +74,9 @@ $(document).ready(function () {
   $('.close_card_info').click(function(){
     $(this).closest('.block-inner').find('.block-inner-card-info').removeClass('add_info_sub');
   });
+  $('.close_card_info_mobile').click(function(){
+    $(this).closest('.block-inner').find('.block-inner-card-info').removeClass('add_info_sub');
+  });
   
   $('.readmore').click(function (event) {
     event.preventDefault();
@@ -497,6 +500,9 @@ function customFeatureProductSubcriptionEvents (){
     featureProductSubscriptionUtil.EventHandler();
 
     $('.close_card_info').click(function(){
+        $(this).closest('.block-inner').find('.block-inner-card-info').removeClass('add_info_sub');
+    });
+    $('.close_card_info_mobile').click(function(){
         $(this).closest('.block-inner').find('.block-inner-card-info').removeClass('add_info_sub');
     });
 
@@ -972,6 +978,17 @@ class AutoSlider {
 // document.querySelector('.utility-bar .link-dropdown__button').removeAttribute('disabled');
 
 
+// Open add to cart popup on product page
+var buyButtonContainer = document.querySelector('.buy-buttons-row_container');
+var closeBuyContainer = document.querySelector('.close_buy_container');
+closeBuyContainer.addEventListener('click', () => {
+    buyButtonContainer.classList.remove('buy_buttons_show');
+})
+document.querySelectorAll('.mobile_popup_buy_button').forEach(popupButton => {
+    popupButton.addEventListener('click', () => {
+        buyButtonContainer.classList.add('buy_buttons_show');
+    })
+})
 
 function openWaitlistDrawer(){
     document.getElementById('waitlistDrawerContainer').style.display='block'; 
