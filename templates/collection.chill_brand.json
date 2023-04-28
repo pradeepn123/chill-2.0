@@ -146,7 +146,8 @@
             "image": "shopify:\/\/shop_images\/Collections-Gummies.jpg",
             "collection": "cbd-gummies",
             "title": "",
-            "coming_soon_link": "",
+            "link_text": "",
+            "link_url": "",
             "shop_all_link": "shopify:\/\/collections\/cbd-gummies"
           }
         },
@@ -156,7 +157,8 @@
             "image": "shopify:\/\/shop_images\/Collections-Pouch.jpg",
             "collection": "cbd-pouches",
             "title": "",
-            "coming_soon_link": "",
+            "link_text": "",
+            "link_url": "",
             "shop_all_link": "shopify:\/\/collections\/cbd-pouches"
           }
         },
@@ -166,7 +168,8 @@
             "image": "shopify:\/\/shop_images\/Collections-Smokes.jpg",
             "collection": "cbd-smokes",
             "title": "",
-            "coming_soon_link": "",
+            "link_text": "",
+            "link_url": "",
             "shop_all_link": "shopify:\/\/collections\/cbd-smokes"
           }
         },
@@ -174,9 +177,10 @@
           "type": "collection-image",
           "settings": {
             "image": "shopify:\/\/shop_images\/US_-Collections_-_Coming_Soon.jpg",
-            "collection": "shop-all",
-            "title": "Coming soon",
-            "coming_soon_link": "",
+            "collection": "chill",
+            "title": "Coming Soon",
+            "link_text": "",
+            "link_url": "",
             "shop_all_link": ""
           }
         }
