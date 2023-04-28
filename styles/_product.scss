@@ -1089,3 +1089,28 @@
         }
     }
 }
+.buy-buttons-row{
+    @media (max-width: 767px){
+        .mobile_popup_buy_button{
+            display: block !important;
+            .mobile_popup_add_to_cart{
+                display: flex;
+                border-radius: 4rem;
+                font-size: 20px;
+                font-weight: 900;
+                text-transform: uppercase;
+                font-family: "Open Sans", sans-serif;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                .price-container{
+                    margin-right: 5px;
+                    margin-bottom: 0;
+                    .current-price{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

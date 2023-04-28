@@ -4828,6 +4828,30 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .buy-buttons-row .mobile_popup_buy_button {
+    display: block !important;
+  }
+  .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart {
+    display: flex;
+    border-radius: 4rem;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart .price-container {
+    margin-right: 5px;
+    margin-bottom: 0;
+  }
+  .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart .price-container .current-price {
+    font-size: 20px;
+  }
+}
+
 .chill-story-section .chill-story-section-wrapper {
   display: flex;
   padding: 3rem 0;
