@@ -179,7 +179,7 @@
           "type": "select",
           "settings": {
             "flavour_image": "shopify:\/\/shop_images\/Group_8209.png",
-            "flavour_image_secondary": "shopify:\/\/shop_images\/lemon-hover.jpg",
+            "flavour_image_secondary": "shopify:\/\/shop_images\/vape-lemon-hover.png",
             "image_position": "row-reverse",
             "flavour_title": "<p>Lemon<\/p>",
             "flavour_title_font_size": 52,
