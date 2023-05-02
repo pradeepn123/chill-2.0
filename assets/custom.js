@@ -75,6 +75,8 @@ $(document).ready(function () {
   });
   $('.close_card_info').click(function(){
     $(this).closest('.block-inner').find('.block-inner-card-info').removeClass('add_info_sub');
+    $(this).closest('.block-inner').find('#addToCartPopupBackground').removeClass('show');
+    $('body').css('overflow','auto');
   });
   $('.close_card_info_mobile').click(function(){
     $(this).closest('.block-inner').find('.block-inner-card-info').removeClass('add_info_sub');
@@ -420,6 +422,13 @@ if(window.screen.width < 1200){
       });
   }  
   
+  $('.add_to_cart_btn').click(() => {
+    document.querySelectorAll('.block-inner .add_to_cart_popup_background').forEach(elem => {
+        elem.classList.remove('show');
+        elem.style.transitionDelay = '0.5s';
+        $('body').css('overflow','auto');
+    })
+  })
 //   $('.add_to_cart_btn').click(function(){    
 //     addItemToCart( $(this).attr("data-product-id") , 1)
 //   });
@@ -507,6 +516,8 @@ function customFeatureProductSubcriptionEvents (){
 
     $('.close_card_info').click(function(){
         $(this).closest('.block-inner').find('.block-inner-card-info').removeClass('add_info_sub');
+        $(this).closest('.block-inner').find('#addToCartPopupBackground').removeClass('show');
+        $('body').css('overflow','auto');
     });
     $('.close_card_info_mobile').click(function(){
         $(this).closest('.block-inner').find('.block-inner-card-info').removeClass('add_info_sub');
@@ -845,10 +856,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let customProductForms = document.querySelectorAll("#custom-product-form")
     if (customProductForms.length) {
         customProductForms.forEach((customProductForm) => {
-            customProductForm.addEventListener("submit", theme.customAddToCart)
+            customProductForm.addEventListener("submit", theme.customAddToCart);
         })
     }
 })
+
 
 theme.customAddToCart = function(e) {
     e.preventDefault()

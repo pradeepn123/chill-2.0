@@ -188,7 +188,7 @@ body.overflow-hidden {
     height: 100%;
     background: #000;
     opacity: 0.5;
-    z-index: 2;
+    z-index: 3;
   }
   .product-list .product-block .block-inner .add_to_cart_popup_background.show {
     visibility: visible !important;
@@ -4239,6 +4239,11 @@ body {
     font-size: 15px !important;
   }
 }
+@media (max-width: 767px) {
+  .section-main-product .product-detail .detail .product-form .quantity-submit-row .quantity-submit-row__submit .button {
+    font-size: 18px;
+  }
+}
 .section-main-product .product-detail .detail .product-form .quantity-submit-row .quantity-submit-row__submit .button .price-container {
   margin-bottom: 0;
 }
@@ -4896,7 +4901,7 @@ body {
     display: block !important;
     position: absolute;
     background: #fff;
-    top: -8%;
+    top: -5%;
     bottom: 0;
     left: calc(50% - 20px);
     border-radius: 50%;
@@ -4938,6 +4943,13 @@ body {
     align-items: center;
     width: 100%;
   }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
   .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart .price-container {
     margin-right: 5px;
     margin-bottom: 0;
@@ -6126,6 +6138,12 @@ body {
   line-height: 1;
   font-size: 16px;
 }
+@media (max-width: 767px) {
+  .article_blog_section .article-list.article-layout--list .article .article__inner .article-text-info .meta .iconmeta.time {
+    justify-content: center;
+    margin-right: 0;
+  }
+}
 .article_blog_section .article-list.article-layout--list .article .article__inner .article-text-info .meta .iconmeta.time .author {
   font-size: 16px;
   color: #000000;
@@ -6188,6 +6206,12 @@ body {
 }
 .article_blog_section .article-list.article-layout--list .article .article__inner .article-text-info .more-link svg path {
   fill: #000000;
+}
+@media (max-width: 767px) {
+  .article_blog_section .article-list.article-layout--list .article .article__inner .article-text-info .more-link svg {
+    padding-top: 0;
+    margin-bottom: 14px;
+  }
 }
 
 .article_single_blog_post .page-header.cf .majortitle {

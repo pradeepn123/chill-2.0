@@ -412,6 +412,9 @@
                             @media (min-width: 768px) and (max-width: 845px){
                                 font-size: 15px !important;
                             }
+                            @media (max-width: 767px){
+                                font-size: 18px;
+                            }
                             .price-container{
                                 margin-bottom: 0;
                                 .price-area{
@@ -1105,7 +1108,7 @@
                 display: block !important;
                 position: absolute;
                 background: #fff;
-                top: -8%;
+                top: -5%;
                 bottom: 0;
                 left: calc(50% - 20px);
                 border-radius: 50%;
@@ -1147,6 +1150,9 @@
                 justify-content: center;
                 align-items: center;
                 width: 100%;
+                @media (max-width: 767px){
+                    font-size: 18px;
+                }
                 .price-container{
                     margin-right: 5px;
                     margin-bottom: 0;
