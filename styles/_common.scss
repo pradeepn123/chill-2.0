@@ -188,6 +188,22 @@ body.overflow-hidden {
                     }
                 }
             }
+            @media (max-width: 767px){
+                .add_to_cart_popup_background{
+                    visibility: hidden !important;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #000;
+                    opacity: 0.5;
+                    z-index: 2;
+                    &.show{
+                        visibility: visible !important;
+                    }
+                }
+            }
             .block-inner-card-info {                     
                 background: #fff;
                 width: 100%;
@@ -197,7 +213,7 @@ body.overflow-hidden {
                 transform: translateY(80px);
                 opacity: 0;
                 z-index: -1;      
-                visibility: hidden;                  
+                visibility: hidden;                 
                 .block-inner-card-info-wrapper{                            
                     position: absolute;
                     bottom: 0;
@@ -243,6 +259,7 @@ body.overflow-hidden {
                     @media (max-width: 767px){
                         position: fixed;
                         left: 0;
+                        bottom: 0;
                     }
                 }
                 .product_options_info{
