@@ -158,7 +158,7 @@
           "type": "select",
           "settings": {
             "flavour_image": "shopify:\/\/shop_images\/Group_8210.png",
-            "flavour_image_secondary": "shopify:\/\/shop_images\/passion-hover.jpg",
+            "flavour_image_secondary": "shopify:\/\/shop_images\/vape-grape-hover.png",
             "image_position": "row",
             "flavour_title": "<p>Passion Fruit Grapefruit<\/p>",
             "flavour_title_font_size": 52,
