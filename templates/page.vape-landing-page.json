@@ -200,7 +200,7 @@
           "type": "select",
           "settings": {
             "flavour_image": "shopify:\/\/shop_images\/Group_8148.png",
-            "flavour_image_secondary": "shopify:\/\/shop_images\/mint-hover.jpg",
+            "flavour_image_secondary": "shopify:\/\/shop_images\/vape-mint-hover.png",
             "image_position": "row",
             "flavour_title": "<p>Mint Ice<\/p>",
             "flavour_title_font_size": 52,
