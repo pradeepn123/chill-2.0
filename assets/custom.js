@@ -133,9 +133,9 @@ $(document).ready(function () {
             }
         },
         {
-            breakpoint: 1600,
+            breakpoint: 1700,
             settings: {
-                slidesToShow: 3.6,
+                slidesToShow: 3.2,
                 slidesToScroll: 1,
                 infinite: true
             }
