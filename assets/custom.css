@@ -205,6 +205,13 @@ body.overflow-hidden {
   z-index: -1;
   visibility: hidden;
 }
+@media (max-width: 767px) {
+  .product-list .product-block .block-inner .block-inner-card-info {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+}
 .product-list .product-block .block-inner .block-inner-card-info .block-inner-card-info-wrapper {
   position: absolute;
   bottom: 0;

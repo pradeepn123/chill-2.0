@@ -213,7 +213,12 @@ body.overflow-hidden {
                 transform: translateY(80px);
                 opacity: 0;
                 z-index: -1;      
-                visibility: hidden;                 
+                visibility: hidden;      
+                @media (max-width: 767px){
+                    position: fixed;
+                    left: 0;
+                    bottom: 0;
+                }           
                 .block-inner-card-info-wrapper{                            
                     position: absolute;
                     bottom: 0;
