@@ -3,37 +3,39 @@
         <div class="marquee-tag">
             <div class="marquee_wrap">
                 {% for block in section.blocks %}
-                    <div class="marquee_container {{ block.settings.marquee_direction }} {% if section.settings.animate_marquee_on_scroll %}animate-with-scroll{% endif %}">
+                    <div class="marquee_container {{ block.settings.marquee_direction }} {% if section.settings.animate_marquee_on_scroll %}animate-with-scroll{% endif %}" id="container-{{- block.settings.marquee_text | strip_html | replace: ' ', '' -}}">
                         {% for i in (1..10) %}
-                            <div class="marquee_content">
-                                {% if block.settings.marquee_text != blank %}
-                                    {% style %}
-                                    @media (max-width: 767px){
-                                        #blockText-{{ block.id }}{
-                                            font-size: {{ block.settings.marquee_text_font_size_mobile }}px !important;
+                            <div class="marquee_content_wrapper" >
+                                <div class="marquee_content">
+                                    {% if block.settings.marquee_text != blank %}
+                                        {% style %}
+                                        @media (max-width: 767px){
+                                            #blockText-{{ block.id }}{
+                                                font-size: {{ block.settings.marquee_text_font_size_mobile }}px !important;
+                                            }
                                         }
-                                    }
-                                    {% endstyle %}
-                                    <span class="marquee_content_text" id="blockText-{{ block.id }}" style="font-size: {{ block.settings.marquee_text_font_size}}px;">{{ block.settings.marquee_text }}</span>
-                                {% endif %}
-                                {% if block.settings.marquee_cta_text != blank %}
-                                    {% style %}
-                                        #block-{{ block.id }}-{{ forloop.index }}:hover{
-                                            background: {{ block.settings.marquee_button_color }} !important;
-                                            color: #fff !important;
-                                        }
-                                    {% endstyle %}
-                                    <a href="{{ block.settings.button_redirection_link }}"><button class="marquee_content_button" id="block-{{ block.id }}-{{ forloop.index }}" style="border: 2px solid {{ block.settings.marquee_button_color }}; color: {{ block.settings.marquee_button_color }}">{{ block.settings.marquee_cta_text }}</button></a>
-                                {% endif %}
-                                {% if block.settings.marquee_image-1 != blank %}
-                                    <img class="marquee_content_image" src="{{ block.settings.marquee_image-1 | img_url: 'master' }}" alt="marquee_image" loading='lazy'>
-                                {% endif %}
-                                {% if block.settings.marquee_image-2 != blank %}
-                                    <img class="marquee_content_image" src="{{ block.settings.marquee_image-2 | img_url: 'master' }}" alt="marquee_image" loading='lazy'>
-                                {% endif %}
-                                {% if block.settings.marquee_image-3 != blank %}
-                                    <img class="marquee_content_image" src="{{ block.settings.marquee_image-3 | img_url: 'master' }}" alt="marquee_image" loading='lazy'>
-                                {% endif %}
+                                        {% endstyle %}
+                                        <span class="marquee_content_text" id="blockText-{{ block.id }}" style="font-size: {{ block.settings.marquee_text_font_size}}px;">{{ block.settings.marquee_text }}</span>
+                                    {% endif %}
+                                    {% if block.settings.marquee_cta_text != blank %}
+                                        {% style %}
+                                            #block-{{ block.id }}-{{ forloop.index }}:hover{
+                                                background: {{ block.settings.marquee_button_color }} !important;
+                                                color: #fff !important;
+                                            }
+                                        {% endstyle %}
+                                        <a href="{{ block.settings.button_redirection_link }}"><button class="marquee_content_button" id="block-{{ block.id }}-{{ forloop.index }}" style="border: 2px solid {{ block.settings.marquee_button_color }}; color: {{ block.settings.marquee_button_color }}">{{ block.settings.marquee_cta_text }}</button></a>
+                                    {% endif %}
+                                    {% if block.settings.marquee_image-1 != blank %}
+                                        <img class="marquee_content_image" src="{{ block.settings.marquee_image-1 | img_url: 'master' }}" alt="marquee_image" loading='lazy'>
+                                    {% endif %}
+                                    {% if block.settings.marquee_image-2 != blank %}
+                                        <img class="marquee_content_image" src="{{ block.settings.marquee_image-2 | img_url: 'master' }}" alt="marquee_image" loading='lazy'>
+                                    {% endif %}
+                                    {% if block.settings.marquee_image-3 != blank %}
+                                        <img class="marquee_content_image" src="{{ block.settings.marquee_image-3 | img_url: 'master' }}" alt="marquee_image" loading='lazy'>
+                                    {% endif %}
+                                </div>
                             </div>
                         {% endfor %}
                     </div>
