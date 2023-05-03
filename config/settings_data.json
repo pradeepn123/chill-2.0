@@ -1052,7 +1052,7 @@
     "how_it_works_title": "How It Works",
     "how_it_works_description": "<ul><li>Login or Sign up to join the <a href=\"http:\/\/chill.com\/\" target=\"_blank\"><em><strong>Chill.com<\/strong><\/em><\/a> community<\/li><li>Get a free variety pack (worth $19.99) when you try our CBD pouches for the first time<\/li><li>You only pay for shipping - the pouches are on us!<\/li><\/ul>",
     "how_it_works_login_text": "LOGIN TO CLAIM YOUR POUCH STARTER PACK",
-    "enable_gummies_offer_on_announcement_bar": true,
+    "enable_gummies_offer_on_announcement_bar": false,
     "announce_gummies_offer_text_desktop": "Get your 25mg gummies for just <span>$5 a pack<\/span> for the month of April. Save $12.99 per pack!<br> Plus <span>one FREE 10mg gummies<\/span> with each pack",
     "announce_gummies_offer_text_mobile": "Get Chill's <span>25mg CBD gummies<\/span> at <span>$5!<\/span> Plus 10 mg gummies free!",
     "announce_gummies_button_url": "shopify:\/\/collections\/gummies-offer",
@@ -1325,19 +1325,12 @@
             "settings": {
               "text": "<p>50% off Tropical and Berry gummies with every Mad Tasty Purchase<\/p>"
             }
-          },
-          "88a41dd8-73d9-4d98-b3bb-49304c96bde6": {
-            "type": "announcement",
-            "settings": {
-              "text": "<p>🌍 It's EARTH WEEK! Donating 20% of all sales to OneTreePlanted.org 🌎 👀<\/p>"
-            }
           }
         },
         "block_order": [
           "2e9b0b00-d8fb-4143-be2d-eefe5fb293f5",
           "ba09120b-5b07-4fe0-95ef-bf983d98ac02",
-          "e6f384bd-f593-4a17-86da-d6d127ed03fe",
-          "88a41dd8-73d9-4d98-b3bb-49304c96bde6"
+          "e6f384bd-f593-4a17-86da-d6d127ed03fe"
         ],
         "settings": {
           "announcement_bar_col": "#000000",

@@ -10436,6 +10436,8 @@ body.cart-drawer-open {
   display: flex;
   flex-direction: row !important;
   width: 100%;
+  justify-content: flex-start;
+  transform: translateX(0);
 }
 .marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container .marquee_content {
   display: inline-flex;
@@ -10487,8 +10489,8 @@ body.cart-drawer-open {
   animation-iteration-count: infinite;
 }
 .marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container.scroll_up {
-  transform: translateX(-0.2%) !important;
-  transition: transform 400ms linear;
+  transform: translateX(-0.5%) !important;
+  transition: transform 500ms linear;
 }
 @media (max-width: 767px) {
   .marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container.scroll_up {
@@ -10496,8 +10498,8 @@ body.cart-drawer-open {
   }
 }
 .marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container.scroll_down {
-  transform: translateX(0.2%) !important;
-  transition: transform 400ms linear;
+  transform: translateX(0.5%) !important;
+  transition: transform 500ms linear;
 }
 @media (max-width: 767px) {
   .marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container.scroll_down {

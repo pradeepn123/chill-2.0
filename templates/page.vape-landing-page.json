@@ -88,7 +88,7 @@
         "e704ebd2-76fa-40ff-8b6c-c6b8de42ae40"
       ],
       "custom_css": [
-        ".marquee_container:first-child {margin-top: 80px;}"
+        ".marquee_container:first-child {margin-top: 80px; animation-duration: 120s;}"
       ],
       "settings": {
         "animate_marquee_on_scroll": true
@@ -158,7 +158,7 @@
           "type": "select",
           "settings": {
             "flavour_image": "shopify:\/\/shop_images\/Group_8210.png",
-            "flavour_image_secondary": "shopify:\/\/shop_images\/passion-hover.jpg",
+            "flavour_image_secondary": "shopify:\/\/shop_images\/vape-grape-hover.png",
             "image_position": "row",
             "flavour_title": "<p>Passion Fruit Grapefruit<\/p>",
             "flavour_title_font_size": 52,
@@ -179,7 +179,7 @@
           "type": "select",
           "settings": {
             "flavour_image": "shopify:\/\/shop_images\/Group_8209.png",
-            "flavour_image_secondary": "shopify:\/\/shop_images\/lemon-hover.jpg",
+            "flavour_image_secondary": "shopify:\/\/shop_images\/vape-lemon-hover.png",
             "image_position": "row-reverse",
             "flavour_title": "<p>Lemon<\/p>",
             "flavour_title_font_size": 52,
@@ -200,7 +200,7 @@
           "type": "select",
           "settings": {
             "flavour_image": "shopify:\/\/shop_images\/Group_8148.png",
-            "flavour_image_secondary": "shopify:\/\/shop_images\/mint-hover.jpg",
+            "flavour_image_secondary": "shopify:\/\/shop_images\/vape-mint-hover.png",
             "image_position": "row",
             "flavour_title": "<p>Mint Ice<\/p>",
             "flavour_title_font_size": 52,
