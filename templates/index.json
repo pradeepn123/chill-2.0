@@ -192,7 +192,6 @@
         },
         "5f12a340-48c6-4106-8308-7047651dd64c": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/CHILLZERO_-_Homepage_Banner.jpg",
             "mobile_image": "shopify:\/\/shop_images\/CHILLZERO_-_Homepage_Banner_Mobile.jpg",
@@ -213,7 +212,7 @@
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#9792e4",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
