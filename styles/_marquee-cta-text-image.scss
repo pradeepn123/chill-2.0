@@ -15,7 +15,8 @@
                     display: flex;
                     flex-direction: row !important;
                     width: 100%;
-                    // margin: 20px 0;
+                    justify-content: flex-start;
+                    transform: translateX(0);
                     .marquee_content{
                         display: inline-flex;
                         justify-content: space-between;
@@ -63,16 +64,17 @@
                         animation-timing-function: linear;
                         animation-iteration-count: infinite;
                     }
+                    
                     &.scroll_up{
-                        transform: translateX(-0.2%) !important;
-                        transition: transform 400ms linear;
+                        transform: translateX(-0.5%) !important;
+                        transition: transform 500ms linear;
                         @media (max-width: 767px){
                             transform: translateX(-0.2%) !important;
                         }
                     }
                     &.scroll_down{ 
-                        transform: translateX(0.2%) !important;
-                        transition: transform 400ms linear;
+                        transform: translateX(0.5%) !important;
+                        transition: transform 500ms linear;
                         @media (max-width: 767px){
                             transform: translateX(0.2%) !important;
                         }
