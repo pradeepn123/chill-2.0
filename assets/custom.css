@@ -178,6 +178,22 @@ body.overflow-hidden {
   opacity: 1;
   font-weight: normal;
 }
+@media (max-width: 767px) {
+  .product-list .product-block .block-inner .add_to_cart_popup_background {
+    visibility: hidden !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    z-index: 3;
+  }
+  .product-list .product-block .block-inner .add_to_cart_popup_background.show {
+    visibility: visible !important;
+  }
+}
 .product-list .product-block .block-inner .block-inner-card-info {
   background: #fff;
   width: 100%;
@@ -189,6 +205,13 @@ body.overflow-hidden {
   z-index: -1;
   visibility: hidden;
 }
+@media (max-width: 767px) {
+  .product-list .product-block .block-inner .block-inner-card-info {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+}
 .product-list .product-block .block-inner .block-inner-card-info .block-inner-card-info-wrapper {
   position: absolute;
   bottom: 0;
@@ -198,17 +221,45 @@ body.overflow-hidden {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .product-list .product-block .block-inner .block-inner-card-info .close_card_info {
+  display: block;
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .product-list .product-block .block-inner .block-inner-card-info .close_card_info {
+    display: none;
+  }
+  .product-list .product-block .block-inner .block-inner-card-info .close_card_info_mobile {
+    display: block !important;
+  }
+  .product-list .product-block .block-inner .block-inner-card-info .close_card_info_mobile svg {
+    position: absolute;
+    background: #fff;
+    top: -8%;
+    bottom: 0;
+    left: calc(50% - 20px);
+    border-radius: 50%;
+    padding: 12px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.12);
+  }
+}
 .product-list .product-block .block-inner .block-inner-card-info.add_info_sub {
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0s;
-  z-index: 1;
+  z-index: 4;
   visibility: visible;
+}
+@media (max-width: 767px) {
+  .product-list .product-block .block-inner .block-inner-card-info.add_info_sub {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
 }
 .product-list .product-block .block-inner .block-inner-card-info .product_options_info {
   margin-bottom: 16px;
@@ -4188,6 +4239,11 @@ body {
     font-size: 15px !important;
   }
 }
+@media (max-width: 767px) {
+  .section-main-product .product-detail .detail .product-form .quantity-submit-row .quantity-submit-row__submit .button {
+    font-size: 18px;
+  }
+}
 .section-main-product .product-detail .detail .product-form .quantity-submit-row .quantity-submit-row__submit .button .price-container {
   margin-bottom: 0;
 }
@@ -4825,6 +4881,88 @@ body {
     font-weight: 700;
     margin: 18px auto 28px;
     display: inline-block;
+  }
+}
+
+@media (max-width: 767px) {
+  .buy-buttons-row {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    width: 100vw;
+    margin: 31px 0;
+  }
+  .buy-buttons-row .without-subscription {
+    padding: 0 20px;
+  }
+  .buy-buttons-row .without-subscription .quantity-submit-row__submit {
+    margin-top: 35px !important;
+    margin-bottom: 0px !important;
+  }
+  .buy-buttons-row .buy-buttons-row_container {
+    transform: translateY(150%);
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  }
+  .buy-buttons-row .buy-buttons-row_container .close_buy_container {
+    display: block !important;
+    position: absolute;
+    background: #fff;
+    top: -5%;
+    bottom: 0;
+    left: calc(50% - 20px);
+    border-radius: 50%;
+    padding: 12px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.12);
+  }
+  .buy-buttons-row .buy-buttons-row_container .with-subscription {
+    padding: 0 20px;
+  }
+  .buy-buttons-row .buy-buttons-row_container .with-subscription .quantity-submit-row__submit {
+    margin-top: 35px !important;
+    margin-bottom: 40px !important;
+  }
+  .buy-buttons-row .buy-buttons-row_container.buy_buttons_show {
+    transform: translateY(0);
+    transition: transform 550ms ease-in;
+    border-top: 0.5px solid #ADADAD;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    z-index: 4;
+    width: 100vw;
+    left: 0;
+  }
+  .buy-buttons-row .mobile_popup_buy_button {
+    display: block !important;
+    margin: 0 20px;
+  }
+  .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart {
+    display: flex;
+    border-radius: 4rem;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart .price-container {
+    margin-right: 5px;
+    margin-bottom: 0;
+  }
+  .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart .price-container .current-price {
+    font-size: 20px;
   }
 }
 
@@ -6007,6 +6145,12 @@ body {
   line-height: 1;
   font-size: 16px;
 }
+@media (max-width: 767px) {
+  .article_blog_section .article-list.article-layout--list .article .article__inner .article-text-info .meta .iconmeta.time {
+    justify-content: center;
+    margin-right: 0;
+  }
+}
 .article_blog_section .article-list.article-layout--list .article .article__inner .article-text-info .meta .iconmeta.time .author {
   font-size: 16px;
   color: #000000;
@@ -6069,6 +6213,12 @@ body {
 }
 .article_blog_section .article-list.article-layout--list .article .article__inner .article-text-info .more-link svg path {
   fill: #000000;
+}
+@media (max-width: 767px) {
+  .article_blog_section .article-list.article-layout--list .article .article__inner .article-text-info .more-link svg {
+    padding-top: 0;
+    margin-bottom: 14px;
+  }
 }
 
 .article_single_blog_post .page-header.cf .majortitle {

@@ -11532,11 +11532,12 @@ model-viewer .container {
   height: 30px;
   stroke-width: 1;
 }
-
-.sticky-content-container {
-  position: -webkit-sticky;
-  position: sticky;
-  top: calc(30px + var(--theme-sticky-header-height));
+@media (min-width: 768px){
+  .sticky-content-container {
+    position: -webkit-sticky;
+    position: sticky;
+    top: calc(30px + var(--theme-sticky-header-height));
+  }
 }
 
 {% if bg_col != panel_nav_bg %}
