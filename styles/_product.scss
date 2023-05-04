@@ -1101,6 +1101,13 @@
         z-index: 4;
         width: 100vw;
         margin: 31px 0;
+        .without-subscription{
+            padding: 0 20px;
+            .quantity-submit-row__submit{
+                margin-top: 35px !important;
+                margin-bottom: 0px !important;
+            }
+        }
         .buy-buttons-row_container{
             transform: translateY(150%);
             box-shadow: 0 1px 6px rgba(32,33,36,.28);
@@ -1117,11 +1124,11 @@
                 height: 40px;
                 box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.12);
             }
-            form{
+            .with-subscription{
                 padding: 0 20px;
                 .quantity-submit-row__submit{
                     margin-top: 35px !important;
-                    margin-bottom: 90px !important;
+                    margin-bottom: 40px !important;
                 }
             }
             &.buy_buttons_show{
