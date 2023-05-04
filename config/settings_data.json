@@ -949,7 +949,7 @@
     "font_col_link": "#171717",
     "font_col_heads": "#171717",
     "font_col_shoptitle": "#171717",
-    "font_col_sale": "#df5641",
+    "font_col_sale": "#ffffff",
     "btn_col": "#9792e4",
     "btn_col_alt": "#171717",
     "btn_col_txt": "#ffffff",
@@ -1067,10 +1067,10 @@
     "new_in_link": "new-in",
     "sale_gif": "<iframe src=\"https:\/\/giphy.com\/embed\/LiZa2iGWbYe9aCfIiG\" width=\"480\" height=\"301\" frameborder=\"0\" class=\"giphy-embed\" allowfullscreen=\"\"><\/iframe>",
     "sale_link": "sales",
-    "promotion_banner": "shopify:\/\/shop_images\/CHILL_BANNER.jpg",
-    "promotion_banner_text": "<p>FLAT 20% OFF <\/p><p>ON ALL GUMMIES<\/p>",
-    "promotion_banner_text_mobile": "<p>FLAT 20%<\/p><p><strong>OFF<\/strong> <\/p>",
-    "promotion_banner_link": "shopify:\/\/collections\/gummies-offer",
+    "promotion_banner": "shopify:\/\/shop_images\/CHILLZERO_-_Mega_Menu_Block.jpg",
+    "promotion_banner_text": "",
+    "promotion_banner_text_mobile": "",
+    "promotion_banner_link": "shopify:\/\/pages\/vape",
     "shop_all_link": "shop-all",
     "sections": {
       "header": {
