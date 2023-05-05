@@ -18,26 +18,35 @@
       <div class="flexbox-images">
         {%- for block in section.blocks -%}
           {%- assign collection_block = collections[block.settings.collection] -%}
+          {% if block.settings.shop_all_link != blank %}
+            {% assign redirection_link =  block.settings.shop_all_link %}
+          {% elsif block.settings.link_url != blank %}
+            {% assign redirection_link =  block.settings.link_url %}
+          {% endif %}
           {% if collection_block != blank%}
             {%- assign collection_image = block.settings.image | default: collection_block.products.featured_image -%}
-            <div class="image-wrapper">
-              {%- assign img_url = collection_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-              <img class="rimage__image lazyload{% if manual_image_load %}--manual{% endif %} fade-in {% if local_cover %}cover{% endif %}" data-src="{{ img_url }}" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ image.aspect_ratio }}" data-sizes="auto" alt="{{ collection_image.alt | escape }}">
-              <div class="image_title">
-                {%- assign collection_title = block.settings.title | default: collection_block.title -%}
-                <div class="h4">{{ collection_title }}</div>
-                {% comment %} <div class="small-feature-link shop_all">{{ block.settings.link_url }}</div> {% endcomment %}
-                {% if block.settings.shop_all_link != blank %}
-                  <a class="small-feature-link shop_all" href="{{ block.settings.shop_all_link }}">{{ 'collections.general.view_all' | t }}
-                    {% render 'svg-up-icon' %}
-                  </a>
-                {% elsif block.settings.link_url != blank %}
-                  <a class="small-feature-link shop_all" href="{{ block.settings.link_url }}">{{ block.settings.link_text }}
+            {% comment %} <a href="{{ block.settings.shop_all_link }}" class="ggy"> {% endcomment %}
+            <a href="{{ redirection_link }}" class="image-wrapper">
+              <div>
+                {%- assign img_url = collection_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                <img class="rimage__image lazyload{% if manual_image_load %}--manual{% endif %} fade-in {% if local_cover %}cover{% endif %}" data-src="{{ img_url }}" data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ image.aspect_ratio }}" data-sizes="auto" alt="{{ collection_image.alt | escape }}">
+                <div class="image_title">
+                  {%- assign collection_title = block.settings.title | default: collection_block.title -%}
+                  <div class="h4">{{ collection_title }}</div>
+                  {% comment %} <div class="small-feature-link shop_all">{{ block.settings.link_url }}</div> {% endcomment %}
+                  {% if block.settings.shop_all_link != blank %}
+                    <div class="small-feature-link shop_all">{{ 'collections.general.view_all' | t }}
                       {% render 'svg-up-icon' %}
-                  </a>
-                {% endif %}
+                  </div>
+                  {% elsif block.settings.link_url != blank %}
+                    <div class="small-feature-link shop_all">{{ block.settings.link_text }}
+                        {% render 'svg-up-icon' %}
+                    </div>
+                  {% endif %}
+                </div>
               </div>
-            </div>
+            </a>
+            {% comment %} </a> {% endcomment %}
           {% endif %}
         {%- endfor -%}
       </div>

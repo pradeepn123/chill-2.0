@@ -142,11 +142,11 @@
   <a class="skip-link visually-hidden" href="#content">{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
   {% section 'cart-drawer' %}
   {% render 'login-drawer' %}
-  {% if request.path == '/pages/vape' %}
+  {% if request.path == '/pages/chillzero' %}
     {% section 'waitlist-drawer' %}
   {% endif %}
   {% section 'age-verification' %}
-  {% if request.path == '/pages/vape' %}
+  {% if request.path == '/pages/chillzero' %}
     {% section 'vape-header' %}
   {% else %}
     {% section 'announcement-bar' %}
