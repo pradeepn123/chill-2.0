@@ -10992,12 +10992,12 @@ body.cart-drawer-open {
 }
 @media (max-width: 330px) {
   .vape_header_wrapper .vape_header_container {
-    padding: 0 13px !important;
+    padding: 0 10px !important;
   }
 }
 @media (max-width: 767px) {
   .vape_header_wrapper .vape_header_container {
-    padding: 0 20px;
+    padding: 0 10px;
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -11009,14 +11009,24 @@ body.cart-drawer-open {
   display: flex;
   align-items: center;
 }
-@media (max-width: 767px) {
-  .vape_header_wrapper .vape_header_container .main_header {
-    width: 10.5rem;
-  }
-}
 @media (max-width: 374px) {
   .vape_header_wrapper .vape_header_container .main_header {
-    width: 8.5rem !important;
+    width: 90px;
+  }
+}
+@media (min-width: 375px) and (max-width: 520px) {
+  .vape_header_wrapper .vape_header_container .main_header {
+    width: 106px;
+  }
+}
+@media (min-width: 521px) and (max-width: 767px) {
+  .vape_header_wrapper .vape_header_container .main_header {
+    width: 150px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .vape_header_wrapper .vape_header_container .main_header {
+    width: 200px;
   }
 }
 .vape_header_wrapper .vape_header_container .header_button button {
@@ -11026,14 +11036,46 @@ body.cart-drawer-open {
   padding: 15px 50px;
   border: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 374px) {
+  .vape_header_wrapper .vape_header_container .header_button button {
+    font-size: 10px;
+    padding: 10px 17px;
+  }
+}
+@media (min-width: 375px) and (max-width: 520px) {
+  .vape_header_wrapper .vape_header_container .header_button button {
+    font-size: 11px;
+    padding: 10px 17px;
+  }
+}
+@media (min-width: 521px) and (max-width: 767px) {
   .vape_header_wrapper .vape_header_container .header_button button {
     font-size: 13px;
-    padding: 14px 23px;
+    padding: 15px 40px;
   }
 }
 .vape_header_wrapper .vape_header_container .header_button button:hover {
   border: none;
+}
+.vape_header_wrapper .vape_header_container .chill_header {
+  width: 200px;
+  height: auto;
+  display: flex;
+}
+@media (max-width: 520px) {
+  .vape_header_wrapper .vape_header_container .chill_header {
+    width: 84px;
+  }
+}
+@media (min-width: 521px) and (max-width: 767px) {
+  .vape_header_wrapper .vape_header_container .chill_header {
+    width: 140px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .vape_header_wrapper .vape_header_container .chill_header {
+    width: 180px;
+  }
 }
 
 #waitlistDrawerContainer .waitlist_signup_container {
