@@ -1,6 +1,7 @@
 <div class="vape_header_wrapper">
     <div class="vape_header_container">
         <a class="main_header" href="{{ section.settings.header_link }}"><img src="{{ section.settings.header_icon | img_url: 'master' }}" alt="header icon"></a>
+        <a class="chill_header" href="{{ section.settings.chill_header_link }}"><img src="{{section.settings.chill_header | img_url: 'master' }}" alt="chill header"></a>
         <a class="header_button" href="{{ section.settings.header_button_link }}"><button style="background:{{ section.settings.header_button_color }};">{{ section.settings.header_button_text | upcase }}</button></a>
     </div>
 </div>
@@ -18,6 +19,16 @@
                 "type": "url",
                 "id": "header_link",
                 "label": "Header link"
+            },
+            {
+                "type": "image_picker",
+                "id": "chill_header",
+                "label": "Chill Header icon"
+            },
+            {
+                "type": "url",
+                "id": "chill_header_link",
+                "label": "Chill Header link"
             },
             {
                 "type": "text",
