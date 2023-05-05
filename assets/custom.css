@@ -11016,17 +11016,17 @@ body.cart-drawer-open {
 }
 @media (min-width: 375px) and (max-width: 520px) {
   .vape_header_wrapper .vape_header_container .main_header {
-    width: 106px;
+    width: 6.625rem;
   }
 }
 @media (min-width: 521px) and (max-width: 767px) {
   .vape_header_wrapper .vape_header_container .main_header {
-    width: 150px;
+    width: 9.375rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .vape_header_wrapper .vape_header_container .main_header {
-    width: 200px;
+    width: 12.5rem;
   }
 }
 .vape_header_wrapper .vape_header_container .header_button button {
@@ -11069,12 +11069,12 @@ body.cart-drawer-open {
 }
 @media (min-width: 521px) and (max-width: 767px) {
   .vape_header_wrapper .vape_header_container .chill_header {
-    width: 140px;
+    width: 8.75rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .vape_header_wrapper .vape_header_container .chill_header {
-    width: 180px;
+    width: 11.25rem;
   }
 }
 
