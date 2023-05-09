@@ -355,7 +355,6 @@
         },
         "b2363591-8ba1-402f-ad6f-c71e7bae93b0": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/UMBO_-_Homepage_Banner.jpg",
             "mobile_image": "shopify:\/\/shop_images\/UMBO_-_Homepage_Banner_Mobile_31666255-8bf5-460f-a4e1-915f17d4fa1c.jpg",
@@ -368,7 +367,7 @@
             "title_size_mobile": 46,
             "use_h1": false,
             "text": "<p>Shop UMBO's selection of functional mushroom products<\/p>",
-            "heading_color": "#000",
+            "heading_color": "#000000",
             "text_color": "#ffffff",
             "enlarge_text": true,
             "button_label_1": "",
@@ -376,7 +375,7 @@
             "button_label_2": "Shop UMBO",
             "button_url_2": "",
             "button_background_color": "#9792e4",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
