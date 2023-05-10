@@ -6071,13 +6071,13 @@
           const paidProducts = cart.items.filter(lineItem => !lineItem.properties || lineItem.properties["Product Type"] != "FREE")
           const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties && lineItem.properties["Product Type"] == "FREE")          
 
-          // if (cart.items_subtotal_price > 10000) {
-          //   promotionalProducts = theme.promotionalProducts[100]
-          // } else if (cart.items_subtotal_price > 5000) {
-          //   promotionalProducts = theme.promotionalProducts[50]
-          // } else if (cart.items_subtotal_price > 2500) {
-          //   promotionalProducts = theme.promotionalProducts[25]
-          // }
+          if (cart.items_subtotal_price > 10000) {
+            promotionalProducts = theme.promotionalProducts[100]
+          } else if (cart.items_subtotal_price > 5000) {
+            promotionalProducts = theme.promotionalProducts[50]
+          } else if (cart.items_subtotal_price > 2500) {
+            promotionalProducts = theme.promotionalProducts[25]
+          }
 
           paidProducts.forEach((lineItem) => {
             if (theme.promotionalProducts[lineItem.variant_id]) {
@@ -6371,13 +6371,13 @@
           const paidProducts = cart.items.filter(lineItem => !lineItem.properties || lineItem.properties["Product Type"] != "FREE")
           const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties && lineItem.properties["Product Type"] == "FREE")
 
-          // if (cart.items_subtotal_price > 10000) {
-          //   promotionalProducts = theme.promotionalProducts[100]
-          // } else if (cart.items_subtotal_price > 5000) {
-          //   promotionalProducts = theme.promotionalProducts[50]
-          // } else if (cart.items_subtotal_price > 2500) {
-          //   promotionalProducts = theme.promotionalProducts[25]
-          // }
+          if (cart.items_subtotal_price > 10000) {
+            promotionalProducts = theme.promotionalProducts[100]
+          } else if (cart.items_subtotal_price > 5000) {
+            promotionalProducts = theme.promotionalProducts[50]
+          } else if (cart.items_subtotal_price > 2500) {
+            promotionalProducts = theme.promotionalProducts[25]
+          }
 
           paidProducts.forEach((lineItem) => {
             if (theme.promotionalProducts[lineItem.variant_id]) {
