@@ -6122,6 +6122,7 @@
                     }
                   }
                 )}
+                this.cartRefreshXhr = null;
                 return this.functions.addItemsToCart.call(this, lineItems);
               }
               this.functions.postRefreshCartDependentContent.call(this)
