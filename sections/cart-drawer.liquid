@@ -201,7 +201,7 @@
                                       {% render 'price', price: item.original_line_price, disable_currency_code: true %}
                                     </span>
                                   {% endif %}
-                                  <span class="cart-drawer-summary-item__price-current theme-money {% if free_variety_pack_in_cart == true%}color-red{% endif %}">
+                                  <span class="cart-drawer-summary-item__price-current theme-money {% if free_variety_pack_in_cart == true %}color-red{% endif %}">
                                     FREE
                                   </span>
                                 {% elsif item.original_line_price != item.final_line_price %}
@@ -413,13 +413,13 @@
         "type": "@app"
       }, {
         "type": "promotion-25",
-        "name": "When spend $25",
+        "name": "When spend $30",
         "limit": 1,
         "settings": [
           {
             "type": "product",
             "id": "product-1",
-            "label": "Spend $25 and get a product as FREE!"
+            "label": "Spend $30 and get a product as FREE!"
           }
         ]
       }, {

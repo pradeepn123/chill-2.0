@@ -1545,9 +1545,8 @@
         "blocks": {
           "a12d5a57-5bc2-4e12-9906-561f787d9e76": {
             "type": "promotion-25",
-            "disabled": true,
             "settings": {
-              "product-1": "peach-cbd-pouches"
+              "product-1": "chill-trucker-womens-hat"
             }
           },
           "0e59d448-8c37-4a93-aa9d-9b45cf15d06c": {
@@ -1575,7 +1574,7 @@
           "continue_shopping_url": "shopify:\/\/collections\/shop",
           "shipping_policy_title": "Shipping Hours",
           "shipping_policy_content": "<p><span style=\"text-decoration:underline\"><strong>Chill Products<\/strong><\/span><br\/><br\/>The Chill Fulfillment Center operates 9-4pm Monday through Friday and 8-12pm on Saturday and is closed on Sundays<strong>.<\/strong> Orders processed prior to 12pm will be shipped same day. Shipping times may vary.<br\/><br\/><span style=\"text-decoration:underline\"><strong>All Other Products<\/strong><\/span><\/p><p>Some products are fulfilled by their own independent vendors. Shipping times and costs may vary as disclosed on individual product pages and at checkout. <\/p><p>Orders originating outside the United States and all other inquiries email <a href=\"mailto:%20info@chill.com\" target=\"_blank\">info@chill.com<\/a>. We do not currently ship to Canada.<\/p><p>You will receive an email containing a tracking number once your package has been shipped. All pertinent order information will be communicated via tracking emails.<\/p>",
-          "enable_promotion": false
+          "enable_promotion": true
         }
       },
       "collab-with-us-banner": {
