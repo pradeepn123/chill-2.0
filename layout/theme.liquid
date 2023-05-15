@@ -135,10 +135,13 @@
     <script>
       if ('IntersectionObserver' in window) {
         document.body.classList.add("cc-animate-enabled");
-      }
+      } 
     </script>
   {%- endif -%}
 
+  {% if request.path == '/products/chill-trucker-womens-hat' %}
+    {% assign request.path = '/404' %}
+  {% endif %}
   <a class="skip-link visually-hidden" href="#content">{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
   {% section 'cart-drawer' %}
   {% render 'login-drawer' %}
