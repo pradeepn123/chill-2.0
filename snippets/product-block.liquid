@@ -37,7 +37,7 @@
     assign doesProductHaveMultiVariant = product.variants | size
     assign shipping_interval_frequency = productSubscription.shipping_interval_frequency | split: ','
   -%}
-
+{% unless product.id == 7087617343646 %}
 <div
   data-product-id="{{ product.id }}"
   class="product-block"
@@ -485,3 +485,4 @@
     {%- endunless -%}
   {%- endif -%}
 </div>
+{% endunless %}

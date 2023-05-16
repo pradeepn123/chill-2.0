@@ -6071,11 +6071,16 @@
           const paidProducts = cart.items.filter(lineItem => !lineItem.properties || lineItem.properties["Product Type"] != "FREE")
           const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties && lineItem.properties["Product Type"] == "FREE")          
 
-          if (cart.items_subtotal_price > 10000) {
-            promotionalProducts = theme.promotionalProducts[100]
-          } else if (cart.items_subtotal_price > 5000) {
-            promotionalProducts = theme.promotionalProducts[50]
-          } else if (cart.items_subtotal_price > 2500) {
+          // if (cart.items_subtotal_price > 10000) {
+          //   promotionalProducts = theme.promotionalProducts[100]
+          // } else if (cart.items_subtotal_price > 5000) {
+          //   promotionalProducts = theme.promotionalProducts[50]
+          // } else if (cart.items_subtotal_price > 2500) {
+          //   promotionalProducts = theme.promotionalProducts[25]
+          // }
+          console.log('>>>>>', cart.items)
+          
+          if (cart.items_subtotal_price > 3000) {
             promotionalProducts = theme.promotionalProducts[25]
           }
 
@@ -6371,12 +6376,23 @@
           let promotionalProducts = [];
           const paidProducts = cart.items.filter(lineItem => !lineItem.properties || lineItem.properties["Product Type"] != "FREE")
           const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties && lineItem.properties["Product Type"] == "FREE")
-
-          if (cart.items_subtotal_price > 10000) {
-            promotionalProducts = theme.promotionalProducts[100]
-          } else if (cart.items_subtotal_price > 5000) {
-            promotionalProducts = theme.promotionalProducts[50]
-          } else if (cart.items_subtotal_price > 2500) {
+          // if (cart.items_subtotal_price > 10000) {
+          //   promotionalProducts = theme.promotionalProducts[100]
+          // } else if (cart.items_subtotal_price > 5000) {
+          //   promotionalProducts = theme.promotionalProducts[50]
+          // } else if (cart.items_subtotal_price > 2500) {
+          //   promotionalProducts = theme.promotionalProducts[25]
+          // }
+          
+          var totalsubscriptionprice = 0
+          cart.items.forEach(elem => {
+            var cartPriceWithoutSubscription = 0;
+            if(elem.selling_plan_allocation){
+              cartPriceWithoutSubscription = elem.selling_plan_allocation.price * elem.quantity;
+            }
+            totalsubscriptionprice += cartPriceWithoutSubscription;
+          })
+          if ((cart.items_subtotal_price - totalsubscriptionprice) > 3000) {
             promotionalProducts = theme.promotionalProducts[25]
           }
 
