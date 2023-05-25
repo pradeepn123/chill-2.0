@@ -1322,6 +1322,7 @@
           },
           "e6f384bd-f593-4a17-86da-d6d127ed03fe": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "<p>50% off Tropical and Berry gummies with every Mad Tasty Purchase<\/p>"
             }
