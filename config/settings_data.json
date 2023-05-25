@@ -1058,7 +1058,7 @@
     "announce_gummies_button_url": "shopify:\/\/collections\/gummies-offer",
     "offer_text_on_cart": "🎉 Yey! you receive a complimentary 🎁 10mg CBD gummies for free with every purchase of 25mg gummies.",
     "offer_text_on_cart_subtext": "",
-    "show_gummies_offer": true,
+    "show_gummies_offer": false,
     "gummies_offer_text": "<p>🎉 Yey! You are now eligible for a 👉  <strong>50% Discount<\/strong> on the Tropical and Berry CBD gummies. Add as many quantity as you’d like  😍  for <strong>Flat 50% Off<\/strong>.<\/p>",
     "cart_button_url": "shopify:\/\/collections\/gummies-offer",
     "terms_and_conditions": "Limited period offer only, T&C Apply.",
