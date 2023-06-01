@@ -10,7 +10,7 @@
     "b3240cad-90db-4994-8903-9c592ccf8e9a": {
       "type": "background-video",
       "custom_css": [
-        ".video-container__video{margin-top: 100px;}"
+        ".video-container__video {margin-top: 100px;}"
       ],
       "settings": {
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/800120dc78d64e4cb6c88c3ef4d8c244.mp4",
@@ -21,7 +21,7 @@
         "title_size": 88,
         "title_size_mobile": 44,
         "use_h1": false,
-        "text": "<p>Find peace with functional products made from all natural  ingredients.<\/p>",
+        "text": "<p>100% Flavor, 0% Nicotine. Puff on Your Terms.<\/p>",
         "sub_font_size": 18,
         "enlarge_text": true,
         "button_label_1": "JOIN THE WAITLIST",
@@ -105,10 +105,10 @@
           "settings": {
             "flavour_image": "shopify:\/\/shop_images\/Group_8143.png",
             "image_position": "row-reverse",
-            "flavour_title": "<p>Our <strong>Mission<\/strong><\/p>",
+            "flavour_title": "<p>Meet <strong>ChillZero<\/strong><\/p>",
             "flavour_title_font_size": 52,
             "flavour_title_font_size_mobile": 32,
-            "flavour_description": "Offer a safer alternative to smoking by providing high-quality nicotine free diffusers bursting with flavor!",
+            "flavour_description": "The nicotine-free diffuser that's packed with flavor. Satisfy your senses and escape that nic hit with   powerful puffs and superior taste.",
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
             "button_text": "",
