@@ -10,7 +10,7 @@
     "b3240cad-90db-4994-8903-9c592ccf8e9a": {
       "type": "background-video",
       "custom_css": [
-        ".video-container__video{margin-top: 100px;}"
+        ".video-container__video {margin-top: 100px;}"
       ],
       "settings": {
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/800120dc78d64e4cb6c88c3ef4d8c244.mp4",
@@ -170,7 +170,7 @@
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
             "button_text": "Join Waitlist",
-            "button_url": "#claimDrawerContainer",
+            "button_url": "https:\/\/google.com",
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
             "button_text_color": "#ffffff",
