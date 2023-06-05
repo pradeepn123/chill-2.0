@@ -170,7 +170,7 @@
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
             "button_text": "Join Waitlist",
-            "button_url": "https:\/\/google.com",
+            "button_url": "",
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
             "button_text_color": "#ffffff",
