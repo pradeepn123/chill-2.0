@@ -35,6 +35,12 @@
                                     {% if block.settings.marquee_image-3 != blank %}
                                         <img class="marquee_content_image" src="{{ block.settings.marquee_image-3 | img_url: 'master' }}" alt="marquee_image" loading='lazy'>
                                     {% endif %}
+                                    {% if block.settings.marquee_image-4 != blank %}
+                                        <img class="marquee_content_image" src="{{ block.settings.marquee_image-4 | img_url: 'master' }}" alt="marquee_image" loading='lazy'>
+                                    {% endif %}
+                                    {% if block.settings.marquee_image-5 != blank %}
+                                        <img class="marquee_content_image" src="{{ block.settings.marquee_image-5 | img_url: 'master' }}" alt="marquee_image" loading='lazy'>
+                                    {% endif %}
                                 </div>
                             </div>
                         {% endfor %}
@@ -117,6 +123,16 @@
                     {
                         "type": "image_picker",
                         "id": "marquee_image-3",
+                        "label": "Marquee image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "marquee_image-4",
+                        "label": "Marquee image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "marquee_image-5",
                         "label": "Marquee image"
                     },
                     {
