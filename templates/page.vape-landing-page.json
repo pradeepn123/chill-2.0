@@ -24,10 +24,10 @@
         "text": "<p>Find peace with functional products made from all natural  ingredients.<\/p>",
         "sub_font_size": 18,
         "enlarge_text": true,
-        "button_label_1": "JOIN THE WAITLIST",
+        "button_label_1": "TRY NOW",
         "btn_font": 16,
         "btn_font_mobile": 18,
-        "button_url_1": "#claimDrawerContainer",
+        "button_url_1": "https:\/\/chill.com\/collections\/chill-zero\/products\/nicotine-free-flavor-diffusers-trifecta-try-all-three-flavors-chill",
         "button_label_2": "",
         "button_url_2": "",
         "botton_bg": "#9792e4",
@@ -135,7 +135,7 @@
         "9c3f97e2-f5ee-4962-93c5-01a471b8d7cb": {
           "type": "select",
           "settings": {
-            "marquee_text": "<p><strong>coming soon<\/strong><\/p>",
+            "marquee_text": "<p>0% Nicotine<\/p>",
             "marquee_text_color": "#000000",
             "marquee_text_font_size": 79,
             "marquee_text_font_size_mobile": 59,
@@ -145,10 +145,25 @@
             "marquee_image-1": "shopify:\/\/shop_images\/Group_636.jpg",
             "marquee_direction": "scrollRightToLeft"
           }
+        },
+        "22690f57-75a5-4ab8-b6a7-ca274b599507": {
+          "type": "select",
+          "settings": {
+            "marquee_text": "<p>100% Flavour<\/p>",
+            "marquee_text_color": "#000000",
+            "marquee_text_font_size": 79,
+            "marquee_text_font_size_mobile": 59,
+            "marquee_cta_text": "",
+            "button_redirection_link": "",
+            "marquee_button_color": "",
+            "marquee_image-1": "shopify:\/\/shop_images\/Group_636.jpg",
+            "marquee_direction": "scrollLeftToRight"
+          }
         }
       },
       "block_order": [
-        "9c3f97e2-f5ee-4962-93c5-01a471b8d7cb"
+        "9c3f97e2-f5ee-4962-93c5-01a471b8d7cb",
+        "22690f57-75a5-4ab8-b6a7-ca274b599507"
       ],
       "settings": {
         "animate_marquee_on_scroll": true
@@ -170,7 +185,7 @@
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
             "button_text": "Buy Now",
-            "button_url": "shopify:\/\/products\/chill-cbd-gummies-10mg-1",
+            "button_url": "shopify:\/\/products\/passion-fruit-grape-fruit",
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
             "button_text_color": "#ffffff",
@@ -190,8 +205,8 @@
             "flavour_description": "Lemon provides a mouth-wateringly zesty taste, for those who enjoy tangy citrus flavors.",
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
-            "button_text": "Join waitlist",
-            "button_url": "#claimDrawerContainer",
+            "button_text": "Buy now",
+            "button_url": "shopify:\/\/products\/lemon",
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
             "button_text_color": "#ffffff",
@@ -211,8 +226,8 @@
             "flavour_description": "Mint delivers a cool and refreshing sensation that is perfect for those who enjoy a fresh and invigorating experience",
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
-            "button_text": "Join waitlist",
-            "button_url": "#claimDrawerContainer",
+            "button_text": "Buy now",
+            "button_url": "https:\/\/chill.com\/products\/mint-ice",
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
             "button_text_color": "#ffffff",
