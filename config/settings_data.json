@@ -1718,7 +1718,7 @@
         "type": "vape-header",
         "settings": {
           "header_icon": "shopify:\/\/shop_images\/CHILLZERO.jpg",
-          "header_link": "https:\/\/chill.com",
+          "header_link": "shopify:\/\/collections\/chill-zero",
           "chill_header": "shopify:\/\/shop_images\/Chill_Logo.png",
           "chill_header_link": "https:\/\/chill.com",
           "header_button_text": "Buy Now",
