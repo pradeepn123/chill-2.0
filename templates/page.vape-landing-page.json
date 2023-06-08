@@ -135,35 +135,23 @@
         "9c3f97e2-f5ee-4962-93c5-01a471b8d7cb": {
           "type": "select",
           "settings": {
-            "marquee_text": "<p>0% Nicotine<\/p>",
+            "marquee_text": "",
             "marquee_text_color": "#000000",
             "marquee_text_font_size": 79,
             "marquee_text_font_size_mobile": 59,
             "marquee_cta_text": "",
             "button_redirection_link": "",
             "marquee_button_color": "",
-            "marquee_image-1": "shopify:\/\/shop_images\/Group_636.jpg",
+            "marquee_image-1": "shopify:\/\/shop_images\/Frame_6775.png",
+            "marquee_image-2": "shopify:\/\/shop_images\/Group_636.jpg",
+            "marquee_image-3": "shopify:\/\/shop_images\/Frame_6776.png",
+            "marquee_image-4": "shopify:\/\/shop_images\/Group_636.jpg",
             "marquee_direction": "scrollRightToLeft"
-          }
-        },
-        "22690f57-75a5-4ab8-b6a7-ca274b599507": {
-          "type": "select",
-          "settings": {
-            "marquee_text": "<p>100% Flavour<\/p>",
-            "marquee_text_color": "#000000",
-            "marquee_text_font_size": 79,
-            "marquee_text_font_size_mobile": 59,
-            "marquee_cta_text": "",
-            "button_redirection_link": "",
-            "marquee_button_color": "",
-            "marquee_image-1": "shopify:\/\/shop_images\/Group_636.jpg",
-            "marquee_direction": "scrollLeftToRight"
           }
         }
       },
       "block_order": [
-        "9c3f97e2-f5ee-4962-93c5-01a471b8d7cb",
-        "22690f57-75a5-4ab8-b6a7-ca274b599507"
+        "9c3f97e2-f5ee-4962-93c5-01a471b8d7cb"
       ],
       "settings": {
         "animate_marquee_on_scroll": true
