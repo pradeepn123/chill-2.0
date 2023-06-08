@@ -1721,8 +1721,8 @@
           "header_link": "https:\/\/chill.com",
           "chill_header": "shopify:\/\/shop_images\/Chill_Logo.png",
           "chill_header_link": "https:\/\/chill.com",
-          "header_button_text": "Join Waitlist",
-          "header_button_link": "#claimDrawerContainer",
+          "header_button_text": "Buy Now",
+          "header_button_link": "shopify:\/\/collections\/chill-zero",
           "header_button_color": "#9792e4"
         }
       },

@@ -24,10 +24,10 @@
         "text": "<p>100% Flavor, 0% Nicotine. Puff on Your Terms.<\/p>",
         "sub_font_size": 18,
         "enlarge_text": true,
-        "button_label_1": "BUY NOW",
+        "button_label_1": "TRY NOW",
         "btn_font": 16,
         "btn_font_mobile": 18,
-        "button_url_1": "shopify:\/\/collections\/chill-zero",
+        "button_url_1": "https:\/\/chill.com\/collections\/chill-zero\/products\/nicotine-free-flavor-diffusers-trifecta-try-all-three-flavors-chill",
         "button_label_2": "",
         "button_url_2": "",
         "botton_bg": "#9792e4",
@@ -91,7 +91,8 @@
         "e704ebd2-76fa-40ff-8b6c-c6b8de42ae40"
       ],
       "custom_css": [
-        ".marquee_container:first-child {margin-top: 80px; animation-duration: 120s;}"
+        ".marquee_container:first-child {margin-top: 80px; animation-duration: 120s;}",
+        "@media (max-width: 767px) {.marquee_container:first-child {margin-top: 30px; }}"
       ],
       "settings": {
         "animate_marquee_on_scroll": true
@@ -135,14 +136,17 @@
         "9c3f97e2-f5ee-4962-93c5-01a471b8d7cb": {
           "type": "select",
           "settings": {
-            "marquee_text": "<p><strong>coming soon<\/strong><\/p>",
+            "marquee_text": "",
             "marquee_text_color": "#000000",
             "marquee_text_font_size": 79,
             "marquee_text_font_size_mobile": 59,
             "marquee_cta_text": "",
             "button_redirection_link": "",
             "marquee_button_color": "",
-            "marquee_image-1": "shopify:\/\/shop_images\/Group_636.jpg",
+            "marquee_image-1": "shopify:\/\/shop_images\/Frame_6775.png",
+            "marquee_image-2": "shopify:\/\/shop_images\/Group_636.jpg",
+            "marquee_image-3": "shopify:\/\/shop_images\/Frame_6776.png",
+            "marquee_image-4": "shopify:\/\/shop_images\/Group_636.jpg",
             "marquee_direction": "scrollRightToLeft"
           }
         }
@@ -169,8 +173,8 @@
             "flavour_description": "Enjoy our exotic blend of passion fruit + grapefruit and be transported to sun-kissed tropical islands where flavor is everything and nicotine is no more.",
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
-            "button_text": "JOIN WAITLIST",
-            "button_url": "",
+            "button_text": "Buy Now",
+            "button_url": "shopify:\/\/products\/passion-fruit-grape-fruit",
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
             "button_text_color": "#ffffff",
@@ -190,8 +194,8 @@
             "flavour_description": "Refresh with the bright + zesty taste of lemon for those uplifting blue-sky days when only the freshest nicotine-free flavors will do.",
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
-            "button_text": "Join waitlist",
-            "button_url": "#claimDrawerContainer",
+            "button_text": "Buy now",
+            "button_url": "shopify:\/\/products\/lemon",
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
             "button_text_color": "#ffffff",
@@ -211,8 +215,8 @@
             "flavour_description": "Revive as our crisp + cooling mint meets intense icy menthol refreshment so cold that it'll freeze nicotine in its tracks.",
             "flavour_description_font_size": 20,
             "flavour_description_font_size_mobile": 16,
-            "button_text": "Join waitlist",
-            "button_url": "#claimDrawerContainer",
+            "button_text": "Buy now",
+            "button_url": "https:\/\/chill.com\/products\/mint-ice",
             "flavour_button_font_size": 24,
             "flavour_button_font_size_mobile": 20,
             "button_text_color": "#ffffff",
