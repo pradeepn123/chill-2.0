@@ -1032,18 +1032,18 @@ function openWaitlistDrawer(){
         document.getElementById('waitlistDrawerContainer').classList.add('claim-drawer-close');
       }
 }
-    document.querySelector('.header_button').addEventListener('click', () => {
-        openWaitlistDrawer();
-    })
+    // document.querySelector('.header_button').addEventListener('click', () => {
+    //     openWaitlistDrawer();
+    // })
 
-    document.querySelector('.video-container .overlay-text__button').addEventListener('click', () => {
-        openWaitlistDrawer();
-    })
-document.querySelectorAll('.flavour_button').forEach(flavour => {
-    flavour.addEventListener('click', () => {
-        openWaitlistDrawer();
-    })
-})
+    // document.querySelector('.video-container .overlay-text__button').addEventListener('click', () => {
+    //     openWaitlistDrawer();
+    // })
+// document.querySelectorAll('.flavour_button').forEach(flavour => {
+//     flavour.addEventListener('click', () => {
+//         openWaitlistDrawer();
+//     })
+// })
     var waitlistDrawerBackgroundClick = document.getElementById('waitlistDrawerBackground');
     waitlistDrawerBackgroundClick.addEventListener('click', function() {
         document.querySelector('.waitlist-drawer-summary__close').click()
