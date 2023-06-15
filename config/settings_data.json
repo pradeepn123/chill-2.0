@@ -1189,7 +1189,7 @@
           "mega_collection_heading": "By Collection",
           "shop_text": "Shop All",
           "shop_link": "shopify:\/\/collections\/shop-all",
-          "menu_linklist": "new-mega-menu",
+          "menu_linklist": "mega-menu",
           "menu_linklist_mobile": "",
           "menu_layout": "inline-menu-left",
           "nav_featured_link": "Sale",
