@@ -179,11 +179,15 @@
 
     </div>
   </div>
-
+  {% for child_link in link.links %}
+    {% if show_carousel_for_brands == true and forloop.index == 1 %}
+      {% assign featured_brands_title = child_link.title %}
+    {% endif %}
+  {% endfor %}
 {%- if link.links != blank or small_promo_count > 0 -%}
     <div class="container">
-
-      <ul class="featured_blocks_container navigation__tier-2{% if use_columns %} navigation__columns navigation__columns--count-{{ column_count }}{% if column_count == 5 %} navigation__columns--5-cols{% elsif column_count > 5 %} navigation__columns--over-5-cols{% endif %}{% if small_promo_count > 0 %} navigation__columns--with-promos{% endif %}{% endif %}">
+      <ul class="featured_blocks_container navigation__tier-2{% if use_columns %} navigation__columns navigation__columns--count-{{ column_count }}{% if column_count == 5 %} navigation__columns--5-cols{% elsif column_count > 5 %} navigation__columns--over-5-cols{% endif %}{% if small_promo_count > 0 %} navigation__columns--with-promos{% endif %}{% endif %}" data-title={{ featured_brands_title | json }}>
+      
         {% if use_columns and link.levels == 1 %}
           <li class="navigation__item navigation__column">
             {% for child_link in link.links %}
@@ -193,6 +197,7 @@
             {% endfor %}
           </li>
         {% else %}
+        
           {% for child_link in link.links %}
             {% if show_carousel_for_brands == true and forloop.index == 1 %}
               {% for child_child_link in child_link.links %}
@@ -299,7 +304,7 @@
         {%- endif -%}
       </ul>
       
-      <ul class="navigation__tier-2{% if use_columns %} navigation__columns navigation__columns--count-{{ column_count }}{% if column_count == 5 %} navigation__columns--5-cols{% elsif column_count > 5 %} navigation__columns--over-5-cols{% endif %}{% if small_promo_count > 0 %} navigation__columns--with-promos{% endif %}{% endif %}">
+      <ul class="navigation__tier-2{% if use_columns %} navigation__columns navigation__columns--count-{{ column_count }}{% if column_count == 5 %} navigation__columns--5-cols{% elsif column_count > 5 %} navigation__columns--over-5-cols{% endif %}{% if small_promo_count > 0 %} navigation__columns--with-promos{% endif %}{% endif %}" data-title="BRANDS BY CATEGORIES">
         {% if use_columns and link.levels == 1 %}
           <li class="navigation__item navigation__column">
             {% for child_link in link.links %}
