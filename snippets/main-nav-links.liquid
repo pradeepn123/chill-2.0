@@ -195,7 +195,7 @@
 {%- if link.links != blank or small_promo_count > 0 -%}
     <div class="container">
       {% if featured_brands_title != blank %}
-        <ul class="featured_blocks_container {% if smaller_list %} smaller-list {% else %} larger-list {% endif %} navigation__tier-2{% if use_columns %} navigation__columns navigation__columns--count-{{ column_count }}{% if column_count == 5 %} navigation__columns--5-cols{% elsif column_count > 5 %} navigation__columns--over-5-cols{% endif %}{% if small_promo_count > 0 %} navigation__columns--with-promos{% endif %}{% endif %}" data-title={{ featured_brands_title | json }}>
+        <ul class="featured_blocks_container {% if smaller_list %} smaller-list {% else %} larger-list {% endif %} navigation__tier-2{% if use_columns %} navigation__columns navigation__columns--count-{{ column_count }}{% if column_count == 5 %} navigation__columns--5-cols{% elsif column_count > 5 %} navigation__columns--over-5-cols{% endif %}{% if small_promo_count > 0 %} navigation__columns--with-promos{% endif %}{% endif %} {% if link.links.size == 1 %} show-only-this-block {% endif %}" data-title={{ featured_brands_title | json }}>
           {% if use_columns and link.levels == 1 %}
             <li class="navigation__item navigation__column">
               {% for child_link in link.links %}
