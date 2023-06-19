@@ -1038,6 +1038,16 @@
     flex-wrap: nowrap !important;
     overflow: auto;
     margin: 0 !important;
+    .slick-list {
+        width: 100%;
+        .slick-track{
+            width: 100% !important;
+            .navigation__item{
+                width: 100%;
+            }
+        }
+    }
+    
     .navigation__link{
         max-width: 130px;
     }
@@ -1113,6 +1123,7 @@
 #NavigationTier2-2 .container .navigation__tier-2{
     position: relative;
     &.navigation__columns{
+        margin: 0 !important;
         &::before{
             content: attr(data-title);
             position: absolute;
@@ -1137,7 +1148,6 @@
         .navigation__column{
             max-width: calc(100% / 6);
             padding: 40px 0;
-            
         }
         .navigation__tier-3{
             .navigation__item{
