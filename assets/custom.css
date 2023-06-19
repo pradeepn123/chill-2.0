@@ -1715,6 +1715,15 @@ body.overflow-hidden {
   overflow: auto;
   margin: 0 !important;
 }
+.featured_blocks_container.navigation__columns .slick-list {
+  width: 100%;
+}
+.featured_blocks_container.navigation__columns .slick-list .slick-track {
+  width: 100% !important;
+}
+.featured_blocks_container.navigation__columns .slick-list .slick-track .navigation__item {
+  width: 100%;
+}
 .featured_blocks_container.navigation__columns .navigation__link {
   max-width: 130px;
 }
@@ -1790,6 +1799,9 @@ body.overflow-hidden {
 
 #NavigationTier2-2 .container .navigation__tier-2 {
   position: relative;
+}
+#NavigationTier2-2 .container .navigation__tier-2.navigation__columns {
+  margin: 0 !important;
 }
 #NavigationTier2-2 .container .navigation__tier-2.navigation__columns::before {
   content: attr(data-title);
