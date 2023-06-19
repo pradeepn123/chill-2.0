@@ -313,7 +313,7 @@
         </ul>
       {% endif %}
       
-      {% if link.links.size != 0 %}
+      {% if link.links.size != 1 %}
         <ul class="navigation__tier-2{% if use_columns %} navigation__columns navigation__columns--count-{{ column_count }}{% if column_count == 5 %} navigation__columns--5-cols{% elsif column_count > 5 %} navigation__columns--over-5-cols{% endif %}{% if small_promo_count > 0 %} navigation__columns--with-promos{% endif %}{% endif %}" data-title="BRANDS BY CATEGORIES">
           {% if use_columns and link.levels == 1 %}
             <li class="navigation__item navigation__column">
