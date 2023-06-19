@@ -1194,7 +1194,7 @@ body.overflow-hidden {
   flex-basis: 60%;
   color: #000;
 }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   #NavigationTier2-1.navigation__child-tier .container .navigation__columns .navigation__item {
     border-bottom: 1px solid #E6E6F1;
   }
@@ -1426,6 +1426,26 @@ body.overflow-hidden {
   }
 }
 
+.navigation__link:hover svg {
+  opacity: 1;
+  transition: opacity 250ms;
+}
+.navigation__link svg {
+  fill: #000;
+  position: absolute;
+  right: -25px;
+  opacity: 0;
+  width: 16px;
+  height: 16px;
+  transform: translateY(13%);
+  margin-left: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.navigation__link svg path {
+  fill: #000;
+}
+
 .navbar_collection_link {
   color: #000;
   font-size: 14px;
@@ -1434,24 +1454,7 @@ body.overflow-hidden {
   margin: 20px auto;
   display: flex;
   justify-content: space-around;
-}
-.navbar_collection_link:hover svg {
-  display: block;
-  width: 12px;
-  height: 12px;
-}
-.navbar_collection_link svg {
-  fill: #000;
-  display: none;
-  width: 0px;
-  height: 0px;
-  transform: translateY(13%);
-  margin-left: 5px;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.navbar_collection_link svg path {
-  fill: #000;
+  position: relative;
 }
 @media (min-width: 1200px) and (max-width: 1413px) {
   .navbar_collection_link {
@@ -1467,7 +1470,7 @@ body.overflow-hidden {
   flex-direction: column;
 }
 @media (min-width: 768px) and (max-width: 1199px) {
-  .mobile-navigation-drawer #NavigationTier2-2-mob.navigation__tier-2-container .container .navigation__tier-2 {
+  .mobile-navigation-drawer #NavigationTier2-2-mob.navigation__tier-2-container .container .navigation__tier-2 .featured_blocks_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -1476,11 +1479,6 @@ body.overflow-hidden {
   flex-basis: 100%;
   padding: 20px;
   padding: 0 !important;
-}
-@media (min-width: 768px) and (max-width: 1199px) {
-  .mobile-navigation-drawer #NavigationTier2-2-mob.navigation__tier-2-container .container .navigation__tier-2 .navigation__item {
-    border-bottom: none !important;
-  }
 }
 .mobile-navigation-drawer #NavigationTier2-2-mob.navigation__tier-2-container .container .navigation__tier-2 .navigation__item .navigation__link {
   display: flex;
@@ -1645,10 +1643,10 @@ body.overflow-hidden {
 }
 .mobile-navigation-drawer .navigation__child-tier .navigation__item--with-children .navigation__link {
   text-transform: uppercase;
-  padding: 25px !important;
+  padding: 20px !important;
 }
 .mobile-navigation-drawer .navigation__child-tier .navigation__item--with-children .navigation__children-toggle {
-  padding: 24.5px 25px;
+  padding: 20px 25px;
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .mobile-navigation-drawer .navigation__child-tier .navigation__item--with-children .navigation__children-toggle {
@@ -1695,7 +1693,6 @@ body.overflow-hidden {
 }
 #NavigationTier2-2.navigation__tier-2-container .container .navigation__tier-2 .navigation__item {
   flex-basis: 100%;
-  padding: 40px 0 0 0;
 }
 #NavigationTier2-2.navigation__tier-2-container .container .navigation__tier-2 .navigation__item .navigation__link {
   display: flex;
@@ -1714,15 +1711,26 @@ body.overflow-hidden {
   flex-wrap: nowrap !important;
   overflow: auto;
   margin: 0 !important;
+  padding-top: 60px !important;
 }
-.featured_blocks_container.navigation__columns .slick-list {
+.featured_blocks_container.navigation__columns::before {
+  top: 30px !important;
+}
+.featured_blocks_container.navigation__columns.smaller-list .slick-list {
   width: 100%;
 }
-.featured_blocks_container.navigation__columns .slick-list .slick-track {
-  width: 100% !important;
-}
-.featured_blocks_container.navigation__columns .slick-list .slick-track .navigation__item {
+.featured_blocks_container.navigation__columns.smaller-list .slick-list .slick-track {
   width: 100%;
+  margin-top: 30px;
+}
+.featured_blocks_container.navigation__columns.smaller-list .slick-list .slick-track .navigation__item {
+  width: 14.2857142857%;
+}
+.featured_blocks_container.navigation__columns.smaller-list .slick-list .slick-track .navigation__item .navigation__link {
+  margin-left: 0 !important;
+}
+.featured_blocks_container.navigation__columns.larger-list .slick-track {
+  margin-top: 30px;
 }
 .featured_blocks_container.navigation__columns .navigation__link {
   max-width: 130px;
@@ -1731,6 +1739,9 @@ body.overflow-hidden {
   .featured_blocks_container.navigation__columns {
     padding: 82px 20px 20px 20px !important;
     gap: 20px;
+  }
+  .featured_blocks_container.navigation__columns:before {
+    top: 0 !important;
   }
   .featured_blocks_container.navigation__columns .navigation__item {
     padding: 0 !important;
@@ -1770,7 +1781,7 @@ body.overflow-hidden {
   margin: auto;
 }
 .featured_blocks_container.navigation__columns .slick-header-prev svg, .featured_blocks_container.navigation__columns .slick-header-next svg {
-  fill: #000 !important;
+  fill: #6EC59F !important;
   width: 10px;
   height: 10px;
 }
@@ -1792,6 +1803,8 @@ body.overflow-hidden {
 }
 #NavigationTier2-2-mob .container .navigation__tier-2:nth-child(2) {
   padding-top: 70px;
+  margin-top: 30px;
+  border-top: 1px solid #E6E6F1;
 }
 #NavigationTier2-2-mob .container .navigation__tier-2:nth-child(2)::before {
   top: 0;
@@ -1807,6 +1820,7 @@ body.overflow-hidden {
   content: attr(data-title);
   position: absolute;
   left: 0;
+  top: -30px;
   font-weight: 700;
   font-size: 20px;
   font-family: "Open Sans", sans-serif;
@@ -1816,9 +1830,6 @@ body.overflow-hidden {
 #NavigationTier2-2 .container .navigation__tier-2:nth-child(2) {
   justify-content: flex-start !important;
 }
-#NavigationTier2-2 .container .navigation__tier-2:nth-child(2) .navigation__item--with-children {
-  margin-top: 45px;
-}
 #NavigationTier2-2 .container .navigation__tier-2:nth-child(2) .navigation__item .navigation__link {
   margin: 0 !important;
   text-transform: uppercase;
@@ -1826,7 +1837,7 @@ body.overflow-hidden {
 }
 #NavigationTier2-2 .container .navigation__tier-2:nth-child(2) .navigation__column {
   max-width: 16.6666666667%;
-  padding: 40px 0;
+  margin-bottom: 36px;
 }
 #NavigationTier2-2 .container .navigation__tier-2:nth-child(2) .navigation__tier-3 .navigation__item {
   padding: 0 !important;

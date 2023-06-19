@@ -2547,19 +2547,6 @@ table {
     white-space: nowrap;
     position: relative;
   }
-  .navigation .navigation__tier-1 > .navigation__item > .navigation__link::before {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    background-color: #9692DE;
-    height: 3px;
-    transition: transform 0.3s;
-    z-index: 20;
-    left: 18px;
-    width: calc(100% - 36px);
-    transform: scaleX(0);
-    will-change: transform;
-  }
   .navigation .navigation__tier-1 > .navigation__item > .navigation__link:hover::before {
     transform: scaleX(1);
   }
@@ -2663,9 +2650,9 @@ table {
     text-transform: uppercase;
     opacity: 0.7;
   }
-  .navigation .navigation__columns .navigation__column:not(.navigation__column--promotion) .navigation__children-toggle {
+  /* .navigation .navigation__columns .navigation__column:not(.navigation__column--promotion) .navigation__children-toggle {
     display: none;
-  }
+  } */
   .navigation .navigation__columns .navigation__column:not(.navigation__column--promotion) .navigation__tier-3 {
     display: block;
   }
@@ -2745,6 +2732,19 @@ table {
 @media(min-width:1200px) {
   .navigation .navigation__children-toggle {
     display: none;
+  }
+  .navigation .navigation__tier-1 > .navigation__item > .navigation__link::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    background-color: #9692DE;
+    height: 3px;
+    transition: transform 0.3s;
+    z-index: 20;
+    left: 18px;
+    width: calc(100% - 36px);
+    transform: scaleX(0);
+    will-change: transform;
   }
 }
 @media(min-width: 1000px) {
@@ -3052,6 +3052,8 @@ table {
 
 .mobile-nav-title {
   padding: 12px 0;
+  font-weight: 600;
+  color: #000;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
