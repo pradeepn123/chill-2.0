@@ -917,6 +917,103 @@
         "bg_image": "shopify:\/\/shop_images\/footer_background_op.jpg",
         "color_bg": "#ffffff"
       }
+    },
+    "6aac6c5b-ac6a-408c-9f05-c8f9abc4546b": {
+      "type": "slideshow",
+      "blocks": {
+        "template--16160608616606__6aac6c5b-ac6a-408c-9f05-c8f9abc4546b-168751628476913aef-0": {
+          "type": "image",
+          "settings": {
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "Tell your story",
+            "title": "",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>And optional subtext<\/p>",
+            "heading_color": "#000",
+            "text_color": "#000",
+            "enlarge_text": true,
+            "button_label_1": "Shop this",
+            "button_url_1": "",
+            "button_label_2": "Shop all",
+            "button_url_2": "",
+            "button_background_color": "#F3B09F",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center center"
+          }
+        },
+        "template--16160608616606__6aac6c5b-ac6a-408c-9f05-c8f9abc4546b-168751628476913aef-1": {
+          "type": "image",
+          "settings": {
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "Tell your story",
+            "title": "Two line\nslide heading",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>And optional subtext<\/p>",
+            "heading_color": "#000",
+            "text_color": "#000",
+            "enlarge_text": true,
+            "button_label_1": "Shop this",
+            "button_url_1": "",
+            "button_label_2": "Shop all",
+            "button_url_2": "",
+            "button_background_color": "#F3B09F",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center center"
+          }
+        },
+        "4477bc9a-aeec-4d55-85a9-677ab64d8068": {
+          "type": "image",
+          "settings": {
+            "image_position": "center left",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "Tell your story",
+            "title": "Two line\nslide heading",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>And optional subtext<\/p>",
+            "heading_color": "#000",
+            "text_color": "#000",
+            "enlarge_text": true,
+            "button_label_1": "Shop this",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#F3B09F",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        }
+      },
+      "block_order": [
+        "template--16160608616606__6aac6c5b-ac6a-408c-9f05-c8f9abc4546b-168751628476913aef-0",
+        "template--16160608616606__6aac6c5b-ac6a-408c-9f05-c8f9abc4546b-168751628476913aef-1",
+        "4477bc9a-aeec-4d55-85a9-677ab64d8068"
+      ],
+      "settings": {
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "slide_transition": "fade",
+        "slide_navigation": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
     }
   },
   "order": [
@@ -937,6 +1034,7 @@
     "16607619805b81a490",
     "3dee64a8-71bf-4655-926f-2db509dcd6a5",
     "166453148629faf25b",
-    "16607637867e64e5b3"
+    "16607637867e64e5b3",
+    "6aac6c5b-ac6a-408c-9f05-c8f9abc4546b"
   ]
 }
