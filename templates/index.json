@@ -420,15 +420,15 @@
             "title_size_mobile": 46,
             "use_h1": false,
             "text": "<p>And optional subtext<\/p>",
-            "heading_color": "#000",
-            "text_color": "#000",
+            "heading_color": "#000000",
+            "text_color": "#000000",
             "enlarge_text": true,
             "button_label_1": "Shop this",
             "button_url_1": "",
             "button_label_2": "",
             "button_url_2": "",
-            "button_background_color": "#F3B09F",
-            "button_text_color": "#FFFFFF",
+            "button_background_color": "#f3b09f",
+            "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "center center"
           }
@@ -454,7 +454,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "<p>Our <strong> Trending Products <\/strong><\/p>",
-        "collection": "shop",
+        "collection": "shop-all",
         "show_vendor": true,
         "enable_carousel": false,
         "grid": 4,
