@@ -736,3 +736,26 @@
         }
     }    
 }
+.article{
+    h1, h2, h3, h4, h5, h6{
+        scroll-margin-top: 100px;
+    }
+    .index{
+        a{
+            text-decoration: none;
+        }
+        .blog_index_title{
+            color: #6F7372;
+            font-size: 14px !important;
+        } 
+        .blog_index_main_content_title, .blog_index_subcontent li{
+            font-size: 14px !important;
+            color: #6F7372 !important;
+            padding: 8px 0;
+            border-bottom: 1px solid #6F7372;
+        }
+        ol li{
+            list-style: decimal inside;
+        }
+    }
+}
