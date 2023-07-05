@@ -454,7 +454,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "<p>Our <strong> Trending Products <\/strong><\/p>",
-        "collection": "shop-all",
+        "collection": "trending-products",
         "show_vendor": true,
         "enable_carousel": false,
         "grid": 4,
