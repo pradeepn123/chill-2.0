@@ -414,7 +414,7 @@
         "enable_carousel": false,
         "grid": 4,
         "rows": 1,
-        "use_alt_bg": true,
+        "use_alt_bg": false,
         "show_view_all": true,
         "full_width": false
       }
@@ -502,15 +502,15 @@
             "title_size_mobile": 46,
             "use_h1": false,
             "text": "<p>Tips that could help you stay sober<br\/>one sip at a time<\/p>",
-            "heading_color": "#000",
-            "text_color": "#000",
+            "heading_color": "#000000",
+            "text_color": "#000000",
             "enlarge_text": true,
             "button_label_1": "check it out",
             "button_url_1": "shopify:\/\/blogs\/chill-blog\/sipping-sobriety-navigating-social-situations-without-alcohol",
             "button_label_2": "",
             "button_url_2": "",
-            "button_background_color": "#F3B09F",
-            "button_text_color": "#FFFFFF",
+            "button_background_color": "#f3b09f",
+            "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
