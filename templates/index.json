@@ -514,11 +514,65 @@
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
+        },
+        "987139b6-df53-4095-b4af-bead70e20ab0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "Tell your story",
+            "title": "Two line\nslide heading",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>And optional subtext<\/p>",
+            "heading_color": "#000",
+            "text_color": "#000",
+            "enlarge_text": true,
+            "button_label_1": "Shop this",
+            "button_url_1": "",
+            "button_label_2": "Shop all",
+            "button_url_2": "",
+            "button_background_color": "#F3B09F",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center center"
+          }
+        },
+        "60c76a91-2ae1-41bb-8a3f-96a16c400105": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4As-HP-Banner_5d998a3d-c649-4e37-949a-510f5f3b881b.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong>The 4 A's of\nStress Relief: \nUnderstanding and\nApplying Them<\/strong>",
+            "title_size": 56,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Stress is a common experience <br\/>for many people, and it can have negative<br\/>effects on both physical and mental health.<\/p>",
+            "heading_color": "#ffffff",
+            "text_color": "#000",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "read more",
+            "button_url_2": "shopify:\/\/blogs\/chill-blog\/the-4-as-of-stress-relief-understanding-and-applying-them",
+            "button_background_color": "#9792e4",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
         }
       },
       "block_order": [
         "template--16159658737822__bc3d34c0-542b-45d5-8059-06e17a636766-168751658382093f68-0",
-        "2bb85ef6-1dde-4ca8-bbbf-60e81f5022b3"
+        "2bb85ef6-1dde-4ca8-bbbf-60e81f5022b3",
+        "987139b6-df53-4095-b4af-bead70e20ab0",
+        "60c76a91-2ae1-41bb-8a3f-96a16c400105"
       ],
       "settings": {
         "height": "fixed",
@@ -535,7 +589,6 @@
     },
     "1661759224933bf819": {
       "type": "home-ingredients",
-      "disabled": true,
       "blocks": {
         "748621ad-2492-4f8f-8f16-4036356019f0": {
           "type": "tabs-heading",
@@ -618,6 +671,7 @@
         "1ee69049-e857-4944-aea9-6f2d8fc5456c",
         "9b1ac47c-d8ea-46b5-be0b-334854a78afe"
       ],
+      "disabled": true,
       "settings": {
         "heading_text": "<p><strong>Naturally <\/strong>Sourced,<br\/><strong>Functional <\/strong>Ingredients<\/p>",
         "subheading_text": "<p>Soothe your soul with naturally-sourced products that are oh so Chill. <\/p>",
@@ -626,7 +680,6 @@
     },
     "16616836322167cf31": {
       "type": "home_collections",
-      "disabled": true,
       "blocks": {
         "685e6031-5b34-4a0f-83f0-79e29a6ed09f": {
           "type": "collection-image",
@@ -679,6 +732,7 @@
         "3b6372a0-4677-429a-bf82-20402b224607",
         "12b2d340-74f6-4e2b-a23d-d4653ee7e087"
       ],
+      "disabled": true,
       "settings": {
         "text": "<p>Our <strong>Collections<\/strong><\/p>",
         "show_shop_all": true,
@@ -827,7 +881,6 @@
     },
     "16607619805b81a490": {
       "type": "logo-list",
-      "disabled": true,
       "blocks": {
         "15de9db7-b491-41e3-9563-da240363bc42": {
           "type": "logo",
@@ -892,6 +945,7 @@
         "9ff6370d-ec5c-4109-964b-471a3e4aabdb",
         "97b2dc03-0af6-4b4a-8d86-1b97f4fca109"
       ],
+      "disabled": true,
       "settings": {
         "bg_color": "",
         "title": "",
@@ -901,7 +955,6 @@
     },
     "3dee64a8-71bf-4655-926f-2db509dcd6a5": {
       "type": "rich-text",
-      "disabled": true,
       "blocks": {
         "template--15968033865886__3dee64a8-71bf-4655-926f-2db509dcd6a5-1664953474fa2ec11e-0": {
           "type": "heading",
@@ -914,6 +967,7 @@
       "block_order": [
         "template--15968033865886__3dee64a8-71bf-4655-926f-2db509dcd6a5-1664953474fa2ec11e-0"
       ],
+      "disabled": true,
       "settings": {
         "height": "small",
         "text_alignment": "center",
