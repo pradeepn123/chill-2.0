@@ -1,0 +1,27 @@
+{% comment %} Show collection description {% endcomment %}
+<div class="collection_description container">
+{% assign collection_description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."%}
+    <div class="collection-description-short">
+        {{ collection_description | truncate: 100, "... " }}
+        {% if collection_description.size >= 100 %}
+        <a class="readmore_btn" href="#">Read More</a>
+        {% endif %}
+      </div>
+      <div class="collection-description-full">
+        {{ collection_description }}
+        <br><a class="readless_btn" href="#">Read Less</a>
+      </div>
+    
+</div>
+
+{% schema %}
+    {
+        "name": "Collection description",
+        "settings": [],
+        "presets": [
+            {
+                "name": "Collection description"
+            }
+        ]
+    }
+{% endschema %}

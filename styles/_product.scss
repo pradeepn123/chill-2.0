@@ -54,22 +54,22 @@
                         }
                         .slideshow-controls__arrows{
                             .slick-product-prev{
-                                left: unset;
-                                top: unset;
+                                right: unset;
+                                top: 50%;
                                 bottom: 0px;
-                                right: 22%;
+                                left: 5%;
                                 border-radius: 50%;
                                 @media(min-width:1024px){
-                                    right: 20%;
+                                    left: 5%;
                                 }
                                 @media(min-width:1200px){
-                                    right: 18%;
+                                    left: 5%;
                                 }
                                 @media(min-width:1440px){
-                                    right: 16%;
+                                    left: 5%;
                                 }
                                 @media(min-width:1680px){
-                                    right: 16%;
+                                    left: 5%;
                                 }
                                 &::after{
                                     border-radius: 50%;
@@ -88,9 +88,9 @@
                                 }
                             }
                             .slick-product-next{
-                                top: unset;
+                                top: 50%;
                                 bottom: 0px;
-                                right: 10%;
+                                right: 5%;
                                 border-radius: 50%;
                                 &::after{
                                     border-radius: 50%;
@@ -162,6 +162,7 @@
                 }
                 .title-row{
                     .title{
+                        margin-bottom: 0 !important;
                         font-size: 24px;
                         font-weight: 900;
                         font-family: 'Open Sans', sans-serif;
@@ -175,7 +176,7 @@
                     color: #707070;
                     padding-bottom: 3px;
                     display: block;
-                    margin: 15px 0;
+                    margin: 10px 0;
                     width: fit-content;
                     transition: border 130ms;
                     span{
@@ -203,7 +204,7 @@
                     }
                 }
                 .product_custom_icons{
-                    margin: 30px 0;
+                    margin: 15px 0;
                     .product_custom_icons_list{
                         display: flex;
                         flex-wrap: wrap;
@@ -227,6 +228,9 @@
                         color: #000000;
                         line-height: 1.6;
                         font-family: 'Open Sans', sans-serif;
+                        p{
+                            margin-bottom: 0;
+                        }
                         .product-description-full{
                             display: none;
                             span{
@@ -295,6 +299,7 @@
                     }
                 }
                 .buy-buttons-row{
+                    margin: 15px 0 !important;
                     .subscription_main_title{
                         font-size: 16px;
                         color: #000000;
