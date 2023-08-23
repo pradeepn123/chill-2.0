@@ -623,6 +623,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/4As-HP-Banner_5d998a3d-c649-4e37-949a-510f5f3b881b.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/4As-HP-Banner_5d998a3d-c649-4e37-949a-510f5f3b881b.jpg",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
