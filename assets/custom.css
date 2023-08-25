@@ -1788,7 +1788,7 @@ body.overflow-hidden {
   padding: 12px;
   border-radius: 50%;
   border: 1px solid #D6D6D6;
-  margin: 50px 0;
+  margin: 75px 0;
 }
 .featured_blocks_container.navigation__columns .slick-header-prev svg, .featured_blocks_container.navigation__columns .slick-header-next svg {
   fill: #6EC59F !important;
