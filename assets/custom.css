@@ -1794,6 +1794,12 @@ body.overflow-hidden {
   width: 10px;
   height: 10px;
 }
+.featured_blocks_container.navigation__columns .slick-header-prev {
+  margin-right: 15px;
+}
+.featured_blocks_container.navigation__columns .slick-header-next {
+  margin-left: 15px;
+}
 
 #NavigationTier2-2-mob .container .navigation__tier-2 {
   position: relative;
