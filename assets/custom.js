@@ -897,6 +897,43 @@ document.addEventListener('DOMContentLoaded', () => {
             customProductForm.addEventListener("submit", theme.customAddToCart);
         })
     }
+
+
+    function showAgeVerificationPopup(){
+        const reqElement = document.querySelector("#age_verification_popup");
+        reqElement.style.display = 'block';
+    }
+
+    function removeAgeVertificationEventListener(){
+        ["keydown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"].forEach(e => {
+            document.removeEventListener(e , showAgeVerificationPopup())
+        })
+
+        const reqElement = document.querySelector("#age_verification_popup");
+        reqElement.style.display = "none";
+    }
+
+    // Age Verification
+    function addAgeVertificationEventListener(){
+        const reqElement = document.querySelector("#age_verification_popup");
+        const ageVerified = document.querySelector("#age_verified");
+
+        ["keydown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"].forEach(e => {
+            document.addEventListener(e , showAgeVerificationPopup())
+        })
+        
+
+        // Add event listener to the button that verifies age
+        ageVerified.addEventListener('click', function(){
+            removeAgeVertificationEventListener();
+        })
+
+        sessionStorage.setItem("alreadyShown", 2);
+    }
+
+    if(Number(sessionStorage.getItem('alreadyShown')) != 2){
+        addAgeVertificationEventListener();
+    }
 })
 
 
