@@ -1,4 +1,10 @@
-<div class="age_verification" id="age_verification_popup">
+{% style %}
+  .age_verification{
+    {% comment %} display: none !important; {% endcomment %}
+  }
+{% endstyle %}
+
+<div class="age_verification newAgeVerificationClassHidden" id="age_verification_popup">
   <div class="section_content">
     {% if  section.settings.video != blank  and  section.settings.verification_block_header != blank  %}
       <div class="video_container">
