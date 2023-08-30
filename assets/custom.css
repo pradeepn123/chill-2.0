@@ -7994,10 +7994,6 @@ body {
     font-size: 14px !important;
   }
 }
-#coverScreen {
-  display: block;
-}
-
 .cart_page {
   max-width: 65%;
   margin: auto;
