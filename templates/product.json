@@ -145,7 +145,7 @@
         "b25a3dd3-8a24-4334-9108-800532ba36f0": {
           "type": "accordion",
           "settings": {
-            "title": "Directions to use",
+            "title": "Directions for use",
             "icon": "",
             "content": "<p>{{ product.metafields.custom.direction_to_use | metafield_tag }}<\/p>",
             "test_result_link": "",

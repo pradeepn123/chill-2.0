@@ -197,6 +197,11 @@
         "shop_all_link": "shopify:\/\/collections\/shop-all"
       }
     },
+    "e8ffae61-2536-4722-8642-236be426413c": {
+      "type": "collection-description",
+      "settings": {
+      }
+    },
     "cca586ca-6738-41f2-b11e-702cdd8e220d": {
       "type": "newsletter",
       "settings": {
@@ -214,6 +219,7 @@
     "b96a799d-c27a-4eb4-bb54-509cc8c84eff",
     "d15d7798-3d4a-425d-9c6a-898163f36c18",
     "2e196d1c-4e76-42e6-8b58-0bc603a2f139",
+    "e8ffae61-2536-4722-8642-236be426413c",
     "cca586ca-6738-41f2-b11e-702cdd8e220d"
   ]
 }
