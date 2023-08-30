@@ -7955,47 +7955,51 @@ document.addEventListener('DOMContentLoaded', () => {
       $('#age_verification_preloader_mobile').hide();
     }, 500)
   
-  const ageVerifyPopUp = document.getElementsByClassName('age_verification');
-  
-  function ageVerifictionStaticFunctions() {
-    let vh = window.innerHeight * 0.01;
-    // Then we set the value in the --vh custom property to the root of the document
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-
+    const ageVerifyPopUp = document.getElementsByClassName('age_verification');
     
-    if (document.querySelector('.age_verification')) {
-      let ageVerificationModal = document.querySelector('.age_verification')
-      var isModalShown = sessionStorage.getItem('alreadyShown');
-      let urlString = window.location.href;
-      console.log(urlString);
-      let isResetPage = urlString.indexOf('/account/reset') > 0 ? true : false ;
-      if(isResetPage){
-        ageVerificationModal.style.display = 'none'
-      }
-      else if (!isModalShown) {
-        ageVerificationModal.style.display = '';
-        document.querySelector('body').classList.add("overflow-hidden")     
-      } else {
-        ageVerificationModal.style.display = 'none'
-      }
-      ageVerificationModal.style.height = window.innerHeight
-      ageVerificationModal.style.height = 'calc(var(--vh, 1vh) * 100)'
-    }
-    if (document.querySelector(".age_verification_yes")) {
-      document.querySelector(".age_verification_yes").addEventListener('click', () => {
-        document.querySelector('.age_verification').style.display = 'none'
-        document.querySelector('body').classList.remove("overflow-hidden")
-        sessionStorage.setItem('alreadyShown', 'true');
-      })
-    }
-    window.addEventListener('resize', () => {
-      // We execute the same script as before
+    function ageVerifictionStaticFunctions() {
       let vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
       document.documentElement.style.setProperty('--vh', `${vh}px`);
-    });
-  }
 
-  ageVerifictionStaticFunctions();
+      
+      if (document.querySelector('.age_verification')) {
+        let ageVerificationModal = document.querySelector('.age_verification')
+        var isModalShown = sessionStorage.getItem('alreadyShown');
+        let urlString = window.location.href;
+        console.log(urlString);
+        let isResetPage = urlString.indexOf('/account/reset') > 0 ? true : false ;
+        if(isResetPage){
+          ageVerificationModal.style.display = 'none'
+        }
+        else if (!isModalShown) {
+          ageVerificationModal.style.display = '';
+          document.querySelector('body').classList.add("overflow-hidden")     
+        } else {
+          ageVerificationModal.style.display = 'none'
+        }
+        ageVerificationModal.style.height = window.innerHeight
+        ageVerificationModal.style.height = 'calc(var(--vh, 1vh) * 100)'
+      }
+      if (document.querySelector(".age_verification_yes")) {
+        document.querySelector(".age_verification_yes").addEventListener('click', () => {
+          document.querySelector('.age_verification').style.display = 'none'
+          document.querySelector('body').classList.remove("overflow-hidden")
+          sessionStorage.setItem('alreadyShown', 'true');
+        })
+      }
+      window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      });
+    }
+
+    ageVerifictionStaticFunctions();
+
+    setTimeout(() => {
+      document.querySelector("#coverScreen").style.display = "none"
+    }, 1000)
   }
 
 
