@@ -7927,3 +7927,31 @@
 
 })(theme.jQuery);  
 /* Built with Barry v1.0.8 */
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Age Verification Section Rendering
+  const ageVerificationElement = document.querySelector("[data-age-verification]");
+  const ageVerificationParent = document.querySelector("#newAgeVerification");
+
+  function handleResponse() {
+    let finalResult = this.responseText;
+    const objFinalResult = JSON.parse(finalResult);
+    const resultInString = Object.values(objFinalResult)[0];
+
+    // Converting String to HTML
+    const parser = new DOMParser();
+    const finalHTML = parser.parseFromString(resultInString, 'text/html');
+
+    // Appending HTML to the theme.liquid
+    const reqHTMLResult = finalHTML.body;
+    ageVerificationElement.append(reqHTMLResult);
+  }
+
+
+  const request = new XMLHttpRequest();
+  request.addEventListener('load', handleResponse);
+  request.open("GET", "/?sections=age-verification", true);
+  request.send();
+})
