@@ -7822,7 +7822,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 99999;
+  z-index: 9999;
 }
 .age_verification .section_content #age_verification_preloader_desktop, .age_verification .section_content #age_verification_preloader_tab, .age_verification .section_content #age_verification_preloader_mobile {
   width: 100vw;
@@ -7985,18 +7985,6 @@ body {
     font-size: 14px !important;
   }
 }
-.newAgeVerificationClassHidden {
-  display: none !important;
-}
-
-.newAgeVerificationClassShow {
-  display: block;
-}
-
-.importantOverflowInitial {
-  overflow: initial !important;
-}
-
 .cart_page {
   max-width: 65%;
   margin: auto;
