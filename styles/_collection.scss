@@ -119,6 +119,12 @@
                         font-size: 18px;
                     }
                 }
+                .cf{
+                    color: #000;
+                    @media(max-width: 768px){
+                        font-size: 16px;
+                    }
+                }
             }
         }
         .utility-bar__left, .utility-bar__right{
