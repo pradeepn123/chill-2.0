@@ -902,8 +902,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // reqElement.style.display = 'block';
         reqElement.classList.remove("newAgeVerificationClassHidden");
         reqElement.classList.add("newAgeVerificationClassShow");
-
-        console.log('hi sahrudh');
     }
 
     function removeAgeVertificationEventListener(){
