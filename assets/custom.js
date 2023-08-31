@@ -97,7 +97,8 @@ $(document).ready(function () {
     $(this).closest('.block-inner').find('#addToCartPopupBackground').removeClass('show');
     $('body').css('overflow','auto');
   });
-  
+
+//   product description
   $('.readmore').click(function (event) {
     event.preventDefault();
     var descriptionFull = document.querySelector('.product-description-full');
@@ -110,6 +111,22 @@ $(document).ready(function () {
     var descriptionFull = document.querySelector('.product-description-full');
     descriptionFull.style.display = 'none';
     var descriptionShort = document.querySelector('.product-description-short');
+    descriptionShort.style.display = 'block';
+  });  
+
+//   collection description
+  $('.readmore_btn').click(function (event) {
+    event.preventDefault();
+    var descriptionFull = document.querySelector('.collection-description-full');
+    descriptionFull.style.display = 'block';
+    var descriptionShort = document.querySelector('.collection-description-short');
+    descriptionShort.style.display = 'none';
+  });
+  $('.readless_btn').click(function (event) {
+    event.preventDefault();
+    var descriptionFull = document.querySelector('.collection-description-full');
+    descriptionFull.style.display = 'none';
+    var descriptionShort = document.querySelector('.collection-description-short');
     descriptionShort.style.display = 'block';
   });  
   
