@@ -9,12 +9,13 @@
 -%}
 <html lang="{{ request.locale.iso_code }}" dir="{{ lang_dir }}">
 <head>
+  {% render 'head-tag' %}
   <!-- Symmetry 5.5.1 -->
 
   <link rel="preload" href="{{ 'styles.css' | asset_url }}" as="style">
   {{ 'custom.css' | asset_url | stylesheet_tag }}
   <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" rel="stylesheet" type="text/css" media="all" />
-  {% render 'head-tag' %}
+  
   
   {% if settings.enable_domain_redirect == true %}
     {% render 'ipdata-us-uk-redirect' %}
@@ -182,10 +183,10 @@
   {{ 'theme.js'  | asset_url | script_tag }}
   {{ 'custom.js'  | asset_url | script_tag }}
 
-  <script src="https://player.vimeo.com/api/player.js"></script>
-  <script src="https://a.vimeocdn.com/js/froogaloop2.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://player.vimeo.com/api/player.js" defer></script>
+  <script src="https://a.vimeocdn.com/js/froogaloop2.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <!-- Begin ReCharge code -->
   
   <!-- End ReCharge code -->
