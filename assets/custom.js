@@ -911,53 +911,6 @@ document.addEventListener('DOMContentLoaded', () => {
             customProductForm.addEventListener("submit", theme.customAddToCart);
         })
     }
-
-
-    function showAgeVerificationPopup(){
-        // const reqElement = document.querySelector("#age_verification_popup");
-        const reqElement = document.querySelector(".age_verification");
-        // reqElement.style.display = 'block';
-        reqElement.classList.remove("newAgeVerificationClassHidden");
-        reqElement.classList.add("newAgeVerificationClassShow");
-    }
-
-    function removeAgeVertificationEventListener(){
-        ["keydown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"].forEach(e => {
-            document.removeEventListener(e , showAgeVerificationPopup)
-        })
-
-        // const reqElement = document.querySelector("#age_verification_popup");
-        const reqElement = document.querySelector(".age_verification");
-        // reqElement.style.display = "none";
-        if(!reqElement.classList.contains("newAgeVerificationClassHidden")){
-            reqElement.classList.add("newAgeVerificationClassHidden");;
-            reqElement.classList.remove("newAgeVerificationClassShow");;
-        };
-    }
-
-    // Age Verification
-    function addAgeVertificationEventListener(){
-        const reqElement = document.querySelector(".age_verification");
-        const ageVerified = document.querySelector("#age_verified");
-
-        ["keydown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"].forEach(e => {
-            document.addEventListener(e , showAgeVerificationPopup)
-        })
-        
-
-        // Add event listener to the button that verifies age
-        ageVerified.addEventListener('click', removeAgeVertificationEventListener)
-
-        localStorage.setItem("alreadyShown", 2);
-    }
-
-    if(Number(localStorage.getItem('alreadyShown')) != 2){
-        addAgeVertificationEventListener();
-    }
-    if (Number(localStorage.getItem("alreadyShown")) == 2) {
-    //   body.classList.remove('importantOverflowInitial')
-      document.querySelector("body").classList.remove("overflow-hidden");
-    }
 })
 
 
