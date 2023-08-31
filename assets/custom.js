@@ -942,6 +942,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if(Number(localStorage.getItem('alreadyShown')) != 2){
         addAgeVertificationEventListener();
     }
+    if (Number(localStorage.getItem("alreadyShown")) == 2) {
+    //   body.classList.remove('importantOverflowInitial')
+      document.querySelector("body").classList.remove("overflow-hidden");
+    }
 })
 
 
