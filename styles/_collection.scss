@@ -92,6 +92,22 @@
                 padding: 12px 0 20px 0;
             }
         }
+        .utility-bar:has(.collection-description){
+            flex-direction: column !important;
+            .utility-bar__left{
+                margin: 0;
+                width: 100%;
+                
+            }
+            .utility-bar__right{
+                width: 100%;
+                justify-content: flex-end !important;
+                margin-top: 20px;
+                .utility-bar__item{
+                    margin: auto 0 auto 10px;
+                }
+            }
+        }
         .utility-bar--sticky-mobile-copy{
             padding: 12px 12px 20px 12px;
         }
