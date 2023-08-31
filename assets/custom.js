@@ -900,38 +900,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function showAgeVerificationPopup(){
-        const reqElement = document.querySelector("#age_verification_popup");
-        reqElement.style.display = 'block';
+        // const reqElement = document.querySelector("#age_verification_popup");
+        const reqElement = document.querySelector(".age_verification");
+        // reqElement.style.display = 'block';
+        reqElement.classList.remove("newAgeVerificationClassHidden");
+        reqElement.classList.add("newAgeVerificationClassShow");
+
+        console.log('hi sahrudh');
     }
 
     function removeAgeVertificationEventListener(){
         ["keydown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"].forEach(e => {
-            document.removeEventListener(e , showAgeVerificationPopup())
+            document.removeEventListener(e , showAgeVerificationPopup)
         })
 
-        const reqElement = document.querySelector("#age_verification_popup");
-        reqElement.style.display = "none";
+        // const reqElement = document.querySelector("#age_verification_popup");
+        const reqElement = document.querySelector(".age_verification");
+        // reqElement.style.display = "none";
+        if(!reqElement.classList.contains("newAgeVerificationClassHidden")){
+            reqElement.classList.add("newAgeVerificationClassHidden");;
+            reqElement.classList.remove("newAgeVerificationClassShow");;
+        };
     }
 
     // Age Verification
     function addAgeVertificationEventListener(){
-        const reqElement = document.querySelector("#age_verification_popup");
+        const reqElement = document.querySelector(".age_verification");
         const ageVerified = document.querySelector("#age_verified");
 
         ["keydown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"].forEach(e => {
-            document.addEventListener(e , showAgeVerificationPopup())
+            document.addEventListener(e , showAgeVerificationPopup)
         })
         
 
         // Add event listener to the button that verifies age
-        ageVerified.addEventListener('click', function(){
-            removeAgeVertificationEventListener();
-        })
+        ageVerified.addEventListener('click', removeAgeVertificationEventListener)
 
-        sessionStorage.setItem("alreadyShown", 2);
+        localStorage.setItem("alreadyShown", 2);
     }
 
-    if(Number(sessionStorage.getItem('alreadyShown')) != 2){
+    if(Number(localStorage.getItem('alreadyShown')) != 2){
         addAgeVertificationEventListener();
     }
 })
