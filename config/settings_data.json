@@ -1188,7 +1188,7 @@
           "transparent_color": "#ffffff",
           "mega_collection_heading": "By Collection",
           "shop_text": "Shop All",
-          "shop_link": "shopify:\/\/collections\/shop-all",
+          "shop_link": "shopify:\/\/collections\/shop",
           "menu_linklist": "mega-menu",
           "menu_linklist_mobile": "",
           "menu_layout": "inline-menu-left",

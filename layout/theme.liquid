@@ -9,6 +9,7 @@
 -%}
 <html lang="{{ request.locale.iso_code }}" dir="{{ lang_dir }}">
 <head>
+  {% render 'head-tag' %}
   <!-- Symmetry 5.5.1 -->
 
   {% render 'head-tag' %}
@@ -125,6 +126,7 @@
     {%- if template.suffix %} template-suffix-{{ template.suffix }}{% endif -%}
     {%- if settings.swatch_enabled %} swatch-method-{{ settings.swatch_method }} swatch-style-{{ settings.swatch_style }}{% endif -%}
     " data-cc-animate-timeout="0">
+{% include 'agechecker' %}
 
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5B4X79G"
@@ -182,8 +184,9 @@
   {{ 'theme.js'  | asset_url | script_tag }}
   {{ 'custom.js'  | asset_url | script_tag }}
 
+
   <script type="sT_lazyLoad__init" data-src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js" defer></script>
-  
+
   <!-- Begin ReCharge code -->
   
   <!-- End ReCharge code -->

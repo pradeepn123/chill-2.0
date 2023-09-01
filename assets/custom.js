@@ -52,8 +52,20 @@ function hideVideo(index, e) {
 }
 
 $(document).ready(function () {
+     //when mobile navigation is active body should not overflow  
+     const HeaderButton = document.querySelector("#HeaderButton");
+     const HiddenBody = document.querySelector("body");
+     const mobileHeader = document.querySelector("#mobileNavClose");
+     const pageShade = document.querySelector(".page-shade");
 
-    
+     function toggleOverflow() {
+       HiddenBody.style.overflow = HiddenBody.style.overflow === "hidden" ? "auto" : "hidden";
+     }
+
+     HeaderButton.addEventListener("click", toggleOverflow);
+     mobileHeader.addEventListener("click", toggleOverflow);
+     pageShade.addEventListener("click", toggleOverflow);
+
     let items = document.querySelectorAll('.menu-mega-nav li');
 
     items.forEach( item => item.addEventListener('mouseenter', handleHover))
@@ -83,7 +95,8 @@ $(document).ready(function () {
     $(this).closest('.block-inner').find('#addToCartPopupBackground').removeClass('show');
     $('body').css('overflow','auto');
   });
-  
+
+//   product description
   $('.readmore').click(function (event) {
     event.preventDefault();
     var descriptionFull = document.querySelector('.product-description-full');
@@ -96,6 +109,22 @@ $(document).ready(function () {
     var descriptionFull = document.querySelector('.product-description-full');
     descriptionFull.style.display = 'none';
     var descriptionShort = document.querySelector('.product-description-short');
+    descriptionShort.style.display = 'block';
+  });  
+
+//   collection description
+  $('.readmore_btn').click(function (event) {
+    event.preventDefault();
+    var descriptionFull = document.querySelector('.collection-description-full');
+    descriptionFull.style.display = 'block';
+    var descriptionShort = document.querySelector('.collection-description-short');
+    descriptionShort.style.display = 'none';
+  });
+  $('.readless_btn').click(function (event) {
+    event.preventDefault();
+    var descriptionFull = document.querySelector('.collection-description-full');
+    descriptionFull.style.display = 'none';
+    var descriptionShort = document.querySelector('.collection-description-short');
     descriptionShort.style.display = 'block';
   });  
   
@@ -879,6 +908,53 @@ document.addEventListener('DOMContentLoaded', () => {
         customProductForms.forEach((customProductForm) => {
             customProductForm.addEventListener("submit", theme.customAddToCart);
         })
+    }
+
+
+    function showAgeVerificationPopup(){
+        // const reqElement = document.querySelector("#age_verification_popup");
+        const reqElement = document.querySelector(".age_verification");
+        // reqElement.style.display = 'block';
+        reqElement.classList.remove("newAgeVerificationClassHidden");
+        reqElement.classList.add("newAgeVerificationClassShow");
+    }
+
+    function removeAgeVertificationEventListener(){
+        ["keydown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"].forEach(e => {
+            document.removeEventListener(e , showAgeVerificationPopup)
+        })
+
+        // const reqElement = document.querySelector("#age_verification_popup");
+        const reqElement = document.querySelector(".age_verification");
+        // reqElement.style.display = "none";
+        if(!reqElement.classList.contains("newAgeVerificationClassHidden")){
+            reqElement.classList.add("newAgeVerificationClassHidden");;
+            reqElement.classList.remove("newAgeVerificationClassShow");;
+        };
+    }
+
+    // Age Verification
+    function addAgeVertificationEventListener(){
+        const reqElement = document.querySelector(".age_verification");
+        const ageVerified = document.querySelector("#age_verified");
+
+        ["keydown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"].forEach(e => {
+            document.addEventListener(e , showAgeVerificationPopup)
+        })
+        
+
+        // Add event listener to the button that verifies age
+        ageVerified.addEventListener('click', removeAgeVertificationEventListener)
+
+        localStorage.setItem("alreadyShown", 2);
+    }
+
+    if(Number(localStorage.getItem('alreadyShown')) != 2){
+        addAgeVertificationEventListener();
+    }
+    if (Number(localStorage.getItem("alreadyShown")) == 2) {
+    //   body.classList.remove('importantOverflowInitial')
+      document.querySelector("body").classList.remove("overflow-hidden");
     }
 })
 

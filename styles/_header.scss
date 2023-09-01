@@ -1121,7 +1121,7 @@
             padding: 12px;
             border-radius: 50%;
             border: 1px solid #D6D6D6;
-            margin: 50px 0;
+            margin: 75px 0;
         svg{
             fill: #6EC59F !important;
             width: 10px;
@@ -1129,6 +1129,13 @@
             
         }
     }
+    .slick-header-prev{
+        margin-right: 15px; 
+    }
+    .slick-header-next{
+        margin-left: 15px; 
+    }
+    
 }
 #NavigationTier2-2-mob .container .navigation__tier-2{
     position: relative;
