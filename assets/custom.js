@@ -38,7 +38,7 @@ function hoverVideo(index, e) {
   this.querySelector('.play_overlay').style.display = "block";
   var num = index+1;
   var iframes = $('#player-'+num)[0];
-  var player = $f(iframes); 
+  var player = $f(iframes) ? $f(iframes): ''; 
   player.api('play');  
 }
 
@@ -47,13 +47,13 @@ function hideVideo(index, e) {
   this.querySelector('.play_overlay').style.display = "none";
   var num = index+1;
   var iframes = $('#player-'+num)[0];
-  var player = $f(iframes);     
+  var player = $f(iframes) ? $f(iframes): '';
   player.api('pause');
 }
 
 $(document).ready(function () {
 
-    AOS.init({duration: 1200})
+    
     let items = document.querySelectorAll('.menu-mega-nav li');
 
     items.forEach( item => item.addEventListener('mouseenter', handleHover))

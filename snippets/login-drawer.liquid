@@ -1,8 +1,8 @@
 <div class="claim_drawer_background" id="claimDrawerBackground" style="display:none;"></div>
 <div class="claim_drawer_container" id="claimDrawerContainer" style="display:block;">
-  <a class="claim-drawer-summary__close toggle-cart-summary" onclick="document.getElementById('claimDrawerContainer').classList.remove('claim-drawer-open'); document.getElementById('claimDrawerBackground').style.display = 'none';document.querySelector('body').classList.remove('cart-drawer-open');">
+  <span class="claim-drawer-summary__close toggle-cart-summary" onclick="document.getElementById('claimDrawerContainer').classList.remove('claim-drawer-open'); document.getElementById('claimDrawerBackground').style.display = 'none';document.querySelector('body').classList.remove('cart-drawer-open');">
     {% render 'svg-close' %}
-  </a>
+  </span>
   <div class="how_it_works_wrapper">
     <!-- <img class="how_it_works_image" src="{{ settings.how_it_works_image | img_url: 'master' }}" alt="How-it-works"> -->
     {% render 'responsive-image', image: settings.how_it_works_image %}
@@ -147,7 +147,7 @@
               </div>
     
               <div class="action_bottom">
-                  <a href="{{ product.url }}"><button class="register_btn btn" type="submit" style="font-size: {{ settings.login_btn_font_size}}px; background: {{ settings.login_button_color}}" onclick="$('#login_email').style.display='block';document.querySelector('.claim-drawer-summary__close').click()">{{ 'customer.register.submit' | t | upcase }}<input type='hidden' name='return_to' value='{{ product.url }}'></button></a>
+                <button class="register_btn btn" type="submit" style="font-size: {{ settings.login_btn_font_size}}px; background: {{ settings.login_button_color}}" onclick="$('#login_email').style.display='block';document.querySelector('.claim-drawer-summary__close').click()">{{ 'customer.register.submit' | t | upcase }}<input type='hidden' name='return_to' value='{{ product.url }}'></button>
                 <span class="note">Already have an account? <a href="#customer_drawer" onclick="document.getElementById('create-customer').style.display = 'none';
                   document.getElementById('customer_drawer').style.display = 'block';">{{ 'customer.register.log_in' | t }}</a>
                   <!-- {{ 'customer.general.or' | t }}
