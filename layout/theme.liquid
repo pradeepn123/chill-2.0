@@ -12,8 +12,8 @@
   {% render 'head-tag' %}
   <!-- Symmetry 5.5.1 -->
 
-  <link href="{{'styles.css' | asset_url}}" rel="stylesheet" type="text/css" media="all" />
-  <link href="{{'custom.css' | asset_url}}" rel="stylesheet" type="text/css" media="all" />
+  <link rel="preload" href="{{ 'styles.css' | asset_url }}" as="style">
+  {{ 'custom.css' | asset_url | stylesheet_tag }}
   <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" rel="stylesheet" type="text/css" media="all" />
   
   
@@ -42,9 +42,11 @@
 {% endcomment %}	
 
   {% render 'social-meta-tags' %}
-  {% comment %} <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> {% endcomment %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  {{ 'styles.css' | asset_url | stylesheet_tag }}
 
   <script>
     window.theme = window.theme || {};
@@ -108,16 +110,15 @@
   {%- endif -%}
 
   {{ content_for_header }}
-    
   <!-- Google Tag Manager -->
-  <script type="sT_lazyLoad__init">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5B4X79G');</script>
   <!-- End Google Tag Manager -->
 
-  {% render 'speed-optimization' %}
+
 
 </head>
 
@@ -125,6 +126,7 @@
     {%- if template.suffix %} template-suffix-{{ template.suffix }}{% endif -%}
     {%- if settings.swatch_enabled %} swatch-method-{{ settings.swatch_method }} swatch-style-{{ settings.swatch_style }}{% endif -%}
     " data-cc-animate-timeout="0">
+{% include 'agechecker' %}
 
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5B4X79G"
@@ -178,12 +180,14 @@
     {% section 'popup' %}
   {% endif %}
 
-  {{ 'vendor.min.js'  | asset_url | script_tag }}  
+  {{ 'vendor.min.js'  | asset_url | script_tag }}
+  {{ 'theme.js'  | asset_url | script_tag }}
+  {{ 'custom.js'  | asset_url | script_tag }}
 
-  <script src="{{ 'theme.js' | asset_url }}" defer></script>
-  <script type="sT_lazyLoad__init" data-src="{{ 'custom.js' | asset_url }}" defer></script>
-  
-  <script type="sT_lazyLoad__init" data-src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js" defer></script>
+  <script src="https://player.vimeo.com/api/player.js" defer></script>
+  <script src="https://a.vimeocdn.com/js/froogaloop2.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <!-- Begin ReCharge code -->
   
   <!-- End ReCharge code -->
@@ -191,7 +195,7 @@
   
 <!--Gorgias Chat Widget Start-->
 <script id="gorgias-chat-widget-install-v3" 
-    type="sT_lazyLoad__init" data-src="https://config.gorgias.chat/bundle-loader/01GYCCMW60XVJ9PXED765PAB7Q?source=shopify1click">
+    src="https://config.gorgias.chat/bundle-loader/01GYCCMW60XVJ9PXED765PAB7Q?source=shopify1click">
 </script>
 <script id="gorgias-chat-shopify-install">!function(_){_.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",_.SHOPIFY_CUSTOMER_ID="{{customer.id}}",_.SHOPIFY_CUSTOMER_EMAIL="{{customer.email}}"}(window||{});
 </script>
