@@ -54,18 +54,18 @@ function hideVideo(index, e) {
 $(document).ready(function () {
 
      //when mobile navigation is active body should not overflow  
-     const HeaderButton = document.querySelector("#HeaderButton");
-     const HiddenBody = document.querySelector("body");
-     const mobileHeader = document.querySelector("#mobileNavClose");
-     const pageShade = document.querySelector(".page-shade");
+     // const HeaderButton = document.querySelector("#HeaderButton");
+     // const HiddenBody = document.querySelector("body");
+     // const mobileHeader = document.querySelector("#mobileNavClose");
+     // const pageShade = document.querySelector(".page-shade");
 
-     function toggleOverflow() {
-       HiddenBody.style.overflow = HiddenBody.style.overflow === "hidden" ? "auto" : "hidden";
-     }
+     // function toggleOverflow() {
+     //   HiddenBody.style.overflow = HiddenBody.style.overflow === "hidden" ? "auto" : "hidden";
+     // }
 
-     HeaderButton.addEventListener("click", toggleOverflow);
-     mobileHeader.addEventListener("click", toggleOverflow);
-     pageShade.addEventListener("click", toggleOverflow);
+     // HeaderButton.addEventListener("click", toggleOverflow);
+     // mobileHeader.addEventListener("click", toggleOverflow);
+     // pageShade.addEventListener("click", toggleOverflow);
 
     AOS.init({duration: 1200})
     let items = document.querySelectorAll('.menu-mega-nav li');
