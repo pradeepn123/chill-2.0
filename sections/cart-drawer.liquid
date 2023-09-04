@@ -34,9 +34,9 @@
             {{ 'cart.general.title' | t }}
             <span class="cart_item_count">({{cart.item_count}} items)</span>
           </div>
-          <span class="cart-drawer-summary__close toggle-cart-summary">
+          <a class="cart-drawer-summary__close toggle-cart-summary">
             {% render 'svg-close' %}
-          </span>
+          </a>
         </div>
         {% if cart.item_count > 0 %}
           <div class="cart-drawer-summary__item-list-parent">
