@@ -9609,6 +9609,7 @@ body.cart-drawer-open {
   display: flex;
   overflow: hidden;
   user-select: none;
+  margin: 90px 0;
 }
 
 .marquee__content {
@@ -12185,4 +12186,16 @@ div .okeReviews .oke-reviewCarousel {
 
 .oke-reviewContent .oke-reviewContent-title {
   display: none !important;
+}
+
+.claim_drawer_container.claim-drawer-open.claim-drawer-overflow {
+  overflow: hidden;
+}
+
+.claim_drawer_container.claim-drawer-open.claim-drawer-overflow .claim_drawer_container {
+  overflow: scroll;
+}
+
+.buttoned-input input {
+  opacity: 1 !important;
 }
