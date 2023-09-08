@@ -319,7 +319,7 @@
             "marquee_image-2": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
             "marquee_image-3": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
             "marquee_image-4": "shopify:\/\/shop_images\/Pen_1500_cherry_4.png",
-            "scroll-duration": 10,
+            "scroll-duration": 20,
             "marquee_direction": "scrollLeftToRight"
           }
         }
