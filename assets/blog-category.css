@@ -1,0 +1,81 @@
+.blog-category-section{
+    margin: 2rem 0;
+}
+.blog-category-section .blog-category-item .blog-category-item-wrap {
+    padding: 0 10px;    
+}
+.blog-category-section .blog-category-item .article-image .rimage-wrapper img {
+    border-radius: 1rem;
+}
+.blog-category-section .blog-category-list-wrap .slick-list{
+    margin: 0 -10px;
+}
+.blog-category-section .blog-category-list-wrap .slick-header-prev{    
+    left: 0;    
+}
+.blog-category-section .blog-category-list-wrap .slick-header-next{    
+    right: 0;
+}
+.blog-category-section .blog-category-list-wrap .slick-arrow{
+    position: absolute;
+    z-index: 2;
+    top: 35%;
+    transform: translate(0, -50%);
+    padding: 20px;
+    border-radius: 4rem;
+    background: #fff;
+}
+.blog-category-section .blog-category-list-wrap .slick-header-prev.slick-disabled,
+.blog-category-section .blog-category-list-wrap .slick-header-next.slick-disabled{
+    opacity: 0;
+}
+.blog-category-section .blog-category-list-wrap .slick-header-prev svg, 
+.blog-category-section .blog-category-list-wrap .slick-header-next svg{
+    fill: #000 !important;
+    width: 20px;
+    height: 20px;
+}
+.category_title{
+    font-size: 32px;    
+    font-weight: 700;
+    display: block;    
+}
+/* .blog-category-item-wrap {    
+    transition: all 300ms ease-in-out;
+}
+.blog-category-item-wrap:hover {
+    transform: scale(1.2);
+    transition: all 300ms ease-in-out;    
+}
+.blog_content {
+    transition:.3s;
+    display: none;
+}
+.blog-category-item-wrap:hover .blog_content{
+    display: block;
+}
+.title_wrap_before{
+    transition:.3s;
+    display: block;
+}
+.blog-category-item-wrap:hover .title_wrap_before{
+    display: none;
+} */
+
+.blog-category-section .blog_each_handle .blog_each_handle_wrapper_info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.blog-category-section .blog_each_handle{
+    margin-bottom: 30px;
+}
+
+.blog-category-item-wrap .title_wrap_before a{
+    color: #444;
+    font-family: Open Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+}

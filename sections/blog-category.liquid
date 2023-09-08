@@ -1,0 +1,109 @@
+{{ 'blog-category.css' | asset_url | stylesheet_tag }}
+
+{% assign blog_handles = "cbd-benefits-and-education,chill-blog" | split: "," %}
+<div class="blog-category-section">
+    <div class="container">
+        {%- for handle in blog_handles -%}
+            <div class="blog_each_handle">
+                <div class="blog_each_handle_wrapper_info">
+                    <h4 class="category_title"> {{handle | replace: '-', ' ' | capitalize}}</h4>
+                    <a class="view_all_link" href="/blogs/{{handle}}">
+                        View All
+                        {% render 'svg-up-icon' %}
+                    </a>
+                </div>
+                <div class="blog-category-list-wrap">
+                    {%- for article in blogs[handle].articles -%}
+                        <div class="blog-category-item">
+                            {% render 'blog-category-list', article:article %}
+                        </div>
+                    {%- endfor -%}
+                </div>
+            </div>
+        {%- endfor -%}
+    </div>
+</div>
+
+
+{% schema %}
+    {
+        "name": "Blog Category",
+        "class": "section-featured-blog",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Heading",
+                "default": "Blog posts"
+            },
+            {
+                "type": "blog",
+                "id": "blog",
+                "label": "Blog"
+            },
+            {
+                "type": "range",
+                "id": "post_limit",
+                "label": "Posts",
+                "min": 3,
+                "max": 12,
+                "step": 3,
+                "default": 3
+            },
+            {
+                "type": "checkbox",
+                "id": "show_author",
+                "label": "Show author",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "show_date",
+                "label": "Show date",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "show_excerpts",
+                "label": "Show excerpt",
+                "info": "Change excerpts by editing your blog posts. [Learn more](https:\/\/help.shopify.com\/en\/manual\/online-store\/blogs\/writing-blogs#display-an-excerpt-from-a-blog-post)",
+                "default": true
+            },
+            {
+                "type": "select",
+                "id": "crop_ratio",
+                "label": "Image size",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "Natural (no crop)"
+                    },
+                    {
+                        "value": "0.67",
+                        "label": "Portrait (2:3)"
+                    },
+                    {
+                        "value": "1.0",
+                        "label": "Square (1:1)"
+                    },
+                    {
+                        "value": "1.33",
+                        "label": "Landscape (4:3)"
+                    },
+                    {
+                        "value": "1.78",
+                        "label": "Wide (16:9)"
+                    }
+                ],
+                "default": "1.78"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Blog Category",
+                "settings": {
+                }
+            }
+        ]
+    }
+{% endschema %}
