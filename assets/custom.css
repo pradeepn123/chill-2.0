@@ -4112,7 +4112,7 @@ body {
 }
 @media (max-width: 767px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     top: 16px;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -4120,33 +4120,33 @@ body {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     font-size: 10px;
     top: 16px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     top: 0px;
   }
 }
 @media (min-width: 1680px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     top: -30px;
   }
 }
 @media (min-width: 1920px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button,
-#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
+  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text .overlay-text__inner .overlay-text__button {
     top: -50px;
     left: 7%;
   }
 }
 @media (max-width: 767px) {
   #section-id-template--15860249591966__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text__button-row,
-#section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text__button-row {
+  #section-id-template--16009236119710__829c3c02-065e-4087-a6c0-f8a0cb3d5f6e .overlay-text__button-row {
     margin: 0;
   }
 }
@@ -8357,6 +8357,9 @@ body {
   visibility: hidden;
   pointer-events: none;
 }
+.cart_container .cart-item__quantity .buttoned-input input {
+  opacity: 1 !important;
+}
 @media (max-width: 767px) {
   .cart_container .cart-item__quantity {
     margin-top: 1em;
@@ -9609,7 +9612,6 @@ body.cart-drawer-open {
   display: flex;
   overflow: hidden;
   user-select: none;
-  margin: 90px 0;
 }
 
 .marquee__content {
@@ -9967,6 +9969,13 @@ body.cart-drawer-open {
   .claim_drawer_background {
     z-index: 60000;
   }
+}
+
+.claim_drawer_container.claim-drawer-open.claim-drawer-overflow {
+  overflow: hidden;
+}
+.claim_drawer_container.claim-drawer-open.claim-drawer-overflow .claim_drawer_container {
+  overflow: scroll;
 }
 
 .claim_drawer_container {
@@ -10924,6 +10933,14 @@ body.cart-drawer-open {
   }
   to {
     transform: translate3d(-100%, 0, 0);
+  }
+}
+.marquee-with-cta-text-image {
+  margin: 90px 0;
+}
+@media (max-width: 767px) {
+  .marquee-with-cta-text-image {
+    margin: 70px 0;
   }
 }
 .marquee-with-cta-text-image .marquee__content_ .marquee-tag .marquee_wrap .marquee_container {
@@ -12186,16 +12203,4 @@ div .okeReviews .oke-reviewCarousel {
 
 .oke-reviewContent .oke-reviewContent-title {
   display: none !important;
-}
-
-.claim_drawer_container.claim-drawer-open.claim-drawer-overflow {
-  overflow: hidden;
-}
-
-.claim_drawer_container.claim-drawer-open.claim-drawer-overflow .claim_drawer_container {
-  overflow: scroll;
-}
-
-.buttoned-input input {
-  opacity: 1 !important;
 }
