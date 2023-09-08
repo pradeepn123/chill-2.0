@@ -148,61 +148,6 @@
         "variant_style": "listed"
       }
     },
-    "570e8e3a-2a6e-4f6d-9044-89633f25dc66": {
-      "type": "marquee-with-cta-text-image",
-      "blocks": {
-        "f14dc879-4e0a-42d5-b83c-48ef539a1499": {
-          "type": "select",
-          "settings": {
-            "marquee_text": "<p><strong>0%Nicotine<\/strong><\/p>",
-            "marquee_text_color": "#000000",
-            "marquee_text_font_size": 52,
-            "marquee_text_font_size_mobile": 39,
-            "marquee_cta_text": "",
-            "button_redirection_link": "",
-            "marquee_button_color": "",
-            "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_watermelon_5.png",
-            "marquee_direction": "scrollRightToLeft"
-          }
-        },
-        "9866a931-88ed-492a-a0c5-be8e5a52d611": {
-          "type": "select",
-          "settings": {
-            "marquee_text": "<p><strong>Powerful Flavours<\/strong><\/p>",
-            "marquee_text_color": "#000000",
-            "marquee_text_font_size": 52,
-            "marquee_text_font_size_mobile": 39,
-            "marquee_cta_text": "",
-            "button_redirection_link": "",
-            "marquee_button_color": "",
-            "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
-            "marquee_direction": "scrollLeftToRight"
-          }
-        },
-        "30c39ee4-c542-45e5-9f5a-2ba5af905486": {
-          "type": "select",
-          "settings": {
-            "marquee_text": "<p><strong>total satisfaction<\/strong><\/p>",
-            "marquee_text_color": "#000000",
-            "marquee_text_font_size": 52,
-            "marquee_text_font_size_mobile": 39,
-            "marquee_cta_text": "",
-            "button_redirection_link": "",
-            "marquee_button_color": "",
-            "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
-            "marquee_direction": "scrollRightToLeft"
-          }
-        }
-      },
-      "block_order": [
-        "f14dc879-4e0a-42d5-b83c-48ef539a1499",
-        "9866a931-88ed-492a-a0c5-be8e5a52d611",
-        "30c39ee4-c542-45e5-9f5a-2ba5af905486"
-      ],
-      "settings": {
-        "animate_marquee_on_scroll": true
-      }
-    },
     "e2de91a5-7c29-4451-83b3-7440b2bcc564": {
       "type": "home-icons",
       "blocks": {
@@ -261,6 +206,64 @@
         "home_icons_title": ""
       }
     },
+    "570e8e3a-2a6e-4f6d-9044-89633f25dc66": {
+      "type": "marquee-with-cta-text-image",
+      "blocks": {
+        "f14dc879-4e0a-42d5-b83c-48ef539a1499": {
+          "type": "select",
+          "settings": {
+            "marquee_text": "<p><strong>0%Nicotine<\/strong><\/p>",
+            "marquee_text_color": "#000000",
+            "marquee_text_font_size": 52,
+            "marquee_text_font_size_mobile": 39,
+            "marquee_cta_text": "",
+            "button_redirection_link": "",
+            "marquee_button_color": "",
+            "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_watermelon_5.png",
+            "scroll-duration": 10,
+            "marquee_direction": "scrollRightToLeft"
+          }
+        },
+        "9866a931-88ed-492a-a0c5-be8e5a52d611": {
+          "type": "select",
+          "settings": {
+            "marquee_text": "<p><strong>Powerful Flavours<\/strong><\/p>",
+            "marquee_text_color": "#000000",
+            "marquee_text_font_size": 52,
+            "marquee_text_font_size_mobile": 39,
+            "marquee_cta_text": "",
+            "button_redirection_link": "",
+            "marquee_button_color": "",
+            "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
+            "scroll-duration": 10,
+            "marquee_direction": "scrollLeftToRight"
+          }
+        },
+        "30c39ee4-c542-45e5-9f5a-2ba5af905486": {
+          "type": "select",
+          "settings": {
+            "marquee_text": "<p><strong>total satisfaction<\/strong><\/p>",
+            "marquee_text_color": "#000000",
+            "marquee_text_font_size": 52,
+            "marquee_text_font_size_mobile": 39,
+            "marquee_cta_text": "",
+            "button_redirection_link": "",
+            "marquee_button_color": "",
+            "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
+            "scroll-duration": 10,
+            "marquee_direction": "scrollRightToLeft"
+          }
+        }
+      },
+      "block_order": [
+        "f14dc879-4e0a-42d5-b83c-48ef539a1499",
+        "9866a931-88ed-492a-a0c5-be8e5a52d611",
+        "30c39ee4-c542-45e5-9f5a-2ba5af905486"
+      ],
+      "settings": {
+        "animate_marquee_on_scroll": true
+      }
+    },
     "169400714844e5bf9f": {
       "type": "apps",
       "blocks": {
@@ -298,6 +301,7 @@
             "marquee_image-2": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
             "marquee_image-3": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
             "marquee_image-4": "shopify:\/\/shop_images\/Pen_1500_cherry_4.png",
+            "scroll-duration": 10,
             "marquee_direction": "scrollRightToLeft"
           }
         },
@@ -315,6 +319,7 @@
             "marquee_image-2": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
             "marquee_image-3": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
             "marquee_image-4": "shopify:\/\/shop_images\/Pen_1500_cherry_4.png",
+            "scroll-duration": 10,
             "marquee_direction": "scrollLeftToRight"
           }
         }
@@ -448,8 +453,8 @@
     "main",
     "03bb66d9-a72b-4215-bbf5-56de88374875",
     "2b1c8a01-b27d-44d5-8af3-97fb0d051dc8",
-    "570e8e3a-2a6e-4f6d-9044-89633f25dc66",
     "e2de91a5-7c29-4451-83b3-7440b2bcc564",
+    "570e8e3a-2a6e-4f6d-9044-89633f25dc66",
     "169400714844e5bf9f",
     "63d1705c-eacc-4f48-bc1a-7a30354e8c53",
     "b3d78ff9-768d-4cd8-a6ba-55b76d5b1763",
