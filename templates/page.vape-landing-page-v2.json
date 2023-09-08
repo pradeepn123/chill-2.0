@@ -148,64 +148,6 @@
         "variant_style": "listed"
       }
     },
-    "e2de91a5-7c29-4451-83b3-7440b2bcc564": {
-      "type": "home-icons",
-      "blocks": {
-        "0ec8bf96-9080-412e-9b77-6535cbac2d8f": {
-          "type": "icon-text",
-          "settings": {
-            "icon_image": "shopify:\/\/shop_images\/nicotine_free.png",
-            "icon_svg": "",
-            "url": "",
-            "title": "ZERO NICOTINE",
-            "subheading": "",
-            "use_alt_bg": false
-          }
-        },
-        "a915f33d-d497-4f08-97f1-a91d8f6ff38f": {
-          "type": "icon-text",
-          "settings": {
-            "icon_image": "shopify:\/\/shop_images\/cbd_infused.png",
-            "icon_svg": "",
-            "url": "",
-            "title": "QUALITY INGREDIENTS",
-            "subheading": "",
-            "use_alt_bg": false
-          }
-        },
-        "a2456b86-9e27-48cc-98c4-938142b32b25": {
-          "type": "icon-text",
-          "settings": {
-            "icon_image": "shopify:\/\/shop_images\/cbd_infused_1.png",
-            "icon_svg": "",
-            "url": "",
-            "title": "NATURAL FLAVOURS",
-            "subheading": "",
-            "use_alt_bg": false
-          }
-        },
-        "58269265-edd4-4fec-8c07-a0a8a84d701b": {
-          "type": "icon-text",
-          "settings": {
-            "icon_image": "shopify:\/\/shop_images\/ICON_4.png",
-            "icon_svg": "",
-            "url": "",
-            "title": "DESIGNED IN UK",
-            "subheading": "",
-            "use_alt_bg": false
-          }
-        }
-      },
-      "block_order": [
-        "0ec8bf96-9080-412e-9b77-6535cbac2d8f",
-        "a915f33d-d497-4f08-97f1-a91d8f6ff38f",
-        "a2456b86-9e27-48cc-98c4-938142b32b25",
-        "58269265-edd4-4fec-8c07-a0a8a84d701b"
-      ],
-      "settings": {
-        "home_icons_title": ""
-      }
-    },
     "570e8e3a-2a6e-4f6d-9044-89633f25dc66": {
       "type": "marquee-with-cta-text-image",
       "blocks": {
@@ -282,6 +224,64 @@
       ],
       "settings": {
         "full_width": false
+      }
+    },
+    "e2de91a5-7c29-4451-83b3-7440b2bcc564": {
+      "type": "home-icons",
+      "blocks": {
+        "0ec8bf96-9080-412e-9b77-6535cbac2d8f": {
+          "type": "icon-text",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/nicotine_free.png",
+            "icon_svg": "",
+            "url": "",
+            "title": "ZERO NICOTINE",
+            "subheading": "",
+            "use_alt_bg": false
+          }
+        },
+        "a915f33d-d497-4f08-97f1-a91d8f6ff38f": {
+          "type": "icon-text",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/cbd_infused.png",
+            "icon_svg": "",
+            "url": "",
+            "title": "QUALITY INGREDIENTS",
+            "subheading": "",
+            "use_alt_bg": false
+          }
+        },
+        "a2456b86-9e27-48cc-98c4-938142b32b25": {
+          "type": "icon-text",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/cbd_infused_1.png",
+            "icon_svg": "",
+            "url": "",
+            "title": "NATURAL FLAVOURS",
+            "subheading": "",
+            "use_alt_bg": false
+          }
+        },
+        "58269265-edd4-4fec-8c07-a0a8a84d701b": {
+          "type": "icon-text",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/ICON_4.png",
+            "icon_svg": "",
+            "url": "",
+            "title": "DESIGNED IN UK",
+            "subheading": "",
+            "use_alt_bg": false
+          }
+        }
+      },
+      "block_order": [
+        "0ec8bf96-9080-412e-9b77-6535cbac2d8f",
+        "a915f33d-d497-4f08-97f1-a91d8f6ff38f",
+        "a2456b86-9e27-48cc-98c4-938142b32b25",
+        "58269265-edd4-4fec-8c07-a0a8a84d701b"
+      ],
+      "settings": {
+        "home_icons_title": ""
       }
     },
     "63d1705c-eacc-4f48-bc1a-7a30354e8c53": {
@@ -453,9 +453,9 @@
     "main",
     "03bb66d9-a72b-4215-bbf5-56de88374875",
     "2b1c8a01-b27d-44d5-8af3-97fb0d051dc8",
-    "e2de91a5-7c29-4451-83b3-7440b2bcc564",
     "570e8e3a-2a6e-4f6d-9044-89633f25dc66",
     "169400714844e5bf9f",
+    "e2de91a5-7c29-4451-83b3-7440b2bcc564",
     "63d1705c-eacc-4f48-bc1a-7a30354e8c53",
     "b3d78ff9-768d-4cd8-a6ba-55b76d5b1763",
     "1516836a-916e-40d3-a537-7290ab543238"
