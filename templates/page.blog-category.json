@@ -9,12 +9,24 @@
     },
     "5ce7b3ed-5d92-4ffd-a240-eca63b449ad1": {
       "type": "search-page",
+      "settings": {}
+    },
+    "ac6b5e51-23af-47af-80cf-73ec668c329d": {
+      "type": "blog-category",
       "settings": {
+        "title": "Blog posts",
+        "blog": "",
+        "post_limit": 3,
+        "show_author": true,
+        "show_date": true,
+        "show_excerpts": true,
+        "crop_ratio": "1.78"
       }
     }
   },
   "order": [
     "main",
-    "5ce7b3ed-5d92-4ffd-a240-eca63b449ad1"
+    "5ce7b3ed-5d92-4ffd-a240-eca63b449ad1",
+    "ac6b5e51-23af-47af-80cf-73ec668c329d"
   ]
 }
