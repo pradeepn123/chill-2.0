@@ -1,0 +1,56 @@
+<script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+
+<predictive-search>
+    <form action="{{ routes.search_url }}" method="get" role="search" class="search_section">
+        <label for="Search" class="search_title">{{ section.settings.search_title }}</label>
+        <input
+        id="Search"
+        type="search"
+        name="q"
+        value="{{ search.terms | escape }}"
+        role="combobox"
+        aria-expanded="false"
+        aria-owns="predictive-search-results"
+        aria-controls="predictive-search-results"
+        aria-haspopup="listbox"
+        aria-autocomplete="list"
+        >
+        <input name="options[prefix]" type="hidden" value="last">
+
+        <div id="predictive-search" tabindex="-1"></div>
+        <div id="featured_blogs"></div>
+        <div class="array_featured_blogs" style="display: none;">
+            {% assign blog_handles = "chill-blog, cbd-benefits-and-education" | split: "," %}
+            {% for handle in blog_handles %}
+                {% for article in blogs[handle].articles limit: 3 %}
+                    <a href="{{ article.url }}" class="blog">{{ article.title }}</a>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        
+    </form>
+</predictive-search>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    
+    })
+</script>
+{% schema %}
+{
+    "name": "Predictive search",
+    "settings":[
+        {
+            "type": "richtext",
+            "id": "search_title",
+            "label": "Search title",
+            "default": "<p>Search<strong> Blogs</strong></p>"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Predictive search"
+        }
+    ]
+}
+{% endschema %}
