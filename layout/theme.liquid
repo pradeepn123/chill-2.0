@@ -188,6 +188,13 @@
   <script src="https://a.vimeocdn.com/js/froogaloop2.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js" defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+  <!-- Begin loadMoreArticles code -->
+  {% if template contains 'blog' %}
+    <script src="{{ 'load_more_cards.js' | asset_url }}" defer="defer" ></script>
+  {% endif %}
+  <!-- End loadMoreArticles code -->
+
   <!-- Begin ReCharge code -->
   
   <!-- End ReCharge code -->
