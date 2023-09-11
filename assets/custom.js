@@ -191,6 +191,12 @@ $(document).ready(function () {
     ]
 });
 
+$('.blog-category-list-wrap').on('init', function(){
+    var currentfirst = $(this).find('.slick-active').first();
+    $(currentfirst).addClass('firster');
+    var currentlast = $(this).find('.slick-active').last();
+    $(currentlast).addClass('laster');
+});  
 $('.blog-category-list-wrap').slick({
     slidesToShow: 3.5,
     slidesToScroll: 1,
@@ -209,6 +215,38 @@ $('.blog-category-list-wrap').slick({
         }
     ]
 })
+$( ".blog-category-list-wrap .slick-slide" ).mouseenter(function() {        
+    if ($(this).hasClass("firster")) {      
+        var hoverslide = $(this);
+        $(hoverslide).nextAll().addClass('furthernextslides');    
+    }else if ($(this).hasClass("laster")){
+        var hoverslide = $(this);
+        $(hoverslide).prevAll().addClass('furtherprevslides');
+    }else{
+        var hoverslide = $(this);
+        $(hoverslide).nextAll().addClass('nextslides');
+        $(hoverslide).prevAll().addClass('prevslides'); 
+    }
+});
+ 
+$(".blog-category-list-wrap .slick-slide").mouseleave(function() {
+    $(this).parent().find( ".slick-slide" ).removeClass('nextslides');
+    $(this).parent().find( ".slick-slide" ).removeClass('prevslides');
+    $(this).parent().find( ".slick-slide" ).removeClass('furthernextslides');
+    $(this).parent().find( ".slick-slide" ).removeClass('furtherprevslides');
+});
+
+// on slide change, find the new first slide-active    
+$('.blog-category-list-wrap').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    var currentfirst = $(this).find('.slick-active').first();
+    $(this).find( ".blog-category-list-wrap .slick-slide" ).removeClass('firster');
+    $(currentfirst).addClass('firster');
+    var currentlast = $(this).find('.slick-active').last();
+    $(this).find( ".blog-category-list-wrap .slick-slide" ).removeClass('laster');
+    $(currentlast).addClass('laster');
+});
+// on slide init, find the new first slide-active
+
 
 $('.featured_blocks_container').slick({
     slidesToShow: 8,
