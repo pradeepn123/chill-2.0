@@ -8,6 +8,12 @@ predictive-search{
         padding: 50px 0;
         top: 90px;
         background: #fff;
+        @media (max-width: 1023px){
+            padding:10px 0 30px 0;
+        }
+        @media (min-width: 1024px) and (max-width: 1199px){
+            padding: 0 0 50px 0;
+        }
     }
     .search_section{
         width: 100%;
@@ -36,18 +42,27 @@ predictive-search{
         .search_block{
             display: flex;
             position: relative;
+            @media (max-width: 1023px){
+                position: unset;
+            }
             .search_input{
                 position: relative;
                 width: 40%;
                 margin: 0 auto;
+                @media (max-width: 1023px){
+                    width: 100%;
+                }
                 #Search{
                     width: 100%;
                 }
                 .search_icon{
                     position: absolute;
-                    right: 25px;
+                    right: 12%;
                     top: 25px;
                     transform: translateY(-50%);
+                    @media (max-width: 1023px){
+                        right: 7%;
+                    }
                 }
             }
             .blog_search_close_icon{
@@ -56,6 +71,9 @@ predictive-search{
                 position: absolute;
                 right: 10%;
                 transform: translateY(50%);
+                @media (max-width: 1023px){
+                    top: 3%;
+                }
             }
         }
         
@@ -75,8 +93,17 @@ predictive-search{
             justify-content: space-around;
             max-width: 80%;
             margin: 0 auto;
+            @media (max-width: 1199px){
+                max-width: 100%;
+            }
+            @media (max-width: 1023px){
+                flex-direction: column;
+            }
             .blog-category-item-wrap{
                 flex-basis: calc(100% / 3);
+                @media (max-width: 767px){
+                    flex-basis: 100%;
+                }
             }
         }
     }
@@ -87,6 +114,9 @@ predictive-search{
     flex-direction: column;
     margin: 0;
     gap: 50px;
+    @media(max-width: 1199px){
+        gap: 30px;
+    }
     &:has(div){
         height: 100%;
     }
@@ -98,8 +128,17 @@ predictive-search{
         width: 90%;
         height: fit-content;
         margin: 0 auto;
+        @media (max-width: 1199px){
+            width: 100%;
+        }
         .blog-category-item-wrap{
             flex-basis: calc(100% / 3 - 50px);
+            @media (max-width: 767px){
+                flex-basis: 100%;
+            }
+            @media (max-width: 1199px){
+                flex-basis: calc(100% /2 - 30px);
+            }
         }
     }
     #search_results_blogs span{
