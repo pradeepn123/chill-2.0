@@ -93,6 +93,52 @@
     100% {transfomr:rotate(360deg)}
 }
 
+.article-text-info {
+    display: none;
+    position: absolute;
+    width: 97%;
+    height: 12rem;
+    padding: 1rem;
+    background: red;
+    top: 110%;
+    z-index: 10;
+    flex-direction: column;
+}
+
+.article-text-info h2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.article-text-info .article_content {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.article__inner {
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.article__inner:hover .article-text-info {
+    transform: scale(1.2);
+    display: flex;
+}
+
+.article_image_wrapper {
+    
+}
+
+.article__inner:hover .article_img {
+    transform: scale(1.2);
+    z-index: 99;
+}
 
 {% endstyle %}
 
@@ -109,7 +155,7 @@
     {% endif %}
 
     <div data-section-type="blog-template" class="article_blog_section" id="article_blog">
-        {% paginate blog.articles by 3 %}
+        {% paginate blog.articles by 6 %}
     
         <div class="article_blog_filter">
             <div class="utility-bar" data-cc-animate>
@@ -188,41 +234,44 @@
                     {% if article.image %}
                     <div class="article-image">
                         <a href="{{ article.url }}">
-                        {% render 'responsive-image', image: article.image, aspect_ratio: aspect_ratio, cover: true %}
+                        {% comment %} {% render 'responsive-image', image: article.image, aspect_ratio: aspect_ratio, cover: true %} {% endcomment %}
+                            <div class="article_image_wrapper">
+                                <img class="article_img" src="{{ article.image | image_url }}" alt="{{ image.alt | escape }}">
+                            </div>
                         </a>
                     </div>
                     {% endif %}
-                    {% comment %} <div class="article-text-info">
-                    <div class="meta">
+                    <div class="article-text-info">
+                        <div class="meta">
                         <span class="iconmeta time">
                         {% if section.settings.show_author %}
                             {% if article.user.image != blank %}
-                            <img src="{{ article.user.image | img_url: 'master' }}" alt="{{ article.author }}" class="article_author_img" width="30" height="30" loading="lazy">
+                                <img src="{{ article.user.image | img_url: 'master' }}" alt="{{ article.author }}" class="article_author_img" width="30" height="30" loading="lazy">
                             {% endif %}
-                            <span class="author">{{ article.author }}
-                            </span>
-                            {% if section.settings.show_date %}&#9679;{% endif %}
+                            <span class="author">{{ article.author }}</span>
                         {% endif %}
-                        <span class="publish_date">
-                            {% if section.settings.show_date %}
-                            {{ article.published_at | date: format: 'month_date_year' }}
-                            {% endif %}
-                        </span>
+                            <span class="publish_date">
+                                &#9679;
+                                {% if section.settings.show_date %}
+                                {{ article.published_at | date: format: 'month_date_year' }}
+                                {% endif %}
+                            </span>
                         </span>
     
                         {% if section.settings.show_article_tags %}
-                        {% capture tag_markup %}
-                            <div class="iconmeta tags">
-                            <span class="label">{{ 'blogs.article.tags' | t }}
-                                :</span>
-                            {% for tag in article.tags %}
-                                {{ tag | link_to_tag: tag }}
-                            {% endfor %}
-                            </div>
-                        {% endcapture %}
-                        {% if tag_markup contains '</a>' %}
-                            {{ tag_markup }}
-                        {% endif %}
+                            {% capture tag_markup %}
+                                <div class="iconmeta tags">
+                                <span class="label">{{ 'blogs.article.tags' | t }}
+                                    :</span>
+                                {% for tag in article.tags %}
+                                    {{ tag | link_to_tag: tag }}
+                                {% endfor %}
+                                </div>
+                            {% endcapture %}
+
+                            {% if tag_markup contains '</a>' %}
+                                {{ tag_markup }}
+                            {% endif %}
                         {% endif %}
                     </div> 
     
@@ -230,21 +279,17 @@
                     </h2>
     
                     {%- if section.settings.show_excerpts -%}
-                        <div class="rte cf">
-                        {%- if article.excerpt.size > 0 -%}
-                            {{ article.excerpt }}
-                        {%- else -%}
-                            {{ article.content | strip_html | truncatewords: 40 }}
-                        {%- endif -%}
+                        <div class="article_content">
+                            {{ article.content| strip_html }}
                         </div>
                     {%- endif -%}
     
-                    <a class="more-link" href="{{ article.url }}" title="{{ article.title | escape }}">
+                    {% comment %} <a class="more-link" href="{{ article.url }}" title="{{ article.title | escape }}">
                         {{ 'blogs.general.read_more' | t }}
                         {% render 'svg-up-icon' %}
-                    </a>
+                    </a> {% endcomment %}
     
-                    </div> {% endcomment %}
+                    </div>
     
                 </div>
                 <!-- /.container -->
@@ -260,15 +305,12 @@
     
             {% endfor %}
         </div>
-
+        {% comment %} {% render 'pagination-control', paginate: paginate %} {% endcomment %}
+        {% endpaginate %}
         <div class="blog_load_more">
             <a class="blog_load_more_btn" onclick="showMoreCards()">SHOW MORE</a>
             <div class="blog_load_more_spinner"></div>
         </div>
-    
-        {% comment %} {% render 'pagination-control', paginate: paginate %} {% endcomment %}
-    
-        {% endpaginate %}
     </div>
 </div>
 
