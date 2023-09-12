@@ -96,13 +96,14 @@
 .article-text-info {
     display: none;
     position: absolute;
-    width: 97%;
-    height: 12rem;
+    width: 100%;
+    height: 11rem;
     padding: 1rem;
-    background: red;
-    top: 110%;
+    background: white;
+    top: 100%;
     z-index: 10;
     flex-direction: column;
+    border-radius: 30px;
 }
 
 .article-text-info h2 {
@@ -129,13 +130,13 @@
 .article__inner:hover .article-text-info {
     transform: scale(1.2);
     display: flex;
+    box-shadow:
+    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
-.article_image_wrapper {
-    
-}
-
-.article__inner:hover .article_img {
+.article__inner:hover .rimage__image {
     transform: scale(1.2);
     z-index: 99;
 }
@@ -234,10 +235,7 @@
                     {% if article.image %}
                     <div class="article-image">
                         <a href="{{ article.url }}">
-                        {% comment %} {% render 'responsive-image', image: article.image, aspect_ratio: aspect_ratio, cover: true %} {% endcomment %}
-                            <div class="article_image_wrapper">
-                                <img class="article_img" src="{{ article.image | image_url }}" alt="{{ image.alt | escape }}">
-                            </div>
+                        {% render 'responsive-image', image: article.image, aspect_ratio: aspect_ratio, cover: true %}
                         </a>
                     </div>
                     {% endif %}
