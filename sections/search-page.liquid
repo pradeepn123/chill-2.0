@@ -45,7 +45,7 @@
                 {% for article in blogs[handle].articles limit: 3 %}
                     {% comment %} <a href="{{ article.url }}" class="blog">{{ article.title }}</a> {% endcomment %}
                     <div class="blog-category-item">
-                        {% render 'blog-category-list', article: article %}
+                        {% render 'blog-tile', article: article %}
                     </div>
                 {% endfor %}
             {% endfor %}

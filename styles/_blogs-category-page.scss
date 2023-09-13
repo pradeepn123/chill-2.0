@@ -1,0 +1,106 @@
+.articles-on-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    max-width: 100%;
+    margin: 0 !important;
+    @media (max-width: 767px){
+        grid-template-columns: 1fr;
+    }
+    @media (min-width: 768px) and (max-width: 1199px){
+        grid-template-columns: 1fr 1fr;
+    }
+    .blog-category-item{
+        flex-basis: calc(100% / 3 - 30px);
+    }
+}
+
+
+.main_blog_container {
+    .blog_banner {
+        // position: relative;
+        text-align: center;
+        height: 240px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 40px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 767px){
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 24px 20px;
+        }
+        .blog_banner_text {
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            @media(max-width: 767px){
+                text-align: left;
+            }
+            h2 {
+                font-family: inherit;
+                font-size: 52px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                color: #fff;
+                @media(max-width: 767px){
+                    font-size: 28px;
+                }
+            }
+            p {
+                text-align: center;
+                font-family: inherit;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                color: #fff;
+                max-width: 70%;
+                margin: auto;
+                @media (max-width: 767px){
+                    text-align: left;
+                    max-width: 100%;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+.blog_load_more {
+    margin: 40px 0 100px 0;
+    text-align: center;
+    .blog_load_more_btn {
+        color: #9792E4;
+        font-family: inherit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration-line: underline;
+        cursor: pointer;
+    }
+    .blog_load_more_spinner {
+        display: none;
+        height: 35px;
+        width: 35px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3a3a3a;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin{
+        0% {transfomr:rotate(0deg)}
+        100% {transfomr:rotate(360deg)}
+    }
+}
+
+
+
+

@@ -80,7 +80,7 @@
       {% comment %} <div class="product-block page-block"> {% endcomment %}
         {% comment %} <div class="page-block__title"><a href="{{ article.url }}">{{ article.title }}</a></div> {% endcomment %}
         <div class="blog-category-item">
-          {% render 'blog-category-list', article: article %}
+          {% render 'blog-tile', article: article %}
         </div>
       {% comment %} </div> {% endcomment %}
     {%- endfor -%}
