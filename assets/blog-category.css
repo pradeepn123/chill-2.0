@@ -212,3 +212,10 @@ span.author:after {
         transition: background-size .4s ease-in-out;
     }
 }
+
+.blog_breadcrumb{
+    color:#9792E4;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}

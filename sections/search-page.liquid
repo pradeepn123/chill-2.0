@@ -2,7 +2,7 @@
 <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
 
 <predictive-search>
-    <form action="{{ routes.search_url }}" method="get" role="search" class="search_section">
+    <form action="{{ routes.search_url }}" method="get" role="search" class="search_section" autocomplete="off">
         <label for="Search" class="search_title">{{ section.settings.search_title }}</label>
         <div class="search_block">
             <div class="search_input container">
@@ -53,12 +53,12 @@
         
     </form>
 </predictive-search>
-
+{% comment %} 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-    
+        document.querySelector('.search_input input').value = ''
     })
-</script>
+</script> {% endcomment %}
 {% schema %}
 {
     "name": "Predictive search",
