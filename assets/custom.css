@@ -11587,11 +11587,11 @@ predictive-search #featured_blogs .featured_blogs_content {
     flex-direction: column;
   }
 }
-predictive-search #featured_blogs .featured_blogs_content .blog-category-item-wrap {
+predictive-search #featured_blogs .featured_blogs_content .blog-category-item {
   flex-basis: 33.3333333333%;
 }
 @media (max-width: 767px) {
-  predictive-search #featured_blogs .featured_blogs_content .blog-category-item-wrap {
+  predictive-search #featured_blogs .featured_blogs_content .blog-category-item {
     flex-basis: 100%;
   }
 }
@@ -11623,16 +11623,16 @@ predictive-search #featured_blogs .featured_blogs_content .blog-category-item-wr
     width: 100%;
   }
 }
-#predictive-search #predictive-search-results .blog-category-item-wrap {
+#predictive-search #predictive-search-results .blog-category-item {
   flex-basis: calc(33.3333333333% - 50px);
 }
 @media (max-width: 767px) {
-  #predictive-search #predictive-search-results .blog-category-item-wrap {
+  #predictive-search #predictive-search-results .blog-category-item {
     flex-basis: 100%;
   }
 }
 @media (max-width: 1199px) {
-  #predictive-search #predictive-search-results .blog-category-item-wrap {
+  #predictive-search #predictive-search-results .blog-category-item {
     flex-basis: calc(50% - 30px);
   }
 }

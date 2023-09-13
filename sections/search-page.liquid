@@ -1,3 +1,4 @@
+{{ 'blog-category.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
 
 <predictive-search>
@@ -38,12 +39,14 @@
 
         <div id="predictive-search" class="blog-category-section" tabindex="-1"></div>
         <div id="featured_blogs"></div>
-        <div class="array_featured_blogs" style="display: none;">
+        <div class="array_featured_blogs blog-category-item" style="display: none;">
             {% assign blog_handles = "chill-blog, cbd-benefits-and-education" | split: "," %}
             {% for handle in blog_handles %}
                 {% for article in blogs[handle].articles limit: 3 %}
                     {% comment %} <a href="{{ article.url }}" class="blog">{{ article.title }}</a> {% endcomment %}
-                    {% render 'blog-category-list', article: article %}
+                    <div class="blog-category-item">
+                        {% render 'blog-category-list', article: article %}
+                    </div>
                 {% endfor %}
             {% endfor %}
         </div>

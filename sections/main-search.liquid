@@ -176,7 +176,7 @@
                 {% elsif item.object_type == 'collection' %}
                   {% render 'collection-block', collection: item, custom_aspect_ratio: chosen_collection_aspect_ratio, animate: true %}
                 {% else %}
-                  <div class="product-block page-block {% if item.object_type == 'article' %} blog-category-item{% endif %}" data-cc-animate>
+                  <div class="product-block page-block" data-cc-animate>
                     {% comment %} <div class="block-inner> {% endcomment %}
                       {% if item.object_type == 'article' and item.image %}
                         {% comment %} <div class="article-image">
@@ -184,7 +184,10 @@
                             {%- render 'responsive-image', image: item.image -%}
                           </a>
                         </div> {% endcomment %}
-                        {% render 'blog-category-list', article: item %}
+
+                        <div class="blog-category-item">
+                          {% render 'blog-category-list', article: item %}
+                        </div>
                       {% endif %}
                       {% comment %} <div class="text-cont">
                         <h6 class="page-block__title"><a href="{{ item.url }}">{{ item.title }}</a></h6>

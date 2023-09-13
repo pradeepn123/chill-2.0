@@ -99,7 +99,7 @@ predictive-search{
             @media (max-width: 1023px){
                 flex-direction: column;
             }
-            .blog-category-item-wrap{
+            .blog-category-item{
                 flex-basis: calc(100% / 3);
                 @media (max-width: 767px){
                     flex-basis: 100%;
@@ -131,7 +131,7 @@ predictive-search{
         @media (max-width: 1199px){
             width: 100%;
         }
-        .blog-category-item-wrap{
+        .blog-category-item{
             flex-basis: calc(100% / 3 - 50px);
             @media (max-width: 767px){
                 flex-basis: 100%;
