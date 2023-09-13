@@ -15,7 +15,7 @@
                 <div class="blog-category-list-wrap">
                     {%- for article in blogs[handle].articles -%}
                         <div class="blog-category-item">
-                            {% render 'blog-category-list', article:article %}
+                            {% render 'blog-tile', article:article %}
                         </div>
                     {%- endfor -%}
                 </div>
@@ -30,7 +30,7 @@
 
 {% schema %}
     {
-        "name": "Blog Category",
+        "name": "All blogs",
         "class": "section-featured-blog",
         "settings": [
             {
@@ -103,7 +103,7 @@
         ],
         "presets": [
             {
-                "name": "Blog Category",
+                "name": "All blogs",
                 "settings": {
                 }
             }

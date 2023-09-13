@@ -9,10 +9,12 @@
     },
     "5ce7b3ed-5d92-4ffd-a240-eca63b449ad1": {
       "type": "search-page",
-      "settings": {}
+      "settings": {
+        "search_title": "<p>Search<strong> Blogs<\/strong><\/p>"
+      }
     },
-    "ac6b5e51-23af-47af-80cf-73ec668c329d": {
-      "type": "blog-category",
+    "65a0f8c5-bc9a-4818-bbf6-77d75ee43da7": {
+      "type": "all-blogs",
       "settings": {
         "title": "Blog posts",
         "blog": "",
@@ -27,6 +29,6 @@
   "order": [
     "main",
     "5ce7b3ed-5d92-4ffd-a240-eca63b449ad1",
-    "ac6b5e51-23af-47af-80cf-73ec668c329d"
+    "65a0f8c5-bc9a-4818-bbf6-77d75ee43da7"
   ]
 }

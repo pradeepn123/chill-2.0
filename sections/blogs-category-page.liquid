@@ -1,44 +1,10 @@
-
+{{ 'blog-category.css' | asset_url | stylesheet_tag }}
 {% assign banner = blog.metafields.custom %}
 {% style %}
-.main_blog_container {
-    margin: 80px;
-}
     .blog_banner {
-        position: relative;
-        text-align: center;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%), url({{ banner.blog_banner | image_url }}), lightgray 50% / cover no-repeat;
-        height: 240px;
-        object-fit: cover;
-        border-radius: 10px;
     }
-        .blog_banner_text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-            .blog_banner_text h2 {
-                font-family: inherit;
-                font-size: 52px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-                color: #fff;
-            }
-            .blog_banner_text p {
-                width: 720px;
-                text-align: center;
-                font-family: inherit;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                color: #fff;
-            }
-
-
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .article-list.article-layout--columns .article{
         margin: 30px 0 0 0;
         border-right: 0;
@@ -142,11 +108,11 @@
 .article__inner:hover .article-image {
     transform: scale(1.2);
     z-index: 99;
-}
+} */
 
 {% endstyle %}
 
-<div class="main_blog_container">
+<div class="main_blog_container container">
     {% if section.settings.show_page_banner %}
     <div class="blog_banner">
             <div class="blog_banner_text">
@@ -228,10 +194,10 @@
             {% assign aspect_ratio = false %}
             {% endif %}
     
-            <div data-next-url="{{ paginate.next.url }}" class="articles-on-page article-list article-layout--{{ section.settings.layout }}">
+            <div data-next-url="{{ paginate.next.url }}" class="articles-on-page blog-category-section">
     
             {% for article in blog.articles %}
-    
+{% comment %}     
                 <div class="article cc-animate-init -in cc-animate-complete" data-cc-animate>
                 <div class="article__inner {% if section.settings.layout != 'columns' %}container{% endif %}">
     
@@ -296,7 +262,10 @@
                 <!-- /.container -->
                 </div>
                 <!-- /.article -->
-    
+     {% endcomment %}
+     <div class="blog-category-item">
+        {% render 'blog-tile', article: article %}
+    </div>
             {% else %}
     
                 <div class="container">
@@ -325,21 +294,6 @@
       "id": "show_page_banner",
       "label": "Show page banner",
       "default": true
-    },
-    {
-      "type": "select",
-      "id": "layout",
-      "label": "Layout",
-      "default": "columns",
-      "options": [
-        {
-          "label": "List",
-          "value": "list"
-        }, {
-          "label": "Grid",
-          "value": "columns"
-        }
-      ]
     },
     {
       "type": "checkbox",
