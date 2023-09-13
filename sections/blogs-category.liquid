@@ -97,7 +97,7 @@
     display: none;
     position: absolute;
     width: 100%;
-    height: 11rem;
+    height: fit-content;
     padding: 1rem;
     background: white;
     top: 100%;
@@ -112,6 +112,8 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 .article-text-info .article_content {
@@ -120,6 +122,10 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 12px;
+}
+.article-text-info .iconmeta {
+    font-size: 10px;
 }
 
 .article__inner {
@@ -130,13 +136,10 @@
 .article__inner:hover .article-text-info {
     transform: scale(1.2);
     display: flex;
-    box-shadow:
-    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
-    0 0 0 2px rgb(255, 255, 255),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
-.article__inner:hover .rimage__image {
+.article__inner:hover .article-image {
     transform: scale(1.2);
     z-index: 99;
 }
