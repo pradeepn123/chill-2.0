@@ -215,6 +215,13 @@
 
 {% endpaginate %}
 
+<script>
+  if(window.location.search.includes('?type=article')){
+    document.querySelector('.utility-bar__left').innerHTML = '<a href="/pages/blog" class="blog_breadcrumb">< All Blogs</a>';
+    document.querySelector('.utility-bar__right').style.opacity = '0';
+  }
+</script>
+
 {% schema %}
   {
     "name": "Search results",
