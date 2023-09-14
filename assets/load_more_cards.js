@@ -1,29 +1,30 @@
-var articles_on_page = $('.articles-on-page');
-var next_url = articles_on_page.data('next-url');
-var load_more_btn = $('.blog_load_more_btn');
-var load_more_spinner = $('.blog_load_more_spinner');
-
-function showMoreCards() {
-    $.ajax(
-        {
-            url: next_url,
-            type: 'GET',
-            dataType: 'html',
-            beforeSend: function() {
-                load_more_btn.hide();
-                load_more_spinner.show();
-            }
-        }
-    ).done(function(next_page){
-        load_more_spinner.hide();
-
-        var new_articles = $(next_page).find('.articles-on-page');
-        var new_url = new_articles.data('next_url');
-
-        if(new_url){
-            load_more_btn.show();
-        }
-        next_url = new_url;
-        articles_on_page.append(new_articles.html());
-    });
-}
+function showMoreCards(){
+    var $this =$(this),totalPages = parseInt($('[data-total-pages]').val()),currentPage = parseInt($('[data-current-page]').val());
+    $this.attr('disabled', true);
+    $('[loader]').css('display', 'none');
+    currentPage = currentPage+1;
+    var nextUrl = $('[data-next-url]').val().replace(/page=[0-9]+/,'page='+currentPage);
+    $('[data-current-page]').val(currentPage);
+    $.ajax({
+      url: nextUrl,
+      type: 'GET',
+      dataType: 'html',
+      beforeSend: function() {
+        $('[load-more-text]').css('display', 'none');
+        $('[loader]').css('display', 'inline-block');
+      },
+      success: function(responseHTML){
+        $('.articles-on-page').append($(responseHTML).find('.articles-on-page').html());
+      },
+      complete: function() {
+        if(currentPage <= totalPages) {
+            $this.attr('disabled', false); 
+            $('[load-more-text]').css('display', 'inline');
+            $('[loader]').css('display', 'none');
+         }
+         if(currentPage == totalPages){
+            $('[load-more-text]').css('display', 'none');
+         }
+      }
+    })
+  }
