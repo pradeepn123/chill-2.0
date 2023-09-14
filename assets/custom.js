@@ -198,8 +198,8 @@ $(document).ready(function () {
 //     $(currentlast).addClass('laster');
 // });  
 $('.blog-category-list-wrap').slick({
-    slidesToShow: 3.5,
-    slidesToScroll: 2.5,
+    slidesToShow: 1.2,
+    slidesToScroll: 1,
     arrows: true,
     infinite: false,
     draggable:true,
@@ -214,21 +214,28 @@ $('.blog-category-list-wrap').slick({
                 draggable: true,
                 arrows: false
             }
+        },
+        {
+            breakpoint: 1200,
+            settings: 'unslick'
         }
     ]
 })
 
-if(window.screen.width < 768){
+if(window.screen.width < 1200){
     var $slider = $('.blog-category-list-wrap');
-    var $progressBar = $('.progress');
+    
     var $progressBarLabel = $( '.slider__label' );
   
     $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+        var $progressBar = $(this).siblings()[1];
+        console.log($progressBar)
     var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
     
-    $progressBar
-      .css('background-size', calc + '% 100%')
-      .attr('aria-valuenow', calc );
+    $progressBar.style.backgroundSize = calc + '% 100%'
+    $progressBar.setAttribute('aria-valuenow', calc)
+    //   .css('background-size', calc + '% 100%')
+    //   .attr('aria-valuenow', calc );
     
     // $progressBarLabel.text( calc + '% completed' );
   });
