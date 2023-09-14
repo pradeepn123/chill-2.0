@@ -126,7 +126,7 @@
     {% endif %}
 
     <div data-section-type="blog-template" class="article_blog_section" id="article_blog">
-        {% paginate blog.articles by 6 %}
+        {% paginate blog.articles by 3 %}
     
         <div class="article_blog_filter">
             <div class="utility-bar" data-cc-animate>
@@ -195,8 +195,7 @@
             {% assign aspect_ratio = false %}
             {% endif %}
     
-            <div data-next-url="{{ paginate.next.url }}" class="articles-on-page blog-category-section">
-    
+            <div class="articles-on-page blog-category-section">
             {% for article in blog.articles %}
 {% comment %}     
                 <div class="article cc-animate-init -in cc-animate-complete" data-cc-animate>
@@ -277,11 +276,19 @@
             {% endfor %}
         </div>
         {% comment %} {% render 'pagination-control', paginate: paginate %} {% endcomment %}
-        {% endpaginate %}
+        <input type="hidden" value="{{ paginate.next.url }}" data-next-url>
+     	<input type="hidden" value="{{ paginate.pages }}" data-total-pages>
+        <input type="hidden" value="{{ paginate.current_page  }}" data-current-page>
+        {% if paginate.pages > 1 %}
         <div class="blog_load_more">
-            <a class="blog_load_more_btn" onclick="showMoreCards()">SHOW MORE</a>
-            <div class="blog_load_more_spinner"></div>
+          <a class="blog_load_more_btn" blog_load_more_btn onclick="showMoreCards()">
+            <span load-more-text>SHOW MORE</span>
+            <span loader class="blog_load_more_spinner"></span>
+          </a>
         </div>
+        {% endif %}
+        {% endpaginate %}
+     
     </div>
 </div>
 
