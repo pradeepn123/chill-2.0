@@ -8,25 +8,43 @@
                 <div class="blog_each_handle_wrapper_info">
                     <h4 class="category_title"> {{handle | replace: '-', ' ' | capitalize}}</h4>
                     <a class="view_all_link" href="/blogs/{{handle}}">
-                        View All
+                        ({{ blogs[handle].articles.size  }})   View All
                         {% render 'svg-up-icon' %}
                     </a>
                 </div>
-                <div class="blog-category-list-wrap">
-                    {%- for article in blogs[handle].articles -%}
+                <div class="blog-category-list-wrap" data-handle= {{ handle }}>
+                    {%- for article in blogs[handle].articles limit: 3 -%}
                         <div class="blog-category-item">
-                            {% render 'blog-tile', article:article %}
+                            {% render 'blog-tile', article: article %}
                         </div>
                     {%- endfor -%}
                 </div>
-                <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                    <span class="slider__label sr-only">
-                </div>
+                {% if blogs[handle].articles.size > 1 %}
+                    <div class="progress" role="progressbar" data-handle={{ handle }} aria-valuemin="0" aria-valuemax="100">
+                        <span class="slider__label sr-only">
+                    </div>
+                {% endif %}
             </div>
         {%- endfor -%}
     </div>
 </div>
-
+{% comment %} <script>
+    document.addEventListener('DOMContentLoaded', () => {
+            var $slider = $('.blog-category-list-wrap');
+            var $progressBar = $('.progress');
+            // var $progressBarLabel = $( '.slider__label' );
+          
+            $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+            var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+            
+            $progressBar
+              .css('background-size', calc + '% 100%')
+              .attr('aria-valuenow', calc );
+            
+            // $progressBarLabel.text( calc + '% completed' );
+          });
+    })
+</script> {% endcomment %}
 
 {% schema %}
     {

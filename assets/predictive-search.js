@@ -5,6 +5,7 @@ class PredictiveSearch extends HTMLElement {
       this.input = this.querySelector('input[type="search"]');
       this.predictiveSearchResults = this.querySelector('#predictive-search');
       this.closeIcon = this.querySelector('.blog_search_close_icon');
+
       this.input.addEventListener('click', () => {
         this.input.closest('predictive-search').classList.add('search_open')
         const searchTerm = this.input.value.trim();
@@ -14,8 +15,8 @@ class PredictiveSearch extends HTMLElement {
           this.querySelector('.search_icon').style.display = 'none';
           this.closeIcon.style.display = 'block';
         }
-        
       })
+
       this.closeIcon.addEventListener('click', () => {
         this.hideFeaturedBlogs();
         this.querySelector('.search_icon').style.display = 'block';
@@ -26,6 +27,7 @@ class PredictiveSearch extends HTMLElement {
         this.input.value = '';
 
       })
+
       this.input.addEventListener('input', this.debounce((event) => {
         this.hideFeaturedBlogs()
         this.onChange(event);
@@ -67,9 +69,9 @@ class PredictiveSearch extends HTMLElement {
           return response.text();
         })
         .then((text) => {
-          
           const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('#shopify-section-predictive-search').innerHTML;
           this.predictiveSearchResults.innerHTML = resultsMarkup;
+          
           this.open();
           this.predictiveSearchResults.querySelector('#search_results_blogs').href = `/search?type=article&q=${searchTerm}&options%5Bprefix%5D=last`
           this.input.addEventListener("keypress", function(event) {
@@ -91,7 +93,12 @@ class PredictiveSearch extends HTMLElement {
     }
   
     close() {
-      this.predictiveSearchResults.style.display = 'none';
+      if(this.predictiveSearchResults.querySelector('#predictive-search-results').innerHTML == ''){
+        this.predictiveSearchResults.querySelector('#predictive-search-results').innerHTML = "Sorry, we couldn't find any results"
+      }
+      else{
+        this.predictiveSearchResults.style.display = 'none';
+      }
     }
   
     debounce(fn, wait) {
