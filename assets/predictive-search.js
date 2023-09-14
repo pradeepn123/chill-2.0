@@ -29,6 +29,13 @@ class PredictiveSearch extends HTMLElement {
       })
 
       this.input.addEventListener('input', this.debounce((event) => {
+        const searchTerm = this.input.value.trim();
+        if(!searchTerm.length){
+          this.predictiveSearchResults.innerHTML = ''
+        }
+        else{
+          this.predictiveSearchResults.innerHTML = '<div class="blog_loader"></div>'
+        }
         this.hideFeaturedBlogs()
         this.onChange(event);
       }, 300).bind(this));
@@ -41,7 +48,7 @@ class PredictiveSearch extends HTMLElement {
       featuredBlocks.querySelector('.featured_blogs_content').innerHTML = array_featured_blocks.innerHTML;
     }
     hideFeaturedBlogs(){
-      this.querySelector('#featured_blogs').innerHTML = ''
+      this.querySelector('#featured_blogs').innerHTML = '';
     }
 
     onChange() {
@@ -54,10 +61,12 @@ class PredictiveSearch extends HTMLElement {
       }
       this.hideFeaturedBlogs();
       this.getSearchResults(searchTerm);
+      
           // document.querySelector('#search_results_blogs').setAttribute('href') = `/search/suggest?q=${searchTerm}&resources[type]=article&section_id=predictive-search`
     }
   
     getSearchResults(searchTerm) {
+      // this.predictiveSearchResults.innerHTML = '<div class="blog_loader"></div>'
       fetch(`/search/suggest?q=${searchTerm}&resources[type]=article&section_id=predictive-search&_limit=6`)
         .then((response) => {
           if (!response.ok) {
@@ -73,11 +82,11 @@ class PredictiveSearch extends HTMLElement {
           this.predictiveSearchResults.innerHTML = resultsMarkup;
           
           this.open();
-          this.predictiveSearchResults.querySelector('#search_results_blogs').href = `/search?type=article&q=${searchTerm}&options%5Bprefix%5D=last`
+          this.predictiveSearchResults.querySelector('#search_results_blogs').href = `/search?type=article&q=${searchTerm}`
           this.input.addEventListener("keypress", function(event) {
             if (event.key === "Enter") {
               event.preventDefault();
-              window.location = `/search?type=article&q=${searchTerm}&options%5Bprefix%5D=last`
+              window.location = `/search?type=article&q=${searchTerm}`
             }
           })
         })
