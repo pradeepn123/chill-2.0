@@ -197,32 +197,16 @@ $(document).ready(function () {
 //     var currentlast = $(this).find('.slick-active').last();
 //     $(currentlast).addClass('laster');
 // });  
-$('.blog-category-list-wrap').slick({
-    slidesToShow: 1.2,
-    slidesToScroll: 1,
-    arrows: true,
-    infinite: false,
-    draggable:true,
-    prevArrow: '<button type="button" class="slick-header-prev" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M11.913,23.827l-1.564-1.6,9.2-9.2H0V10.8H19.545l-9.2-9.2L11.913,0,23.827,11.913Z" transform="translate(23.827 23.827) rotate(180)"/></svg></button>',
-    nextArrow: '<button type="button" class="slick-header-next" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M19.913,31.827l-1.564-1.6,9.2-9.2H8V18.8H27.545l-9.2-9.2L19.913,8,31.827,19.913Z" transform="translate(-8 -8)"/></svg></button>',
-    responsive: [
-        {
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 1.2,
-                slidesToScroll: 1,
-                draggable: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 1200,
-            settings: 'unslick'
-        }
-    ]
-})
+
 
 if(window.screen.width < 1200){
+    $('.blog-category-list-wrap').slick({
+        slidesToShow: 1.2,
+        slidesToScroll: 1,
+        draggable: true,
+        arrows: false,
+        infinite: false
+    })
     var $slider = $('.blog-category-list-wrap');
     
     var $progressBarLabel = $( '.slider__label' );
