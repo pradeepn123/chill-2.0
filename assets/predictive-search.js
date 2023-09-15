@@ -67,7 +67,7 @@ class PredictiveSearch extends HTMLElement {
   
     getSearchResults(searchTerm) {
       // this.predictiveSearchResults.innerHTML = '<div class="blog_loader"></div>'
-      fetch(`/search/suggest?q=${searchTerm}&resources[type]=article&section_id=predictive-search&_limit=6`)
+      fetch(`/search/suggest?q=${searchTerm}&resources[type]=article&resources[options][fields]=body,title,author,tag&section_id=predictive-search&_limit=6`)
         .then((response) => {
           if (!response.ok) {
             var error = new Error(response.status);
