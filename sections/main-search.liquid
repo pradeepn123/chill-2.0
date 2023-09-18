@@ -1,7 +1,15 @@
 {{ 'blog-category.css' | asset_url | stylesheet_tag }}
 
 {% paginate search.results by section.settings.coll_num_per_page_int %}
-
+{% style %}
+{% if request.path == '/search' %}
+  @media(max-width: 767px){
+    .utility-bar__centre .utility-bar__item{
+      font-size: 16px;
+    }
+  }
+{% endif %}
+{% endstyle %}
 <div data-section-id="{{ section.id }}" data-section-type="search-template" data-ajax-filtering="{{ section.settings.ajax_products }}" data-components="accordion,modal,price-range">
   <div class="page-header" data-cc-animate>
     <div class="container">
@@ -63,7 +71,8 @@
         </div>
 
         <div class="utility-bar__centre">
-          <div class="utility-bar__item">{{ 'general.search.results_with_count' | t: count: paginate.items }}</div>
+          <div class="utility-bar__item">We found <strong>{{ paginate.items }}</strong> results</div>
+          {% comment %} <div class="utility-bar__item">{{ 'general.search.results_with_count' | t: count: paginate.items }}</div> {% endcomment %}
         </div>
 
         <div class="utility-bar__right">

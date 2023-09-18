@@ -44,7 +44,7 @@ class PredictiveSearch extends HTMLElement {
     showFeaturedBlogs(){
       let array_featured_blocks = this.querySelector('.array_featured_blogs');
       let featuredBlocks = this.querySelector('#featured_blogs');
-      featuredBlocks.innerHTML = `<p class="featured_blogs_title">Featured Blogs</p><div class="featured_blogs_content container"></div>`
+      featuredBlocks.innerHTML = `<p class="featured_blogs_title">Featured Blogs</p><div class="featured_blogs_content"></div>`
       featuredBlocks.querySelector('.featured_blogs_content').innerHTML = array_featured_blocks.innerHTML;
     }
     hideFeaturedBlogs(){

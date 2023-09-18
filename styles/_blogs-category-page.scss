@@ -17,6 +17,11 @@
 
 
 .main_blog_container {
+    max-width: 85%;
+    @media (max-width: 767px){
+        max-width: 100% !important;
+        margin: 16px 0;
+    }
     .blog_banner {
         // position: relative;
         text-align: center;
@@ -31,6 +36,8 @@
             justify-content: flex-start;
             align-items: flex-start;
             padding: 24px 20px;
+            margin: 16px 0 40px 0;
+            height: 210px;
         }
         .blog_banner_text {
             // position: absolute;
@@ -42,7 +49,7 @@
             }
             h2 {
                 font-family: inherit;
-                font-size: 52px;
+                font-size: 44px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;

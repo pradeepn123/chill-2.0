@@ -6,7 +6,7 @@
       We found <strong>{{ predictive_search.resources.articles.size }} {% if predictive_search.resources.articles.size == 1 %}result{% else %} results {% endif %}</strong>
     {% endif %}
   </div>
-  <div id="predictive-search-results" class="product-list product-list--per-row-4 product-list--per-row-mob-{{ settings.prod_thumb_mob_per_row }} product-list--image-shape-{{ settings.prod_thumb_shape }}">
+  <div id="predictive-search-results" class="product-list {% if request.path == '/search/suggest' %}container{% endif %} product-list--per-row-4 product-list--per-row-mob-{{ settings.prod_thumb_mob_per_row }} product-list--image-shape-{{ settings.prod_thumb_shape }}">
     {%- liquid
       if settings.prod_thumb_shape == 'portrait-23'
         assign chosen_product_aspect_ratio = 0.67
