@@ -128,65 +128,7 @@
     <div data-section-type="blog-template" class="article_blog_section" id="article_blog">
         {% paginate blog.articles by section.settings.no_of_blogs %}
     
-        <div class="article_blog_filter">
-            <div class="utility-bar" data-cc-animate>
-                <div class="utility-bar__left">
-                {% if blog.all_tags.size > 0 %}
-                    <div class="utility-bar__item">
-                    <div class="link-dropdown link-dropdown--left-aligned link-dropdown--with-icon">
-                        <div class="visually-hidden" id="filter-dropdown-heading">{{ 'collections.filtering.filter' | t | escape }}
-                        </div>
-                        <button class="link-dropdown__button notabutton" aria-expanded="false" aria-controls="filter-dropdown-options" aria-describedby="filter-dropdown-heading">
-                        <span class="link-dropdown__button-text">
-                            <span class="link-dropdown__button-prefix-icon">{% render 'svg-filter', stroke_width: 1.3 %}
-                            </span>
-                            {%- if current_tags -%}
-                            {{- current_tags | join: ', ' -}}
-                            {%- else -%}
-                            {{- 'collections.filtering.filter' | t -}}
-                            {%- endif -%}
-                        </span>
-                        <span class="link-dropdown__button-icon">{% render 'svg-chevron-down', stroke_width: 1.3 %}
-                        </span>
-                        </button>
-                        <div class="link-dropdown__options" id="filter-dropdown-options">
-                        {% if current_tags %}
-                            <a href="{{ blog.url }}" class="link-dropdown__link">
-                            {{- 'collections.filtering.all' | t -}}
-                            </a>
-                        {% endif %}
-    
-                        {% for tag in blog.all_tags %}
-                            <a href="{{ tag | link_to_tag: tag | split: 'href="' | last | split: '"' | first }}" class="link-dropdown__link{% if current_tags contains tag %} link-dropdown__link--active{% endif %}">
-                            {{- tag -}}
-                            </a>
-                        {% endfor %}
-                        </div>
-                    </div>
-                    </div>
-                {% endif %}
-                </div>
-    
-                {% if section.settings.show_sharing_icons or section.settings.show_rss_icon %}
-                <div class="utility-bar__right" data-cc-animate>
-                    {% if section.settings.show_sharing_icons %}
-                    <span class="utility-bar__item">
-    
-                        {% render 'social-sharing', share_title: blog.title, share_permalink: blog.url, share_image: false %}
-    
-                        {%- comment -%}
-                        {% render 'social-icons', icon_setting: settings.social_custom_icon, icon_size: icon_size, container_class: container_class %}
-                        {%- endcomment -%}
-                    </span>
-                    {% endif %}
-                    {% if section.settings.show_rss_icon %}
-                    <a class="rsslink utility-bar__item" href="{{ blog.url }}.atom" title="{{ blog.title | escape }} RSS">{% render 'svg-rss' %}
-                    </a>
-                    {% endif %}
-                </div>
-                {% endif %}
-            </div>
-        </div>
+        
     
             {% if section.settings.crop_image and section.settings.layout == 'columns' %}
             {% assign aspect_ratio_split = section.settings.crop_style | split: '-' %}
@@ -333,16 +275,6 @@
       "type": "checkbox",
       "id": "show_article_tags",
       "label": "Show tags underneath articles",
-      "default": true
-    }, {
-      "type": "checkbox",
-      "id": "show_sharing_icons",
-      "label": "Show social sharing icons",
-      "default": true
-    }, {
-      "type": "checkbox",
-      "id": "show_rss_icon",
-      "label": "Show RSS feed link",
       "default": true
     }, {
       "type": "header",

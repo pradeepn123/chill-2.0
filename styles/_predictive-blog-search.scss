@@ -8,6 +8,9 @@ predictive-search{
         padding: 50px 0;
         top: 90px;
         background: #fff;
+        @media (max-width: 767px){
+            top: 11%;
+        }
         @media (max-width: 1023px){
             padding:10px 0 30px 0;
         }
@@ -22,6 +25,9 @@ predictive-search{
         flex-direction: column;
         text-align: center;
         gap: 20px;
+        @media (max-width: 1199px){
+            margin: 40px auto 30px auto;
+        }
         .search_title{
             p{
                 margin-bottom: 0;
@@ -45,6 +51,16 @@ predictive-search{
             @media (max-width: 1023px){
                 position: unset;
             }
+            input[type="search"]{
+                border-color: #000 !important;
+            }
+            input[type="search"]::-webkit-search-cancel-button {
+                -webkit-appearance: none;
+                cursor: pointer;
+                height: 20px;
+                width: 20px;
+                background-image: url("https://cdn.shopify.com/s/files/1/0536/9115/4590/files/Frame_4.svg?v=1695016290");
+            }
             .search_input{
                 position: relative;
                 width: 40%;
@@ -57,11 +73,11 @@ predictive-search{
                 }
                 .search_icon{
                     position: absolute;
-                    right: 12%;
+                    right: 22px;
                     top: 25px;
                     transform: translateY(-50%);
                     @media (max-width: 1023px){
-                        right: 7%;
+                        right: 20px;
                     }
                 }
             }
@@ -86,6 +102,10 @@ predictive-search{
         .featured_blogs_title{
             font-size: 32px;
             font-weight: 700;
+            @media(max-width: 767px){
+                text-align: left;
+                font-size: 30px;
+            }
         }
         .featured_blogs_content{
             display: flex !important;
@@ -95,6 +115,7 @@ predictive-search{
             margin: 0 auto;
             @media (max-width: 1199px){
                 max-width: 100%;
+                margin-bottom: 100px;
             }
             @media (max-width: 1023px){
                 flex-direction: column;
@@ -125,7 +146,7 @@ predictive-search{
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px 50px;
-        width: 90%;
+        width: 75%;
         height: fit-content;
         margin: 0 auto;
         @media (max-width: 1199px){
@@ -136,16 +157,23 @@ predictive-search{
             @media (max-width: 767px){
                 flex-basis: 100%;
             }
-            @media (max-width: 1199px){
+            @media (min-width: 768px) and (max-width: 1199px){
                 flex-basis: calc(100% /2 - 30px);
             }
         }
     }
-    #search_results_blogs span{
-        border: 1px solid #000;
-        padding: 16px 25px;
-        font-size: 16px;
+    #search_results_blogs{
+        @media (max-width: 1199px){
+            padding: 20px 0;
+            margin-bottom: 100px;
+        }
+        span{
+            border: 1px solid #000;
+            padding: 16px 25px;
+            font-size: 16px;
+        }
     }
+    
 }
 body.search_open{
     overflow: hidden;

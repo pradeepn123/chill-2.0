@@ -1,30 +1,37 @@
 {{ 'blog-category.css' | asset_url | stylesheet_tag }}
 
-{% assign blog_handles = "cbd-benefits-and-education,chill-blog" | split: "," %}
+{% capture blog_handles %}
+    {% for block in section.blocks %}
+        {{ block.settings.blog }}
+    {% endfor %}
+{% endcapture %}
+{% assign blog_list = blog_handles | split: ' ' %}
 <div class="blog-category-section">
     <div class="container">
-        {%- for handle in blog_handles -%}
-            <div class="blog_each_handle">
-                <div class="blog_each_handle_wrapper_info">
-                    <h4 class="category_title"> {{handle | replace: '-', ' ' | capitalize}}</h4>
-                    <a class="view_all_link" href="/blogs/{{handle}}">
-                        ({{ blogs[handle].articles.size  }})   View All
-                        {% render 'svg-up-icon' %}
-                    </a>
-                </div>
-                <div class="blog-category-list-wrap" data-handle= {{ handle }}>
-                    {%- for article in blogs[handle].articles limit: 3 -%}
-                        <div class="blog-category-item">
-                            {% render 'blog-tile', article: article %}
-                        </div>
-                    {%- endfor -%}
-                </div>
-                {% if blogs[handle].articles.size > 1 %}
-                    <div class="progress" role="progressbar" data-handle={{ handle }} aria-valuemin="0" aria-valuemax="100">
-                        <span class="slider__label sr-only">
+        {%- for handle in blog_list -%}
+            {% if blogs[handle].articles.size > 0 %}
+                <div class="blog_each_handle">
+                    <div class="blog_each_handle_wrapper_info">
+                        <h4 class="category_title"> {{handle | replace: '-', ' ' | capitalize}}</h4>
+                        <a class="view_all_link" href="/blogs/{{handle}}">
+                            ({{ blogs[handle].articles.size }})   View All
+                            {% render 'svg-up-icon' %}
+                        </a>
                     </div>
-                {% endif %}
-            </div>
+                    <div class="blog-category-list-wrap" data-handle= {{ handle }}>
+                        {%- for article in blogs[handle].articles limit: 3 -%}
+                            <div class="blog-category-item">
+                                {% render 'blog-tile', article: article %}
+                            </div>
+                        {%- endfor -%}
+                    </div>
+                    {% if blogs[handle].articles.size > 1 %}
+                        <div class="progress" role="progressbar" data-handle={{ handle }} aria-valuemin="0" aria-valuemax="100" style="background-size: 20% 100%;">
+                            <span class="slider__label sr-only">
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
         {%- endfor -%}
     </div>
 </div>
@@ -56,11 +63,6 @@
                 "id": "title",
                 "label": "Heading",
                 "default": "Blog posts"
-            },
-            {
-                "type": "blog",
-                "id": "blog",
-                "label": "Blog"
             },
             {
                 "type": "range",
@@ -118,6 +120,20 @@
                 ],
                 "default": "1.78"
             }
+        ],
+        "blocks": [
+            {
+                "name": "Select blogs",
+                "type":"select",
+                "settings": [
+                    {
+                        "type": "blog",
+                        "id": "blog",
+                        "label": "Blog"
+                    }
+                ]
+            }
+
         ],
         "presets": [
             {

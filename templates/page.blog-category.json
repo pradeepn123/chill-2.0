@@ -15,9 +15,33 @@
     },
     "65a0f8c5-bc9a-4818-bbf6-77d75ee43da7": {
       "type": "all-blogs",
+      "blocks": {
+        "570aef11-ac9e-4821-beae-7b21d57920ca": {
+          "type": "select",
+          "settings": {
+            "blog": "cbd-benefits-and-education"
+          }
+        },
+        "e280fb21-fe32-436d-ac04-5fcebae0ccb4": {
+          "type": "select",
+          "settings": {
+            "blog": "chill-blog"
+          }
+        },
+        "bf540484-172c-48df-913b-b45e83ef9424": {
+          "type": "select",
+          "settings": {
+            "blog": "chill-test"
+          }
+        }
+      },
+      "block_order": [
+        "570aef11-ac9e-4821-beae-7b21d57920ca",
+        "e280fb21-fe32-436d-ac04-5fcebae0ccb4",
+        "bf540484-172c-48df-913b-b45e83ef9424"
+      ],
       "settings": {
         "title": "Blog posts",
-        "blog": "",
         "post_limit": 3,
         "show_author": true,
         "show_date": true,

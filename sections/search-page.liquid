@@ -2,10 +2,10 @@
 <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
 
 <predictive-search>
-    <form action="{{ routes.search_url }}" method="get" role="search" class="search_section" autocomplete="off">
-        <label for="Search" class="search_title">{{ section.settings.search_title }}</label>
+    <form action="{{ routes.search_url }}" method="get" role="search" class="search_section container" autocomplete="off">
+        <label for="Search" class="search_title container">{{ section.settings.search_title }}</label>
         <div class="search_block">
-            <div class="search_input container">
+            <div class="search_input">
                 <input
                 id="Search"
                 type="search"
@@ -40,7 +40,7 @@
         <div id="predictive-search" class="blog-category-section" tabindex="-1"></div>
         <div id="featured_blogs"></div>
         <div class="array_featured_blogs blog-category-item" style="display: none;">
-            {% assign blog_handles = "chill-blog, cbd-benefits-and-education" | split: "," %}
+            {% assign blog_handles = "chill-blog, cbd-benefits-and-education,chill-test" | split: "," %}
             {% for handle in blog_handles %}
                 {% for article in blogs[handle].articles limit: 3 %}
                     {% comment %} <a href="{{ article.url }}" class="blog">{{ article.title }}</a> {% endcomment %}

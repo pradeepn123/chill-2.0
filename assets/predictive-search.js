@@ -44,7 +44,7 @@ class PredictiveSearch extends HTMLElement {
     showFeaturedBlogs(){
       let array_featured_blocks = this.querySelector('.array_featured_blogs');
       let featuredBlocks = this.querySelector('#featured_blogs');
-      featuredBlocks.innerHTML = `<p class="featured_blogs_title">Featured Blogs</p><div class="featured_blogs_content container"></div>`
+      featuredBlocks.innerHTML = `<p class="featured_blogs_title">Featured Blogs</p><div class="featured_blogs_content"></div>`
       featuredBlocks.querySelector('.featured_blogs_content').innerHTML = array_featured_blocks.innerHTML;
     }
     hideFeaturedBlogs(){
@@ -67,7 +67,7 @@ class PredictiveSearch extends HTMLElement {
   
     getSearchResults(searchTerm) {
       // this.predictiveSearchResults.innerHTML = '<div class="blog_loader"></div>'
-      fetch(`/search/suggest?q=${searchTerm}&resources[type]=article&section_id=predictive-search&_limit=6`)
+      fetch(`/search/suggest?q=${searchTerm}&resources[type]=article&resources[options][fields]=body,title,author,tag&section_id=predictive-search&_limit=6`)
         .then((response) => {
           if (!response.ok) {
             var error = new Error(response.status);
