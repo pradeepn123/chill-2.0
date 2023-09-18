@@ -15,9 +15,12 @@
 .blog-category-section .blog-category-item .article-image .rimage-wrapper img {
     border-radius: 1rem;
 }
-.blog-category-list-wrap{
-    width: 97vw !important;
+@media (max-width: 1199px){
+    .blog-category-list-wrap{
+        width: 97vw !important;
+    }
 }
+
 @media (min-width: 1024px){
     .blog-category-list-wrap{
         display: flex;
