@@ -17,7 +17,7 @@
 
 
 .main_blog_container {
-    max-width: 85%;
+    max-width: 85% !important;
     @media (max-width: 767px){
         max-width: 100% !important;
         margin: 16px 0;
