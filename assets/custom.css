@@ -11701,7 +11701,7 @@ body.search_open {
 }
 
 .main_blog_container {
-  max-width: 85%;
+  max-width: 85% !important;
 }
 @media (max-width: 767px) {
   .main_blog_container {
