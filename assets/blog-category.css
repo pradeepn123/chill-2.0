@@ -11,6 +11,10 @@
     }
 }
 
+
+.blog-category-section .blog-category-item .article-image .rimage-wrapper .rimage__image {
+    border-radius: 1rem !important;
+}
 @media (max-width: 1199px){
     .blog-category-list-wrap{
         width: 97vw !important;
