@@ -125,6 +125,9 @@ predictive-search{
             }
             .blog-category-item{
                 flex-basis: calc(100% / 3);
+                .article-image .rimage-wrapper .rimage__image {
+                    border-radius: 1rem !important;
+                }
                 @media (max-width: 767px){
                     flex-basis: 100%;
                 }

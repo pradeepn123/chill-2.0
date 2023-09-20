@@ -11622,6 +11622,9 @@ predictive-search #featured_blogs .featured_blogs_content {
 predictive-search #featured_blogs .featured_blogs_content .blog-category-item {
   flex-basis: 33.3333333333%;
 }
+predictive-search #featured_blogs .featured_blogs_content .blog-category-item .article-image .rimage-wrapper .rimage__image {
+  border-radius: 1rem !important;
+}
 @media (max-width: 767px) {
   predictive-search #featured_blogs .featured_blogs_content .blog-category-item {
     flex-basis: 100%;
