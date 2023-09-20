@@ -64,10 +64,25 @@ class PredictiveSearch extends HTMLElement {
       
           // document.querySelector('#search_results_blogs').setAttribute('href') = `/search/suggest?q=${searchTerm}&resources[type]=article&section_id=predictive-search`
     }
-  
+    removeDuplicates(){
+      let blog_titles = [];
+      document.querySelectorAll("#predictive-search-results .blog-category-item").forEach(item => {
+        const title = item.querySelector('.title_wrap_before a').innerHTML
+        blog_titles.push(title.trim())
+      })
+      blog_titles = [...new Set(blog_titles)]
+      document.querySelectorAll("#predictive-search-results .blog-category-item").forEach(item => {
+        item.style.display = "none";
+      })
+      
+      blog_titles.forEach(blog => {
+        document.querySelector(`[data-title='${blog}']`).style.display = 'block'
+      })
+      // document.querySelector('utility-bar__centre .utility-bar__item').innerHTML = `We found ${blog_titles.length} results`
+    }
     getSearchResults(searchTerm) {
       // this.predictiveSearchResults.innerHTML = '<div class="blog_loader"></div>'
-      fetch(`/search/suggest?q=${searchTerm}&resources[type]=article&resources[options][fields]=body,title,author,tag&section_id=predictive-search&_limit=6`)
+      fetch(`/search/suggest?q=${searchTerm}&resources[type]=article&resources[options][fields]=body,title,author,tag&section_id=predictive-search&_limit=20`)
         .then((response) => {
           if (!response.ok) {
             var error = new Error(response.status);
@@ -80,6 +95,8 @@ class PredictiveSearch extends HTMLElement {
         .then((text) => {
           const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('#shopify-section-predictive-search').innerHTML;
           this.predictiveSearchResults.innerHTML = resultsMarkup;
+
+          this.removeDuplicates();
           
           this.open();
           this.predictiveSearchResults.querySelector('#search_results_blogs').href = `/search?type=article&q=${searchTerm}`

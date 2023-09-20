@@ -3,7 +3,7 @@
 
 <predictive-search>
     <form action="{{ routes.search_url }}" method="get" role="search" class="search_section container" autocomplete="off">
-        <label for="Search" class="search_title container">{{ section.settings.search_title }}</label>
+        <span for="Search" class="search_title container">{{ section.settings.search_title }}</span>
         <div class="search_block">
             <div class="search_input">
                 <input
@@ -40,15 +40,11 @@
         <div id="predictive-search" class="blog-category-section" tabindex="-1"></div>
         <div id="featured_blogs"></div>
         <div class="array_featured_blogs blog-category-item" style="display: none;">
-            {% assign blog_handles = "chill-blog, cbd-benefits-and-education,chill-test" | split: "," %}
-            {% for handle in blog_handles %}
-                {% for article in blogs[handle].articles limit: 3 %}
-                    {% comment %} <a href="{{ article.url }}" class="blog">{{ article.title }}</a> {% endcomment %}
-                    <div class="blog-category-item">
-                        {% render 'blog-tile', article: article %}
-                    </div>
-                {% endfor %}
-            {% endfor %}
+        {% for block in section.blocks %}
+            <div class="blog-category-item">
+                {% render 'blog-tile', article: block.settings.article %}
+            </div>
+        {% endfor %}
         </div>
         
     </form>
@@ -62,6 +58,20 @@
             "id": "search_title",
             "label": "Search title",
             "default": "<p>Search<strong> Blogs</strong></p>"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "select",
+            "name": "Select Featured blogs",
+            "limit": 3,
+            "settings": [
+                {
+                    "type": "article",
+                    "id": "article",
+                    "label": "Select an article"
+                }
+            ]
         }
     ],
     "presets": [

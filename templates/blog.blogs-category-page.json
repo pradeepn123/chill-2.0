@@ -55,8 +55,6 @@
         "show_date": true,
         "show_excerpts": true,
         "show_article_tags": true,
-        "show_sharing_icons": false,
-        "show_rss_icon": false,
         "crop_image": true,
         "crop_style": "16-9"
       }

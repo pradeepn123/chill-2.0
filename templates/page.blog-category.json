@@ -9,6 +9,31 @@
     },
     "5ce7b3ed-5d92-4ffd-a240-eca63b449ad1": {
       "type": "search-page",
+      "blocks": {
+        "7eeab47b-458f-4123-86bf-d9d367ba0153": {
+          "type": "select",
+          "settings": {
+            "article": "chill-blog\/unplugging-and-unwinding-your-tech-detox-adventure"
+          }
+        },
+        "4107904e-f0ec-4b4b-9194-971c52585055": {
+          "type": "select",
+          "settings": {
+            "article": "chill-blog\/introducing-umbo-mushrooms-for-focus-endurance-and-sleep"
+          }
+        },
+        "3b8c9a13-3818-4b31-b78e-2852b048bfec": {
+          "type": "select",
+          "settings": {
+            "article": "chill-blog\/why-use-nicotine-free-vapes"
+          }
+        }
+      },
+      "block_order": [
+        "7eeab47b-458f-4123-86bf-d9d367ba0153",
+        "4107904e-f0ec-4b4b-9194-971c52585055",
+        "3b8c9a13-3818-4b31-b78e-2852b048bfec"
+      ],
       "settings": {
         "search_title": "<p>Search<strong> Blogs<\/strong><\/p>"
       }
@@ -33,12 +58,19 @@
           "settings": {
             "blog": "chill-test"
           }
+        },
+        "72b09662-4c86-4ad3-a24d-b875e49e5fef": {
+          "type": "select",
+          "settings": {
+            "blog": "chill-test-2"
+          }
         }
       },
       "block_order": [
         "307ef005-06b3-4288-9679-6319963df7ba",
         "faa9c7e6-f492-477f-8308-10966c0c1f50",
-        "26f1bdb9-73a9-484d-a950-3d73fa7c5d61"
+        "26f1bdb9-73a9-484d-a950-3d73fa7c5d61",
+        "72b09662-4c86-4ad3-a24d-b875e49e5fef"
       ],
       "settings": {
         "title": "Blog posts",
