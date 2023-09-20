@@ -11508,11 +11508,6 @@ predictive-search .search_section {
   text-align: center;
   gap: 20px;
 }
-@media (max-width: 1199px) {
-  predictive-search .search_section {
-    margin: 40px auto 30px auto;
-  }
-}
 predictive-search .search_section .search_title p {
   margin-bottom: 0;
   font-size: 30px;

@@ -25,9 +25,6 @@ predictive-search{
         flex-direction: column;
         text-align: center;
         gap: 20px;
-        @media (max-width: 1199px){
-            margin: 40px auto 30px auto;
-        }
         .search_title{
             p{
                 margin-bottom: 0;
