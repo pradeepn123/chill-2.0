@@ -1,5 +1,16 @@
 {{ 'blog-category.css' | asset_url | stylesheet_tag }}
 
+{% capture array %}
+{% for result in search.results %}
+    {{ array | append: result.title | append: ', ' }}
+{% endfor %}
+{% endcapture %}
+
+{% capture uniqArray %}
+{{ array | split: ', ' | uniq }}
+{% endcapture %}
+
+
 {% paginate search.results by section.settings.coll_num_per_page_int %}
 {% style %}
 {% if request.path == '/search' %}
@@ -72,7 +83,7 @@
         </div>
 
         <div class="utility-bar__centre">
-          <div class="utility-bar__item">We found <strong>{{ uniqArray.size }}</strong> results</div>
+          <div class="utility-bar__item">We found <strong>{{ paginate.items }} results</strong></div>
           {% comment %} <div class="utility-bar__item">{{ 'general.search.results_with_count' | t: count: paginate.items }}</div> {% endcomment %}
         </div>
 
@@ -182,6 +193,7 @@
               -%}
               
               {% for item in search.results %}
+                {% if uniqArray contains item.title %}
                   {% if item.object_type == 'product' %}
                     {% render 'product-block', product: item, custom_aspect_ratio: chosen_product_aspect_ratio, animate: true, show_vendor: true %}
                   {% elsif item.object_type == 'collection' %}
@@ -213,6 +225,7 @@
                       {% comment %} </div> {% endcomment %}
                     </div>
                   {% endif %}
+                {% endif %}
               {% endfor %}
             </div>
           {% endif %}
@@ -235,7 +248,7 @@
     }
   }
 
-  let blog_titles = [];
+  {% comment %} let blog_titles = [];
   document.querySelectorAll(".blog-category-section .product-block").forEach(item => {
     const title = item.querySelector('.title_wrap_before a').innerHTML
     blog_titles.push(title.trim())
@@ -251,7 +264,7 @@
   blog_titles.forEach(blog => {
     document.querySelector(`[data-title='${blog}']`).style.display = 'block'
   })
-  document.querySelector('.utility-bar__centre .utility-bar__item').innerHTML = `We found <strong>${blog_titles.length} results</strong>`
+  document.querySelector('.utility-bar__centre .utility-bar__item').innerHTML = `We found <strong>${blog_titles.length} results</strong>` {% endcomment %}
   
 </script>
 
