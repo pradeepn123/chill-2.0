@@ -76,7 +76,7 @@ class PredictiveSearch extends HTMLElement {
       })
       
       blog_titles.forEach(blog => {
-        document.querySelector(`[data-title='${blog}']`).style.display = 'block'
+        document.querySelector(`[data-title='${blog}']`).style.display = 'flex'
       })
       // document.querySelector('utility-bar__centre .utility-bar__item').innerHTML = `We found ${blog_titles.length} results`
     }
