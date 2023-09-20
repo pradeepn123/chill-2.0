@@ -1,16 +1,5 @@
 {{ 'blog-category.css' | asset_url | stylesheet_tag }}
 
-{% capture array %}
-{% for result in search.results %}
-    {{ array | append: result.title | append: ', ' }}
-{% endfor %}
-{% endcapture %}
-
-{% capture uniqArray %}
-{{ array | split: ', ' | uniq }}
-{% endcapture %}
-
-
 {% paginate search.results by section.settings.coll_num_per_page_int %}
 {% style %}
 {% if request.path == '/search' %}
@@ -193,7 +182,6 @@
               -%}
               
               {% for item in search.results %}
-                {% if uniqArray contains item.title %}
                   {% if item.object_type == 'product' %}
                     {% render 'product-block', product: item, custom_aspect_ratio: chosen_product_aspect_ratio, animate: true, show_vendor: true %}
                   {% elsif item.object_type == 'collection' %}
@@ -225,7 +213,6 @@
                       {% comment %} </div> {% endcomment %}
                     </div>
                   {% endif %}
-                {% endif %}
               {% endfor %}
             </div>
           {% endif %}
@@ -256,7 +243,6 @@
 
 
   blog_titles = [...new Set(blog_titles)]
-  console.log("titles: ", blog_titles)
 
   document.querySelectorAll(".blog-category-section .product-block").forEach(item => {
     item.style.display = "none";
