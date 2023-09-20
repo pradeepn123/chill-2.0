@@ -11647,7 +11647,7 @@ predictive-search #featured_blogs .featured_blogs_content .blog-category-item .a
   gap: 10px 50px;
   width: 100%;
   height: fit-content;
-  margin: 0 auto;
+  margin: 0 auto 100px 0;
 }
 @media (max-width: 1199px) {
   #predictive-search #predictive-search-results {
