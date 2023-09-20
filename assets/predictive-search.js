@@ -71,13 +71,13 @@ class PredictiveSearch extends HTMLElement {
         blog_titles.push(title.trim())
       })
       blog_titles = [...new Set(blog_titles)]
-      document.querySelectorAll("#predictive-search-results .blog-category-item").forEach(item => {
-        item.style.display = "none";
-      })
+      // document.querySelectorAll("#predictive-search-results .blog-category-item").forEach(item => {
+      //   item.style.display = "none";
+      // })
       
-      blog_titles.forEach(blog => {
-        document.querySelector(`[data-title='${blog}']`).style.display = 'flex'
-      })
+      // blog_titles.forEach(blog => {
+      //   document.querySelector(`[data-title='${blog}']`).style.display = 'block'
+      // })
       // document.querySelector('utility-bar__centre .utility-bar__item').innerHTML = `We found ${blog_titles.length} results`
     }
     getSearchResults(searchTerm) {
