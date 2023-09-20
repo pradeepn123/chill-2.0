@@ -98,6 +98,7 @@ predictive-search{
     #featured_blogs{
         &:has(div){
             height: 100%;
+            margin-bottom: 100px;
         }
         .featured_blogs_title{
             font-size: 32px;
