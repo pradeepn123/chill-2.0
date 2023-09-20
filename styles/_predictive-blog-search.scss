@@ -25,9 +25,6 @@ predictive-search{
         flex-direction: column;
         text-align: center;
         gap: 20px;
-        @media (max-width: 1199px){
-            margin: 40px auto 30px auto;
-        }
         .search_title{
             p{
                 margin-bottom: 0;
@@ -101,6 +98,7 @@ predictive-search{
     #featured_blogs{
         &:has(div){
             height: 100%;
+            margin-bottom: 100px;
         }
         .featured_blogs_title{
             font-size: 32px;

@@ -11508,11 +11508,6 @@ predictive-search .search_section {
   text-align: center;
   gap: 20px;
 }
-@media (max-width: 1199px) {
-  predictive-search .search_section {
-    margin: 40px auto 30px auto;
-  }
-}
 predictive-search .search_section .search_title p {
   margin-bottom: 0;
   font-size: 30px;
@@ -11590,6 +11585,7 @@ predictive-search .search_section .search_block .blog_search_close_icon {
 }
 predictive-search #featured_blogs:has(div) {
   height: 100%;
+  margin-bottom: 100px;
 }
 predictive-search #featured_blogs .featured_blogs_title {
   font-size: 32px;
