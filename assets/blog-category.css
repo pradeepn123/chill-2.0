@@ -144,7 +144,7 @@
         width: 100%;
         margin-top: -1px;
         padding: 0 10px 10px 10px;
-        transform: translateY(-45%);
+        transform: translateY(-37%);
     }
     .blog-category-item:hover .title_wrap_before{
         /* display: none; */
@@ -201,7 +201,7 @@ a.view_all_link svg{
 .title_wrap_after{
     color: #000;
     font-family: 'Open Sans';
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     margin: 11px 0 8px 0;
