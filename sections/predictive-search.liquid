@@ -2,9 +2,9 @@
 
 {%- if predictive_search.performed -%}
   <div>
-    {% if predictive_search.resources.articles != blank %}
+    {% comment %} {% if predictive_search.resources.articles != blank %}
       We found <strong>{{ predictive_search.resources.articles.size }} {% if predictive_search.resources.articles.size == 1 %}result{% else %} results {% endif %}</strong>
-    {% endif %}
+    {% endif %} {% endcomment %}
   </div>
   <div id="predictive-search-results" class="product-list {% if request.path == '/search/suggest' %}container{% endif %} product-list--per-row-4 product-list--per-row-mob-{{ settings.prod_thumb_mob_per_row }} product-list--image-shape-{{ settings.prod_thumb_shape }}">
     {%- liquid
@@ -79,7 +79,7 @@
       
       {% comment %} <div class="product-block page-block"> {% endcomment %}
         {% comment %} <div class="page-block__title"><a href="{{ article.url }}">{{ article.title }}</a></div> {% endcomment %}
-        <div class="blog-category-item">
+        <div class="blog-category-item" data-title="{{ article.title }}">
           {% render 'blog-tile', article: article %}
         </div>
       {% comment %} </div> {% endcomment %}

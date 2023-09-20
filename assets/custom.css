@@ -11502,7 +11502,7 @@ predictive-search.search_open {
 }
 predictive-search .search_section {
   width: 100%;
-  margin: 60px auto;
+  margin: 25px auto 40px auto;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -11516,6 +11516,11 @@ predictive-search .search_section {
 predictive-search .search_section .search_title p {
   margin-bottom: 0;
   font-size: 30px;
+}
+@media (max-width: 767px) {
+  predictive-search .search_section .search_title p {
+    font-size: 18px;
+  }
 }
 predictive-search .search_section input {
   height: 52px;
@@ -11600,7 +11605,7 @@ predictive-search #featured_blogs .featured_blogs_content {
   display: flex !important;
   gap: 50px;
   justify-content: space-around;
-  max-width: 80%;
+  max-width: 87%;
   margin: 0 auto;
 }
 @media (max-width: 1199px) {
@@ -11641,7 +11646,7 @@ predictive-search #featured_blogs .featured_blogs_content .blog-category-item {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px 50px;
-  width: 75%;
+  width: 100%;
   height: fit-content;
   margin: 0 auto;
 }
