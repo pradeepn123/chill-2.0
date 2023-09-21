@@ -4,112 +4,6 @@
     .blog_banner {
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%), url({{ banner.blog_banner | image_url }}), lightgray 50% / cover no-repeat;
     }
-/* @media (min-width: 768px) {
-    .article-list.article-layout--columns .article{
-        margin: 30px 0 0 0;
-        border-right: 0;
-        padding: 0;
-    }
-    .article-list.article-layout--columns {
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0;
-    }
-}
-@media (min-width: 1024px) {
-    .article-list.article-layout--columns .article:nth-child(2n) {
-        border-right: 0;
-    }
-}
-
-.article-list .article {
-    padding: 0;
-}
-
-.blog_load_more {
-    margin: 100px 0;
-    text-align: center;
-}
-
-.blog_load_more_btn {
-    color: #9792E4;
-    font-family: inherit;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-decoration-line: underline;
-    cursor: pointer;
-}
-
-.blog_load_more_spinner {
-    display: none;
-    height: 35px;
-    width: 35px;
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #3a3a3a;
-    border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    animation: spin 2s linear infinite;
-}
-
-@keyframe spin{
-    0% {transfomr:rotate(0deg)}
-    100% {transfomr:rotate(360deg)}
-}
-
-.article-text-info {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: fit-content;
-    padding: 1rem;
-    background: white;
-    top: 100%;
-    z-index: 10;
-    flex-direction: column;
-    border-radius: 30px;
-}
-
-.article-text-info h2 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-.article-text-info .article_content {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 12px;
-}
-.article-text-info .iconmeta {
-    font-size: 10px;
-}
-
-.article__inner {
-    position: relative;
-    transition: transform 0.5s ease;
-}
-
-.article__inner:hover .article-text-info {
-    transform: scale(1.2);
-    display: flex;
-    box-shadow: 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-}
-
-.article__inner:hover .article-image {
-    transform: scale(1.2);
-    z-index: 99;
-} */
-
 {% endstyle %}
 
 <div class="main_blog_container container">
@@ -126,111 +20,33 @@
     {% endif %}
 
     <div data-section-type="blog-template" class="article_blog_section" id="article_blog">
-        {% paginate blog.articles by section.settings.no_of_blogs %}
-    
-        
-    
+    {% paginate blog.articles by section.settings.no_of_blogs %}
             {% if section.settings.crop_image and section.settings.layout == 'columns' %}
-            {% assign aspect_ratio_split = section.settings.crop_style | split: '-' %}
-            {% assign aspect_ratio = 1.0 | times: aspect_ratio_split[0] | divided_by: aspect_ratio_split[1] %}
+                {% assign aspect_ratio_split = section.settings.crop_style | split: '-' %}
+                {% assign aspect_ratio = 1.0 | times: aspect_ratio_split[0] | divided_by: aspect_ratio_split[1] %}
             {% else %}
-            {% assign aspect_ratio = false %}
+                {% assign aspect_ratio = false %}
             {% endif %}
     
             <div class="articles-on-page blog-category-section">
-            {% for article in blog.articles %}
-{% comment %}     
-                <div class="article cc-animate-init -in cc-animate-complete" data-cc-animate>
-                <div class="article__inner {% if section.settings.layout != 'columns' %}container{% endif %}">
-    
-                    {% if article.image %}
-                    <div class="article-image">
-                        <a href="{{ article.url }}">
-                        {% render 'responsive-image', image: article.image, aspect_ratio: aspect_ratio, cover: true %}
-                        </a>
+                {% for article in blog.articles %}
+                    <div class="blog-category-item">
+                        {% render 'blog-tile', article: article %}
                     </div>
-                    {% endif %}
-                    <div class="article-text-info">
-                        <div class="meta">
-                        <span class="iconmeta time">
-                        {% if section.settings.show_author %}
-                            {% if article.user.image != blank %}
-                                <img src="{{ article.user.image | img_url: 'master' }}" alt="{{ article.author }}" class="article_author_img" width="30" height="30" loading="lazy">
-                            {% endif %}
-                            <span class="author">{{ article.author }}</span>
-                        {% endif %}
-                            <span class="publish_date">
-                                &#9679;
-                                {% if section.settings.show_date %}
-                                {{ article.published_at | date: format: 'month_date_year' }}
-                                {% endif %}
-                            </span>
-                        </span>
-    
-                        {% if section.settings.show_article_tags %}
-                            {% capture tag_markup %}
-                                <div class="iconmeta tags">
-                                <span class="label">{{ 'blogs.article.tags' | t }}
-                                    :</span>
-                                {% for tag in article.tags %}
-                                    {{ tag | link_to_tag: tag }}
-                                {% endfor %}
-                                </div>
-                            {% endcapture %}
-
-                            {% if tag_markup contains '</a>' %}
-                                {{ tag_markup }}
-                            {% endif %}
-                        {% endif %}
-                    </div> 
-    
-                    <h2>{{ article.title | escape | link_to: article.url }}
-                    </h2>
-    
-                    {%- if section.settings.show_excerpts -%}
-                        <div class="article_content">
-                            {{ article.content| strip_html }}
-                        </div>
-                    {%- endif -%}
-    
-                    {% comment %} <a class="more-link" href="{{ article.url }}" title="{{ article.title | escape }}">
-                        {{ 'blogs.general.read_more' | t }}
-                        {% render 'svg-up-icon' %}
-                    </a> {% endcomment %}
-    
-                    </div>
-    
+                {% endfor %}
+            </div>
+            <input type="hidden" value="{{ paginate.next.url }}" data-next-url>
+            <input type="hidden" value="{{ paginate.pages }}" data-total-pages>
+            <input type="hidden" value="{{ paginate.current_page  }}" data-current-page>
+            {% if paginate.pages > 1 %}
+                <div class="blog_load_more">
+                <a class="blog_load_more_btn" blog_load_more_btn onclick="showMoreCards()">
+                    <span load-more-text>SHOW MORE</span>
+                    <span loader class="blog_load_more_spinner"></span>
+                </a>
                 </div>
-                <!-- /.container -->
-                </div>
-                <!-- /.article -->
-     {% endcomment %}
-     <div class="blog-category-item">
-        {% render 'blog-tile', article: article %}
-    </div>
-            {% else %}
-    
-                <div class="container">
-                <h5 class="align-centre fully-spaced-row">{{ 'blogs.general.no_matches' | t }}
-                </h5>
-                </div>
-    
-            {% endfor %}
-        </div>
-        {% comment %} {% render 'pagination-control', paginate: paginate %} {% endcomment %}
-        <input type="hidden" value="{{ paginate.next.url }}" data-next-url>
-     	<input type="hidden" value="{{ paginate.pages }}" data-total-pages>
-        <input type="hidden" value="{{ paginate.current_page  }}" data-current-page>
-        {% if paginate.pages > 1 %}
-        <div class="blog_load_more">
-          <a class="blog_load_more_btn" blog_load_more_btn onclick="showMoreCards()">
-            <span load-more-text>SHOW MORE</span>
-            <span loader class="blog_load_more_spinner"></span>
-          </a>
-        </div>
-        {% endif %}
-        {% endpaginate %}
-     
+            {% endif %}
+    {% endpaginate %}
     </div>
 </div>
 

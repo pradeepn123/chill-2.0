@@ -72,13 +72,13 @@ class PredictiveSearch extends HTMLElement {
       })
       blog_titles = [...new Set(blog_titles)]
       // console.log(document.querySelectorAll("#shopify-section-predictive-search"))
-      // document.querySelectorAll("#predictive-search-results .blog-category-item").forEach(item => {
-      //   item.style.display = "none";
-      // })
+      document.querySelectorAll("#predictive-search-results .blog-category-item").forEach(item => {
+        item.style.display = "none";
+      })
       
-      // blog_titles.forEach(blog => {
-      //   document.querySelector(`[data-title='${blog}']`).style.display = 'block'
-      // })
+      blog_titles.forEach(blog => {
+        document.querySelector(`[data-title="${blog}"]`).style.display = 'block'
+      })
       // document.querySelector('utility-bar__centre .utility-bar__item').innerHTML = `We found ${blog_titles.length} results`
     }
     getSearchResults(searchTerm) {
@@ -123,9 +123,9 @@ class PredictiveSearch extends HTMLElement {
       if(this.predictiveSearchResults.querySelector('#predictive-search-results').innerHTML == ''){
         this.predictiveSearchResults.querySelector('#predictive-search-results').innerHTML = "Sorry, we couldn't find any results"
       }
-      else{
-        this.predictiveSearchResults.style.display = 'none';
-      }
+      // else{
+      //   this.predictiveSearchResults.style.display = 'none';
+      // }
     }
   
     debounce(fn, wait) {
