@@ -190,29 +190,11 @@
                     {% render 'collection-block', collection: item, custom_aspect_ratio: chosen_collection_aspect_ratio, animate: true %}
                   {% else %}
                     <div class="product-block page-block" data-cc-animate data-title="{{ item.title }}">
-                      {% comment %} <div class="block-inner> {% endcomment %}
                         {% if item.object_type == 'article' %}
-                          {% comment %} <div class="article-image">
-                            <a href="{{ item.url }}">
-                              {%- render 'responsive-image', image: item.image -%}
-                            </a>
-                          </div> {% endcomment %}
-
                           <div class="blog-category-item">
                             {% render 'blog-tile', article: item %}
                           </div>
                         {% endif %}
-                        {% comment %} <div class="text-cont">
-                          <h6 class="page-block__title"><a href="{{ item.url }}">{{ item.title }}</a></h6>
-                          {% unless item.object_type == 'article' and item.image %}
-                            <p>{{ item.content | strip_html | truncatewords: 20 }}</p>
-                          {% endunless %}
-                          <a href="{{ item.url }}" class="more">
-                            <span class="beside-svg underline">{{ 'general.search.continue_reading' | t }}</span>
-                            <span class="icon--small icon-natcol ltr-icon">{% render 'svg-chevron-right' %}</span>
-                          </a>
-                        </div> {% endcomment %}
-                      {% comment %} </div> {% endcomment %}
                     </div>
                   {% endif %}
               {% endfor %}

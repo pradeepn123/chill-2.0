@@ -191,13 +191,6 @@ $(document).ready(function () {
     ]
 });
 
-// $('.blog-category-list-wrap').on('init', function(){
-//     var currentfirst = $(this).find('.slick-active').first();
-//     $(currentfirst).addClass('firster');
-//     var currentlast = $(this).find('.slick-active').last();
-//     $(currentlast).addClass('laster');
-// });  
-
 
 if(window.screen.width < 1024){
     $('.blog-category-list-wrap').slick({
@@ -223,46 +216,9 @@ if(window.screen.width < 1024){
     var calc = ((nextSlide) / (slick.slideCount-1)) * 100;
     
     $progressBar.style.backgroundSize = calc + '% 100%'
-    $progressBar.setAttribute('aria-valuenow', calc)
-    //   .css('background-size', calc + '% 100%')
-    //   .attr('aria-valuenow', calc );
-    
-    // $progressBarLabel.text( calc + '% completed' );
+    $progressBar.setAttribute('aria-valuenow', calc);
   });
 }
-
-
-// $( ".blog-category-list-wrap .slick-slide" ).mouseenter(function() {        
-//     if ($(this).hasClass("firster")) {      
-//         var hoverslide = $(this);
-//         $(hoverslide).nextAll().addClass('furthernextslides');    
-//     }else if ($(this).hasClass("laster")){
-//         var hoverslide = $(this);
-//         $(hoverslide).prevAll().addClass('furtherprevslides');
-//     }else{
-//         var hoverslide = $(this);
-//         $(hoverslide).nextAll().addClass('nextslides');
-//         $(hoverslide).prevAll().addClass('prevslides'); 
-//     }
-// });
- 
-// $(".blog-category-list-wrap .slick-slide").mouseleave(function() {
-//     $(this).parent().find( ".slick-slide" ).removeClass('nextslides');
-//     $(this).parent().find( ".slick-slide" ).removeClass('prevslides');
-//     $(this).parent().find( ".slick-slide" ).removeClass('furthernextslides');
-//     $(this).parent().find( ".slick-slide" ).removeClass('furtherprevslides');
-// });
-
-// // on slide change, find the new first slide-active    
-// $('.blog-category-list-wrap').on('afterChange', function(event, slick, currentSlide, nextSlide){
-//     var currentfirst = $(this).find('.slick-active').first();
-//     $(this).find( ".blog-category-list-wrap .slick-slide" ).removeClass('firster');
-//     $(currentfirst).addClass('firster');
-//     var currentlast = $(this).find('.slick-active').last();
-//     $(this).find( ".blog-category-list-wrap .slick-slide" ).removeClass('laster');
-//     $(currentlast).addClass('laster');
-// });
-// // on slide init, find the new first slide-active
 
 
 $('.featured_blocks_container').slick({
