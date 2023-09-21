@@ -232,28 +232,26 @@
   if(window.location.search.includes('?type=article')){
     document.querySelector('.utility-bar__left').innerHTML = '<a href="/pages/blog" class="blog_breadcrumb">< All Blogs</a>';
     document.querySelector('.utility-bar__right').style.opacity = '0';
-    if(window.screen.width < 391){
-      document.querySelector('.utility-bar__right').style.display = 'none';
+    if(window.screen.width < 1024){
+      document.querySelector('.utility-bar__left .blog_breadcrumb').style.marginTop = '-150px'
     }
   }
 
-  {% comment %} let blog_titles = [];
+  let blog_titles = [];
   document.querySelectorAll(".blog-category-section .product-block").forEach(item => {
     const title = item.querySelector('.title_wrap_before a').innerHTML
     blog_titles.push(title.trim())
   })
 
-
   blog_titles = [...new Set(blog_titles)]
-
   document.querySelectorAll(".blog-category-section .product-block").forEach(item => {
     item.style.display = "none";
   })
   
   blog_titles.forEach(blog => {
-    document.querySelector(`[data-title='${blog}']`).style.display = 'block'
+    document.querySelector(`[data-title="${blog}"]`).style.display = 'block'
   })
-  document.querySelector('.utility-bar__centre .utility-bar__item').innerHTML = `We found <strong>${blog_titles.length} results</strong>` {% endcomment %}
+  document.querySelector('.utility-bar__centre .utility-bar__item').innerHTML = `We found <strong>${blog_titles.length} results</strong>`
   
 </script>
 

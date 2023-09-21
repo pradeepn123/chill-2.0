@@ -71,7 +71,7 @@ class PredictiveSearch extends HTMLElement {
         blog_titles.push(title.trim())
       })
       blog_titles = [...new Set(blog_titles)]
-      console.log(document.querySelectorAll("#shopify-section-predictive-search"))
+      // console.log(document.querySelectorAll("#shopify-section-predictive-search"))
       // document.querySelectorAll("#predictive-search-results .blog-category-item").forEach(item => {
       //   item.style.display = "none";
       // })
