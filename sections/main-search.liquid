@@ -221,7 +221,7 @@
 
   let blog_titles = [];
   document.querySelectorAll(".blog-category-section .product-block").forEach(item => {
-    const title = item.querySelector('.title_wrap_before a').innerHTML
+    const title = item.getAttribute("data-title")
     blog_titles.push(title.trim())
   })
 
