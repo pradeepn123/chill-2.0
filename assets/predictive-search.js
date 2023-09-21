@@ -67,7 +67,7 @@ class PredictiveSearch extends HTMLElement {
     removeDuplicates(){
       let blog_titles = [];
       document.querySelectorAll("#predictive-search-results .blog-category-item").forEach(item => {
-        const title = item.querySelector('.title_wrap_before a').innerHTML
+        const title = item.getAttribute("data-title")
         blog_titles.push(title.trim())
       })
       blog_titles = [...new Set(blog_titles)]
