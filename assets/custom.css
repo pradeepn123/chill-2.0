@@ -9491,11 +9491,6 @@ body.cart-drawer-open {
 .page-section-spacing .majortitle {
   display: none;
 }
-@media (max-width: 767px) {
-  .page-section-spacing {
-    margin-top: 0 !important;
-  }
-}
 
 .contact_us-container {
   margin-top: 0;
@@ -11539,6 +11534,7 @@ predictive-search .search_section .search_block {
 }
 predictive-search .search_section .search_block input[type=search] {
   border-color: #000 !important;
+  border-style: solid;
 }
 predictive-search .search_section .search_block input[type=search]::-webkit-search-cancel-button {
   -webkit-appearance: none;

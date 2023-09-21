@@ -232,8 +232,8 @@
   if(window.location.search.includes('?type=article')){
     document.querySelector('.utility-bar__left').innerHTML = '<a href="/pages/blog" class="blog_breadcrumb">< All Blogs</a>';
     document.querySelector('.utility-bar__right').style.opacity = '0';
-    if(window.screen.width < 391){
-      document.querySelector('.utility-bar__right').style.display = 'none';
+    if(window.screen.width < 1024){
+      document.querySelector('.utility-bar__left .blog_breadcrumb').style.marginTop = '-150px'
     }
   }
 
