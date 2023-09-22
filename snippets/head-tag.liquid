@@ -52,9 +52,9 @@
 
 {% if template contains 'product' and product.id != 6579183354014 %}
   <meta name="description" content="Chill offers CBD products to de-stress your routine. Visit our website to purchase our {{ product.title }} online from our {{ collection.title }} collection.	" />
-{%- else -%}
+{% else %}
   <meta name="description" content="{{ page_description | escape }}">
-{%- endif -%}
+{% endif %}
 
 {% if template.name == 'index' %}
 <script type="application/ld+json">
