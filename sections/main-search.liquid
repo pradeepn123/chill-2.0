@@ -215,12 +215,16 @@
     let searchTerm = "{{ search.terms }}"
     document.querySelector('.main-search.search-page').style.display = 'none';
     document.querySelector('.utility-bar__left').innerHTML = '<a href="/pages/blog" class="blog_breadcrumb">< All Blogs</a>';
+    document.querySelector('.utility-bar__right').style.width = '0';
     document.querySelector('.utility-bar__right').style.opacity = '0';
-  
 
   let blog_titles = [];
   document.querySelectorAll(".blog-category-section .product-block").forEach(item => {
+    if(window.screen.width < 768){
+      item.style.marginBottom = '50px';
+    }
     const title = item.getAttribute("data-title")
+    
     blog_titles.push(title.trim())
   })
 
@@ -232,7 +236,7 @@
   blog_titles.forEach(blog => {
     document.querySelector(`[data-title="${blog}"]`).style.display = 'block'
   })
-  document.querySelector('.utility-bar__centre .utility-bar__item').innerHTML = `We found <strong>${blog_titles.length} results</strong> for <strong>${searchTerm}</strong>`
+  document.querySelector('.utility-bar__centre .utility-bar__item').innerHTML = `We found <strong>${blog_titles.length} results</strong> for <strong>'${searchTerm}'</strong>`
 }
 </script>
 
