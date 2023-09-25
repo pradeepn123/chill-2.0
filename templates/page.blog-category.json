@@ -76,6 +76,12 @@
           "settings": {
             "blog": "chill-blog"
           }
+        },
+        "bdd7c50e-888c-46e8-8230-9665473b64fb": {
+          "type": "select",
+          "settings": {
+            "blog": "ingredients"
+          }
         }
       },
       "block_order": [
@@ -84,7 +90,8 @@
         "cc581663-dbe0-47c6-8ece-6fe0e71fe133",
         "a987a9e9-3c2b-4972-b885-0f0d13842410",
         "a25c3b20-25a0-4c16-bca4-918ebedf2912",
-        "4a85e88d-5471-4f00-883c-48af9116834d"
+        "4a85e88d-5471-4f00-883c-48af9116834d",
+        "bdd7c50e-888c-46e8-8230-9665473b64fb"
       ],
       "settings": {
         "title": "Blog posts",
