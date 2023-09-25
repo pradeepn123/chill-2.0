@@ -64,13 +64,27 @@
           "settings": {
             "blog": "chill-test-2"
           }
+        },
+        "a25c3b20-25a0-4c16-bca4-918ebedf2912": {
+          "type": "select",
+          "settings": {
+            "blog": "brands"
+          }
+        },
+        "4a85e88d-5471-4f00-883c-48af9116834d": {
+          "type": "select",
+          "settings": {
+            "blog": "chill-blog"
+          }
         }
       },
       "block_order": [
         "307ef005-06b3-4288-9679-6319963df7ba",
         "faa9c7e6-f492-477f-8308-10966c0c1f50",
         "cc581663-dbe0-47c6-8ece-6fe0e71fe133",
-        "a987a9e9-3c2b-4972-b885-0f0d13842410"
+        "a987a9e9-3c2b-4972-b885-0f0d13842410",
+        "a25c3b20-25a0-4c16-bca4-918ebedf2912",
+        "4a85e88d-5471-4f00-883c-48af9116834d"
       ],
       "settings": {
         "title": "Blog posts",
