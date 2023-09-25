@@ -64,13 +64,34 @@
           "settings": {
             "blog": "chill-test-2"
           }
+        },
+        "c09eb21f-88fe-4bcf-a17b-390f4105e874": {
+          "type": "select",
+          "settings": {
+            "blog": "brands"
+          }
+        },
+        "3f0690a5-a13e-4851-b109-ff5836671429": {
+          "type": "select",
+          "settings": {
+            "blog": "lifestyle"
+          }
+        },
+        "a36e4af3-a76f-4d5d-ba19-c78d2fe59403": {
+          "type": "select",
+          "settings": {
+            "blog": "ingredients"
+          }
         }
       },
       "block_order": [
         "307ef005-06b3-4288-9679-6319963df7ba",
         "faa9c7e6-f492-477f-8308-10966c0c1f50",
         "26f1bdb9-73a9-484d-a950-3d73fa7c5d61",
-        "72b09662-4c86-4ad3-a24d-b875e49e5fef"
+        "72b09662-4c86-4ad3-a24d-b875e49e5fef",
+        "c09eb21f-88fe-4bcf-a17b-390f4105e874",
+        "3f0690a5-a13e-4851-b109-ff5836671429",
+        "a36e4af3-a76f-4d5d-ba19-c78d2fe59403"
       ],
       "settings": {
         "title": "Blog posts",
