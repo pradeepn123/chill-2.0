@@ -742,7 +742,7 @@ body.overflow-hidden {
     width: 96vw !important;
   }
 }
-@media (min-width: 1000px) and (max-width: 1440px) {
+@media (min-width: 1000px) and (max-width: 1199px) {
   .blog-category-list-wrap {
     width: 97vw !important;
   }
