@@ -1036,7 +1036,7 @@
     "social_linkedin_url": "https:\/\/www.linkedin.com\/company\/chill-brands\/",
     "social_instagram_url": "https:\/\/www.instagram.com\/choosechill\/",
     "social_tiktok_url": "https:\/\/www.tiktok.com\/@choose.chill",
-    "search_type": "product",
+    "search_type": "product,article",
     "enable_live_search": true,
     "live_search_show_vendor": true,
     "live_search_show_price": false,
