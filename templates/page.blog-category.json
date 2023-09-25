@@ -52,11 +52,25 @@
           "settings": {
             "blog": "chill-blog"
           }
+        },
+        "cc581663-dbe0-47c6-8ece-6fe0e71fe133": {
+          "type": "select",
+          "settings": {
+            "blog": "chill-test"
+          }
+        },
+        "a987a9e9-3c2b-4972-b885-0f0d13842410": {
+          "type": "select",
+          "settings": {
+            "blog": "chill-test-2"
+          }
         }
       },
       "block_order": [
         "307ef005-06b3-4288-9679-6319963df7ba",
-        "faa9c7e6-f492-477f-8308-10966c0c1f50"
+        "faa9c7e6-f492-477f-8308-10966c0c1f50",
+        "cc581663-dbe0-47c6-8ece-6fe0e71fe133",
+        "a987a9e9-3c2b-4972-b885-0f0d13842410"
       ],
       "settings": {
         "title": "Blog posts",
