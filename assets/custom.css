@@ -772,6 +772,10 @@ predictive-search .search_section input {
   background-color: white;
 }
 
+.blog-category-section a {
+  margin-bottom: 20px;
+}
+
 /* header css here */
 .pageheader .logo-area .logo-area__left .navigation ul li a {
   font-weight: 600;
