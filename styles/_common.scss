@@ -181,6 +181,15 @@ body.overflow-hidden {
                                                     font-weight: normal;
                                                 }
                                             }
+                                            &.outOfStock_btn{
+                                                justify-content: center;
+                                                cursor: default;
+                                                &:hover{
+                                                    background: #9792e4;
+                                                    color: #fff;
+                                                    border: 1px solid #9792e4;
+                                                }
+                                            }
                                         }
                                     }
                                 }

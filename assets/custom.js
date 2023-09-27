@@ -1137,9 +1137,12 @@ closeBuyContainer.forEach(closeBtn => {
 })
 
 document.querySelectorAll('.mobile_popup_buy_button').forEach(popupButton => {
-    popupButton.addEventListener('click', () => {
-        buyButtonContainer.classList.add('buy_buttons_show');
-    })
+    if(!popupButton.querySelector('.outOfStock_btn')){
+        popupButton.addEventListener('click', () => {
+            buyButtonContainer.classList.add('buy_buttons_show');
+        })
+    }
+    
 })
 window.addEventListener('scroll', () => {
     document.querySelectorAll('.product-recommendations').forEach(product_recommendation => {
