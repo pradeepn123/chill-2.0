@@ -177,6 +177,15 @@ body.overflow-hidden {
   opacity: 1;
   font-weight: normal;
 }
+.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .default_addToCart_btn.outOfStock_btn {
+  justify-content: center;
+  cursor: default;
+}
+.product-list .product-block .block-inner .block-inner-inner .product-info .inner .innerer .custom_subscription_info .custom_subscription_wrapper .custom_button_info .default_addToCart_btn.outOfStock_btn:hover {
+  background: #9792e4;
+  color: #fff;
+  border: 1px solid #9792e4;
+}
 @media (max-width: 767px) {
   .product-list .product-block .block-inner .add_to_cart_popup_background {
     visibility: hidden !important;
