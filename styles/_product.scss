@@ -1197,6 +1197,14 @@
                         font-size: 20px;
                     }
                 }
+                &.outOfStock_btn{
+                    justify-content: center !important;
+                    cursor: default !important;
+                    &:hover{
+                        background: #9792e4 !important;
+                        border: 1px solid #9792e4 !important;
+                    }
+                }
             }
         }
     }
@@ -1227,5 +1235,20 @@
     &:hover{
         background: #9792e4 !important;
         border: 1px solid #9792e4 !important;
+    }
+}
+.outOfStock_btn{
+    display: flex;
+    border-radius: 4rem;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    @media (max-width: 767px){
+        font-size: 18px;
     }
 }
