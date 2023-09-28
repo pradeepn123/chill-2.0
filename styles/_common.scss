@@ -466,6 +466,11 @@ body.overflow-hidden {
         transform: translate(0) !important;
     }
 }
+body.enable-mobile-nav-transition{
+    @media(max-width: 1199px){
+        overflow: hidden;
+    }
+}
 .enable-mobile-nav-transition .mobile-navigation-drawer{
     @media(max-width: 1199.98px){
         transition: transform .5s cubic-bezier(.55,.03,.37,.96) !important;
@@ -534,6 +539,19 @@ body.overflow-hidden {
                             }
                         }
                     }
+                    @media (max-width: 1199px){
+                    .country_selector{
+                        .feather-chevron-down{
+                                width: 24px;
+                                height: 24px;
+                                top: 32%;
+                                opacity: 0.7;
+                            }
+                        }
+                        &:hover .feather-chevron-down{
+                            transition: 0.5s transform;
+                        }
+                    }
                     .country_selector.active{
                         .dropdown-content{
                             display: block;
@@ -541,6 +559,17 @@ body.overflow-hidden {
                         .feather-chevron-down{
                             transform: rotate(0deg);
                             transition: 0.5s all;
+                            @media(max-width: 1199px){
+                                top: 16%;
+                                width: 24px;
+                                height: 24px;
+                                opacity: 0.7;
+                            }
+                        }
+                        @media (max-width: 1199px){
+                            &:hover .feather-chevron-down{
+                                transition: 0.5s transform;
+                            }
                         }
                     }
                     
