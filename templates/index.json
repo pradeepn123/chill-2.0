@@ -7,7 +7,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/CHILLZER0_Banner_MEDIUM_c60e51fd-8386-4743-b4e6-6a6d6c7f97e2.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/CHILLZER0_Banner_MOBILE.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/CHILLZER0_Banner_MEDIUM_c60e51fd-8386-4743-b4e6-6a6d6c7f97e2_copy.webp",
             "image_position": "center left",
             "mobile_image_position": "left center",
             "slide_link": "",
@@ -317,7 +317,7 @@
       "type": "background-video",
       "disabled": true,
       "settings": {
-        "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4997f11a16bf4871b6e691543abcbd29.mp4",
+        "video": "",
         "placeholder_image": "shopify:\/\/shop_images\/home_banner_placeholder.png",
         "use_alt_bg": true,
         "subheading": "",
