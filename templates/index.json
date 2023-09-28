@@ -234,7 +234,7 @@
         "66002548-b60b-4786-8e10-a024be1f10e1"
       ],
       "settings": {
-        "height": "fixed",
+        "height": "adapt",
         "height_desktop": 600,
         "height_mobile": 460,
         "full_width": true,
