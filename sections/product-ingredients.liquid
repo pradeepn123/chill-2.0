@@ -7,7 +7,7 @@
           {%- for block in product.metafields.settings.product_ingredients.value['ingredients_tab'] -%}
             {% if block.tab_id != blank %}
               <a href="#{{block.tab_id}}" class="{% if forloop.first %}active{% endif %}">
-              {% endif %}
+            {% endif %}
               {% if block.tab_id == blank %}
                 <li class='{% if forloop.first %}active{% endif %}' data-tab-id='tab{{ forloop.index }}'>
                 {% endif %}
@@ -15,7 +15,7 @@
                 {% if block.tab_id == blank %}
                 </li>
               {% endif %}
-              {% if block.tab_id != blank %}
+            {% if block.tab_id != blank %}
               </a>
             {% endif %}
           {% endfor %}
