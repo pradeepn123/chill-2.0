@@ -189,6 +189,9 @@ body.overflow-hidden {
                                                     color: #fff;
                                                     border: 1px solid #9792e4;
                                                 }
+                                                @media (max-width: 767px){
+                                                    font-size: 14px;
+                                                }
                                             }
                                         }
                                     }
