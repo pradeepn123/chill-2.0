@@ -318,7 +318,7 @@
 
   {% if customer and contains_pouches == false %}
     {% if free_variety_pack_found_in_cart == false %}
-      <p class="claim_success_message" {% if product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'index' or request.page_type == 'product' %}style="text-align: center;"{% else %}padding-top: 10px;{% endif %}>
+      <p class="claim_success_message" {% if product.handle != 'chill-cbd-isolate-chew-pouches' and request.page_type == 'index' or request.page_type == 'product' %}style="text-align: center;"{% else %} style="padding-top: 10px;"{% endif %}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.0"
@@ -382,7 +382,11 @@
     document.getElementById('customer').style.display = 'block';
   }
   var claimDrawer = document.getElementById('claimDrawerContainer')
-  var claimBtn = document.querySelectorAll('#claimDrawerButton')
+  var claimBtn = document.querySelectorAll('#claimDrawerButton');
+  document.querySelector('#claimDrawerButtonAdd').addEventListener('click', () => {
+    document.querySelector('.claim_info_container').style.display = 'none';
+    document.querySelector('.claim_success_message').style.display = 'none';
+})
   if (claimBtn.length) {
     claimBtn.forEach((btn) => btn.addEventListener('click', () => {
       claimDrawer.classList.add('claim-drawer-open');
