@@ -1147,10 +1147,10 @@ document.querySelectorAll('.mobile_popup_buy_button').forEach(popupButton => {
 window.addEventListener('scroll', () => {
     document.querySelectorAll('.product-recommendations').forEach(product_recommendation => {
         if(window.scrollY + window.innerHeight - 100 > product_recommendation.offsetTop){
-            document.querySelector('.buy-buttons-row').style.display = 'none';
+            document.querySelector('.product_page_buy_buttons.buy-buttons-row').style.display = 'none';
         }
         else{
-            document.querySelector('.buy-buttons-row').style.display = 'block';
+            document.querySelector('.product_page_buy_buttons.buy-buttons-row').style.display = 'block';
         }
     })
 })
