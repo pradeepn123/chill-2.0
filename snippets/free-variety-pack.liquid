@@ -382,7 +382,11 @@
     document.getElementById('customer').style.display = 'block';
   }
   var claimDrawer = document.getElementById('claimDrawerContainer')
-  var claimBtn = document.querySelectorAll('#claimDrawerButton')
+  var claimBtn = document.querySelectorAll('#claimDrawerButton');
+  document.querySelector('#claimDrawerButtonAdd').addEventListener('click', () => {
+    document.querySelector('.claim_info_container').style.display = 'none';
+    document.querySelector('.claim_success_message').style.display = 'none';
+})
   if (claimBtn.length) {
     claimBtn.forEach((btn) => btn.addEventListener('click', () => {
       claimDrawer.classList.add('claim-drawer-open');
