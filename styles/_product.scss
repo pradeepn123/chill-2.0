@@ -1118,7 +1118,7 @@
         box-shadow: none;
     }
 }
-.buy-buttons-row{
+.sticky-content-container .product_page_buy_buttons.buy-buttons-row{
     @media (max-width: 767px){
         position: fixed;
         bottom: 0;
@@ -1134,7 +1134,7 @@
                 margin: 0 20px;
             }
         }
-        .buy-buttons-row_container{
+        .product_page_buy_buttons.buy-buttons-row_container{
             transform: translateY(150%);
             box-shadow: 0 1px 6px rgba(32,33,36,.28);
             .close_buy_container{

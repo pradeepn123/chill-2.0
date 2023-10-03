@@ -5216,7 +5216,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  .buy-buttons-row {
+  .sticky-content-container .product_page_buy_buttons.buy-buttons-row {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -5225,15 +5225,15 @@ body {
     margin: 31px 0;
     height: 0;
   }
-  .buy-buttons-row .without-variants .quantity-submit-row__submit {
+  .sticky-content-container .product_page_buy_buttons.buy-buttons-row .without-variants .quantity-submit-row__submit {
     margin-bottom: 0px !important;
     margin: 0 20px;
   }
-  .buy-buttons-row .buy-buttons-row_container {
+  .sticky-content-container .product_page_buy_buttons.buy-buttons-row .product_page_buy_buttons.buy-buttons-row_container {
     transform: translateY(150%);
     box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
   }
-  .buy-buttons-row .buy-buttons-row_container .close_buy_container {
+  .sticky-content-container .product_page_buy_buttons.buy-buttons-row .product_page_buy_buttons.buy-buttons-row_container .close_buy_container {
     display: block !important;
     position: absolute;
     background: #fff;
@@ -5246,14 +5246,14 @@ body {
     height: 40px;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.12);
   }
-  .buy-buttons-row .buy-buttons-row_container .with-variants {
+  .sticky-content-container .product_page_buy_buttons.buy-buttons-row .product_page_buy_buttons.buy-buttons-row_container .with-variants {
     padding: 0 20px;
   }
-  .buy-buttons-row .buy-buttons-row_container .with-variants .quantity-submit-row__submit {
+  .sticky-content-container .product_page_buy_buttons.buy-buttons-row .product_page_buy_buttons.buy-buttons-row_container .with-variants .quantity-submit-row__submit {
     margin-top: 35px !important;
     margin-bottom: 40px !important;
   }
-  .buy-buttons-row .buy-buttons-row_container.buy_buttons_show {
+  .sticky-content-container .product_page_buy_buttons.buy-buttons-row .product_page_buy_buttons.buy-buttons-row_container.buy_buttons_show {
     transform: translateY(0);
     transition: transform 550ms ease-in;
     border-top: 0.5px solid #ADADAD;
@@ -5264,13 +5264,13 @@ body {
     width: 100vw;
     left: 0;
   }
-  .buy-buttons-row .mobile_popup_buy_button {
+  .sticky-content-container .product_page_buy_buttons.buy-buttons-row .mobile_popup_buy_button {
     display: block !important;
     position: absolute;
     bottom: 15px;
     width: 100vw;
   }
-  .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart {
+  .sticky-content-container .product_page_buy_buttons.buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart {
     display: flex;
     border-radius: 4rem;
     font-size: 20px;
@@ -5284,25 +5284,25 @@ body {
   }
 }
 @media (max-width: 767px) and (max-width: 767px) {
-  .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart {
+  .sticky-content-container .product_page_buy_buttons.buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart {
     font-size: 18px;
   }
 }
 @media (max-width: 767px) {
-  .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart .price-container {
+  .sticky-content-container .product_page_buy_buttons.buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart .price-container {
     margin-right: 5px;
     margin-bottom: 0;
   }
-  .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart .price-container .current-price {
+  .sticky-content-container .product_page_buy_buttons.buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart .price-container .current-price {
     font-size: 20px;
   }
 }
 @media (max-width: 767px) {
-  .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart.outOfStock_btn {
+  .sticky-content-container .product_page_buy_buttons.buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart.outOfStock_btn {
     justify-content: center !important;
     cursor: default !important;
   }
-  .buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart.outOfStock_btn:hover {
+  .sticky-content-container .product_page_buy_buttons.buy-buttons-row .mobile_popup_buy_button .mobile_popup_add_to_cart.outOfStock_btn:hover {
     background: #9792e4 !important;
     border: 1px solid #9792e4 !important;
   }
