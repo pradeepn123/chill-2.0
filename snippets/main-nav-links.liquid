@@ -451,7 +451,7 @@
             {% elsif settings.new_in_image != blank and new_in_collection.all_products_count > 0 %}
                 <div class="new_in_block" {% if settings.promotion_banner == blank %} style="margin-right: 15px;"{% endif %}>
                   {%- assign new_in_img_url = settings.new_in_image | img_url: '2x2' | replace: '_2x2.', '_{width}x.' -%}
-                  <img class="lazyload promotion_banner_img" data-src="{{ new_in_img_url }}" data-widths="[360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ featured_image.aspect_ratio }}" data-sizes="auto" alt="{{ featured_image.alt | escape }}">
+                  <img class="lazyload promotion_banner_img" data-src="{{ new_in_img_url }}" width="106" height="106" loading="lazy" data-widths="[360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ featured_image.aspect_ratio }}" data-sizes="auto" alt="{{ featured_image.alt | escape }}">
                 </div>
             {% endif %}
           </a>
@@ -463,7 +463,7 @@
             {% elsif settings.sale_image != blank and sale_collection.all_products_count > 0 %}
                 <div class="sale_image_block" {% if settings.promotion_banner == blank %} style="margin-left: 15px;"{% endif %}>
                   {%- assign sale_img_url = settings.sale_image | img_url: '2x2' | replace: '_2x2.', '_{width}x.' -%}
-                  <img class="lazyload promotion_banner_img" data-src="{{ sale_img_url }}" data-widths="[360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ featured_image.aspect_ratio }}" data-sizes="auto" alt="{{ featured_image.alt | escape }}">
+                  <img class="lazyload promotion_banner_img" data-src="{{ sale_img_url }}" width="106" height="106" loading="lazy" data-widths="[360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="{{ featured_image.aspect_ratio }}" data-sizes="auto" alt="{{ featured_image.alt | escape }}">
                 </div>
             {% endif %}
           </a>
