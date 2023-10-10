@@ -833,6 +833,11 @@ div#main-nav{
     }
 }
 
+body.reveal-mobile-nav--revealed {
+    overflow-y: hidden !important;
+    overflow: hidden;
+}
+
 @media (min-width: 300px) and (max-width: 400px){
     .blog-category-list-wrap{
         width: 95vw !important;
@@ -878,4 +883,10 @@ predictive-search .search_section input {
 
 .blog-category-section a {
     margin-bottom: 20px;
+  }
+
+  @media (max-width: 620px) {
+    .marquee-with-cta-text-image {
+        margin: 73px 0;
+    }
   }

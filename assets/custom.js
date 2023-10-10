@@ -423,32 +423,50 @@ if(window.screen.width < 1200){
   });
 
   $('.flavours_container').slick({
-    slidesToShow: 3.5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
     draggable:true,
-    infinite: false,
+    infinite: true,
     prevArrow: '<button type="button" class="slick-flavour-prev" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M11.913,23.827l-1.564-1.6,9.2-9.2H0V10.8H19.545l-9.2-9.2L11.913,0,23.827,11.913Z" transform="translate(23.827 23.827) rotate(180)"/></svg></button>',
     nextArrow: '<button type="button" class="slick-flavour-next" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M19.913,31.827l-1.564-1.6,9.2-9.2H8V18.8H27.545l-9.2-9.2L19.913,8,31.827,19.913Z" transform="translate(-8 -8)"/></svg></button>',
     responsive: [
         {
-            breakpoint: 770,
+
+            breakpoint: 1440,
             settings: {
-                slidesToShow: 2.5,
-                slidesToScroll: 1,
-                arrows: false
+              slidesToShow: 4,
+              slidesToScroll: 1
             }
         },
         {
-            breakpoint: 430,
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3.5,
+                slidesToScroll: 1,
+                initialSlide: 0.5
+            }
+        },
+        {
+            breakpoint: 1023,
+            settings: {
+                slidesToShow: 2.5,
+                slidesToScroll: 1,
+                arrows: false,
+                initialSlide: 0.5
+            }
+        },
+        {
+            breakpoint: 768,
             settings: {
                 slidesToShow: 1.5,
                 slidesToScroll: 1,
-                arrows: false
+                arrows: false,
+                initialSlide: 0.5
             }
         }
-    ]
-});
+        ]
+    });
 
 
   $('#gallery').slick({
@@ -1182,6 +1200,14 @@ document.querySelectorAll('.mobile_popup_buy_button').forEach(popupButton => {
     }
     
 })
+if(location.pathname != '/pages/chillzero '){
+    document.querySelectorAll('.mobile_popup_buy_button').forEach(popupButton => {
+        popupButton.addEventListener('click', () => {
+            buyButtonContainer.classList.add('buy_buttons_show');
+        })
+    })
+}
+
 window.addEventListener('scroll', () => {
     document.querySelectorAll('.product-recommendations').forEach(product_recommendation => {
         if(window.scrollY + window.innerHeight - 100 > product_recommendation.offsetTop){
@@ -1236,7 +1262,9 @@ document.querySelectorAll('[data-zero-product-modal]').forEach(element => {
         const flavourDrawerContainer = document.querySelector(`#flavourDrawerContainer`)
         const closeBtn = productDrawerContainer.querySelector(".product-drawer-summary__close")
         document.getElementById('productDrawerBackground').style.display = 'none';
-        document.querySelector("body").classList.add("cart-drawer-open")
+
+        document.querySelector("body").classList.add("cart-drawer-open");
+        flavourDrawerContainer.scrollTop = 0;
 
         productDrawerContainer.style.display = 'block';
         productDrawerContainer.classList.add('claim-drawer-open');
@@ -1244,7 +1272,6 @@ document.querySelectorAll('[data-zero-product-modal]').forEach(element => {
 
         if(productDrawerContainer.classList.contains('claim-drawer-close')){
             productDrawerContainer.classList.add('claim-drawer-close');
-            flavourDrawerContainer.classList.add('claim-drawer-overflow');
         }
 
         if (this.nodeName == "BUTTON") {
@@ -1259,6 +1286,7 @@ document.querySelectorAll('.product-drawer-summary__close').forEach(closebtn => 
         closebtn.parentElement.classList.remove('claim-drawer-open'); 
         document.getElementById('productDrawerBackground').style.display = 'none';
         document.querySelector('body').classList.remove('cart-drawer-open');
+        document.getElementById('flavourDrawerContainer').classList.remove('claim-drawer-overflow');
 
         if (closebtn.getAttribute("data-modal-type") == 'single') {
             closeFlavourDrawer()
