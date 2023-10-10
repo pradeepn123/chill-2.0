@@ -10,6 +10,12 @@
         z-index: 60000;
     }
 }
+.claim_drawer_container.claim-drawer-open.claim-drawer-overflow {
+    overflow: hidden;
+    & .claim_drawer_container {
+        overflow: scroll;
+      }
+  }
 .claim_drawer_container{
     z-index: 60000;
     opacity: 1;
@@ -37,6 +43,8 @@
         transition: transform 0.5s;
         visibility: visible;
         opacity: 1;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
     .claim-drawer-summary__close{
         position: absolute;

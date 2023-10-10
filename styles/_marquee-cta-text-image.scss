@@ -8,6 +8,10 @@
   }
 
 .marquee-with-cta-text-image{
+    margin: 90px 0;
+    @media (max-width: 767px){
+        margin: 70px 0;
+    }
     .marquee__content_{
         .marquee-tag{
             .marquee_wrap{

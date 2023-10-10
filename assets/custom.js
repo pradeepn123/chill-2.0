@@ -54,18 +54,19 @@ function hideVideo(index, e) {
 $(document).ready(function () {
 
      //when mobile navigation is active body should not overflow  
-     // const HeaderButton = document.querySelector("#HeaderButton");
-     // const HiddenBody = document.querySelector("body");
-     // const mobileHeader = document.querySelector("#mobileNavClose");
-     // const pageShade = document.querySelector(".page-shade");
+    //  const HeaderButton = document.querySelector("#HeaderButton");
+    //  const HiddenBody = document.querySelector("body");
+    //  const mobileHeader = document.querySelector("#mobileNavClose");
+    //  const pageShade = document.querySelector(".page-shade");
 
-     // function toggleOverflow() {
-     //   HiddenBody.style.overflow = HiddenBody.style.overflow === "hidden" ? "auto" : "hidden";
-     // }
+    //  function toggleOverflow() {
+    //    HiddenBody.style.overflow = HiddenBody.style.overflow === "hidden" ? "auto" : "hidden";
+    //  }
 
-     // HeaderButton.addEventListener("click", toggleOverflow);
-     // mobileHeader.addEventListener("click", toggleOverflow);
-     // pageShade.addEventListener("click", toggleOverflow);
+    //  HeaderButton.addEventListener("click", toggleOverflow);
+    //  mobileHeader.addEventListener("click", toggleOverflow);
+    //  pageShade.addEventListener("click", toggleOverflow);
+
 
     let items = document.querySelectorAll('.menu-mega-nav li');
 
@@ -420,6 +421,36 @@ if(window.screen.width < 1200){
   
     ]
   });
+
+  $('.flavours_container').slick({
+    slidesToShow: 3.5,
+    slidesToScroll: 1,
+    arrows: true,
+    draggable:true,
+    infinite: false,
+    prevArrow: '<button type="button" class="slick-flavour-prev" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M11.913,23.827l-1.564-1.6,9.2-9.2H0V10.8H19.545l-9.2-9.2L11.913,0,23.827,11.913Z" transform="translate(23.827 23.827) rotate(180)"/></svg></button>',
+    nextArrow: '<button type="button" class="slick-flavour-next" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M19.913,31.827l-1.564-1.6,9.2-9.2H8V18.8H27.545l-9.2-9.2L19.913,8,31.827,19.913Z" transform="translate(-8 -8)"/></svg></button>',
+    responsive: [
+        {
+            breakpoint: 770,
+            settings: {
+                slidesToShow: 2.5,
+                slidesToScroll: 1,
+                arrows: false
+            }
+        },
+        {
+            breakpoint: 430,
+            settings: {
+                slidesToShow: 1.5,
+                slidesToScroll: 1,
+                arrows: false
+            }
+        }
+    ]
+});
+
+
   $('#gallery').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -1135,6 +1166,14 @@ closeBuyContainer.forEach(closeBtn => {
     })
 })
 
+if(location.pathname != '/pages/chillzero '){
+    document.querySelectorAll('.mobile_popup_buy_button').forEach(popupButton => {
+        popupButton.addEventListener('click', () => {
+            buyButtonContainer.classList.add('buy_buttons_show');
+        })
+    })
+}
+
 document.querySelectorAll('.mobile_popup_buy_button').forEach(popupButton => {
     if(!popupButton.querySelector('.outOfStock_btn')){
         popupButton.addEventListener('click', () => {
@@ -1154,6 +1193,89 @@ window.addEventListener('scroll', () => {
     })
 })
 
+
+// Explore flavours drawer on new vape page
+function openFlavourDrawer(){
+    document.getElementById('flavourDrawerContainer').style.display='block'; 
+    document.getElementById('flavourDrawerBackground').style.display='block';
+    document.getElementById('flavourDrawerContainer').classList.add('claim-drawer-open');
+      document.querySelector("body").classList.add("cart-drawer-open")
+      if(document.getElementById('flavourDrawerContainer').classList.contains('claim-drawer-close')){
+        document.getElementById('flavourDrawerContainer').classList.add('claim-drawer-close');
+      }
+}
+
+function closeFlavourDrawer() {
+    document.getElementById('flavourDrawerContainer').classList.remove('claim-drawer-open');
+    document.getElementById('flavourDrawerBackground').style.display = 'none';
+    document.querySelector('body').classList.remove('cart-drawer-open');
+}
+
+var flavourDrawerBackgroundClick = document.getElementById('flavourDrawerBackground');
+flavourDrawerBackgroundClick.addEventListener('click', function() {
+    document.querySelector('.flavour-drawer-summary__close').click();
+    document.querySelectorAll('.product-drawer-summary__close').forEach(closeBtn => closeBtn.click());
+    document.querySelector("body").classList.remove("cart-drawer-open")
+})
+
+document.querySelector('.view_all_button').addEventListener('click', () =>{
+    openFlavourDrawer();
+    const flavourDrawerContainer = document.querySelector(`#flavourDrawerContainer`);
+    if(flavourDrawerContainer.classList.contains('claim-drawer-overflow')) {
+        flavourDrawerContainer.classList.remove('claim-drawer-overflow');
+    }
+})
+
+//Open vape product drawer
+document.querySelectorAll('[data-zero-product-modal]').forEach(element => {
+    element.addEventListener("click", function(e) {
+        let flavourTitle = this.nodeName == "P" ? this.innerText : this.getAttribute("data-title")
+        flavourTitle = flavourTitle.replace(" ", "").toLowerCase();
+
+        const productDrawerContainer = document.querySelector(`#productDrawerContainer.${ flavourTitle }`)
+        const flavourDrawerContainer = document.querySelector(`#flavourDrawerContainer`)
+        const closeBtn = productDrawerContainer.querySelector(".product-drawer-summary__close")
+        document.getElementById('productDrawerBackground').style.display = 'none';
+        document.querySelector("body").classList.add("cart-drawer-open")
+
+        productDrawerContainer.style.display = 'block';
+        productDrawerContainer.classList.add('claim-drawer-open');
+        flavourDrawerContainer.classList.add('claim-drawer-overflow');
+
+        if(productDrawerContainer.classList.contains('claim-drawer-close')){
+            productDrawerContainer.classList.add('claim-drawer-close');
+            flavourDrawerContainer.classList.add('claim-drawer-overflow');
+        }
+
+        if (this.nodeName == "BUTTON") {
+            closeBtn.setAttribute("data-modal-type", "single")
+            openFlavourDrawer()
+        }
+    })
+})
+
+document.querySelectorAll('.product-drawer-summary__close').forEach(closebtn => {
+    closebtn.addEventListener('click', () => {
+        closebtn.parentElement.classList.remove('claim-drawer-open'); 
+        document.getElementById('productDrawerBackground').style.display = 'none';
+        document.querySelector('body').classList.remove('cart-drawer-open');
+
+        if (closebtn.getAttribute("data-modal-type") == 'single') {
+            closeFlavourDrawer()
+        }
+    })
+})
+
+var productDrawerBackgroundClick = document.getElementById('productDrawerBackground');
+productDrawerBackgroundClick.addEventListener('click', function() {
+    document.querySelector('.product-drawer-summary__close').click();
+    document.querySelector("body").classList.remove("cart-drawer-open");
+})
+
+
+
+
+//Waitlist drawer on old vape page
 function openWaitlistDrawer(){
     document.getElementById('waitlistDrawerContainer').style.display='block'; 
     document.getElementById('waitlistDrawerBackground').style.display='block';
