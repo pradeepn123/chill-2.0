@@ -54,18 +54,19 @@ function hideVideo(index, e) {
 $(document).ready(function () {
 
      //when mobile navigation is active body should not overflow  
-     // const HeaderButton = document.querySelector("#HeaderButton");
-     // const HiddenBody = document.querySelector("body");
-     // const mobileHeader = document.querySelector("#mobileNavClose");
-     // const pageShade = document.querySelector(".page-shade");
+    //  const HeaderButton = document.querySelector("#HeaderButton");
+    //  const HiddenBody = document.querySelector("body");
+    //  const mobileHeader = document.querySelector("#mobileNavClose");
+    //  const pageShade = document.querySelector(".page-shade");
 
-     // function toggleOverflow() {
-     //   HiddenBody.style.overflow = HiddenBody.style.overflow === "hidden" ? "auto" : "hidden";
-     // }
+    //  function toggleOverflow() {
+    //    HiddenBody.style.overflow = HiddenBody.style.overflow === "hidden" ? "auto" : "hidden";
+    //  }
 
-     // HeaderButton.addEventListener("click", toggleOverflow);
-     // mobileHeader.addEventListener("click", toggleOverflow);
-     // pageShade.addEventListener("click", toggleOverflow);
+    //  HeaderButton.addEventListener("click", toggleOverflow);
+    //  mobileHeader.addEventListener("click", toggleOverflow);
+    //  pageShade.addEventListener("click", toggleOverflow);
+
 
     let items = document.querySelectorAll('.menu-mega-nav li');
 
@@ -431,6 +432,7 @@ if(window.screen.width < 1200){
     nextArrow: '<button type="button" class="slick-flavour-next" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M19.913,31.827l-1.564-1.6,9.2-9.2H8V18.8H27.545l-9.2-9.2L19.913,8,31.827,19.913Z" transform="translate(-8 -8)"/></svg></button>',
     responsive: [
         {
+
             breakpoint: 1440,
             settings: {
               slidesToShow: 4,
@@ -1182,6 +1184,14 @@ closeBuyContainer.forEach(closeBtn => {
     })
 })
 
+if(location.pathname != '/pages/chillzero '){
+    document.querySelectorAll('.mobile_popup_buy_button').forEach(popupButton => {
+        popupButton.addEventListener('click', () => {
+            buyButtonContainer.classList.add('buy_buttons_show');
+        })
+    })
+}
+
 document.querySelectorAll('.mobile_popup_buy_button').forEach(popupButton => {
     if(!popupButton.querySelector('.outOfStock_btn')){
         popupButton.addEventListener('click', () => {
@@ -1252,6 +1262,7 @@ document.querySelectorAll('[data-zero-product-modal]').forEach(element => {
         const flavourDrawerContainer = document.querySelector(`#flavourDrawerContainer`)
         const closeBtn = productDrawerContainer.querySelector(".product-drawer-summary__close")
         document.getElementById('productDrawerBackground').style.display = 'none';
+
         document.querySelector("body").classList.add("cart-drawer-open");
         flavourDrawerContainer.scrollTop = 0;
 

@@ -267,6 +267,9 @@
                 visibility: hidden;
                 pointer-events: none;
             }
+            input {
+                opacity: 1 !important;
+              }
         }
         @media (max-width: 767px){
             margin-top: 1em;
