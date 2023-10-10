@@ -4,9 +4,9 @@
         margin-top: 100px;
     }
     .overlay-text__inner{
-        @media(max-width:767px)and (min-width:521px){
-            position: absolute;
-            bottom: 90px;
+        @media(max-width:767px)and (min-width:320px){
+            position: absolute !important;
+            bottom: 0px;
         }
         .overlay-text__title b {
             font-weight: 800;
