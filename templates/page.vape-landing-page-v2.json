@@ -45,7 +45,7 @@
             "flavour_icon": "shopify:\/\/shop_images\/AllFalvours-Watermelon_1.jpg",
             "flavour_block_description": "Enjoy the refreshing embrace of ripe watermelon. It’s a summertime icon that’s as juicy and succulent as it is satisfying. A mouthwateringly crisp flavour that tastes just like a slice of the real thing.Fresh | Fruity | Tropical",
             "flavour_button_text": "Try Now",
-            "product_block": ""
+            "product_block": "watermelon-diffuser-1500-puffs"
           }
         },
         "2165b08c-db0a-414a-8bf2-1488ca5d117f": {
@@ -162,6 +162,7 @@
             "button_redirection_link": "",
             "marquee_button_color": "",
             "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_watermelon_5.png",
+            "scroll-duration": 10,
             "marquee_direction": "scrollRightToLeft"
           }
         },
@@ -176,6 +177,7 @@
             "button_redirection_link": "",
             "marquee_button_color": "",
             "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
+            "scroll-duration": 10,
             "marquee_direction": "scrollLeftToRight"
           }
         },
@@ -190,6 +192,7 @@
             "button_redirection_link": "",
             "marquee_button_color": "",
             "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
+            "scroll-duration": 10,
             "marquee_direction": "scrollRightToLeft"
           }
         }
@@ -298,6 +301,7 @@
             "marquee_image-2": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
             "marquee_image-3": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
             "marquee_image-4": "shopify:\/\/shop_images\/Pen_1500_cherry_4.png",
+            "scroll-duration": 10,
             "marquee_direction": "scrollRightToLeft"
           }
         },
@@ -315,6 +319,7 @@
             "marquee_image-2": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
             "marquee_image-3": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
             "marquee_image-4": "shopify:\/\/shop_images\/Pen_1500_cherry_4.png",
+            "scroll-duration": 10,
             "marquee_direction": "scrollLeftToRight"
           }
         }
