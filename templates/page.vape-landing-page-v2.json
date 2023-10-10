@@ -55,7 +55,7 @@
             "flavour_block_background": "shopify:\/\/shop_images\/CZ-Mint_Backgorund_Tile.jpg",
             "flavour_block_image": "shopify:\/\/shop_images\/CZ_Mint_Product.png",
             "flavour_icon": "shopify:\/\/shop_images\/AllFalvours-Mint.jpg",
-            "flavour_block_description": "Add description here",
+            "flavour_block_description": "Refresh with a burst of cool, invigorating peppermint. Its vibrant flavor combines refreshing menthol with a hint of sweetness, providing a satisfying throat hit that awakes the senses for a cool, crisp puff.<br><br>Fresh | Cool | Sharp",
             "flavour_button_text": "Try now",
             "product_block": "mint-ice-nicotine-free-diffuser"
           }
@@ -79,7 +79,7 @@
             "flavour_block_background": "shopify:\/\/shop_images\/CZ-Grapefruit_Backgorund_Tile.jpg",
             "flavour_block_image": "shopify:\/\/shop_images\/CZ_Grapefruit_Product.png",
             "flavour_icon": "shopify:\/\/shop_images\/AllFalvours-Grapefruit.jpg",
-            "flavour_block_description": "Add description here",
+            "flavour_block_description": "Exotic fruits come together to provide a tropical explosion of sweet bliss. It’s a zesty yet smooth blend of sweet flavors that will satisfy and delight your taste buds with every sunshine-filled puff.<br><br>Tropical | Sweet | Smooth",
             "flavour_button_text": "TRY now",
             "product_block": "tropical-passion-fruit-grape-fruit-nicotine-free-diffuser"
           }
@@ -268,7 +268,7 @@
           "type": "select",
           "settings": {
             "marquee_text": "<p><strong>Join the chill Movement<\/strong><\/p>",
-            "marquee_text_color": "#000",
+            "marquee_text_color": "#000000",
             "marquee_text_font_size": 48,
             "marquee_text_font_size_mobile": 39,
             "marquee_cta_text": "",
@@ -285,7 +285,7 @@
           "type": "select",
           "settings": {
             "marquee_text": "<p><strong>@chillzero<\/strong><\/p>",
-            "marquee_text_color": "#000",
+            "marquee_text_color": "#000000",
             "marquee_text_font_size": 48,
             "marquee_text_font_size_mobile": 39,
             "marquee_cta_text": "",
