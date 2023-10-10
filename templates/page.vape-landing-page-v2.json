@@ -28,7 +28,7 @@
         "botton_bg": "#6ec59f",
         "botton_text_color": "#ffffff",
         "text_alignment": "center left",
-        "text_alignment_mobile": "center center",
+        "text_alignment_mobile": "end center",
         "full_width": true,
         "overlay_style": "shadow"
       }
@@ -162,7 +162,7 @@
             "button_redirection_link": "",
             "marquee_button_color": "",
             "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_watermelon_5.png",
-            "scroll-duration": 10,
+            "scroll-duration": 12,
             "marquee_direction": "scrollRightToLeft"
           }
         },
@@ -177,7 +177,7 @@
             "button_redirection_link": "",
             "marquee_button_color": "",
             "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
-            "scroll-duration": 10,
+            "scroll-duration": 12,
             "marquee_direction": "scrollLeftToRight"
           }
         },
@@ -192,7 +192,7 @@
             "button_redirection_link": "",
             "marquee_button_color": "",
             "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
-            "scroll-duration": 10,
+            "scroll-duration": 12,
             "marquee_direction": "scrollRightToLeft"
           }
         }
@@ -567,7 +567,6 @@
     "03bb66d9-a72b-4215-bbf5-56de88374875",
     "2b1c8a01-b27d-44d5-8af3-97fb0d051dc8",
     "570e8e3a-2a6e-4f6d-9044-89633f25dc66",
-    "169400714844e5bf9f",
     "e2de91a5-7c29-4451-83b3-7440b2bcc564",
     "63d1705c-eacc-4f48-bc1a-7a30354e8c53",
     "b3d78ff9-768d-4cd8-a6ba-55b76d5b1763",
