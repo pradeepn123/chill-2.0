@@ -84,3 +84,22 @@
         }
     }
 }
+
+.marquee-with-cta-text-image{
+    margin: 91px 0;
+    @media(max-width:620px){
+        margin: 73px 0;
+    }
+    .marquee__content_{
+        .marquee-tag{
+            .marquee_wrap{
+                .marquee_container{
+                    .marquee_content_image {
+                        width: 177px;
+                        height: 28.5px;
+                      }
+                }
+            } 
+        }
+    } 
+} 

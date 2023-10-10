@@ -28,7 +28,7 @@
         "botton_bg": "#6ec59f",
         "botton_text_color": "#ffffff",
         "text_alignment": "center left",
-        "text_alignment_mobile": "center center",
+        "text_alignment_mobile": "end center",
         "full_width": true,
         "overlay_style": "shadow"
       }
@@ -162,6 +162,7 @@
             "button_redirection_link": "",
             "marquee_button_color": "",
             "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_watermelon_5.png",
+            "scroll-duration": 12,
             "marquee_direction": "scrollRightToLeft"
           }
         },
@@ -176,6 +177,7 @@
             "button_redirection_link": "",
             "marquee_button_color": "",
             "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
+            "scroll-duration": 12,
             "marquee_direction": "scrollLeftToRight"
           }
         },
@@ -190,6 +192,7 @@
             "button_redirection_link": "",
             "marquee_button_color": "",
             "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
+            "scroll-duration": 12,
             "marquee_direction": "scrollRightToLeft"
           }
         }
@@ -278,6 +281,7 @@
             "marquee_image-2": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
             "marquee_image-3": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
             "marquee_image-4": "shopify:\/\/shop_images\/Pen_1500_cherry_4.png",
+            "scroll-duration": 12,
             "marquee_direction": "scrollRightToLeft"
           }
         },
@@ -295,6 +299,7 @@
             "marquee_image-2": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
             "marquee_image-3": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
             "marquee_image-4": "shopify:\/\/shop_images\/Pen_1500_cherry_4.png",
+            "scroll-duration": 12,
             "marquee_direction": "scrollLeftToRight"
           }
         }
@@ -403,6 +408,7 @@
         "9d6adffc-86a8-4516-a942-bb8a0aeabb9a",
         "b11d7a64-6d20-4ae8-b397-b94840f3a04c"
       ],
+      "disabled": true,
       "settings": {
         "section_redirection_link": "https:\/\/www.instagram.com\/chillzer0\/?igshid=MzRlODBiNWFlZA%3D%3D",
         "carousel_image_width": 400,
@@ -410,6 +416,115 @@
         "carousel_image_border_radius": 33,
         "carousel_image_width_mobile": 250,
         "carousel_image_height_mobile": 250
+      }
+    },
+    "f7e2001e-0f19-4b89-86b9-fb65cedd43b9": {
+      "type": "ticker",
+      "blocks": {
+        "169ef6f7-5e42-4d60-9375-18c404db97bb": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/IMG_0379_2.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "02a442d8-f759-4887-88a1-acfcb9d87b34": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/IMG_0353.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "fa75637f-691e-451e-ad86-4b19bfe9e5fd": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/image_507366411.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "c4f4b415-5ced-42b3-bc47-b92b7a2646e2": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/IMG_4701_2_6e3e0de8-a539-4e7d-bde6-1fcea3c4ef16.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "068db3de-a099-460b-80fe-da71d76452da": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/IMG_9273_1.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "081680fb-7935-4942-8622-28cdbb2d9139": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/IMG_9002_1_fee26fe9-9a64-45bc-a48a-a79d0efac5da.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "05bb6d11-9194-4bfa-bb38-d221920313d9": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/IMG_3168_1_2fba7be1-33aa-44a5-baa8-a6f9af38886b.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "ffa3cbbb-965e-46e0-ae2e-602ff13ee8c7": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/IMG_9172_2.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "07da1c9b-ba42-4f48-974e-6b90bbd93218": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/IMG_4104_2_22ff9be2-c69b-4be9-838e-1f91243fe974.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        },
+        "9ab2dfe8-f3cb-4b80-85c4-b49f160e2c5d": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/IMG_24111.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        }
+      },
+      "block_order": [
+        "169ef6f7-5e42-4d60-9375-18c404db97bb",
+        "02a442d8-f759-4887-88a1-acfcb9d87b34",
+        "fa75637f-691e-451e-ad86-4b19bfe9e5fd",
+        "c4f4b415-5ced-42b3-bc47-b92b7a2646e2",
+        "068db3de-a099-460b-80fe-da71d76452da",
+        "081680fb-7935-4942-8622-28cdbb2d9139",
+        "05bb6d11-9194-4bfa-bb38-d221920313d9",
+        "ffa3cbbb-965e-46e0-ae2e-602ff13ee8c7",
+        "07da1c9b-ba42-4f48-974e-6b90bbd93218",
+        "9ab2dfe8-f3cb-4b80-85c4-b49f160e2c5d"
+      ],
+      "settings": {
+        "section_redirection_link": "https:\/\/www.instagram.com\/chillzer0\/?igshid=MzRlODBiNWFlZA%3D%3D",
+        "carousel_image_width": 400,
+        "carousel_image_height": 400,
+        "carousel_image_border_radius": 33,
+        "carousel_image_width_mobile": 250,
+        "carousel_image_height_mobile": 250,
+        "ticker_time": 50,
+        "direction": "ticker-to-left",
+        "background_spacing": "small",
+        "remove_bottom_spacing": false
       }
     }
   },
@@ -420,6 +535,7 @@
     "570e8e3a-2a6e-4f6d-9044-89633f25dc66",
     "e2de91a5-7c29-4451-83b3-7440b2bcc564",
     "63d1705c-eacc-4f48-bc1a-7a30354e8c53",
-    "b3d78ff9-768d-4cd8-a6ba-55b76d5b1763"
+    "b3d78ff9-768d-4cd8-a6ba-55b76d5b1763",
+    "f7e2001e-0f19-4b89-86b9-fb65cedd43b9"
   ]
 }
