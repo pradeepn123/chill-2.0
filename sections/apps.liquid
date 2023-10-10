@@ -5,7 +5,14 @@
     {%- endfor -%}
   {%- unless section.settings.full_width -%}</div>{%- endunless -%}
 </div>
-
+{% style %}
+  {% if template.suffix == 'vape-landing-page-v2' or template.suffix == 'vape-landing-page' %}
+    .section-apps{
+      position: relative;
+      z-index: 2;
+    }
+  {% endif %}
+{% endstyle %}
 {% schema %}
 {
   "name": "Apps",
