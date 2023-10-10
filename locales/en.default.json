@@ -162,7 +162,7 @@
       "vendor": "By",
       "sku": "SKU:",
       "quantity": "Quantity",
-      "product_unavailable": "This product is unavailable",
+      "product_unavailable": "Out of Stock",
       "backorder": "is backordered and will ship as soon as it is back in stock.",
       "prev_product": "Previous",
       "next_product": "Next",
@@ -170,7 +170,7 @@
       "size_chart": "Size Guide"
     },
     "variant": {
-      "no_stock": "Sold out",
+      "no_stock": "Out of stock",
       "non_existent": "Unavailable"
     },
     "added_notification": {
@@ -199,7 +199,7 @@
       "x_units_available": "{{ quantity }} in stock, ready to ship",
       "low_stock": "Low stock",
       "in_stock": "In stock",
-      "sold_out": "Sold Out",
+      "sold_out": "Out of stock",
       "sale": "Sale",
       "new_in": "New in",
       "percent_reduction": "{{ amount }}% off",

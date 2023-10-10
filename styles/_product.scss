@@ -298,7 +298,7 @@
                         }
                     }
                 }
-                .buy-buttons-row{
+                .product_page_buy_buttons.buy-buttons-row{
                     margin: 15px 0 !important;
                     .subscription_main_title{
                         font-size: 16px;
@@ -395,7 +395,7 @@
                         font-family: 'Open Sans', sans-serif;
                         font-size: 20px;
                         font-weight: 900;
-                        text-transform: uppercase;   
+                        // text-transform: uppercase;   
                         line-height: 1;
                         border-radius: 4rem;
                         width: 100%;
@@ -519,6 +519,10 @@
             display: flex;
             align-items: center;
             flex-direction: row;
+            @media (max-width: 1199px){
+                position: relative;
+                z-index: -1;
+            }
             @media(min-width:1200px){
                 flex-direction: row;
             }
@@ -839,6 +843,7 @@
                     display: none;
                 }
                 @media (max-width: 1199px){
+                    z-index: -1;
                     .slick-dots{
                         position: absolute;
                         bottom: 0;
@@ -929,6 +934,10 @@
     }
     .shopify-app-block{
         .okeReviews{
+            @media (max-width: 1199px){
+                position: relative;
+                z-index: 3;
+            }
             .oke-w-header{
                 .oke-w-header-content{
                     .oke-w-header-content-block{
@@ -1101,7 +1110,19 @@
         }
     }
 }
-.buy-buttons-row{
+.product_page_buy_buttons.buy-buttons-row:has(.without-variants){
+    bottom: 150px !important;
+    z-index: 100;
+    background: transparent;
+    .buy-buttons-row_container{
+        transform: translateY(0);
+        box-shadow: none !important;
+        .button.button--large{
+            width: 100%;
+        }
+    }
+}
+.sticky-content-container .product_page_buy_buttons.buy-buttons-row{
     @media (max-width: 767px){
         position: fixed;
         bottom: 0;
@@ -1113,9 +1134,11 @@
         height: 0;
         .without-subscription{
             padding: 0 20px;
+        }
+        .without-variants{
             .quantity-submit-row__submit{
-                margin-top: 35px !important;
                 margin-bottom: 0px !important;
+                margin: 0 20px;
             }
         }
         .buy-buttons-row_container{
@@ -1134,7 +1157,7 @@
                 height: 40px;
                 box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.12);
             }
-            .with-subscription{
+            .with-variants{
                 padding: 0 20px;
                 .quantity-submit-row__submit{
                     margin-top: 35px !important;
@@ -1181,7 +1204,58 @@
                         font-size: 20px;
                     }
                 }
+                &.outOfStock_btn{
+                    justify-content: center !important;
+                    cursor: default !important;
+                    &:hover{
+                        background: #9792e4 !important;
+                        border: 1px solid #9792e4 !important;
+                    }
+                }
             }
         }
+    }
+}
+.price-label--sold-out{
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    background: #fff;
+    padding: 7px;
+    font-weight: 700;
+}
+.soldout_btn{
+    justify-content: center !important;
+    cursor: default !important;
+    &:hover{
+        background: #9792e4 !important;
+        border: 1px solid #9792e4 !important;
+    }
+}
+.product-unavailable{
+    width: 100%;
+    font-size: 20px;
+    border-radius: 4rem !important;
+    font-size: 20px !important;
+    font-weight: 900 !important;
+    cursor: default !important;
+    &:hover{
+        background: #9792e4 !important;
+        border: 1px solid #9792e4 !important;
+    }
+}
+.outOfStock_btn{
+    display: flex;
+    border-radius: 4rem;
+    font-size: 20px;
+    font-weight: 900;
+    // text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    @media (max-width: 767px){
+        font-size: 18px;
     }
 }

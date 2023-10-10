@@ -3399,7 +3399,7 @@ body:not(.reveal-mobile-nav) .mobile-navigation-drawer .mobile-navigation-drawer
 .main-search__form {
   position: relative;
   margin: 20px auto;
-  max-width: 650px;
+  max-width: 517px;
 }
 .section-header .main-search__form {
   margin: 60px auto;
@@ -3412,7 +3412,7 @@ body:not(.reveal-mobile-nav) .mobile-navigation-drawer .mobile-navigation-drawer
 
 .main-search__button {
   position: absolute;
-  right: 20px;
+  right: 5%;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -3440,15 +3440,16 @@ body:not(.reveal-mobile-nav) .mobile-navigation-drawer .mobile-navigation-drawer
 }
 
 .main-search__input-container {
-  background: rgba(0, 0, 0, 0.05);
+  background: none;
   border-radius: 3px;
   padding: 0;
 }
 
 input[type=text].main-search__input {
   width: 100%;
-  background: transparent;
-  border: none;
+  background: #fff;
+  border: 1.5px solid #000;
+  border-radius: 32px;
   box-shadow: none;
   color: inherit;
   font-size: inherit;
@@ -7305,7 +7306,7 @@ svg.feather {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 60px;
 }
 .pagination-row .prev {
   text-align: left;
@@ -9818,6 +9819,7 @@ table.noborders td {
 }
 
 .simple-popup {
+  display: none !important;
   position: absolute;
   width: 140px;
   padding: 10px 15px;
