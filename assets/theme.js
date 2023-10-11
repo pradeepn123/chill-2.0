@@ -3620,14 +3620,15 @@
           </option>`).join("")}
         </select>`}        
         <div class="custom_button_info">
-        ${variant.available ? 
+        ${product.variants.map(variant => 
+        variant.available ? 
           `<button class="btn btn-primary custom_sub_button quick__view__addToCartBtn" type="submit">
             <span>Add to cart</span>
           </button>` : 
           `<button class="btn btn-primary custom_sub_button quick__view__addToCartBtn">
             <span>Out of Stock</span>
           </button>`
-          }
+          )}
         </div>
       </form>`
 
