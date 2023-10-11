@@ -3640,9 +3640,9 @@
         const variant = product.variants.find(variant => variant.id == evt.target.value)
 
         if(variant.available){
-          console.log($('.quick__view__addToCartBtn span').html('Add to cart'));
+          $('.quick__view__addToCartBtn span').html('Add to cart');
         } else{
-          console.log($('.quick__view__addToCartBtn span').html('Out of stock'));
+          $('.quick__view__addToCartBtn span').html('Out of stock');
         }
         $itemPrice.html(theme.Shopify.formatMoney(variant.price, theme.money_format))
         if ($comparePrice.length) {
