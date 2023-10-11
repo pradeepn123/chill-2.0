@@ -3620,15 +3620,9 @@
           </option>`).join("")}
         </select>`}        
         <div class="custom_button_info">
-        ${product.variants.map(variant => 
-        variant.available ? 
-          `<button class="btn btn-primary custom_sub_button quick__view__addToCartBtn" type="submit">
+          <button class="btn btn-primary custom_sub_button quick__view__addToCartBtn" type="submit">
             <span>Add to cart</span>
-          </button>` : 
-          `<button class="btn btn-primary custom_sub_button quick__view__addToCartBtn">
-            <span>Out of Stock</span>
-          </button>`
-          )}
+          </button>
         </div>
       </form>`
 
@@ -3645,6 +3639,11 @@
         const product = this.products.find(product => product.id == evt.target.dataset.productId)
         const variant = product.variants.find(variant => variant.id == evt.target.value)
 
+        if(variant.available){
+          console.log($('.quick__view__addToCartBtn span').html('Add to cart'));
+        } else{
+          console.log($('.quick__view__addToCartBtn span').html('Out of stock'));
+        }
         $itemPrice.html(theme.Shopify.formatMoney(variant.price, theme.money_format))
         if ($comparePrice.length) {
           $comparePrice.html(theme.Shopify.formatMoney(variant.compare_at_price, theme.money_format))
