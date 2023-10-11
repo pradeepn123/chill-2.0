@@ -60,7 +60,7 @@
         "show_image_behind_heading": false,
         "heading_image_height": "medium",
         "overlay_style": "shadow",
-        "coll_num_per_page_int": 40,
+        "coll_num_per_page_int": 26,
         "grid": 3,
         "show_vendor": true,
         "show_total": false,
