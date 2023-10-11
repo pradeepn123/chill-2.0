@@ -9862,6 +9862,11 @@ body.cart-drawer-open, body.vape-drawer-open {
 }
 
 @media (max-width: 767px) {
+  .section-slideshow .slideshow {
+    background: #F2F2F3;
+  }
+}
+@media (max-width: 767px) {
   .section-slideshow .slick-list, .section-slideshow .slick-dots {
     background: #F2F2F3 !important;
   }
