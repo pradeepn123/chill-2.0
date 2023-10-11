@@ -28,7 +28,7 @@
         "botton_bg": "#6ec59f",
         "botton_text_color": "#ffffff",
         "text_alignment": "center left",
-        "text_alignment_mobile": "end center",
+        "text_alignment_mobile": "center center",
         "full_width": true,
         "overlay_style": "shadow"
       }
@@ -43,9 +43,9 @@
             "flavour_block_background": "shopify:\/\/shop_images\/CZ-Watermelon_Backgorund_Tile_1.jpg",
             "flavour_block_image": "shopify:\/\/shop_images\/CZ_Watermelon_Product_1.png",
             "flavour_icon": "shopify:\/\/shop_images\/AllFalvours-Watermelon_1.jpg",
-            "flavour_block_description": "Enjoy the refreshing embrace of ripe watermelon. It’s a summertime icon that’s as juicy and succulent as it is satisfying. A mouthwateringly crisp flavour that tastes just like a slice of the real thing.<br><br>Fresh | Fruity | Tropical",
+            "flavour_block_description": "Enjoy the refreshing embrace of ripe watermelon. It’s a summertime icon that’s as juicy and succulent as it is satisfying. A mouthwateringly crisp flavour that tastes just like a slice of the real thing.Fresh | Fruity | Tropical",
             "flavour_button_text": "Try Now",
-            "product_block": "watermelon-diffuser-1500-puffs"
+            "product_block": "watermelon-diffuser-1500-puffs-1"
           }
         },
         "2165b08c-db0a-414a-8bf2-1488ca5d117f": {
@@ -91,7 +91,7 @@
             "flavour_block_background": "shopify:\/\/shop_images\/CZ-Cherry_Backgorund_Tile_1.jpg",
             "flavour_block_image": "shopify:\/\/shop_images\/CZ_Cherry_Product_1.png",
             "flavour_icon": "shopify:\/\/shop_images\/AllFalvours-Cherry_1.jpg",
-            "flavour_block_description": "Savour the luscious allure of sun-kissed cherries and tantalise your taste buds with every sweet, velvety puff. An indulgent, refined flavour that balances tanginess with sweet satisfaction.Sweet | Tart | Tangy",
+            "flavour_block_description": "Savour the luscious allure of sun-kissed cherries and tantalise your taste buds with every sweet, velvety puff. An indulgent, refined flavour that balances tanginess with sweet satisfaction.<br><br>Sweet | Tart | Tangy",
             "flavour_button_text": "Try now",
             "product_block": "cherry-diffuser-1500-puffs"
           }
@@ -103,7 +103,7 @@
             "flavour_block_background": "shopify:\/\/shop_images\/CZ-Blue_Razz_Backgorund_Tile_1.jpg",
             "flavour_block_image": "shopify:\/\/shop_images\/CZ_BlueRazz_Product_1.png",
             "flavour_icon": "shopify:\/\/shop_images\/AllFalvours-BlueRazz_1.jpg",
-            "flavour_block_description": "Luscious blueberry meets tangy raspberry in this mouthwatering fruit fusion. Blue Razz is perfectly balanced to create a refreshing, bold flavour with the taste natural berries in every inhale. Sweet | Tangy | Juicy",
+            "flavour_block_description": "Luscious blueberry meets tangy raspberry in this mouthwatering fruit fusion. Blue Razz is perfectly balanced to create a refreshing, bold flavour with the taste natural berries in every inhale. <br><br>Sweet | Tangy | Juicy",
             "flavour_button_text": "Try now",
             "product_block": "blue-razz-diffuser-1500-puffs"
           }
@@ -115,7 +115,7 @@
             "flavour_block_background": "shopify:\/\/shop_images\/CZ-Blueberry_Backgorund_Tile_1.jpg",
             "flavour_block_image": "shopify:\/\/shop_images\/CZ_Blueberry_Product_1.png",
             "flavour_icon": "shopify:\/\/shop_images\/AllFalvours-Blueberry_1.jpg",
-            "flavour_block_description": "Enjoy the bold and refreshing taste of wild blueberry. This natural berry sensation balances sweet and sharp notes to create a fun, fresh flavour that dances on the tastebuds for a satisfying puff.Sweet | Sharp | Floral",
+            "flavour_block_description": "Enjoy the bold and refreshing taste of wild blueberry. This natural berry sensation balances sweet and sharp notes to create a fun, fresh flavour that dances on the tastebuds for a satisfying puff.<br><br>Sweet | Sharp | Floral",
             "flavour_button_text": "Try now",
             "product_block": "copy-of-blueberry-diffuser-1500-puffs"
           }
@@ -162,7 +162,7 @@
             "button_redirection_link": "",
             "marquee_button_color": "",
             "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_watermelon_5.png",
-            "scroll-duration": 12,
+            "scroll-duration": 10,
             "marquee_direction": "scrollRightToLeft"
           }
         },
@@ -177,7 +177,7 @@
             "button_redirection_link": "",
             "marquee_button_color": "",
             "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
-            "scroll-duration": 12,
+            "scroll-duration": 10,
             "marquee_direction": "scrollLeftToRight"
           }
         },
@@ -192,7 +192,7 @@
             "button_redirection_link": "",
             "marquee_button_color": "",
             "marquee_image-1": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
-            "scroll-duration": 12,
+            "scroll-duration": 10,
             "marquee_direction": "scrollRightToLeft"
           }
         }
@@ -280,9 +280,6 @@
         "a2456b86-9e27-48cc-98c4-938142b32b25",
         "58269265-edd4-4fec-8c07-a0a8a84d701b"
       ],
-      "custom_css": [
-        "@media (min-width: 1024px) {.icon-with-text-wrapper {padding: 60px 0 0 0 !important; }}"
-      ],
       "settings": {
         "home_icons_title": ""
       }
@@ -304,7 +301,7 @@
             "marquee_image-2": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
             "marquee_image-3": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
             "marquee_image-4": "shopify:\/\/shop_images\/Pen_1500_cherry_4.png",
-            "scroll-duration": 14,
+            "scroll-duration": 10,
             "marquee_direction": "scrollRightToLeft"
           }
         },
@@ -322,7 +319,7 @@
             "marquee_image-2": "shopify:\/\/shop_images\/Pen_1500_lemon_3.png",
             "marquee_image-3": "shopify:\/\/shop_images\/Pen_1500_bluerazz_2.png",
             "marquee_image-4": "shopify:\/\/shop_images\/Pen_1500_cherry_4.png",
-            "scroll-duration": 14,
+            "scroll-duration": 10,
             "marquee_direction": "scrollLeftToRight"
           }
         }
@@ -431,7 +428,6 @@
         "9d6adffc-86a8-4516-a942-bb8a0aeabb9a",
         "b11d7a64-6d20-4ae8-b397-b94840f3a04c"
       ],
-      "disabled": true,
       "settings": {
         "section_redirection_link": "https:\/\/www.instagram.com\/chillzer0\/?igshid=MzRlODBiNWFlZA%3D%3D",
         "carousel_image_width": 400,
@@ -439,115 +435,6 @@
         "carousel_image_border_radius": 33,
         "carousel_image_width_mobile": 250,
         "carousel_image_height_mobile": 250
-      }
-    },
-    "4a00ce2a-2b7d-4002-9be9-69e8124ebe60": {
-      "type": "ticker",
-      "blocks": {
-        "d879adbf-72e7-4222-8cc4-f8cc591fef55": {
-          "type": "select",
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_0379_2.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
-        "a8fa2463-0118-425a-bac9-4406796be0a8": {
-          "type": "select",
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_0353.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
-        "bb2a9754-3946-4c85-8abf-6e6c917639ba": {
-          "type": "select",
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/image_507366411.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
-        "d6f038c3-1694-43a8-b14e-2f77531e1c58": {
-          "type": "select",
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_4701_2_6e3e0de8-a539-4e7d-bde6-1fcea3c4ef16.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
-        "bafa8982-b876-4842-ac64-857fd77ebbfa": {
-          "type": "select",
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_9273_1.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
-        "d8c7acd2-ed1d-4826-aa20-e5d1f236c8e4": {
-          "type": "select",
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_9002_1_fee26fe9-9a64-45bc-a48a-a79d0efac5da.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
-        "55e9e49b-da49-4437-887b-853bd80ff7b2": {
-          "type": "select",
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_3168_1_2fba7be1-33aa-44a5-baa8-a6f9af38886b.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
-        "da329bc7-a805-4660-a9c6-24bf900fac50": {
-          "type": "select",
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_9172_2.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
-        "72733b9e-c437-46aa-992e-c69a14b0cf30": {
-          "type": "select",
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_4104_2_22ff9be2-c69b-4be9-838e-1f91243fe974.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        },
-        "85f4d6cd-a940-4d68-8ae9-e09aeca2ca04": {
-          "type": "select",
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_24111.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
-          }
-        }
-      },
-      "block_order": [
-        "d879adbf-72e7-4222-8cc4-f8cc591fef55",
-        "a8fa2463-0118-425a-bac9-4406796be0a8",
-        "bb2a9754-3946-4c85-8abf-6e6c917639ba",
-        "d6f038c3-1694-43a8-b14e-2f77531e1c58",
-        "bafa8982-b876-4842-ac64-857fd77ebbfa",
-        "d8c7acd2-ed1d-4826-aa20-e5d1f236c8e4",
-        "55e9e49b-da49-4437-887b-853bd80ff7b2",
-        "da329bc7-a805-4660-a9c6-24bf900fac50",
-        "72733b9e-c437-46aa-992e-c69a14b0cf30",
-        "85f4d6cd-a940-4d68-8ae9-e09aeca2ca04"
-      ],
-      "settings": {
-        "section_redirection_link": "https:\/\/www.instagram.com\/chillzer0\/?igshid=MzRlODBiNWFlZA%3D%3D",
-        "carousel_image_width": 400,
-        "carousel_image_height": 400,
-        "carousel_image_border_radius": 33,
-        "carousel_image_width_mobile": 250,
-        "carousel_image_height_mobile": 250,
-        "ticker_time": 28,
-        "direction": "ticker-to-left",
-        "background_spacing": "small",
-        "remove_bottom_spacing": false
       }
     },
     "1516836a-916e-40d3-a537-7290ab543238": {
@@ -567,10 +454,10 @@
     "03bb66d9-a72b-4215-bbf5-56de88374875",
     "2b1c8a01-b27d-44d5-8af3-97fb0d051dc8",
     "570e8e3a-2a6e-4f6d-9044-89633f25dc66",
+    "169400714844e5bf9f",
     "e2de91a5-7c29-4451-83b3-7440b2bcc564",
     "63d1705c-eacc-4f48-bc1a-7a30354e8c53",
     "b3d78ff9-768d-4cd8-a6ba-55b76d5b1763",
-    "4a00ce2a-2b7d-4002-9be9-69e8124ebe60",
     "1516836a-916e-40d3-a537-7290ab543238"
   ]
 }
