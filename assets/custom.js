@@ -75,7 +75,50 @@ $(document).ready(function () {
     document.addEventListener("TikShop:cart:updated", function(e) {
         document.documentElement.dispatchEvent(new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false }))
     })
-
+    $('.flavours_container').slick({
+        slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: true,
+            draggable:true,
+            infinite: true,
+            prevArrow: '<button type="button" class="slick-flavour-prev" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M11.913,23.827l-1.564-1.6,9.2-9.2H0V10.8H19.545l-9.2-9.2L11.913,0,23.827,11.913Z" transform="translate(23.827 23.827) rotate(180)"/></svg></button>',
+            nextArrow: '<button type="button" class="slick-flavour-next" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M19.913,31.827l-1.564-1.6,9.2-9.2H8V18.8H27.545l-9.2-9.2L19.913,8,31.827,19.913Z" transform="translate(-8 -8)"/></svg></button>',
+            responsive: [
+                {
+                    breakpoint: 1440,
+                    settings: {
+                      slidesToShow: 4,
+                      slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3.5,
+                        slidesToScroll: 1,
+                        initialSlide: 0.5
+                    }
+                },
+                {
+                    breakpoint: 1023,
+                    settings: {
+                        slidesToShow: 2.5,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        initialSlide: 0.5
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1.5,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        initialSlide: 0.5
+                    }
+                }
+            ]
+        });
   function handleHover() {
     const items = this.parentElement.querySelectorAll(".menu-item")
     items.forEach(item => item.classList.remove('active'))
@@ -424,47 +467,46 @@ if(window.screen.width < 1200){
 
   $('.flavours_container').slick({
     slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true,
-    draggable:true,
-    infinite: true,
-    prevArrow: '<button type="button" class="slick-flavour-prev" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M11.913,23.827l-1.564-1.6,9.2-9.2H0V10.8H19.545l-9.2-9.2L11.913,0,23.827,11.913Z" transform="translate(23.827 23.827) rotate(180)"/></svg></button>',
-    nextArrow: '<button type="button" class="slick-flavour-next" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M19.913,31.827l-1.564-1.6,9.2-9.2H8V18.8H27.545l-9.2-9.2L19.913,8,31.827,19.913Z" transform="translate(-8 -8)"/></svg></button>',
-    responsive: [
-        {
-
-            breakpoint: 1440,
-            settings: {
-              slidesToShow: 4,
-              slidesToScroll: 1
+        slidesToScroll: 1,
+        arrows: true,
+        draggable:true,
+        infinite: true,
+        prevArrow: '<button type="button" class="slick-flavour-prev" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M11.913,23.827l-1.564-1.6,9.2-9.2H0V10.8H19.545l-9.2-9.2L11.913,0,23.827,11.913Z" transform="translate(23.827 23.827) rotate(180)"/></svg></button>',
+        nextArrow: '<button type="button" class="slick-flavour-next" aria-label=""><svg xmlns="http://www.w3.org/2000/svg" width="23.827" height="23.827" viewBox="0 0 23.827 23.827"><path id="arrow_forward_FILL0_wght400_GRAD0_opsz48" d="M19.913,31.827l-1.564-1.6,9.2-9.2H8V18.8H27.545l-9.2-9.2L19.913,8,31.827,19.913Z" transform="translate(-8 -8)"/></svg></button>',
+        responsive: [
+            {
+                breakpoint: 1440,
+                settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3.5,
+                    slidesToScroll: 1,
+                    initialSlide: 0.5
+                }
+            },
+            {
+                breakpoint: 1023,
+                settings: {
+                    slidesToShow: 2.5,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    initialSlide: 0.5
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1.5,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    initialSlide: 0.5
+                }
             }
-        },
-        {
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 3.5,
-                slidesToScroll: 1,
-                initialSlide: 0.5
-            }
-        },
-        {
-            breakpoint: 1023,
-            settings: {
-                slidesToShow: 2.5,
-                slidesToScroll: 1,
-                arrows: false,
-                initialSlide: 0.5
-            }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1.5,
-                slidesToScroll: 1,
-                arrows: false,
-                initialSlide: 0.5
-            }
-        }
         ]
     });
 
@@ -1225,7 +1267,7 @@ function openFlavourDrawer(){
     document.getElementById('flavourDrawerContainer').style.display='block'; 
     document.getElementById('flavourDrawerBackground').style.display='block';
     document.getElementById('flavourDrawerContainer').classList.add('claim-drawer-open');
-      document.querySelector("body").classList.add("cart-drawer-open")
+      document.querySelector("body").classList.add("vape-drawer-open")
       if(document.getElementById('flavourDrawerContainer').classList.contains('claim-drawer-close')){
         document.getElementById('flavourDrawerContainer').classList.add('claim-drawer-close');
       }
@@ -1234,14 +1276,14 @@ function openFlavourDrawer(){
 function closeFlavourDrawer() {
     document.getElementById('flavourDrawerContainer').classList.remove('claim-drawer-open');
     document.getElementById('flavourDrawerBackground').style.display = 'none';
-    document.querySelector('body').classList.remove('cart-drawer-open');
+    document.querySelector('body').classList.remove('vape-drawer-open');
 }
 
 var flavourDrawerBackgroundClick = document.getElementById('flavourDrawerBackground');
 flavourDrawerBackgroundClick.addEventListener('click', function() {
     document.querySelector('.flavour-drawer-summary__close').click();
     document.querySelectorAll('.product-drawer-summary__close').forEach(closeBtn => closeBtn.click());
-    document.querySelector("body").classList.remove("cart-drawer-open")
+    document.querySelector("body").classList.remove("vape-drawer-open")
 })
 
 document.querySelector('.view_all_button').addEventListener('click', () =>{
@@ -1263,7 +1305,7 @@ document.querySelectorAll('[data-zero-product-modal]').forEach(element => {
         const closeBtn = productDrawerContainer.querySelector(".product-drawer-summary__close")
         document.getElementById('productDrawerBackground').style.display = 'none';
 
-        document.querySelector("body").classList.add("cart-drawer-open");
+        document.querySelector("body").classList.add("vape-drawer-open");
         flavourDrawerContainer.scrollTop = 0;
 
         productDrawerContainer.style.display = 'block';
@@ -1285,7 +1327,7 @@ document.querySelectorAll('.product-drawer-summary__close').forEach(closebtn => 
     closebtn.addEventListener('click', () => {
         closebtn.parentElement.classList.remove('claim-drawer-open'); 
         document.getElementById('productDrawerBackground').style.display = 'none';
-        document.querySelector('body').classList.remove('cart-drawer-open');
+        // document.querySelector('body').classList.remove('cart-drawer-open');
         document.getElementById('flavourDrawerContainer').classList.remove('claim-drawer-overflow');
 
         if (closebtn.getAttribute("data-modal-type") == 'single') {
@@ -1297,7 +1339,7 @@ document.querySelectorAll('.product-drawer-summary__close').forEach(closebtn => 
 var productDrawerBackgroundClick = document.getElementById('productDrawerBackground');
 productDrawerBackgroundClick.addEventListener('click', function() {
     document.querySelector('.product-drawer-summary__close').click();
-    document.querySelector("body").classList.remove("cart-drawer-open");
+    document.querySelector("body").classList.remove("vape-drawer-open");
 })
 
 
