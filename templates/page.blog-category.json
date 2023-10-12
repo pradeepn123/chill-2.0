@@ -59,12 +59,6 @@
             "blog": "lifestyle"
           }
         },
-        "faa9c7e6-f492-477f-8308-10966c0c1f50": {
-          "type": "select",
-          "settings": {
-            "blog": "chill-blog"
-          }
-        },
         "bdd7c50e-888c-46e8-8230-9665473b64fb": {
           "type": "select",
           "settings": {
@@ -76,7 +70,6 @@
         "307ef005-06b3-4288-9679-6319963df7ba",
         "a25c3b20-25a0-4c16-bca4-918ebedf2912",
         "8766c041-3aa0-40df-9612-70df0bd287d2",
-        "faa9c7e6-f492-477f-8308-10966c0c1f50",
         "bdd7c50e-888c-46e8-8230-9665473b64fb"
       ],
       "settings": {
