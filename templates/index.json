@@ -647,13 +647,66 @@
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
+        },
+        "2f48d679-5fdf-4b59-88ea-637f024410ac": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tranquini_Main-Ban.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "left top",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Embrace Your \nInner Bali Butterfly with\n <strong>Tranquini <\/strong>",
+            "title_size": 56,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>If anyone embodies the essence of tranquility and calm, it's Bret from Tranquini.<\/p>",
+            "heading_color": "#000000",
+            "text_color": "#ffffff",
+            "enlarge_text": true,
+            "button_label_1": "READ MORE",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#F3B09F",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "top left"
+          }
+        },
+        "88dbfb8f-a732-4bbd-ab80-dec5d87c025e": {
+          "type": "image",
+          "settings": {
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "Tell your story",
+            "title": "Two line\nslide heading",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>And optional subtext<\/p>",
+            "heading_color": "#000",
+            "text_color": "#000",
+            "enlarge_text": true,
+            "button_label_1": "Shop this",
+            "button_url_1": "",
+            "button_label_2": "Shop all",
+            "button_url_2": "",
+            "button_background_color": "#F3B09F",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center center"
+          }
         }
       },
       "block_order": [
         "template--16159658737822__bc3d34c0-542b-45d5-8059-06e17a636766-168751658382093f68-0",
         "2bb85ef6-1dde-4ca8-bbbf-60e81f5022b3",
         "987139b6-df53-4095-b4af-bead70e20ab0",
-        "60c76a91-2ae1-41bb-8a3f-96a16c400105"
+        "60c76a91-2ae1-41bb-8a3f-96a16c400105",
+        "2f48d679-5fdf-4b59-88ea-637f024410ac",
+        "88dbfb8f-a732-4bbd-ab80-dec5d87c025e"
       ],
       "settings": {
         "height": "fixed",
