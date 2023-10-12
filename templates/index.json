@@ -677,26 +677,27 @@
         "88dbfb8f-a732-4bbd-ab80-dec5d87c025e": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Hempress-Blog-Ban.jpg",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
-            "subheading": "Tell your story",
-            "title": "Two line\nslide heading",
-            "title_size": 84,
+            "subheading": "",
+            "title": "The Future of Personal \nCare with <strong>Mckenna Avery<\/strong>",
+            "title_size": 56,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>And optional subtext<\/p>",
+            "text": "<p><strong>Ev<\/strong>er <strong>wo<\/strong>ndered <strong>wh<\/strong>at <strong>dr<\/strong>ives <strong>He<\/strong>mpresss <strong>an<\/strong>d <strong>it<\/strong>s <strong>mi<\/strong>ssion to <strong>re<\/strong>volutionize <strong>pe<\/strong>rsonal <strong>ca<\/strong>re?<\/p>",
             "heading_color": "#000",
             "text_color": "#000",
             "enlarge_text": true,
-            "button_label_1": "Shop this",
+            "button_label_1": "",
             "button_url_1": "",
-            "button_label_2": "Shop all",
-            "button_url_2": "",
-            "button_background_color": "#F3B09F",
+            "button_label_2": "READ MORE",
+            "button_url_2": "https:\/\/chill.com\/blogs\/brands\/the-future-of-personal-care-with-mckenna-avery",
+            "button_background_color": "#9792e4",
             "button_text_color": "#FFFFFF",
             "button_text_font_size": 20,
-            "text_alignment": "center center"
+            "text_alignment": "top left"
           }
         }
       },
