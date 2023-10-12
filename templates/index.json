@@ -539,6 +539,84 @@
     "bc3d34c0-542b-45d5-8059-06e17a636766": {
       "type": "slideshow",
       "blocks": {
+        "88dbfb8f-a732-4bbd-ab80-dec5d87c025e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hempress-Blog-Ban.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong>The Future of Personal \nCare with Mckenna Avery<\/strong>",
+            "title_size": 56,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p><strong>Ev<\/strong>er <strong>wo<\/strong>ndered <strong>wh<\/strong>at <strong>dr<\/strong>ives <strong>He<\/strong>mpresss <strong>an<\/strong>d <strong>it<\/strong>s <strong>mi<\/strong>ssion to <strong>re<\/strong>volutionize <strong>pe<\/strong>rsonal <strong>ca<\/strong>re?<\/p>",
+            "heading_color": "#000000",
+            "text_color": "#000000",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "READ MORE",
+            "button_url_2": "https:\/\/chill.com\/blogs\/brands\/the-future-of-personal-care-with-mckenna-avery",
+            "button_background_color": "#9792e4",
+            "button_text_color": "#ffffff",
+            "button_text_font_size": 20,
+            "text_alignment": "top left"
+          }
+        },
+        "2f48d679-5fdf-4b59-88ea-637f024410ac": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tranquini_Main-Ban.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "left top",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong>Embrace Your \nInner Bali Butterfly with\nTranquini <\/strong>",
+            "title_size": 56,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>If anyone embodies<br\/> the essence of tranquility and calm, <br\/>it's Bret from Tranquini.<\/p>",
+            "heading_color": "#f7f7f8",
+            "text_color": "#171717",
+            "enlarge_text": true,
+            "button_label_1": "READ MORE",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#f3b09f",
+            "button_text_color": "#ffffff",
+            "button_text_font_size": 20,
+            "text_alignment": "top left"
+          }
+        },
+        "bdba9952-fd32-48ee-9090-214b89c30546": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Lofi-HP-Ban-Desktop.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong> The Laid-Back \nWorld of\n Lo-Fi Music<\/strong>",
+            "title_size": 56,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Lo-fi music incorporates elements like vinyl crackles, sampled dialogue, and warm, melodies that transport you to a realm of tranquility.<\/p>",
+            "heading_color": "#000000",
+            "text_color": "#000000",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "READ MORE",
+            "button_url_2": "https:\/\/chill.com\/blogs\/lifestyle\/groove-into-relaxation-the-laid-back-world-of-lo-fi-music",
+            "button_background_color": "#f3b09f",
+            "button_text_color": "#ffffff",
+            "button_text_font_size": 20,
+            "text_alignment": "top left"
+          }
+        },
         "template--16159658737822__bc3d34c0-542b-45d5-8059-06e17a636766-168751658382093f68-0": {
           "type": "image",
           "settings": {
@@ -575,7 +653,7 @@
             "mobile_image_position": "center center",
             "slide_link": "",
             "subheading": "",
-            "title": "<strong> Sipping Sobriety: \nNavigating Social\nSituations Without\nAlcohol <\/strong>",
+            "title": "<strong> \nNavigating Social\nSituations Without\nAlcohol <\/strong>",
             "title_size": 56,
             "title_size_mobile": 36,
             "use_h1": false,
@@ -648,58 +726,6 @@
             "text_alignment": "center left"
           }
         },
-        "2f48d679-5fdf-4b59-88ea-637f024410ac": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Tranquini_Main-Ban.jpg",
-            "image_position": "center center",
-            "mobile_image_position": "left top",
-            "slide_link": "",
-            "subheading": "",
-            "title": "<strong>Embrace Your \nInner Bali Butterfly with\nTranquini <\/strong>",
-            "title_size": 56,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>If anyone embodies the essence of tranquility and calm, it's Bret from Tranquini.<\/p>",
-            "heading_color": "#000000",
-            "text_color": "#ffffff",
-            "enlarge_text": true,
-            "button_label_1": "READ MORE",
-            "button_url_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_background_color": "#f3b09f",
-            "button_text_color": "#ffffff",
-            "button_text_font_size": 20,
-            "text_alignment": "top left"
-          }
-        },
-        "88dbfb8f-a732-4bbd-ab80-dec5d87c025e": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Hempress-Blog-Ban.jpg",
-            "image_position": "center center",
-            "mobile_image_position": "center center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "<strong>The Future of Personal \nCare with Mckenna Avery<\/strong>",
-            "title_size": 56,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p><strong>Ev<\/strong>er <strong>wo<\/strong>ndered <strong>wh<\/strong>at <strong>dr<\/strong>ives <strong>He<\/strong>mpresss <strong>an<\/strong>d <strong>it<\/strong>s <strong>mi<\/strong>ssion to <strong>re<\/strong>volutionize <strong>pe<\/strong>rsonal <strong>ca<\/strong>re?<\/p>",
-            "heading_color": "#000000",
-            "text_color": "#000000",
-            "enlarge_text": true,
-            "button_label_1": "",
-            "button_url_1": "",
-            "button_label_2": "READ MORE",
-            "button_url_2": "https:\/\/chill.com\/blogs\/brands\/the-future-of-personal-care-with-mckenna-avery",
-            "button_background_color": "#9792e4",
-            "button_text_color": "#ffffff",
-            "button_text_font_size": 20,
-            "text_alignment": "top left"
-          }
-        },
         "ffebbcbc-289f-4bba-8747-9d6e90276b31": {
           "type": "image",
           "settings": {
@@ -713,55 +739,29 @@
             "title_size_mobile": 46,
             "use_h1": false,
             "text": "<p><strong>Be<\/strong>yond <strong>th<\/strong>e <strong>we<\/strong>ll <strong>kn<\/strong>own <strong>he<\/strong>alth <strong>ri<\/strong>sks, <strong>yo<\/strong>u <strong>ma<\/strong>y <strong>no<\/strong>t <strong>re<\/strong>alize <strong>th<\/strong>at <strong>th<\/strong>ey’re <strong>se<\/strong>cretly <strong>me<\/strong>ssing <strong>wi<\/strong>th <strong>yo<\/strong>ur <strong>mo<\/strong>od.<\/p>",
-            "heading_color": "#000",
-            "text_color": "#000",
+            "heading_color": "#000000",
+            "text_color": "#000000",
             "enlarge_text": true,
             "button_label_1": "READ MORE",
             "button_url_1": "https:\/\/chill.com\/blogs\/lifestyle\/surprising-ways-tobacco-and-nicotine-play-with-your-mood",
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#9792e4",
-            "button_text_color": "#FFFFFF",
-            "button_text_font_size": 20,
-            "text_alignment": "top left"
-          }
-        },
-        "bdba9952-fd32-48ee-9090-214b89c30546": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Lofi-HP-Ban-Desktop.jpg",
-            "image_position": "center center",
-            "mobile_image_position": "center center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "<strong> The Laid-Back \nWorld of\n Lo-Fi Music<\/strong>",
-            "title_size": 56,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>Lo-fi music incorporates elements like vinyl crackles, sampled dialogue, and warm, melodies that transport you to a realm of tranquility.<\/p>",
-            "heading_color": "#000",
-            "text_color": "#000",
-            "enlarge_text": true,
-            "button_label_1": "",
-            "button_url_1": "",
-            "button_label_2": "READ MORE",
-            "button_url_2": "https:\/\/chill.com\/blogs\/lifestyle\/groove-into-relaxation-the-laid-back-world-of-lo-fi-music",
-            "button_background_color": "#F3B09F",
-            "button_text_color": "#FFFFFF",
+            "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "top left"
           }
         }
       },
       "block_order": [
+        "88dbfb8f-a732-4bbd-ab80-dec5d87c025e",
+        "2f48d679-5fdf-4b59-88ea-637f024410ac",
+        "bdba9952-fd32-48ee-9090-214b89c30546",
         "template--16159658737822__bc3d34c0-542b-45d5-8059-06e17a636766-168751658382093f68-0",
         "2bb85ef6-1dde-4ca8-bbbf-60e81f5022b3",
         "987139b6-df53-4095-b4af-bead70e20ab0",
         "60c76a91-2ae1-41bb-8a3f-96a16c400105",
-        "2f48d679-5fdf-4b59-88ea-637f024410ac",
-        "88dbfb8f-a732-4bbd-ab80-dec5d87c025e",
-        "ffebbcbc-289f-4bba-8747-9d6e90276b31",
-        "bdba9952-fd32-48ee-9090-214b89c30546"
+        "ffebbcbc-289f-4bba-8747-9d6e90276b31"
       ],
       "settings": {
         "height": "fixed",
