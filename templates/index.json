@@ -668,8 +668,8 @@
             "button_url_1": "",
             "button_label_2": "",
             "button_url_2": "",
-            "button_background_color": "#F3B09F",
-            "button_text_color": "#FFFFFF",
+            "button_background_color": "#f3b09f",
+            "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "top left"
           }
@@ -687,14 +687,40 @@
             "title_size_mobile": 46,
             "use_h1": false,
             "text": "<p><strong>Ev<\/strong>er <strong>wo<\/strong>ndered <strong>wh<\/strong>at <strong>dr<\/strong>ives <strong>He<\/strong>mpresss <strong>an<\/strong>d <strong>it<\/strong>s <strong>mi<\/strong>ssion to <strong>re<\/strong>volutionize <strong>pe<\/strong>rsonal <strong>ca<\/strong>re?<\/p>",
-            "heading_color": "#000",
-            "text_color": "#000",
+            "heading_color": "#000000",
+            "text_color": "#000000",
             "enlarge_text": true,
             "button_label_1": "",
             "button_url_1": "",
             "button_label_2": "READ MORE",
             "button_url_2": "https:\/\/chill.com\/blogs\/brands\/the-future-of-personal-care-with-mckenna-avery",
             "button_background_color": "#9792e4",
+            "button_text_color": "#ffffff",
+            "button_text_font_size": 20,
+            "text_alignment": "top left"
+          }
+        },
+        "ffebbcbc-289f-4bba-8747-9d6e90276b31": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/TobaccoMood-Blog-Banner.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong> Surprising\nWays Tobacco\nand Nicotine\n Play with Your Mood<\/strong>",
+            "title_size": 56,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p><strong>Be<\/strong>yond <strong>th<\/strong>e <strong>we<\/strong>ll <strong>kn<\/strong>own <strong>he<\/strong>alth <strong>ri<\/strong>sks, <strong>yo<\/strong>u <strong>ma<\/strong>y <strong>no<\/strong>t <strong>re<\/strong>alize <strong>th<\/strong>at <strong>th<\/strong>ey’re <strong>se<\/strong>cretly <strong>me<\/strong>ssing <strong>wi<\/strong>th <strong>yo<\/strong>ur <strong>mo<\/strong>od.<\/p>",
+            "heading_color": "#000",
+            "text_color": "#000",
+            "enlarge_text": true,
+            "button_label_1": "READ MORE",
+            "button_url_1": "https:\/\/chill.com\/blogs\/lifestyle\/surprising-ways-tobacco-and-nicotine-play-with-your-mood",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#F3B09F",
             "button_text_color": "#FFFFFF",
             "button_text_font_size": 20,
             "text_alignment": "top left"
@@ -707,7 +733,8 @@
         "987139b6-df53-4095-b4af-bead70e20ab0",
         "60c76a91-2ae1-41bb-8a3f-96a16c400105",
         "2f48d679-5fdf-4b59-88ea-637f024410ac",
-        "88dbfb8f-a732-4bbd-ab80-dec5d87c025e"
+        "88dbfb8f-a732-4bbd-ab80-dec5d87c025e",
+        "ffebbcbc-289f-4bba-8747-9d6e90276b31"
       ],
       "settings": {
         "height": "fixed",
