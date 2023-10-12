@@ -221,6 +221,33 @@
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
+        },
+        "858a396d-c02a-4210-9bb1-6ee4475e7e64": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DESKTOP_Tranquinni_Homepage_Banner_MEDIUM_681a3f06-bc14-43d2-9ec1-1ea55200400d.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/MOBILE_Tranquinni_Homepage_Banner_MEDIUM_ca388185-f6ae-4b9a-b34f-43d5db792f3d.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong> TranQuini: <\/strong> Relax It's Good For You!",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Tranquini natural wellness drink delivers powerful benefits to help you achieve your moment of calm.<\/p>",
+            "heading_color": "#000",
+            "text_color": "#000",
+            "enlarge_text": true,
+            "button_label_1": "CHOOSE CALM",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#F3B09F",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
         }
       },
       "block_order": [
@@ -231,7 +258,8 @@
         "159042e8-d790-4168-b7cf-81a9a54547e5",
         "f212ae5d-7cef-47d3-bf0c-78fa15669a7f",
         "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8",
-        "66002548-b60b-4786-8e10-a024be1f10e1"
+        "66002548-b60b-4786-8e10-a024be1f10e1",
+        "858a396d-c02a-4210-9bb1-6ee4475e7e64"
       ],
       "settings": {
         "height": "fixed",
