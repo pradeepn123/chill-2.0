@@ -9903,7 +9903,7 @@ body.cart-drawer-open, body.vape-drawer-open {
   }
 }
 .section-slideshow .overlay-text {
-  width: 45%;
+  width: auto;
   margin-left: 5%;
   color: #000;
 }
