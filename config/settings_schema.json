@@ -574,15 +574,15 @@
     ]
   },
   {
-      "name": "Age verification",
-      "settings": [
-        {
-          "type": "checkbox",
-          "id": "show_age_verification_popup",
-          "label": "Show age verification popup on website load",
-          "default": true
-        }
-      ]
+    "name": "Age verification",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_age_verification_popup",
+        "label": "Show age verification popup on website load",
+        "default": true
+      }
+    ]
   },
   {
     "name": "Collection grid",
