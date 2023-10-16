@@ -148,7 +148,9 @@
   {% if template.suffix == 'vape-landing-page-v2' or template.suffix == 'vape-landing-page' %}
     {% section 'waitlist-drawer' %}
   {% endif %}
-  {% section 'age-verification' %}
+  {% if settings.show_age_verification_popup %}
+    {% section 'age-verification' %}
+  {% endif %}
   {% if template.suffix == 'vape-landing-page-v2' or template.suffix == 'vape-landing-page' %}
     {% section 'vape-header' %}
   {% else %}
