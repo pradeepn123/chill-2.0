@@ -623,6 +623,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Lofi-HP-Ban-Desktop.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Lofi-Blog-Ban-Mobile.jpg",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
