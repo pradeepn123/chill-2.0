@@ -751,7 +751,7 @@
             "button_background_color": "#9792e4",
             "button_text_color": "#ffffff",
             "button_text_font_size": 20,
-            "text_alignment": "center left"
+            "text_alignment": "center center"
           }
         },
         "ffebbcbc-289f-4bba-8747-9d6e90276b31": {
@@ -766,7 +766,7 @@
             "title_size": 56,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p><strong>Be<\/strong>yond <strong>th<\/strong>e <strong>we<\/strong>ll <strong>kn<\/strong>own <strong>he<\/strong>alth <strong>ri<\/strong>sks, <strong>yo<\/strong>u <strong>ma<\/strong>y <strong>no<\/strong>t <strong>re<\/strong>alize <strong>th<\/strong>at <strong>th<\/strong>ey’re <strong>se<\/strong>cretly <strong>me<\/strong>ssing <strong>wi<\/strong>th <strong>yo<\/strong>ur <strong>mo<\/strong>od.<\/p>",
+            "text": "<p>Beyond the well known health risks, you may not realize that they’re secretly messing with your mood.<\/p>",
             "heading_color": "#000000",
             "text_color": "#000000",
             "enlarge_text": true,
