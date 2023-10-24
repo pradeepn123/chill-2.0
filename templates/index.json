@@ -3,6 +3,33 @@
     "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d": {
       "type": "slideshow",
       "blocks": {
+        "df90ff83-c6f1-44c2-94ff-1a3af29d3675": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DESKTOP_SAYSO_Homepage_Banner_MEDIUM_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/MOBILE_Sayso_Landing_Page_Banner_11972782-1705-4106-8503-85984ed61ad8.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong>SAYSO: <\/strong>The first \ncraft cocktail mix \nin a tea bag",
+            "title_size": 64,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Enjoy your favorite cocktails at home with these<br\/>all-natural, alcohol-free sachets<\/p>",
+            "heading_color": "#000",
+            "text_color": "#000",
+            "enlarge_text": true,
+            "button_label_1": "CHOOSE SAYSO",
+            "button_url_1": "https:\/\/chill.com\/collections\/sayso",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#F3B09F",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
         "858a396d-c02a-4210-9bb1-6ee4475e7e64": {
           "type": "image",
           "settings": {
@@ -248,36 +275,10 @@
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
-        },
-        "df90ff83-c6f1-44c2-94ff-1a3af29d3675": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/DESKTOP_SAYSO_Homepage_Banner_MEDIUM_1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/MOBILE_Sayso_Landing_Page_Banner_11972782-1705-4106-8503-85984ed61ad8.jpg",
-            "image_position": "center center",
-            "mobile_image_position": "center center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "<strong>SAYSO: <\/strong>The first \ncraft cocktail mix \nin a tea bag",
-            "title_size": 64,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>Enjoy your favourite cocktails at home with these<br\/>all-natural, alcohol-free sachets<\/p>",
-            "heading_color": "#000",
-            "text_color": "#000",
-            "enlarge_text": true,
-            "button_label_1": "CHOOSE SAYSO",
-            "button_url_1": "https:\/\/chill.com\/collections\/sayso",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_background_color": "#F3B09F",
-            "button_text_color": "#FFFFFF",
-            "button_text_font_size": 20,
-            "text_alignment": "center left"
-          }
         }
       },
       "block_order": [
+        "df90ff83-c6f1-44c2-94ff-1a3af29d3675",
         "858a396d-c02a-4210-9bb1-6ee4475e7e64",
         "5f12a340-48c6-4106-8308-7047651dd64c",
         "b2363591-8ba1-402f-ad6f-c71e7bae93b0",
@@ -286,8 +287,7 @@
         "159042e8-d790-4168-b7cf-81a9a54547e5",
         "f212ae5d-7cef-47d3-bf0c-78fa15669a7f",
         "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8",
-        "66002548-b60b-4786-8e10-a024be1f10e1",
-        "df90ff83-c6f1-44c2-94ff-1a3af29d3675"
+        "66002548-b60b-4786-8e10-a024be1f10e1"
       ],
       "settings": {
         "height": "fixed",
