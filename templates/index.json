@@ -13,7 +13,7 @@
             "slide_link": "",
             "subheading": "",
             "title": "<strong> TranQuini: <\/strong> \nRelax It's \ngood for you!",
-            "title_size": 84,
+            "title_size": 64,
             "title_size_mobile": 46,
             "use_h1": false,
             "text": "<p>Natural wellness drinks that deliver powerful <br\/>benefits to help you achieve a moment of calm.<\/p>",
@@ -39,8 +39,8 @@
             "mobile_image_position": "left center",
             "slide_link": "",
             "subheading": "",
-            "title": "<strong> CHILL<\/strong>ZER0\n0% Nicotine \n100% Flavor",
-            "title_size": 84,
+            "title": "<strong> CHILL<\/strong>ZER0\n<strong>0% Nicotine \n100% Flavor<\/strong>",
+            "title_size": 64,
             "title_size_mobile": 46,
             "use_h1": false,
             "text": "<p>Join us on our mission: Ditch the nicotine <br\/>and say hello to the new generation<\/p>",
@@ -67,7 +67,7 @@
             "slide_link": "",
             "subheading": "",
             "title": "Welcome \n<strong> UMBO <\/strong>",
-            "title_size": 84,
+            "title_size": 64,
             "title_size_mobile": 46,
             "use_h1": false,
             "text": "<p>Shop UMBO's selection of functional<br\/>mushroom products<\/p>",
@@ -122,7 +122,7 @@
             "slide_link": "shopify:\/\/products\/chill-cbd-isolate-chew-pouches",
             "subheading": "",
             "title": "Claim your\n<strong>FREE <\/strong> variety\n pack <strong>on us! <\/strong>",
-            "title_size": 84,
+            "title_size": 64,
             "title_size_mobile": 40,
             "use_h1": false,
             "text": "<p>New to Chill Pouches? <br\/>Get your free variety pack today.<\/p>",
@@ -149,7 +149,7 @@
             "slide_link": "",
             "subheading": "",
             "title": "Self love story \nwith <strong>Foria <\/strong>",
-            "title_size": 84,
+            "title_size": 64,
             "title_size_mobile": 46,
             "use_h1": false,
             "text": "<p>Natural products to encourage<br\/>the healing power of sexual pleasure<\/p>",
@@ -248,6 +248,33 @@
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
+        },
+        "df90ff83-c6f1-44c2-94ff-1a3af29d3675": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DESKTOP_SAYSO_Homepage_Banner_MEDIUM_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/MOBILE_Sayso_Landing_Page_Banner_11972782-1705-4106-8503-85984ed61ad8.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong>SAYSO: <\/strong>The first \ncraft cocktail mix \nin a tea bag",
+            "title_size": 64,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Enjoy your favourite cocktails at home with these<br\/>all-natural, alcohol-free sachets<\/p>",
+            "heading_color": "#000",
+            "text_color": "#000",
+            "enlarge_text": true,
+            "button_label_1": "CHOOSE SAYSO",
+            "button_url_1": "https:\/\/chill.com\/collections\/sayso",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#F3B09F",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
         }
       },
       "block_order": [
@@ -259,7 +286,8 @@
         "159042e8-d790-4168-b7cf-81a9a54547e5",
         "f212ae5d-7cef-47d3-bf0c-78fa15669a7f",
         "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8",
-        "66002548-b60b-4786-8e10-a024be1f10e1"
+        "66002548-b60b-4786-8e10-a024be1f10e1",
+        "df90ff83-c6f1-44c2-94ff-1a3af29d3675"
       ],
       "settings": {
         "height": "fixed",
@@ -630,7 +658,7 @@
             "mobile_image_position": "center center",
             "slide_link": "",
             "subheading": "",
-            "title": "<strong>The Laid \nBack World \n of the Lo-Fi\n Music Movement<\/strong>",
+            "title": "<strong> The Laid \nBack World \n of the Lo-Fi\n Music Movement<\/strong>",
             "title_size": 56,
             "title_size_mobile": 46,
             "use_h1": false,
@@ -735,8 +763,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/4As-HP-Banner_5d998a3d-c649-4e37-949a-510f5f3b881b.jpg",
             "mobile_image": "shopify:\/\/shop_images\/4As-Blog-Ban-Mobile.jpg",
-            "image_position": "top left",
-            "mobile_image_position": "left top",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
             "slide_link": "",
             "subheading": "",
             "title": "<strong>The 4 A's of\nStress Relief: \nUnderstanding\n& applying them<\/strong>",
@@ -754,7 +782,7 @@
             "button_background_color": "#9792e4",
             "button_text_color": "#ffffff",
             "button_text_font_size": 20,
-            "text_alignment": "top left"
+            "text_alignment": "center center"
           }
         },
         "ffebbcbc-289f-4bba-8747-9d6e90276b31": {
