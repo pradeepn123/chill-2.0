@@ -17,15 +17,15 @@
             "title_size_mobile": 46,
             "use_h1": false,
             "text": "<p>Enjoy your favorite cocktails at home with these<br\/>all-natural, alcohol-free sachets<\/p>",
-            "heading_color": "#000",
-            "text_color": "#000",
+            "heading_color": "#000000",
+            "text_color": "#000000",
             "enlarge_text": true,
             "button_label_1": "CHOOSE SAYSO",
             "button_url_1": "https:\/\/chill.com\/collections\/sayso",
             "button_label_2": "",
             "button_url_2": "",
-            "button_background_color": "#F3B09F",
-            "button_text_color": "#FFFFFF",
+            "button_background_color": "#f3b09f",
+            "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
@@ -763,8 +763,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/4As-HP-Banner_5d998a3d-c649-4e37-949a-510f5f3b881b.jpg",
             "mobile_image": "shopify:\/\/shop_images\/4As-Blog-Ban-Mobile.jpg",
-            "image_position": "center center",
-            "mobile_image_position": "center center",
+            "image_position": "top left",
+            "mobile_image_position": "left top",
             "slide_link": "",
             "subheading": "",
             "title": "<strong>The 4 A's of\nStress Relief: \nUnderstanding\n& applying them<\/strong>",
@@ -782,7 +782,7 @@
             "button_background_color": "#9792e4",
             "button_text_color": "#ffffff",
             "button_text_font_size": 20,
-            "text_alignment": "center center"
+            "text_alignment": "top left"
           }
         },
         "ffebbcbc-289f-4bba-8747-9d6e90276b31": {
