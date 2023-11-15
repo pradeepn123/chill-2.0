@@ -31,6 +31,47 @@
       },
       "blocks": {
       }
+    },
+    "bb511288-101f-4a1f-83f7-3db22e1426b2": {
+      "type": "featured-collection",
+      "disabled": false,
+      "settings": {
+        "title": "<p>Featured collection<\/p>",
+        "collection": "bobelo",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "use_alt_bg": true,
+        "show_view_all": true,
+        "full_width": true
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
     }
-  }
+  },
+  "order": [
+    "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d",
+    "d02b80e5-b8ee-41d5-9512-71af9b2c25c7",
+    "c9688431-7dbe-4ecd-831c-21cd1d67c69c",
+    "1635927863703110df",
+    "16359278676808bea5",
+    "1660761564dddf193c",
+    "1661508210e5eab38e",
+    "1661759224933bf819",
+    "16616836322167cf31",
+    "bc3d34c0-542b-45d5-8059-06e17a636766",
+    "16618284517e50f27f",
+    "166149763181cc2acb",
+    "1661495934a2300196",
+    "829c3c02-065e-4087-a6c0-f8a0cb3d5f6e",
+    "16607619805b81a490",
+    "3dee64a8-71bf-4655-926f-2db509dcd6a5",
+    "166453148629faf25b",
+    "16607637867e64e5b3",
+    "bb511288-101f-4a1f-83f7-3db22e1426b2"
+  ]
 }
