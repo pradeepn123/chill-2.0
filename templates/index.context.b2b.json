@@ -9,7 +9,24 @@
       "settings": {
       },
       "blocks": {
-      }
+        "df90ff83-c6f1-44c2-94ff-1a3af29d3675": {
+          "disabled": false,
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "858a396d-c02a-4210-9bb1-6ee4475e7e64",
+        "df90ff83-c6f1-44c2-94ff-1a3af29d3675",
+        "5f12a340-48c6-4106-8308-7047651dd64c",
+        "b2363591-8ba1-402f-ad6f-c71e7bae93b0",
+        "2866e88b-20e1-4338-91ae-cca51f74dfb1",
+        "190b68b3-e888-4fbb-82b4-bdb9c97c144f",
+        "159042e8-d790-4168-b7cf-81a9a54547e5",
+        "f212ae5d-7cef-47d3-bf0c-78fa15669a7f",
+        "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8",
+        "66002548-b60b-4786-8e10-a024be1f10e1"
+      ]
     },
     "d02b80e5-b8ee-41d5-9512-71af9b2c25c7": {
       "disabled": false,
