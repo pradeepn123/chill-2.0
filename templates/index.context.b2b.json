@@ -5,52 +5,32 @@
   },
   "sections": {
     "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d": {
-      "disabled": true,
+      "disabled": false,
       "settings": {
       },
       "blocks": {
       }
     },
     "d02b80e5-b8ee-41d5-9512-71af9b2c25c7": {
-      "disabled": true,
+      "disabled": false,
       "settings": {
       },
       "blocks": {
       }
     },
     "1661508210e5eab38e": {
-      "disabled": false,
+      "disabled": true,
       "settings": {
       },
       "blocks": {
       }
     },
     "1661759224933bf819": {
-      "disabled": false,
+      "disabled": true,
       "settings": {
       },
       "blocks": {
       }
-    },
-    "bb511288-101f-4a1f-83f7-3db22e1426b2": {
-      "type": "featured-collection",
-      "disabled": false,
-      "settings": {
-        "title": "<p>Featured collection<\/p>",
-        "collection": "bobelo",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 4,
-        "rows": 1,
-        "use_alt_bg": true,
-        "show_view_all": true,
-        "full_width": true
-      },
-      "blocks": {
-      },
-      "block_order": [
-
-      ]
     }
   },
   "order": [
@@ -71,7 +51,6 @@
     "16607619805b81a490",
     "3dee64a8-71bf-4655-926f-2db509dcd6a5",
     "166453148629faf25b",
-    "16607637867e64e5b3",
-    "bb511288-101f-4a1f-83f7-3db22e1426b2"
+    "16607637867e64e5b3"
   ]
 }
