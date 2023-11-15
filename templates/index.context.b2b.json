@@ -4,5 +4,33 @@
     "b2b": true
   },
   "sections": {
+    "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d": {
+      "disabled": true,
+      "settings": {
+      },
+      "blocks": {
+      }
+    },
+    "d02b80e5-b8ee-41d5-9512-71af9b2c25c7": {
+      "disabled": true,
+      "settings": {
+      },
+      "blocks": {
+      }
+    },
+    "1661508210e5eab38e": {
+      "disabled": false,
+      "settings": {
+      },
+      "blocks": {
+      }
+    },
+    "1661759224933bf819": {
+      "disabled": false,
+      "settings": {
+      },
+      "blocks": {
+      }
+    }
   }
 }
