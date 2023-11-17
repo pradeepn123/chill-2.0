@@ -1172,93 +1172,103 @@
           "settings": {
             "image_block": "shopify:\/\/shop_images\/IMG_0379_2.jpg",
             "image_redirection_link": "",
-            "carousel_image_background": ""
+            "carousel_image_background": "",
+            "open_link_in_new_tab": false
           }
         },
-        "f7255f36-757b-4d85-963b-10d83bd92695": {
+        "dbb5d3ca-e732-48dc-b154-b3245d79161e": {
           "type": "select",
           "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_0353_bf9c8925-3064-43ec-8d69-9d4d853dd9bb.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
+            "image_block": "shopify:\/\/shop_images\/Relax_Quote.jpg",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/Cq3Ff_drptU\/",
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
-        "6629b99e-3129-422e-aba3-6d196c49c169": {
+        "d71feb6f-837f-4edf-b062-5f2bfa6e4294": {
           "type": "select",
           "settings": {
-            "image_block": "shopify:\/\/shop_images\/image_507366411_ed68de68-a08c-46a8-a5f0-ab81cc3aad3e.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
+            "image_block": "shopify:\/\/shop_images\/CHILLXSHOWY1023_1006_of_1_darker1-Edit_1.jpg",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/CzGhlhluXh3\/",
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
-        "9ceb048d-b6f6-473f-a739-0d98dab98791": {
+        "cc148de9-3f0a-4cf3-9f87-39ea527be901": {
           "type": "select",
           "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_4701_2_0e3681a1-5f47-4540-a54a-5d2289d40366.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
+            "image_block": "shopify:\/\/shop_images\/1-Stop_Burning_-_Social.jpg",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/CxqWwKhuqcp\/?img_index=1",
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
-        "225a785d-02a1-49b3-a4b8-31912feb725d": {
+        "4447fa90-79a1-40ac-8371-849240569894": {
           "type": "select",
           "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_9273_1_f448c17f-b173-416a-a0b7-2d53fbc6ae31.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
+            "image_block": "shopify:\/\/shop_images\/4A_s-Carousel-Slide1.png",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/CvfXocKM-wN\/?img_index=1",
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
-        "61d16c05-f1d0-44f1-9fd5-5eae3a78b9cf": {
+        "5abb756b-c41b-4cc4-b97d-53288b8d378b": {
           "type": "select",
           "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_9002_1_615780ca-61bf-4cba-8ddc-53f1aff3221c.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
+            "image_block": "shopify:\/\/shop_images\/Screenshot_2023-11-15_at_14.44.50.png",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/CwkuYM-uw3m\/",
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
-        "1af38023-4cb6-4c04-ae9a-ad6d0113b161": {
+        "41b0edd4-49df-4a13-b5bc-e14f5bac4a1c": {
           "type": "select",
           "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_3168_1_cd2501a0-60a3-4a81-865b-6823c27bce62.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
+            "image_block": "shopify:\/\/shop_images\/Marketplace_-_Mock_Up_-_Meme2.jpg",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/CpiRotwq0zh\/",
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
-        "c73f65c0-454e-4e87-98b6-6f55d04e2588": {
+        "29aef6fd-a843-4b30-8b89-5019b1acf192": {
           "type": "select",
           "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_9172_2_0d9628e4-8340-4925-ae9a-a5792a9eebba.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
+            "image_block": "shopify:\/\/shop_images\/StressEffects-Social-Blog.jpg",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/CxDqNxPsbkp\/",
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
-        "8d325af5-98a2-4205-8d2e-dc0d8a76c3f1": {
+        "7c01ec63-e8d3-4fe7-a490-d99087b6044a": {
           "type": "select",
           "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_4104_2_e2cc49f2-4106-4521-83e5-0f46092cfe46.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
+            "image_block": "shopify:\/\/shop_images\/Mood1.jpg",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/CvcWbipstiH\/?img_index=1",
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
-        "4e2c0881-edea-4f88-afde-f825e6891765": {
+        "1378be62-63b7-43b8-b472-e47320541c41": {
           "type": "select",
           "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_24111_c7d2e863-5feb-4802-a9b3-d6ae5b986d07.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": ""
+            "image_block": "shopify:\/\/shop_images\/Blog_Covers_SOBRIETY.jpg",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/CvNdJaWux6Y\/",
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         }
       },
       "block_order": [
         "a1054e7f-489c-4085-ad86-565674eba48d",
-        "f7255f36-757b-4d85-963b-10d83bd92695",
-        "6629b99e-3129-422e-aba3-6d196c49c169",
-        "9ceb048d-b6f6-473f-a739-0d98dab98791",
-        "225a785d-02a1-49b3-a4b8-31912feb725d",
-        "61d16c05-f1d0-44f1-9fd5-5eae3a78b9cf",
-        "1af38023-4cb6-4c04-ae9a-ad6d0113b161",
-        "c73f65c0-454e-4e87-98b6-6f55d04e2588",
-        "8d325af5-98a2-4205-8d2e-dc0d8a76c3f1",
-        "4e2c0881-edea-4f88-afde-f825e6891765"
+        "dbb5d3ca-e732-48dc-b154-b3245d79161e",
+        "d71feb6f-837f-4edf-b062-5f2bfa6e4294",
+        "cc148de9-3f0a-4cf3-9f87-39ea527be901",
+        "4447fa90-79a1-40ac-8371-849240569894",
+        "5abb756b-c41b-4cc4-b97d-53288b8d378b",
+        "41b0edd4-49df-4a13-b5bc-e14f5bac4a1c",
+        "29aef6fd-a843-4b30-8b89-5019b1acf192",
+        "7c01ec63-e8d3-4fe7-a490-d99087b6044a",
+        "1378be62-63b7-43b8-b472-e47320541c41"
       ],
       "settings": {
         "section_redirection_link": "",
