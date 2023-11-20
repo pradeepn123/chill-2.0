@@ -1311,6 +1311,14 @@
             "image_redirection_link": "https:\/\/www.instagram.com\/p\/CxDqNxPsbkp\/",
             "carousel_image_background": ""
           }
+        },
+        "2d376ede-122a-4f43-823c-61a8269555c9": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/Mood1.jpg",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/CvcWbipstiH\/?img_index=1",
+            "carousel_image_background": ""
+          }
         }
       },
       "block_order": [
@@ -1320,7 +1328,8 @@
         "4dd0c421-aaad-4c25-8afa-3329d6574eea",
         "8ec051c7-972e-43a4-9fd8-6f6c3ee458d7",
         "8c00e528-0112-47ce-b615-df2a152bae8b",
-        "c910f57d-b060-443d-92fc-de518f7672ca"
+        "c910f57d-b060-443d-92fc-de518f7672ca",
+        "2d376ede-122a-4f43-823c-61a8269555c9"
       ],
       "settings": {
         "section_redirection_link": "",
