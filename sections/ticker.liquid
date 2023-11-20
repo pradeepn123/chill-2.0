@@ -83,7 +83,7 @@
 {% endstyle %}
 
 {{ html_tag_open }} id="ticker-{{ section.id }}" class="top-spacing-{{ section.settings.top_spacing }}{% if section.settings.background != 'hide' %} section-background section-background--{{ section.settings.background_spacing }}{% endif %}"
-     data-section-name="ticker"> 
+     data-section-name="ticker">  
      {% if section.settings.section_heading != blank %} 
         <div class="container">
             <h1 class="section_heading">{{ section.settings.section_heading }}</h1>
@@ -92,6 +92,9 @@
     {%- capture content -%}
     {% for block in section.blocks %}
             <div class="ticker__icon">
+                {% if block.settings.image_redirection_link != blank %}
+                    <a href="{{ block.settings.image_redirection_link }}" {% if block.settings.open_link_in_new_tab %} target="_blank" {% endif %}>
+                {% endif %}
                 {%- assign image = block.settings.image_block -%}
                 {%- assign imagesize = block.settings.image_block.width | append: 'x' -%}
                 {%- capture srcset -%}{{ block.settings.image_block | img_url: imagesize }} 1x, {{ block.settings.image_block | img_url: imagesize, scale: 2 }} 2x{%- endcapture -%}
@@ -104,6 +107,9 @@
                     height: image.height,
                     srcset: srcset
                 }}
+                {% if block.settings.image_redirection_link != blank %}
+                    </a>
+                {% endif %}
             </div>
     {% endfor %}
     {%- endcapture -%}
@@ -119,13 +125,9 @@
             <div class="ticker {{ section.settings.text_size }}" style="--ticker-delay:{{ section.settings.ticker_time }}s">
                 {%- for i in (1..9) -%}
                     <div class="ticker__container ticker--animation {{ section.settings.direction }}">
-                        {% if block.settings.image_redirection_link != blank %}
-                            <a href="{{ block.settings.image_redirection_link }}">
-                        {% endif %}
+                       
                             {{ content }}
-                        {% if block.settings.image_redirection_link != blank %}
-                        </a>
-                        {% endif %}
+                        
                     </div>
                 {%- endfor -%}
             </div>
@@ -319,6 +321,12 @@
                         "type": "color",
                         "id": "carousel_image_background",
                         "label": "Carousel image - Background color"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "open_link_in_new_tab",
+                        "label": "Open link in new tab",
+                        "default": true
                     }
                 ]
             }

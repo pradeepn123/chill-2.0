@@ -1130,12 +1130,22 @@
     "39a1deee-b6fa-47a6-8876-709cb53089b1": {
       "type": "ticker",
       "blocks": {
+        "75b7918d-7131-494d-b7ab-b379aed88187": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/IMG_3168_1_2fba7be1-33aa-44a5-baa8-a6f9af38886b.jpg",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/Ct_3gaRsJE7\/",
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
+          }
+        },
         "ab1567df-b485-4f9e-9f63-1b2438b76fb2": {
           "type": "select",
           "settings": {
             "image_block": "shopify:\/\/shop_images\/Relax_Quote.jpg",
             "image_redirection_link": "https:\/\/www.instagram.com\/p\/Cq3Ff_drptU\/",
-            "carousel_image_background": ""
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
         "775189ee-5e41-4c00-8f4f-3a2cb59e29c7": {
@@ -1143,7 +1153,8 @@
           "settings": {
             "image_block": "shopify:\/\/shop_images\/CHILLXSHOWY1023_1006_of_1_darker1-Edit_1.jpg",
             "image_redirection_link": "https:\/\/www.instagram.com\/p\/CzGhlhluXh3\/",
-            "carousel_image_background": ""
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
         "c278b989-d92c-4dba-968f-6266e8d977de": {
@@ -1151,7 +1162,8 @@
           "settings": {
             "image_block": "shopify:\/\/shop_images\/1-Stop_Burning_-_Social.jpg",
             "image_redirection_link": "https:\/\/www.instagram.com\/p\/CxqWwKhuqcp\/?img_index=1",
-            "carousel_image_background": ""
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
         "4dd0c421-aaad-4c25-8afa-3329d6574eea": {
@@ -1159,7 +1171,8 @@
           "settings": {
             "image_block": "shopify:\/\/shop_images\/4A_s-Carousel-Slide1.png",
             "image_redirection_link": "https:\/\/www.instagram.com\/p\/CvfXocKM-wN\/?img_index=1",
-            "carousel_image_background": ""
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
         "8ec051c7-972e-43a4-9fd8-6f6c3ee458d7": {
@@ -1167,7 +1180,8 @@
           "settings": {
             "image_block": "shopify:\/\/shop_images\/Screenshot_2023-11-15_at_14.44.50.png",
             "image_redirection_link": "https:\/\/www.instagram.com\/p\/CwkuYM-uw3m\/",
-            "carousel_image_background": ""
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
         "8c00e528-0112-47ce-b615-df2a152bae8b": {
@@ -1175,7 +1189,8 @@
           "settings": {
             "image_block": "shopify:\/\/shop_images\/Marketplace_-_Mock_Up_-_Meme2.jpg",
             "image_redirection_link": "https:\/\/www.instagram.com\/p\/CpiRotwq0zh\/",
-            "carousel_image_background": ""
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
         "c910f57d-b060-443d-92fc-de518f7672ca": {
@@ -1183,7 +1198,8 @@
           "settings": {
             "image_block": "shopify:\/\/shop_images\/StressEffects-Social-Blog.jpg",
             "image_redirection_link": "https:\/\/www.instagram.com\/p\/CxDqNxPsbkp\/",
-            "carousel_image_background": ""
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
         "2d376ede-122a-4f43-823c-61a8269555c9": {
@@ -1191,7 +1207,8 @@
           "settings": {
             "image_block": "shopify:\/\/shop_images\/Mood1.jpg",
             "image_redirection_link": "https:\/\/www.instagram.com\/p\/CvcWbipstiH\/?img_index=1",
-            "carousel_image_background": ""
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         },
         "2210131f-c5cd-4f08-af8d-0ee6f1aef3b0": {
@@ -1199,11 +1216,13 @@
           "settings": {
             "image_block": "shopify:\/\/shop_images\/Blog_Covers_SOBRIETY.jpg",
             "image_redirection_link": "https:\/\/www.instagram.com\/p\/CvNdJaWux6Y\/",
-            "carousel_image_background": ""
+            "carousel_image_background": "",
+            "open_link_in_new_tab": true
           }
         }
       },
       "block_order": [
+        "75b7918d-7131-494d-b7ab-b379aed88187",
         "ab1567df-b485-4f9e-9f63-1b2438b76fb2",
         "775189ee-5e41-4c00-8f4f-3a2cb59e29c7",
         "c278b989-d92c-4dba-968f-6266e8d977de",
