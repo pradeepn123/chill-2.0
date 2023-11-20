@@ -1279,12 +1279,21 @@
             "image_redirection_link": "https:\/\/www.instagram.com\/p\/CxqWwKhuqcp\/?img_index=1",
             "carousel_image_background": ""
           }
+        },
+        "4dd0c421-aaad-4c25-8afa-3329d6574eea": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/4A_s-Carousel-Slide1.png",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/CvfXocKM-wN\/?img_index=1",
+            "carousel_image_background": ""
+          }
         }
       },
       "block_order": [
         "ab1567df-b485-4f9e-9f63-1b2438b76fb2",
         "775189ee-5e41-4c00-8f4f-3a2cb59e29c7",
-        "c278b989-d92c-4dba-968f-6266e8d977de"
+        "c278b989-d92c-4dba-968f-6266e8d977de",
+        "4dd0c421-aaad-4c25-8afa-3329d6574eea"
       ],
       "settings": {
         "section_redirection_link": "",
