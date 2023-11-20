@@ -1127,22 +1127,6 @@
         "use_alt_bg": false
       }
     },
-    "166453148629faf25b": {
-      "type": "apps",
-      "blocks": {
-        "17bdc8b1-555f-4abb-98d9-dde254415202": {
-          "type": "shopify:\/\/apps\/checkit-formerly-tikshop\/blocks\/tikshop-shoptrade\/9cc01fbc-7a70-4c25-8768-b96d953c7a70",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "17bdc8b1-555f-4abb-98d9-dde254415202"
-      ],
-      "settings": {
-        "full_width": false
-      }
-    },
     "3dee64a8-71bf-4655-926f-2db509dcd6a5": {
       "type": "rich-text",
       "blocks": {
@@ -1150,7 +1134,7 @@
           "type": "heading",
           "settings": {
             "title": "<p>Discover <strong>@choosechill<\/strong><\/p>",
-            "use_h1": false
+            "use_h1": true
           }
         }
       },
@@ -1167,15 +1151,6 @@
     "97f3bea2-ea0e-4c21-ae2e-c33c59a1e0d0": {
       "type": "image-carousel",
       "blocks": {
-        "a1054e7f-489c-4085-ad86-565674eba48d": {
-          "type": "select",
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/IMG_0379_2.jpg",
-            "image_redirection_link": "",
-            "carousel_image_background": "",
-            "open_link_in_new_tab": false
-          }
-        },
         "dbb5d3ca-e732-48dc-b154-b3245d79161e": {
           "type": "select",
           "settings": {
@@ -1259,7 +1234,6 @@
         }
       },
       "block_order": [
-        "a1054e7f-489c-4085-ad86-565674eba48d",
         "dbb5d3ca-e732-48dc-b154-b3245d79161e",
         "d71feb6f-837f-4edf-b062-5f2bfa6e4294",
         "cc148de9-3f0a-4cf3-9f87-39ea527be901",
@@ -1307,7 +1281,6 @@
     "1661495934a2300196",
     "829c3c02-065e-4087-a6c0-f8a0cb3d5f6e",
     "16607619805b81a490",
-    "166453148629faf25b",
     "3dee64a8-71bf-4655-926f-2db509dcd6a5",
     "97f3bea2-ea0e-4c21-ae2e-c33c59a1e0d0",
     "16607637867e64e5b3"
