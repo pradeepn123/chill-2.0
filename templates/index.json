@@ -1271,11 +1271,20 @@
             "image_redirection_link": "https:\/\/www.instagram.com\/p\/CzGhlhluXh3\/",
             "carousel_image_background": ""
           }
+        },
+        "c278b989-d92c-4dba-968f-6266e8d977de": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/1-Stop_Burning_-_Social.jpg",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/CxqWwKhuqcp\/?img_index=1",
+            "carousel_image_background": ""
+          }
         }
       },
       "block_order": [
         "ab1567df-b485-4f9e-9f63-1b2438b76fb2",
-        "775189ee-5e41-4c00-8f4f-3a2cb59e29c7"
+        "775189ee-5e41-4c00-8f4f-3a2cb59e29c7",
+        "c278b989-d92c-4dba-968f-6266e8d977de"
       ],
       "settings": {
         "section_redirection_link": "",
