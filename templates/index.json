@@ -1348,7 +1348,7 @@
         "carousel_image_border_radius": 33,
         "carousel_image_width_mobile": 250,
         "carousel_image_height_mobile": 250,
-        "ticker_time": 20,
+        "ticker_time": 40,
         "direction": "ticker-to-left",
         "background_spacing": "small",
         "remove_bottom_spacing": false
