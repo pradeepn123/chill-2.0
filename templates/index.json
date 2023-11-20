@@ -1303,6 +1303,14 @@
             "image_redirection_link": "https:\/\/www.instagram.com\/p\/CpiRotwq0zh\/",
             "carousel_image_background": ""
           }
+        },
+        "c910f57d-b060-443d-92fc-de518f7672ca": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/StressEffects-Social-Blog.jpg",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/CxDqNxPsbkp\/",
+            "carousel_image_background": ""
+          }
         }
       },
       "block_order": [
@@ -1311,7 +1319,8 @@
         "c278b989-d92c-4dba-968f-6266e8d977de",
         "4dd0c421-aaad-4c25-8afa-3329d6574eea",
         "8ec051c7-972e-43a4-9fd8-6f6c3ee458d7",
-        "8c00e528-0112-47ce-b615-df2a152bae8b"
+        "8c00e528-0112-47ce-b615-df2a152bae8b",
+        "c910f57d-b060-443d-92fc-de518f7672ca"
       ],
       "settings": {
         "section_redirection_link": "",
