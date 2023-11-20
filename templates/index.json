@@ -1263,10 +1263,19 @@
             "image_redirection_link": "https:\/\/www.instagram.com\/p\/Cq3Ff_drptU\/",
             "carousel_image_background": ""
           }
+        },
+        "775189ee-5e41-4c00-8f4f-3a2cb59e29c7": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/CHILLXSHOWY1023_1006_of_1_darker1-Edit_1.jpg",
+            "image_redirection_link": "https:\/\/www.instagram.com\/p\/CzGhlhluXh3\/",
+            "carousel_image_background": ""
+          }
         }
       },
       "block_order": [
-        "ab1567df-b485-4f9e-9f63-1b2438b76fb2"
+        "ab1567df-b485-4f9e-9f63-1b2438b76fb2",
+        "775189ee-5e41-4c00-8f4f-3a2cb59e29c7"
       ],
       "settings": {
         "section_redirection_link": "",
