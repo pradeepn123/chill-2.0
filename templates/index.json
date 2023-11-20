@@ -1263,6 +1263,34 @@
         "bg_image": "shopify:\/\/shop_images\/Newsletter_clouds.jpg",
         "color_bg": "#ffffff"
       }
+    },
+    "39a1deee-b6fa-47a6-8876-709cb53089b1": {
+      "type": "ticker",
+      "blocks": {
+        "3953d90b-6c42-4ccd-b02b-a626980b34de": {
+          "type": "select",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/ChillXShowy0823_411_of_1_-Edit.jpg",
+            "image_redirection_link": "",
+            "carousel_image_background": ""
+          }
+        }
+      },
+      "block_order": [
+        "3953d90b-6c42-4ccd-b02b-a626980b34de"
+      ],
+      "settings": {
+        "section_redirection_link": "",
+        "carousel_image_width": 400,
+        "carousel_image_height": 400,
+        "carousel_image_border_radius": 33,
+        "carousel_image_width_mobile": 250,
+        "carousel_image_height_mobile": 250,
+        "ticker_time": 20,
+        "direction": "ticker-to-left",
+        "background_spacing": "small",
+        "remove_bottom_spacing": false
+      }
     }
   },
   "order": [
@@ -1283,6 +1311,7 @@
     "16607619805b81a490",
     "3dee64a8-71bf-4655-926f-2db509dcd6a5",
     "97f3bea2-ea0e-4c21-ae2e-c33c59a1e0d0",
-    "16607637867e64e5b3"
+    "16607637867e64e5b3",
+    "39a1deee-b6fa-47a6-8876-709cb53089b1"
   ]
 }
