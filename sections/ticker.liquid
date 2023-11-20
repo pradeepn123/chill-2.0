@@ -83,7 +83,12 @@
 {% endstyle %}
 
 {{ html_tag_open }} id="ticker-{{ section.id }}" class="top-spacing-{{ section.settings.top_spacing }}{% if section.settings.background != 'hide' %} section-background section-background--{{ section.settings.background_spacing }}{% endif %}"
-     data-section-name="ticker">  
+     data-section-name="ticker"> 
+     {% if section.settings.section_heading != blank %} 
+        <div class="container">
+            <h1 class="section_heading">{{ section.settings.section_heading }}</h1>
+        </div>
+    {% endif %}
     {%- capture content -%}
     {% for block in section.blocks %}
             <div class="ticker__icon">
@@ -170,6 +175,16 @@
             "groups": ["header"]
         },
         "settings": [
+            {
+                "type": "header",
+                "content": "Heading"
+            },
+            {
+                "type": "richtext",
+                "id": "section_heading",
+                "label": "Section heading",
+                "default": "<p>Section heading</p>"
+            },
             {
                 "type": "header",
                 "content": "LAYOUT"
