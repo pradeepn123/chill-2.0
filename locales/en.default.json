@@ -475,6 +475,14 @@
         "shipping_method_not_available_generic": {
           "one": "Your order contains a Nubu product which will not be shipped to your location."
         }
+      },
+      "stock": {
+        "unshippable_product": {
+          "message": {
+            "one": "This item will be removed from your cart because Nubu products are not deliverable to your address.",
+            "other": "These items will be removed from your cart because Nubu products are not deliverable to your address."
+          }
+        }
       }
     }
   }
