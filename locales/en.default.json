@@ -468,5 +468,14 @@
       "pick_up_currently_unavailable": "Pickup currently unavailable",
       "invalid_location_address": "Contact store to confirm address"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "shipping_errors": {
+        "shipping_method_not_available_generic": {
+          "one": "Your order contains a Nubu product which will not be shipped to your location."
+        }
+      }
+    }
   }
 }
