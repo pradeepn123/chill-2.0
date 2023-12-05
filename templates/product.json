@@ -31,16 +31,6 @@
           "settings": {
           }
         },
-        "7548c2c3-9bda-422d-8fde-20a36fda5c65": {
-          "type": "product_message_tag",
-          "settings": {
-            "prod_message_collection": "awkn",
-            "prod_message_icon": "shopify:\/\/shop_images\/Frame_1.svg",
-            "prod_message_desc": "<p>Not available in California, New Hampshire, New Mexico, North Carolina, North Dakota, Oklahoma, Utah, West Virginia, Wisconsin<\/p>",
-            "prod_message_bgcolor": "#fffbfa",
-            "prod_message_shadow": "#ffac9a"
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
@@ -175,6 +165,16 @@
             "box_color": "#e0f4d5",
             "show_in_quickbuy": false
           }
+        },
+        "5d0296d7-8f69-4317-9158-2e0a296a5d28": {
+          "type": "product_message_tag",
+          "settings": {
+            "prod_message_collection": "awkn",
+            "prod_message_icon": "shopify:\/\/shop_images\/Frame_1.svg",
+            "prod_message_desc": "<p><strong>Not available in California, New Hampshire, New Mexico, North Carolina, North Dakota, Oklahoma, Utah, West Virginia, Wisconsin<\/strong><\/p>",
+            "prod_message_bgcolor": "#fffbfa",
+            "prod_message_shadow": "#ffac9a"
+          }
         }
       },
       "block_order": [
@@ -183,7 +183,6 @@
         "price",
         "vendor",
         "d6658578-a2ff-4639-baeb-9356a9109408",
-        "7548c2c3-9bda-422d-8fde-20a36fda5c65",
         "description",
         "divider",
         "e2a81677-05f8-4453-98cb-6fe81460e705",
@@ -196,7 +195,8 @@
         "1fb67a9d-a0c3-48e7-b413-30ffa96c7b41",
         "a7013d3f-0653-4f9c-8d1b-aabe369293b7",
         "b25a3dd3-8a24-4334-9108-800532ba36f0",
-        "c06c3291-f178-4504-8a2d-023f97b00808"
+        "c06c3291-f178-4504-8a2d-023f97b00808",
+        "5d0296d7-8f69-4317-9158-2e0a296a5d28"
       ],
       "settings": {
         "show_breadcrumbs": false,
