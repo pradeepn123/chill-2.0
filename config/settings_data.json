@@ -1048,7 +1048,7 @@
     "free_shipping_limit": "50",
     "product_currency_code_enabled": false,
     "enable_domain_redirect": true,
-    "enable_free_variety_pouch_offer": false,
+    "enable_free_variety_pouch_offer": true,
     "how_it_works_image": "shopify:\/\/shop_images\/Banner_chill.png",
     "how_it_works_title": "How It Works",
     "how_it_works_description": "<ul><li>Login or Sign up to join the <a href=\"http:\/\/chill.com\/\" target=\"_blank\"><em><strong>Chill.com<\/strong><\/em><\/a> community<\/li><li>Get a free variety pack (worth $19.99) when you try our CBD pouches for the first time<\/li><li>You only pay for shipping - the pouches are on us!<\/li><\/ul>",
