@@ -31,6 +31,16 @@
           "settings": {
           }
         },
+        "7548c2c3-9bda-422d-8fde-20a36fda5c65": {
+          "type": "product_message_tag",
+          "settings": {
+            "prod_message_collection": "awkn",
+            "prod_message_icon": "shopify:\/\/shop_images\/Frame_1.svg",
+            "prod_message_desc": "<p>Not available in California, New Hampshire, New Mexico, North Carolina, North Dakota, Oklahoma, Utah, West Virginia, Wisconsin<\/p>",
+            "prod_message_bgcolor": "#fffbfa",
+            "prod_message_shadow": "#ffac9a"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -173,6 +183,7 @@
         "price",
         "vendor",
         "d6658578-a2ff-4639-baeb-9356a9109408",
+        "7548c2c3-9bda-422d-8fde-20a36fda5c65",
         "description",
         "divider",
         "e2a81677-05f8-4453-98cb-6fe81460e705",

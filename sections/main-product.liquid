@@ -34,6 +34,18 @@
   endif
 -%}
 
+{% style %}
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'product_message_tag' %}
+      .product_message_wrap{
+        background:{{block.settings.prod_message_bgcolor}} !important;
+        box-shadow: 5px 5px 0px 0px {{ block.settings.prod_message_shadow }} !important;
+      }
+  {% endcase %}
+{% endfor %}
+{% endstyle %}
+
   <div data-section-type="main-product" data-components="accordion,custom-select,modal">
   {% if section.settings.show_breadcrumbs %}
     <div
@@ -176,6 +188,14 @@
                   {%- endif -%}" 
                   class="vendor_redirection">By <span>{{ product.vendor | camelcase }}</span>
                 </a>
+
+                {% when 'product_message_tag' %}
+                {% if product.collections contains  block.settings.prod_message_collection %}
+                  <div class="product_message_wrap">
+                    <img class="aft_image" src="{{block.settings.prod_message_icon | image_url}}" alt="icon" />
+                    <span>{{block.settings.prod_message_desc}}</span>
+                  </div>
+                {% endif %}
 
             {% when 'description' %}
             <div class="{% unless block.settings.show_in_quickbuy %}not-in-quickbuy{% endunless %}{% if block.settings.show_in_tab %} product-detail-accordion{% endif %}" {{ block.shopify_attributes }}>
@@ -1218,6 +1238,38 @@
         "type": "vendor_redirection_text",
         "name": "Vendor redirection",
         "limit": 1
+      },
+      {
+        "type": "product_message_tag",
+        "name": "product message tag",
+        "limit": 1,
+        "settings": [
+                      {
+                        "type": "collection",
+                        "id": "prod_message_collection",
+                        "label": "Choose collection"
+                      }, 
+                      {
+                        "type": "image_picker",
+                        "id": "prod_message_icon",
+                        "label": "Upload icon"
+                      },
+                      {
+                        "type": "richtext",
+                        "id": "prod_message_desc",
+                        "label": "Enter text"
+                      },
+                      {
+                        "type": "color",
+                        "id": "prod_message_bgcolor",
+                        "label": "Choose background color"
+                      },
+                      {
+                        "type": "color",
+                        "id": "prod_message_shadow",
+                        "label": "Choose box shadow color"
+                      }
+                    ]
       },
       {
         "type": "price",
