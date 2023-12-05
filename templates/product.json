@@ -33,9 +33,8 @@
         },
         "5d0296d7-8f69-4317-9158-2e0a296a5d28": {
           "type": "product_message_tag",
-          "disabled": true,
           "settings": {
-            "prod_message_collection": "awkn",
+            "prod_message_collection": "nubu",
             "prod_message_icon": "shopify:\/\/shop_images\/Frame_1.svg",
             "prod_message_desc": "<p><strong>Not available in California, New Hampshire, New Mexico, North Carolina, North Dakota, Oklahoma, Utah, West Virginia, Wisconsin<\/strong><\/p>",
             "prod_message_bgcolor": "#fffbfa",
