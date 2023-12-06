@@ -3,6 +3,33 @@
     "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d": {
       "type": "slideshow",
       "blocks": {
+        "07606988-1565-4348-a14c-d1d1a42ab137": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NUBU-HP_DESKTOP_1_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/MOBILE_NUBU_Homepage_Banner_MEDIUM_1.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong>NUBU: <\/strong> Nature\nElevated",
+            "title_size": 64,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>New Zealand all-natural Manuka honey <br\/>infused with CBD<\/p>",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "enlarge_text": true,
+            "button_label_1": "choose nubu",
+            "button_url_1": "https:\/\/chill.com\/collections\/nubu",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#F3B09F",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
         "2866e88b-20e1-4338-91ae-cca51f74dfb1": {
           "type": "image",
           "settings": {
@@ -277,25 +304,25 @@
             "text_alignment": "center left"
           }
         },
-        "07606988-1565-4348-a14c-d1d1a42ab137": {
+        "6baee14a-6ee3-4741-abde-564bbb7d27f7": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/NUBU-HP_DESKTOP_1_1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/MOBILE_NUBU_Homepage_Banner_MEDIUM_1.jpg",
+            "image": "shopify:\/\/shop_images\/MoreLabs-HP_DESKTOP.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/MoreLabs-HP_MOBILE.jpg",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
             "subheading": "",
-            "title": "<strong>NUBU: <\/strong> Nature\nElevated",
+            "title": "<strong>More Labs: <\/strong>\nLive smarter,\ndo more",
             "title_size": 64,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>New Zealand all-natural Manuka honey <br\/>infused with CBD<\/p>",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
+            "text": "<p>Science-backed solutions to real problems. Each product designed<br\/>to optimize your system, so you can maximize every moment<br\/>and get more out of life.<\/p>",
+            "heading_color": "#000",
+            "text_color": "#000",
             "enlarge_text": true,
-            "button_label_1": "choose nubu",
-            "button_url_1": "https:\/\/chill.com\/collections\/nubu",
+            "button_label_1": "TRY MORE LABS",
+            "button_url_1": "",
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#F3B09F",
@@ -306,6 +333,7 @@
         }
       },
       "block_order": [
+        "07606988-1565-4348-a14c-d1d1a42ab137",
         "2866e88b-20e1-4338-91ae-cca51f74dfb1",
         "5f12a340-48c6-4106-8308-7047651dd64c",
         "df90ff83-c6f1-44c2-94ff-1a3af29d3675",
@@ -316,7 +344,7 @@
         "f212ae5d-7cef-47d3-bf0c-78fa15669a7f",
         "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8",
         "66002548-b60b-4786-8e10-a024be1f10e1",
-        "07606988-1565-4348-a14c-d1d1a42ab137"
+        "6baee14a-6ee3-4741-abde-564bbb7d27f7"
       ],
       "settings": {
         "height": "fixed",
