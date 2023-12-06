@@ -3,6 +3,61 @@
     "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d": {
       "type": "slideshow",
       "blocks": {
+        "2866e88b-20e1-4338-91ae-cca51f74dfb1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BearBalanced-HP_DESKTOP_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/BearBalanced-HP_MOBILE_1.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "left center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Choose\n<strong> Bear Balanced \n<\/strong>",
+            "title_size": 64,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>The world's first creatine gummy to fuel your fitness, <br\/>health, and wellness routines.<\/p>",
+            "heading_color": "#000000",
+            "text_color": "#000000",
+            "enlarge_text": true,
+            "button_label_1": "Shop Bear Balanced",
+            "button_url_1": "https:\/\/chill.com\/collections\/bear-balanced",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#9792e4",
+            "button_text_color": "#ffffff",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
+        "5f12a340-48c6-4106-8308-7047651dd64c": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CHILLZER0_Banner_MEDIUM_c60e51fd-8386-4743-b4e6-6a6d6c7f97e2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/CHILLZER0_Banner_MEDIUM_c60e51fd-8386-4743-b4e6-6a6d6c7f97e2_copy.webp",
+            "image_position": "center left",
+            "mobile_image_position": "left center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong> CHILL<\/strong>ZER0\n<strong>0% Nicotine \n100% Flavor<\/strong>",
+            "title_size": 64,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Join us on our mission: Ditch the nicotine <br\/>and say hello to the new generation<\/p>",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "enlarge_text": true,
+            "button_label_1": "TRY CHILLZER0",
+            "button_url_1": "https:\/\/chill.com\/pages\/chillzero",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#6ec59f",
+            "button_text_color": "#ffffff",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
         "df90ff83-c6f1-44c2-94ff-1a3af29d3675": {
           "type": "image",
           "settings": {
@@ -57,33 +112,6 @@
             "text_alignment": "center left"
           }
         },
-        "5f12a340-48c6-4106-8308-7047651dd64c": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/CHILLZER0_Banner_MEDIUM_c60e51fd-8386-4743-b4e6-6a6d6c7f97e2.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/CHILLZER0_Banner_MEDIUM_c60e51fd-8386-4743-b4e6-6a6d6c7f97e2_copy.webp",
-            "image_position": "center left",
-            "mobile_image_position": "left center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "<strong> CHILL<\/strong>ZER0\n<strong>0% Nicotine \n100% Flavor<\/strong>",
-            "title_size": 64,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>Join us on our mission: Ditch the nicotine <br\/>and say hello to the new generation<\/p>",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
-            "enlarge_text": true,
-            "button_label_1": "TRY CHILLZER0",
-            "button_url_1": "https:\/\/chill.com\/pages\/chillzero",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_background_color": "#6ec59f",
-            "button_text_color": "#ffffff",
-            "button_text_font_size": 20,
-            "text_alignment": "center left"
-          }
-        },
         "b2363591-8ba1-402f-ad6f-c71e7bae93b0": {
           "type": "image",
           "settings": {
@@ -105,33 +133,6 @@
             "button_url_1": "",
             "button_label_2": "Shop UMBO",
             "button_url_2": "https:\/\/chill.com\/collections\/umbo",
-            "button_background_color": "#9792e4",
-            "button_text_color": "#ffffff",
-            "button_text_font_size": 20,
-            "text_alignment": "center left"
-          }
-        },
-        "2866e88b-20e1-4338-91ae-cca51f74dfb1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BearBalanced-HP_DESKTOP_1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/BearBalanced-HP_MOBILE_1.jpg",
-            "image_position": "center center",
-            "mobile_image_position": "left center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "Choose\n<strong> Bear Balanced \n<\/strong>",
-            "title_size": 64,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>The world's first creatine gummy to fuel your fitness, <br\/>health, and wellness routines.<\/p>",
-            "heading_color": "#000000",
-            "text_color": "#000000",
-            "enlarge_text": true,
-            "button_label_1": "Shop Bear Balanced",
-            "button_url_1": "https:\/\/chill.com\/collections\/bear-balanced",
-            "button_label_2": "",
-            "button_url_2": "",
             "button_background_color": "#9792e4",
             "button_text_color": "#ffffff",
             "button_text_font_size": 20,
@@ -277,11 +278,11 @@
         }
       },
       "block_order": [
+        "2866e88b-20e1-4338-91ae-cca51f74dfb1",
+        "5f12a340-48c6-4106-8308-7047651dd64c",
         "df90ff83-c6f1-44c2-94ff-1a3af29d3675",
         "858a396d-c02a-4210-9bb1-6ee4475e7e64",
-        "5f12a340-48c6-4106-8308-7047651dd64c",
         "b2363591-8ba1-402f-ad6f-c71e7bae93b0",
-        "2866e88b-20e1-4338-91ae-cca51f74dfb1",
         "190b68b3-e888-4fbb-82b4-bdb9c97c144f",
         "159042e8-d790-4168-b7cf-81a9a54547e5",
         "f212ae5d-7cef-47d3-bf0c-78fa15669a7f",
