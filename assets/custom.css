@@ -4448,9 +4448,11 @@ body {
 }
 .section-main-product .product-detail .detail .product-form .product_message_wrap span {
   color: #000;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
   line-height: normal;
+}
+.section-main-product .product-detail .detail .product-form .product_message_wrap strong {
+  font-weight: 600;
 }
 @media (max-width: 768px) {
   .section-main-product .product-detail .detail .product-form .product_message_wrap {
@@ -4462,7 +4464,7 @@ body {
     width: 33px;
   }
   .section-main-product .product-detail .detail .product-form .product_message_wrap span {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 .section-main-product .product-detail .detail .product-form .product_variant {
