@@ -141,6 +141,7 @@
         },
         "190b68b3-e888-4fbb-82b4-bdb9c97c144f": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Variety_Pack_Homepage_Banner_ba37eb3e-57f3-4958-9c5c-e769b1a9cde5.jpg",
             "mobile_image": "shopify:\/\/shop_images\/Variety_Pack_Banner_Homepage_Mobile.jpg",
@@ -195,6 +196,7 @@
         },
         "f212ae5d-7cef-47d3-bf0c-78fa15669a7f": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Variety_Pack_Homepage_Banner_MEDIUM_5bffe85e-079c-46a6-9e44-0654ba2fdcf9.jpg",
             "mobile_image": "shopify:\/\/shop_images\/Mad_Tasty_-_Homepage_Banner_Mobile.jpg",
@@ -222,7 +224,6 @@
         },
         "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/PeakState-HP_DESKTOP.jpg",
             "mobile_image": "shopify:\/\/shop_images\/PeakState-HP_MOBILE.jpg",
@@ -234,9 +235,9 @@
             "title_size": 64,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>Coffee with Benefits - highest quality coffee with powerful benefits for your brain, immunity, and stress, all by harnessing the power of adaptogenic mushrooms.<\/p>",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
+            "text": "<p>Adaptogenic Coffee - high quality coffee with powerful <br\/>benefits for your brain, immunity, and stress. all by <br\/>harnessing the power of adaptogenic mushrooms.<\/p>",
+            "heading_color": "#000000",
+            "text_color": "#000000",
             "enlarge_text": true,
             "button_label_1": "try peak state",
             "button_url_1": "https:\/\/chill.com\/collections\/peak-state-coffee",
@@ -275,6 +276,33 @@
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
+        },
+        "07606988-1565-4348-a14c-d1d1a42ab137": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NUBU-HP_DESKTOP_1_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/MOBILE_NUBU_Homepage_Banner_MEDIUM_1.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong>NUBU: <\/strong> Nature\nElevated",
+            "title_size": 64,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>New Zealand all-natural Manuka honey <br\/>infused with CBD<\/p>",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "enlarge_text": true,
+            "button_label_1": "choose nubu",
+            "button_url_1": "https:\/\/chill.com\/collections\/nubu",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#F3B09F",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
         }
       },
       "block_order": [
@@ -287,7 +315,8 @@
         "159042e8-d790-4168-b7cf-81a9a54547e5",
         "f212ae5d-7cef-47d3-bf0c-78fa15669a7f",
         "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8",
-        "66002548-b60b-4786-8e10-a024be1f10e1"
+        "66002548-b60b-4786-8e10-a024be1f10e1",
+        "07606988-1565-4348-a14c-d1d1a42ab137"
       ],
       "settings": {
         "height": "fixed",
