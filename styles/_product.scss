@@ -210,9 +210,11 @@
                     }
                     span{
                         color: #000;
-                        font-size: 18px;
-                        font-weight: 700;
+                        font-size: 16px;
                         line-height: normal;
+                    }
+                    strong{
+                        font-weight: 600;;
                     }
                     @media (max-width: 768px){
                         gap: 13px;
@@ -222,7 +224,7 @@
                             width: 33px;
                         }
                         span{
-                            font-size: 16px;
+                            font-size: 14px;
                         }
                     }
                 }
