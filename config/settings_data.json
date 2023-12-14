@@ -1191,7 +1191,7 @@
           "mega_collection_heading": "By Collection",
           "shop_text": "Shop All",
           "shop_link": "shopify:\/\/collections\/shop",
-          "menu_linklist": "mega-menu",
+          "menu_linklist": "mega-menu-updated",
           "menu_linklist_mobile": "",
           "menu_layout": "inline-menu-left",
           "nav_featured_link": "Sale",
@@ -1201,7 +1201,7 @@
           "nav_mob_products_collection": "",
           "enable_search": true,
           "search_suggestions_title": "<p>Popular <strong>Products<\/strong><\/p>",
-          "search_suggestions_menu": "popular-products",
+          "search_suggestions_menu": "shop",
           "icon_strategy": "icons_all",
           "cart_icon": "custom"
         }
@@ -1332,9 +1332,15 @@
           },
           "f14d03ef-1d13-4b8c-b28b-14cdc0969a40": {
             "type": "announcement",
+            "settings": {
+              "text": "<p>Free shipping for whole of December<\/p>"
+            }
+          },
+          "02f3e94e-705e-4092-8c2c-77960440b0ff": {
+            "type": "announcement",
             "disabled": true,
             "settings": {
-              "text": "<p>$10 off orders over $50 until Hallows eve!<\/p>"
+              "text": "<p>Join CLUB CHILL for exclusive rewards - First 100 members receive $15 voucher<\/p>"
             }
           }
         },
@@ -1342,7 +1348,8 @@
           "2e9b0b00-d8fb-4143-be2d-eefe5fb293f5",
           "ba09120b-5b07-4fe0-95ef-bf983d98ac02",
           "e6f384bd-f593-4a17-86da-d6d127ed03fe",
-          "f14d03ef-1d13-4b8c-b28b-14cdc0969a40"
+          "f14d03ef-1d13-4b8c-b28b-14cdc0969a40",
+          "02f3e94e-705e-4092-8c2c-77960440b0ff"
         ],
         "settings": {
           "announcement_bar_col": "#000000",
