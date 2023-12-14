@@ -186,7 +186,7 @@
                   {%- else -%}
                     {{ product.vendor | replace: ' ', '-' | downcase }}
                   {%- endif -%}" 
-                  class="vendor_redirection">By <span>{{ product.vendor | camelcase }}</span>
+                  class="vendor_redirection">By <span>{{ product.vendor }}</span>
                 </a>
 
                 {% when 'product_message_tag' %}
