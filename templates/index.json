@@ -363,7 +363,7 @@
     "d02b80e5-b8ee-41d5-9512-71af9b2c25c7": {
       "type": "marquee",
       "settings": {
-        "marquee_text": "FREE SHIPPING FOR WHOLE OF DECEMBER",
+        "marquee_text": "FREE SHIPPING ON ORDERS OVER $75",
         "marquee_background_color": "#6ec59f",
         "marquee_text_color": "#ffffff",
         "marquee_text_font_size": 24,

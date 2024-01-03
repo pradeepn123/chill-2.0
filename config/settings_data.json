@@ -1333,6 +1333,7 @@
           },
           "f14d03ef-1d13-4b8c-b28b-14cdc0969a40": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "<p>Free shipping for whole of December<\/p>"
             }
