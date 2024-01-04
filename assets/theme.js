@@ -7462,6 +7462,17 @@
 
     /// Mobile nav
     $(document).on('click', '.mobile-nav-toggle', function (e) {
+      
+      $('.navigation__item .country_selector').click((ev) => {
+        const url = ev.target.closest('[data-dropdown-link]');
+        if(url) {
+          const href = url.href;
+          window.location.href= href;
+          return;
+       }
+        $('.navigation__item .country_selector').toggleClass('active');
+        $('.navigation__item .country_selector #dropdown_linebreak').toggleClass('show');
+      })
       e.preventDefault();
       if ($('body').hasClass('enable-mobile-nav-transition')) {
         // hide nav

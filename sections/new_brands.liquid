@@ -338,20 +338,30 @@
 </div>
 
 <script>
-  document.querySelector('.brand_video_btn').addEventListener('click', function() {
-    document.getElementById('play_popup').style.display = 'block';
-    document.body.style.overflow = 'hidden';
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.brand_video_btn')?.addEventListener('click', function() {
+      const playPopup = document.getElementById('play_popup');
+      if(playPopup) {
+        playPopup.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      }
+    })
+    var vid = document.getElementById('video_player')
+    document.querySelector('.video_play_button')?.addEventListener('click', function() {
+      if(vid) {
+      vid.play();
+      document.querySelector('.video_play_button').style.display = 'none';
+      }
+    })
+    function closePopup() {
+      const playPopup = document.getElementById('play_popup');
+      if(playPopup) {
+        playPopup.style.display = 'none';
+        vid.pause();
+        document.body.style.overflow = 'unset';
+      }
+    }
   })
-  var vid = document.getElementById('video_player')
-  document.querySelector('.video_play_button').addEventListener('click', function() {
-    vid.play();
-    document.querySelector('.video_play_button').style.display = 'none';
-  })
-  function closePopup() {
-    document.getElementById('play_popup').style.display = 'none';
-    vid.pause();
-    document.body.style.overflow = 'unset';
-  }
 </script>
 {% schema %}
   {

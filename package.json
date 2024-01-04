@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "watch-scss": "gulp watch"
+        "watch-scss": "gulp watch",
+        "dev": "shopify theme dev --poll --theme-editor-sync -s 'the-chill-way.myshopify.com'"
     },
     "repository": {
         "type": "git",

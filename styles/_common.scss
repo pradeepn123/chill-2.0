@@ -532,11 +532,14 @@ body.enable-mobile-nav-transition{
                         }
                         .feather-chevron-down{
                             position: absolute;
-                            right: 7%;
+                            right: 4%;
                             cursor: pointer;
                             transform: rotate(-90deg);
                             @media(min-width:768px) and (max-width:1199px){
-                                right: 4%;
+                                right: 2.5%;
+                            }
+                            @media (max-width: 375px) {
+                                right: 7%; 
                             }
                         }
                     }

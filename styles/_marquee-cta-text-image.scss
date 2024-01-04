@@ -8,10 +8,6 @@
   }
 
 .marquee-with-cta-text-image{
-    margin: 90px 0;
-    @media (max-width: 767px){
-        margin: 70px 0;
-    }
     .marquee__content_{
         .marquee-tag{
             .marquee_wrap{
@@ -26,6 +22,7 @@
                         justify-content: space-between;
                         p, button, img{
                             margin: auto 25px;
+                            font-weight: 700;
                         }
                         &_text p{
                             width: auto;
@@ -99,7 +96,7 @@
             .marquee_wrap{
                 .marquee_container{
                     .marquee_content_image {
-                        width: 177px;
+                        width: auto;
                         height: 28.5px;
                       }
                 }

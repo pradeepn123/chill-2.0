@@ -184,7 +184,9 @@
   {{ 'vendor.min.js'  | asset_url | script_tag }}
   {{ 'theme.js'  | asset_url | script_tag }}
   {{ 'custom.js'  | asset_url | script_tag }}
-
+  {%- if request.path contains 'products/' -%}
+    {{ 'custom-pdp.js'  | asset_url | script_tag }}
+  {%- endif -%}
 
   <script type="sT_lazyLoad__init" data-src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js" defer></script>
 

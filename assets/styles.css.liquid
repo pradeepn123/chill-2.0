@@ -1888,6 +1888,7 @@ table {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height:42px;
 }
 @media(max-width: 1199px) {
   .announcement-bar .container {
@@ -1911,17 +1912,17 @@ table {
 }
 @media (min-width: 768px) and (max-width: 1199px){
   .announcement-bar .container{
-    padding-left: 60px !important;
+    padding-left: 0px !important;
   }
 }
 @media (max-width: 767px){
   .announcement-bar .container{
-    padding-left: 20px !important;
+    padding-left: 0px !important;
   }
 }
 @media(max-width: 1199px){
   .announcement-bar .container{
-    align-items: start !important;
+    align-items: center !important;
   }
   .announcement-bar__left{
     order: 1 !important;
@@ -2575,16 +2576,12 @@ table {
   .navigation .navigation__item--with-small-menu > .navigation__tier-2-container {
     display: block;
     left: 0;
-    width: 100%;
     border-left: 1px solid{{ head_nav_div_col }};
     border-right: 1px solid{{ head_nav_div_col }};
   }
   [dir=rtl] .navigation .navigation__item--with-small-menu > .navigation__tier-2-container {
     left: auto;
     right: 0;
-  }
-  .navigation .navigation__item--with-small-menu > .navigation__tier-2-container .container {
-    padding: 22px 30px 22px 20px;
   }
   .navigation .navigation__item--with-small-menu > .navigation__tier-2-container .navigation__tier-2 .navigation__item {
     display: block;
@@ -2862,9 +2859,6 @@ table {
 .mobile-navigation-drawer .navigation__tier-2-container .navigation__item--open > .navigation__tier-3-container {
   opacity: 1;
   visibility: visible;
-}
-.mobile-navigation-drawer .navigation__tier-2 {
-  padding-top: 12px;
 }
 .mobile-navigation-drawer .navigation__tier-2 > .navigation__item > .navigation__link {
   font-weight: {{ mobile_nav_weight }};
@@ -12250,4 +12244,13 @@ model-viewer .container {
   background-repeat: no-repeat;
   height: auto;
   cursor: pointer;
+}
+@media(min-width: 1200px) {
+  .navigation .navigation__item--with-small-menu > .navigation__tier-2-container {
+    width: fit-content;
+    left: 200px;
+  }
+  .navigation .navigation__item--with-small-menu > .navigation__tier-2-container .container {
+    padding: 20px 45px 20px 40px
+  }
 }
