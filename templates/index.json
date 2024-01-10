@@ -282,7 +282,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/PeakState-HP_DESKTOP.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/PeakState-HP_MOBILE.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/PeakState-HP_MOBILE-C.jpg",
             "image_position": "center center",
             "mobile_image_position": "left center",
             "slide_link": "",
