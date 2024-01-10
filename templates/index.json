@@ -115,7 +115,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/BearBalanced-HP_DESKTOP_1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/BearBalanced-HP_MOBILE_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/BearBal-HP_MOBILE.jpg",
             "image_position": "center center",
             "mobile_image_position": "left center",
             "slide_link": "",
