@@ -28,21 +28,11 @@
     }
 }
 @media(min-width: 768px){
-    .video-container--background video{
-        object-position: 63% !important;
+    .reward-banner__video-desktop video{
+        object-position: 70% !important;
     }
 }
-.video-container__video video{
-    @media (max-width: 325px){
-        object-position: 84% 94% !important;
-    }
-    @media (min-width: 326px) and (max-width: 376px){
-        object-position: 86% 94% !important;
-    }
-    @media(min-width: 378px) and (max-width: 541px){
-        object-position: 87% 50% !important;
-    }
-}
+
 
 
 .video-image-section{
@@ -91,3 +81,35 @@
 }
 
 
+.reward-banner{
+&__video-desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    &__video-desktop{
+        display: block;
+    }
+
+    &__video-mobile{
+        display: none;
+    }
+}
+
+&__banner-heading{
+    display: none;
+
+    @media(min-width:768px){
+        display: block;
+    }
+}
+
+&__video-mobile video{
+ 
+    object-position:unset !important;
+
+}
+
+}
+
+ 
