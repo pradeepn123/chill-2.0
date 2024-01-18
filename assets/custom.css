@@ -11160,6 +11160,7 @@ body.cart-drawer-open, body.vape-drawer-open {
 .slider .slider_wrapper {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .slider .slider_wrapper .slide {
   object-fit: contain;
@@ -13335,6 +13336,9 @@ div .okeReviews .oke-reviewCarousel {
 @media (min-width: 768px) {
   .reward-banner__video-desktop {
     display: block;
+  }
+  .reward-banner__video-desktop video {
+    object-position: 70% !important;
   }
   .reward-banner__video-mobile {
     display: none;
