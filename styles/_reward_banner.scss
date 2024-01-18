@@ -8,6 +8,10 @@
         display: block;
     }
 
+    &__video-desktop video{
+        object-position: 70% !important;
+    }
+
     &__video-mobile{
         display: none;
     }
