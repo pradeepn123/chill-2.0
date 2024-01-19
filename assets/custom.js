@@ -810,6 +810,8 @@
       });
     }
 
+    var buyButtonContainer = document.querySelector('.buy-buttons-row_container');
+      // buyButtonContainer.classList.remove('buy_buttons_show');
     if (location.pathname != '/pages/chillzero ') {
       document.querySelectorAll('.mobile_popup_buy_button').forEach(popupButton => {
         popupButton.addEventListener('click', () => {
