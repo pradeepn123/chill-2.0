@@ -1353,7 +1353,7 @@
           "02f3e94e-705e-4092-8c2c-77960440b0ff": {
             "type": "announcement",
             "settings": {
-              "text": "<p>Join CLUB CHILL for exclusive rewards - First 100 members receive $15 voucher<\/p>",
+              "text": "<p>Join CLUB CHILL for exclusive rewards<\/p>",
               "bannerBtn": "Join now",
               "bannerBtnlink": "https:\/\/portal.rarecircles.com\/access\/chill-us\/sign-up",
               "enable_animation": true
