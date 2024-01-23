@@ -196,6 +196,7 @@
         },
         "b2363591-8ba1-402f-ad6f-c71e7bae93b0": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Winged-HP_DESKTOP.jpg",
             "mobile_image": "shopify:\/\/shop_images\/Winged-HP_MOBILE.jpg",
