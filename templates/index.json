@@ -30,6 +30,33 @@
             "text_alignment": "center left"
           }
         },
+        "b2363591-8ba1-402f-ad6f-c71e7bae93b0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Winged-HP_DESKTOP.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Winged-HP_MOBILE.jpg",
+            "image_position": "center left",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Welcome \n<strong> Winged Wellness <\/strong>",
+            "title_size": 64,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Helping women feel their best with supplements<br\/>for sleep, energy, mood, and pain relief.<\/p>",
+            "heading_color": "#000000",
+            "text_color": "#000000",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "Try Winged Wellness",
+            "button_url_2": "https:\/\/chill.com\/collections\/winged-wellness",
+            "button_background_color": "#6ec59f",
+            "button_text_color": "#ffffff",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
         "6baee14a-6ee3-4741-abde-564bbb7d27f7": {
           "type": "image",
           "settings": {
@@ -303,37 +330,11 @@
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
-        },
-        "b2363591-8ba1-402f-ad6f-c71e7bae93b0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Winged-HP_DESKTOP.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Winged-HP_MOBILE.jpg",
-            "image_position": "center left",
-            "mobile_image_position": "center center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "Welcome \n<strong> Winged Wellness <\/strong>",
-            "title_size": 64,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>Helping women feel their best with supplements<br\/>for sleep, energy, mood, and pain relief.<\/p>",
-            "heading_color": "#000000",
-            "text_color": "#000000",
-            "enlarge_text": true,
-            "button_label_1": "",
-            "button_url_1": "",
-            "button_label_2": "Try Winged Wellness",
-            "button_url_2": "https:\/\/chill.com\/collections\/winged-wellness",
-            "button_background_color": "#6ec59f",
-            "button_text_color": "#ffffff",
-            "button_text_font_size": 20,
-            "text_alignment": "center left"
-          }
         }
       },
       "block_order": [
         "66002548-b60b-4786-8e10-a024be1f10e1",
+        "b2363591-8ba1-402f-ad6f-c71e7bae93b0",
         "6baee14a-6ee3-4741-abde-564bbb7d27f7",
         "133ad9e7-9e91-40e0-8fe3-fdcc63e6f28d",
         "07606988-1565-4348-a14c-d1d1a42ab137",
@@ -343,8 +344,7 @@
         "df90ff83-c6f1-44c2-94ff-1a3af29d3675",
         "858a396d-c02a-4210-9bb1-6ee4475e7e64",
         "190b68b3-e888-4fbb-82b4-bdb9c97c144f",
-        "159042e8-d790-4168-b7cf-81a9a54547e5",
-        "b2363591-8ba1-402f-ad6f-c71e7bae93b0"
+        "159042e8-d790-4168-b7cf-81a9a54547e5"
       ],
       "settings": {
         "height": "fixed",
