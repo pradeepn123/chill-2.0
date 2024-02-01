@@ -1009,7 +1009,7 @@
     "button_style": "normal",
     "button_shape": "slightlyrounded",
     "show_age_verification_popup": false,
-    "coll_grid_image_shape": "square",
+    "coll_grid_image_shape": "shortest",
     "prod_thumb_shape": "square",
     "prod_thumb_crop": true,
     "prod_thumb_mob_per_row": "1",
