@@ -483,11 +483,22 @@
             "text_color": "#ffffff",
             "text_alignment": "left"
           }
+        },
+        "image_GRPyfb": {
+          "type": "image",
+          "settings": {
+            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
+            "text_for_mobile_tab": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
+            "text_ordered_list": "",
+            "text_color": "#fff",
+            "text_alignment": "center"
+          }
         }
       },
       "block_order": [
         "473706dc-3bb3-426c-9fd8-6232d55ac8fb",
-        "c0fca2a3-6164-43d3-b0bd-cb72f6d2d0df"
+        "c0fca2a3-6164-43d3-b0bd-cb72f6d2d0df",
+        "image_GRPyfb"
       ],
       "disabled": true,
       "settings": {
