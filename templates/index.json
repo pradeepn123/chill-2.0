@@ -3,6 +3,33 @@
     "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d": {
       "type": "slideshow",
       "blocks": {
+        "df90ff83-c6f1-44c2-94ff-1a3af29d3675": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SELF_LOVE-HP_DESKTOP.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/BAVE-HP_MOBILE.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong>15% Off Sale:<\/strong>\nChoose Love",
+            "title_size": 64,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Celebrate you or them this Valentines day<\/p>",
+            "heading_color": "#000000",
+            "text_color": "#000000",
+            "enlarge_text": true,
+            "button_label_1": "CHOOSE self love",
+            "button_url_1": "https:\/\/chill.com\/collections\/sale",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#f3b09f",
+            "button_text_color": "#ffffff",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
         "66002548-b60b-4786-8e10-a024be1f10e1": {
           "type": "image",
           "settings": {
@@ -120,7 +147,7 @@
             "mobile_image_position": "center center",
             "slide_link": "",
             "subheading": "",
-            "title": "<strong>NUBU: <\/strong> Nature\nElevated",
+            "title": "<strong>50% Off \nNUBU: <\/strong> \nCBD Honey",
             "title_size": 64,
             "title_size_mobile": 46,
             "use_h1": false,
@@ -128,11 +155,11 @@
             "heading_color": "#ffffff",
             "text_color": "#ffffff",
             "enlarge_text": true,
-            "button_label_1": "choose nubu",
+            "button_label_1": "shop 50% off",
             "button_url_1": "https:\/\/chill.com\/collections\/nubu",
             "button_label_2": "",
             "button_url_2": "",
-            "button_background_color": "#f3b09f",
+            "button_background_color": "#9792e4",
             "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "center left"
@@ -214,33 +241,6 @@
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#6ec59f",
-            "button_text_color": "#ffffff",
-            "button_text_font_size": 20,
-            "text_alignment": "center left"
-          }
-        },
-        "df90ff83-c6f1-44c2-94ff-1a3af29d3675": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/SELF_LOVE-HP_DESKTOP.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/BAVE-HP_MOBILE.jpg",
-            "image_position": "center center",
-            "mobile_image_position": "center center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "<strong>15% Off Sale:<\/strong>\nChoose Love",
-            "title_size": 64,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>Celebrate you or them this Valentines day<\/p>",
-            "heading_color": "#000000",
-            "text_color": "#000000",
-            "enlarge_text": true,
-            "button_label_1": "CHOOSE self love",
-            "button_url_1": "https:\/\/chill.com\/collections\/sale",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_background_color": "#f3b09f",
             "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "center left"
@@ -332,6 +332,7 @@
         }
       },
       "block_order": [
+        "df90ff83-c6f1-44c2-94ff-1a3af29d3675",
         "66002548-b60b-4786-8e10-a024be1f10e1",
         "b2363591-8ba1-402f-ad6f-c71e7bae93b0",
         "6baee14a-6ee3-4741-abde-564bbb7d27f7",
@@ -340,7 +341,6 @@
         "2866e88b-20e1-4338-91ae-cca51f74dfb1",
         "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8",
         "5f12a340-48c6-4106-8308-7047651dd64c",
-        "df90ff83-c6f1-44c2-94ff-1a3af29d3675",
         "858a396d-c02a-4210-9bb1-6ee4475e7e64",
         "190b68b3-e888-4fbb-82b4-bdb9c97c144f",
         "159042e8-d790-4168-b7cf-81a9a54547e5"
