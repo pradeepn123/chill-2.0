@@ -17,15 +17,15 @@
             "title_size_mobile": 46,
             "use_h1": false,
             "text": "<p>Celebrate <em><strong>you<\/strong><\/em> or <em><strong>them<\/strong><\/em> this Valentines Day<\/p>",
-            "heading_color": "#000000",
-            "text_color": "#000000",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
             "enlarge_text": true,
             "button_label_1": "CHOOSE self love",
             "button_url_1": "https:\/\/chill.com\/collections\/sale",
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#f3b09f",
-            "button_text_color": "#ffffff",
+            "button_text_color": "#000000",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
