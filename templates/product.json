@@ -45,7 +45,7 @@
           "type": "description",
           "settings": {
             "show_in_tab": false,
-            "open_tab": false,
+            "open_tab": true,
             "icon": "",
             "show_in_quickbuy": false
           }
