@@ -1,0 +1,8 @@
+{
+  "parent": "page.blog-category.json",
+  "context": {
+    "b2b": true
+  },
+  "sections": {
+  }
+}
