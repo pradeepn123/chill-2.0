@@ -5,6 +5,7 @@
       "blocks": {
         "df90ff83-c6f1-44c2-94ff-1a3af29d3675": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/SELF_LOVE-HP_DESKTOP.jpg",
             "mobile_image": "shopify:\/\/shop_images\/SELF_LOVEUK-HP_Mobile.jpg",
