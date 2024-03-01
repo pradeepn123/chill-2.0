@@ -3,6 +3,33 @@
     "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d": {
       "type": "slideshow",
       "blocks": {
+        "66002548-b60b-4786-8e10-a024be1f10e1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ChillMulitBrand-HP_DESKTOP_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/ChillMulitBrand-HP_MOBILE-Sq.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Step Into the \n<strong>Home of \nRelaxation<\/strong>",
+            "title_size": 64,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Discover the best brands & products using all-natural<br\/>ingredients that help you look, feel & live better.<\/p>",
+            "heading_color": "#171717",
+            "text_color": "#171717",
+            "enlarge_text": true,
+            "button_label_1": "CHOOSE CHILL",
+            "button_url_1": "https:\/\/uk.chill.com\/collections\/shop",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#9792e4",
+            "button_text_color": "#171717",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
         "df90ff83-c6f1-44c2-94ff-1a3af29d3675": {
           "type": "image",
           "settings": {
@@ -16,7 +43,7 @@
             "title_size": 64,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>Shop the <strong>Kick the Nic Sale<\/strong> with 30% off all CHILLZER0 Products!<\/p>",
+            "text": "<p>Shop the <strong>Kick the Nic Sale<\/strong> with 30% off<br\/>all CHILLZER0 Products!<\/p>",
             "heading_color": "#ffffff",
             "text_color": "#ffffff",
             "enlarge_text": true,
@@ -54,33 +81,6 @@
             "button_url_2": "",
             "button_background_color": "#9792e4",
             "button_text_color": "#ffffff",
-            "button_text_font_size": 20,
-            "text_alignment": "center left"
-          }
-        },
-        "66002548-b60b-4786-8e10-a024be1f10e1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ChillMulitBrand-HP_DESKTOP_1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/ChillMulitBrand-HP_MOBILE-Sq.jpg",
-            "image_position": "center center",
-            "mobile_image_position": "center center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "Step Into the \n<strong>Home of \nRelaxation<\/strong>",
-            "title_size": 64,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>Discover the best brands & products using all-natural<br\/>ingredients that help you look, feel & live better.<\/p>",
-            "heading_color": "#171717",
-            "text_color": "#171717",
-            "enlarge_text": true,
-            "button_label_1": "CHOOSE CHILL",
-            "button_url_1": "https:\/\/uk.chill.com\/collections\/shop",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_background_color": "#9792e4",
-            "button_text_color": "#171717",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
@@ -222,6 +222,7 @@
         },
         "5f12a340-48c6-4106-8308-7047651dd64c": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/CHILLZER0_Banner_MEDIUM_c60e51fd-8386-4743-b4e6-6a6d6c7f97e2.jpg",
             "mobile_image": "shopify:\/\/shop_images\/ChillZERO-HP_MOBILE-2.jpg",
@@ -333,9 +334,9 @@
         }
       },
       "block_order": [
+        "66002548-b60b-4786-8e10-a024be1f10e1",
         "df90ff83-c6f1-44c2-94ff-1a3af29d3675",
         "07606988-1565-4348-a14c-d1d1a42ab137",
-        "66002548-b60b-4786-8e10-a024be1f10e1",
         "b2363591-8ba1-402f-ad6f-c71e7bae93b0",
         "6baee14a-6ee3-4741-abde-564bbb7d27f7",
         "133ad9e7-9e91-40e0-8fe3-fdcc63e6f28d",
