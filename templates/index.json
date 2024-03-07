@@ -717,11 +717,39 @@
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
+        },
+        "image_bqwwJR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DirtyWellness-Ban-DESKTOP_2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/DirtyWellness-Ban-MOBILE_1.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong> Why “Dirty Wellness”\n is the New Hot Topic!<\/strong>",
+            "title_size": 56,
+            "title_size_mobile": 36,
+            "use_h1": false,
+            "text": "<p>Say goodbye to the unrealistic expectations and picture-perfect ideals of traditional wellness<\/p>",
+            "heading_color": "#f7f7f8",
+            "text_color": "#ffffff",
+            "enlarge_text": true,
+            "button_label_1": "READ MORE",
+            "button_url_1": "https:\/\/chill.com\/blogs\/lifestyle\/why-dirty-wellness-is-the-new-hot-topic",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#9792e4",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
         }
       },
       "block_order": [
         "60c76a91-2ae1-41bb-8a3f-96a16c400105",
-        "image_8yAXfj"
+        "image_8yAXfj",
+        "image_bqwwJR"
       ],
       "settings": {
         "height": "fixed",
