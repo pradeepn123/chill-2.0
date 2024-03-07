@@ -771,13 +771,41 @@
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
+        },
+        "image_jnJxXL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BrainFog-Blog_Banner-DESKTOP.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/BrainFog-Blog_Banner_MOBILE.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong> Clearing the Haze: <\/strong> \nA Science-backed Guide\n to Combating Brain Fog",
+            "title_size": 56,
+            "title_size_mobile": 36,
+            "use_h1": false,
+            "text": "<p>Ever find yourself in a mental fog, feeling like your thoughts are trapped in a haze?<\/p>",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "enlarge_text": true,
+            "button_label_1": "READ MORE",
+            "button_url_1": "https:\/\/chill.com\/blogs\/lifestyle\/clearing-the-haze-a-science-backed-guide-to-combating-brain-fog",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#6EC59F",
+            "button_text_color": "#FFFFFF",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
         }
       },
       "block_order": [
         "60c76a91-2ae1-41bb-8a3f-96a16c400105",
         "image_8yAXfj",
         "image_bqwwJR",
-        "image_446ajn"
+        "image_446ajn",
+        "image_jnJxXL"
       ],
       "settings": {
         "height": "fixed",
