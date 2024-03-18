@@ -956,7 +956,7 @@ predictive-search .search_section input {
 .product-form .product-label-list .product-tags .product-tags__wrapper .product-tag--sale {
   gap: 3px;
   flex-direction: row;
-  padding: 8px 16px;
+  padding: 18px 16px;
 }
 
 /* header css here */
