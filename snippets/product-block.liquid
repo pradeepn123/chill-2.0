@@ -114,7 +114,8 @@
                   </div>
                 {%- endunless -%}
               {%- endif -%}
-              {% render 'product-label', product: product, cheapest_variant: cheapest_variant %}
+              {% render 'product-card-tags', product: product, variant: cheapest_variant %}
+              {% comment %} {% render 'product-label', product: product, cheapest_variant: cheapest_variant %} {% endcomment %}
             </div>
           </a>
           {%- if show_hover_image -%}
@@ -139,13 +140,13 @@
             {% endunless %}
           {% endif %}
         </div>
-        {% if settings.prod_sold_out_show and product.available == false %}
+        {% comment %} {% if settings.prod_sold_out_show and product.available == false %}
           <span class="product-price__item price-label price-label--sold-out">{{ 'products.labels.sold_out' | t }}</span>
           {% elsif settings.prod_pre_order_label_show and product.template_suffix contains 'preorder' %}
           <span class="product-price__item price-label price-label--preorder">{{ 'products.product.preorder' | t }}</span>
           {% elsif settings.prod_sale_show and cheapest_variant.compare_at_price > cheapest_variant.price %}
           <span class="product-price__item price-label price-label--sale">{{ 'products.labels.sale' | t }}</span>
-        {% endif %}
+        {% endif %} {% endcomment %}
       {% else %}
         <div class="image-cont">
           <div class="placeholder-image">{{ 'product-1' | placeholder_svg_tag }}

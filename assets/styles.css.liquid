@@ -7955,28 +7955,19 @@ ul.inline li {
     }
   }
 {% endif %}
-.product-label > span {
-  display: inline-block;
-  padding: 0.5em 1em;
+
+.product-tag.product-tag--sale {
   background: {{ prod_over_redu_bg }};
   color: {{ prod_over_redu_text }};
-  font-size: {{ font_size_base_int | minus: 4 }}px;
-  line-height: 1.2;
-  vertical-align: top;
 }
-@media(min-width: 768px) {
-  .product-label > span {
-    font-size: {{ font_size_base_int | minus: 3 }}px;
-  }
+
+.product-tag.product-tag--sold-out {
+  background: {{ prod_over_low_bg }};
+  color: {{ prod_over_low_text }};
 }
 
 .product-label--sale {
   font-weight: 600;
-}
-
-.product-label--stock > span {
-  background: {{ prod_over_low_bg }};
-  color: {{ prod_over_low_text }};
 }
 
 .product-label--new-in > span {

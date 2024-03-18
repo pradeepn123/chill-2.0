@@ -109,8 +109,6 @@
               <span class="view-in-space__text">{{ 'products.product.view_in_space' | t }}</span>
             </button>
           {% endif %}
-
-          {% render 'product-label-detail', product: product, current_variant: current_variant %}
         </div>
 
         {% if product.media.size > 1 and section.settings.show_thumbnail != false %}
@@ -178,24 +176,26 @@
             </div>
 
             {% when 'vendor_redirection_text' %}
-                <a href="/collections/
-                  {%- if product.vendor == 'CHILL' -%}
-                    chill
-                  {%- elsif product.vendor == 'MAD TASTY' -%}
-                    mad-tasty-sample-pack-wellness-boost
-                  {%- else -%}
-                    {{ product.vendor | replace: ' ', '-' | downcase }}
-                  {%- endif -%}" 
-                  class="vendor_redirection">By <span>{{ product.vendor }}</span>
-                </a>
+            <a href="/collections/
+              {%- if product.vendor == 'CHILL' -%}
+                chill
+              {%- elsif product.vendor == 'MAD TASTY' -%}
+                mad-tasty-sample-pack-wellness-boost
+              {%- else -%}
+                {{ product.vendor | replace: ' ', '-' | downcase }}
+              {%- endif -%}" 
+              class="vendor_redirection">By <span>{{ product.vendor }}</span>
+            </a>
 
-                {% when 'product_message_tag' %}
-                {% if product.collections contains  block.settings.prod_message_collection %}
-                  <div class="product_message_wrap">
-                    <img class="aft_image" src="{{block.settings.prod_message_icon | image_url}}" alt="icon" />
-                    <span>{{block.settings.prod_message_desc}}</span>
-                  </div>
-                {% endif %}
+            {% when 'product_message_tag' %}
+            {% if product.collections contains  block.settings.prod_message_collection %}
+              <div class="product_message_wrap">
+                <img class="aft_image" src="{{block.settings.prod_message_icon | image_url}}" alt="icon" />
+                <span>{{block.settings.prod_message_desc}}</span>
+              </div>
+            {% endif %}
+            
+            {% render 'product-label-detail', product: product, variant: current_variant %}
 
             {% when 'description' %}
             <div class="{% unless block.settings.show_in_quickbuy %}not-in-quickbuy{% endunless %}{% if block.settings.show_in_tab %} product-detail-accordion{% endif %}" {{ block.shopify_attributes }}>
