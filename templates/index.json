@@ -60,7 +60,6 @@
         },
         "159042e8-d790-4168-b7cf-81a9a54547e5": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Bayjoo-HP_DESKTOP.jpg",
             "mobile_image": "shopify:\/\/shop_images\/Bayjoo-HP_MOBILE.jpg",
