@@ -3,6 +3,33 @@
     "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d": {
       "type": "slideshow",
       "blocks": {
+        "07606988-1565-4348-a14c-d1d1a42ab137": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SALE_BANNER.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/SALE_BANNER_Mobile.jpg",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong>\n20% Off: <\/strong> \nSelected\nBrands",
+            "title_size": 64,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>Discover new products to help<br\/>you feel chill - for less!<\/p>",
+            "heading_color": "#000000",
+            "text_color": "#000000",
+            "enlarge_text": true,
+            "button_label_1": "Shop Sale",
+            "button_url_1": "https:\/\/chill.com\/collections\/sale",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#3a56fb",
+            "button_text_color": "#ffffff",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
         "66002548-b60b-4786-8e10-a024be1f10e1": {
           "type": "image",
           "settings": {
@@ -80,33 +107,6 @@
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#f3b09f",
-            "button_text_color": "#ffffff",
-            "button_text_font_size": 20,
-            "text_alignment": "center left"
-          }
-        },
-        "07606988-1565-4348-a14c-d1d1a42ab137": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/SALE_BANNER.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/SALE_BANNER_Mobile.jpg",
-            "image_position": "center center",
-            "mobile_image_position": "center center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "<strong>\n20% Off: <\/strong> \nSelected\nBrands",
-            "title_size": 64,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>Discover new products to help<br\/>you feel chill - for less!<\/p>",
-            "heading_color": "#000000",
-            "text_color": "#000000",
-            "enlarge_text": true,
-            "button_label_1": "Shop Sale",
-            "button_url_1": "https:\/\/chill.com\/collections\/sale",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_background_color": "#3a56fb",
             "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "center left"
@@ -333,10 +333,10 @@
         }
       },
       "block_order": [
+        "07606988-1565-4348-a14c-d1d1a42ab137",
         "66002548-b60b-4786-8e10-a024be1f10e1",
         "df90ff83-c6f1-44c2-94ff-1a3af29d3675",
         "159042e8-d790-4168-b7cf-81a9a54547e5",
-        "07606988-1565-4348-a14c-d1d1a42ab137",
         "b2363591-8ba1-402f-ad6f-c71e7bae93b0",
         "6baee14a-6ee3-4741-abde-564bbb7d27f7",
         "133ad9e7-9e91-40e0-8fe3-fdcc63e6f28d",
