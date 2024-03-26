@@ -119,6 +119,7 @@
         "ab8d082d-f2e8-4e62-bd65-93f879e1e025",
         "37aeded1-91ac-4ae6-8457-1d2e70b46124"
       ],
+      "disabled": true,
       "settings": {
         "heading_text": "<p><strong>Naturally <\/strong>Sourced,<br\/><strong>Functional <\/strong>Ingredients<\/p>",
         "subheading_text": "<p>Soothe your soul with naturally-sourced products that are oh so Chill. <\/p>",
@@ -127,6 +128,7 @@
     },
     "d15d7798-3d4a-425d-9c6a-898163f36c18": {
       "type": "featured-background-video",
+      "disabled": true,
       "settings": {
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6b93734907174f5488731bbe7e2968f6.mp4",
         "autoplay": false,
@@ -191,6 +193,7 @@
         "1df74ab6-47d9-46ad-ba94-176cdd8658a7",
         "bf9be943-de03-4b81-adfa-97919f76905d"
       ],
+      "disabled": true,
       "settings": {
         "text": "<p>Our <strong>Collections<\/strong><\/p>",
         "show_shop_all": true,
