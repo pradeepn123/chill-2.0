@@ -3,29 +3,29 @@
     "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d": {
       "type": "slideshow",
       "blocks": {
-        "858a396d-c02a-4210-9bb1-6ee4475e7e64": {
+        "66002548-b60b-4786-8e10-a024be1f10e1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Eleven-HP_DESKTOP.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Eleven-HP_MOBILE.jpg",
+            "image": "shopify:\/\/shop_images\/ChillMulitBrand-HP_DESKTOP_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/ChillMulitBrand-HP_MOBILE-Sq.jpg",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
             "subheading": "",
-            "title": "Discover\n<strong> Eleven TLC <\/strong>",
+            "title": "Step Into the \n<strong>Home of \nRelaxation<\/strong>",
             "title_size": 64,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>High-quality powdered drink mixes to help you feel good from the inside out.<\/p>",
-            "heading_color": "#000000",
-            "text_color": "#000000",
+            "text": "<p>Discover the best brands & products using all-natural ingredients that help you look, feel & live better.<\/p>",
+            "heading_color": "#171717",
+            "text_color": "#171717",
             "enlarge_text": true,
-            "button_label_1": "TRY ELEVEN TLC",
-            "button_url_1": "shopify:\/\/collections",
+            "button_label_1": "CHOOSE CHILL",
+            "button_url_1": "https:\/\/uk.chill.com\/collections\/shop",
             "button_label_2": "",
-            "button_url_2": "shopify:\/\/pages\/contact-us",
-            "button_background_color": "#6ec59f",
-            "button_text_color": "#ffffff",
+            "button_url_2": "",
+            "button_background_color": "#9792e4",
+            "button_text_color": "#171717",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
@@ -58,29 +58,29 @@
             "text_alignment": "center left"
           }
         },
-        "66002548-b60b-4786-8e10-a024be1f10e1": {
+        "858a396d-c02a-4210-9bb1-6ee4475e7e64": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ChillMulitBrand-HP_DESKTOP_1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/ChillMulitBrand-HP_MOBILE-Sq.jpg",
+            "image": "shopify:\/\/shop_images\/Eleven-HP_DESKTOP.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Eleven-HP_MOBILE.jpg",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
             "subheading": "",
-            "title": "Step Into the \n<strong>Home of \nRelaxation<\/strong>",
+            "title": "Discover\n<strong> Eleven TLC <\/strong>",
             "title_size": 64,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>Discover the best brands & products using all-natural ingredients that help you look, feel & live better.<\/p>",
-            "heading_color": "#171717",
-            "text_color": "#171717",
+            "text": "<p>High-quality powdered drink mixes to help you feel good from the inside out.<\/p>",
+            "heading_color": "#000000",
+            "text_color": "#000000",
             "enlarge_text": true,
-            "button_label_1": "CHOOSE CHILL",
-            "button_url_1": "https:\/\/uk.chill.com\/collections\/shop",
+            "button_label_1": "TRY ELEVEN TLC",
+            "button_url_1": "shopify:\/\/collections",
             "button_label_2": "",
-            "button_url_2": "",
-            "button_background_color": "#9792e4",
-            "button_text_color": "#171717",
+            "button_url_2": "shopify:\/\/pages\/contact-us",
+            "button_background_color": "#6ec59f",
+            "button_text_color": "#ffffff",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
@@ -333,9 +333,9 @@
         }
       },
       "block_order": [
-        "858a396d-c02a-4210-9bb1-6ee4475e7e64",
-        "07606988-1565-4348-a14c-d1d1a42ab137",
         "66002548-b60b-4786-8e10-a024be1f10e1",
+        "07606988-1565-4348-a14c-d1d1a42ab137",
+        "858a396d-c02a-4210-9bb1-6ee4475e7e64",
         "df90ff83-c6f1-44c2-94ff-1a3af29d3675",
         "159042e8-d790-4168-b7cf-81a9a54547e5",
         "b2363591-8ba1-402f-ad6f-c71e7bae93b0",
