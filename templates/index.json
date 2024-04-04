@@ -71,7 +71,7 @@
             "title_size": 64,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>High-quality powdered drink mixes to help you feel good from the inside out.<\/p>",
+            "text": "<p>High-quality powdered drink mixes<br\/>to help you feel good from the inside out.<\/p>",
             "heading_color": "#000000",
             "text_color": "#000000",
             "enlarge_text": true,
@@ -80,7 +80,7 @@
             "button_label_2": "",
             "button_url_2": "shopify:\/\/pages\/contact-us",
             "button_background_color": "#6ec59f",
-            "button_text_color": "#ffffff",
+            "button_text_color": "#000000",
             "button_text_font_size": 20,
             "text_alignment": "center left"
           }
