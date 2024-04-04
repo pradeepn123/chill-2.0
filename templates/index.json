@@ -71,7 +71,7 @@
             "title_size": 64,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>High-quality powdered drink mixes<br\/>to help you feel good from the inside out.<\/p>",
+            "text": "<p>High-quality powdered drink<br\/>mixes to help you feel<br\/>good from the inside out.<\/p>",
             "heading_color": "#000000",
             "text_color": "#000000",
             "enlarge_text": true,
