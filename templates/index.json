@@ -305,6 +305,7 @@
         },
         "190b68b3-e888-4fbb-82b4-bdb9c97c144f": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/WiseBar-HP_DESKTOP.jpg",
             "mobile_image": "shopify:\/\/shop_images\/WiseBar-HP_MOBILE.jpg",
@@ -312,11 +313,11 @@
             "mobile_image_position": "center center",
             "slide_link": "shopify:\/\/collections\/wise-bar",
             "subheading": "",
-            "title": "Fuel body and\nmind with\n<strong> Wise Bar <\/strong>",
+            "title": "<strong> Wise Bar <\/strong>:\nNourish both\nbody and mind",
             "title_size": 64,
             "title_size_mobile": 40,
             "use_h1": false,
-            "text": "<p>Nourishing, sustainable adaptogen bars<br\/>for better energy, focus,<br\/>and immunity.<\/p>",
+            "text": "<p>Sustainable, organic adaptogen bars for better energy,<br\/>focus, and immunity.<\/p>",
             "heading_color": "#171717",
             "text_color": "#000000",
             "enlarge_text": true,
