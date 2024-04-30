@@ -305,7 +305,6 @@
         },
         "190b68b3-e888-4fbb-82b4-bdb9c97c144f": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/WiseBar-HP_DESKTOP.jpg",
             "mobile_image": "shopify:\/\/shop_images\/WiseBar-HP_MOBILE.jpg",
