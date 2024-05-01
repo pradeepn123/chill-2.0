@@ -21,11 +21,6 @@
             "enable_product_reviews_by_price": true
           }
         },
-        "mystery_gift_TEnUAQ": {
-          "type": "mystery_gift",
-          "settings": {
-          }
-        },
         "vendor": {
           "type": "vendor",
           "settings": {
@@ -33,6 +28,11 @@
         },
         "d6658578-a2ff-4639-baeb-9356a9109408": {
           "type": "vendor_redirection_text",
+          "settings": {
+          }
+        },
+        "mystery_gift_zVLXtX": {
+          "type": "mystery_gift",
           "settings": {
           }
         },
@@ -186,9 +186,9 @@
         "04ea0ec9-7068-4678-a85a-c3170bb2d27e",
         "title",
         "price",
-        "mystery_gift_TEnUAQ",
         "vendor",
         "d6658578-a2ff-4639-baeb-9356a9109408",
+        "mystery_gift_zVLXtX",
         "5d0296d7-8f69-4317-9158-2e0a296a5d28",
         "description",
         "divider",
