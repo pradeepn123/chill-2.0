@@ -87,13 +87,13 @@
             "1478526632860": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Welcome to our store<\/p>"
+                "text": "<p>Welcome to our store</p>"
               }
             },
             "1478526632861": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Announce <a href=\"#\">something<\/a> here<\/p>"
+                "text": "<p>Announce <a href=\"#\">something</a> here</p>"
               }
             }
           },
@@ -304,13 +304,13 @@
             "1478526632860": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Welcome to our store<\/p>"
+                "text": "<p>Welcome to our store</p>"
               }
             },
             "1478526632861": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Announce <a href=\"#\">something<\/a> here<\/p>"
+                "text": "<p>Announce <a href=\"#\">something</a> here</p>"
               }
             }
           },
@@ -648,13 +648,13 @@
             "1478526632860": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Welcome to our store<\/p>"
+                "text": "<p>Welcome to our store</p>"
               }
             },
             "1478526632861": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Announce <a href=\"#\">something<\/a> here<\/p>"
+                "text": "<p>Announce <a href=\"#\">something</a> here</p>"
               }
             }
           },
@@ -779,13 +779,13 @@
             "1478526632860": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Welcome to our store<\/p>"
+                "text": "<p>Welcome to our store</p>"
               }
             },
             "1478526632861": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Announce <a href=\"#\">something<\/a> here<\/p>"
+                "text": "<p>Announce <a href=\"#\">something</a> here</p>"
               }
             }
           },
@@ -1030,19 +1030,19 @@
     "prod_pre_order_label_show": true,
     "enable_product_reviews_collection": false,
     "prod_thumb_show_options": false,
-    "social_twitter_url": "https:\/\/twitter.com\/ChillCBD",
-    "social_facebook_url": "https:\/\/www.facebook.com\/chillstateofmind",
+    "social_twitter_url": "https://twitter.com/ChillCBD",
+    "social_facebook_url": "https://www.facebook.com/chillstateofmind",
     "social_vimeo_url": "",
     "social_youtube_url": "",
-    "social_linkedin_url": "https:\/\/www.linkedin.com\/company\/chill-brands\/",
-    "social_instagram_url": "https:\/\/www.instagram.com\/choosechill\/",
-    "social_tiktok_url": "https:\/\/www.tiktok.com\/@choose.chill",
+    "social_linkedin_url": "https://www.linkedin.com/company/chill-brands/",
+    "social_instagram_url": "https://www.instagram.com/choosechill/",
+    "social_tiktok_url": "https://www.tiktok.com/@choose.chill",
     "search_type": "product,article",
     "enable_live_search": true,
     "live_search_show_vendor": true,
     "live_search_show_price": false,
     "live_search_search_meta": false,
-    "favicon": "shopify:\/\/shop_images\/Chill_Fevicon.png",
+    "favicon": "shopify://shop_images/Chill_Fevicon.png",
     "cart_type": "drawer",
     "cart_show_free_shipping_threshold": true,
     "cart_free_shipping_threshold": "75",
@@ -1050,9 +1050,9 @@
     "product_currency_code_enabled": false,
     "enable_domain_redirect": true,
     "enable_free_variety_pouch_offer": false,
-    "how_it_works_image": "shopify:\/\/shop_images\/Banner_chill.png",
+    "how_it_works_image": "shopify://shop_images/Banner_chill.png",
     "how_it_works_title": "How It Works",
-    "how_it_works_description": "<ul><li>Login or Sign up to join the <a href=\"http:\/\/chill.com\/\" target=\"_blank\"><em><strong>Chill.com<\/strong><\/em><\/a> community<\/li><li>Get a free variety pack (worth $19.99) when you try our CBD pouches for the first time<\/li><li>You only pay for shipping - the pouches are on us!<\/li><\/ul>",
+    "how_it_works_description": "<ul><li>Login or Sign up to join the <a href=\"http://chill.com/\" target=\"_blank\"><em><strong>Chill.com</strong></em></a> community</li><li>Get a free variety pack (worth $19.99) when you try our CBD pouches for the first time</li><li>You only pay for shipping - the pouches are on us!</li></ul>",
     "how_it_works_login_text": "LOGIN TO CLAIM YOUR POUCH STARTER PACK",
     "enable_gummies_offer_on_announcement_bar": true,
     "announce_gummies_offer_text_desktop": "<span> Buy 1 Get 1 <\/span> on all <span>Cannadips Pouches <\/span> - Add 2 of the same product to your cart & get the 2nd FREE with code CANNACHILL",
@@ -1062,17 +1062,26 @@
     "offer_text_on_cart": "",
     "offer_text_on_cart_subtext": "",
     "show_gummies_offer": false,
-    "gummies_offer_text": "<p>🎉 Yey! You are now eligible for a 👉  <strong>50% Discount<\/strong> on the Tropical and Berry CBD gummies. Add as many quantity as you’d like  😍  for <strong>Flat 50% Off<\/strong>.<\/p>",
-    "cart_button_url": "shopify:\/\/collections\/gummies-offer",
+    "gummies_offer_text": "<p>🎉 Yey! You are now eligible for a 👉  <strong>50% Discount</strong> on the Tropical and Berry CBD gummies. Add as many quantity as you’d like  😍  for <strong>Flat 50% Off</strong>.</p>",
+    "cart_button_url": "shopify://collections/gummies-offer",
     "terms_and_conditions": "Limited period offer only, T&C Apply.",
-    "nav_shop_all_link": "shopify:\/\/collections\/shop",
+    "nav_shop_all_link": "shopify://collections/shop",
     "new_in_gif": "",
     "new_in_link": "new-in",
     "sale_gif": "",
     "sale_link": "sale",
     "promotion_banner_text": "",
     "promotion_banner_text_mobile": "",
-    "promotion_banner_link": "shopify:\/\/collections\/sale",
+    "promotion_banner_link": "shopify://collections/sale",
+    "offer_collection": "goradolife-com",
+    "offer_svg": "<svg width=\"34\" height=\"34\" viewbox=\"0 0 34 34\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.8526 2.36776C7.48975 2.60966 7.11932 3.04646 7.11932 4V4.01204V4.02405V4.03603V4.04798V4.05991V4.0718V4.08367V4.09551V4.10732V4.1191V4.13085V4.14258V4.15427V4.16594V4.17758V4.18919V4.20078V4.21233V4.22386V4.23535V4.24682V4.25826V4.26968V4.28106V4.29242V4.30375V4.31505V4.32632V4.33756V4.34878V4.35997V4.37113V4.38226V4.39337V4.40444V4.41549V4.42651V4.43751V4.44847V4.45941V4.47032V4.4812V4.49206V4.50288V4.51368V4.52446V4.5352V4.54592V4.55661V4.56727V4.5779V4.58851V4.59909V4.60964V4.62017V4.63067V4.64114V4.65158V4.662V4.67239V4.68275V4.69308V4.70339V4.71367V4.72393V4.73415V4.74435V4.75452V4.76467V4.77479V4.78488V4.79494V4.80498V4.81499V4.82498V4.83494V4.84487V4.85477V4.86465V4.8745V4.88432V4.89412V4.90389V4.91364V4.92335V4.93305V4.94271V4.95235V4.96196V4.97155V4.98111V4.99064V5.00015V5.00963V5.01908V5.02851V5.03791V5.04729V5.05664V5.06596V5.07526V5.08453V5.09377V5.10299V5.11219V5.12135V5.13049V5.13961V5.1487V5.15776V5.1668V5.17581V5.1848V5.19376V5.20269V5.2116V5.22049V5.22934V5.23818V5.24698V5.25576V5.26452V5.27325V5.28195V5.29063V5.29929V5.30792V5.31652V5.32266H11.1193V5.31517V5.30756V5.29992V5.29227V5.28461V5.27693V5.26923V5.26151V5.25378V5.24603V5.23827V5.23049V5.22269V5.21488V5.20705V5.1992V5.19134V5.18346V5.17557V5.16766V5.15973V5.15179V5.14383V5.13585V5.12786V5.11985V5.11182V5.10378V5.09572V5.08765V5.07956V5.07145V5.06332V5.05518V5.04703V5.03886V5.03067V5.02246V5.01424V5.006V4.99775V4.98948V4.98119V4.97289V4.96457V4.95623V4.94788V4.93951V4.93112V4.92272V4.9143V4.90587V4.89742V4.88895V4.88047V4.87197V4.86345V4.85492V4.84637V4.83781V4.82922V4.82063V4.81201V4.80338V4.79473V4.78607V4.77739V4.7687V4.75998V4.75126V4.74251V4.73375V4.72497V4.71618V4.70737V4.69854V4.6897V4.68084V4.67196V4.66307V4.65416V4.64524V4.6363V4.62734V4.61837V4.60938V4.60037V4.59135V4.58231V4.57325V4.56418V4.55509V4.54599V4.53687V4.52773V4.51857V4.5094V4.50022V4.49102V4.4818V4.47256V4.46331V4.45404V4.44476V4.43546V4.42614V4.41681V4.40746V4.39809V4.38871V4.37931V4.36989V4.36046V4.35101V4.34155V4.33207V4.32257V4.31306V4.30353V4.29398V4.28442V4.27484V4.26525V4.25563V4.24601V4.23636V4.2267V4.21703V4.20733V4.19762V4.1879V4.17815V4.1684V4.15862V4.14883V4.13902V4.1292V4.11936V4.1095V4.09963V4.08974V4.07983V4.06991V4.05997V4.05002V4.04005V4.03006V4.02006V4.01004V4C11.1193 3.04646 10.7489 2.60966 10.3861 2.36776C9.95966 2.08351 9.42426 2 9.11932 2C8.81438 2 8.27898 2.08351 7.8526 2.36776ZM5.11932 5.31652V5.32266H3.05447C2.00281 5.32266 1.13081 6.13712 1.05912 7.18633L0.00474634 22.6186C-0.0742036 23.7741 0.841862 24.7549 2.0001 24.7549H11.7675L11.3152 31.4197C11.2205 32.8156 12.3273 34 13.7264 34H31.5123C32.9114 34 34.0181 32.8156 33.9234 31.4197L32.6115 12.0864C32.5254 10.8181 31.4716 9.83333 30.2004 9.83333H27.8485V9.83061V9.82061V9.8106V9.80057V9.79051V9.78044V9.77035V9.76023V9.7501V9.73995V9.72978V9.71959V9.70938V9.69915V9.6889V9.67863V9.66833V9.65802V9.6477V9.63735V9.62698V9.61659V9.60618V9.59575V9.5853V9.57483V9.56435V9.55384V9.54331V9.53276V9.5222V9.51161V9.50101V9.49038V9.47973V9.46907V9.45838V9.44768V9.43695V9.42621V9.41544V9.40466V9.39386V9.38303V9.37219V9.36133V9.35044V9.33954V9.32862V9.31767V9.30671V9.29573V9.28473V9.27371V9.26267V9.25161V9.24053V9.22943V9.21831V9.20717V9.19601V9.18483V9.17363V9.16241V9.15117V9.13991V9.12864V9.11734V9.10602V9.09468V9.08333V9.07195V9.06055V9.04914V9.0377V9.02625V9.01477V9.00327V8.99176V8.98023V8.96867V8.9571V8.9455V8.93389V8.92226V8.9106V8.89893V8.88724V8.87552V8.86379V8.85204V8.84027V8.82848V8.81666V8.80483V8.79298V8.78111V8.76922V8.75731V8.74538V8.73343V8.72146V8.70947V8.69746V8.68544V8.67339V8.66132V8.64923V8.63713V8.625C27.8485 6.73925 27.0359 5.5198 25.9791 4.81527C24.9858 4.1531 23.865 4 23.2235 4C22.582 4 21.4612 4.1531 20.4679 4.81527C19.4111 5.5198 18.5985 6.73925 18.5985 8.625V8.63954V8.65406V8.66854V8.68298V8.69739V8.71176V8.7261V8.74041V8.75467V8.76891V8.78311V8.79728V8.81141V8.82551V8.83957V8.8536V8.8676V8.88156V8.89549V8.90938V8.92324V8.93707V8.95086V8.96461V8.97833V8.99202V9.00568V9.0193V9.03289V9.04644V9.05996V9.07344V9.0869V9.10031V9.1137V9.12705V9.14037V9.15365V9.1669V9.18012V9.1933V9.20645V9.21957V9.23265V9.2457V9.25872V9.2717V9.28465V9.29757V9.31045V9.3233V9.33612V9.3489V9.36165V9.37437V9.38705V9.39971V9.41232V9.42491V9.43746V9.44999V9.46247V9.47493V9.48735V9.49974V9.5121V9.52442V9.53671V9.54897V9.5612V9.57339V9.58555V9.59768V9.60978V9.62185V9.63388V9.64588V9.65784V9.66978V9.68168V9.69355V9.70539V9.7172V9.72897V9.74072V9.75243V9.7641V9.77575V9.78737V9.79895V9.8105V9.82202V9.83333H17.4267L17.2458 7.18633C17.1741 6.13712 16.3021 5.32266 15.2505 5.32266H13.1193V5.31517V5.30756V5.29992V5.29227V5.28461V5.27693V5.26923V5.26151V5.25378V5.24603V5.23827V5.23049V5.22269V5.21488V5.20705V5.1992V5.19134V5.18346V5.17557V5.16766V5.15973V5.15179V5.14383V5.13585V5.12786V5.11985V5.11182V5.10378V5.09572V5.08765V5.07956V5.07145V5.06332V5.05518V5.04703V5.03886V5.03067V5.02246V5.01424V5.006V4.99775V4.98948V4.98119V4.97289V4.96457V4.95623V4.94788V4.93951V4.93112V4.92272V4.9143V4.90587V4.89742V4.88895V4.88047V4.87197V4.86345V4.85492V4.84637V4.83781V4.82922V4.82063V4.81201V4.80338V4.79473V4.78607V4.77739V4.7687V4.75998V4.75126V4.74251V4.73375V4.72497V4.71618V4.70737V4.69854V4.6897V4.68084V4.67196V4.66307V4.65416V4.64524V4.6363V4.62734V4.61837V4.60938V4.60037V4.59135V4.58231V4.57325V4.56418V4.55509V4.54599V4.53687V4.52773V4.51857V4.5094V4.50022V4.49102V4.4818V4.47256V4.46331V4.45404V4.44476V4.43546V4.42614V4.41681V4.40746V4.39809V4.38871V4.37931V4.36989V4.36046V4.35101V4.34155V4.33207V4.32257V4.31306V4.30353V4.29398V4.28442V4.27484V4.26525V4.25563V4.24601V4.23636V4.2267V4.21703V4.20733V4.19762V4.1879V4.17815V4.1684V4.15862V4.14883V4.13902V4.1292V4.11936V4.1095V4.09963V4.08974V4.07983V4.06991V4.05997V4.05002V4.04005V4.03006V4.02006V4.01004V4C13.1193 2.38211 12.4183 1.31891 11.4955 0.703664C10.6361 0.13078 9.67153 0 9.11932 0C8.56712 0 7.60252 0.13078 6.7432 0.703664C5.82033 1.31891 5.11932 2.38211 5.11932 4V4.01204V4.02405V4.03603V4.04798V4.05991V4.0718V4.08367V4.09551V4.10732V4.1191V4.13085V4.14258V4.15427V4.16594V4.17758V4.18919V4.20078V4.21233V4.22386V4.23535V4.24682V4.25826V4.26968V4.28106V4.29242V4.30375V4.31505V4.32632V4.33756V4.34878V4.35997V4.37113V4.38226V4.39337V4.40444V4.41549V4.42651V4.43751V4.44847V4.45941V4.47032V4.4812V4.49206V4.50288V4.51368V4.52446V4.5352V4.54592V4.55661V4.56727V4.5779V4.58851V4.59909V4.60964V4.62017V4.63067V4.64114V4.65158V4.662V4.67239V4.68275V4.69308V4.70339V4.71367V4.72393V4.73415V4.74435V4.75452V4.76467V4.77479V4.78488V4.79494V4.80498V4.81499V4.82498V4.83494V4.84487V4.85477V4.86465V4.8745V4.88432V4.89412V4.90389V4.91364V4.92335V4.93305V4.94271V4.95235V4.96196V4.97155V4.98111V4.99064V5.00015V5.00963V5.01908V5.02851V5.03791V5.04729V5.05664V5.06596V5.07526V5.08453V5.09377V5.10299V5.11219V5.12135V5.13049V5.13961V5.1487V5.15776V5.1668V5.17581V5.1848V5.19376V5.20269V5.2116V5.22049V5.22934V5.23818V5.24698V5.25576V5.26452V5.27325V5.28195V5.29063V5.29929V5.30792V5.31652ZM20.5985 9.83333H25.8485V9.83061V9.82061V9.8106V9.80057V9.79051V9.78044V9.77035V9.76023V9.7501V9.73995V9.72978V9.71959V9.70938V9.69915V9.6889V9.67863V9.66833V9.65802V9.6477V9.63735V9.62698V9.61659V9.60618V9.59575V9.5853V9.57483V9.56435V9.55384V9.54331V9.53276V9.5222V9.51161V9.50101V9.49038V9.47973V9.46907V9.45838V9.44768V9.43695V9.42621V9.41544V9.40466V9.39386V9.38303V9.37219V9.36133V9.35044V9.33954V9.32862V9.31767V9.30671V9.29573V9.28473V9.27371V9.26267V9.25161V9.24053V9.22943V9.21831V9.20717V9.19601V9.18483V9.17363V9.16241V9.15117V9.13991V9.12864V9.11734V9.10602V9.09468V9.08333V9.07195V9.06055V9.04914V9.0377V9.02625V9.01477V9.00327V8.99176V8.98023V8.96867V8.9571V8.9455V8.93389V8.92226V8.9106V8.89893V8.88724V8.87552V8.86379V8.85204V8.84027V8.82848V8.81666V8.80483V8.79298V8.78111V8.76922V8.75731V8.74538V8.73343V8.72146V8.70947V8.69746V8.68544V8.67339V8.66132V8.64923V8.63713V8.625C25.8485 7.4036 25.3665 6.81055 24.8697 6.47937C24.3094 6.10582 23.6177 6 23.2235 6C22.8293 6 22.1376 6.10582 21.5773 6.47937C21.0805 6.81055 20.5985 7.4036 20.5985 8.625V8.63954V8.65406V8.66854V8.68298V8.69739V8.71176V8.7261V8.74041V8.75467V8.76891V8.78311V8.79728V8.81141V8.82551V8.83957V8.8536V8.8676V8.88156V8.89549V8.90938V8.92324V8.93707V8.95086V8.96461V8.97833V8.99202V9.00568V9.0193V9.03289V9.04644V9.05996V9.07344V9.0869V9.10031V9.1137V9.12705V9.14037V9.15365V9.1669V9.18012V9.1933V9.20645V9.21957V9.23265V9.2457V9.25872V9.2717V9.28465V9.29757V9.31045V9.3233V9.33612V9.3489V9.36165V9.37437V9.38705V9.39971V9.41232V9.42491V9.43746V9.44999V9.46247V9.47493V9.48735V9.49974V9.5121V9.52442V9.53671V9.54897V9.5612V9.57339V9.58555V9.59768V9.60978V9.62185V9.63388V9.64588V9.65784V9.66978V9.68168V9.69355V9.70539V9.7172V9.72897V9.74072V9.75243V9.7641V9.77575V9.78737V9.79895V9.8105V9.82202V9.83333ZM3.98848 8.32266L3.07075 21.7549H11.9711L12.6272 12.0864C12.6989 11.0292 13.4431 10.169 14.425 9.91195L14.3165 8.32266H3.98848ZM14.3506 31L15.5834 12.8333H29.6553L30.888 31H14.3506Z\" fill=\"#6EC59F\"></path>\n</svg>",
+    "offer_title": "<p>Buy 1 Get 1 Free</p>",
+    "offer_description": "<p><strong>Indulge Limitlessly</strong>: Buy 1 Rado Life product, add 2nd to cart for <strong>FREE!</strong></p>",
+    "offer_link": "shopify://collections/goradolife-com",
+    "offer_cta_url": "shopify://collections/goradolife-com",
+    "offer_background_color": "#ffffff",
+    "offer_text_color": "#000000",
+    "offer_shadow_color": "#6ec59f",
     "shop_all_link": "shop-all",
     "sections": {
       "header": {
@@ -1181,7 +1190,7 @@
           "9c575c71-0296-4c71-9fa4-22420e39e142"
         ],
         "settings": {
-          "logo": "shopify:\/\/shop_images\/Screen_Shot_2022-08-17_at_3.04.20_PM.png",
+          "logo": "shopify://shop_images/Screen_Shot_2022-08-17_at_3.04.20_PM.png",
           "logo_img_width_int": 190,
           "mobile_logo_img_width_int": 100,
           "logo_h1": true,
@@ -1190,7 +1199,7 @@
           "transparent_color": "#ffffff",
           "mega_collection_heading": "By Collection",
           "shop_text": "Shop All",
-          "shop_link": "shopify:\/\/collections\/shop",
+          "shop_link": "shopify://collections/shop",
           "menu_linklist": "mega-menu-updated",
           "menu_linklist_mobile": "",
           "menu_layout": "inline-menu-left",
@@ -1200,7 +1209,7 @@
           "nav_mob_products_title": "Best Sellers",
           "nav_mob_products_collection": "",
           "enable_search": true,
-          "search_suggestions_title": "<p>Popular <strong>Products<\/strong><\/p>",
+          "search_suggestions_title": "<p>Popular <strong>Products</strong></p>",
           "search_suggestions_menu": "shop",
           "icon_strategy": "icons_all",
           "cart_icon": "custom"
@@ -1262,8 +1271,8 @@
             "type": "text",
             "settings": {
               "title": "",
-              "text": "<p><strong>Zoetic Corp<\/strong><\/p>",
-              "image": "shopify:\/\/shop_images\/Chill_black.png",
+              "text": "<p><strong>Zoetic Corp</strong></p>",
+              "image": "shopify://shop_images/Chill_black.png",
               "image_width": 160,
               "show_social_icons": true,
               "soc_icons_large": true
@@ -1299,7 +1308,7 @@
         ],
         "settings": {
           "lower_menu": "",
-          "text_bottom": "<p>CHILL.COM USERS MUST BE OF LEGAL AGE FOR THEIR GEOGRAPHIC LOCATION. <br\/><br\/>These statements have not been evaluated or approved by the Food and Drug Administration or any other regulatory body. The products shown on this website are lifestyle products and are not intended to diagnose, treat, cure, or prevent any disease. The information contained on this website is not intended to replace information from medical professionals. Please consult your doctor if you are concerned about using any product. <\/p><p><\/p><p>All CBD products on this website contain .03% THC or less. <\/p>",
+          "text_bottom": "<p>CHILL.COM USERS MUST BE OF LEGAL AGE FOR THEIR GEOGRAPHIC LOCATION. <br/><br/>These statements have not been evaluated or approved by the Food and Drug Administration or any other regulatory body. The products shown on this website are lifestyle products and are not intended to diagnose, treat, cure, or prevent any disease. The information contained on this website is not intended to replace information from medical professionals. Please consult your doctor if you are concerned about using any product. </p><p></p><p>All CBD products on this website contain .03% THC or less. </p>",
           "wide_container": true,
           "show_payment_icons": true,
           "show_country_selector": true,
@@ -1313,7 +1322,7 @@
             "type": "announcement",
             "disabled": true,
             "settings": {
-              "text": "<p>Get<strong> 15% off<\/strong> on your first Chill order  <a href=\"\/collections\/shop\" title=\"Our Hemp Products\"><strong>GET IT NOW<\/strong><\/a><\/p>",
+              "text": "<p>Get<strong> 15% off</strong> on your first Chill order  <a href=\"/collections/shop\" title=\"Our Hemp Products\"><strong>GET IT NOW</strong></a></p>",
               "bannerBtn": "",
               "bannerBtnlink": "",
               "enable_animation": false
@@ -1323,7 +1332,7 @@
             "type": "announcement",
             "disabled": true,
             "settings": {
-              "text": "<p>For subscription products USE CODE: <strong>CHILLHOLIDAY20 <\/strong>at the checkout<\/p>",
+              "text": "<p>For subscription products USE CODE: <strong>CHILLHOLIDAY20 </strong>at the checkout</p>",
               "bannerBtn": "",
               "bannerBtnlink": "",
               "enable_animation": false
@@ -1333,7 +1342,7 @@
             "type": "announcement",
             "disabled": true,
             "settings": {
-              "text": "<p>50% off Tropical and Berry gummies with every Mad Tasty Purchase<\/p>",
+              "text": "<p>50% off Tropical and Berry gummies with every Mad Tasty Purchase</p>",
               "bannerBtn": "",
               "bannerBtnlink": "",
               "enable_animation": false
@@ -1343,7 +1352,7 @@
             "type": "announcement",
             "disabled": true,
             "settings": {
-              "text": "<p>$10 off orders over $50 until Hallows eve!<\/p>",
+              "text": "<p>$10 off orders over $50 until Hallows eve!</p>",
               "bannerBtn": "",
               "bannerBtnlink": "",
               "enable_animation": false
@@ -1352,9 +1361,9 @@
           "02f3e94e-705e-4092-8c2c-77960440b0ff": {
             "type": "announcement",
             "settings": {
-              "text": "<p>Join CLUB CHILL for exclusive rewards<\/p>",
+              "text": "<p>Join CLUB CHILL for exclusive rewards</p>",
               "bannerBtn": "Join now",
-              "bannerBtnlink": "https:\/\/portal.rarecircles.com\/access\/chill-us\/sign-up",
+              "bannerBtnlink": "https://portal.rarecircles.com/access/chill-us/sign-up",
               "enable_animation": true
             }
           }
@@ -1410,7 +1419,7 @@
           "popup_dismiss_for_days": 2,
           "position": "bottom-right",
           "title": "Sign up and save",
-          "text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers.<\/p>",
+          "text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers.</p>",
           "show_newsletter": true,
           "show_social_icons": true
         }
@@ -1418,21 +1427,21 @@
       "affiliate-banner": {
         "type": "affiliate-banner",
         "settings": {
-          "banner-image": "shopify:\/\/shop_images\/Desktop_banner.jpg",
-          "banner-image_mobile": "shopify:\/\/shop_images\/Desktop_banner.jpg",
+          "banner-image": "shopify://shop_images/Desktop_banner.jpg",
+          "banner-image_mobile": "shopify://shop_images/Desktop_banner.jpg",
           "title_color": "#ffffff",
-          "title": "<p><strong>Collab <\/strong>with<strong> us <\/strong><\/p>",
+          "title": "<p><strong>Collab </strong>with<strong> us </strong></p>",
           "title_font_size": 70,
           "sub_title": "",
           "subtitle_color": "#ffffff",
           "sub_title_font_size": 16,
           "join_now_btn": true,
           "banner_btn_content": "Join Now",
-          "banner_btn_url": "https:\/\/ix5toa2rmt3.typeform.com\/chill",
+          "banner_btn_url": "https://ix5toa2rmt3.typeform.com/chill",
           "banner_btn_text_color": "#ffffff",
           "banner_btn_color": "#ffac9a",
           "banner_btn_font_size": 42,
-          "mobile_title": "<p><strong>Collab <\/strong>with<strong> us <\/strong><\/p>",
+          "mobile_title": "<p><strong>Collab </strong>with<strong> us </strong></p>",
           "title_color_mobile": "#000000",
           "title_font_size_mobile": 36,
           "sub_title_mobile": "",
@@ -1448,28 +1457,28 @@
           "83b08321-af38-49f3-b1ee-91a8b9befe24": {
             "type": "select",
             "settings": {
-              "svg_code": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Layer_1\" viewbox=\"0 0 150 150\"><defs><style>.cls-1{fill:#9792e4}<\/style><\/defs><g id=\"Group_7774\"><path id=\"Path_13076\" class=\"cls-1\" d=\"M62,0C27.76,0,0,27.76,0,62s27.76,62,62,62,62-27.76,62-62C123.96,27.77,96.23,.04,62,0Zm0,120c-32.03,0-58-25.97-58-58S29.97,4,62,4s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"><\/path><g class=\"cls-2\"><path class=\"cls-1\" d=\"M67.04,81h-5.74v-23.05c0-2.75,.06-4.93,.2-6.54-.37,.39-.83,.82-1.38,1.29-.55,.47-2.37,1.97-5.48,4.49l-2.88-3.64,10.5-8.25h4.79v35.69Z\"><\/path><\/g><\/g><\/svg>",
+              "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" id=\"Layer_1\" viewbox=\"0 0 150 150\"><defs><style>.cls-1{fill:#9792e4}</style></defs><g id=\"Group_7774\"><path id=\"Path_13076\" class=\"cls-1\" d=\"M62,0C27.76,0,0,27.76,0,62s27.76,62,62,62,62-27.76,62-62C123.96,27.77,96.23,.04,62,0Zm0,120c-32.03,0-58-25.97-58-58S29.97,4,62,4s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"></path><g class=\"cls-2\"><path class=\"cls-1\" d=\"M67.04,81h-5.74v-23.05c0-2.75,.06-4.93,.2-6.54-.37,.39-.83,.82-1.38,1.29-.55,.47-2.37,1.97-5.48,4.49l-2.88-3.64,10.5-8.25h4.79v35.69Z\"></path></g></g></svg>",
               "feature_text": "Are you a Chill fan that wants to learn how to receive exclusive Chill discount codes?"
             }
           },
           "91dcb0f0-df4e-46a3-b6f5-3ce37f93f50d": {
             "type": "select",
             "settings": {
-              "svg_code": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Layer_2\" viewbox=\"0 0 150 150\"><defs><style>.cls-2{fill:#f3b846;}<\/style><\/defs><path class=\"cls-2\" d=\"M62.65,.45C28.41,.45,.65,28.21,.65,62.45s27.76,62,62,62,62-27.76,62-62C124.61,28.22,96.88,.49,62.65,.45Zm0,120c-32.03,0-58-25.97-58-58S30.62,4.45,62.65,4.45s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"><\/path><path class=\"cls-2\" d=\"M57.79,75.5v-.24l6.2-6.01c2.78-2.62,4.77-4.7,5.97-6.24,1.2-1.54,2.08-3.03,2.66-4.48,.58-1.45,.87-2.98,.87-4.59,0-2.93-1-5.26-3-6.99-2-1.73-4.66-2.6-7.98-2.6-2.11,0-4.11,.35-5.98,1.05-1.88,.7-3.8,1.88-5.79,3.56l3.1,3.78c1.68-1.31,3.15-2.23,4.43-2.73,1.28-.51,2.6-.76,3.97-.76,1.71,0,3.05,.46,4.02,1.39,.97,.93,1.45,2.2,1.45,3.81,0,1.18-.2,2.27-.61,3.3-.41,1.02-1.05,2.12-1.94,3.28-.89,1.16-2.69,3.14-5.41,5.92l-9.2,9.25v4.35h24.18v-5.05h-16.94Z\"><\/path><\/svg>",
+              "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" id=\"Layer_2\" viewbox=\"0 0 150 150\"><defs><style>.cls-2{fill:#f3b846;}</style></defs><path class=\"cls-2\" d=\"M62.65,.45C28.41,.45,.65,28.21,.65,62.45s27.76,62,62,62,62-27.76,62-62C124.61,28.22,96.88,.49,62.65,.45Zm0,120c-32.03,0-58-25.97-58-58S30.62,4.45,62.65,4.45s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"></path><path class=\"cls-2\" d=\"M57.79,75.5v-.24l6.2-6.01c2.78-2.62,4.77-4.7,5.97-6.24,1.2-1.54,2.08-3.03,2.66-4.48,.58-1.45,.87-2.98,.87-4.59,0-2.93-1-5.26-3-6.99-2-1.73-4.66-2.6-7.98-2.6-2.11,0-4.11,.35-5.98,1.05-1.88,.7-3.8,1.88-5.79,3.56l3.1,3.78c1.68-1.31,3.15-2.23,4.43-2.73,1.28-.51,2.6-.76,3.97-.76,1.71,0,3.05,.46,4.02,1.39,.97,.93,1.45,2.2,1.45,3.81,0,1.18-.2,2.27-.61,3.3-.41,1.02-1.05,2.12-1.94,3.28-.89,1.16-2.69,3.14-5.41,5.92l-9.2,9.25v4.35h24.18v-5.05h-16.94Z\"></path></svg>",
               "feature_text": "Are you a content creator that wants to receive free products?"
             }
           },
           "5d9ca245-fdd0-4729-b856-600f750b1a79": {
             "type": "select",
             "settings": {
-              "svg_code": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Layer_3\" viewbox=\"0 0 150 150\" fill=\"#6ec59f\"><defs><style>.cls-3{fill:#6ec59f;}<\/style><\/defs><path class=\"cls-3\" d=\"M62.5,0C28.26,0,.5,27.76,.5,62s27.76,62,62,62,62-27.76,62-62C124.46,27.77,96.73,.04,62.5,0Zm0,120c-32.03,0-58-25.97-58-58S30.47,4,62.5,4s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"><\/path><path class=\"cls-3\" d=\"M66,62.4v-.2c2.39-.52,4.25-1.53,5.57-3.04,1.32-1.51,1.98-3.39,1.98-5.65,0-2.72-1.01-4.85-3.03-6.4-2.02-1.55-4.83-2.32-8.42-2.32-4.33,0-8.13,1.21-11.4,3.61l2.81,4c1.71-1.11,3.19-1.85,4.44-2.23,1.25-.38,2.56-.57,3.91-.57,1.94,0,3.4,.42,4.39,1.25s1.49,2.01,1.49,3.54c0,3.94-2.85,5.91-8.54,5.91h-3.15v4.66h3.1c3.24,0,5.62,.45,7.13,1.34,1.51,.9,2.27,2.29,2.27,4.2,0,2.15-.68,3.74-2.05,4.76s-3.43,1.54-6.2,1.54c-1.56,0-3.19-.2-4.88-.61-1.69-.41-3.3-.98-4.81-1.73v5.1c2.72,1.29,6.05,1.93,10.01,1.93,4.48,0,7.93-.93,10.35-2.79,2.42-1.86,3.64-4.51,3.64-7.95,0-2.36-.72-4.25-2.15-5.68-1.43-1.42-3.58-2.32-6.45-2.67Z\"><\/path><\/svg>",
+              "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" id=\"Layer_3\" viewbox=\"0 0 150 150\" fill=\"#6ec59f\"><defs><style>.cls-3{fill:#6ec59f;}</style></defs><path class=\"cls-3\" d=\"M62.5,0C28.26,0,.5,27.76,.5,62s27.76,62,62,62,62-27.76,62-62C124.46,27.77,96.73,.04,62.5,0Zm0,120c-32.03,0-58-25.97-58-58S30.47,4,62.5,4s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"></path><path class=\"cls-3\" d=\"M66,62.4v-.2c2.39-.52,4.25-1.53,5.57-3.04,1.32-1.51,1.98-3.39,1.98-5.65,0-2.72-1.01-4.85-3.03-6.4-2.02-1.55-4.83-2.32-8.42-2.32-4.33,0-8.13,1.21-11.4,3.61l2.81,4c1.71-1.11,3.19-1.85,4.44-2.23,1.25-.38,2.56-.57,3.91-.57,1.94,0,3.4,.42,4.39,1.25s1.49,2.01,1.49,3.54c0,3.94-2.85,5.91-8.54,5.91h-3.15v4.66h3.1c3.24,0,5.62,.45,7.13,1.34,1.51,.9,2.27,2.29,2.27,4.2,0,2.15-.68,3.74-2.05,4.76s-3.43,1.54-6.2,1.54c-1.56,0-3.19-.2-4.88-.61-1.69-.41-3.3-.98-4.81-1.73v5.1c2.72,1.29,6.05,1.93,10.01,1.93,4.48,0,7.93-.93,10.35-2.79,2.42-1.86,3.64-4.51,3.64-7.95,0-2.36-.72-4.25-2.15-5.68-1.43-1.42-3.58-2.32-6.45-2.67Z\"></path></svg>",
               "feature_text": "Do you have more than 10k followers and want to become a Chill ambassador?"
             }
           },
           "e729031b-4001-4e9d-a544-b1f2427af1aa": {
             "type": "select",
             "settings": {
-              "svg_code": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Layer_4\" viewbox=\"0 0 150 150\"><defs><style>.cls-4{fill:#ffac9a;}<\/style><\/defs><path class=\"cls-4\" d=\"M62.5,0C28.26,0,.5,27.76,.5,62s27.76,62,62,62,62-27.76,62-62C124.46,27.77,96.73,.04,62.5,0Zm0,120c-32.03,0-58-25.97-58-58S30.47,4,62.5,4s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"><\/path><path class=\"cls-4\" d=\"M71.35,45.21h-5.59l-16.31,23.58v4.42h16.31v7.79h5.59v-7.79h4.81v-4.76h-4.81v-23.24Zm-5.59,14.28v8.96h-10.96l8.86-12.89c.98-1.53,1.69-2.83,2.15-3.91h.2c-.16,2.04-.24,4.65-.24,7.84Z\"><\/path><\/svg>",
+              "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" id=\"Layer_4\" viewbox=\"0 0 150 150\"><defs><style>.cls-4{fill:#ffac9a;}</style></defs><path class=\"cls-4\" d=\"M62.5,0C28.26,0,.5,27.76,.5,62s27.76,62,62,62,62-27.76,62-62C124.46,27.77,96.73,.04,62.5,0Zm0,120c-32.03,0-58-25.97-58-58S30.47,4,62.5,4s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"></path><path class=\"cls-4\" d=\"M71.35,45.21h-5.59l-16.31,23.58v4.42h16.31v7.79h5.59v-7.79h4.81v-4.76h-4.81v-23.24Zm-5.59,14.28v8.96h-10.96l8.86-12.89c.98-1.53,1.69-2.83,2.15-3.91h.2c-.16,2.04-.24,4.65-.24,7.84Z\"></path></svg>",
               "feature_text": "Are you a creative and want to work with us to make Chill even better?"
             }
           }
@@ -1481,14 +1490,14 @@
           "e729031b-4001-4e9d-a544-b1f2427af1aa"
         ],
         "settings": {
-          "title": "<p>Do you love <strong>Chill <\/strong>and want to get <strong>more involved?<\/strong><\/p>",
+          "title": "<p>Do you love <strong>Chill </strong>and want to get <strong>more involved?</strong></p>",
           "heading_font_size": 36,
-          "sub_text": "<p>Hit apply and let's talk<\/p>",
+          "sub_text": "<p>Hit apply and let's talk</p>",
           "apply_btn_text": "Apply",
           "apply_btn_color": "#9792e4",
           "apply_btn_font": 20,
-          "apply_btn_link": "https:\/\/ix5toa2rmt3.typeform.com\/chill",
-          "mobile_title": "<p>Do you love <strong>Chill <\/strong>and want to get <strong>more involved?<\/strong><\/p>",
+          "apply_btn_link": "https://ix5toa2rmt3.typeform.com/chill",
+          "mobile_title": "<p>Do you love <strong>Chill </strong>and want to get <strong>more involved?</strong></p>",
           "heading_font_size_mobile": 36
         }
       },
@@ -1498,43 +1507,43 @@
           "0a9a56c6-c250-487c-90bb-243a91a72746": {
             "type": "select",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel1.jpg"
+              "slider_image": "shopify://shop_images/AffiliateCarousel1.jpg"
             }
           },
           "0df27cc0-a8a5-48e1-a4e9-0eb837750388": {
             "type": "select",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel2.jpg"
+              "slider_image": "shopify://shop_images/AffiliateCarousel2.jpg"
             }
           },
           "5f23527b-b8de-4021-b0ca-f5a0b0e47086": {
             "type": "select",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel3.jpg"
+              "slider_image": "shopify://shop_images/AffiliateCarousel3.jpg"
             }
           },
           "a35ae6b2-ca89-4445-ad93-d4ee7b9a3fbd": {
             "type": "select",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel4.jpg"
+              "slider_image": "shopify://shop_images/AffiliateCarousel4.jpg"
             }
           },
           "9602729f-3311-4d07-8843-aaa26fc663df": {
             "type": "select",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel6.jpg"
+              "slider_image": "shopify://shop_images/AffiliateCarousel6.jpg"
             }
           },
           "38a44c56-1762-4a05-bec4-a4841984a847": {
             "type": "select",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel5.jpg"
+              "slider_image": "shopify://shop_images/AffiliateCarousel5.jpg"
             }
           },
           "8407c08d-b857-4312-bf05-fa9f417fffc4": {
             "type": "select",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/Customer_story_1.jpg"
+              "slider_image": "shopify://shop_images/Customer_story_1.jpg"
             }
           }
         },
@@ -1553,11 +1562,11 @@
       "newsletter": {
         "type": "newsletter",
         "settings": {
-          "newsletter_logo": "<svg id=\"Group_6347\" data-name=\"Group 6347\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"136.516\" height=\"136.512\" viewbox=\"0 0 136.516 136.512\">\n  <g id=\"Group_637\" data-name=\"Group 637\" transform=\"translate(0 0)\">\n    <g id=\"Group_636\" data-name=\"Group 636\" transform=\"translate(0 0)\">\n      <g id=\"Group_631\" data-name=\"Group 631\" transform=\"translate(4.578)\">\n        <path id=\"Path_8791\" data-name=\"Path 8791\" d=\"M64.571,191.328a1.477,1.477,0,0,1-1.33-2.08l1.6-3.757a67.074,67.074,0,0,1,123.391-.067l1.53,3.489a1.688,1.688,0,0,1-1.463,2.348h-5.188a1.651,1.651,0,0,1-1.463-.872l-3.725-7.38a58.864,58.864,0,0,0-102.7.067l-3.858,7.447a1.489,1.489,0,0,1-1.264.805Z\" transform=\"translate(-63.124 -144.7)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n      <g id=\"Group_632\" data-name=\"Group 632\" transform=\"translate(5.03 89.884)\">\n        <path id=\"Path_8792\" data-name=\"Path 8792\" d=\"M65.462,280.367l122.924-.067a2,2,0,0,1,1.8,2.818l-1.33,3.019a67.072,67.072,0,0,1-123.389.067l-1.53-3.422A1.712,1.712,0,0,1,65.462,280.367Zm110.551,8.185-97.248.067a1.686,1.686,0,0,0-1.4,2.617,58.841,58.841,0,0,0,99.776-.4A1.436,1.436,0,0,0,176.013,288.552Z\" transform=\"translate(-63.798 -280.3)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n      <g id=\"Group_633\" data-name=\"Group 633\" transform=\"translate(0 48.762)\">\n        <path id=\"Path_8793\" data-name=\"Path 8793\" d=\"M56.3,237.053c0-9.661,2.063-15.766,2.2-16.1l.532-1.476a10.347,10.347,0,0,0,.6-1.275H182.162c8.453,0,7.987.6,8.187,1.476l.466,1.476a65.242,65.242,0,0,1-.2,32.874l-.333,1.275a2.11,2.11,0,0,1-1.6,1.476l-1.265.2c-15.308,2.549-51.383,1.409-62.9-17.846-16.507,24.354-60.169,18.182-62.632,17.913l-1.464-.2a1.85,1.85,0,0,1-1.6-1.409l-.333-1.476A66.641,66.641,0,0,1,56.3,237.053Zm8.852-8.923a58.863,58.863,0,0,0,.2,19.389,1.984,1.984,0,0,0,1.8,1.677c13.711,1.006,47.656,2.08,53.447-21.4l.333-1.342H67.149A2.016,2.016,0,0,0,65.152,228.13Zm118.741,0a1.947,1.947,0,0,0-1.93-1.677H128.117l.333,1.342c5.591,22.744,42.6,22.408,53.447,21.469a1.989,1.989,0,0,0,1.731-1.543A57.14,57.14,0,0,0,183.893,228.13Z\" transform=\"translate(-56.3 -218.2)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n      <g id=\"Group_634\" data-name=\"Group 634\" transform=\"translate(90.018 37.65)\">\n        <path id=\"Path_8794\" data-name=\"Path 8794\" d=\"M192.1,203.244v4.227a2.018,2.018,0,0,0,2.013,2.013h25.226a1.971,1.971,0,0,0,1.744-2.885L219,202.372a1.934,1.934,0,0,0-1.744-1.073H194.18A1.9,1.9,0,0,0,192.1,203.244Z\" transform=\"translate(-192.1 -201.295)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n      <g id=\"Group_635\" data-name=\"Group 635\" transform=\"translate(17.693 38.052)\">\n        <path id=\"Path_8795\" data-name=\"Path 8795\" d=\"M111.875,203.913v4.227a2.018,2.018,0,0,1-2.013,2.013H84.636a1.971,1.971,0,0,1-1.744-2.885l2.08-4.227a2,2,0,0,1,1.744-1.141H109.8A1.993,1.993,0,0,1,111.875,203.913Z\" transform=\"translate(-82.671 -201.9)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n    <\/g>\n  <\/g>\n<\/svg>",
+          "newsletter_logo": "<svg id=\"Group_6347\" data-name=\"Group 6347\" xmlns=\"http://www.w3.org/2000/svg\" width=\"136.516\" height=\"136.512\" viewbox=\"0 0 136.516 136.512\">\n  <g id=\"Group_637\" data-name=\"Group 637\" transform=\"translate(0 0)\">\n    <g id=\"Group_636\" data-name=\"Group 636\" transform=\"translate(0 0)\">\n      <g id=\"Group_631\" data-name=\"Group 631\" transform=\"translate(4.578)\">\n        <path id=\"Path_8791\" data-name=\"Path 8791\" d=\"M64.571,191.328a1.477,1.477,0,0,1-1.33-2.08l1.6-3.757a67.074,67.074,0,0,1,123.391-.067l1.53,3.489a1.688,1.688,0,0,1-1.463,2.348h-5.188a1.651,1.651,0,0,1-1.463-.872l-3.725-7.38a58.864,58.864,0,0,0-102.7.067l-3.858,7.447a1.489,1.489,0,0,1-1.264.805Z\" transform=\"translate(-63.124 -144.7)\" fill=\"#9792e4\"></path>\n      </g>\n      <g id=\"Group_632\" data-name=\"Group 632\" transform=\"translate(5.03 89.884)\">\n        <path id=\"Path_8792\" data-name=\"Path 8792\" d=\"M65.462,280.367l122.924-.067a2,2,0,0,1,1.8,2.818l-1.33,3.019a67.072,67.072,0,0,1-123.389.067l-1.53-3.422A1.712,1.712,0,0,1,65.462,280.367Zm110.551,8.185-97.248.067a1.686,1.686,0,0,0-1.4,2.617,58.841,58.841,0,0,0,99.776-.4A1.436,1.436,0,0,0,176.013,288.552Z\" transform=\"translate(-63.798 -280.3)\" fill=\"#9792e4\"></path>\n      </g>\n      <g id=\"Group_633\" data-name=\"Group 633\" transform=\"translate(0 48.762)\">\n        <path id=\"Path_8793\" data-name=\"Path 8793\" d=\"M56.3,237.053c0-9.661,2.063-15.766,2.2-16.1l.532-1.476a10.347,10.347,0,0,0,.6-1.275H182.162c8.453,0,7.987.6,8.187,1.476l.466,1.476a65.242,65.242,0,0,1-.2,32.874l-.333,1.275a2.11,2.11,0,0,1-1.6,1.476l-1.265.2c-15.308,2.549-51.383,1.409-62.9-17.846-16.507,24.354-60.169,18.182-62.632,17.913l-1.464-.2a1.85,1.85,0,0,1-1.6-1.409l-.333-1.476A66.641,66.641,0,0,1,56.3,237.053Zm8.852-8.923a58.863,58.863,0,0,0,.2,19.389,1.984,1.984,0,0,0,1.8,1.677c13.711,1.006,47.656,2.08,53.447-21.4l.333-1.342H67.149A2.016,2.016,0,0,0,65.152,228.13Zm118.741,0a1.947,1.947,0,0,0-1.93-1.677H128.117l.333,1.342c5.591,22.744,42.6,22.408,53.447,21.469a1.989,1.989,0,0,0,1.731-1.543A57.14,57.14,0,0,0,183.893,228.13Z\" transform=\"translate(-56.3 -218.2)\" fill=\"#9792e4\"></path>\n      </g>\n      <g id=\"Group_634\" data-name=\"Group 634\" transform=\"translate(90.018 37.65)\">\n        <path id=\"Path_8794\" data-name=\"Path 8794\" d=\"M192.1,203.244v4.227a2.018,2.018,0,0,0,2.013,2.013h25.226a1.971,1.971,0,0,0,1.744-2.885L219,202.372a1.934,1.934,0,0,0-1.744-1.073H194.18A1.9,1.9,0,0,0,192.1,203.244Z\" transform=\"translate(-192.1 -201.295)\" fill=\"#9792e4\"></path>\n      </g>\n      <g id=\"Group_635\" data-name=\"Group 635\" transform=\"translate(17.693 38.052)\">\n        <path id=\"Path_8795\" data-name=\"Path 8795\" d=\"M111.875,203.913v4.227a2.018,2.018,0,0,1-2.013,2.013H84.636a1.971,1.971,0,0,1-1.744-2.885l2.08-4.227a2,2,0,0,1,1.744-1.141H109.8A1.993,1.993,0,0,1,111.875,203.913Z\" transform=\"translate(-82.671 -201.9)\" fill=\"#9792e4\"></path>\n      </g>\n    </g>\n  </g>\n</svg>",
           "title": "Keep Chilling",
-          "subheading": "<p>Stay in the loop + get <strong>15% off<\/strong> your first order!<\/p>",
-          "terms_cond": "<p>By signing up via email, you expressly consent to receive marketing communications from Chill Corp. See <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">privacy policy<\/a> and <a href=\"\/policies\/terms-of-service\" title=\"Terms of Service\">terms of service<\/a> for details.<\/p>",
-          "bg_image": "shopify:\/\/shop_images\/footer_background_op.jpg",
+          "subheading": "<p>Stay in the loop + get <strong>15% off</strong> your first order!</p>",
+          "terms_cond": "<p>By signing up via email, you expressly consent to receive marketing communications from Chill Corp. See <a href=\"/policies/privacy-policy\" title=\"Privacy Policy\">privacy policy</a> and <a href=\"/policies/terms-of-service\" title=\"Terms of Service\">terms of service</a> for details.</p>",
+          "bg_image": "shopify://shop_images/footer_background_op.jpg",
           "color_bg": "#ffffff"
         }
       },
@@ -1567,7 +1576,7 @@
           "preloader_desktop": "",
           "preloader_tablet": "",
           "preloader_mobile": "",
-          "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/2b03935476ed4ed3b8d21f58c8e1b472.mp4",
+          "video": "https://cdn.shopify.com/videos/c/o/v/2b03935476ed4ed3b8d21f58c8e1b472.mp4",
           "verification_block_header": "Are you over the age of 21?",
           "verification_block_description": "Please verify that you are 21 years of age or older to enter this site.",
           "button_text": "YES I’M 21+",
@@ -1606,30 +1615,30 @@
           "56e5df1e-27f3-480e-84c3-72288b009432"
         ],
         "settings": {
-          "continue_shopping_url": "shopify:\/\/collections\/shop",
+          "continue_shopping_url": "shopify://collections/shop",
           "shipping_policy_title": "Shipping Hours",
-          "shipping_policy_content": "<p><span style=\"text-decoration:underline\"><strong>Chill Products<\/strong><\/span><br\/><br\/>The Chill Fulfillment Center operates 9am-4pm Monday through Friday, 8am-12pm on Saturday and is closed on Sundays<strong>.<\/strong> Orders processed prior to 12pm will be shipped same day. Shipping times may vary.<br\/><br\/><span style=\"text-decoration:underline\"><strong>All Other Products<\/strong><\/span><\/p><p>Some products are fulfilled by their own independent vendors. Shipping times and costs may vary as disclosed on individual product pages and at checkout. <\/p><p>Orders originating outside the United States and all other inquiries email <a href=\"mailto:%20info@chill.com\" target=\"_blank\">info@chill.com<\/a>. We do not currently ship to Canada.<\/p><p>You will receive an email containing a tracking number once your package has been shipped. All pertinent order information will be communicated via tracking emails.<\/p>",
+          "shipping_policy_content": "<p><span style=\"text-decoration:underline\"><strong>Chill Products</strong></span><br/><br/>The Chill Fulfillment Center operates 9am-4pm Monday through Friday, 8am-12pm on Saturday and is closed on Sundays<strong>.</strong> Orders processed prior to 12pm will be shipped same day. Shipping times may vary.<br/><br/><span style=\"text-decoration:underline\"><strong>All Other Products</strong></span></p><p>Some products are fulfilled by their own independent vendors. Shipping times and costs may vary as disclosed on individual product pages and at checkout. </p><p>Orders originating outside the United States and all other inquiries email <a href=\"mailto:%20info@chill.com\" target=\"_blank\">info@chill.com</a>. We do not currently ship to Canada.</p><p>You will receive an email containing a tracking number once your package has been shipped. All pertinent order information will be communicated via tracking emails.</p>",
           "enable_promotion": false
         }
       },
       "collab-with-us-banner": {
         "type": "collab-with-us-banner",
         "settings": {
-          "banner-image": "shopify:\/\/shop_images\/Desktop_banner.webp",
-          "banner-image_mobile": "shopify:\/\/shop_images\/Desktop_banner.webp",
+          "banner-image": "shopify://shop_images/Desktop_banner.webp",
+          "banner-image_mobile": "shopify://shop_images/Desktop_banner.webp",
           "title_color": "#ffffff",
-          "title": "<p><strong>Collab <\/strong>with<strong> us<\/strong><\/p>",
+          "title": "<p><strong>Collab </strong>with<strong> us</strong></p>",
           "title_font_size": 70,
           "sub_title": "",
           "subtitle_color": "#ffffff",
           "sub_title_font_size": 16,
           "join_now_btn": true,
           "banner_btn_content": "Join Now",
-          "banner_btn_url": "https:\/\/ix5toa2rmt3.typeform.com\/chill",
+          "banner_btn_url": "https://ix5toa2rmt3.typeform.com/chill",
           "banner_btn_text_color": "#ffffff",
           "banner_btn_color": "#ffac9a",
           "banner_btn_font_size": 42,
-          "mobile_title": "<p><strong>Collab <\/strong>with<strong> us <\/strong><\/p>",
+          "mobile_title": "<p><strong>Collab </strong>with<strong> us </strong></p>",
           "title_color_mobile": "#000000",
           "title_font_size_mobile": 36,
           "sub_title_mobile": "",
@@ -1645,28 +1654,28 @@
           "06316f28-f227-41c7-9457-75da67468bb1": {
             "type": "select",
             "settings": {
-              "svg_code": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Layer_1\" viewbox=\"0 0 150 150\"><defs><style>.cls-1{fill:#9792e4}<\/style><\/defs><g id=\"Group_7774\"><path id=\"Path_13076\" class=\"cls-1\" d=\"M62,0C27.76,0,0,27.76,0,62s27.76,62,62,62,62-27.76,62-62C123.96,27.77,96.23,.04,62,0Zm0,120c-32.03,0-58-25.97-58-58S29.97,4,62,4s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"><\/path><g class=\"cls-2\"><path class=\"cls-1\" d=\"M67.04,81h-5.74v-23.05c0-2.75,.06-4.93,.2-6.54-.37,.39-.83,.82-1.38,1.29-.55,.47-2.37,1.97-5.48,4.49l-2.88-3.64,10.5-8.25h4.79v35.69Z\"><\/path><\/g><\/g><\/svg>",
+              "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" id=\"Layer_1\" viewbox=\"0 0 150 150\"><defs><style>.cls-1{fill:#9792e4}</style></defs><g id=\"Group_7774\"><path id=\"Path_13076\" class=\"cls-1\" d=\"M62,0C27.76,0,0,27.76,0,62s27.76,62,62,62,62-27.76,62-62C123.96,27.77,96.23,.04,62,0Zm0,120c-32.03,0-58-25.97-58-58S29.97,4,62,4s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"></path><g class=\"cls-2\"><path class=\"cls-1\" d=\"M67.04,81h-5.74v-23.05c0-2.75,.06-4.93,.2-6.54-.37,.39-.83,.82-1.38,1.29-.55,.47-2.37,1.97-5.48,4.49l-2.88-3.64,10.5-8.25h4.79v35.69Z\"></path></g></g></svg>",
               "feature_text": "Are you a Chill fan that wants to learn how to receive exclusive Chill discount codes?"
             }
           },
           "5bf4613e-0d90-4730-8147-a9124ebfdcaf": {
             "type": "select",
             "settings": {
-              "svg_code": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Layer_2\" viewbox=\"0 0 150 150\"><defs><style>.cls-2{fill:#f3b846;}<\/style><\/defs><path class=\"cls-2\" d=\"M62.65,.45C28.41,.45,.65,28.21,.65,62.45s27.76,62,62,62,62-27.76,62-62C124.61,28.22,96.88,.49,62.65,.45Zm0,120c-32.03,0-58-25.97-58-58S30.62,4.45,62.65,4.45s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"><\/path><path class=\"cls-2\" d=\"M57.79,75.5v-.24l6.2-6.01c2.78-2.62,4.77-4.7,5.97-6.24,1.2-1.54,2.08-3.03,2.66-4.48,.58-1.45,.87-2.98,.87-4.59,0-2.93-1-5.26-3-6.99-2-1.73-4.66-2.6-7.98-2.6-2.11,0-4.11,.35-5.98,1.05-1.88,.7-3.8,1.88-5.79,3.56l3.1,3.78c1.68-1.31,3.15-2.23,4.43-2.73,1.28-.51,2.6-.76,3.97-.76,1.71,0,3.05,.46,4.02,1.39,.97,.93,1.45,2.2,1.45,3.81,0,1.18-.2,2.27-.61,3.3-.41,1.02-1.05,2.12-1.94,3.28-.89,1.16-2.69,3.14-5.41,5.92l-9.2,9.25v4.35h24.18v-5.05h-16.94Z\"><\/path><\/svg>",
+              "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" id=\"Layer_2\" viewbox=\"0 0 150 150\"><defs><style>.cls-2{fill:#f3b846;}</style></defs><path class=\"cls-2\" d=\"M62.65,.45C28.41,.45,.65,28.21,.65,62.45s27.76,62,62,62,62-27.76,62-62C124.61,28.22,96.88,.49,62.65,.45Zm0,120c-32.03,0-58-25.97-58-58S30.62,4.45,62.65,4.45s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"></path><path class=\"cls-2\" d=\"M57.79,75.5v-.24l6.2-6.01c2.78-2.62,4.77-4.7,5.97-6.24,1.2-1.54,2.08-3.03,2.66-4.48,.58-1.45,.87-2.98,.87-4.59,0-2.93-1-5.26-3-6.99-2-1.73-4.66-2.6-7.98-2.6-2.11,0-4.11,.35-5.98,1.05-1.88,.7-3.8,1.88-5.79,3.56l3.1,3.78c1.68-1.31,3.15-2.23,4.43-2.73,1.28-.51,2.6-.76,3.97-.76,1.71,0,3.05,.46,4.02,1.39,.97,.93,1.45,2.2,1.45,3.81,0,1.18-.2,2.27-.61,3.3-.41,1.02-1.05,2.12-1.94,3.28-.89,1.16-2.69,3.14-5.41,5.92l-9.2,9.25v4.35h24.18v-5.05h-16.94Z\"></path></svg>",
               "feature_text": "Are you a content creator that wants to receive free products?"
             }
           },
           "c510396c-551a-45bc-b484-e72b46b25263": {
             "type": "select",
             "settings": {
-              "svg_code": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Layer_3\" viewbox=\"0 0 150 150\" fill=\"#6ec59f\"><defs><style>.cls-3{fill:#6ec59f;}<\/style><\/defs><path class=\"cls-3\" d=\"M62.5,0C28.26,0,.5,27.76,.5,62s27.76,62,62,62,62-27.76,62-62C124.46,27.77,96.73,.04,62.5,0Zm0,120c-32.03,0-58-25.97-58-58S30.47,4,62.5,4s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"><\/path><path class=\"cls-3\" d=\"M66,62.4v-.2c2.39-.52,4.25-1.53,5.57-3.04,1.32-1.51,1.98-3.39,1.98-5.65,0-2.72-1.01-4.85-3.03-6.4-2.02-1.55-4.83-2.32-8.42-2.32-4.33,0-8.13,1.21-11.4,3.61l2.81,4c1.71-1.11,3.19-1.85,4.44-2.23,1.25-.38,2.56-.57,3.91-.57,1.94,0,3.4,.42,4.39,1.25s1.49,2.01,1.49,3.54c0,3.94-2.85,5.91-8.54,5.91h-3.15v4.66h3.1c3.24,0,5.62,.45,7.13,1.34,1.51,.9,2.27,2.29,2.27,4.2,0,2.15-.68,3.74-2.05,4.76s-3.43,1.54-6.2,1.54c-1.56,0-3.19-.2-4.88-.61-1.69-.41-3.3-.98-4.81-1.73v5.1c2.72,1.29,6.05,1.93,10.01,1.93,4.48,0,7.93-.93,10.35-2.79,2.42-1.86,3.64-4.51,3.64-7.95,0-2.36-.72-4.25-2.15-5.68-1.43-1.42-3.58-2.32-6.45-2.67Z\"><\/path><\/svg>",
+              "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" id=\"Layer_3\" viewbox=\"0 0 150 150\" fill=\"#6ec59f\"><defs><style>.cls-3{fill:#6ec59f;}</style></defs><path class=\"cls-3\" d=\"M62.5,0C28.26,0,.5,27.76,.5,62s27.76,62,62,62,62-27.76,62-62C124.46,27.77,96.73,.04,62.5,0Zm0,120c-32.03,0-58-25.97-58-58S30.47,4,62.5,4s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"></path><path class=\"cls-3\" d=\"M66,62.4v-.2c2.39-.52,4.25-1.53,5.57-3.04,1.32-1.51,1.98-3.39,1.98-5.65,0-2.72-1.01-4.85-3.03-6.4-2.02-1.55-4.83-2.32-8.42-2.32-4.33,0-8.13,1.21-11.4,3.61l2.81,4c1.71-1.11,3.19-1.85,4.44-2.23,1.25-.38,2.56-.57,3.91-.57,1.94,0,3.4,.42,4.39,1.25s1.49,2.01,1.49,3.54c0,3.94-2.85,5.91-8.54,5.91h-3.15v4.66h3.1c3.24,0,5.62,.45,7.13,1.34,1.51,.9,2.27,2.29,2.27,4.2,0,2.15-.68,3.74-2.05,4.76s-3.43,1.54-6.2,1.54c-1.56,0-3.19-.2-4.88-.61-1.69-.41-3.3-.98-4.81-1.73v5.1c2.72,1.29,6.05,1.93,10.01,1.93,4.48,0,7.93-.93,10.35-2.79,2.42-1.86,3.64-4.51,3.64-7.95,0-2.36-.72-4.25-2.15-5.68-1.43-1.42-3.58-2.32-6.45-2.67Z\"></path></svg>",
               "feature_text": "Do you have more than 10k followers and want to become a Chill ambassador?"
             }
           },
           "d08f9710-c6f5-4fbf-9902-d8456584521d": {
             "type": "select",
             "settings": {
-              "svg_code": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Layer_4\" viewbox=\"0 0 150 150\"><defs><style>.cls-4{fill:#ffac9a;}<\/style><\/defs><path class=\"cls-4\" d=\"M62.5,0C28.26,0,.5,27.76,.5,62s27.76,62,62,62,62-27.76,62-62C124.46,27.77,96.73,.04,62.5,0Zm0,120c-32.03,0-58-25.97-58-58S30.47,4,62.5,4s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"><\/path><path class=\"cls-4\" d=\"M71.35,45.21h-5.59l-16.31,23.58v4.42h16.31v7.79h5.59v-7.79h4.81v-4.76h-4.81v-23.24Zm-5.59,14.28v8.96h-10.96l8.86-12.89c.98-1.53,1.69-2.83,2.15-3.91h.2c-.16,2.04-.24,4.65-.24,7.84Z\"><\/path><\/svg>",
+              "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" id=\"Layer_4\" viewbox=\"0 0 150 150\"><defs><style>.cls-4{fill:#ffac9a;}</style></defs><path class=\"cls-4\" d=\"M62.5,0C28.26,0,.5,27.76,.5,62s27.76,62,62,62,62-27.76,62-62C124.46,27.77,96.73,.04,62.5,0Zm0,120c-32.03,0-58-25.97-58-58S30.47,4,62.5,4s58,25.97,58,58c-.04,32.02-25.98,57.96-58,58Z\"></path><path class=\"cls-4\" d=\"M71.35,45.21h-5.59l-16.31,23.58v4.42h16.31v7.79h5.59v-7.79h4.81v-4.76h-4.81v-23.24Zm-5.59,14.28v8.96h-10.96l8.86-12.89c.98-1.53,1.69-2.83,2.15-3.91h.2c-.16,2.04-.24,4.65-.24,7.84Z\"></path></svg>",
               "feature_text": "Are you a creative and want to work with us to make Chill even better?"
             }
           }
@@ -1678,14 +1687,14 @@
           "d08f9710-c6f5-4fbf-9902-d8456584521d"
         ],
         "settings": {
-          "title": "<p>Do you love <strong>Chill <\/strong>and want to get <strong>more involved?<\/strong><\/p>",
+          "title": "<p>Do you love <strong>Chill </strong>and want to get <strong>more involved?</strong></p>",
           "heading_font_size": 36,
-          "sub_text": "<p>Hit apply and let's talk<\/p>",
+          "sub_text": "<p>Hit apply and let's talk</p>",
           "apply_btn_text": "Apply",
           "apply_btn_color": "#9792e4",
           "apply_btn_font": 20,
-          "apply_btn_link": "https:\/\/ix5toa2rmt3.typeform.com\/chill",
-          "mobile_title": "<p>Do you love <strong>Chill <\/strong>and want to get <strong>more involved?<\/strong><\/p>",
+          "apply_btn_link": "https://ix5toa2rmt3.typeform.com/chill",
+          "mobile_title": "<p>Do you love <strong>Chill </strong>and want to get <strong>more involved?</strong></p>",
           "heading_font_size_mobile": 36
         }
       },
@@ -1695,43 +1704,43 @@
           "f6df5980-bd7b-4873-8190-7bb20699ac98": {
             "type": "select",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel1_17662d40-9049-4d45-b4b1-a778a4c7e957.jpg"
+              "slider_image": "shopify://shop_images/AffiliateCarousel1_17662d40-9049-4d45-b4b1-a778a4c7e957.jpg"
             }
           },
           "615980bf-7a3f-4838-8f52-8664dbd37655": {
             "type": "select",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel2.webp"
+              "slider_image": "shopify://shop_images/AffiliateCarousel2.webp"
             }
           },
           "5b596ac8-1d5e-4ac0-848d-be3cc2a6f80c": {
             "type": "select",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel3_20183812-0f71-4474-97c5-cd4e866f0c53.jpg"
+              "slider_image": "shopify://shop_images/AffiliateCarousel3_20183812-0f71-4474-97c5-cd4e866f0c53.jpg"
             }
           },
           "5415e48e-ad75-4a69-8f8d-bf11a2c17d42": {
             "type": "select",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel4.webp"
+              "slider_image": "shopify://shop_images/AffiliateCarousel4.webp"
             }
           },
           "441d71af-223f-4bed-b78b-0aa6df2e2870": {
             "type": "select",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel6_a52297d5-74d1-4490-a6e7-3b1af45fb15e.jpg"
+              "slider_image": "shopify://shop_images/AffiliateCarousel6_a52297d5-74d1-4490-a6e7-3b1af45fb15e.jpg"
             }
           },
           "153fab25-2d39-4799-a12e-12a1c3dfe9e6": {
             "type": "select",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel5.webp"
+              "slider_image": "shopify://shop_images/AffiliateCarousel5.webp"
             }
           },
           "1c4652d4-07cb-4001-95e4-3312e85b41e8": {
             "type": "select",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/Customer_story_1_0edfc25c-9709-47ae-9135-9289a1bb2d95.jpg"
+              "slider_image": "shopify://shop_images/Customer_story_1_0edfc25c-9709-47ae-9135-9289a1bb2d95.jpg"
             }
           }
         },
@@ -1750,19 +1759,19 @@
       "vape-header": {
         "type": "vape-header",
         "settings": {
-          "header_icon": "shopify:\/\/shop_images\/ChillZER0-Logo-Blk_1_1.png",
-          "header_link": "shopify:\/\/collections\/chill-zero",
-          "chill_header": "shopify:\/\/shop_images\/Chill_Logo.png",
-          "chill_header_link": "https:\/\/chill.com",
+          "header_icon": "shopify://shop_images/ChillZER0-Logo-Blk_1_1.png",
+          "header_link": "shopify://collections/chill-zero",
+          "chill_header": "shopify://shop_images/Chill_Logo.png",
+          "chill_header_link": "https://chill.com",
           "header_button_text": "Buy Now",
-          "header_button_link": "shopify:\/\/collections\/chill-zero",
+          "header_button_link": "shopify://collections/chill-zero",
           "header_button_color": "#9792e4"
         }
       },
       "waitlist-drawer": {
         "type": "waitlist-drawer",
         "settings": {
-          "waitlist_message": "<p>Interested in trying <strong>CHILLZERO<\/strong>? <\/p><p>We'll let you know when we're shipping in your area and send you 20% off your favourite flavor!<\/p>",
+          "waitlist_message": "<p>Interested in trying <strong>CHILLZERO</strong>? </p><p>We'll let you know when we're shipping in your area and send you 20% off your favourite flavor!</p>",
           "join_text": "Join waitlist",
           "join_button_color": "#9792e4"
         }
@@ -1773,20 +1782,20 @@
     ],
     "blocks": {
       "733389323033596483": {
-        "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "type": "shopify://apps/okendo-product-reviews-ugc/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
         "disabled": false,
         "settings": {
           "show_preview_data": true
         }
       },
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
         }
       },
       "17151115064775110295": {
-        "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/recharge-theme\/371eed76-0b44-4869-9813-730372ea378e",
+        "type": "shopify://apps/recharge-subscriptions/blocks/recharge-theme/371eed76-0b44-4869-9813-730372ea378e",
         "disabled": true,
         "settings": {
           "color_brand": "#467C99",

@@ -829,39 +829,14 @@ predictive-search .search_section input {
 .product-tags {
   position: absolute;
   display: flex;
+  flex-direction: column;
   top: 20px;
   left: 20px;
   pointer-events: none;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
-
-.product_sale-tag{
-  position: absolute;
-  display: flex;
-  top: 20px;
-  right: 20px;
-  pointer-events: none;
-  justify-content: space-between;
-  align-items: center;
-}
-.product_sale-tag-pdp{
-  border-radius: 45px;
-  background: #3B56FB;
-  padding: 12px;
-  font-size: 14px;
-  line-height: 12px;
-  color: #fff;
-  font-weight: 800;
-  font-family: "Open Sans";
-}
-.product-tags .product-tags__wrapper , .product_sale-tag .product-tags__wrapper{
-  height: 64px;
-  width: 64px;
-  display: flex;
-  justify-content: center;
-}
-.product-tags product-saletag__wrappe{
+.product-tags .product-tags__wrapper {
   height: 64px;
   width: 64px;
   display: flex;
@@ -875,48 +850,20 @@ predictive-search .search_section input {
   gap: 0;
   width: 100%;
 }
-..product-tags .product-tags__wrapper .product-tag span {
-  font-size: 16px;
-  line-height: 17px;
-  font-family: "Open Sans";
-  font-weight: 600;
-}
-.product-sale-value{
-  font-size: 11px;
-  line-height: 12px;
-  font-family: "Open Sans";
-  font-weight: 800;
-  font-size: 11px;
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #3B56FB;
-  padding: 5px;
-  width: 100%;
-}
 .product-tags .product-tags__wrapper .product-tag span {
   font-size: 16px;
   line-height: 17px;
   font-family: "Open Sans";
   font-weight: 600;
 }
-.product-tags .product-tags__wrapper .product-tag.product-tag--sold-out span {
+.product-tags .product-tags__wrapper .product-tag.product-tag--sold-out {
   border-radius: 45px;
-  font-size:12px;
-  font-weight:600px !important;
 }
 .product-tags .product-tags__wrapper .product-tag.product-tag--sold-out .bold_text {
+  font-size: 16px;
   line-height: 17px;
   font-family: "Open Sans";
   font-weight: 800;
-  font-size:12px;
-}
-.product-tag--sold-out{
-  border-radius: 45px;
-  background: #EFEBDA !important;
-  color: #000 !important;
 }
 .product-tags .product-tags__wrapper .product-tag.product-tag--sale {
   text-transform: uppercase;
@@ -931,23 +878,12 @@ predictive-search .search_section input {
 
 .product-form .product-label-list {
   width: fit-content;
-  display: flex;
-  flex-direction: row-reverse;
-  column-gap: 16px;
+  display: block;
   margin-bottom: 20px;
-}
-.product-form .product-tags .product-tags__wrapper .product-tag span {
-  font-size: 14px;
-}
-.product-form .product-tags .product-tags__wrapper .product-tag.product-tag--sale .bold_text{
-  font-size: 14px;
 }
 .product-form .product-label-list .product-tags {
   position: unset;
-  flex-direction: flex-direction: row-reverse;;
-}
-.product-form .product-label-list .product_sale-tag {
-  position: unset;
+  flex-direction: row;
 }
 .product-form .product-label-list .product-tags .product-tags__wrapper {
   height: 33px;
@@ -956,7 +892,7 @@ predictive-search .search_section input {
 .product-form .product-label-list .product-tags .product-tags__wrapper .product-tag--sale {
   gap: 3px;
   flex-direction: row;
-  padding: 18px 16px;
+  padding: 8px 16px;
 }
 
 /* header css here */
@@ -11947,9 +11883,6 @@ body.cart-drawer-open, body.vape-drawer-open {
   .vape_header_wrapper .vape_header_container .chill_header {
     width: 84px;
   }
-  .product-form .product-label-list {
-  column-gap: 8px;
-}
 }
 @media (min-width: 521px) and (max-width: 767px) {
   .vape_header_wrapper .vape_header_container .chill_header {
@@ -13490,4 +13423,97 @@ div .okeReviews .oke-reviewCarousel {
 }
 .reward-banner__video-mobile video {
   object-position: unset !important;
+}
+
+.product_page_offer, .mystery_gift_offer {
+  border-radius: 10px;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  gap: 6px;
+  align-items: flex-start;
+  padding: 13px 16px 21px 16px;
+}
+.product_page_offer svg, .mystery_gift_offer svg {
+  width: 37px;
+  height: 37px;
+}
+.product_page_offer .offer_title, .mystery_gift_offer .offer_title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product_page_offer .offer_title .title, .mystery_gift_offer .offer_title .title {
+  margin-bottom: 0;
+}
+.product_page_offer .offer_title .title p, .mystery_gift_offer .offer_title .title p {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+.product_page_offer .offer_description p, .mystery_gift_offer .offer_description p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+@media (max-width: 500px) {
+  .product_page_offer .offer_description_product_page p, .mystery_gift_offer .offer_description_product_page p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 841px) {
+  .product_page_offer, .mystery_gift_offer {
+    gap: 6px;
+    padding: 13px;
+    margin-bottom: 35px;
+  }
+}
+.product_page_offer .offer_cta, .mystery_gift_offer .offer_cta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.product_page_offer .offer_cta .redirection_cta button, .mystery_gift_offer .offer_cta .redirection_cta button {
+  border-radius: 45px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .product_page_offer .offer_cta .redirection_cta button, .mystery_gift_offer .offer_cta .redirection_cta button {
+    width: 100%;
+  }
+}
+.product_page_offer .offer_cta .offer_terms_and_conditions, .mystery_gift_offer .offer_cta .offer_terms_and_conditions {
+  font-size: 12px;
+  color: #797979;
+  margin: 0;
+}
+@media (max-width: 841px) {
+  .product_page_offer .offer_cta, .mystery_gift_offer .offer_cta {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .product_page_offer .offer_cta .redirection_cta, .mystery_gift_offer .offer_cta .redirection_cta {
+    width: 100%;
+  }
+  .product_page_offer .offer_cta .offer_terms_and_conditions, .mystery_gift_offer .offer_cta .offer_terms_and_conditions {
+    font-size: 10px;
+  }
+}
+
+.mystery_gift_offer {
+  width: unset;
+  margin: 1em 25px;
+  color: #000;
+}
+.mystery_gift_offer .offer_title .title p {
+  font-size: 18px;
+}
+
+.product_page_offer {
+  margin: 0 0 36px 0 !important;
 }

@@ -110,6 +110,64 @@
               </p>
             {%- endif -%}
 
+            {% comment %} Mystery gift Offer  ----->  start {% endcomment %}
+            {% assign cost_difference_to_avail_offer = 5000 %}
+            {% liquid 
+              assign offer_on_product = false
+              assign total_offer_product_price = 0
+              for item in cart.items
+                 for coll in item.product.collections 
+                   if coll == settings.offer_collection 
+                     assign offer_on_product = true
+                     assign total_offer_product_price = total_offer_product_price | plus: item.final_line_price
+                   endif 
+                  endfor 
+               endfor 
+            %}
+            {% assign cost_difference_to_avail_offer = cost_difference_to_avail_offer | minus: total_offer_product_price %}
+            {% if settings.start_mystery_gift_offer %}
+              {% if offer_on_product == true %}
+                {% if cost_difference_to_avail_offer > 0 %}
+                  <div class="mystery_gift_offer">
+                    <div class="offer_title">
+                      {% if settings.offer_svg != blank %}
+                        {{ settings.offer_svg }}
+                      {% endif %}
+                      <span class="title"><p>Don't miss the Offer</p></span>
+                    </div>
+                    <div class="offer_description">
+                      <span class="description"><p>Buy 1 Rado Life Product, Get 2nd <strong>Free!</strong></p></span>
+                    </div>
+                    <div class="offer_cta">
+                      {% if settings.offer_cta_url != blank %}
+                        <a href="{{ settings.offer_cta_url }}" class="redirection_cta"><button style="background: {{ settings.offer_cta_background_color }}; border: 1px solid {{settings.offer_cta_background_color}};">Get it now</button></a>
+                      {% endif %}
+                      <p class="offer_terms_and_conditions">*Remember to Add the 2nd Product to Your Cart to Enjoy the Discount.</p>
+                    </div>
+                  </div>
+                {% endif %}
+              {% else %}
+                <div class="mystery_gift_offer">
+                    <div class="offer_title">
+                      {% if settings.offer_svg != blank %}
+                        {{ settings.offer_svg }}
+                      {% endif %}
+                      <span class="title">{{ settings.offer_title }}</span>
+                    </div>
+                    <div class="offer_description">
+                      <span class="description">{{ settings.offer_description }}</span>
+                    </div>
+                    <div class="offer_cta">
+                      {% if settings.offer_cta_url != blank %}
+                        <a href="{{ settings.offer_cta_url }}" class="redirection_cta"><button style="background: {{ settings.offer_cta_background_color }}; border: 1px solid {{settings.offer_cta_background_color}};">Get it now</button></a>
+                      {% endif %}
+                      <p class="offer_terms_and_conditions">*offer valid only for chill vape products cart value</p>
+                    </div>
+                </div>
+              {% endif %}
+          {% endif %}
+            {% comment %} Mystery gift Offer  ----->  end {% endcomment %}
+
             {% comment %} Free 10mg gummies single pack on each order containing 25mg Gummies single pack {% endcomment %}
             {% assign free10mgGummies = false %}
             {% for item in cart.items %}

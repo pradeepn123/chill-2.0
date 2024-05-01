@@ -4,7 +4,7 @@
       "type": "main-product",
       "blocks": {
         "04ea0ec9-7068-4678-a85a-c3170bb2d27e": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
           }
@@ -31,12 +31,17 @@
           "settings": {
           }
         },
+        "mystery_gift_zVLXtX": {
+          "type": "mystery_gift",
+          "settings": {
+          }
+        },
         "5d0296d7-8f69-4317-9158-2e0a296a5d28": {
           "type": "product_message_tag",
           "settings": {
             "prod_message_collection": "nubu",
-            "prod_message_icon": "shopify:\/\/shop_images\/Frame_1.svg",
-            "prod_message_desc": "<p><strong>Not available in California, New Hampshire, New Mexico, North Carolina, North Dakota, Oklahoma, Utah, West Virginia, Wisconsin<\/strong><\/p>",
+            "prod_message_icon": "shopify://shop_images/Frame_1.svg",
+            "prod_message_desc": "<p><strong>Not available in California, New Hampshire, New Mexico, North Carolina, North Dakota, Oklahoma, Utah, West Virginia, Wisconsin</strong></p>",
             "prod_message_bgcolor": "#fffbfa",
             "prod_message_shadow": "#ffac9a"
           }
@@ -99,8 +104,8 @@
         "6e749490-9e99-4967-8183-d437c80add89": {
           "type": "gummies_offer",
           "settings": {
-            "gummies_offer_text": "<p>☝️ Get these Tropical and Berry CBD Gummies for a whopping 50% discount when you purchase any 👉  <a href=\"\/collections\/mad-tasty-sample-pack-wellness-boost\" title=\"Mad Tasty\">Mad Tasty<\/a> Products.<\/p>",
-            "gummies_offer_text_for_madtasty": "<p>Buy this product and Get 👉 <strong>50% Discount<\/strong> on the Tropical and Berry CBD gummies.<\/p>"
+            "gummies_offer_text": "<p>☝️ Get these Tropical and Berry CBD Gummies for a whopping 50% discount when you purchase any 👉  <a href=\"/collections/mad-tasty-sample-pack-wellness-boost\" title=\"Mad Tasty\">Mad Tasty</a> Products.</p>",
+            "gummies_offer_text_for_madtasty": "<p>Buy this product and Get 👉 <strong>50% Discount</strong> on the Tropical and Berry CBD gummies.</p>"
           }
         },
         "57631e90-1baf-4e41-9691-499be1451989": {
@@ -108,7 +113,7 @@
           "disabled": true,
           "settings": {
             "custom_class_product_page": "chill_holiday_sale_text",
-            "richtext": "<p>Extra 20% off at checkout until midnight 24th December only for one time purchase products.<\/p>",
+            "richtext": "<p>Extra 20% off at checkout until midnight 24th December only for one time purchase products.</p>",
             "icon": "",
             "icon_size": "small",
             "enable_box": false,
@@ -121,7 +126,7 @@
           "settings": {
             "title": "See Ingredients",
             "icon": "",
-            "content": "<p>{{ product.metafields.settings.ingredients | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.settings.ingredients | metafield_tag }}</p>",
             "test_result_link": "",
             "page": "",
             "open": false,
@@ -133,7 +138,7 @@
           "settings": {
             "title": "Shipping Information",
             "icon": "",
-            "content": "<p>{{ product.metafields.settings.shipping_info | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.settings.shipping_info | metafield_tag }}</p>",
             "test_result_link": "",
             "page": "",
             "open": false,
@@ -145,7 +150,7 @@
           "settings": {
             "title": "See our test results here",
             "icon": "",
-            "content": "<p>{{ product.metafields.custom.test_result_description | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.test_result_description | metafield_tag }}</p>",
             "test_result_link": "{{ product.metafields.product_accordion.product_custom_url.value }}",
             "page": "",
             "open": false,
@@ -157,7 +162,7 @@
           "settings": {
             "title": "Directions for use",
             "icon": "",
-            "content": "<p>{{ product.metafields.custom.direction_to_use | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.direction_to_use | metafield_tag }}</p>",
             "test_result_link": "",
             "page": "",
             "open": false,
@@ -168,7 +173,7 @@
           "type": "richtext",
           "settings": {
             "custom_class_product_page": "",
-            "richtext": "<p><strong>Valid across our full range of products on <\/strong><a href=\"https:\/\/chill.com\/\" title=\"https:\/\/chill.com\/\"><strong>Chill.com<\/strong><\/a><\/p>",
+            "richtext": "<p><strong>Valid across our full range of products on </strong><a href=\"https://chill.com/\" title=\"https://chill.com/\"><strong>Chill.com</strong></a></p>",
             "icon": "",
             "icon_size": "small",
             "enable_box": false,
@@ -183,6 +188,7 @@
         "price",
         "vendor",
         "d6658578-a2ff-4639-baeb-9356a9109408",
+        "mystery_gift_zVLXtX",
         "5d0296d7-8f69-4317-9158-2e0a296a5d28",
         "description",
         "divider",
@@ -227,7 +233,7 @@
       ],
       "settings": {
         "full_width": true,
-        "code": "{% if product.id == 6579331989662 %}\n<div class=\"product_ingredients_section \">\n  <div class=\"product_ingredients_sec_wrapper\">\n<div class=\"heading_text align-center\">\n<h2 style=\"font-weight: 700;\">CBD: A Chewing Tobacco Alternative<\/h2>\n<p>As CBD becomes increasingly popular, the benefits are becoming crystal clear. There is no question that these CBD pouches are relaxing and delicious. Additionally, many traditional tobacco find that  CBD is a great alternative to  chewing tobacco.<\/p>\n\n<p>If you are a tobacco user or have struggled to find an alternative to traditional nicotine pouches, these CBD chewing tobacco alternatives might be the solution. No more tobacco smoke. No constant spitting up brown gunk. No more nicotine mood swings.<\/p>\n\n<p>Instead, find your  mental clarity and enjoy effective CBD.  \n<h2 style=\"font-weight: 700;\">Join the CBD Revolution<\/h2>\n<p>The success rate of CBD products continues to demonstrate how they are helping people all over the country. And as more and more products hit the market, more and more people can enjoy CBD at their own pace. And, in their own style!<\/p> \n\n<p>If CBD oils are your thing, that is an option. Or if  smoking CBD hemp flower is what more of your thing,, that too can be picked up on Chill.com! . When it comes to an alternative for those looking to graduate from  chewing tobacco, CBD pouches are the solution!<\/p>\n\n<p>Try the full spectrum of flavors today with our CBD chew pouch replacements.<\/p>\n<\/div>\n<\/div>\n<\/div>\n{% endif %}\n\n{% if product.id == 6579189776542 %}\n<div class=\"product_ingredients_section \">\n<div class=\"product_ingredients_sec_wrapper\">\n<div class=\"heading_text align-center\">\n<h2 style=\"font-weight: 700;\">Benefits of Smoking CBD Cigarettes<\/h2>\n<p>CBD cigarettes have been gaining popularity over the years, and for good reason. Not only are they a healthy alternative to smoking tobacco cigarettes. CBD helps your body relax, and we could all do with that when modern life is so stressful. With CBD,  this is possible without giving you that stoned feeling or a hangover.<\/p>\n<p>The goal is to relax and enjoy the great taste, so we don’t see the point of polluting the product with nicotine. Our naturally sourced ingredients are curated with your comfort and health in mind.<\/p>\n<p>For instance, we use lavender to provide a sweet floral scent, curating a perfectly relaxing moment. We also use red raspberry, peppermint, and rose petals (among others) to generate the ideal taste for a fresh flavor palette. But all of our ingredients are functional, which means they operate beyond flavor alone.<\/p>\n<p>Our ingredients are designed to keep your mood up, your worries down, and your taste buds asking for more.<\/p>\n<p>Try our flavored CBD cigarettes and see how much more deeply you can relax. Maximum chill with zero nicotine. What more could you ask for?<\/p>\n<\/div>\n<\/div>\n<\/div>\n{% endif %}"
+        "code": "{% if product.id == 6579331989662 %}\n<div class=\"product_ingredients_section \">\n  <div class=\"product_ingredients_sec_wrapper\">\n<div class=\"heading_text align-center\">\n<h2 style=\"font-weight: 700;\">CBD: A Chewing Tobacco Alternative</h2>\n<p>As CBD becomes increasingly popular, the benefits are becoming crystal clear. There is no question that these CBD pouches are relaxing and delicious. Additionally, many traditional tobacco find that  CBD is a great alternative to  chewing tobacco.</p>\n\n<p>If you are a tobacco user or have struggled to find an alternative to traditional nicotine pouches, these CBD chewing tobacco alternatives might be the solution. No more tobacco smoke. No constant spitting up brown gunk. No more nicotine mood swings.</p>\n\n<p>Instead, find your  mental clarity and enjoy effective CBD.  \n<h2 style=\"font-weight: 700;\">Join the CBD Revolution</h2>\n<p>The success rate of CBD products continues to demonstrate how they are helping people all over the country. And as more and more products hit the market, more and more people can enjoy CBD at their own pace. And, in their own style!</p> \n\n<p>If CBD oils are your thing, that is an option. Or if  smoking CBD hemp flower is what more of your thing,, that too can be picked up on Chill.com! . When it comes to an alternative for those looking to graduate from  chewing tobacco, CBD pouches are the solution!</p>\n\n<p>Try the full spectrum of flavors today with our CBD chew pouch replacements.</p>\n</div>\n</div>\n</div>\n{% endif %}\n\n{% if product.id == 6579189776542 %}\n<div class=\"product_ingredients_section \">\n<div class=\"product_ingredients_sec_wrapper\">\n<div class=\"heading_text align-center\">\n<h2 style=\"font-weight: 700;\">Benefits of Smoking CBD Cigarettes</h2>\n<p>CBD cigarettes have been gaining popularity over the years, and for good reason. Not only are they a healthy alternative to smoking tobacco cigarettes. CBD helps your body relax, and we could all do with that when modern life is so stressful. With CBD,  this is possible without giving you that stoned feeling or a hangover.</p>\n<p>The goal is to relax and enjoy the great taste, so we don’t see the point of polluting the product with nicotine. Our naturally sourced ingredients are curated with your comfort and health in mind.</p>\n<p>For instance, we use lavender to provide a sweet floral scent, curating a perfectly relaxing moment. We also use red raspberry, peppermint, and rose petals (among others) to generate the ideal taste for a fresh flavor palette. But all of our ingredients are functional, which means they operate beyond flavor alone.</p>\n<p>Our ingredients are designed to keep your mood up, your worries down, and your taste buds asking for more.</p>\n<p>Try our flavored CBD cigarettes and see how much more deeply you can relax. Maximum chill with zero nicotine. What more could you ask for?</p>\n</div>\n</div>\n</div>\n{% endif %}"
       }
     },
     "cefbcd29-2c2e-4998-b350-f40b1bb22b68": {
@@ -236,13 +242,13 @@
         "4bd2c7a7-252b-47f3-9245-06a64ed10f93": {
           "type": "image",
           "settings": {
-            "slider_image": "shopify:\/\/shop_images\/Recycle_slide_1.jpg"
+            "slider_image": "shopify://shop_images/Recycle_slide_1.jpg"
           }
         },
         "11351109-1255-47df-8a3b-429be3933b80": {
           "type": "image",
           "settings": {
-            "slider_image": "shopify:\/\/shop_images\/Recycle_slide_2.jpg"
+            "slider_image": "shopify://shop_images/Recycle_slide_2.jpg"
           }
         }
       },
@@ -258,7 +264,7 @@
         "button-background-color": "#9792e4",
         "gummies-text-color": "#ffffff",
         "gummies-border-color": "#9792e4",
-        "btn-link": "shopify:\/\/collections\/cbd-gummies"
+        "btn-link": "shopify://collections/cbd-gummies"
       }
     },
     "16639198461c244067": {
@@ -273,7 +279,7 @@
         "1664548653c7a2de08-0": {
           "type": "heading",
           "settings": {
-            "title": "<p>What Our <strong>Customers Say<\/strong><\/p>",
+            "title": "<p>What Our <strong>Customers Say</strong></p>",
             "use_h1": false
           }
         }
@@ -292,7 +298,7 @@
       "type": "apps",
       "blocks": {
         "4b19b57e-1e5f-47af-88d5-bc44d4f01a53": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}",
             "widget_type": "reviews_widget"
@@ -310,8 +316,8 @@
       "type": "product-recommendations",
       "settings": {
         "color_bg": "#f2f2f3",
-        "title": "<p>You may also <strong>like<\/strong><\/p>",
-        "description": "<p>{{ product.metafields.settings.recommend_pro_description | metafield_tag }}<\/p>",
+        "title": "<p>You may also <strong>like</strong></p>",
+        "description": "<p>{{ product.metafields.settings.recommend_pro_description | metafield_tag }}</p>",
         "show_vendor": true,
         "grid": 4
       }
@@ -319,11 +325,11 @@
     "16645236529448c1fa": {
       "type": "newsletter",
       "settings": {
-        "newsletter_logo": "<svg id=\"Group_6347\" data-name=\"Group 6347\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"136.516\" height=\"136.512\" viewbox=\"0 0 136.516 136.512\">\n  <g id=\"Group_637\" data-name=\"Group 637\" transform=\"translate(0 0)\">\n    <g id=\"Group_636\" data-name=\"Group 636\" transform=\"translate(0 0)\">\n      <g id=\"Group_631\" data-name=\"Group 631\" transform=\"translate(4.578)\">\n        <path id=\"Path_8791\" data-name=\"Path 8791\" d=\"M64.571,191.328a1.477,1.477,0,0,1-1.33-2.08l1.6-3.757a67.074,67.074,0,0,1,123.391-.067l1.53,3.489a1.688,1.688,0,0,1-1.463,2.348h-5.188a1.651,1.651,0,0,1-1.463-.872l-3.725-7.38a58.864,58.864,0,0,0-102.7.067l-3.858,7.447a1.489,1.489,0,0,1-1.264.805Z\" transform=\"translate(-63.124 -144.7)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n      <g id=\"Group_632\" data-name=\"Group 632\" transform=\"translate(5.03 89.884)\">\n        <path id=\"Path_8792\" data-name=\"Path 8792\" d=\"M65.462,280.367l122.924-.067a2,2,0,0,1,1.8,2.818l-1.33,3.019a67.072,67.072,0,0,1-123.389.067l-1.53-3.422A1.712,1.712,0,0,1,65.462,280.367Zm110.551,8.185-97.248.067a1.686,1.686,0,0,0-1.4,2.617,58.841,58.841,0,0,0,99.776-.4A1.436,1.436,0,0,0,176.013,288.552Z\" transform=\"translate(-63.798 -280.3)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n      <g id=\"Group_633\" data-name=\"Group 633\" transform=\"translate(0 48.762)\">\n        <path id=\"Path_8793\" data-name=\"Path 8793\" d=\"M56.3,237.053c0-9.661,2.063-15.766,2.2-16.1l.532-1.476a10.347,10.347,0,0,0,.6-1.275H182.162c8.453,0,7.987.6,8.187,1.476l.466,1.476a65.242,65.242,0,0,1-.2,32.874l-.333,1.275a2.11,2.11,0,0,1-1.6,1.476l-1.265.2c-15.308,2.549-51.383,1.409-62.9-17.846-16.507,24.354-60.169,18.182-62.632,17.913l-1.464-.2a1.85,1.85,0,0,1-1.6-1.409l-.333-1.476A66.641,66.641,0,0,1,56.3,237.053Zm8.852-8.923a58.863,58.863,0,0,0,.2,19.389,1.984,1.984,0,0,0,1.8,1.677c13.711,1.006,47.656,2.08,53.447-21.4l.333-1.342H67.149A2.016,2.016,0,0,0,65.152,228.13Zm118.741,0a1.947,1.947,0,0,0-1.93-1.677H128.117l.333,1.342c5.591,22.744,42.6,22.408,53.447,21.469a1.989,1.989,0,0,0,1.731-1.543A57.14,57.14,0,0,0,183.893,228.13Z\" transform=\"translate(-56.3 -218.2)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n      <g id=\"Group_634\" data-name=\"Group 634\" transform=\"translate(90.018 37.65)\">\n        <path id=\"Path_8794\" data-name=\"Path 8794\" d=\"M192.1,203.244v4.227a2.018,2.018,0,0,0,2.013,2.013h25.226a1.971,1.971,0,0,0,1.744-2.885L219,202.372a1.934,1.934,0,0,0-1.744-1.073H194.18A1.9,1.9,0,0,0,192.1,203.244Z\" transform=\"translate(-192.1 -201.295)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n      <g id=\"Group_635\" data-name=\"Group 635\" transform=\"translate(17.693 38.052)\">\n        <path id=\"Path_8795\" data-name=\"Path 8795\" d=\"M111.875,203.913v4.227a2.018,2.018,0,0,1-2.013,2.013H84.636a1.971,1.971,0,0,1-1.744-2.885l2.08-4.227a2,2,0,0,1,1.744-1.141H109.8A1.993,1.993,0,0,1,111.875,203.913Z\" transform=\"translate(-82.671 -201.9)\" fill=\"#9792e4\"><\/path>\n      <\/g>\n    <\/g>\n  <\/g>\n<\/svg>",
+        "newsletter_logo": "<svg id=\"Group_6347\" data-name=\"Group 6347\" xmlns=\"http://www.w3.org/2000/svg\" width=\"136.516\" height=\"136.512\" viewbox=\"0 0 136.516 136.512\">\n  <g id=\"Group_637\" data-name=\"Group 637\" transform=\"translate(0 0)\">\n    <g id=\"Group_636\" data-name=\"Group 636\" transform=\"translate(0 0)\">\n      <g id=\"Group_631\" data-name=\"Group 631\" transform=\"translate(4.578)\">\n        <path id=\"Path_8791\" data-name=\"Path 8791\" d=\"M64.571,191.328a1.477,1.477,0,0,1-1.33-2.08l1.6-3.757a67.074,67.074,0,0,1,123.391-.067l1.53,3.489a1.688,1.688,0,0,1-1.463,2.348h-5.188a1.651,1.651,0,0,1-1.463-.872l-3.725-7.38a58.864,58.864,0,0,0-102.7.067l-3.858,7.447a1.489,1.489,0,0,1-1.264.805Z\" transform=\"translate(-63.124 -144.7)\" fill=\"#9792e4\"></path>\n      </g>\n      <g id=\"Group_632\" data-name=\"Group 632\" transform=\"translate(5.03 89.884)\">\n        <path id=\"Path_8792\" data-name=\"Path 8792\" d=\"M65.462,280.367l122.924-.067a2,2,0,0,1,1.8,2.818l-1.33,3.019a67.072,67.072,0,0,1-123.389.067l-1.53-3.422A1.712,1.712,0,0,1,65.462,280.367Zm110.551,8.185-97.248.067a1.686,1.686,0,0,0-1.4,2.617,58.841,58.841,0,0,0,99.776-.4A1.436,1.436,0,0,0,176.013,288.552Z\" transform=\"translate(-63.798 -280.3)\" fill=\"#9792e4\"></path>\n      </g>\n      <g id=\"Group_633\" data-name=\"Group 633\" transform=\"translate(0 48.762)\">\n        <path id=\"Path_8793\" data-name=\"Path 8793\" d=\"M56.3,237.053c0-9.661,2.063-15.766,2.2-16.1l.532-1.476a10.347,10.347,0,0,0,.6-1.275H182.162c8.453,0,7.987.6,8.187,1.476l.466,1.476a65.242,65.242,0,0,1-.2,32.874l-.333,1.275a2.11,2.11,0,0,1-1.6,1.476l-1.265.2c-15.308,2.549-51.383,1.409-62.9-17.846-16.507,24.354-60.169,18.182-62.632,17.913l-1.464-.2a1.85,1.85,0,0,1-1.6-1.409l-.333-1.476A66.641,66.641,0,0,1,56.3,237.053Zm8.852-8.923a58.863,58.863,0,0,0,.2,19.389,1.984,1.984,0,0,0,1.8,1.677c13.711,1.006,47.656,2.08,53.447-21.4l.333-1.342H67.149A2.016,2.016,0,0,0,65.152,228.13Zm118.741,0a1.947,1.947,0,0,0-1.93-1.677H128.117l.333,1.342c5.591,22.744,42.6,22.408,53.447,21.469a1.989,1.989,0,0,0,1.731-1.543A57.14,57.14,0,0,0,183.893,228.13Z\" transform=\"translate(-56.3 -218.2)\" fill=\"#9792e4\"></path>\n      </g>\n      <g id=\"Group_634\" data-name=\"Group 634\" transform=\"translate(90.018 37.65)\">\n        <path id=\"Path_8794\" data-name=\"Path 8794\" d=\"M192.1,203.244v4.227a2.018,2.018,0,0,0,2.013,2.013h25.226a1.971,1.971,0,0,0,1.744-2.885L219,202.372a1.934,1.934,0,0,0-1.744-1.073H194.18A1.9,1.9,0,0,0,192.1,203.244Z\" transform=\"translate(-192.1 -201.295)\" fill=\"#9792e4\"></path>\n      </g>\n      <g id=\"Group_635\" data-name=\"Group 635\" transform=\"translate(17.693 38.052)\">\n        <path id=\"Path_8795\" data-name=\"Path 8795\" d=\"M111.875,203.913v4.227a2.018,2.018,0,0,1-2.013,2.013H84.636a1.971,1.971,0,0,1-1.744-2.885l2.08-4.227a2,2,0,0,1,1.744-1.141H109.8A1.993,1.993,0,0,1,111.875,203.913Z\" transform=\"translate(-82.671 -201.9)\" fill=\"#9792e4\"></path>\n      </g>\n    </g>\n  </g>\n</svg>",
         "title": "Keep Chilling",
-        "subheading": "<p>Stay in the loop + get <a href=\"http:\/\/127.0.0.1:9292\/#\" title=\"#\"><strong>15% off <\/strong><\/a>your first order<\/p>",
-        "terms_cond": "<p>By signing up via email, you expressly consent to receive marketing communications from Chill Corp. See <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">privacy policy<\/a> and <a href=\"\/policies\/terms-of-service\" title=\"Terms of Service\">terms of service<\/a> for details.<\/p>",
-        "bg_image": "shopify:\/\/shop_images\/footer_background_op.jpg",
+        "subheading": "<p>Stay in the loop + get <a href=\"http://127.0.0.1:9292/#\" title=\"#\"><strong>15% off </strong></a>your first order</p>",
+        "terms_cond": "<p>By signing up via email, you expressly consent to receive marketing communications from Chill Corp. See <a href=\"/policies/privacy-policy\" title=\"Privacy Policy\">privacy policy</a> and <a href=\"/policies/terms-of-service\" title=\"Terms of Service\">terms of service</a> for details.</p>",
+        "bg_image": "shopify://shop_images/footer_background_op.jpg",
         "color_bg": "#ffffff"
       }
     }

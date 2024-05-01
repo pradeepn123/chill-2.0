@@ -6081,8 +6081,8 @@
         }
         this.cartRefreshXhr = $.getJSON(theme.routes.cart_url, function(cart) {
           let promotionalProducts = []
-          const paidProducts = cart.items.filter(lineItem => !lineItem.properties || lineItem.properties["Product Type"] != "FREE")
-          const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties && lineItem.properties["Product Type"] == "FREE")          
+          const paidProducts = cart.items.filter(lineItem => lineItem.title != "Mystery Gift")
+          const promotionalLineItems = cart.items.filter(lineItem => lineItem.title == "Mystery Gift")           
 
           // if (cart.items_subtotal_price > 10000) {
           //   promotionalProducts = theme.promotionalProducts[100]
@@ -6091,15 +6091,22 @@
           // } else if (cart.items_subtotal_price > 2500) {
           //   promotionalProducts = theme.promotionalProducts[25]
           // }
-          console.log('>>>>>', cart.items)
           
-          if (cart.items_subtotal_price > 3000) {
+          // Check if total cart value of vape products is more than 50
+          let vape_product_total_in_cart = 0;
+          cart.items.forEach(cartItem => {
+            if(cartItem.product_type === "Vape"){
+              vape_product_total_in_cart += cartItem.final_line_price
+            }
+          })
+          
+          if (vape_product_total_in_cart > 5000) {
             promotionalProducts = theme.promotionalProducts[25]
           }
-
+          
           paidProducts.forEach((lineItem) => {
-            if (theme.promotionalProducts[lineItem.variant_id]) {
-              promotionalProducts = promotionalProducts.concat(theme.promotionalProducts[lineItem.variant_id].map((product) => {
+            if (theme.promotionalProducts[lineItem.id]) {
+              promotionalProducts = promotionalProducts.concat(theme.promotionalProducts[lineItem.id].map((product) => {
                 product.quantity = lineItem.quantity
                 return product
               }))
@@ -6132,14 +6139,13 @@
                 let lineItems = {
                   items: promotionalProducts.map(product => {
                     return {
-                      id: product.variantId,
-                      quantity: product.quantity,
-                      properties: {
-                        "Product Type": "FREE"
-                      }
+                      id: product.variantId, // variant id is 'null' when the quantity of product is 0
+                      quantity: 1,
+                      productId: product.productId
                     }
                   }
                 )}
+                
                 this.cartRefreshXhr = null;
                 return this.functions.addItemsToCart.call(this, lineItems);
               }
@@ -6387,8 +6393,10 @@
 
         $.getJSON(theme.routes.cart_url + ".js", function(cart) {
           let promotionalProducts = [];
-          const paidProducts = cart.items.filter(lineItem => !lineItem.properties || lineItem.properties["Product Type"] != "FREE")
-          const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties && lineItem.properties["Product Type"] == "FREE")
+          const paidProducts = cart.items.filter(lineItem => lineItem.title != "Mystery Gift")
+          const promotionalLineItems = cart.items.filter(lineItem => lineItem.title == "Mystery Gift")    
+          // const paidProducts = cart.items.filter(lineItem => !lineItem.properties || lineItem.properties["Product Type"] != "FREE")
+          // const promotionalLineItems = cart.items.filter(lineItem => lineItem.properties && lineItem.properties["Product Type"] == "FREE")
           // if (cart.items_subtotal_price > 10000) {
           //   promotionalProducts = theme.promotionalProducts[100]
           // } else if (cart.items_subtotal_price > 5000) {
@@ -6396,27 +6404,47 @@
           // } else if (cart.items_subtotal_price > 2500) {
           //   promotionalProducts = theme.promotionalProducts[25]
           // }
-          
-          var totalsubscriptionprice = 0
-          cart.items.forEach(elem => {
-            var cartPriceWithoutSubscription = 0;
-            if(elem.selling_plan_allocation){
-              cartPriceWithoutSubscription = elem.selling_plan_allocation.price * elem.quantity;
+
+          let vape_product_total_in_cart = 0;
+          cart.items.forEach(cartItem => {
+            if(cartItem.product_type === "Vape"){
+              vape_product_total_in_cart += cartItem.final_line_price
             }
-            totalsubscriptionprice += cartPriceWithoutSubscription;
           })
-          if ((cart.items_subtotal_price - totalsubscriptionprice) > 3000) {
+          
+          if (vape_product_total_in_cart > 5000) {
             promotionalProducts = theme.promotionalProducts[25]
           }
-
+          
           paidProducts.forEach((lineItem) => {
-            if (theme.promotionalProducts[lineItem.variant_id]) {
-              promotionalProducts = promotionalProducts.concat(theme.promotionalProducts[lineItem.variant_id].map((product) => {
+            if (theme.promotionalProducts[lineItem.id]) {
+              promotionalProducts = promotionalProducts.concat(theme.promotionalProducts[lineItem.id].map((product) => {
                 product.quantity = lineItem.quantity
                 return product
               }))
             }
           })
+          
+          // var totalsubscriptionprice = 0
+          // cart.items.forEach(elem => {
+          //   var cartPriceWithoutSubscription = 0;
+          //   if(elem.selling_plan_allocation){
+          //     cartPriceWithoutSubscription = elem.selling_plan_allocation.price * elem.quantity;
+          //   }
+          //   totalsubscriptionprice += cartPriceWithoutSubscription;
+          // })
+          // if ((cart.items_subtotal_price - totalsubscriptionprice) > 3000) {
+          //   promotionalProducts = theme.promotionalProducts[25]
+          // }
+
+          // paidProducts.forEach((lineItem) => {
+          //   if (theme.promotionalProducts[lineItem.variant_id]) {
+          //     promotionalProducts = promotionalProducts.concat(theme.promotionalProducts[lineItem.variant_id].map((product) => {
+          //       product.quantity = lineItem.quantity
+          //       return product
+          //     }))
+          //   }
+          // })
 
           let updateParams = {}
           if (this.cartXhr) {
@@ -6441,13 +6469,12 @@
                   items: promotionalProducts.map(product => {
                     return {
                       id: product.variantId,
-                      quantity: product.quantity,
-                      properties: {
-                        "Product Type": "FREE"
-                      }
+                      quantity: 1,
+                      productId: product.productId
                     }
                   }
                 )}
+
                 return this.functions.addItemsToCart.call(this, lineItems);
               }
               this.functions.postRefreshCartDependentContent.call(this)
@@ -6531,6 +6558,7 @@
       },
 
       addItemsToCart: function addItemToCart(params) {
+        console.log('.....params', params)
         if (this.cartXhr) {
           this.cartXhr.abort();
         }
