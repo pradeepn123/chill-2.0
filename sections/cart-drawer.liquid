@@ -125,7 +125,7 @@
                endfor 
             %}
             {% assign cost_difference_to_avail_offer = cost_difference_to_avail_offer | minus: total_offer_product_price %}
-            {% if settings.start_mystery_gift_offer %}
+            {% if true %}
               {% if offer_on_product == true %}
                 {% if cost_difference_to_avail_offer > 0 %}
                   <div class="mystery_gift_offer">
