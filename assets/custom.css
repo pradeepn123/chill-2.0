@@ -13517,3 +13517,23 @@ div .okeReviews .oke-reviewCarousel {
 .product_page_offer {
   margin: 0 0 36px 0 !important;
 }
+
+netwise-application form button.application-btn{
+  background: #9792e4 !important;
+  border: 1.5px solid #9792e4 !important;
+  color: #fff !important;
+  line-height: 1em;
+  height: auto;
+  margin: 0;
+  text-decoration: none !important;
+  cursor: pointer;
+  border-radius: 4rem !important;
+  padding: 1rem 25px !important;
+  font-size: 16px !important;
+  font-weight: 600;
+}
+
+netwise-application form button.application-btn:hover{
+  background: #171717 !important;
+  border-color: #171717 !important;
+}

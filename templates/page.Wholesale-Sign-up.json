@@ -2,12 +2,36 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "17146331013e45641a": {
+      "type": "apps",
+      "blocks": {
+        "netwise_application_3Hb7mg": {
+          "type": "shopify:\/\/apps\/netwise\/blocks\/application\/2a5a8fab-8cca-465e-a003-5dff8d8306f2",
+          "settings": {
+            "title": "Signup for Business Account",
+            "description": "Apply for a business account to gain exclusive access to our products, discounts, and more.",
+            "primary_color": "#161D26",
+            "secondary_color": "#ffffff",
+            "terms_and_condition": "<p>Clicking <strong>“Submit Application”<\/strong> indicates your agreement to share your personal and business information for processing your business application.<\/p>",
+            "button_text": "SUBMIT APPLICATION"
+          }
+        }
+      },
+      "block_order": [
+        "netwise_application_3Hb7mg"
+      ],
       "settings": {
         "full_width": false
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "17146331013e45641a"
   ]
 }
