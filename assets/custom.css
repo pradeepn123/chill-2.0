@@ -13517,36 +13517,3 @@ div .okeReviews .oke-reviewCarousel {
 .product_page_offer {
   margin: 0 0 36px 0 !important;
 }
-
-netwise-application form button.application-btn , .ImportBulkOrderCSV button.netwise-wholesale-validate {
-  background: #9792e4 !important;
-  border: 1.5px solid #9792e4 !important;
-  color: #fff !important;
-  line-height: 1em;
-  height: auto;
-  margin: 0;
-  text-decoration: none !important;
-  cursor: pointer;
-  border-radius: 4rem !important;
-  padding: 1rem 25px !important;
-  font-size: 16px !important;
-  font-weight: 600;
-}
-
-netwise-application form button.application-btn:hover, .ImportBulkOrderCSV button.netwise-wholesale-validate:hover{
-  background: #171717 !important;
-  border-color: #171717 !important;
-}
-
-body .BulkOrderModal .MuiDialog-container .MuiDialog-paper .MuiDialogActions-root .ButtonsPart .Button.ButtonSecondary {
-  border-radius: 4rem !important;
-  background: #fff !important;
-  border: 1px solid #9792e4 !important;
-  color: #9792e4 !important;
-}
-
-body .BulkOrderModal .MuiDialog-container .MuiDialog-paper .MuiDialogActions-root .ButtonsPart .Button.ButtonPrimary {
-  border-radius: 4rem !important;
-  background: #6ec59f !important;
-  border: 1px solid #6ec59f !important;
-}
