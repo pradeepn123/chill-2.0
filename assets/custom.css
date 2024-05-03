@@ -13518,7 +13518,7 @@ div .okeReviews .oke-reviewCarousel {
   margin: 0 0 36px 0 !important;
 }
 
-netwise-application form button.application-btn{
+netwise-application form button.application-btn , .ImportBulkOrderCSV button.netwise-wholesale-validate {
   background: #9792e4 !important;
   border: 1.5px solid #9792e4 !important;
   color: #fff !important;
@@ -13536,4 +13536,12 @@ netwise-application form button.application-btn{
 netwise-application form button.application-btn:hover{
   background: #171717 !important;
   border-color: #171717 !important;
+}
+
+.BulkOrderModal .MuiDialog-container .MuiDialog-paper .MuiDialogActions-root .ButtonsPart .Button.ButtonSecondary {
+  border-radius: 4rem !important;
+}
+
+.BulkOrderModal .MuiDialog-container .MuiDialog-paper .MuiDialogActions-root .ButtonsPart .Button.ButtonPrimary {
+  border-radius: 4rem !important;
 }
