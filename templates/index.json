@@ -3,6 +3,33 @@
     "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d": {
       "type": "slideshow",
       "blocks": {
+        "5f12a340-48c6-4106-8308-7047651dd64c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/RadoLife-HP_DESKTOP.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/RadoLife-HP_MOBILE.jpg",
+            "image_position": "center left",
+            "mobile_image_position": "left center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "<strong> Rado Life:<\/strong>\nGummies\n<strong>Buy 1 Get 1<\/strong>",
+            "title_size": 64,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>On sale until the end of May<\/p>",
+            "heading_color": "#000000",
+            "text_color": "#000000",
+            "enlarge_text": true,
+            "button_label_1": "SHOP RADO LIFE",
+            "button_url_1": "shopify:\/\/collections\/goradolife-com",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_background_color": "#f3b09f",
+            "button_text_color": "#000000",
+            "button_text_font_size": 20,
+            "text_alignment": "center left"
+          }
+        },
         "b2363591-8ba1-402f-ad6f-c71e7bae93b0": {
           "type": "image",
           "settings": {
@@ -274,33 +301,6 @@
             "text_alignment": "center left"
           }
         },
-        "5f12a340-48c6-4106-8308-7047651dd64c": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/RadoLife-HP_DESKTOP.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/RadoLife-HP_MOBILE.jpg",
-            "image_position": "center left",
-            "mobile_image_position": "left center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "<strong> Rado Life:<\/strong>\nGummies\n<strong>Buy 1 Get 1<\/strong>",
-            "title_size": 64,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>On sale until the end of May<\/p>",
-            "heading_color": "#000000",
-            "text_color": "#000000",
-            "enlarge_text": true,
-            "button_label_1": "SHOP RADO LIFE",
-            "button_url_1": "shopify:\/\/collections\/goradolife-com",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_background_color": "#f3b09f",
-            "button_text_color": "#000000",
-            "button_text_font_size": 20,
-            "text_alignment": "center left"
-          }
-        },
         "df90ff83-c6f1-44c2-94ff-1a3af29d3675": {
           "type": "image",
           "disabled": true,
@@ -331,6 +331,7 @@
         }
       },
       "block_order": [
+        "5f12a340-48c6-4106-8308-7047651dd64c",
         "b2363591-8ba1-402f-ad6f-c71e7bae93b0",
         "190b68b3-e888-4fbb-82b4-bdb9c97c144f",
         "66002548-b60b-4786-8e10-a024be1f10e1",
@@ -341,7 +342,6 @@
         "133ad9e7-9e91-40e0-8fe3-fdcc63e6f28d",
         "2866e88b-20e1-4338-91ae-cca51f74dfb1",
         "3fa1e118-cde5-45a1-b0ed-fdd44a8633e8",
-        "5f12a340-48c6-4106-8308-7047651dd64c",
         "df90ff83-c6f1-44c2-94ff-1a3af29d3675"
       ],
       "settings": {
