@@ -276,7 +276,6 @@
         },
         "5f12a340-48c6-4106-8308-7047651dd64c": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/RadoLife-HP_DESKTOP.jpg",
             "mobile_image": "shopify:\/\/shop_images\/RadoLife-HP_MOBILE.jpg",
@@ -288,7 +287,7 @@
             "title_size": 64,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>BOGO on Rado Life gummies until the end of May<\/p>",
+            "text": "<p>On sale until the end of May<\/p>",
             "heading_color": "#000000",
             "text_color": "#000000",
             "enlarge_text": true,
@@ -296,7 +295,7 @@
             "button_url_1": "shopify:\/\/collections\/goradolife-com",
             "button_label_2": "",
             "button_url_2": "",
-            "button_background_color": "#9792e4",
+            "button_background_color": "#6EC59F",
             "button_text_color": "#000000",
             "button_text_font_size": 20,
             "text_alignment": "center left"
