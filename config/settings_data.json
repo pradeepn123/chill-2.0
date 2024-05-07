@@ -1057,7 +1057,7 @@
     "enable_gummies_offer_on_announcement_bar": true,
     "announce_gummies_offer_text_desktop": "Up to <span> 20% off select brands <\/span> May Day Sale is now on!",
     "announce_gummies_offer_text_mobile": "Up to <span> 20% off select brands <\/span> May Day Sale is now on!",
-    "announce_gummies_offer_button_text": "SHOP SALE HERE",
+    "announce_gummies_offer_button_text": "SHOP THE SALE",
     "announce_gummies_button_color": "#9792e4",
     "announce_gummies_button_url": "shopify:\/\/collections\/sale",
     "offer_text_on_cart": "",
