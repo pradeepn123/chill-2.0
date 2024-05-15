@@ -19,14 +19,14 @@
             "text": "<p>On sale until the end of May<\/p>",
             "heading_color": "#000000",
             "text_color": "#000000",
-            "enlarge_text": false,
+            "enlarge_text": true,
             "button_label_1": "SHOP RADO LIFE",
             "button_url_1": "shopify:\/\/collections\/goradolife-com",
             "button_label_2": "",
             "button_url_2": "",
             "button_background_color": "#f3b09f",
             "button_text_color": "#000000",
-            "button_text_font_size": 21,
+            "button_text_font_size": 20,
             "text_alignment": "center left"
           }
         },
