@@ -5,6 +5,7 @@
       "blocks": {
         "5f12a340-48c6-4106-8308-7047651dd64c": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/RadoLife-HP_DESKTOP.jpg",
             "mobile_image": "shopify:\/\/shop_images\/RadoLife-HP_MOBILE.jpg",
@@ -32,6 +33,7 @@
         },
         "b2363591-8ba1-402f-ad6f-c71e7bae93b0": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Cannadips-HP_DESKTOP_42ef81f7-f98a-4ce6-ae0d-4e648563a0d7.jpg",
             "mobile_image": "shopify:\/\/shop_images\/Cannadips-HP_MOBILE_784cd9b0-2ea6-490c-948a-fe318372faab.jpg",
