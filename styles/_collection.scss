@@ -399,7 +399,6 @@
         .filters{
             color: #000;
             .filters__inner.sticky-content-container{
-                // position: relative;
                 height: 100vh;
                 @media (min-width: 1000px){
                     overflow: scroll;
