@@ -2592,12 +2592,19 @@ predictive-search .search_section input {
 .custom_collection_block .filter-container .filters {
   color: #000;
 }
+.custom_collection_block .filter-container .filters .filters__inner.sticky-content-container {
+  height: 100vh;
+}
+@media (min-width: 1000px) {
+  .custom_collection_block .filter-container .filters .filters__inner.sticky-content-container {
+    overflow: scroll;
+  }
+}
 .custom_collection_block .filter-container .filters .filters__inner {
   height: 100%;
   background: #fff;
   padding-inline-end: 0;
   padding: 30px 40px;
-  position: relative;
 }
 .custom_collection_block .filter-container .filters .filters__inner .filters__heading {
   text-transform: uppercase;
@@ -10383,9 +10390,6 @@ body.cart-drawer-open, body.vape-drawer-open {
 .custom_collection_main {
   background: #F2F2F3;
 }
-.custom_collection_main .filter-container .filters .filters__inner {
-  top: 0;
-}
 @media (max-width: 999px) {
   .custom_collection_main .utility-bar-main {
     margin-bottom: 0 !important;
@@ -11198,9 +11202,6 @@ body.cart-drawer-open, body.vape-drawer-open {
 
 .custom_collection_main {
   background: #F2F2F3;
-}
-.custom_collection_main .filter-container .filters .filters__inner {
-  top: 0;
 }
 @media (max-width: 999px) {
   .custom_collection_main .utility-bar-main {
