@@ -939,3 +939,4 @@
     theme.offerSliderInstances = [];
     theme.offerSliderInstances = [new AutoSlider(".slider-section #main-slider"), new AutoSlider(".slideshow_offer_mobile #main-slider")]
   })
+

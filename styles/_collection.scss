@@ -399,10 +399,7 @@
         .filters{
             color: #000;
             .filters__inner.sticky-content-container{
-                height: 100vh;
-                @media (min-width: 1000px){
-                    overflow: scroll;
-                }
+                height: calc(100vh - var(--theme-sticky-header-height, 0));             
             }
             .filters__inner{
                 height: 100%;
