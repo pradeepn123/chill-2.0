@@ -2608,7 +2608,7 @@ predictive-search .search_section input {
   font-weight: 900;
 }
 .custom_collection_block .filter-container .filters .filters__inner .toggle-target-container.scroller_height {
-  height: 35vh;
+  height: 32vh;
   overflow: scroll;
 }
 .custom_collection_block .filter-container .filters .filters__inner .filter-group--applied {
