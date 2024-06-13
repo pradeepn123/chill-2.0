@@ -399,18 +399,22 @@
         .filters{
             color: #000;
             .filters__inner.sticky-content-container{
-                height: calc(100vh - var(--theme-sticky-header-height, 0));             
+                height: calc(100vh - var(--theme-sticky-header-height, 0));
             }
             .filters__inner{
                 height: 100%;
                 background: #fff;
                 padding-inline-end: 0;
-                padding: 30px 40px;                
+                padding: 30px 40px;
                 .filters__heading{
                     text-transform: uppercase;
                     .filters__heading-text{
                         font-weight: 900;
                     }
+                }
+                .toggle-target-container.scroller_height {
+                    height: 35vh;
+                    overflow: scroll;
                 }
                 .filter-group--applied{
                     @media (min-width: 1300px){
@@ -425,7 +429,7 @@
                     .filter-group__heading{
                         display: none;
                     }
-                    .filter-group__items{
+                    .filter-group__items{                        
                         .filter-group__applied-item{
                             display: none;
                         }

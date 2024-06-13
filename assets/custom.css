@@ -2607,6 +2607,10 @@ predictive-search .search_section input {
 .custom_collection_block .filter-container .filters .filters__inner .filters__heading .filters__heading-text {
   font-weight: 900;
 }
+.custom_collection_block .filter-container .filters .filters__inner .toggle-target-container.scroller_height {
+  height: 35vh;
+  overflow: scroll;
+}
 .custom_collection_block .filter-container .filters .filters__inner .filter-group--applied {
   width: fit-content;
   text-align: center;
