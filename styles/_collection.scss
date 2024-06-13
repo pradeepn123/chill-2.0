@@ -399,7 +399,8 @@
         .filters{
             color: #000;
             .filters__inner.sticky-content-container{
-                height: calc(100vh - var(--theme-sticky-header-height, 0));
+                height: calc(100vh - 10vh);
+                overflow-y: scroll;
             }
             .filters__inner{
                 height: 100%;
@@ -414,7 +415,7 @@
                 }
                 .toggle-target-container.scroller_height {
                     height: 32vh;
-                    overflow: scroll;
+                    overflow-y: scroll;
                 }
                 .filter-group--applied{
                     @media (min-width: 1300px){

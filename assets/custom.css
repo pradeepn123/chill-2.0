@@ -2593,7 +2593,8 @@ predictive-search .search_section input {
   color: #000;
 }
 .custom_collection_block .filter-container .filters .filters__inner.sticky-content-container {
-  height: calc(100vh - var(--theme-sticky-header-height, 0));
+  height: 90vh;
+  overflow-y: scroll;
 }
 .custom_collection_block .filter-container .filters .filters__inner {
   height: 100%;
@@ -2609,7 +2610,7 @@ predictive-search .search_section input {
 }
 .custom_collection_block .filter-container .filters .filters__inner .toggle-target-container.scroller_height {
   height: 32vh;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .custom_collection_block .filter-container .filters .filters__inner .filter-group--applied {
   width: fit-content;
