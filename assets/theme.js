@@ -3687,6 +3687,20 @@
       initFiltersEtc: function initFiltersEtc() {
         $('.filter-container', this.$container).addClass('filter-container--mobile-initialised');
 
+        let loadMoreFilters = document.querySelectorAll('.loadmore');
+        if (loadMoreFilters.length) {
+          loadMoreFilters.forEach(el => el.addEventListener('click', function () {
+            let forloopIndex = this.dataset.forloop;
+            document.querySelectorAll('.filter-group--' + forloopIndex + ' .filter_full').forEach(
+              el => {
+                el.style.display = 'block';
+                el.parentElement.classList.add('scroller_height');
+              }
+            );
+            document.querySelectorAll('.filter-group--' + forloopIndex + ' .filter_limited').forEach(el => el.style.display = 'none');
+          }));
+        }
+
         // append query vars onto sort urls (e.g. filters, vendor collection)
         if (location.href.indexOf('?') >= 0) {
           $('.link-dropdown__button .link-dropdown__link', this.$container).each(function () {
