@@ -3685,7 +3685,7 @@
 
     this.functions = {
       initFiltersEtc: function initFiltersEtc() {
-        $('.filter-container', this.$container).addClass('filter-container--mobile-initialised');
+        $('.filter-container', this.$container).addClass('filter-container--mobile-initialised');        
 
         // append query vars onto sort urls (e.g. filters, vendor collection)
         if (location.href.indexOf('?') >= 0) {
