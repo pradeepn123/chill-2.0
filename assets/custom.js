@@ -318,6 +318,21 @@
     $('.close_card_info_mobile').click(function () {
       $(this).closest('.block-inner').find('.block-inner-card-info')?.removeClass('add_info_sub');
     });
+    
+    // used in collection page
+    let loadMoreFilters = document.querySelectorAll('.loadmore');
+    if (loadMoreFilters.length) {
+      loadMoreFilters.forEach(el => el.addEventListener('click', function () {
+        let forloopIndex = this.dataset.forloop;
+        document.querySelectorAll('.filter-group--' + forloopIndex + ' .filter_full').forEach(
+          el => {
+            el.style.display = 'block'
+            el.parentElement.classList.add('scroller_height')
+          }
+        );
+        document.querySelectorAll('.filter-group--' + forloopIndex + ' .filter_limited').forEach(el => el.style.display = 'none');
+      }))
+    }
   }
 
 
@@ -336,20 +351,6 @@
           }
           document.querySelector('.utility-bar .link-dropdown__button-icon')?.toggleAttribute('active');
         })
-      }
-      // used in collection page
-      let loadMoreFilters = document.querySelectorAll('.loadmore');
-      if (loadMoreFilters.length) {
-        loadMoreFilters.forEach(el => el.addEventListener('click', function () {
-          let forloopIndex = this.dataset.forloop;
-          document.querySelectorAll('.filter-group--' + forloopIndex + ' .filter_full').forEach(
-            el => {
-              el.style.display = 'block'
-              el.parentElement.classList.add('scroller_height')
-            }
-          );
-          document.querySelectorAll('.filter-group--' + forloopIndex + ' .filter_limited').forEach(el => el.style.display = 'none');
-        }))
       }
 
   // used in homepage and collection page
