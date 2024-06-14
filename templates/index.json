@@ -248,7 +248,6 @@
         },
         "07606988-1565-4348-a14c-d1d1a42ab137": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/SALE_BANNER.jpg",
             "mobile_image": "shopify:\/\/shop_images\/SALE_BANNER_Mobile.jpg",
@@ -256,7 +255,7 @@
             "mobile_image_position": "center center",
             "slide_link": "",
             "subheading": "",
-            "title": "Shop the summer sale\nUp to <strong> 30% Off <\/strong> \nSelect Brands",
+            "title": "Summer Sale:\nUp to <strong> 30% Off <\/strong> \nSelect Brands",
             "title_size": 64,
             "title_size_mobile": 46,
             "use_h1": false,
