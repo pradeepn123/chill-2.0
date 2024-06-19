@@ -916,6 +916,7 @@
         "2189170f-243a-4c77-917d-afc4b6a18280",
         "44667fab-9174-47d0-8c52-14f688eccdf9"
       ],
+      "disabled": true,
       "settings": {
         "title": "<p>Our <strong>Customer Stories<\/strong><\/p>",
         "quote_text_size": 24,
