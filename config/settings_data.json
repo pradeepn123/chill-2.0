@@ -1299,6 +1299,7 @@
           },
           "da48b0a2-76c5-48ad-8408-466f85f5c9b6": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "title": "Shop By",
               "menu": "new-shop-by-footer"
