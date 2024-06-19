@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "presets": {
     "Chantilly": {
@@ -1311,7 +1320,7 @@
         ],
         "settings": {
           "lower_menu": "",
-          "text_bottom": "<p>CHILL.COM USERS MUST BE OF LEGAL AGE FOR THEIR GEOGRAPHIC LOCATION. <br\/><br\/>These statements have not been evaluated or approved by the Food and Drug Administration or any other regulatory body. The products shown on this website are lifestyle products and are not intended to diagnose, treat, cure, or prevent any disease. The information contained on this website is not intended to replace information from medical professionals. Please consult your doctor if you are concerned about using any product. <\/p><p><\/p><p>All CBD products on this website contain .03% THC or less. <\/p>",
+          "text_bottom": "<p>CHILL.COM USERS MUST BE OF LEGAL AGE FOR THEIR GEOGRAPHIC LOCATION. <br\/><br\/>These statements have not been evaluated or approved by the Food and Drug Administration or any other regulatory body. The products shown on this website are lifestyle products and are not intended to diagnose, treat, cure, or prevent any disease. The information contained on this website is not intended to replace information from medical professionals. Please consult your doctor if you are concerned about using any product. <\/p>",
           "wide_container": true,
           "show_payment_icons": true,
           "show_country_selector": true,
