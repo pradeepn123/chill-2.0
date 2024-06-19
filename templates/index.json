@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "4eadd950-1a5f-4bc4-ba01-69bd98c0cf7d": {
@@ -986,6 +995,7 @@
         "7f7e7769-88ff-4784-8d7e-3e04b13844d6",
         "5b580151-3110-4b4a-b0b7-7da0d8b7ed5d"
       ],
+      "disabled": true,
       "settings": {
         "home_icons_title": "<p>Shop <strong>By Category<\/strong><\/p>"
       }
