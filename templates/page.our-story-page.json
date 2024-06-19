@@ -27,6 +27,7 @@
         },
         "fac87674-63b1-4d5c-b99f-89a14c55a525": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "slider_image": "shopify:\/\/shop_images\/OurStory-Carousel9.jpg"
           }
@@ -39,12 +40,14 @@
         },
         "223cc8e6-4742-4921-898e-9aff97ae4e1e": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "slider_image": "shopify:\/\/shop_images\/OurStory-Carousel2.jpg"
           }
         },
         "15dac98d-7166-48b1-ab53-36ec331474fa": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "slider_image": "shopify:\/\/shop_images\/AffiliateCarousel1_bc77d2ac-1f2c-4fde-8bf8-4bb582729d0b.jpg"
           }
@@ -57,12 +60,14 @@
         },
         "48a22953-e7ea-498a-993d-9462da0feefd": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "slider_image": "shopify:\/\/shop_images\/Our_Story-Carousel11.jpg"
           }
         },
         "3c752b99-c83b-4a9f-878e-a2874af0a4b4": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "slider_image": "shopify:\/\/shop_images\/Our_Story-Carousel10.jpg"
           }
@@ -289,6 +294,7 @@
         "a2cb1286-a386-4532-a85b-41d6cd45bb3a",
         "9ba6f619-c346-4e0d-b0d2-bb29f6b5d077"
       ],
+      "disabled": true,
       "settings": {
         "bg_color": "#f2f2f3",
         "text_color": "",
